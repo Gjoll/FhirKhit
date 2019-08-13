@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>a0663c6d-3386-4c88-a186-b288530eb107</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FhirKhit.Tools.SharedTests</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ModelLabTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MapParserTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SharedTests.cs" />
+  </ItemGroup>
+</Project>

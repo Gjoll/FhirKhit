@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+    <Platforms>AnyCPU;x64</Platforms>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.9.0</Version>
+    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;FHIR_R4</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Antlr4" Version="4.6.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Antlr4.CodeGenerator" Version="4.6.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
+    <PackageReference Include="CommonMark.NET" Version="0.15.1" />
+    <PackageReference Include="Hl7.Fhir.R4" Version="1.3.0" />
+    <PackageReference Include="Hl7.Fhir.Specification.R4" Version="1.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FhirKhit.Tools\FhirKhit.Tools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Validation\org.hl7.fhir.validation.cli.jar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Import Project="..\FhirKhit.Tools.Shared\FhirKhit.Tools.Shared.projitems" Label="Shared" />
+
+  <Target Name="CopyPackage" AfterTargets="Pack">
+    <CreateItem Include="$(OutputPath)\..\FhirKhit.Tools.*.nupkg">
+      <Output TaskParameter="Include" ItemName="FilesToCopy" />
+    </CreateItem>
+    <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="$(SolutionDir)CompiledNugetPackages" />
+  </Target>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="del $(OutDir)..\*.nupkg" />
+  </Target>
+
+</Project>
