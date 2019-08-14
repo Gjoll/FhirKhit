@@ -127,20 +127,6 @@ namespace FhirKhit.ProfGen.CSApi
             return listType.FriendlyName();
         }
 
-        public void ModifiedElement(ElementDefinition elementNode)
-        {
-            throw new NotImplementedException();
-        }
-
-        void WritePassThroughProperty(ElementTreeNode elementNode,
-            ElementTreeSlice elementSlice,
-            PropertyInfo propertyInfo)
-        {
-            String typeFriendlyName = propertyInfo.PropertyType.FriendlyName();
-
-            WritePassThroughProperty(elementNode, elementSlice, propertyInfo.Name, typeFriendlyName);
-        }
-
         void WritePassThroughProperty(ElementTreeNode elementNode,
             ElementTreeSlice elementSlice,
             String propertyName,
@@ -241,145 +227,6 @@ namespace FhirKhit.ProfGen.CSApi
                     return null;
             }
 #endif
-        }
-
-        void CreatePassThroughProperty(ElementTreeNode elementNode,
-        ElementTreeSlice elementSlice,
-        PropertyInfo propertyInfo)
-        {
-            String fcn = "CreatePassThroughProperty";
-
-            if (elementSlice.Types.Count > 1)
-                this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Unsupported multiple types. Using first type only.");
-            ElementDefinition.TypeRefComponent type = elementSlice.Types[0];
-
-            switch (type.Code)
-            {
-                case "BackboneElement":
-                    {
-                        //# Not Tested
-                        this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: BackboneElement Unsupported.");
-                    }
-                    break;
-
-                case "Extension":
-                    {
-                        //# Not Tested
-                        this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Extension Unsupported.");
-                    }
-                    break;
-
-                case "Resource":
-                    {
-                        //# Not Tested
-                        if (elementNode.ChildItems().Any())
-                            this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Unsupported contained resources.");
-                    }
-                    break;
-
-                case "Reference":
-                    {
-                        //# Tested
-                        WritePassThroughProperty(elementNode, elementSlice, propertyInfo);
-                    }
-                    break;
-
-                case "instant":
-                case "time":
-                case "date":
-                case "dateTime":
-                case "base64Binary":
-                case "decimal":
-                case "boolean":
-                case "url":
-                case "code":
-                case "string":
-                case "integer":
-                case "uri":
-                case "canonical":
-                case "markdown":
-                case "id":
-                case "oid":
-                case "uuid":
-                case "unsignedInt":
-                case "positiveInt":
-                // Primitive type.
-
-                case "Ratio":
-                case "Period":
-                case "Range":
-                case "Attachment":
-                case "Identifier":
-                case "Annotation":
-                case "HumanName":
-                case "CodeableConcept":
-                case "ContactPoint":
-                case "Coding":
-                case "Money":
-                case "Address":
-                case "Timing":
-                case "Quantity":
-                case "SampledData":
-                case "Signature":
-                case "Age":
-                case "Distance":
-                case "Duration":
-                case "Count":
-                case "MoneyQuantity":
-                case "SimpleQuantity":
-
-                case "Meta":
-                case "Narrative":
-                    // General purpose data types (minus backbone element).
-                    {
-                        String fhirType = this.FhirTypeProfileCheck(type);
-                        WritePassThroughProperty(elementNode, elementSlice, propertyInfo.Name, fhirType);
-                        //if (propertyInfo.Name.EndsWith("Element"))
-                        //{
-                        //    //# Tested
-                        //    String name = propertyInfo.Name.RemoveSuffix("Element");
-                        //    PropertyInfo p2 = this.fhirResourceType.GetProperty(name);
-                        //    if (p2 == null)
-                        //    {
-                        //        this.gen.ConversionWarn(this.GetType().Name, fcn, $"Property {name} not found");
-                        //        return;
-                        //    }
-                        //    WritePassThroughProperty(elementNode, elementSlice, p2);
-                        //}
-                    }
-                    break;
-
-                default:
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"Unsupported type '{type.Code}'");
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Create a wrapper for sub type. Sub type can be a subtype of current resoruce, or a globally defined sub type.
-        /// </summary>
-        String DeclareSubtype(ElementTreeNode elementNode,
-            ElementTreeSlice elementSlice,
-            Type propertyType,
-            ElementDefinition.TypeRefComponent type)
-        {
-            String fcn = "DeclareSubtype";
-
-            if (this.gen.TryGetSubClass(propertyType, out String profileClassName) == true)
-                return profileClassName;
-
-            this.gen.ConversionWarn(this.GetType().Name, fcn, $"Singleton type not implemented [{type.Code}]");
-            // If class is declared in this class, then add it a a sub calss to profile class, otherwise create new global class for it.
-            if (propertyType.DeclaringType == null)
-            {
-                this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Unsupported DeclareSubtype in declaring type.");
-            }
-            else
-            {
-                this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Unsupported DeclareSubtype not in declaring type.");
-            }
-
-            return String.Empty;
         }
 
         PropertyInfo GetProperty(String name)
@@ -900,6 +747,7 @@ namespace FhirKhit.ProfGen.CSApi
                     case "BackboneElement":
                         {
                             //# Not Tested
+
                             this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: BackboneElement Unsupported.");
                         }
                         break;
