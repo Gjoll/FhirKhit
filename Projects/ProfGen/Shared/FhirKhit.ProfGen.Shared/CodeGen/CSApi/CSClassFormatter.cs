@@ -368,8 +368,6 @@ namespace FhirKhit.ProfGen.CSApi
             if (this.gen.TryGetSubClass(propertyType, out String profileClassName) == true)
                 return profileClassName;
 
-            String typeName = $"__{propertyType.FriendlyName()}";
-
             this.gen.ConversionWarn(this.GetType().Name, fcn, $"Singleton type not implemented [{type.Code}]");
             // If class is declared in this class, then add it a a sub calss to profile class, otherwise create new global class for it.
             if (propertyType.DeclaringType == null)
@@ -839,28 +837,14 @@ namespace FhirKhit.ProfGen.CSApi
             String elementName = elementNode.Path.LastPathPart().Trim();
             String elementPName = elementName.FormatPropertyName();
             // Create property that instantiates the single tone class created above.
-            String fieldName = $"__{elementPName}";
 
             this.propertiesBlock
                 .AppendCode($"")
                 .AppendCode($"/// <summary>")
                 .AppendCode($"/// Property for accessing {elementNode.Path}.")
-                .AppendCode($"/// Lazy constructed.")
+                .AppendCode($"/// An accessor instance is created each time this property is called.")
                 .AppendCode($"/// </summary>")
-                .AppendCode($"public {accessorClassName} {elementPName}")
-                .OpenBrace()
-                .AppendCode($"get")
-                .OpenBrace()
-                .AppendCode($"if (this.{fieldName} == null)")
-                .AppendCode($"    this.{fieldName} = new {accessorClassName}(this.ptr);")
-                .AppendCode($"return this.{fieldName};")
-                .CloseBrace()
-                .CloseBrace()
-                .AppendCode($"")
-                .AppendCode($"/// <summary>")
-                .AppendCode($"/// Backing field for property {elementPName}.")
-                .AppendCode($"/// </summary>")
-                .AppendCode($"{accessorClassName} {fieldName};")
+                .AppendCode($"public {accessorClassName} {elementPName} => new {accessorClassName}(this.ptr);")
                 ;
         }
 
