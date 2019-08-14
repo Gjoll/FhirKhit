@@ -716,6 +716,39 @@ namespace FhirKhit.ProfGen.CSApi
         {
             const String fcn = "CreateSingletonProperty";
 
+            void WriteBackboneAccessor(String backboneClass,
+                String propertyName,
+                String propertyType)
+            {
+                this.subClassBlock
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Get '{propertyType}' value")
+                    .AppendCode($"/// return true if successfull, false if value is null or can not be converted to '{propertyType}'")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public bool Get(out {backboneClass} value)")
+                    .OpenBrace()
+                    .AppendCode($"value == null;")
+                    .AppendCode($"if (this.ptr.{propertyName} == null) return false;")
+                    .AppendCode($"value = new {backboneClass}(this.ptr.{propertyName});")
+                    .AppendCode($"return true;")
+                    .CloseBrace()
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Set '{propertyType}' Value")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public void Set({propertyType} value) => this.ptr.{propertyInfo.Name} = value;")
+                    .OpenBrace()
+                    .AppendCode($"if (value == null) this.ptr.{propertyInfo.Name} = null;")
+                    .OpenBrace()
+                    .AppendCode($"this.ptr.{propertyInfo.Name} = null;")
+                    .AppendCode($"return;")
+                    .CloseBrace()
+                    .AppendCode($"this.ptr.{propertyInfo.Name} = value.Ptr;")
+                    .CloseBrace()
+                    ;
+            }
+
             void WriteAccessor(String pType)
             {
                 this.subClassBlock
@@ -747,8 +780,9 @@ namespace FhirKhit.ProfGen.CSApi
                     case "BackboneElement":
                         {
                             //# Not Tested
-
-                            this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: BackboneElement Unsupported.");
+                            String pTypeName = propertyInfo.PropertyType.FriendlyName();
+                            String backboneClassName = this.CreateBackBoneClass(elementNode, elementSlice, propertyInfo.PropertyType, type);
+                            WriteBackboneAccessor(backboneClassName, pTypeName, propertyInfo.Name);
                         }
                         break;
 
@@ -860,35 +894,36 @@ namespace FhirKhit.ProfGen.CSApi
                         break;
                 }
             }
+            {
+                String propertyName = propertyInfo.Name;
 
-            String propertyName = propertyInfo.Name;
-
-            String accessorClassName = $"{AccPrefix}{propertyName.ToMachineName()}";
-            this.subClassBlock
-                .AppendCode($"")
-                .AppendCode($"/// <summary>")
-                .AppendCode($"/// Accessor for property {propertyName}")
-                .AppendCode($"/// </summary>")
-                .AppendCode($"public class {accessorClassName}")
-                .OpenBrace()
-                .AppendCode($"{this.fhirBaseClassName} ptr;")
-                .AppendCode("")
-                .AppendCode($"public {accessorClassName}({this.fhirBaseClassName} ptr)")
-                .OpenBrace()
-                .AppendCode($"this.ptr = ptr;")
-                .CloseBrace()
-                ;
+                String accessorClassName = $"{AccPrefix}{propertyName.ToMachineName()}";
+                this.subClassBlock
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Accessor for property {propertyName}")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public class {accessorClassName}")
+                    .OpenBrace()
+                    .AppendCode($"{this.fhirBaseClassName} ptr;")
+                    .AppendCode("")
+                    .AppendCode($"public {accessorClassName}({this.fhirBaseClassName} ptr)")
+                    .OpenBrace()
+                    .AppendCode($"this.ptr = ptr;")
+                    .CloseBrace()
+                    ;
 
 
-            foreach (ElementDefinition.TypeRefComponent type in elementSlice.Types)
-                WriteAccessors(type);
+                foreach (ElementDefinition.TypeRefComponent type in elementSlice.Types)
+                    WriteAccessors(type);
 
-            // complete sub class.
-            this.subClassBlock
-                .CloseBrace()
-                ;
+                // complete sub class.
+                this.subClassBlock
+                    .CloseBrace()
+                    ;
 
-            CreateAccessorProperty(accessorClassName, elementNode);
+                CreateAccessorProperty(accessorClassName, elementNode);
+            }
         }
 
         String CreateBackBoneClass(ElementTreeNode elementNode,
@@ -1386,20 +1421,10 @@ namespace FhirKhit.ProfGen.CSApi
                         //# Not Tested
                         this.EmptyProfileCheck(type);
 
-                        WriteAccessor(propertyInfo.Name, listTypeName);
-
-                        //if (propertyInfo.Name.EndsWith("Element"))
-                        //{
-                        //    //# Not Tested
-                        //    String name = propertyInfo.Name.RemoveSuffix("Element");
-                        //    PropertyInfo p2 = this.fhirResourceType.GetProperty(name);
-                        //    if (p2 == null)
-                        //    {
-                        //        this.gen.ConversionWarn(this.GetType().Name, fcn, $"Property {name} not found");
-                        //        return;
-                        //    }
-                        //    WriteAccessor(elementNode, p2);
-                        //}
+                        String pName = propertyInfo.Name;
+                        if (pName.EndsWith("Element"))
+                            pName = propertyInfo.Name.RemoveSuffix("Element");
+                        WriteAccessor(pName, listTypeName);
                     }
                     break;
 
