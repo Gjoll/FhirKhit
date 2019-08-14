@@ -8,9 +8,4 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>FhirKhit.Tools.SharedTests</Import_RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)ModelLabTests.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MapParserTests.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)SharedTests.cs" />
-  </ItemGroup>
 </Project>

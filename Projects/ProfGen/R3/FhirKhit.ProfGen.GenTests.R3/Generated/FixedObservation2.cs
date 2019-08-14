@@ -13,9 +13,9 @@ namespace FhirKhit.Test.R3                                                      
 {                                                                               // CSCodeFormatter.cs:83
                                                                                 // CSClassFormatter.cs:76
     /// <summary>                                                               // CSClassFormatter.cs:77
-    /// Class to implement FHIR profile 'NoModObservation'                      // CSClassFormatter.cs:78
+    /// Class to implement FHIR profile 'FixedObservation2'                     // CSClassFormatter.cs:78
     /// </summary>                                                              // CSClassFormatter.cs:79
-    public class NoModObservation :                                             // CSClassFormatter.cs:80
+    public class FixedObservation2 :                                            // CSClassFormatter.cs:80
         ProfileBase<Hl7.Fhir.Model.Observation>                                 // CSClassFormatter.cs:81
     {                                                                           // CSClassFormatter.cs:82
 #region Sub Class Definitions
@@ -270,7 +270,76 @@ namespace FhirKhit.Test.R3                                                      
             {                                                                   // CSClassFormatter.cs:1216
                 this.ptr = ptr;                                                 // CSClassFormatter.cs:1217
             }                                                                   // CSClassFormatter.cs:1218
-                                                                               // CSClassFormatter.cs:1081
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
         }                                                                       // CSClassFormatter.cs:1227
                                                                                 // CSClassFormatter.cs:991
         /// <summary>                                                           // CSClassFormatter.cs:992
@@ -392,49 +461,28 @@ namespace FhirKhit.Test.R3                                                      
                 this.ptr = ptr;                                                 // CSClassFormatter.cs:1001
             }                                                                   // CSClassFormatter.cs:1002
         }                                                                       // CSClassFormatter.cs:1011
-                                                                                // CSClassFormatter.cs:991
-        /// <summary>                                                           // CSClassFormatter.cs:992
-        /// Accessor for property Effective                                     // CSClassFormatter.cs:993
-        /// </summary>                                                          // CSClassFormatter.cs:994
-        public class Accessor__Effective                                        // CSClassFormatter.cs:995
-        {                                                                       // CSClassFormatter.cs:996
-            Hl7.Fhir.Model.Observation ptr;                                     // CSClassFormatter.cs:997
-                                                                                // CSClassFormatter.cs:998
-            public Accessor__Effective(Hl7.Fhir.Model.Observation ptr)          // CSClassFormatter.cs:999
-            {                                                                   // CSClassFormatter.cs:1000
-                this.ptr = ptr;                                                 // CSClassFormatter.cs:1001
-            }                                                                   // CSClassFormatter.cs:1002
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'FhirDateTime' value                                        // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'FhirDateTime'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out FhirDateTime value)                             // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Effective as FhirDateTime;                     // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'FhirDateTime' Value                                        // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(FhirDateTime value) => this.ptr.Effective = value;  // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'Period' value                                              // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'Period'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out Period value)                                   // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Effective as Period;                           // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'Period' Value                                              // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(Period value) => this.ptr.Effective = value;        // CSClassFormatter.cs:864
-        }                                                                       // CSClassFormatter.cs:1011
+                                                                                // CSClassFormatter.cs:760
+        /// <summary>                                                           // CSClassFormatter.cs:761
+        /// Accessor for property Effective                                     // CSClassFormatter.cs:762
+        /// </summary>                                                          // CSClassFormatter.cs:763
+        public class Accessor__Effective                                        // CSClassFormatter.cs:764
+        {                                                                       // CSClassFormatter.cs:765
+            Hl7.Fhir.Model.Observation ptr;                                     // CSClassFormatter.cs:766
+                                                                                // CSClassFormatter.cs:767
+            public Accessor__Effective(Hl7.Fhir.Model.Observation ptr)          // CSClassFormatter.cs:768
+            {                                                                   // CSClassFormatter.cs:769
+                this.ptr = ptr;                                                 // CSClassFormatter.cs:770
+            }                                                                   // CSClassFormatter.cs:771
+                                                                                // CSClassFormatter.cs:772
+            /// <summary>                                                       // CSClassFormatter.cs:773
+            /// Property for accessing fixed property Observation.effective[x]. // CSClassFormatter.cs:774
+            /// </summary>                                                      // CSClassFormatter.cs:775
+            public bool Get(out Period value)                                   // CSClassFormatter.cs:776
+            {                                                                   // CSClassFormatter.cs:777
+                value = (Period) this.ptr.Effective;                            // CSClassFormatter.cs:781
+                return value != null;                                           // CSClassFormatter.cs:786
+            }                                                                   // CSClassFormatter.cs:787
+        }                                                                       // CSClassFormatter.cs:788
                                                                                 // CSClassFormatter.cs:991
         /// <summary>                                                           // CSClassFormatter.cs:992
         /// Accessor for property IssuedElement                                 // CSClassFormatter.cs:993
@@ -516,184 +564,28 @@ namespace FhirKhit.Test.R3                                                      
             /// </summary>                                                      // CSClassFormatter.cs:1089
             public IEnumerable<ResourceReference> Get() => this.ptr.Performer;  // CSClassFormatter.cs:1090
         }                                                                       // CSClassFormatter.cs:1227
-                                                                                // CSClassFormatter.cs:991
-        /// <summary>                                                           // CSClassFormatter.cs:992
-        /// Accessor for property Value                                         // CSClassFormatter.cs:993
-        /// </summary>                                                          // CSClassFormatter.cs:994
-        public class Accessor__Value                                            // CSClassFormatter.cs:995
-        {                                                                       // CSClassFormatter.cs:996
-            Hl7.Fhir.Model.Observation ptr;                                     // CSClassFormatter.cs:997
-                                                                                // CSClassFormatter.cs:998
-            public Accessor__Value(Hl7.Fhir.Model.Observation ptr)              // CSClassFormatter.cs:999
-            {                                                                   // CSClassFormatter.cs:1000
-                this.ptr = ptr;                                                 // CSClassFormatter.cs:1001
-            }                                                                   // CSClassFormatter.cs:1002
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'Quantity' value                                            // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'Quantity'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out Quantity value)                                 // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as Quantity;                             // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'Quantity' Value                                            // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(Quantity value) => this.ptr.Value = value;          // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'CodeableConcept' value                                     // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'CodeableConcept'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out CodeableConcept value)                          // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as CodeableConcept;                      // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'CodeableConcept' Value                                     // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(CodeableConcept value) => this.ptr.Value = value;   // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'FhirString' value                                          // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'FhirString'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out FhirString value)                               // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as FhirString;                           // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'FhirString' Value                                          // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(FhirString value) => this.ptr.Value = value;        // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'FhirBoolean' value                                         // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'FhirBoolean'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out FhirBoolean value)                              // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as FhirBoolean;                          // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'FhirBoolean' Value                                         // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(FhirBoolean value) => this.ptr.Value = value;       // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'Range' value                                               // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'Range'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out Range value)                                    // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as Range;                                // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'Range' Value                                               // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(Range value) => this.ptr.Value = value;             // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'Ratio' value                                               // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'Ratio'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out Ratio value)                                    // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as Ratio;                                // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'Ratio' Value                                               // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(Ratio value) => this.ptr.Value = value;             // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'SampledData' value                                         // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'SampledData'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out SampledData value)                              // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as SampledData;                          // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'SampledData' Value                                         // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(SampledData value) => this.ptr.Value = value;       // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'Attachment' value                                          // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'Attachment'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out Attachment value)                               // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as Attachment;                           // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'Attachment' Value                                          // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(Attachment value) => this.ptr.Value = value;        // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'Time' value                                                // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'Time'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out Time value)                                     // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as Time;                                 // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'Time' Value                                                // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(Time value) => this.ptr.Value = value;              // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'FhirDateTime' value                                        // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'FhirDateTime'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out FhirDateTime value)                             // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as FhirDateTime;                         // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'FhirDateTime' Value                                        // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(FhirDateTime value) => this.ptr.Value = value;      // CSClassFormatter.cs:864
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'Period' value                                              // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'Period'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out Period value)                                   // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Value as Period;                               // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'Period' Value                                              // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(Period value) => this.ptr.Value = value;            // CSClassFormatter.cs:864
-        }                                                                       // CSClassFormatter.cs:1011
+                                                                                // CSClassFormatter.cs:760
+        /// <summary>                                                           // CSClassFormatter.cs:761
+        /// Accessor for property Value                                         // CSClassFormatter.cs:762
+        /// </summary>                                                          // CSClassFormatter.cs:763
+        public class Accessor__Value                                            // CSClassFormatter.cs:764
+        {                                                                       // CSClassFormatter.cs:765
+            Hl7.Fhir.Model.Observation ptr;                                     // CSClassFormatter.cs:766
+                                                                                // CSClassFormatter.cs:767
+            public Accessor__Value(Hl7.Fhir.Model.Observation ptr)              // CSClassFormatter.cs:768
+            {                                                                   // CSClassFormatter.cs:769
+                this.ptr = ptr;                                                 // CSClassFormatter.cs:770
+            }                                                                   // CSClassFormatter.cs:771
+                                                                                // CSClassFormatter.cs:772
+            /// <summary>                                                       // CSClassFormatter.cs:773
+            /// Property for accessing fixed property Observation.value[x].     // CSClassFormatter.cs:774
+            /// </summary>                                                      // CSClassFormatter.cs:775
+            public bool Get(out FhirBoolean value)                              // CSClassFormatter.cs:776
+            {                                                                   // CSClassFormatter.cs:777
+                value = (FhirBoolean) this.ptr.Value;                           // CSClassFormatter.cs:781
+                return value != null;                                           // CSClassFormatter.cs:786
+            }                                                                   // CSClassFormatter.cs:787
+        }                                                                       // CSClassFormatter.cs:788
                                                                                 // CSClassFormatter.cs:991
         /// <summary>                                                           // CSClassFormatter.cs:992
         /// Accessor for property DataAbsentReason                              // CSClassFormatter.cs:993
@@ -1468,8 +1360,18 @@ namespace FhirKhit.Test.R3                                                      
         /// <summary>                                                           // CSClassFormatter.cs:95
         /// Constructor                                                         // CSClassFormatter.cs:96
         /// </summary>                                                          // CSClassFormatter.cs:97
-        public NoModObservation(Hl7.Fhir.Model.Observation ptr) : base(ptr)     // CSClassFormatter.cs:98
+        public FixedObservation2(Hl7.Fhir.Model.Observation ptr) : base(ptr)    // CSClassFormatter.cs:98
         {                                                                       // CSClassFormatter.cs:99
+            {                                                                   // CSClassFormatter.cs:550
+                FhirDateTime start = new FhirDateTime("1002-01-02");            // CSClassFormatter.cs:551
+                FhirDateTime end = new FhirDateTime("1003-04-05");              // CSClassFormatter.cs:552
+                Period temp = new Period(start, end);                           // CSClassFormatter.cs:553
+                this.ptr.Effective = temp;                                      // CSClassFormatter.cs:555
+            }                                                                   // CSClassFormatter.cs:561
+            {                                                                   // CSClassFormatter.cs:361
+                FhirBoolean temp = new FhirBoolean(true);
+                this.ptr.Value = temp;
+            }                                                                   // CSClassFormatter.cs:371
         }                                                                       // CSClassFormatter.cs:109
     }                                                                           // CSClassFormatter.cs:113
 }                                                                               // CSCodeFormatter.cs:93

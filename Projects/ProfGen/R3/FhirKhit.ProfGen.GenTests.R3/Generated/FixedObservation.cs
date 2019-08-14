@@ -13,9 +13,9 @@ namespace FhirKhit.Test.R3                                                      
 {                                                                               // CSCodeFormatter.cs:83
                                                                                 // CSClassFormatter.cs:76
     /// <summary>                                                               // CSClassFormatter.cs:77
-    /// Class to implement FHIR profile 'NoModObservation'                      // CSClassFormatter.cs:78
+    /// Class to implement FHIR profile 'FixedObservation'                      // CSClassFormatter.cs:78
     /// </summary>                                                              // CSClassFormatter.cs:79
-    public class NoModObservation :                                             // CSClassFormatter.cs:80
+    public class FixedObservation :                                             // CSClassFormatter.cs:80
         ProfileBase<Hl7.Fhir.Model.Observation>                                 // CSClassFormatter.cs:81
     {                                                                           // CSClassFormatter.cs:82
 #region Sub Class Definitions
@@ -205,59 +205,28 @@ namespace FhirKhit.Test.R3                                                      
             /// </summary>                                                      // CSClassFormatter.cs:1089
             public IEnumerable<Extension> Get() => this.ptr.ModifierExtension;  // CSClassFormatter.cs:1090
         }                                                                       // CSClassFormatter.cs:1227
-                                                                                // CSClassFormatter.cs:1207
-        /// <summary>                                                           // CSClassFormatter.cs:1208
-        /// Accessor for property Identifier                                    // CSClassFormatter.cs:1209
-        /// </summary>                                                          // CSClassFormatter.cs:1210
-        public class Accessor__Identifier                                       // CSClassFormatter.cs:1211
-        {                                                                       // CSClassFormatter.cs:1212
-            Hl7.Fhir.Model.Observation ptr;                                     // CSClassFormatter.cs:1213
-                                                                                // CSClassFormatter.cs:1214
-            public Accessor__Identifier(Hl7.Fhir.Model.Observation ptr)         // CSClassFormatter.cs:1215
-            {                                                                   // CSClassFormatter.cs:1216
-                this.ptr = ptr;                                                 // CSClassFormatter.cs:1217
-            }                                                                   // CSClassFormatter.cs:1218
-                                                                                // CSClassFormatter.cs:1081
-            /// <summary>                                                       // CSClassFormatter.cs:1082
-            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
-            /// </summary>                                                      // CSClassFormatter.cs:1084
-            public void RemoveAt(Int32 index) => this.ptr.Identifier.RemoveAt(index);// CSClassFormatter.cs:1085
-                                                                                // CSClassFormatter.cs:1086
-            /// <summary>                                                       // CSClassFormatter.cs:1087
-            /// Get list of all items                                           // CSClassFormatter.cs:1088
-            /// </summary>                                                      // CSClassFormatter.cs:1089
-            public IEnumerable<Identifier> Get() => this.ptr.Identifier;        // CSClassFormatter.cs:1090
-                                                                                // CSClassFormatter.cs:1031
-            /// <summary>                                                       // CSClassFormatter.cs:1032
-            /// Count of items                                                  // CSClassFormatter.cs:1033
-            /// </summary>                                                      // CSClassFormatter.cs:1034
-            public Int32 Count => this.ptr.Identifier.Count;                    // CSClassFormatter.cs:1035
-                                                                                // CSClassFormatter.cs:1037
-            /// <summary>                                                       // CSClassFormatter.cs:1038
-            /// Get 'Identifier' value                                          // CSClassFormatter.cs:1039
-            /// return true if successfull, false if value is null or con not be converted to 'Identifier'// CSClassFormatter.cs:1040
-            /// </summary>                                                      // CSClassFormatter.cs:1041
-            public bool Get(Int32 index, out Identifier value)                  // CSClassFormatter.cs:1042
-            {                                                                   // CSClassFormatter.cs:1043
-                value = this.ptr.Identifier[index] as Identifier;               // CSClassFormatter.cs:1044
-                return value != null;                                           // CSClassFormatter.cs:1045
-            }                                                                   // CSClassFormatter.cs:1046
-                                                                                // CSClassFormatter.cs:1048
-            /// <summary>                                                       // CSClassFormatter.cs:1049
-            /// Set 'Identifier' Value                                          // CSClassFormatter.cs:1050
-            /// </summary>                                                      // CSClassFormatter.cs:1051
-            public void Set(Int32 index, Identifier value) => this.ptr.Identifier[index] = value;// CSClassFormatter.cs:1052
-                                                                                // CSClassFormatter.cs:1054
-            /// <summary>                                                       // CSClassFormatter.cs:1055
-            /// Add 'Identifier' Value                                          // CSClassFormatter.cs:1056
-            /// </summary>                                                      // CSClassFormatter.cs:1057
-            public void Add(Identifier value) => this.ptr.Identifier.Add(value);// CSClassFormatter.cs:1058
-                                                                                // CSClassFormatter.cs:1060
-            /// <summary>                                                       // CSClassFormatter.cs:1061
-            /// AddRange 'Identifier' Value                                     // CSClassFormatter.cs:1062
-            /// </summary>                                                      // CSClassFormatter.cs:1063
-            public void AddRange(IEnumerable<Identifier> values) => this.ptr.Identifier.AddRange(values);// CSClassFormatter.cs:1064
-        }                                                                       // CSClassFormatter.cs:1227
+                                                                                // CSClassFormatter.cs:760
+        /// <summary>                                                           // CSClassFormatter.cs:761
+        /// Accessor for property Identifier                                    // CSClassFormatter.cs:762
+        /// </summary>                                                          // CSClassFormatter.cs:763
+        public class Accessor__Identifier                                       // CSClassFormatter.cs:764
+        {                                                                       // CSClassFormatter.cs:765
+            Hl7.Fhir.Model.Observation ptr;                                     // CSClassFormatter.cs:766
+                                                                                // CSClassFormatter.cs:767
+            public Accessor__Identifier(Hl7.Fhir.Model.Observation ptr)         // CSClassFormatter.cs:768
+            {                                                                   // CSClassFormatter.cs:769
+                this.ptr = ptr;                                                 // CSClassFormatter.cs:770
+            }                                                                   // CSClassFormatter.cs:771
+                                                                                // CSClassFormatter.cs:772
+            /// <summary>                                                       // CSClassFormatter.cs:773
+            /// Property for accessing fixed property Observation.identifier.   // CSClassFormatter.cs:774
+            /// </summary>                                                      // CSClassFormatter.cs:775
+            public bool Get(out Identifier value)                               // CSClassFormatter.cs:776
+            {                                                                   // CSClassFormatter.cs:777
+                value = this.ptr.Identifier.First();                            // CSClassFormatter.cs:782
+                return value != null;                                           // CSClassFormatter.cs:786
+            }                                                                   // CSClassFormatter.cs:787
+        }                                                                       // CSClassFormatter.cs:788
                                                                                 // CSClassFormatter.cs:1207
         /// <summary>                                                           // CSClassFormatter.cs:1208
         /// Accessor for property BasedOn                                       // CSClassFormatter.cs:1209
@@ -270,21 +239,91 @@ namespace FhirKhit.Test.R3                                                      
             {                                                                   // CSClassFormatter.cs:1216
                 this.ptr = ptr;                                                 // CSClassFormatter.cs:1217
             }                                                                   // CSClassFormatter.cs:1218
-                                                                               // CSClassFormatter.cs:1081
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
+                                                                                // CSClassFormatter.cs:1081
+            /// <summary>                                                       // CSClassFormatter.cs:1082
+            /// Remove item at indicated index                                  // CSClassFormatter.cs:1083
+            /// </summary>                                                      // CSClassFormatter.cs:1084
+            public void RemoveAt(Int32 index) => this.ptr.BasedOn.RemoveAt(index);// CSClassFormatter.cs:1085
+                                                                                // CSClassFormatter.cs:1086
+            /// <summary>                                                       // CSClassFormatter.cs:1087
+            /// Get list of all items                                           // CSClassFormatter.cs:1088
+            /// </summary>                                                      // CSClassFormatter.cs:1089
+            public IEnumerable<ResourceReference> Get() => this.ptr.BasedOn;    // CSClassFormatter.cs:1090
         }                                                                       // CSClassFormatter.cs:1227
-                                                                                // CSClassFormatter.cs:991
-        /// <summary>                                                           // CSClassFormatter.cs:992
-        /// Accessor for property StatusElement                                 // CSClassFormatter.cs:993
-        /// </summary>                                                          // CSClassFormatter.cs:994
-        public class Accessor__StatusElement                                    // CSClassFormatter.cs:995
-        {                                                                       // CSClassFormatter.cs:996
-            Hl7.Fhir.Model.Observation ptr;                                     // CSClassFormatter.cs:997
-                                                                                // CSClassFormatter.cs:998
-            public Accessor__StatusElement(Hl7.Fhir.Model.Observation ptr)      // CSClassFormatter.cs:999
-            {                                                                   // CSClassFormatter.cs:1000
-                this.ptr = ptr;                                                 // CSClassFormatter.cs:1001
-            }                                                                   // CSClassFormatter.cs:1002
-        }                                                                       // CSClassFormatter.cs:1011
+                                                                                // CSClassFormatter.cs:760
+        /// <summary>                                                           // CSClassFormatter.cs:761
+        /// Accessor for property Status                                        // CSClassFormatter.cs:762
+        /// </summary>                                                          // CSClassFormatter.cs:763
+        public class Accessor__Status                                           // CSClassFormatter.cs:764
+        {                                                                       // CSClassFormatter.cs:765
+            Hl7.Fhir.Model.Observation ptr;                                     // CSClassFormatter.cs:766
+                                                                                // CSClassFormatter.cs:767
+            public Accessor__Status(Hl7.Fhir.Model.Observation ptr)             // CSClassFormatter.cs:768
+            {                                                                   // CSClassFormatter.cs:769
+                this.ptr = ptr;                                                 // CSClassFormatter.cs:770
+            }                                                                   // CSClassFormatter.cs:771
+                                                                               // CSClassFormatter.cs:772
+        }                                                                       // CSClassFormatter.cs:788
                                                                                 // CSClassFormatter.cs:1207
         /// <summary>                                                           // CSClassFormatter.cs:1208
         /// Accessor for property Category                                      // CSClassFormatter.cs:1209
@@ -338,34 +377,28 @@ namespace FhirKhit.Test.R3                                                      
             /// </summary>                                                      // CSClassFormatter.cs:1063
             public void AddRange(IEnumerable<CodeableConcept> values) => this.ptr.Category.AddRange(values);// CSClassFormatter.cs:1064
         }                                                                       // CSClassFormatter.cs:1227
-                                                                                // CSClassFormatter.cs:991
-        /// <summary>                                                           // CSClassFormatter.cs:992
-        /// Accessor for property Code                                          // CSClassFormatter.cs:993
-        /// </summary>                                                          // CSClassFormatter.cs:994
-        public class Accessor__Code                                             // CSClassFormatter.cs:995
-        {                                                                       // CSClassFormatter.cs:996
-            Hl7.Fhir.Model.Observation ptr;                                     // CSClassFormatter.cs:997
-                                                                                // CSClassFormatter.cs:998
-            public Accessor__Code(Hl7.Fhir.Model.Observation ptr)               // CSClassFormatter.cs:999
-            {                                                                   // CSClassFormatter.cs:1000
-                this.ptr = ptr;                                                 // CSClassFormatter.cs:1001
-            }                                                                   // CSClassFormatter.cs:1002
-                                                                                // CSClassFormatter.cs:850
-            /// <summary>                                                       // CSClassFormatter.cs:851
-            /// Get 'CodeableConcept' value                                     // CSClassFormatter.cs:852
-            /// return true if successfull, false if value is null or con not be converted to 'CodeableConcept'// CSClassFormatter.cs:853
-            /// </summary>                                                      // CSClassFormatter.cs:854
-            public bool Get(out CodeableConcept value)                          // CSClassFormatter.cs:855
-            {                                                                   // CSClassFormatter.cs:856
-                value = this.ptr.Code as CodeableConcept;                       // CSClassFormatter.cs:857
-                return value != null;                                           // CSClassFormatter.cs:858
-            }                                                                   // CSClassFormatter.cs:859
-                                                                                // CSClassFormatter.cs:860
-            /// <summary>                                                       // CSClassFormatter.cs:861
-            /// Set 'CodeableConcept' Value                                     // CSClassFormatter.cs:862
-            /// </summary>                                                      // CSClassFormatter.cs:863
-            public void Set(CodeableConcept value) => this.ptr.Code = value;    // CSClassFormatter.cs:864
-        }                                                                       // CSClassFormatter.cs:1011
+                                                                                // CSClassFormatter.cs:760
+        /// <summary>                                                           // CSClassFormatter.cs:761
+        /// Accessor for property Code                                          // CSClassFormatter.cs:762
+        /// </summary>                                                          // CSClassFormatter.cs:763
+        public class Accessor__Code                                             // CSClassFormatter.cs:764
+        {                                                                       // CSClassFormatter.cs:765
+            Hl7.Fhir.Model.Observation ptr;                                     // CSClassFormatter.cs:766
+                                                                                // CSClassFormatter.cs:767
+            public Accessor__Code(Hl7.Fhir.Model.Observation ptr)               // CSClassFormatter.cs:768
+            {                                                                   // CSClassFormatter.cs:769
+                this.ptr = ptr;                                                 // CSClassFormatter.cs:770
+            }                                                                   // CSClassFormatter.cs:771
+                                                                                // CSClassFormatter.cs:772
+            /// <summary>                                                       // CSClassFormatter.cs:773
+            /// Property for accessing fixed property Observation.code.         // CSClassFormatter.cs:774
+            /// </summary>                                                      // CSClassFormatter.cs:775
+            public bool Get(out CodeableConcept value)                          // CSClassFormatter.cs:776
+            {                                                                   // CSClassFormatter.cs:777
+                value = (CodeableConcept) this.ptr.Code;                        // CSClassFormatter.cs:781
+                return value != null;                                           // CSClassFormatter.cs:786
+            }                                                                   // CSClassFormatter.cs:787
+        }                                                                       // CSClassFormatter.cs:788
                                                                                 // CSClassFormatter.cs:991
         /// <summary>                                                           // CSClassFormatter.cs:992
         /// Accessor for property Subject                                       // CSClassFormatter.cs:993
@@ -1107,12 +1140,12 @@ namespace FhirKhit.Test.R3                                                      
         /// Property for accessing Observation.status.                          // CSClassFormatter.cs:805
         /// Lazy constructed.                                                   // CSClassFormatter.cs:806
         /// </summary>                                                          // CSClassFormatter.cs:807
-        public Accessor__StatusElement Status                                   // CSClassFormatter.cs:808
+        public Accessor__Status Status                                          // CSClassFormatter.cs:808
         {                                                                       // CSClassFormatter.cs:809
             get                                                                 // CSClassFormatter.cs:810
             {                                                                   // CSClassFormatter.cs:811
                 if (this.__Status == null)                                      // CSClassFormatter.cs:812
-                    this.__Status = new Accessor__StatusElement(this.ptr);      // CSClassFormatter.cs:813
+                    this.__Status = new Accessor__Status(this.ptr);             // CSClassFormatter.cs:813
                 return this.__Status;                                           // CSClassFormatter.cs:814
             }                                                                   // CSClassFormatter.cs:815
         }                                                                       // CSClassFormatter.cs:816
@@ -1120,7 +1153,7 @@ namespace FhirKhit.Test.R3                                                      
         /// <summary>                                                           // CSClassFormatter.cs:818
         /// Backing field for property Status.                                  // CSClassFormatter.cs:819
         /// </summary>                                                          // CSClassFormatter.cs:820
-        Accessor__StatusElement __Status;                                       // CSClassFormatter.cs:821
+        Accessor__Status __Status;                                              // CSClassFormatter.cs:821
                                                                                 // CSClassFormatter.cs:803
         /// <summary>                                                           // CSClassFormatter.cs:804
         /// Property for accessing Observation.category.                        // CSClassFormatter.cs:805
@@ -1468,8 +1501,20 @@ namespace FhirKhit.Test.R3                                                      
         /// <summary>                                                           // CSClassFormatter.cs:95
         /// Constructor                                                         // CSClassFormatter.cs:96
         /// </summary>                                                          // CSClassFormatter.cs:97
-        public NoModObservation(Hl7.Fhir.Model.Observation ptr) : base(ptr)     // CSClassFormatter.cs:98
+        public FixedObservation(Hl7.Fhir.Model.Observation ptr) : base(ptr)     // CSClassFormatter.cs:98
         {                                                                       // CSClassFormatter.cs:99
+            this.ptr.Identifier.Clear();
+            {                                                                   // CSClassFormatter.cs:585
+                var temp = new Identifier("fixedIdentifierSystem", "fixedIdentifierValue");
+                this.ptr.Identifier.Clear();
+                this.ptr.Identifier.Add(temp);
+            }                                                                   // CSClassFormatter.cs:595
+            {                                                                   // CSClassFormatter.cs:620
+                CodeableConcept temp = new CodeableConcept();
+                temp.Text = "codeText";
+                temp.Coding.Add(new Coding("codeSystem", "codeCode", "codeDisplay"));
+                this.ptr.Code = temp;
+            }                                                                   // CSClassFormatter.cs:635
         }                                                                       // CSClassFormatter.cs:109
     }                                                                           // CSClassFormatter.cs:113
 }                                                                               // CSCodeFormatter.cs:93

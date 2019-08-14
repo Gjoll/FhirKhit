@@ -392,37 +392,6 @@ namespace FhirKhit.Tools.R2
             return null;
         }
 
-        
-        /// <summary>
-        /// Method to set element definition map
-        /// </summary>
-        public static void SetMap(this ElementDefinition elementDefinition, ElementDefinitionMap map) => DoSetMap(elementDefinition, MappingComponentId, JsonConvert.SerializeObject(map));
-
-        /// <summary>
-        /// Extension method to get fhir generic type extension
-        /// </summary>
-        public static void DeleteMap(this ElementDefinition elementDefinition) => DoDeleteMap(elementDefinition, MappingComponentId);
-
-        /// <summary>
-        /// Extension method to get fhir generic type extension
-        /// </summary>
-        public static ElementDefinitionMap GetMap(this ElementDefinition elementDefinition) => DoGetMap<ElementDefinitionMap>(elementDefinition, MappingComponentId);
-
-        /// <summary>
-        /// Method to set element definition map
-        /// </summary>
-        public static void SetCIMPLMap(this ElementDefinition elementDefinition, CIMPLMap map) => DoSetMap(elementDefinition, CIMPLMap, JsonConvert.SerializeObject(map));
-
-        /// <summary>
-        /// Extension method to get fhir generic type extension
-        /// </summary>
-        public static void DeleteCIMPLMap(this ElementDefinition elementDefinition) => DoDeleteMap(elementDefinition, CIMPLMap);
-
-        /// <summary>
-        /// Extension method to get fhir generic type extension
-        /// </summary>
-        public static CIMPLMap GetCIMPLMap(this ElementDefinition elementDefinition) => DoGetMap<CIMPLMap>(elementDefinition, CIMPLMap);
-
         /// <summary>
         /// Return array of the names of each element definition type defined
         /// in the indicated element definition. i.e. integer, string, etc.

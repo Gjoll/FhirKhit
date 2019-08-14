@@ -372,6 +372,26 @@ namespace FhirKhit.ProfGen.CSApi
             return true;
         }
 
+        String GetBindingValuesetName(ElementTreeSlice eSlice)
+        {
+#if FHIR_R4
+            return eSlice.Binding.ValueSet.ToValueSetEnumName();
+#elif FHIR_R3
+            const String fcn = "GetBindingValuesetName";
+
+            switch (eSlice.Binding.ValueSet)
+            {
+            case FhirUri uri:
+                return uri.Value.ToValueSetEnumName();
+            default:
+                this.gen.ConversionError(this.GetType().Name, fcn, $"Value set binding of unknown type '{eSlice.Binding.ValueSet.TypeName}");
+                return null;
+            }
+#else
+            Unimplemented.
+#endif
+        }
+
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -394,13 +414,16 @@ namespace FhirKhit.ProfGen.CSApi
                     {
                         //# Tested
                         var v = (Code)fix;
-                        String valueName;
+                        String valueName = "??";
                         if (UsesEnum(eNode, eSlice))
                         {
                             //# Tested
-                            String enumName = eSlice.Binding.ValueSet.ToValueSetEnumName();
-                            propertyType = $"Code<{enumName}>";
-                            valueName = $"{enumName}.{v.Value.ToValueSetEnumName()}";
+                            String enumName = GetBindingValuesetName(eSlice);
+                            if (enumName != null)
+                            {
+                                propertyType = $"Code<{enumName}>";
+                                valueName = $"{enumName}.{v.Value.ToValueSetEnumName()}";
+                            }
                         }
                         else
                         {
@@ -448,10 +471,12 @@ namespace FhirKhit.ProfGen.CSApi
                     propertyType = "FhirBoolean";
                     return FhirSimpleConstruct(block, varName, ((FhirBoolean)fix).Value.ToCode(), singleton, propertyType);
 
+#if FHIR_R4
                 case "url":
                     //# Not Tested
                     propertyType = "FhirUrl";
                     return FhirSimpleConstruct(block, varName, ((FhirUrl)fix).Value.ToCode(), singleton, propertyType);
+#endif
 
                 case "string":
                     //# Not Tested
@@ -463,10 +488,13 @@ namespace FhirKhit.ProfGen.CSApi
                     propertyType = "FhirUri";
                     return FhirSimpleConstruct(block, varName, ((FhirUri)fix).Value.ToCode(), singleton, propertyType);
 
+
+#if FHIR_R4
                 case "canonical":
                     //# Not Tested
                     propertyType = "Canonical";
                     return FhirSimpleConstruct(block, varName, ((Canonical)fix).Value.ToCode(), singleton, propertyType);
+#endif
 
                 case "markdown":
                     //# Not Tested
@@ -887,8 +915,9 @@ namespace FhirKhit.ProfGen.CSApi
                                 // the c# only creates a enum if the value set is required, so we cant link against it if it is only preferred.
                                 // TODO: Create our own valueset enums?
 
-                                String enumName = eSlice.Binding.ValueSet.ToValueSetEnumName();
-                                WriteAccessor($"Code<{enumName}>", propertyInfo.Name);
+                                String enumName = GetBindingValuesetName(eSlice);
+                                if (enumName != null)
+                                    WriteAccessor($"Code<{enumName}>", propertyInfo.Name);
                             }
                             else
                             {
@@ -1102,8 +1131,9 @@ namespace FhirKhit.ProfGen.CSApi
                                 // the c# only creates a enum if the value set is required, so we cant link against it if it is only preferred.
                                 // TODO: Create our own valueset enums?
 
-                                String enumName = eSlice.Binding.ValueSet.ToValueSetEnumName();
-                                WriteAccessor($"Code<{enumName}>", propertyInfo.Name);
+                                String enumName = this.GetBindingValuesetName(eSlice);
+                                if (enumName != null)
+                                    WriteAccessor($"Code<{enumName}>", propertyInfo.Name);
                             }
                             else
                             {

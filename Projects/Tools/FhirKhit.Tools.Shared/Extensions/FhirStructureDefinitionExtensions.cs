@@ -278,26 +278,5 @@ namespace FhirKhit.Tools.R2
             }
             return null;
         }
-
-        /// <summary>
-        /// Method to set element definition map
-        /// </summary>
-        public static void SetModelDefToProfileMap(this StructureDefinition structureDefinition,
-            StructureDefinitionMap map)
-        {
-            structureDefinition.SetMap("ModelDef.MapToProfile", JsonConvert.SerializeObject(map));
-        }
-
-        /// <summary>
-        /// Extension method to get fhir generic type extension
-        /// </summary>
-        public static StructureDefinitionMap GetModelDefToProfileMap(this StructureDefinition structureDefinition)
-        {
-            String jsonText = structureDefinition.GetMap("ModelDef.MapToProfile");
-            if (jsonText == null)
-                return null;
-            StructureDefinitionMap retVal = JsonConvert.DeserializeObject<StructureDefinitionMap>(jsonText);
-            return retVal;
-        }
     }
 }
