@@ -24,6 +24,19 @@ namespace FhirKhit.Tools
         }
 
         /// <summary>
+        /// Return the last part of an uri path (i.e. a.bb.ccc == 'ccc')
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static String LastUriPart(this String path)
+        {
+            Int32 index = path.LastIndexOf('/');
+            if (index < 0)
+                return path;
+            return path.Substring(index+1);
+        }
+
+        /// <summary>
         /// Return the last part of a path (i.e. a.bb.ccc == 'ccc')
         /// </summary>
         /// <param name="path"></param>
@@ -33,7 +46,7 @@ namespace FhirKhit.Tools
             String[] parts = path.Split('.');
             return parts.Last();
         }
-        
+
         /// <summary>
         /// Create a period seperated string from an array of strings. (i.e. a.b.c)
         /// </summary>

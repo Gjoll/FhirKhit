@@ -16,6 +16,7 @@ namespace FhirKhit.ProfGen.CSApi
         ProfileGenerator gen;
 
         List<CSClassFormatter> classes = new List<CSClassFormatter>();
+        Dictionary<Type, String> backBoneElements = new Dictionary<Type, string>();
 
         /// <summary>
         /// Type of the fhir resource class that the profile is derived from (the resource it profiles)
@@ -107,7 +108,7 @@ namespace FhirKhit.ProfGen.CSApi
                 containingBlock = this.nameSpaceBlock;
             else
                 containingBlock = this.classes[this.classes.Count - 1].ClassBlock;
-            cf = new CSClassFormatter(this.gen, containingBlock);
+            cf = new CSClassFormatter(this.gen, this, containingBlock);
             this.classes.Add(cf);
             cf.StartClass(className, fhirType);
         }
@@ -126,9 +127,19 @@ namespace FhirKhit.ProfGen.CSApi
         /// </summary>
         /// <param name="sd"></param>
         /// <param name="unmodifiedElement"></param>
-        public void CreateProperty(ElementTreeNode profileElement) => 
+        public void CreateProperty(ElementTreeNode profileElement) =>
             this.TopClass.CreateProperty(profileElement);
 
         public String GetCode() => this.code.ToString();
+
+        public bool TryGetBackboneElement(Type type, out String className)
+        {
+            return this.backBoneElements.TryGetValue(type, out className);
+        }
+
+        public void AddBackboneElement(Type type, String className)
+        {
+            this.backBoneElements.Add(type, className);
+        }
     }
 }

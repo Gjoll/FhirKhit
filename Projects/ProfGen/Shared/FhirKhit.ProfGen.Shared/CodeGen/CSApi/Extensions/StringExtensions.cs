@@ -90,7 +90,7 @@ namespace FhirKhit.ProfGen.Shared.CodeGen.CSApi.Extensions
             }
             while (true)
             {
-                Int32 i = s.IndexOfAny(new char[] { ' ', '-', '_' });
+                Int32 i = s.IndexOfAny(new char[] { ' ', '-'});
                 if (i < 0)
                     break;
                 String firstPart = s.Substring(0, i);

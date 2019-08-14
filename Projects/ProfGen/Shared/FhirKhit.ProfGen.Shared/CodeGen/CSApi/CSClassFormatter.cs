@@ -15,6 +15,8 @@ namespace FhirKhit.ProfGen.CSApi
 {
     public class CSClassFormatter
     {
+        const String AccPrefix = "Accessor__";
+
         public CodeBlockNested ClassBlock;
         CodeBlockNested containingBlock;
         CodeBlockNested constructorBlock;
@@ -23,6 +25,7 @@ namespace FhirKhit.ProfGen.CSApi
         //CodeBlockNested methodsBlock;
         Type fhirResourceType;
         ProfileGenerator gen;
+        CSCodeFormatter codeFormatter;
         String fhirBaseClassName;
 
         /// <summary>
@@ -37,9 +40,11 @@ namespace FhirKhit.ProfGen.CSApi
 
 
         public CSClassFormatter(ProfileGenerator gen,
+            CSCodeFormatter codeFormatter,
             CodeBlockNested containingBlock)
         {
             this.gen = gen;
+            this.codeFormatter = codeFormatter;
             this.containingBlock = containingBlock;
             this.ClassBlock = this.containingBlock.AppendBlock();
         }
@@ -64,18 +69,18 @@ namespace FhirKhit.ProfGen.CSApi
         /// <summary>
         /// Start creating a class.
         /// </summary>
-        public void StartClass(String className, Type fhirResourceType)
+        public void StartClass(String className, Type fhirType)
         {
-            this.fhirResourceType = fhirResourceType;
-            this.PopulateElementDictionary(fhirResourceType);
+            this.fhirResourceType = fhirType;
+            this.PopulateElementDictionary(fhirType);
 
-            this.fhirBaseClassName = fhirResourceType.FullName;
+            this.fhirBaseClassName = fhirType.FriendlyName();
             className = className.FormatClassName();
 
             this.ClassBlock
                 .AppendCode($"")
                 .AppendCode($"/// <summary>")
-                .AppendCode($"/// Class to implement FHIR profile '{className}'")
+                .AppendCode($"/// Class to implement '{className}'")
                 .AppendCode($"/// </summary>")
                 .AppendCode($"public class {className} :")
                 .AppendCode($"    ProfileBase<{fhirBaseClassName}>")
@@ -114,11 +119,12 @@ namespace FhirKhit.ProfGen.CSApi
                 ;
         }
 
-        String ListType(Type list)
+        String ListType(Type list, out Type listType)
         {
             if (list.GenericTypeArguments.Length != 1)
                 throw new Exception($"Expected a single generic argument to list property");
-            return list.GenericTypeArguments[0].GetFriendlyName();
+            listType = list.GenericTypeArguments[0];
+            return listType.FriendlyName();
         }
 
         public void ModifiedElement(ElementDefinition elementNode)
@@ -130,7 +136,7 @@ namespace FhirKhit.ProfGen.CSApi
             ElementTreeSlice elementSlice,
             PropertyInfo propertyInfo)
         {
-            String typeFriendlyName = propertyInfo.PropertyType.GetFriendlyName();
+            String typeFriendlyName = propertyInfo.PropertyType.FriendlyName();
 
             WritePassThroughProperty(elementNode, elementSlice, propertyInfo.Name, typeFriendlyName);
         }
@@ -140,7 +146,7 @@ namespace FhirKhit.ProfGen.CSApi
             String propertyName,
             String propertyType)
         {
-            String accessorClassName = $"Accessor__{propertyName.ToMachineName()}";
+            String accessorClassName = $"{AccPrefix}{propertyName.ToMachineName()}";
             this.subClassBlock
                 .AppendCode($"")
                 .AppendCode($"/// <summary>")
@@ -174,6 +180,7 @@ namespace FhirKhit.ProfGen.CSApi
         void EmptyProfileCheck(ElementDefinition.TypeRefComponent type)
         {
             String fcn = "EmptyProfileCheck";
+
 #if FHIR_R2 || FHIR_R3
             //# Tested
             if (type.Profile != null)
@@ -201,11 +208,46 @@ namespace FhirKhit.ProfGen.CSApi
 #endif
         }
 
+        String FhirTypeProfileCheck(ElementDefinition.TypeRefComponent type)
+        {
+            String fcn = "EmptyProfileCheck";
+
+#if FHIR_R2 || FHIR_R3
+            //# Tested
+            if (type.TargetProfile != null)
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"TargetProfile not implemented [{type.Code}]");
+                return null;
+            }
+
+            if (type.Profile != null)
+                return type.Profile.LastPathPart();
+            
+            return type.Code;
+#elif FHIR_R4
+            //# Tested
+            if (type.TargetProfile.Count() > 0)
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"TargetProfile not implemented [{type.Code}]");
+                return null;
+            }
+
+            switch (type.Profile.Count())
+            {
+                case 0: return type.Code;
+                case 1: return type.Profile.First().LastUriPart();
+                default:
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"Multiple Profile on frir type not implemented [{type.Code}]");
+                    return null;
+            }
+#endif
+        }
+
         void CreatePassThroughProperty(ElementTreeNode elementNode,
         ElementTreeSlice elementSlice,
         PropertyInfo propertyInfo)
         {
-            String fcn = "CreateProperty";
+            String fcn = "CreatePassThroughProperty";
 
             if (elementSlice.Types.Count > 1)
                 this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Unsupported multiple types. Using first type only.");
@@ -290,20 +332,20 @@ namespace FhirKhit.ProfGen.CSApi
                 case "Narrative":
                     // General purpose data types (minus backbone element).
                     {
-                        this.EmptyProfileCheck(type);
-                        WritePassThroughProperty(elementNode, elementSlice, propertyInfo);
-                        if (propertyInfo.Name.EndsWith("Element"))
-                        {
-                            //# Tested
-                            String name = propertyInfo.Name.RemoveSuffix("Element");
-                            PropertyInfo p2 = this.fhirResourceType.GetProperty(name);
-                            if (p2 == null)
-                            {
-                                this.gen.ConversionWarn(this.GetType().Name, fcn, $"Property {name} not found");
-                                return;
-                            }
-                            WritePassThroughProperty(elementNode, elementSlice, p2);
-                        }
+                        String fhirType = this.FhirTypeProfileCheck(type);
+                        WritePassThroughProperty(elementNode, elementSlice, propertyInfo.Name, fhirType);
+                        //if (propertyInfo.Name.EndsWith("Element"))
+                        //{
+                        //    //# Tested
+                        //    String name = propertyInfo.Name.RemoveSuffix("Element");
+                        //    PropertyInfo p2 = this.fhirResourceType.GetProperty(name);
+                        //    if (p2 == null)
+                        //    {
+                        //        this.gen.ConversionWarn(this.GetType().Name, fcn, $"Property {name} not found");
+                        //        return;
+                        //    }
+                        //    WritePassThroughProperty(elementNode, elementSlice, p2);
+                        //}
                     }
                     break;
 
@@ -326,7 +368,7 @@ namespace FhirKhit.ProfGen.CSApi
             if (this.gen.TryGetSubClass(propertyType, out String profileClassName) == true)
                 return profileClassName;
 
-            String typeName = $"__{propertyType.GetFriendlyName()}";
+            String typeName = $"__{propertyType.FriendlyName()}";
 
             this.gen.ConversionWarn(this.GetType().Name, fcn, $"Singleton type not implemented [{type.Code}]");
             // If class is declared in this class, then add it a a sub calss to profile class, otherwise create new global class for it.
@@ -372,19 +414,19 @@ namespace FhirKhit.ProfGen.CSApi
             return true;
         }
 
-        String GetBindingValuesetName(ElementTreeSlice eSlice)
+        String GetBindingValuesetName(ElementTreeSlice elementSlice)
         {
 #if FHIR_R4
-            return eSlice.Binding.ValueSet.ToValueSetEnumName();
+            return elementSlice.Binding.ValueSet.ToValueSetEnumName();
 #elif FHIR_R3
             const String fcn = "GetBindingValuesetName";
 
-            switch (eSlice.Binding.ValueSet)
+            switch (elementSlice.Binding.ValueSet)
             {
             case FhirUri uri:
                 return uri.Value.ToValueSetEnumName();
             default:
-                this.gen.ConversionError(this.GetType().Name, fcn, $"Value set binding of unknown type '{eSlice.Binding.ValueSet.TypeName}");
+                this.gen.ConversionError(this.GetType().Name, fcn, $"Value set binding of unknown type '{elementSlice.Binding.ValueSet.TypeName}");
                 return null;
             }
 #else
@@ -397,8 +439,8 @@ namespace FhirKhit.ProfGen.CSApi
         /// </summary>
         /// <param name="fix"></param>
         /// <returns></returns>
-        bool FhirConstruct(ElementTreeNode eNode,
-            ElementTreeSlice eSlice,
+        bool FhirConstruct(ElementTreeNode elementNode,
+            ElementTreeSlice elementSlice,
             CodeBlockNested block,
             Element fix,
             String varName,
@@ -415,10 +457,10 @@ namespace FhirKhit.ProfGen.CSApi
                         //# Tested
                         var v = (Code)fix;
                         String valueName = "??";
-                        if (UsesEnum(eNode, eSlice))
+                        if (UsesEnum(elementNode, elementSlice))
                         {
                             //# Tested
-                            String enumName = GetBindingValuesetName(eSlice);
+                            String enumName = GetBindingValuesetName(elementSlice);
                             if (enumName != null)
                             {
                                 propertyType = $"Code<{enumName}>";
@@ -539,7 +581,7 @@ namespace FhirKhit.ProfGen.CSApi
                 case "Ratio":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Period":
@@ -564,13 +606,13 @@ namespace FhirKhit.ProfGen.CSApi
                 case "Range":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Attachment":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Identifier":
@@ -600,13 +642,13 @@ namespace FhirKhit.ProfGen.CSApi
                 case "Annotation":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "HumanName":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "CodeableConcept":
@@ -638,31 +680,31 @@ namespace FhirKhit.ProfGen.CSApi
                 case "ContactPoint":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Coding":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Money":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Address":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Timing":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Quantity":
@@ -675,66 +717,66 @@ namespace FhirKhit.ProfGen.CSApi
                 case "SampledData":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Signature":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Age":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Distance":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Duration":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Count":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "MoneyQuantity":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "SimpleQuantity":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "Narrative":
                     {
                         //# Not Tested
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
                 case "identifier":
                     //# Not Tested
                     {
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FullName}");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Implement {fix.GetType().FriendlyName()}");
                         return false;
                     }
 
                 default:
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"Unimplemented element type {fix.GetType().FullName}");
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"Unimplemented element type {fix.GetType().FriendlyName()}");
                     return false;
             }
         }
@@ -755,7 +797,7 @@ namespace FhirKhit.ProfGen.CSApi
 
             String elementPName = elementName.FormatPropertyName();
 
-            String accessorClassName = $"Accessor__{elementPName}";
+            String accessorClassName = $"{AccPrefix}{elementPName}";
             this.subClassBlock
                 .AppendCode($"")
                 .AppendCode($"/// <summary>")
@@ -822,12 +864,12 @@ namespace FhirKhit.ProfGen.CSApi
                 ;
         }
 
-        bool UsesEnum(ElementTreeNode eNode,
-            ElementTreeSlice eSlice)
+        bool UsesEnum(ElementTreeNode elementNode,
+            ElementTreeSlice elementSlice)
         {
             if (
-                (eSlice.Binding != null) &&
-                (eSlice.Binding.Strength == BindingStrength.Required)
+                (elementSlice.Binding != null) &&
+                (elementSlice.Binding.Strength == BindingStrength.Required)
                 )
                 return true;
             return false;
@@ -841,10 +883,9 @@ namespace FhirKhit.ProfGen.CSApi
             ElementTreeSlice elementSlice,
             PropertyInfo propertyInfo)
         {
-            //const String fcn = "CreateSingletonProperty";
+            const String fcn = "CreateSingletonProperty";
 
-            void WriteAccessor(String pType,
-                String pName)
+            void WriteAccessor(String pType)
             {
                 this.subClassBlock
                     .AppendCode($"")
@@ -854,54 +895,49 @@ namespace FhirKhit.ProfGen.CSApi
                     .AppendCode($"/// </summary>")
                     .AppendCode($"public bool Get(out {pType} value)")
                     .OpenBrace()
-                    .AppendCode($"value = this.ptr.{pName} as {pType};")
+                    .AppendCode($"value = this.ptr.{propertyInfo.Name} as {pType};")
                     .AppendCode($"return value != null;")
                     .CloseBrace()
                     .AppendCode($"")
                     .AppendCode($"/// <summary>")
                     .AppendCode($"/// Set '{pType}' Value")
                     .AppendCode($"/// </summary>")
-                    .AppendCode($"public void Set({pType} value) => this.ptr.{pName} = value;")
+                    .AppendCode($"public void Set({pType} value) => this.ptr.{propertyInfo.Name} = value;")
                     ;
             }
 
             /// <summary>
             /// Original and profile elements have cardinality = 1.
             /// </summary>
-            void WriteAccessors(ElementTreeNode eNode,
-                ElementTreeSlice eSlice,
-                PropertyInfo pInfo,
-                ElementDefinition.TypeRefComponent type)
+            void WriteAccessors(ElementDefinition.TypeRefComponent type)
             {
-                const String fcnWriteAccessors = "CreateSingletonProperty.WriteAccessors";
-
                 switch (type.Code)
                 {
                     case "BackboneElement":
                         {
                             //# Not Tested
-                            this.gen.ConversionWarn(this.GetType().Name, fcnWriteAccessors, $"#Todo: BackboneElement Unsupported.");
+                            this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: BackboneElement Unsupported.");
                         }
                         break;
 
                     case "Extension":
                         {
                             //# Not Tested
-                            this.gen.ConversionWarn(this.GetType().Name, fcnWriteAccessors, $"#Todo: Extension Unsupported.");
+                            this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Extension Unsupported.");
                         }
                         break;
 
                     case "Resource":
                         {
                             //# Not Tested
-                            this.gen.ConversionWarn(this.GetType().Name, fcnWriteAccessors, $"#Todo: Resource Unsupported.");
+                            this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Resource Unsupported.");
                         }
                         break;
 
                     case "Reference":
                         {
                             //# Tested
-                            this.gen.ConversionWarn(this.GetType().Name, fcnWriteAccessors, $"#Todo: Reference Unsupported.");
+                            this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Reference Unsupported.");
                         }
                         break;
 
@@ -910,18 +946,18 @@ namespace FhirKhit.ProfGen.CSApi
                             this.EmptyProfileCheck(type);
 
                             // Write out property to bind to coded enum if possible.
-                            if (UsesEnum(eNode, eSlice))
+                            if (UsesEnum(elementNode, elementSlice))
                             {
                                 // the c# only creates a enum if the value set is required, so we cant link against it if it is only preferred.
                                 // TODO: Create our own valueset enums?
 
-                                String enumName = GetBindingValuesetName(eSlice);
+                                String enumName = GetBindingValuesetName(elementSlice);
                                 if (enumName != null)
-                                    WriteAccessor($"Code<{enumName}>", propertyInfo.Name);
+                                    WriteAccessor($"Code<{enumName}>");
                             }
                             else
                             {
-                                WriteAccessor($"Code", propertyInfo.Name);
+                                WriteAccessor($"Code");
                             }
                         }
                         break;
@@ -969,24 +1005,33 @@ namespace FhirKhit.ProfGen.CSApi
 
                     case "Meta":
                     case "Narrative":
-                        this.EmptyProfileCheck(type);
-                        if (Hl7.Fhir.Model.ModelInfo.FhirTypeToCsType.TryGetValue(type.Code, out Type csType) == false)
+
+                        if (propertyInfo.Name == "ElementId")
                         {
-                            this.gen.ConversionError(this.GetType().Name, fcnWriteAccessors, $"Property type {type.Code} {propertyInfo.Name} not found");
-                            return;
+                            this.EmptyProfileCheck(type);
+                            WriteAccessor("String");
                         }
-                        WriteAccessor(csType.GetFriendlyName(), propertyInfo.Name);
+                        else
+                        {
+                            String fhirType = this.FhirTypeProfileCheck(type);
+                            if (ModelInfo.FhirTypeToCsType.TryGetValue(fhirType, out Type csType) == false)
+                            {
+                                this.gen.ConversionError(this.GetType().Name, fcn, $"Property type {type.Code} {propertyInfo.Name} not found");
+                                return;
+                            }
+                            WriteAccessor(csType.FriendlyName());
+                        }
                         break;
 
                     default:
-                        this.gen.ConversionError(this.GetType().Name, fcnWriteAccessors, $"Unsupported type '{type.Code}'");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"Unsupported type '{type.Code}'");
                         break;
                 }
             }
 
             String propertyName = propertyInfo.Name;
 
-            String accessorClassName = $"Accessor__{propertyName.ToMachineName()}";
+            String accessorClassName = $"{AccPrefix}{propertyName.ToMachineName()}";
             this.subClassBlock
                 .AppendCode($"")
                 .AppendCode($"/// <summary>")
@@ -1004,7 +1049,7 @@ namespace FhirKhit.ProfGen.CSApi
 
 
             foreach (ElementDefinition.TypeRefComponent type in elementSlice.Types)
-                WriteAccessors(elementNode, elementSlice, propertyInfo, type);
+                WriteAccessors(type);
 
             // complete sub class.
             this.subClassBlock
@@ -1012,6 +1057,49 @@ namespace FhirKhit.ProfGen.CSApi
                 ;
 
             CreateAccessorProperty(accessorClassName, elementNode);
+        }
+
+        String CreateBackBoneClass(ElementTreeNode elementNode,
+            ElementTreeSlice elementSlice,
+            Type propertyType,
+            ElementDefinition.TypeRefComponent type)
+        {
+            const String fcn = "CreateBackBoneClass";
+
+            String WriteBackboneClass(CSCodeFormatter codeFormatter, String propertyName, CodeBlockNested classBlock)
+            {
+                if (this.codeFormatter.TryGetBackboneElement(propertyType, out String accessorClassName) == true)
+                    return accessorClassName;
+
+                String fullClassName = propertyType.FriendlyName();
+                String shortClassName = fullClassName.LastPathPart();
+                accessorClassName = $"{AccPrefix}{shortClassName}";
+                this.codeFormatter.StartClass(accessorClassName, propertyType);
+
+                foreach (ElementTreeNode child in elementSlice.ChildNodes)
+                    this.codeFormatter.CreateProperty(child);
+
+                this.codeFormatter.EndClass();
+
+                codeFormatter.AddBackboneElement(propertyType, accessorClassName);
+                return accessorClassName;
+            }
+
+            if (propertyType.DeclaringType == null)
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"#Todo: BackboneElement definition not in declaring type not implemented.");
+                return null;
+            }
+            if (propertyType.DeclaringType != fhirResourceType)
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"#Todo: BackboneElement definition not in declaring type not implemented.");
+                return null;
+            }
+
+            {
+                CodeBlockNested classBlock = this.subClassBlock.AppendBlock();
+                return WriteBackboneClass(this.codeFormatter, propertyType.Name, classBlock);
+            }
         }
 
         /// <summary>
@@ -1022,7 +1110,61 @@ namespace FhirKhit.ProfGen.CSApi
             ElementTreeSlice elementSlice,
             PropertyInfo propertyInfo)
         {
-            //const String fcn = "CreateSingletonProperty";
+            const String fcn = "CreateMultipleProperty";
+
+            String propertyName = propertyInfo.Name;
+            String listTypeName = ListType(propertyInfo.PropertyType, out Type listType);
+
+            void WriteBackboneAccessor(String backboneType,
+                String pType,
+                String pName)
+            {
+                this.subClassBlock
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Count of items")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public Int32 Count => this.ptr.{pName}.Count;")
+
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Get '{pType}' value")
+                    .AppendCode($"/// return true if successfull, false if value is null or con not be converted to '{pType}'")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public bool Get(Int32 index, out {backboneType} value)")
+                    .OpenBrace()
+                    .AppendCode($"value = null;")
+                    .AppendCode($"{pType} temp = this.ptr.{pName}[index];")
+                    .AppendCode($"if (temp == null) return false;")
+                    .AppendCode($"value = new {backboneType}(temp);")
+                    .AppendCode($"return true;")
+                    .CloseBrace()
+
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Set '{pType}' Value")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public void Set(Int32 index, {backboneType} value) => this.ptr.{pName}[index] = value.Ptr;")
+
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Add '{pType}' Value")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public void Add({backboneType} value) => this.ptr.{pName}.Add(value.Ptr);")
+
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// AddRange '{pType}' Value")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public void AddRange(IEnumerable<{backboneType}> values)")
+                    .OpenBrace()
+                    .AppendCode($"foreach ({backboneType} value in values)")
+                    .OpenBrace()
+                    .AppendCode($"this.Add(value);")
+                    .CloseBrace()
+                    .CloseBrace()
+                    ;
+            }
 
             void WriteAccessor(String pType,
                 String pName)
@@ -1068,56 +1210,49 @@ namespace FhirKhit.ProfGen.CSApi
             /// <summary>
             /// Original and profile elements have cardinality = 1.
             /// </summary>
-            void WriteAccessors(ElementTreeNode eNode,
-                ElementTreeSlice eSlice,
-                PropertyInfo pInfo,
-                ElementDefinition.TypeRefComponent type)
+            void WriteAccessors(ElementDefinition.TypeRefComponent type)
             {
-                const String fcnWriteAccessors = "CreateSingletonProperty.WriteAccessors";
-                {
-                    String listTypeName = ListType(propertyInfo.PropertyType);
-
-                    this.subClassBlock
-                        .AppendCode($"")
-                        .AppendCode($"/// <summary>")
-                        .AppendCode($"/// Remove item at indicated index")
-                        .AppendCode($"/// </summary>")
-                        .AppendCode($"public void RemoveAt(Int32 index) => this.ptr.{propertyInfo.Name}.RemoveAt(index);")
-                        .AppendCode($"")
-                        .AppendCode($"/// <summary>")
-                        .AppendCode($"/// Get list of all items")
-                        .AppendCode($"/// </summary>")
-                        .AppendCode($"public IEnumerable<{listTypeName}> Get() => this.ptr.{propertyInfo.Name};")
-                        ;
-                }
+                this.subClassBlock
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Remove item at indicated index")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public void RemoveAt(Int32 index) => this.ptr.{propertyInfo.Name}.RemoveAt(index);")
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Get list of all items")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public IEnumerable<{listTypeName}> Get() => this.ptr.{propertyInfo.Name};")
+                    ;
 
                 switch (type.Code)
                 {
                     case "BackboneElement":
                         {
-                            //# Not Tested
-                            this.gen.ConversionWarn(this.GetType().Name, fcnWriteAccessors, $"#Todo: BackboneElement Unsupported.");
+                            //# Tested
+                            String backboneClassName = this.CreateBackBoneClass(elementNode, elementSlice, listType, type);
+                            WriteBackboneAccessor(backboneClassName, listTypeName, propertyInfo.Name);
                         }
                         break;
 
                     case "Extension":
                         {
                             //# Not Tested
-                            this.gen.ConversionWarn(this.GetType().Name, fcnWriteAccessors, $"#Todo: Extension Unsupported.");
+                            this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Extension Unsupported.");
                         }
                         break;
 
                     case "Resource":
                         {
                             //# Not Tested
-                            this.gen.ConversionWarn(this.GetType().Name, fcnWriteAccessors, $"#Todo: Resource Unsupported.");
+                            this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Resource Unsupported.");
                         }
                         break;
 
                     case "Reference":
                         {
                             //# Tested
-                            this.gen.ConversionWarn(this.GetType().Name, fcnWriteAccessors, $"#Todo: Reference Unsupported.");
+                            this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Reference Unsupported.");
                         }
                         break;
 
@@ -1126,12 +1261,12 @@ namespace FhirKhit.ProfGen.CSApi
                             this.EmptyProfileCheck(type);
 
                             // Write out property to bind to coded enum if possible.
-                            if (UsesEnum(eNode, eSlice))
+                            if (UsesEnum(elementNode, elementSlice))
                             {
                                 // the c# only creates a enum if the value set is required, so we cant link against it if it is only preferred.
                                 // TODO: Create our own valueset enums?
 
-                                String enumName = this.GetBindingValuesetName(eSlice);
+                                String enumName = this.GetBindingValuesetName(elementSlice);
                                 if (enumName != null)
                                     WriteAccessor($"Code<{enumName}>", propertyInfo.Name);
                             }
@@ -1185,24 +1320,24 @@ namespace FhirKhit.ProfGen.CSApi
 
                     case "Meta":
                     case "Narrative":
-                        this.EmptyProfileCheck(type);
-                        if (Hl7.Fhir.Model.ModelInfo.FhirTypeToCsType.TryGetValue(type.Code, out Type csType) == false)
                         {
-                            this.gen.ConversionError(this.GetType().Name, fcnWriteAccessors, $"Property type {type.Code} {propertyInfo.Name} not found");
-                            return;
+                            String fhirType = this.FhirTypeProfileCheck(type);
+                            if (ModelInfo.FhirTypeToCsType.TryGetValue(fhirType, out Type csType) == false)
+                            {
+                                this.gen.ConversionError(this.GetType().Name, fcn, $"Property type {type.Code} {propertyInfo.Name} not found");
+                                return;
+                            }
+                            WriteAccessor(csType.FriendlyName(), propertyInfo.Name);
                         }
-                        WriteAccessor(csType.GetFriendlyName(), propertyInfo.Name);
                         break;
 
                     default:
-                        this.gen.ConversionError(this.GetType().Name, fcnWriteAccessors, $"Unsupported type '{type.Code}'");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"Unsupported type '{type.Code}'");
                         break;
                 }
             }
 
-            String propertyName = propertyInfo.Name;
-
-            String accessorClassName = $"Accessor__{propertyName.ToMachineName()}";
+            String accessorClassName = $"{AccPrefix}{propertyName.ToMachineName()}";
             this.subClassBlock
                 .AppendCode($"")
                 .AppendCode($"/// <summary>")
@@ -1220,77 +1355,12 @@ namespace FhirKhit.ProfGen.CSApi
 
 
             foreach (ElementDefinition.TypeRefComponent type in elementSlice.Types)
-                WriteAccessors(elementNode, elementSlice, propertyInfo, type);
+                WriteAccessors(type);
 
             // complete sub class.
             this.subClassBlock
                 .CloseBrace()
                 ;
-
-            CreateAccessorProperty(accessorClassName, elementNode);
-        }
-
-        /// <summary>
-        /// Write a singleton roperty from a base property that allows cardinality > 1.
-        /// </summary>
-        /// <param name="propertyInfo"></param>
-        void WriteSingletonFromMultipleProperty(ElementTreeNode elementNode,
-            PropertyInfo propertyInfo)
-        {
-            String typeFriendlyName = ListType(propertyInfo.PropertyType);
-            WriteSingletonFromMultipleProperty(elementNode, propertyInfo.Name, typeFriendlyName);
-        }
-
-        /// <summary>
-        /// Write a singleton roperty from a base property that allows cardinality > 1.
-        /// </summary>
-        /// <param name="propertyInfo"></param>
-        void WriteSingletonFromMultipleProperty(ElementTreeNode elementNode,
-            String propertyName,
-            String propertyType)
-        {
-            String accessorClassName = $"Accessor__{propertyName.ToMachineName()}";
-            this.subClassBlock
-                .AppendCode($"")
-                .AppendCode($"/// <summary>")
-                .AppendCode($"/// Accessor for property {propertyName}")
-                .AppendCode($"/// </summary>")
-                .AppendCode($"public class {accessorClassName}")
-                .OpenBrace()
-                .AppendCode($"{this.fhirBaseClassName} ptr;")
-                .AppendCode("")
-                .AppendCode($"public {accessorClassName}({this.fhirBaseClassName} ptr)")
-                .OpenBrace()
-                .AppendCode($"this.ptr = ptr;")
-                .CloseBrace()
-                .AppendCode($"")
-                .AppendCode($"/// <summary>")
-                .AppendCode($"/// Get value")
-                .AppendCode($"/// </summary>")
-                .AppendCode($"public {propertyType} Get()")
-                .OpenBrace()
-                .AppendCode($"return this.ptr.{propertyName}.FirstOrDefault();")
-                .CloseBrace()
-                .AppendCode($"")
-                .AppendCode($"/// <summary>")
-                .AppendCode($"/// Set Value")
-                .AppendCode($"/// </summary>")
-                .AppendCode($"public void Set({propertyType} value)")
-                .OpenBrace()
-                .AppendCode($"if (this.ptr.{propertyName}.Count == 0)")
-                .OpenBrace()
-                .AppendCode($"this.ptr.{propertyName}.Add(value);")
-                .CloseBrace()
-                .AppendCode($"else")
-                .OpenBrace()
-                .AppendCode($"this.ptr.{propertyName}[0] = value;")
-                .CloseBrace()
-                .CloseBrace()
-                .CloseBrace()
-                ;
-
-
-            String fieldName = $"__{propertyName}";
 
             CreateAccessorProperty(accessorClassName, elementNode);
         }
@@ -1302,7 +1372,103 @@ namespace FhirKhit.ProfGen.CSApi
             ElementTreeSlice elementSlice,
             PropertyInfo propertyInfo)
         {
-            String fcn = "CreateProperty";
+            String fcn = "CreateSingletonFromMultipleProperty";
+            String listTypeName = ListType(propertyInfo.PropertyType, out Type listType);
+
+            void WriteAccessor(String propertyName,
+                String propertyType)
+            {
+                String accessorClassName = $"{AccPrefix}{propertyName.ToMachineName()}";
+                this.subClassBlock
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Accessor for property {propertyName}")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public class {accessorClassName}")
+                    .OpenBrace()
+                    .AppendCode($"{this.fhirBaseClassName} ptr;")
+                    .AppendCode("")
+                    .AppendCode($"public {accessorClassName}({this.fhirBaseClassName} ptr)")
+                    .OpenBrace()
+                    .AppendCode($"this.ptr = ptr;")
+                    .CloseBrace()
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Get value")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public {propertyType} Get()")
+                    .OpenBrace()
+                    .AppendCode($"return this.ptr.{propertyName}.FirstOrDefault();")
+                    .CloseBrace()
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Set Value")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public void Set({propertyType} value)")
+                    .OpenBrace()
+                    .AppendCode($"if (this.ptr.{propertyName}.Count == 0)")
+                    .OpenBrace()
+                    .AppendCode($"this.ptr.{propertyName}.Add(value);")
+                    .CloseBrace()
+                    .AppendCode($"else")
+                    .OpenBrace()
+                    .AppendCode($"this.ptr.{propertyName}[0] = value;")
+                    .CloseBrace()
+                    .CloseBrace()
+                    .CloseBrace()
+                    ;
+
+                CreateAccessorProperty(accessorClassName, elementNode);
+            }
+
+            void WriteBackboneAccessor(String backboneClass,
+                String propertyName,
+                String propertyType)
+            {
+                String accessorClassName = $"{AccPrefix}{propertyName.ToMachineName()}";
+                this.subClassBlock
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Accessor for property {propertyName}")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public class {accessorClassName}")
+                    .OpenBrace()
+                    .AppendCode($"{this.fhirBaseClassName} ptr;")
+                    .AppendCode("")
+                    .AppendCode($"public {accessorClassName}({backboneClass} ptr)")
+                    .OpenBrace()
+                    .AppendCode($"this.ptr = ptr;")
+                    .CloseBrace()
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Get value")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public {accessorClassName} Get()")
+                    .OpenBrace()
+                    .AppendCode($"{propertyType} retVal = this.ptr.{propertyName}.FirstOrDefault();")
+                    .AppendCode($"if (retVal == null) return null;")
+                    .AppendCode($"return new {accessorClassName}(retVal);")
+                    .CloseBrace()
+                    .AppendCode($"")
+                    .AppendCode($"/// <summary>")
+                    .AppendCode($"/// Set Value")
+                    .AppendCode($"/// </summary>")
+                    .AppendCode($"public void Set({accessorClassName} value)")
+                    .OpenBrace()
+                    .AppendCode($"if (this.ptr.{propertyName}.Count == 0)")
+                    .OpenBrace()
+                    .AppendCode($"this.ptr.{propertyName}.Add(value.Ptr);")
+                    .CloseBrace()
+                    .AppendCode($"else")
+                    .OpenBrace()
+                    .AppendCode($"this.ptr.{propertyName}[0] = value.Ptr;")
+                    .CloseBrace()
+                    .CloseBrace()
+                    .CloseBrace()
+                    ;
+
+                CreateAccessorProperty(accessorClassName, elementNode);
+            }
 
             if (elementSlice.Types.Count > 1)
                 this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: Unsupported multiple types. Using first type only.");
@@ -1313,7 +1479,8 @@ namespace FhirKhit.ProfGen.CSApi
                 case "BackboneElement":
                     {
                         //# Not Tested
-                        this.gen.ConversionWarn(this.GetType().Name, fcn, $"#Todo: BackboneElement Unsupported.");
+                        String backboneClassName = this.CreateBackBoneClass(elementNode, elementSlice, listType, type);
+                        WriteBackboneAccessor(backboneClassName, listTypeName, propertyInfo.Name);
                     }
                     break;
 
@@ -1333,7 +1500,7 @@ namespace FhirKhit.ProfGen.CSApi
                     break;
 
                 case "Reference":
-                    WriteSingletonFromMultipleProperty(elementNode, propertyInfo);
+                    WriteAccessor(propertyInfo.Name, listTypeName);
                     break;
 
                 case "instant":
@@ -1386,20 +1553,21 @@ namespace FhirKhit.ProfGen.CSApi
                     {
                         //# Not Tested
                         this.EmptyProfileCheck(type);
-                        WriteSingletonFromMultipleProperty(elementNode, propertyInfo);
 
-                        if (propertyInfo.Name.EndsWith("Element"))
-                        {
-                            //# Not Tested
-                            String name = propertyInfo.Name.RemoveSuffix("Element");
-                            PropertyInfo p2 = this.fhirResourceType.GetProperty(name);
-                            if (p2 == null)
-                            {
-                                this.gen.ConversionWarn(this.GetType().Name, fcn, $"Property {name} not found");
-                                return;
-                            }
-                            WriteSingletonFromMultipleProperty(elementNode, p2);
-                        }
+                        WriteAccessor(propertyInfo.Name, listTypeName);
+
+                        //if (propertyInfo.Name.EndsWith("Element"))
+                        //{
+                        //    //# Not Tested
+                        //    String name = propertyInfo.Name.RemoveSuffix("Element");
+                        //    PropertyInfo p2 = this.fhirResourceType.GetProperty(name);
+                        //    if (p2 == null)
+                        //    {
+                        //        this.gen.ConversionWarn(this.GetType().Name, fcn, $"Property {name} not found");
+                        //        return;
+                        //    }
+                        //    WriteAccessor(elementNode, p2);
+                        //}
                     }
                     break;
 

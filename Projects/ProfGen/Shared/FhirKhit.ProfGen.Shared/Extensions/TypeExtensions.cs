@@ -36,7 +36,7 @@ namespace FhirKhit.ProfGen.Shared
             return name;
         }
 
-        public static string GetFriendlyName(this Type type)
+        public static string FriendlyName(this Type type)
         {
             if (type.IsArray)
                 return type.GetFriendlyNameOfArrayType();
@@ -51,7 +51,7 @@ namespace FhirKhit.ProfGen.Shared
             if (type.DeclaringType == null)
                 return name;
 
-            String declaringName = GetFriendlyName(type.DeclaringType);
+            String declaringName = FriendlyName(type.DeclaringType);
             return $"{declaringName}.{name}";
         }
 
@@ -64,25 +64,25 @@ namespace FhirKhit.ProfGen.Shared
                 arrayMarker += $"[{commas}]";
                 type = type.GetElementType();
             }
-            return type.GetFriendlyName() + arrayMarker;
+            return type.FriendlyName() + arrayMarker;
         }
 
         private static string GetFriendlyNameOfGenericType(this Type type)
         {
             if (type.GetGenericTypeDefinition() == typeof(Nullable<>))
-                return type.GetGenericArguments().First().GetFriendlyName() + "?";
+                return type.GetGenericArguments().First().FriendlyName() + "?";
             var friendlyName = type.Name;
             var indexOfBacktick = friendlyName.IndexOf('`');
             if (indexOfBacktick > 0)
                 friendlyName = friendlyName.Remove(indexOfBacktick);
             var typeParameterNames = type
                 .GetGenericArguments()
-                .Select(typeParameter => typeParameter.GetFriendlyName());
+                .Select(typeParameter => typeParameter.FriendlyName());
             var joinedTypeParameters = string.Join(", ", typeParameterNames);
             return string.Format("{0}<{1}>", friendlyName, joinedTypeParameters);
         }
 
         private static string GetFriendlyNameOfPointerType(this Type type) =>
-            type.GetElementType().GetFriendlyName() + "*";
+            type.GetElementType().FriendlyName() + "*";
     }
 }

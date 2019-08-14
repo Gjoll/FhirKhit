@@ -163,6 +163,12 @@ namespace FhirKhit.ProfGen.XUnitTests
             p.AddProfile(profile);
         }
 
+        void Create_Components(ProfileGenerator p)
+        {
+            //StructureDefinition profile = CreateObservation("ComponentObservation");
+            //p.AddProfile(profile);
+        }
+
         [Fact(DisplayName = "ProfGen.CreateGenTest")]
         [Trait("Test", "test")]
         public void CreateGenTest()
@@ -171,10 +177,11 @@ namespace FhirKhit.ProfGen.XUnitTests
                 OutputNameSpace,
                 GenDir);
             Create_NoModObservation(p);
-            Create_CardinalityModObservation(p);
-            Create_Fixed(p);
-            Create_Fixed1(p);
-            Create_Fixed2(p);
+            //Create_CardinalityModObservation(p);
+            //Create_Fixed(p);
+            //Create_Fixed1(p);
+            //Create_Fixed2(p);
+            //Create_Components(p);
             bool success = p.Process();
 
             StringBuilder sb = new StringBuilder();
