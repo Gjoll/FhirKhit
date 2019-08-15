@@ -113,7 +113,7 @@ namespace FhirKhit.ProfGen.XUnitTests
             SnapshotCreator.Create(s);
             ElementTreeNode head = ElementTreeNode.Create(null, s.Snapshot.Element);
             Assert.True(head.Slices.Count() == 1);
-            Assert.True(head.ChildItems(ElementTreeNode.DefaultSlice).Count() == 1);
+            Assert.True(head.ChildItems(ElementTreeNode.BaseSlice).Count() == 1);
 
             Assert.True(head.TryGetElementNode("Observation.code.coding", out ElementTreeNode coding) == true);
             Assert.True(coding.Slices.Count() == 2);
@@ -148,7 +148,7 @@ namespace FhirKhit.ProfGen.XUnitTests
             SnapshotCreator.Create(s);
             ElementTreeNode head = ElementTreeNode.Create(null, s.Snapshot.Element);
             Assert.True(head.Slices.Count() == 1);
-            Assert.True(head.ChildItems(ElementTreeNode.DefaultSlice).Count() == 1);
+            Assert.True(head.ChildItems(ElementTreeNode.BaseSlice).Count() == 1);
 
             Assert.True(head.TryGetElementNode("Observation.component", out ElementTreeNode observationComponent) == true);
             Assert.True(observationComponent.Path == "Observation.component");
@@ -170,9 +170,9 @@ namespace FhirKhit.ProfGen.XUnitTests
             SnapshotCreator.Create(s);
             ElementTreeNode head = ElementTreeNode.Create(null, s.Snapshot.Element);
             Assert.True(head.Slices.Count() == 1);
-            Assert.True(head.ChildItems(ElementTreeNode.DefaultSlice).Count() == 1);
+            Assert.True(head.ChildItems(ElementTreeNode.BaseSlice).Count() == 1);
 
-            head = head.ChildItems(ElementTreeNode.DefaultSlice).First();
+            head = head.ChildItems(ElementTreeNode.BaseSlice).First();
             {
                 Assert.True(head.TryGetItem("Observation.id", out ElementTreeNode idNode) == true);
                 Assert.True(idNode.Slices.First().Min == 0);

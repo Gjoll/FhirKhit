@@ -933,7 +933,7 @@ namespace FhirKhit.ProfGen.CSApi
         {
             const String fcn = "CreateBackBoneClass";
 
-            String WriteBackboneClass(CSCodeFormatter codeFormatter, String propertyName, CodeBlockNested classBlock)
+            String WriteBackboneClass(CodeBlockNested classBlock)
             {
                 if (this.codeFormatter.TryGetBackboneElement(propertyType, out String accessorClassName) == true)
                     return accessorClassName;
@@ -965,7 +965,7 @@ namespace FhirKhit.ProfGen.CSApi
 
             {
                 CodeBlockNested classBlock = this.subClassBlock.AppendBlock();
-                return WriteBackboneClass(this.codeFormatter, propertyType.Name, classBlock);
+                return WriteBackboneClass(classBlock);
             }
         }
 

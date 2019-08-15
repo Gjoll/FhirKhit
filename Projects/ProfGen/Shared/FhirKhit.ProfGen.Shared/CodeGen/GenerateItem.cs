@@ -92,7 +92,7 @@ namespace FhirKhit.ProfGen.Shared
             this.Code.StartNameSpace(this.nameSpace);
             this.Code.StartClass(this.name, fhirType);
 
-            foreach (ElementTreeNode profileElement in profileElements.ChildItems(ElementTreeNode.DefaultSlice))
+            foreach (ElementTreeNode profileElement in profileElements.ChildItems(ElementTreeNode.BaseSlice))
             {
                 String[] elementPathItems = profileElement.Path.Split('.');
                 switch (elementPathItems.Length)

@@ -141,7 +141,7 @@ namespace FhirKhit.ProfGen.Shared
             ElementTreeNode profileItems = ElementTreeNode.Create(this, profile.Snapshot.Element);
             if (profileItems.Slices.Count() != 1)
                 throw new Exception($"Invalid head element slice count. Should be one.");
-            if (profileItems.ChildItems(ElementTreeNode.DefaultSlice).Count() != 1)
+            if (profileItems.ChildItems(ElementTreeNode.BaseSlice).Count() != 1)
                 throw new Exception($"Invalid head element count. Shouldbe one.");
 
             Type fhirType = this.GetFhirApiType(profile.BaseDefinition);
@@ -152,7 +152,7 @@ namespace FhirKhit.ProfGen.Shared
                 profile.Type,
                 fhirType,
                 this.OutputLanguage,
-                profileItems.ChildItems(ElementTreeNode.DefaultSlice).First());
+                profileItems.ChildItems(ElementTreeNode.BaseSlice).First());
 
             gi.Process();
 

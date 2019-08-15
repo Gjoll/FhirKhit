@@ -9,7 +9,7 @@ namespace FhirKhit.ProfGen.Shared
 {
     public class ElementTreeNode
     {
-        public const String DefaultSlice = "@default";
+        public const String BaseSlice = "";
 
         public class SliceDictionary : Dictionary<String, ElementTreeSlice>
         {
@@ -98,7 +98,7 @@ namespace FhirKhit.ProfGen.Shared
                 return false;
             while (pathIndex < pathItems.Length)
             {
-                item = this.GetChildItem(path, pathItems[pathIndex++], DefaultSlice);
+                item = this.GetChildItem(path, pathItems[pathIndex++], BaseSlice);
                 if (item == null)
                     return false;
             }
@@ -125,7 +125,7 @@ namespace FhirKhit.ProfGen.Shared
             StringBuilder path = new StringBuilder();
 
             Int32 i = 0;
-            String sliceName = DefaultSlice;
+            String sliceName = BaseSlice;
             StringBuilder pathItem = new StringBuilder();
             char c;
             do
@@ -141,7 +141,7 @@ namespace FhirKhit.ProfGen.Shared
                 while (i < loadItem.ElementId.Length);
 
                 currentItem = currentItem.GetChildItem(path.ToString(), pathItem.ToString(), sliceName);
-                sliceName = DefaultSlice;
+                sliceName = BaseSlice;
                 pathItem.Clear();
 
                 if (c == ':')
@@ -184,7 +184,7 @@ namespace FhirKhit.ProfGen.Shared
                 {
                     case 1:
                         pathPart = pathItemParts[0];
-                        sliceName = DefaultSlice;
+                        sliceName = BaseSlice;
                         break;
                     case 2:
                         pathPart = pathItemParts[0];
