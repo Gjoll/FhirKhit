@@ -122,9 +122,9 @@ namespace FhirKhit.ProfGen.XUnitTests
         }
 
 
-        [Fact(DisplayName = "ElementTreeNode.SlicingTest")]
+        [Fact(DisplayName = "ElementTreeNode.SliceDiscriminatorTest")]
         [Trait("Test", "test")]
-        public void SlicingTest()
+        public void SliceDiscriminatorTest()
         {
             StructureDefinition s = this.CreateBaseObservation();
             ElementDefinition e = new ElementDefinition
@@ -154,12 +154,12 @@ namespace FhirKhit.ProfGen.XUnitTests
             Assert.True(observationComponent.Path == "Observation.component");
             Assert.True(observationComponent.PathName == "component");
             Assert.True(observationComponent.Slices.Count() == 1);
-            Assert.True(observationComponent.Slices.First().Slicing.ElementId == "5");
-            Assert.True(observationComponent.Slices.First().Slicing.Ordered == false);
-            Assert.True(observationComponent.Slices.First().Slicing.Rules == ElementDefinition.SlicingRules.Open);
-            Assert.True(observationComponent.Slices.First().Slicing.Discriminator.Count == 1);
-            Assert.True(observationComponent.Slices.First().Slicing.Discriminator[0].Type == ElementDefinition.DiscriminatorType.Value);
-            Assert.True(observationComponent.Slices.First().Slicing.Discriminator[0].Path == "code.coding.code");
+            Assert.True(observationComponent.Slicing.ElementId == "5");
+            Assert.True(observationComponent.Slicing.Ordered == false);
+            Assert.True(observationComponent.Slicing.Rules == ElementDefinition.SlicingRules.Open);
+            Assert.True(observationComponent.Slicing.Discriminator.Count == 1);
+            Assert.True(observationComponent.Slicing.Discriminator[0].Type == ElementDefinition.DiscriminatorType.Value);
+            Assert.True(observationComponent.Slicing.Discriminator[0].Path == "code.coding.code");
         }
 
         [Fact(DisplayName = "ElementTreeNode.CardinalityTest")]

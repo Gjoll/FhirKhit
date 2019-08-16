@@ -10,18 +10,21 @@ using Hl7.Fhir.Introspection;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Support.Model;
 using System.Diagnostics;
+using Hl7.FhirPath;
 
 namespace FhirKhit.ProfGen.CSApi
 {
     public class CSClassFormatter
     {
         const String AccPrefix = "Accessor__";
+        const String DiscPrefix = "Discriminator__";
 
         public CodeBlockNested ClassBlock;
         CodeBlockNested containingBlock;
         CodeBlockNested constructorBlock;
         CodeBlockNested subClassBlock;
         CodeBlockNested propertiesBlock;
+        CodeBlockNested fieldsBlock;
         //CodeBlockNested methodsBlock;
         Type fhirResourceType;
         ProfileGenerator gen;
@@ -90,6 +93,9 @@ namespace FhirKhit.ProfGen.CSApi
             this.subClassBlock = this.ClassBlock.AppendBlock();
             this.subClassBlock.AppendRaw("#region Sub Class Definitions");
 
+            this.fieldsBlock = this.ClassBlock.AppendBlock();
+            this.fieldsBlock.AppendRaw("#region Field Definitions");
+
             this.propertiesBlock = this.ClassBlock.AppendBlock();
             this.propertiesBlock.AppendRaw("#region Property Definitions");
 
@@ -109,6 +115,7 @@ namespace FhirKhit.ProfGen.CSApi
         {
             this.subClassBlock.AppendRaw("#endregion");
             this.propertiesBlock.AppendRaw("#endregion");
+            this.fieldsBlock.AppendRaw("#endregion");
 
             this.constructorBlock
                 .CloseBrace()
@@ -246,14 +253,14 @@ namespace FhirKhit.ProfGen.CSApi
         {
             block
                 .OpenBrace()
-                .AppendLine($"{propertyType} temp = new {propertyType}({value});")
+                .AppendCode($"{propertyType} temp = new {propertyType}({value});")
                 ;
             if (singleton)
-                block.AppendLine($"{varName} = temp;");
+                block.AppendCode($"{varName} = temp;");
             else
             {
-                block.AppendLine($"{varName}.Clear();");
-                block.AppendLine($"{varName}.Add(temp);");
+                block.AppendCode($"{varName}.Clear();");
+                block.AppendCode($"{varName}.Add(temp);");
             }
             block.CloseBrace();
             return true;
@@ -320,11 +327,11 @@ namespace FhirKhit.ProfGen.CSApi
                         }
 
                         if (singleton)
-                            block.AppendLine($"{varName} = new {propertyType}({valueName});");
+                            block.AppendCode($"{varName} = new {propertyType}({valueName});");
                         else
                         {
-                            block.AppendLine($"{varName}.Clear();");
-                            block.AppendLine($"{varName}.Add(new {propertyType}({valueName}));");
+                            block.AppendCode($"{varName}.Clear();");
+                            block.AppendCode($"{varName}.Add(new {propertyType}({valueName}));");
                         }
                         return true;
                     }
@@ -470,15 +477,15 @@ namespace FhirKhit.ProfGen.CSApi
                         propertyType = "Identifier";
                         block
                             .OpenBrace()
-                            .AppendLine($"var temp = new {propertyType}({v.System.ToCode()}, {v.Value.ToCode()});")
+                            .AppendCode($"var temp = new {propertyType}({v.System.ToCode()}, {v.Value.ToCode()});")
                             ;
                         if (singleton)
-                            block.AppendLine($"{varName} = temp;");
+                            block.AppendCode($"{varName} = temp;");
                         else
                         {
                             block
-                                .AppendLine($"{varName}.Clear();")
-                                .AppendLine($"{varName}.Add(temp);")
+                                .AppendCode($"{varName}.Clear();")
+                                .AppendCode($"{varName}.Add(temp);")
                                 .CloseBrace()
                                 ;
                         }
@@ -505,19 +512,19 @@ namespace FhirKhit.ProfGen.CSApi
                         propertyType = "CodeableConcept";
                         block
                             .OpenBrace()
-                            .AppendLine($"CodeableConcept temp = new {propertyType}();")
+                            .AppendCode($"CodeableConcept temp = new {propertyType}();")
                             ;
                         if (v.Text != null)
-                            block.AppendLine($"temp.Text = {v.Text.ToCode()};");
+                            block.AppendCode($"temp.Text = {v.Text.ToCode()};");
                         foreach (Coding c in v.Coding)
-                            block.AppendLine($"temp.Coding.Add({c.ToCode()}));");
+                            block.AppendCode($"temp.Coding.Add({c.ToCode()}));");
 
                         if (singleton)
-                            block.AppendLine($"{varName} = temp;");
+                            block.AppendCode($"{varName} = temp;");
                         else
                         {
-                            block.AppendLine($"{varName}.Clear();");
-                            block.AppendLine($"{varName}.Add(temp);");
+                            block.AppendCode($"{varName}.Clear();");
+                            block.AppendCode($"{varName}.Add(temp);");
                         }
                         block.CloseBrace();
                         return true;
@@ -636,7 +643,7 @@ namespace FhirKhit.ProfGen.CSApi
             bool singleton)
         {
             if (singleton == false)
-                this.constructorBlock.AppendLine($"this.ptr.{propertyInfo.Name}.Clear();");
+                this.constructorBlock.AppendCode($"this.ptr.{propertyInfo.Name}.Clear();");
             if (this.FhirConstruct(elementNode, elementSlice, this.constructorBlock, elementSlice.Fixed, $"this.ptr.{ propertyInfo.Name}", singleton, out string elementType) == false)
                 return;
 
@@ -1434,14 +1441,117 @@ namespace FhirKhit.ProfGen.CSApi
             }
         }
 
+        /// <summary>
+        /// Create a discriminator class for the indicted value.
+        /// </summary>
+        /// <param name="elementNode"></param>
+        /// <returns></returns>
+        String DefineDiscriminatorTypeValue(ElementTreeNode elementNode,
+            ElementDefinition.DiscriminatorComponent discriminator)
+        {
+            //String fcn = "DefineDiscriminatorTypeValue";
+            String className = $"{DiscPrefix}{discriminator.ElementId}";
+
+            String elementName = elementNode.Path.LastPathPart().Trim();
+            PropertyInfo basePropertyInfo = this.GetProperty(elementName);
+
+            // Create c# code to access property at path.
+            StringBuilder propertyPath = new StringBuilder();
+            String[] pathParts = discriminator.Path.Split('.');
+            foreach (String pathPart in pathParts)
+            {
+            }
+
+
+            EvaluationContext ctx = new EvaluationContext();
+
+
+            String basePropertyType = basePropertyInfo.PropertyType.FriendlyName();
+            this.subClassBlock
+                .AppendCode($"")
+                .AppendCode($"/// <summary>")
+                .AppendCode($"/// Discriminator class for {elementNode.Path}")
+                .AppendCode($"/// </summary>")
+                .AppendCode($"public class {className} : SliceOnValue<basePropertyType>")
+                .OpenBrace()
+                .AppendCode($"{basePropertyType} ptr;")
+                .AppendCode("")
+                .AppendCode($"public {className}({basePropertyType} ptr)")
+                .OpenBrace()
+                .AppendCode($"this.ptr = ptr;")
+                .CloseBrace()
+                .AppendCode($"")
+                .AppendCode($"/// <summary>")
+                .AppendCode($"/// Get value")
+                .AppendCode($"/// </summary>")
+                .AppendCode($"public override {basePropertyType} GetValue()")
+                .OpenBrace()
+
+                .CloseBrace()
+                ;
+
+
+            return className;
+        }
+
+
+        void CreateSliceDisciminator(ElementTreeNode elementNode,
+            ElementTreeSlice elementSlice)
+        {
+            String fcn = "CreateSliceDisciminator";
+
+            ElementDefinition.SlicingComponent sliceComponent = elementNode.Slicing;
+            if (sliceComponent.Ordered == true)
+                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Ordered == true not currently implemented. '{elementNode.Path}'");
+            if (sliceComponent.Rules != ElementDefinition.SlicingRules.Open)
+                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Rules != Open not currently implemented. '{elementNode.Path}'");
+
+            this.fieldsBlock
+                .AppendCode($"/// <summary>")
+                .AppendCode($"/// Field to define slicing on '{elementNode.Path}'")
+                ;
+            if (String.IsNullOrWhiteSpace(sliceComponent.Description) == false)
+                this.fieldsBlock.AppendCode($"/// '{sliceComponent.Description}'");
+            String fieldName = $"slicing_{sliceComponent.ElementId}_{elementSlice.SliceName}";
+            this.fieldsBlock
+                .AppendCode($"/// </summary>")
+                .AppendCode($"Slicing {fieldName};")
+                ;
+            this.constructorBlock
+                .OpenBrace()
+                .AppendCode($"List<ISliceDiscriminator> discriminators = new List<ISliceDiscriminator>();")
+                ;
+            foreach (ElementDefinition.DiscriminatorComponent discriminator in sliceComponent.Discriminator)
+            {
+                switch (discriminator.Type)
+                {
+                    case ElementDefinition.DiscriminatorType.Value:
+                        {
+                            String discClass = DefineDiscriminatorTypeValue(elementNode, discriminator);
+                            this.constructorBlock
+                                .AppendCode($"discriminators.Add(new {discClass}(\"{discriminator.Path}\", null);");
+                                ;
+                        }
+                        break;
+                    default:
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: discriminator.Type {discriminator.Type} currently implemented. '{elementNode.Path}'");
+                        break;
+                }
+            }
+            this.constructorBlock
+                .AppendCode($"Slicing {fieldName} = new Slicing(discriminators.ToArray());")
+                .CloseBrace()
+                ;
+        }
+
         public void CreateProperty(ElementTreeNode elementNode)
         {
             String fcn = "CreateProperty";
 
             if (elementNode.Slices.Count() > 1)
                 this.gen.ConversionWarn(this.GetType().Name, fcn, $"#TODO: Handle multiple slices");
-            this.CreateProperty(elementNode, elementNode.Slices.First());
-
+            foreach (ElementTreeSlice elementSlice in elementNode.Slices)
+                this.CreateProperty(elementNode, elementSlice);
         }
 
         void CreateProperty(ElementTreeNode elementNode,
@@ -1456,6 +1566,9 @@ namespace FhirKhit.ProfGen.CSApi
             Int32 profileMax = elementSlice.Max;
             if (profileMax == 0)
                 return;
+
+            if ((elementNode.Slicing != null) && (String.IsNullOrEmpty(elementSlice.SliceName) == false))
+                CreateSliceDisciminator(elementNode, elementSlice);
 
             if ((originalMax == 1) && (profileMax == 1))
             {

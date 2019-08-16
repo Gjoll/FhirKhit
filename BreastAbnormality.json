@@ -1,0 +1,2682 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "breastrad-BreastAbnormality",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastAbnormality Profile</b></p>\n  <p>Breast Abnormality Form</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>breastrad.BreastAbnormality maps to Observation:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ObservationBasedOn maps to basedOn\n  ObservationPartOf maps to partOf\n  Status maps to status\n  Category maps to category\n  Code maps to code\n  ObservationSubjectOfRecord maps to subject\n  FocalSubject maps to focus\n  CareContext maps to encounter\n  RelevantTime maps to effective[x] // Add Types Timing, instant\n  StatementDateTime maps to issued\n  Performer maps to performer // Added Target Types PractitionerRole, CareTeam\n  DataValue maps to value[x] // Add Type integer, remove Type Attachment\n  DataAbsentReason maps to dataAbsentReason\n  Interpretation maps to interpretation\n  Annotation maps to note\n  BreastBodyLocation.Code maps to bodySite\n  BreastBodyLocation.Laterality maps to bodySite.extension\n  BreastBodyLocation.AnatomicalOrientation maps to bodySite.extension\n  BreastBodyLocation.RelationToLandmark maps to bodySite.extension\n  Method maps to method\n  Specimen maps to specimen\n  Device maps to device\n  ReferenceRange maps to referenceRange\n  ReferenceRange.LowerBound maps to referenceRange.low\n  ReferenceRange.UpperBound maps to referenceRange.high\n  ReferenceRange.Type maps to referenceRange.type\n  ReferenceRange.ApplicableSubpopulation maps to referenceRange.appliesTo\n  ReferenceRange.ApplicableAgeRange maps to referenceRange.age\n  ReferenceRange.Text maps to referenceRange.text\n  PanelMembers.Observation maps to hasMember (slice on = $this.resolve().code.coding.code; slice strategy = includes)\n  ObservationDerivedFrom maps to derivedFrom\n  Components.ObservationComponent maps to component (slice on = code.coding.code; slice strategy = includes)\n  Components.ObservationComponent.Code maps to component.code\n  Components.ObservationComponent.DataValue maps to component.value[x]\n  Components.ObservationComponent.DataAbsentReason maps to component.dataAbsentReason\n  Components.ObservationComponent.Interpretation maps to component.interpretation\n  Components.ObservationComponent.ReferenceRange maps to component.referenceRange\n  Components.ObservationComponent.ReferenceRange.LowerBound maps to component.referenceRange.low\n  Components.ObservationComponent.ReferenceRange.UpperBound maps to component.referenceRange.high\n  Components.ObservationComponent.ReferenceRange.Type maps to component.referenceRange.type\n  Components.ObservationComponent.ReferenceRange.ApplicableSubpopulation maps to component.referenceRange.appliesTo\n  Components.ObservationComponent.ReferenceRange.ApplicableAgeRange maps to component.referenceRange.age\n  Components.ObservationComponent.ReferenceRange.Text maps to component.referenceRange.text\n</pre></p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/breastrad-BreastAbnormality",
+  "name": "BreastAbnormality",
+  "status": "active",
+  "date": "2019-08-02",
+  "publisher": "Hl7 - Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Breast Abnormality Form",
+  "purpose": "Observations are a key aspect of healthcare.  This resource is used to capture those that do not require more sophisticated mechanisms.",
+  "fhirVersion": "4.0.0",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "short": "breastrad-BreastAbnormality",
+        "definition": "Breast Abnormality Form",
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "Observation.basedOn",
+        "path": "Observation.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.partOf",
+        "path": "Observation.partOf",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-MedicationStatement",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Procedure"
+            ]
+          }
+        ],
+        "short": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
+        "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure."
+      },
+      {
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationCategory"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes for high level observation categories.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-category"
+        }
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code"
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "id": "4",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.code.coding:Fixed_BreastAbnormalityObservationCode",
+        "path": "Observation.code.coding",
+        "sliceName": "Fixed_BreastAbnormalityObservationCode",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.code.coding:Fixed_BreastAbnormalityObservationCode.system",
+        "path": "Observation.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.code.coding:Fixed_BreastAbnormalityObservationCode.code",
+        "path": "Observation.code.coding.code",
+        "fixedCode": "BreastAbnormalityObservationCode"
+      },
+      {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+            ]
+          }
+        ],
+        "short": "The subject of an observation",
+        "definition": "The subject of an observation."
+      },
+      {
+        "id": "Observation.encounter",
+        "path": "Observation.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.performer",
+        "path": "Observation.performer",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite"
+      },
+      {
+        "id": "Observation.bodySite.extension:laterality",
+        "path": "Observation.bodySite.extension",
+        "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-Laterality-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "laterality"
+      },
+      {
+        "id": "Observation.bodySite.extension:anatomicalorientation",
+        "path": "Observation.bodySite.extension",
+        "definition": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "anatomicalorientation"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark",
+        "path": "Observation.bodySite.extension",
+        "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-RelationToLandmark-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "relationtolandmark"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktype",
+        "path": "Observation.bodySite.extension.extension"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktype.valueCodeableConcept",
+        "path": "Observation.bodySite.extension.extension.valueCodeableConcept"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktype.valueCodeableConcept.coding",
+        "path": "Observation.bodySite.extension.extension.valueCodeableConcept.coding",
+        "slicing": {
+          "id": "3",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktype.valueCodeableConcept.coding:Fixed_361083003",
+        "path": "Observation.bodySite.extension.extension.valueCodeableConcept.coding",
+        "sliceName": "Fixed_361083003",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktype.valueCodeableConcept.coding:Fixed_361083003.system",
+        "path": "Observation.bodySite.extension.extension.valueCodeableConcept.coding.system",
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktype.valueCodeableConcept.coding:Fixed_361083003.code",
+        "path": "Observation.bodySite.extension.extension.valueCodeableConcept.coding.code",
+        "fixedCode": "361083003"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation",
+        "path": "Observation.bodySite.extension.extension"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation.extension:code",
+        "path": "Observation.bodySite.extension.extension.extension"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation.extension:code.valueCodeableConcept",
+        "path": "Observation.bodySite.extension.extension.extension.valueCodeableConcept"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation.extension:code.valueCodeableConcept.coding",
+        "path": "Observation.bodySite.extension.extension.extension.valueCodeableConcept.coding",
+        "slicing": {
+          "id": "2",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation.extension:code.valueCodeableConcept.coding:Fixed_181139003",
+        "path": "Observation.bodySite.extension.extension.extension.valueCodeableConcept.coding",
+        "sliceName": "Fixed_181139003",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation.extension:code.valueCodeableConcept.coding:Fixed_181139003.system",
+        "path": "Observation.bodySite.extension.extension.extension.valueCodeableConcept.coding.system",
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation.extension:code.valueCodeableConcept.coding:Fixed_181139003.code",
+        "path": "Observation.bodySite.extension.extension.extension.valueCodeableConcept.coding.code",
+        "fixedCode": "181139003"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdirection",
+        "path": "Observation.bodySite.extension.extension"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdirection.valueCodeableConcept",
+        "path": "Observation.bodySite.extension.extension.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-BreastDirectionVS"
+        }
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdistance",
+        "path": "Observation.bodySite.extension.extension"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdistance.valueQuantity",
+        "path": "Observation.bodySite.extension.extension.valueQuantity"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdistance.valueQuantity.system",
+        "path": "Observation.bodySite.extension.extension.valueQuantity.system",
+        "fixedUri": "http://unitsofmeasure.org"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdistance.valueQuantity.code",
+        "path": "Observation.bodySite.extension.extension.valueQuantity.code",
+        "fixedCode": "cm"
+      },
+      {
+        "id": "Observation.bodySite.coding",
+        "path": "Observation.bodySite.coding",
+        "slicing": {
+          "id": "1",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.bodySite.coding:Fixed_76752008",
+        "path": "Observation.bodySite.coding",
+        "sliceName": "Fixed_76752008",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.bodySite.coding:Fixed_76752008.system",
+        "path": "Observation.bodySite.coding.system",
+        "fixedUri": "http://snomed.info/sct"
+      },
+      {
+        "id": "Observation.bodySite.coding:Fixed_76752008.code",
+        "path": "Observation.bodySite.coding.code",
+        "fixedCode": "76752008"
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.referenceRange.type",
+        "path": "Observation.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.referenceRange.appliesTo",
+        "path": "Observation.referenceRange.appliesTo",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
+              "http://hl7.org/fhir/StructureDefinition/Media",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "id": "5",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.component.value[x]",
+        "path": "Observation.component.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange",
+        "path": "Observation.component.referenceRange"
+      },
+      {
+        "id": "Observation.component.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity",
+        "path": "Observation.component",
+        "sliceName": "breastrad-AbnormalityDensity",
+        "short": "AbnormalityDensity: Ductal carcinoma in situ (DCIS) is the presence of abnormal cells inside a milk duct in the breast",
+        "definition": "Ductal carcinoma in situ (DCIS) is the presence of abnormal cells inside a milk duct in the breast.\nDCIS is considered the earliest form of breast cancer. DCIS is noninvasive, meaning it hasn't spread out of the milk duct and has a low risk of becoming invasive..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity.code.coding:Fixed_AbnormalityDensity",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_AbnormalityDensity",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity.code.coding:Fixed_AbnormalityDensity.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity.code.coding:Fixed_AbnormalityDensity.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "AbnormalityDensity"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-AbnormalityDensityVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityDensity.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType",
+        "path": "Observation.component",
+        "sliceName": "breastrad-AbnormalityType",
+        "short": "AbnormalityType: Abnormality Type value",
+        "definition": "Abnormality Type value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType.code.coding:Fixed_AbnormalityType",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_AbnormalityType",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType.code.coding:Fixed_AbnormalityType.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType.code.coding:Fixed_AbnormalityType.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "AbnormalityType"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-AbnormalityTypeVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-AbnormalityType.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes",
+        "path": "Observation.component",
+        "sliceName": "breastrad-AsymmetryTypes",
+        "short": "AsymmetryTypes: Currently many studies utilize cortical thickening and hilum absence as criteria for definition of the risk for metastasis(11,12-16). ..",
+        "definition": "Currently many studies utilize cortical thickening and hilum absence as criteria for definition of the risk for metastasis(11,12-16). ... Metastatic deposits accumulate in the lymph node peripheral area, causing enlargement of the cortex, usually focal (at early stages), or uniform..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes.code.coding:Fixed_AsymmetryTypes",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_AsymmetryTypes",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes.code.coding:Fixed_AsymmetryTypes.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes.code.coding:Fixed_AsymmetryTypes.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "AsymmetryTypes"
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-AsymmetryTypesVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-AsymmetryTypes.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode",
+        "path": "Observation.component",
+        "sliceName": "breastrad-BiRadCode",
+        "short": "BiRadCode: Bi-Rad code value",
+        "definition": "Bi-Rad code value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode.code.coding:Fixed_BiRadCode",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_BiRadCode",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode.code.coding:Fixed_BiRadCode.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode.code.coding:Fixed_BiRadCode.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "BiRadCode"
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-BiRadCodeVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-BiRadCode.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType",
+        "path": "Observation.component",
+        "sliceName": "breastrad-CalcificationType",
+        "short": "CalcificationType: Calcification Type",
+        "definition": "Calcification Type.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType.code.coding:Fixed_CalcificationType",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_CalcificationType",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType.code.coding:Fixed_CalcificationType.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType.code.coding:Fixed_CalcificationType.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "CalcificationType"
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-CalcificationTypeVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-CalcificationType.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Change",
+        "path": "Observation.component",
+        "sliceName": "breastrad-Change",
+        "short": "Change: Change value",
+        "definition": "Change value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Change.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-Change.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-Change.code.coding:Fixed_Change",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_Change",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-Change.code.coding:Fixed_Change.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-Change.code.coding:Fixed_Change.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "Change"
+      },
+      {
+        "id": "Observation.component:breastrad-Change.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-ChangeVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-Change.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Change.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-Change.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Change.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith",
+        "path": "Observation.component",
+        "sliceName": "breastrad-ConsistentWith",
+        "short": "ConsistentWith: Consistent With",
+        "definition": "Consistent With.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_ConsistentWith",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "ConsistentWith"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-ConsistentWithVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes",
+        "path": "Observation.component",
+        "sliceName": "breastrad-CystTypes",
+        "short": "CystTypes: Cyst Types",
+        "definition": "Cyst Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes.code.coding:Fixed_CystTypes",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_CystTypes",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes.code.coding:Fixed_CystTypes.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes.code.coding:Fixed_CystTypes.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "CystTypes"
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-CystTypesVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-CystTypes.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody",
+        "path": "Observation.component",
+        "sliceName": "breastrad-ForeignBody",
+        "short": "ForeignBody: Foreign Body",
+        "definition": "Foreign Body.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody.code.coding:Fixed_ForeignBody",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_ForeignBody",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody.code.coding:Fixed_ForeignBody.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody.code.coding:Fixed_ForeignBody.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "ForeignBody"
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-ForeignBodyVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-ForeignBody.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum",
+        "path": "Observation.component",
+        "sliceName": "breastrad-Hilum",
+        "short": "Hilum: Hilum",
+        "definition": "Hilum.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum.code.coding:Fixed_Hilum",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_Hilum",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum.code.coding:Fixed_Hilum.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum.code.coding:Fixed_Hilum.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "Hilum"
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-HilumVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Hilum.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers",
+        "path": "Observation.component",
+        "sliceName": "breastrad-LymphNodeQualifiers",
+        "short": "LymphNodeQualifiers: Lymph Node Qualifiers",
+        "definition": "Lymph Node Qualifiers.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers.code.coding:Fixed_LymphNodeQualifiers",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_LymphNodeQualifiers",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers.code.coding:Fixed_LymphNodeQualifiers.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers.code.coding:Fixed_LymphNodeQualifiers.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "LymphNodeQualifiers"
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-LymphNodeQualifiersVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-LymphNodeQualifiers.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Margin",
+        "path": "Observation.component",
+        "sliceName": "breastrad-Margin",
+        "short": "Margin: When breast cancer is surgically removed (during a surgical biopsy, lumpectomy or mastectomy), a rim of normal tissue surrounding the tumor is also removed",
+        "definition": "When breast cancer is surgically removed (during a surgical biopsy, lumpectomy or mastectomy), a rim of normal tissue surrounding the tumor is also removed. This rim is called a margin. Margins help show whether or not all of the tumor was removed..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Margin.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-Margin.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-Margin.code.coding:Fixed_Margin",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_Margin",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-Margin.code.coding:Fixed_Margin.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-Margin.code.coding:Fixed_Margin.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "Margin"
+      },
+      {
+        "id": "Observation.component:breastrad-Margin.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-MarginVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-Margin.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Margin.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-Margin.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Margin.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes",
+        "path": "Observation.component",
+        "sliceName": "breastrad-MassTypes",
+        "short": "MassTypes: Mass Types",
+        "definition": "Mass Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_MassTypes",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "MassTypes"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-MassTypesVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes",
+        "path": "Observation.component",
+        "sliceName": "breastrad-NodeTypes",
+        "short": "NodeTypes: Node Types",
+        "definition": "Node Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes.code.coding:Fixed_NodeTypes",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_NodeTypes",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes.code.coding:Fixed_NodeTypes.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes.code.coding:Fixed_NodeTypes.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "NodeTypes"
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-NodeTypesVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-NodeTypes.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Shape",
+        "path": "Observation.component",
+        "sliceName": "breastrad-Shape",
+        "short": "Shape: Shape",
+        "definition": "Shape.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Shape.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-Shape.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-Shape.code.coding:Fixed_Shape",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_Shape",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-Shape.code.coding:Fixed_Shape.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-Shape.code.coding:Fixed_Shape.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "Shape"
+      },
+      {
+        "id": "Observation.component:breastrad-Shape.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-ShapeVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-Shape.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Shape.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-Shape.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Shape.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity",
+        "path": "Observation.component",
+        "sliceName": "breastrad-Vascularity",
+        "short": "Vascularity: Vascularity",
+        "definition": "Vascularity.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity.code.coding:Fixed_Vascularity",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_Vascularity",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity.code.coding:Fixed_Vascularity.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity.code.coding:Fixed_Vascularity.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "Vascularity"
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-VascularityVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Vascularity.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Wall",
+        "path": "Observation.component",
+        "sliceName": "breastrad-Wall",
+        "short": "Wall: Wall",
+        "definition": "Wall.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Wall.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-Wall.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-Wall.code.coding:Fixed_Wall",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_Wall",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-Wall.code.coding:Fixed_Wall.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-Wall.code.coding:Fixed_Wall.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "Wall"
+      },
+      {
+        "id": "Observation.component:breastrad-Wall.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-WallVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-Wall.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-Wall.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-Wall.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-Wall.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength",
+        "path": "Observation.component",
+        "sliceName": "breastrad-MaxLength",
+        "short": "MaxLength: Max Length Description\n<br>This item will be a slice of Observation.Component",
+        "definition": "Max Length Description\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength.code.coding:Fixed_MaxLength",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_MaxLength",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength.code.coding:Fixed_MaxLength.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength.code.coding:Fixed_MaxLength.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "MaxLength"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength.valueQuantity",
+        "path": "Observation.component.valueQuantity",
+        "base": {
+          "path": "Observation.component.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MaxLength.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth",
+        "path": "Observation.component",
+        "sliceName": "breastrad-MaxWidth",
+        "short": "MaxWidth: Max Width\n<br>This item will be a slice of Observation.Component",
+        "definition": "Max Width\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth.code.coding",
+        "path": "Observation.component.code.coding",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth.code.coding:Fixed_MaxWidth",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_MaxWidth",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth.code.coding:Fixed_MaxWidth.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth.code.coding:Fixed_MaxWidth.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "MaxWidth"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth.valueQuantity",
+        "path": "Observation.component.valueQuantity",
+        "base": {
+          "path": "Observation.component.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MaxWidth.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      }
+    ]
+  },
+  "title": "breastrad-BreastAbnormality"
+}

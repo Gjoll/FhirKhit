@@ -74,9 +74,9 @@ namespace FhirKhit.ProfGen.XUnitTests
                 FhirVersion = FVersion,
                 Type = "Observation",
                 Kind = StructureDefinition.StructureDefinitionKind.Resource,
-                Abstract = false,
+                Abstract = false
             };
-
+            profile.Snapshot.Element.Add(e);
             SnapshotCreator.Create(profile);
             return profile;
         }
@@ -99,7 +99,94 @@ namespace FhirKhit.ProfGen.XUnitTests
             };
         }
 
-        void Create_Fixed(ProfileGenerator p)
+        void Create_Sliced(ProfileGenerator p)
+        {
+            StructureDefinition profile = CreateObservation("SlicedObservation");
+            {
+                ElementDefinition e = profile.Snapshot.Element.GetOrCreateElement("Observation.component");
+                e.Min = 0;
+                e.Max = "1";
+                e.Slicing = new ElementDefinition.SlicingComponent
+                {
+                    ElementId = "ObservationComponentSlice",
+                    Ordered = false,
+                    Rules = ElementDefinition.SlicingRules.Open
+                };
+                e.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
+                {
+                    Type = ElementDefinition.DiscriminatorType.Value,
+                    Path = "code"
+                });
+            }
+
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    ElementId = "Observation.component:Slice1",
+                    Path = "Observation.component",
+                    SliceName = "Slice1"
+                };
+                profile.Snapshot.Element.Add(e);
+            }
+
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    Path = "Observation.component.code",
+                    ElementId = "Observation.component:Slice1.code",
+                    Fixed = new CodeableConcept("www.test.com/SliceSystem", "Slice1Code")
+                };
+                profile.Snapshot.Element.Add(e);
+            }
+
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    Path = "Observation.component.code",
+                    ElementId = "Observation.component:Slice2.code",
+                    Fixed = new CodeableConcept("www.test.com/SliceSystem", "Slice2Code")
+                };
+                profile.Snapshot.Element.Add(e);
+            }
+
+            p.AddProfile(profile);
+        }
+
+/*
+        void Create_Fixed_Error(ProfileGenerator p)
+        {
+            StructureDefinition profile = CreateObservation("FixedObservation");
+
+            {
+                ElementDefinition e = profile.Differential.Element.GetOrCreateElement("Observation.identifier");
+                e.Min = 0;
+                e.Max = "1";
+                e.Fixed = new Identifier("fixedIdentifierSystem", "fixedIdentifierValue");
+            }
+
+
+            {
+                ElementDefinition e = profile.Differential.Element.GetOrCreateElement("Observation.code");
+                e.Min = 0;
+                e.Max = "1";
+                e.Fixed = new CodeableConcept("codeSystem", "codeCode", "codeDisplay", "codeText");
+            }
+
+            SnapshotCreator.Create(profile);
+            p.AddProfile(profile);
+
+            {
+                ElementDefinition e = profile.Snapshot.Element.FindByPath("Observation.status");
+                e.Fixed = new Code("cancelled");
+                profile.Differential.Element.Add(e);
+            }
+
+            SnapshotCreator.Create(profile);
+            p.AddProfile(profile);
+            //profile.SaveJson($@"c:\Temp\{profile.Name}");
+        }
+ */
+ void Create_Fixed(ProfileGenerator p)
         {
             StructureDefinition profile = CreateObservation("FixedObservation");
 
@@ -118,15 +205,16 @@ namespace FhirKhit.ProfGen.XUnitTests
                 e.Fixed = new CodeableConcept("codeSystem", "codeCode", "codeDisplay", "codeText");
             }
 
+            p.AddProfile(profile);
+
             {
-                ElementDefinition e = profile.Snapshot.Element.GetOrCreateElement("Observation.status");
-                e.Min = 0;
-                e.Max = "1";
+                ElementDefinition e = profile.Snapshot.Element.FindByPath("Observation.status");
                 e.Fixed = new Code("cancelled");
+                profile.Snapshot.Element.Add(e);
             }
 
-
             p.AddProfile(profile);
+            //profile.SaveJson($@"c:\Temp\{profile.Name}");
         }
 
         void Create_Fixed1(ProfileGenerator p)
@@ -166,6 +254,7 @@ namespace FhirKhit.ProfGen.XUnitTests
         void Create_Components(ProfileGenerator p)
         {
             //StructureDefinition profile = CreateObservation("ComponentObservation");
+            //SnapshotCreator.Create(profile);
             //p.AddProfile(profile);
         }
 
@@ -182,6 +271,7 @@ namespace FhirKhit.ProfGen.XUnitTests
             Create_Fixed1(p);
             Create_Fixed2(p);
             Create_Components(p);
+            Create_Sliced(p);
             bool success = p.Process();
 
             StringBuilder sb = new StringBuilder();

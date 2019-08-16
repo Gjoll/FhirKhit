@@ -27,11 +27,6 @@ namespace FhirKhit.ProfGen.Shared
         ProfileGenerator gen;
 
         /// <summary>
-        /// Element Definition path.
-        /// </summary>
-        public String Path { get; set; }
-
-        /// <summary>
         /// Name of this slice.
         /// </summary>
         public String SliceName { get; }
@@ -45,7 +40,6 @@ namespace FhirKhit.ProfGen.Shared
         public Int32 Max = Int32.MaxValue;
 
         public BaseInfoData BaseInfo { get; set; }
-        public ElementDefinition.SlicingComponent Slicing { get; set; }
         public List<ElementDefinition.TypeRefComponent> Types = new List<ElementDefinition.TypeRefComponent>();
         public Element Fixed = null;
         public ElementDefinition.ElementDefinitionBindingComponent Binding = null;
@@ -91,7 +85,7 @@ namespace FhirKhit.ProfGen.Shared
         /// <param name="values"></param>
         public void Load(ElementDefinition loadItem)
         {
-            const String fcn = "Load";
+            //const String fcn = "Load";
 
             if (loadItem.Min.HasValue)
                 this.Min = loadItem.Min.Value;
@@ -126,16 +120,6 @@ namespace FhirKhit.ProfGen.Shared
                 if (loadItem.Base.Min.HasValue)
                     this.BaseInfo.Min = loadItem.Base.Min.Value;
                 this.BaseInfo.Max = loadItem.Base.Max.MaxValue(this.BaseInfo.Max);
-            }
-
-            if (loadItem.Slicing != null)
-            {
-                if (this.Slicing != null)
-                    throw new Exception($"Slicing element already set.");
-                this.Slicing = loadItem.Slicing;
-                if (this.Slicing.Discriminator.Count > 1)
-                    if (this.gen != null)
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"Invalid discriminator count '{this.Slicing.Discriminator.Count}'. Currrently only 1 discriminator allowed.");
             }
         }
     }

@@ -13,9 +13,9 @@ namespace FhirKhit.Test.R4                                                      
 {                                                                               // CSCodeFormatter.cs:84
                                                                                 // CSClassFormatter.cs:84
     /// <summary>                                                               // CSClassFormatter.cs:85
-    /// Class to implement 'NoModObservation'                                   // CSClassFormatter.cs:86
+    /// Class to implement 'SlicedObservation'                                  // CSClassFormatter.cs:86
     /// </summary>                                                              // CSClassFormatter.cs:87
-    public class NoModObservation :                                             // CSClassFormatter.cs:88
+    public class SlicedObservation :                                            // CSClassFormatter.cs:88
         ProfileBase<Observation>                                                // CSClassFormatter.cs:89
     {                                                                           // CSClassFormatter.cs:90
 #region Sub Class Definitions
@@ -1345,7 +1345,7 @@ namespace FhirKhit.Test.R4                                                      
         /// <summary>                                                           // CSClassFormatter.cs:106
         /// Constructor                                                         // CSClassFormatter.cs:107
         /// </summary>                                                          // CSClassFormatter.cs:108
-        public NoModObservation(Observation ptr) : base(ptr)                    // CSClassFormatter.cs:109
+        public SlicedObservation(Observation ptr) : base(ptr)                   // CSClassFormatter.cs:109
         {                                                                       // CSClassFormatter.cs:110
         }                                                                       // CSClassFormatter.cs:121
                                                                                 // CSClassFormatter.cs:84

@@ -336,11 +336,12 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        public CodeBlockNested CloseBrace([CallerFilePath] String filePath = "",
+        public CodeBlockNested CloseBrace(String term = "",
+            [CallerFilePath] String filePath = "",
             [CallerLineNumber] Int32 lineNumber = 0)
         {
             this.Unindent();
-            this.AppendCode("}", filePath, lineNumber);
+            this.AppendCode($"}}{term}", filePath, lineNumber);
             return this;
         }
 

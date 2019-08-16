@@ -11,10 +11,9 @@ namespace FhirKhit.ProfGen.Shared
     {
         public const String BaseSlice = "";
 
-        public class SliceDictionary : Dictionary<String, ElementTreeSlice>
-        {
-        }
+        public class SliceDictionary : Dictionary<String, ElementTreeSlice> {}
 
+        public ElementDefinition.SlicingComponent Slicing { get; set; }
 
         ProfileGenerator gen;
 
@@ -119,9 +118,9 @@ namespace FhirKhit.ProfGen.Shared
 
         static void Load(ElementTreeNode head, ElementDefinition loadItem)
         {
-            ElementTreeNode currentItem = head;
+            ElementTreeNode nodeElement = head;
 
-            String[] pathItems = loadItem.ElementId.Split('.');
+            String[] pathItems = loadItem.Path.Split('.');
             StringBuilder path = new StringBuilder();
 
             Int32 i = 0;
@@ -140,7 +139,7 @@ namespace FhirKhit.ProfGen.Shared
                 }
                 while (i < loadItem.ElementId.Length);
 
-                currentItem = currentItem.GetChildItem(path.ToString(), pathItem.ToString(), sliceName);
+                nodeElement = nodeElement.GetChildItem(path.ToString(), pathItem.ToString(), sliceName);
                 sliceName = BaseSlice;
                 pathItem.Clear();
 
@@ -160,8 +159,29 @@ namespace FhirKhit.ProfGen.Shared
                     sliceName = sliceBuilder.ToString();
                 }
             } while (i < loadItem.ElementId.Length);
-            ElementTreeSlice nodeSlice = currentItem.GetSlice(sliceName);
+
+            nodeElement.Load(loadItem);
+            ElementTreeSlice nodeSlice = nodeElement.GetSlice(sliceName);
             nodeSlice.Load(loadItem);
+        }
+
+        /// <summary>
+        /// Copy data from ElementDefinition to ElementTreeNode.
+        /// </summary>
+        /// <param name="values"></param>
+        public void Load(ElementDefinition loadItem)
+        {
+            const String fcn = "Load";
+
+            if (loadItem.Slicing != null)
+            {
+                if (this.Slicing != null)
+                    throw new Exception($"Slicing element already set.");
+                this.Slicing = loadItem.Slicing;
+                if (this.Slicing.Discriminator.Count > 1)
+                    if (this.gen != null)
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"Todo: Currrently only 1 discriminator allowed.");
+            }
         }
 
         /// <summary>

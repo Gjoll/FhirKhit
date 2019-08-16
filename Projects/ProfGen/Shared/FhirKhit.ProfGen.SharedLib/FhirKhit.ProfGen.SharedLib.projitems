@@ -9,6 +9,9 @@
     <Import_RootNamespace>FhirKhit.ProfGen.SharedLib</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\ISliceDiscriminator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ProfileBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\Slicing.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\SliceOnValue.cs" />
   </ItemGroup>
 </Project>
