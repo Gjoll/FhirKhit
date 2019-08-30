@@ -35,13 +35,7 @@
     <ProjectReference Include="..\FhirKhit.SliceGen.R4\FhirKhit.SliceGen.R4.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Generated\" />
-  </ItemGroup>
-
-  <Import Project="..\..\Share\FhirKhit.SliceGen.Share.GenTests\FhirKhit.SliceGen.Share.GenTests.projitems" Label="Share" />
-
-  <Import Project="..\..\Share\FhirKhit.SliceGen.ShareLib\FhirKhit.SliceGen.ShareLib.projitems" Label="Share" />
+  <Import Project="..\..\Share\FhirKhit.SliceGen.Share.XUnitTestsA\FhirKhit.SliceGen.Share.XUnitTestsA.projitems" Label="Share" />
 
   <Import Project="..\..\..\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems" Label="Share" />
 

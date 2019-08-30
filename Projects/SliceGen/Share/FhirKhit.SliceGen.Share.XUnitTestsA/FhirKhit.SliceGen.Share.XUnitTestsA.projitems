@@ -6,7 +6,7 @@
     <SharedGUID>e11548b9-456f-4572-b673-7bb1d04d1a71</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>FhirKhit.SliceGen.Share.XUnitTests</Import_RootNamespace>
+    <Import_RootNamespace>FhirKhit.SliceGen.Share.XUnitTestsA</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration.cs" />

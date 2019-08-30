@@ -373,9 +373,9 @@ namespace FhirKhit.SliceGen.XUnitTests
         /// <summary>
         /// Generate Construct method.
         /// </summary>
-        [Fact(DisplayName = "CodeGeneration.FhirConstructA")]
+        [Fact(DisplayName = "CodeGeneration.GenerateFhirConstructClasses")]
         [Trait("CodeGen", "CodeGen")]
-        public void FhirConstructA()
+        public void GenerateFhirConstructClasses()
         {
             CodeEditor editor = new CodeEditor();
 
@@ -554,11 +554,13 @@ namespace FhirKhit.SliceGen.XUnitTests
         }
 
         /// <summary>
-        /// Use FhirConstruct method to generate code for each element.
+        /// Use FhirConstruct method to generate code to call each generated class.
+        /// The main purpose of this is to make sure that each class compiles and doesnt
+        /// throw a common error. It is not a complete test of each generated FhirCreate class.
         /// </summary>
-        [Fact(DisplayName = "CodeGeneration.FhirConstructB")]
+        [Fact(DisplayName = "CodeGeneration.CallFhirConstructClasses")]
         [Trait("CodeGen", "CodeGen")]
-        public void FhirConstructB()
+        public void CallFhirConstructClasses()
         {
             CodeEditor editor = new CodeEditor();
 
@@ -578,7 +580,7 @@ namespace FhirKhit.SliceGen.XUnitTests
                 .AppendLine($"using System.Diagnostics;")
                 .AppendLine($"using Hl7.FhirPath;")
                 .BlankLine()
-                .AppendLine($"namespace FhirKhit.SliceGen.GenTests")
+                .AppendLine($"namespace FhirKhit.SliceGen.Share.XUnitTestsB")
                 .OpenBrace()
                 .AppendCode($"public class FhirConstructUse")
                 .OpenBrace()
@@ -645,21 +647,21 @@ namespace FhirKhit.SliceGen.XUnitTests
             String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
                 "SliceGen",
                 "R2",
-                "FhirKhit.SliceGen.GenTests.R2",
+                "FhirKhit.SliceGen.Share.XUnitTestsB.R2",
                 "Generated",
                 "FhirConstructUse.cs");
 #elif FHIR_R3
             String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
                 "SliceGen",
                 "R3",
-                "FhirKhit.SliceGen.GenTests.R3",
+                "FhirKhit.SliceGen.Share.XUnitTestsB.R3",
                 "Generated",
                 "FhirConstructUse.cs");
 #elif FHIR_R4
             String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
                 "SliceGen",
                 "R4",
-                "FhirKhit.SliceGen.GenTests.R4",
+                "FhirKhit.SliceGen.Share.XUnitTestsB.R4",
                 "Generated",
                 "FhirConstructUse.cs");
 #endif

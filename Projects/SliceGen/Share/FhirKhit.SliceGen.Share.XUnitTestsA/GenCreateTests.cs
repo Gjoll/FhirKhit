@@ -25,15 +25,15 @@ namespace FhirKhit.SliceGen.XUnitTests
     public class GenCreateTests
     {
 #if FHIR_R2
-        public string GenDir => Path.Combine(DirHelper.FindParentDir("SliceGen"), "Share", "FhirKhit.SliceGen.Share.GenTests", "Generated");
+        public string GenDir => Path.Combine(DirHelper.FindParentDir("SliceGen"), "Share", "FhirKhit.SliceGen.Share.XUnitTestsA", "Generated");
         Not Implemented
         const String OutputNameSpace = "FhirKhit.Test.R2";
 #elif FHIR_R3
-        public string GenDir => Path.Combine(DirHelper.FindParentDir("SliceGen"), "R3", "FhirKhit.SliceGen.GenTests.R3", "Generated");
+        public string GenDir => Path.Combine(DirHelper.FindParentDir("SliceGen"), "R3", "FhirKhit.SliceGen.Share.XUnitTestsB.R3", "Generated");
         String FVersion = "3.0.1";
         const String OutputNameSpace = "FhirKhit.Test.R3";
 #elif FHIR_R4
-        public static string GenDir => Path.Combine(DirHelper.FindParentDir("SliceGen"), "R4", "FhirKhit.SliceGen.GenTests.R4", "Generated");
+        public static string GenDir => Path.Combine(DirHelper.FindParentDir("SliceGen"), "R4", "FhirKhit.SliceGen.Share.XUnitTestsB.R4", "Generated");
         FHIRVersion FVersion = FHIRVersion.N3_0_1;
         const String OutputNameSpace = "FhirKhit.Test.R4";
 #endif
