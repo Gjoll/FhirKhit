@@ -124,7 +124,7 @@ namespace FhirKhit.SliceGen.R4
 
         void ProcessProfile(StructureDefinition profile)
         {
-            //String fcn = "ProcessProfile";
+            //String fcn = nameof(ProcessProfile);
 
             if (profile.Snapshot == null)
                 SnapshotCreator.Create(profile);
@@ -175,7 +175,7 @@ namespace FhirKhit.SliceGen.R4
         /// <returns></returns>
         StructureDefinition ReadProfile(String profilePath)
         {
-            const String fcn = "ReadProfile";
+            const String fcn = nameof(ReadProfile);
 
             if (File.Exists(profilePath) == false)
                 throw new NotImplementedException($"Profile file {profilePath} not found");

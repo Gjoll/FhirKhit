@@ -46,7 +46,7 @@ namespace FhirKhit.SliceGen.R4
 
         public void Process()
         {
-            String fcn = "ProcessProfile";
+            String fcn = nameof(Process);
 
             //IEnumerable<string> y = Source.ListArtifactNames();
             //Resource x = Source.ResolveByUri("http://hl7.org/fhir/DataElement/Identifier");
@@ -90,7 +90,7 @@ namespace FhirKhit.SliceGen.R4
         /// <returns></returns>
         bool ProcessResourceConstraint()
         {
-            const String fcn = "ProcessResourceConstraint";
+            const String fcn = nameof(ProcessResourceConstraint);
 
             this.Code.StartNameSpace(this.nameSpace);
             this.Code.StartClass(this.name, fhirType);

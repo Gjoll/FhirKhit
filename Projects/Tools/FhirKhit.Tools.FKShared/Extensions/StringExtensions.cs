@@ -74,7 +74,7 @@ namespace FhirKhit.Tools.R2
         out String fhirCode,
         out String fhirDisplay)
     {
-        const String fcn = "ModelLabToModelDefConvertor.ProcessSystem";
+        const String fcn = nameof(ProcessSystem);
 
         fhirCode = modelLabCode;
         fhirDisplay = modelLabDisplay;

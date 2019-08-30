@@ -116,7 +116,7 @@ namespace FhirKhit.Tools.R2
             bool failOnWarnings,
             ref bool retVal)
         {
-            const String fcn = "FhirValidator:ProcessOutcome";
+            const String fcn = nameof(ProcessOutcome);
             foreach (OperationOutcome.IssueComponent issue in results.Issue)
             {
                 switch (issue.Severity)
