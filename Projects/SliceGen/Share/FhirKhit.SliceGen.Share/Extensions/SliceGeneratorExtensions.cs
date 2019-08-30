@@ -7,16 +7,16 @@ namespace FhirKhit.SliceGen.Share
     /// <summary>
     /// Extensions on profile generator class
     /// </summary>
-    public static class ProfileGeneratorExtensions
+    public static class SliceGeneratorExtensions
     {
-        public static ProfileGenerator.OutputLanguageType ToOutputLang(this String language)
+        public static SliceGenerator.OutputLanguageType ToOutputLang(this String language)
         {
             if (language is null)
                 throw new ArgumentNullException(nameof(language));
 
             switch (language.ToLower())
             {
-                case "csharp": return  ProfileGenerator.OutputLanguageType.CSharp;
+                case "csharp": return  SliceGenerator.OutputLanguageType.CSharp;
                     default: throw new Exception($"Unknown output language '{language}'");
             }
         }

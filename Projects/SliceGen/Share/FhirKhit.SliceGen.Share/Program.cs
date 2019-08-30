@@ -11,7 +11,7 @@ namespace FhirKhit.SliceGen.Share
         /// </summary>
         String nameSpace = "Fhir.Profile.Generator";
         String outputDir = ".";
-        ProfileGenerator.OutputLanguageType outputLanguage = ProfileGenerator.OutputLanguageType.CSharp;
+        SliceGenerator.OutputLanguageType outputLanguage = SliceGenerator.OutputLanguageType.CSharp;
         String inputFile = null;
         String inputDir = null;
         String inputMask = null;
@@ -82,11 +82,11 @@ namespace FhirKhit.SliceGen.Share
         {
             if (File.Exists(filePath) == false)
                 throw new Exception($"File {this.inputFile} does not exist");
-            ProfileGenerator p = new ProfileGenerator(this.outputLanguage, this.nameSpace, this.outputDir);
+            SliceGenerator p = new SliceGenerator(this.outputLanguage, this.nameSpace, this.outputDir);
             p.AddProfile(filePath);
             bool success = p.Process();
             if (success == false)
-                throw new Exception($"ProfileGenerator returned failure");
+                throw new Exception($"SliceGenerator returned failure");
         }
 
         void RunInputFile()

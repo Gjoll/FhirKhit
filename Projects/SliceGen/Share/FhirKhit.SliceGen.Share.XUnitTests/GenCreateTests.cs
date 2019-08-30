@@ -51,10 +51,10 @@ namespace FhirKhit.SliceGen.XUnitTests
         [Trait("Test", "test")]
         public void ConstructorTest()
         {
-            ProfileGenerator p = new ProfileGenerator(ProfileGenerator.OutputLanguageType.CSharp,
+            SliceGenerator p = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
                 OutputNameSpace,
                 GenDir);
-            Assert.True(p.OutputLanguage == ProfileGenerator.OutputLanguageType.CSharp);
+            Assert.True(p.OutputLanguage == SliceGenerator.OutputLanguageType.CSharp);
             Assert.True(p.NameSpace == OutputNameSpace);
             Assert.True(p.OutputDir == GenDir);
         }
@@ -88,7 +88,7 @@ namespace FhirKhit.SliceGen.XUnitTests
             return profile;
         }
 
-        void Create_NoModObservation(ProfileGenerator p)
+        void Create_NoModObservation(SliceGenerator p)
         {
             StructureDefinition profile = CreateObservation("NoModObservation");
             SnapshotCreator.Create(profile);
@@ -96,7 +96,7 @@ namespace FhirKhit.SliceGen.XUnitTests
         }
 
 
-        void Create_CardinalityModObservation(ProfileGenerator p)
+        void Create_CardinalityModObservation(SliceGenerator p)
         {
             StructureDefinition profile = CreateObservation("CardinalityModObservation");
             {
@@ -109,7 +109,7 @@ namespace FhirKhit.SliceGen.XUnitTests
             p.AddProfile(profile);
         }
 
-        void Create_SlicedMultiple(ProfileGenerator p)
+        void Create_SlicedMultiple(SliceGenerator p)
         {
             StructureDefinition profile = CreateObservation("SlicedMultiple");
             {
@@ -172,7 +172,7 @@ namespace FhirKhit.SliceGen.XUnitTests
             profile.SaveJson($@"c:\Temp\SlicedMultiple.json");
         }
 
-        void Create_Fixed(ProfileGenerator p)
+        void Create_Fixed(SliceGenerator p)
         {
             StructureDefinition profile = CreateObservation("Fixed");
 
@@ -200,7 +200,7 @@ namespace FhirKhit.SliceGen.XUnitTests
             profile.SaveJson($@"c:\Temp\{profile.Name}.json");
         }
 
-        void Create_Fixed1(ProfileGenerator p)
+        void Create_Fixed1(SliceGenerator p)
         {
             StructureDefinition profile = CreateObservation("Fixed1");
 
@@ -218,7 +218,7 @@ namespace FhirKhit.SliceGen.XUnitTests
             p.AddProfile(profile);
         }
 
-        void Create_Fixed2(ProfileGenerator p)
+        void Create_Fixed2(SliceGenerator p)
         {
             StructureDefinition profile = CreateObservation("Fixed2");
 
@@ -240,7 +240,7 @@ namespace FhirKhit.SliceGen.XUnitTests
         [Trait("Test", "test")]
         public void CreateGenTest()
         {
-            ProfileGenerator p = new ProfileGenerator(ProfileGenerator.OutputLanguageType.CSharp,
+            SliceGenerator p = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
                 OutputNameSpace,
                 GenDir);
             //$this.Create_NoModObservation(p);

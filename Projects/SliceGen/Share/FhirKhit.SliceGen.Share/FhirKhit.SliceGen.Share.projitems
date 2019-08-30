@@ -18,10 +18,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)CodeGen\GenerateItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\TypeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CodeGen\ICodeFormatter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)CodeGen\ProfileGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGen\SliceGenerator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CodeGen\StructDefHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ElementDefinitionExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ProfileGeneratorExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\SliceGeneratorExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Program.cs" />
   </ItemGroup>
   <ItemGroup>

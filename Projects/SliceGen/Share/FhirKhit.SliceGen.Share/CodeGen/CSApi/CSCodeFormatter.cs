@@ -13,7 +13,7 @@ namespace FhirKhit.SliceGen.CSApi
     {
         CodeEditor code;
         CodeBlockNested nameSpaceBlock;
-        ProfileGenerator gen;
+        SliceGenerator gen;
 
         List<CSClassFormatter> classes = new List<CSClassFormatter>();
         Dictionary<Type, String> backBoneElements = new Dictionary<Type, string>();
@@ -38,7 +38,7 @@ namespace FhirKhit.SliceGen.CSApi
             }
         }
 
-        public CSCodeFormatter(ProfileGenerator gen)
+        public CSCodeFormatter(SliceGenerator gen)
         {
             this.gen = gen;
             this.code = new CodeEditor();

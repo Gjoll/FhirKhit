@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using static FhirKhit.SliceGen.Share.ProfileGenerator;
+using static FhirKhit.SliceGen.Share.SliceGenerator;
 
 namespace FhirKhit.SliceGen.Share
 {
@@ -25,9 +25,9 @@ namespace FhirKhit.SliceGen.Share
         Type fhirType;
         ElementNode profileElements;
         OutputLanguageType outputLanguage;
-        ProfileGenerator gen;
+        SliceGenerator gen;
 
-        public GenerateItem(ProfileGenerator gen,
+        public GenerateItem(SliceGenerator gen,
             String nameSpace,
             String name,
             String profileType,

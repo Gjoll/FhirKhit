@@ -28,7 +28,7 @@ namespace FhirKhit.SliceGen.CSApi
         //CodeBlockNested methodsBlock;
 
         Type fhirResourceType;
-        ProfileGenerator gen;
+        SliceGenerator gen;
         CSCodeFormatter codeFormatter;
         String fhirBaseClassName;
         bool topLevelClass;
@@ -44,7 +44,7 @@ namespace FhirKhit.SliceGen.CSApi
         Dictionary<String, PropertyInfo> elements = new Dictionary<string, PropertyInfo>();
 
 
-        public CSClassFormatter(ProfileGenerator gen,
+        public CSClassFormatter(SliceGenerator gen,
             CSCodeFormatter codeFormatter,
             CodeBlockNested ContainingBlock,
             bool topLevelClass)

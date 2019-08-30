@@ -32,7 +32,7 @@ namespace FhirKhit.SliceGen.Share
     ///     - Currently nested items (i.e. Observation.ReferenceRange) are treatd like fhir primitives. Need to create profiles on these
     ///       nested classes, both for simgletones and for lists, including adders and such.
     /// </summary>
-    public class ProfileGenerator : ConverterBase
+    public class SliceGenerator : ConverterBase
     {
         public enum OutputLanguageType
         {
@@ -44,9 +44,9 @@ namespace FhirKhit.SliceGen.Share
         {
             get
             {
-                if (ProfileGenerator.source == null)
-                    ProfileGenerator.source = new ZipSource("specification.zip");
-                return ProfileGenerator.source;
+                if (SliceGenerator.source == null)
+                    SliceGenerator.source = new ZipSource("specification.zip");
+                return SliceGenerator.source;
             }
         }
         static ZipSource source = null;
@@ -83,7 +83,7 @@ namespace FhirKhit.SliceGen.Share
         /// <summary>
         /// Constructor
         /// </summary>
-        public ProfileGenerator(OutputLanguageType outputLanguage,
+        public SliceGenerator(OutputLanguageType outputLanguage,
             String nameSpace,
             String outputDir)
         {
@@ -215,7 +215,7 @@ namespace FhirKhit.SliceGen.Share
         {
             Type fhirType = this.GetFhirApiType(sd.BaseDefinition);
             {
-                StructureDefinition baseStructDef = ProfileGenerator.Source.FindStructureDefinition(sd.BaseDefinition);
+                StructureDefinition baseStructDef = SliceGenerator.Source.FindStructureDefinition(sd.BaseDefinition);
                 if (baseStructDef == null)
                     throw new Exception($"Can not find structdef for {sd.BaseDefinition}");
                 this.BaseSDef = new StructDefHelper(baseStructDef);
