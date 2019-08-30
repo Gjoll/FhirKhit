@@ -55,19 +55,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Share", "Share", "{4FEFBC1A
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.Share", "Projects\SliceGen\Share\FhirKhit.SliceGen.Share\FhirKhit.SliceGen.Share.shproj", "{C901AB3B-FAE7-4B0F-8068-DCA70D2121D7}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.Share.GenTests", "Projects\SliceGen\Share\FhirKhit.SliceGen.Share.GenTests\FhirKhit.SliceGen.Share.GenTests.shproj", "{542C552B-E104-44A0-A9AA-33BC0FB92F3D}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.XUnitTestsB", "Projects\SliceGen\Share\FhirKhit.SliceGen.XUnitTestsB\FhirKhit.SliceGen.XUnitTestsB.shproj", "{542C552B-E104-44A0-A9AA-33BC0FB92F3D}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.Share.XUnitTests", "Projects\SliceGen\Share\FhirKhit.SliceGen.Share.XUnitTests\FhirKhit.SliceGen.Share.XUnitTests.shproj", "{8E28636E-7933-4AE0-A984-CBA1B422C680}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.Share.XUnitTestsA", "Projects\SliceGen\Share\FhirKhit.SliceGen.Share.XUnitTestsA\FhirKhit.SliceGen.Share.XUnitTestsA.shproj", "{8E28636E-7933-4AE0-A984-CBA1B422C680}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.ShareLib", "Projects\SliceGen\Share\FhirKhit.SliceGen.ShareLib\FhirKhit.SliceGen.ShareLib.shproj", "{36579501-A0BA-4373-BBEB-76270290305E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "R4", "R4", "{8DC2F9D8-3B45-4D83-81CB-870F80E814FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.SliceGen.GenTests.R4", "Projects\SliceGen\R4\FhirKhit.SliceGen.GenTests.R4\FhirKhit.SliceGen.GenTests.R4.csproj", "{FDD01066-D9B5-40E4-873F-F4DEB8072D2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.SliceGen.Share.XUnitTestsB.R4", "Projects\SliceGen\R4\FhirKhit.SliceGen.Share.XUnitTestsB.R4\FhirKhit.SliceGen.Share.XUnitTestsB.R4.csproj", "{FDD01066-D9B5-40E4-873F-F4DEB8072D2E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.SliceGen.R4", "Projects\SliceGen\R4\FhirKhit.SliceGen.R4\FhirKhit.SliceGen.R4.csproj", "{FB19DF22-0BB6-447D-BFCF-03A4B842503B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.SliceGen.XUnitTests.R4", "Projects\SliceGen\R4\FhirKhit.SliceGen.XUnitTests.R4\FhirKhit.SliceGen.XUnitTests.R4.csproj", "{6FD3001D-2A01-4509-9EEE-E698883FC87A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.SliceGen.XUnitTestsA.R4", "Projects\SliceGen\R4\FhirKhit.SliceGen.XUnitTestsA.R4\FhirKhit.SliceGen.XUnitTestsA.R4.csproj", "{6FD3001D-2A01-4509-9EEE-E698883FC87A}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
