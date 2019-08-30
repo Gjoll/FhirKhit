@@ -10,11 +10,6 @@ namespace FhirKhit.SliceGen.ShareLib
     /// </summary>
     public class Slicing
     {
-        public IEnumerable<ISliceDiscriminator> Discriminators { get; }
-
-        public Slicing(IEnumerable<ISliceDiscriminator> discriminators)
-        {
-            this.Discriminators = discriminators;
-        }
+        public IEnumerable<ISliceDiscriminator> Discriminators { get; set; }
     }
 }

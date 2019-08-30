@@ -323,7 +323,7 @@ namespace FhirKhit.Tools
 
         public CodeBlockNested AppendSummary(String text)
         {
-            this.AppendRaw($"/// {text}");
+            this.AppendLine($"/// {text}");
             return this;
         }
 
@@ -360,17 +360,6 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        /// <summary>
-        /// Append Summary start line. Muyst have a blank line immed. before it.
-        /// </summary>
-        /// <returns></returns>
-        public CodeBlockNested SummaryStart()
-        {
-            this
-                .OpenSummary()
-                ;
-            return this;
-        }
 
         public CodeBlockNested BlankLine()
         {

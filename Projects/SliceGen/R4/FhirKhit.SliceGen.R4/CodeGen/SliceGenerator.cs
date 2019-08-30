@@ -132,9 +132,11 @@ namespace FhirKhit.SliceGen.R4
 
             Type fhirType = this.GetFhirApiType(profile.BaseDefinition);
 
+            String name = $"{profile.Name}Extensions";
+
             GenerateItem gi = new GenerateItem(this,
                 this.NameSpace,
-                profile.Name,
+                name,
                 profile.Type,
                 fhirType,
                 this.OutputLanguage,
@@ -142,7 +144,7 @@ namespace FhirKhit.SliceGen.R4
 
             gi.Process();
 
-            String outputFile = Path.Combine(this.OutputDir, $"{profile.Name}.cs");
+            String outputFile = Path.Combine(this.OutputDir, $"{name}.cs");
             File.WriteAllText(outputFile, gi.GetCode());
         }
 

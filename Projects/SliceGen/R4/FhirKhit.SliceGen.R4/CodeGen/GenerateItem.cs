@@ -19,7 +19,7 @@ namespace FhirKhit.SliceGen.R4
         /// code output item
         /// </summary>
         public ICodeFormatter Code { get; private set; }
-        String name;
+        String className;
         String nameSpace;
         String profileType;
         Type fhirType;
@@ -29,7 +29,7 @@ namespace FhirKhit.SliceGen.R4
 
         public GenerateItem(SliceGenerator gen,
             String nameSpace,
-            String name,
+            String className,
             String profileType,
             Type fhirType,
             OutputLanguageType outputLanguage,
@@ -37,7 +37,7 @@ namespace FhirKhit.SliceGen.R4
         {
             this.gen = gen;
             this.nameSpace = nameSpace;
-            this.name = name;
+            this.className = className;
             this.fhirType = fhirType;
             this.outputLanguage = outputLanguage;
             this.profileElements = profileElements;
@@ -52,7 +52,7 @@ namespace FhirKhit.SliceGen.R4
             //Resource x = Source.ResolveByUri("http://hl7.org/fhir/DataElement/Identifier");
             //x = Source.FindStructureDefinitionForCoreType("identifier");
 
-            this.gen.ConversionInfo(this.GetType().Name, fcn, $"Converting {this.name} to {this.outputLanguage}");
+            this.gen.ConversionInfo(this.GetType().Name, fcn, $"Converting {this.className} to {this.outputLanguage}");
 
             switch (this.outputLanguage)
             {
@@ -84,6 +84,45 @@ namespace FhirKhit.SliceGen.R4
         bool ProcessExtension() => false;
 
         /// <summary>
+        /// Process elements, searching for elements that are sliced.
+        /// </summary>
+        /// <param name="sd"></param>
+        /// <returns></returns>
+        bool ProcessElementSlices(ElementNode node)
+        {
+            //const String fcn = nameof(ProcessResourceConstraint);
+
+            bool retVal = true;
+            if (node.Slices.Any())
+            {
+                if (CreateSlice(node) == false)
+                    retVal = false;
+            }
+
+            foreach (var child in node.Children)
+                if (ProcessElementSlices(child) == false)
+                    retVal = false;
+
+            return retVal;
+        }
+
+        bool CreateSlice(ElementNode elementNode)
+        {
+            const String fcn = nameof(ProcessResourceConstraint);
+
+            this.gen.ConversionInfo(this.GetType().Name, fcn, $"Processing slice on node {elementNode.Element.Path}");
+
+            List<ElementDefinition.DiscriminatorComponent> d = elementNode.Element.Slicing?.Discriminator;
+            if ((d == null) || (d.Count == 0))
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"Slice of element {elementNode.Element.Path} failed. Element lacks slice discriminator");
+                return false;
+            }
+
+            return this.Code.CreateSlice(elementNode);
+        }
+
+        /// <summary>
         /// Process a constraint
         /// </summary>
         /// <param name="sd"></param>
@@ -92,8 +131,10 @@ namespace FhirKhit.SliceGen.R4
         {
             const String fcn = nameof(ProcessResourceConstraint);
 
-            this.Code.StartNameSpace(this.nameSpace);
-            this.Code.StartClass(this.name, fhirType);
+            if (this.Code.StartNameSpace(this.nameSpace) == false)
+                return false;
+            if (this.Code.StartClass(this.className, fhirType) == false)
+                return false;
 
             if (profileElements.Children.Count() != 1)
             {
@@ -101,30 +142,13 @@ namespace FhirKhit.SliceGen.R4
                 return false;
             }
 
-            ElementNode head = profileElements.Children.First();
-            foreach (ElementNode profileElement in head.Children)
-            {
-                String[] elementPathItems = profileElement.Path.Split('.');
-                //switch (elementPathItems.Length)
-                //{
-                //    case 0:
-                //        throw new NotImplementedException();
+            bool retVal = ProcessElementSlices(profileElements.Children.First());
 
-                //    case 1:         // Only first element should be this.
-                //        break;
-
-                //    case 2:         // Property
-                //        CreateProperty(profileElement);
-                //        break;
-
-                //    default:        // properties is a structure with sub properties.
-                //        break;
-                //}
-            }
-
-            this.Code.EndClass();
-            this.Code.EndNameSpace();
-            return true;
+            if (this.Code.EndClass() == false)
+                retVal = false;
+            if (this.Code.EndNameSpace() == false)
+                retVal = false;
+            return retVal;
         }
 
         public String GetCode()

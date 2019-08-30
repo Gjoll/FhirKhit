@@ -13,24 +13,28 @@ namespace FhirKhit.SliceGen.R4
         /// <summary>
         /// Start namespace.
         /// </summary>
-        void StartNameSpace(String ns);
+        bool StartNameSpace(String ns);
 
         /// <summary>
         /// End namespace.
         /// </summary>
-        void EndNameSpace();
+        bool EndNameSpace();
 
 
         /// <summary>
         /// Start creating a class.
         /// </summary>
-        void StartClass(String className, Type fhirType);
+        bool StartClass(String className, Type fhirType);
 
         /// <summary>
         /// End creating a class.
         /// </summary>
-        void EndClass();
+        bool EndClass();
 
+        /// <summary>
+        /// Create slices on indocated node.
+        /// </summary>
+        bool CreateSlice(ElementNode elementNode);
 
         /// <summary>
         /// Return text of generated code.

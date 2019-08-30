@@ -11,8 +11,14 @@ namespace FhirKhit.SliceGen.CSApi
 {
     public class CSCodeFormatter : ICodeFormatter
     {
+        Int32 sliceDiscriminatorCounter = 1;
+
         CodeEditor code;
         CodeBlockNested nameSpaceBlock;
+        CodeBlockNested classBlock;
+        CodeBlockNested fieldsBlock;
+        CodeBlockNested methodsBlock;
+
         SliceGenerator gen;
 
         /// <summary>
@@ -30,7 +36,7 @@ namespace FhirKhit.SliceGen.CSApi
         /// <summary>
         /// Start namespace.
         /// </summary>
-        public void StartNameSpace(String nameSpace)
+        public bool StartNameSpace(String nameSpace)
         {
             this.nameSpaceBlock = this.code.Blocks.AppendBlock();
             this.nameSpaceBlock
@@ -43,35 +49,149 @@ namespace FhirKhit.SliceGen.CSApi
                 .AppendCode($"using System.Reflection;")
                 .AppendCode($"using System.Text;")
                 .AppendCode($"using Hl7.Fhir.Model;")
-                .AppendCode($"")
+                .AppendCode($"using FhirKhit.SliceGen.ShareLib;")
+                .BlankLine()
                 .AppendCode($"namespace {nameSpace}")
                 .OpenBrace()
                 ;
+            return true;
         }
 
         /// <summary>
         /// End namespace.
         /// </summary>
-        public void EndNameSpace()
+        public bool EndNameSpace()
         {
             this.nameSpaceBlock
                 .CloseBrace()
                 ;
             this.nameSpaceBlock = null;
+            return true;
         }
 
         /// <summary>
         /// Start creating a class.
         /// </summary>
-        public void StartClass(String className, Type fhirType)
+        public bool StartClass(String className, Type fhirType)
         {
+            string fhirTypeName = fhirType.FriendlyName();
+
+            this.classBlock = this.nameSpaceBlock.AppendBlock();
+            this.classBlock
+                .BlankLine()
+                .OpenSummary()
+                .AppendLine($"/// Extension class to add slicing helper methods to {fhirTypeName}")
+                .CloseSummary()
+                .AppendLine($"public static class {className}")
+                .OpenBrace()
+                ;
+
+            this.fieldsBlock = classBlock.AppendBlock();
+            this.fieldsBlock.AppendLine($"#region fields");
+
+            this.methodsBlock = classBlock.AppendBlock();
+            this.methodsBlock.AppendLine($"#region methods");
+
+            return true;
         }
 
         /// <summary>
         /// End creating a class.
         /// </summary>
-        public void EndClass()
+        public bool EndClass()
         {
+            this.classBlock
+                .CloseBrace()
+                ;
+
+            this.fieldsBlock
+                .AppendLine($"#endregion")
+                ;
+
+            this.methodsBlock
+                .AppendLine($"#endregion")
+                ;
+
+            fieldsBlock = null;
+            methodsBlock = null;
+
+            this.classBlock = null;
+            return true;
+        }
+
+        /// <summary>
+        /// Create slices on indocated node.
+        /// </summary>
+        public bool CreateSlice(ElementNode elementNode)
+        {
+            if (elementNode is null)
+                throw new ArgumentNullException(nameof(elementNode));
+
+            const String fcn = nameof(CreateSlice);
+
+            bool DefineDiscriminator(ElementDefinition.DiscriminatorComponent discriminator,
+                String term)
+            {
+                switch (discriminator.Type)
+                {
+                    case ElementDefinition.DiscriminatorType.Value:
+                        {
+                            this.fieldsBlock
+                                .AppendCode($"new SliceOnValue(\"{discriminator.Path}\"){term}");
+                            ;
+                        }
+                        return true;
+
+                    default:
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: discriminator.Type {discriminator.Type} currently implemented. '{elementNode.Path}'");
+                        return false;
+                }
+            }
+
+            String fieldName = $"SliceDiscriminator_{sliceDiscriminatorCounter}";
+            sliceDiscriminatorCounter += 1;
+
+            ElementDefinition.SlicingComponent sliceComponent = elementNode.Element.Slicing;
+            if (sliceComponent.Ordered == true)
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Ordered == true not currently implemented. '{elementNode.Path}'");
+                return false;
+
+            }
+
+            if (sliceComponent.Rules != ElementDefinition.SlicingRules.Open)
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Rules != Open not currently implemented. '{elementNode.Path}'");
+                return false;
+            }
+
+            this.fieldsBlock
+                .BlankLine()
+                .OpenSummary()
+                .AppendSummary("slicing discriminator for {elementNode.Path}")
+                .CloseSummary()
+                .AppendCode($"static Slicing {fieldName} = new Slicing")
+                .OpenBrace()
+                .AppendCode($"Discriminators = new ISliceDiscriminator[]")
+                .OpenBrace()
+                ;
+
+            bool retVal = true;
+            ElementDefinition.DiscriminatorComponent[] discriminators = sliceComponent.Discriminator.ToArray();
+            for (Int32 i = 0; i < discriminators.Length; i++)
+            {
+                ElementDefinition.DiscriminatorComponent discriminator = discriminators[i];
+                String term = (i < discriminators.Length - 1) ? "," : "";
+                if (DefineDiscriminator(discriminator, term) == false)
+                    return false;
+            }
+
+            this.fieldsBlock
+                .CloseBrace()
+                .CloseBrace(";")
+                ;
+
+            return retVal;
         }
 
         public String GetCode() => this.code.ToString();
