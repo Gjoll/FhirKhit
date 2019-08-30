@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FhirKhit.Tools
 {
-    public enum SaveTypes
+    public enum SaveType
     {
         Json,
         Xml
@@ -12,12 +12,12 @@ namespace FhirKhit.Tools
 
     public static class SaveTypeExtensions
     {
-        public static String ToFileExtension(this SaveTypes saveType)
+        public static String ToFileExtension(this SaveType saveType)
         {
             switch (saveType)
             {
-                case SaveTypes.Json: return ".json";
-                case SaveTypes.Xml: return ".xml";
+                case SaveType.Json: return ".json";
+                case SaveType.Xml: return ".xml";
                 default: throw new NotImplementedException();
             }
         }

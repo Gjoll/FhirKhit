@@ -9,7 +9,7 @@ namespace FhirKhit.Tools
     /// <summary>
     /// Deletes un-marked files when saving goups of files.
     /// </summary>
-    public class FileCleaner : IDisposable
+    public sealed class FileCleaner : IDisposable
     {
         readonly HashSet<String> existingFiles = new HashSet<String>();
         readonly String outputDir;

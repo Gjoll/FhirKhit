@@ -28,21 +28,35 @@ namespace FhirKhit.Tools
 
         public void ConversionError(String className, String method, IEnumerable<String> msgs)
         {
+            if (className is null)
+                throw new ArgumentNullException(nameof(className));
+            if (msgs is null)
+                throw new ArgumentNullException(nameof(msgs));
             foreach (String msg in msgs)
                 ConversionError(className, method, msg);
         }
 
         public void ConversionError(String className, String method, String msg)
         {
+            if (className is null)
+                throw new ArgumentNullException(nameof(className));
+            if (msg is null)
+                throw new ArgumentNullException(nameof(msg));
+
             msg = msg.Trim();
             if (String.IsNullOrEmpty(msg))
                 return;
-            Log.Error(method, msg);
+            Log.Error($"{className}.{method}", msg);
             this.errors.Add(msg);
         }
 
         public void ConversionWarn(String className, String method, IEnumerable<String> msgs)
         {
+            if (className is null)
+                throw new ArgumentNullException(nameof(className));
+            if (msgs is null)
+                throw new ArgumentNullException(nameof(msgs));
+
             foreach (String msg in msgs)
                 ConversionWarn(className, method, msg);
         }
@@ -50,27 +64,37 @@ namespace FhirKhit.Tools
 
         public void ConversionWarn(String className, String method, String msg)
         {
+            if (msg is null)
+                throw new ArgumentNullException(nameof(msg));
+
             msg = msg.Trim();
             if (String.IsNullOrEmpty(msg))
                 return;
 
-            Log.Warn(method, msg);
+            Log.Warn($"{className}.{method}", msg);
             this.warnings.Add(msg);
         }
 
         public void ConversionInfo(String className, String method,IEnumerable<String> msgs)
         {
+            if (msgs is null)
+                throw new ArgumentNullException(nameof(msgs));
+
+
             foreach (String msg in msgs)
                 ConversionInfo(className, method, msg);
         }
 
         public void ConversionInfo(String className, String method,String msg)
         {
+            if (msg is null)
+                throw new ArgumentNullException(nameof(msg));
+
             msg = msg.Trim();
             if (String.IsNullOrEmpty(msg))
                 return;
 
-            Log.Info(method, msg);
+            Log.Info($"{className}.{method}", msg);
             this.info.Add(msg);
         }
 
@@ -88,6 +112,9 @@ namespace FhirKhit.Tools
 
         public bool FormatWarnMessages(StringBuilder sb)
         {
+            if (sb is null)
+                throw new ArgumentNullException(nameof(sb));
+
             if (this.Warnings.Any() == false)
                 return false;
             sb.AppendLine($"**** Warnings *****");
@@ -97,6 +124,9 @@ namespace FhirKhit.Tools
 
         public bool FormatErrorMessages(StringBuilder sb)
         {
+            if (sb is null)
+                throw new ArgumentNullException(nameof(sb));
+
             if (this.Errors.Any() == false)
                 return false;
             sb.AppendLine($"**** Errors *****");
@@ -106,6 +136,9 @@ namespace FhirKhit.Tools
 
         public bool FormatInfoMessages(StringBuilder sb)
         {
+            if (sb is null)
+                throw new ArgumentNullException(nameof(sb));
+
             if (this.Info.Any() == false)
                 return false;
             sb.AppendLine($"**** Informational *****");
@@ -115,6 +148,9 @@ namespace FhirKhit.Tools
 
         void FormatMessages(StringBuilder sb, List<String> msgs)
         {
+            if (sb is null)
+                throw new ArgumentNullException(nameof(sb));
+
             Int32 i = 1;
             foreach (String msg in msgs)
             {

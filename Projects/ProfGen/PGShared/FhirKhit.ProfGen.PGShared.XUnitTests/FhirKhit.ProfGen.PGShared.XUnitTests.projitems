@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>e11548b9-456f-4572-b673-7bb1d04d1a71</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FhirKhit.ProfGen.PGShared.XUnitTests</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ElementNodeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GenCreateTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MiscExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)TestFiles\breastrad-BreastAbnormality.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

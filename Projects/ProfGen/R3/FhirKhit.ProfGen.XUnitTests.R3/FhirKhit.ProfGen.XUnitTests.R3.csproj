@@ -29,6 +29,6 @@
     <ProjectReference Include="..\FhirKhit.ProfGen.R3\FhirKhit.ProfGen.R3.csproj" />
   </ItemGroup>
 
-  <Import Project="..\..\Shared\FhirKhit.ProfGen.Shared.XUnitTests\FhirKhit.ProfGen.Shared.XUnitTests.projitems" Label="Shared" />
+  <Import Project="..\..\PGShared\FhirKhit.ProfGen.PGShared.XUnitTests\FhirKhit.ProfGen.PGShared.XUnitTests.projitems" Label="PGShared" />
 
 </Project>

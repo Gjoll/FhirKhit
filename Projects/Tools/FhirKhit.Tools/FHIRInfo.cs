@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FhirKhit.Tools
 {
-    public class FHIRInfo
+    public static class FHIRInfo
     {
         public const String Primitive_Boolean = "boolean";
         public const String Primitive_Integer = "integer";

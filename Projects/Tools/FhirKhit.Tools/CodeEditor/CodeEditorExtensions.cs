@@ -11,6 +11,9 @@ namespace FhirKhit.Tools
             String cssClass,
             params String[] fields)
         {
+            if (block is null)
+                throw new ArgumentNullException(nameof(block));
+
             block.AppendRaw(string.IsNullOrEmpty(cssClass) ? "<tr>" : $"<tr class=\"{cssClass}\">");
             foreach (String field in fields)
                 block.AppendRaw($"<td>{field}</td>");

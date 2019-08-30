@@ -44,7 +44,7 @@ namespace FhirKhit.Tools
                     return serviceDir;
                 String newPath = Path.Combine(servicePath, "..");
                 newPath = Path.GetFullPath(newPath);
-                if (String.Compare(newPath, serviceDir) == 0)
+                if (String.Compare(newPath, serviceDir, StringComparison.InvariantCulture) == 0)
                     throw new Exception($"Parent directory {dirName} not found");
                 servicePath = newPath;
             }

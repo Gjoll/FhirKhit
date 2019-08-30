@@ -15,6 +15,9 @@ namespace FhirKhit.Tools
         public static T RemoveFirst<T>(this List<T> list)
             where T : class
         {
+            if (list is null)
+                throw new ArgumentNullException(nameof(list));
+
             if (list.Count == 0)
                 return null;
 

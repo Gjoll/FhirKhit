@@ -13,13 +13,21 @@ namespace FhirKhit.Tools
         /// <summary>
         /// Access named attribute.
         /// </summary>
-        public static XmlAttribute Attribute(this XmlElement element, String name) => element.Attributes[name];
+        public static XmlAttribute Attribute(this XmlElement element, String name)
+        {
+            if (element is null)
+                throw new ArgumentNullException(nameof(element));
+            return element.Attributes[name];
+        }
 
         /// <summary>
         /// Get all xml child nodes with the indicated name.
         /// </summary>
         public static IEnumerable<XmlElement> Children(this XmlElement element, String name)
         {
+            if (element is null)
+                throw new ArgumentNullException(nameof(element));
+
             foreach (XmlElement e in element.ChildNodes)
                 if (e.Name == name)
                     yield return e;
@@ -30,6 +38,9 @@ namespace FhirKhit.Tools
         /// </summary>
         public static XmlAttribute RequiredAttribute(this XmlElement element, String name)
         {
+            if (element is null)
+                throw new ArgumentNullException(nameof(element));
+
             XmlAttribute retVal = element.Attributes[name];
             if (retVal == null)
                 throw new Exception($"Missing req   uired attribute '{name}'");

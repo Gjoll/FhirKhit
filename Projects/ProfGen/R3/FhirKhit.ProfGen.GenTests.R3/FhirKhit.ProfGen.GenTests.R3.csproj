@@ -34,8 +34,8 @@
     <Folder Include="Generated\" />
   </ItemGroup>
 
-  <Import Project="..\..\Shared\FhirKhit.ProfGen.Shared.GenTests\FhirKhit.ProfGen.Shared.GenTests.projitems" Label="Shared" />
+  <Import Project="..\..\PGShared\FhirKhit.ProfGen.PGShared.GenTests\FhirKhit.ProfGen.PGShared.GenTests.projitems" Label="PGShared" />
 
-  <Import Project="..\..\Shared\FhirKhit.ProfGen.SharedLib\FhirKhit.ProfGen.SharedLib.projitems" Label="Shared" />
+  <Import Project="..\..\PGShared\FhirKhit.ProfGen.PGSharedLib\FhirKhit.ProfGen.PGSharedLib.projitems" Label="PGShared" />
 
 </Project>

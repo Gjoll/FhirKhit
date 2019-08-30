@@ -22,6 +22,6 @@
     <ProjectReference Include="..\..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
   </ItemGroup>
 
-  <Import Project="..\..\Shared\FhirKhit.ProfGen.Shared\FhirKhit.ProfGen.Shared.projitems" Label="Shared" />
+  <Import Project="..\..\PGShared\FhirKhit.ProfGen.PGShared\FhirKhit.ProfGen.PGShared.projitems" Label="PGShared" />
 
 </Project>

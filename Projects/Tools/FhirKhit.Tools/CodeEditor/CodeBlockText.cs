@@ -9,7 +9,7 @@ namespace FhirKhit.Tools
         /// <summary>
         /// Strings that make up code file.
         /// </summary>
-        public List<String> Code = new List<String>();
+        public List<String> Code {get; }  = new List<String>();
 
         public CodeBlockText() : base("")
         {

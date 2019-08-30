@@ -23,21 +23,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Tools.R3", "Projec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Tools.R3.XUnitTests", "Projects\Tools\FhirKhit.Tools.R3.XUnitTests\FhirKhit.Tools.R3.XUnitTests.csproj", "{1844E064-0460-4076-82B8-D2FD74AEDB8D}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.Shared", "Projects\Tools\FhirKhit.Tools.Shared\FhirKhit.Tools.Shared.shproj", "{BF3E3A97-3B43-44AA-838C-24E5E32BE8C5}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.FKShared", "Projects\Tools\FhirKhit.Tools.FKShared\FhirKhit.Tools.FKShared.shproj", "{BF3E3A97-3B43-44AA-838C-24E5E32BE8C5}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.SharedTests", "Projects\Tools\FhirKhit.Tools.SharedTests\FhirKhit.Tools.SharedTests.shproj", "{A0663C6D-3386-4C88-A186-B288530EB107}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.FKSharedTests", "Projects\Tools\FhirKhit.Tools.FKSharedTests\FhirKhit.Tools.FKSharedTests.shproj", "{A0663C6D-3386-4C88-A186-B288530EB107}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.Shared", "Projects\ProfGen\Shared\FhirKhit.ProfGen.Shared\FhirKhit.ProfGen.Shared.shproj", "{6F57DCB2-CAA2-4ABF-8AFB-C899B460149B}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.PGShared", "Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared\FhirKhit.ProfGen.PGShared.shproj", "{6F57DCB2-CAA2-4ABF-8AFB-C899B460149B}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.Shared.XUnitTests", "Projects\ProfGen\Shared\FhirKhit.ProfGen.Shared.XUnitTests\FhirKhit.ProfGen.Shared.XUnitTests.shproj", "{E11548B9-456F-4572-B673-7BB1D04D1A71}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.PGShared.XUnitTests", "Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared.XUnitTests\FhirKhit.ProfGen.PGShared.XUnitTests.shproj", "{E11548B9-456F-4572-B673-7BB1D04D1A71}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.Shared.GenTests", "Projects\ProfGen\Shared\FhirKhit.ProfGen.Shared.GenTests\FhirKhit.ProfGen.Shared.GenTests.shproj", "{A9EA6A0E-CD01-4636-87D2-F1C725E85604}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.PGShared.GenTests", "Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared.GenTests\FhirKhit.ProfGen.PGShared.GenTests.shproj", "{A9EA6A0E-CD01-4636-87D2-F1C725E85604}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{B5CD7292-424D-432E-9797-8C5169231A04}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PGShared", "PGShared", "{B5CD7292-424D-432E-9797-8C5169231A04}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "R3", "R3", "{95000C1A-5FCC-4609-9403-0BDB208D37B9}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.SharedLib", "Projects\ProfGen\Shared\FhirKhit.ProfGen.SharedLib\FhirKhit.ProfGen.SharedLib.shproj", "{4CE0F4A3-01E9-4BBB-8CDF-0CFE0C4F0DA2}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.PGSharedLib", "Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGSharedLib\FhirKhit.ProfGen.PGSharedLib.shproj", "{4CE0F4A3-01E9-4BBB-8CDF-0CFE0C4F0DA2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "R4", "R4", "{75C61F9E-DE81-4438-9D85-966E7D3CC4A7}"
 EndProject
@@ -47,14 +47,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.ProfGen.R4", "Proj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.ProfGen.XUnitTests.R4", "Projects\ProfGen\R4\FhirKhit.ProfGen.XUnitTests.R4\FhirKhit.ProfGen.XUnitTests.R4.csproj", "{C2C0B516-3B8C-4950-8FBB-9E198E204440}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.GlobalSuppressions", "Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.shproj", "{721F484A-1C1A-4A95-AA2C-FF38E18C9D77}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Projects\ProfGen\Shared\FhirKhit.ProfGen.SharedLib\FhirKhit.ProfGen.SharedLib.projitems*{4ce0f4a3-01e9-4bbb-8cdf-0cfe0c4f0da2}*SharedItemsImports = 13
-		Projects\ProfGen\Shared\FhirKhit.ProfGen.Shared\FhirKhit.ProfGen.Shared.projitems*{6f57dcb2-caa2-4abf-8afb-c899b460149b}*SharedItemsImports = 13
-		Projects\Tools\FhirKhit.Tools.SharedTests\FhirKhit.Tools.SharedTests.projitems*{a0663c6d-3386-4c88-a186-b288530eb107}*SharedItemsImports = 13
-		Projects\ProfGen\Shared\FhirKhit.ProfGen.Shared.GenTests\FhirKhit.ProfGen.Shared.GenTests.projitems*{a9ea6a0e-cd01-4636-87d2-f1c725e85604}*SharedItemsImports = 13
-		Projects\Tools\FhirKhit.Tools.Shared\FhirKhit.Tools.Shared.projitems*{bf3e3a97-3b43-44aa-838c-24e5e32be8c5}*SharedItemsImports = 13
-		Projects\ProfGen\Shared\FhirKhit.ProfGen.Shared.XUnitTests\FhirKhit.ProfGen.Shared.XUnitTests.projitems*{e11548b9-456f-4572-b673-7bb1d04d1a71}*SharedItemsImports = 13
+		Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGSharedLib\FhirKhit.ProfGen.PGSharedLib.projitems*{4ce0f4a3-01e9-4bbb-8cdf-0cfe0c4f0da2}*SharedItemsImports = 13
+		Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared\FhirKhit.ProfGen.PGShared.projitems*{6f57dcb2-caa2-4abf-8afb-c899b460149b}*SharedItemsImports = 13
+		Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems*{721f484a-1c1a-4a95-aa2c-ff38e18c9d77}*SharedItemsImports = 13
+		Projects\Tools\FhirKhit.Tools.FKSharedTests\FhirKhit.Tools.FKSharedTests.projitems*{a0663c6d-3386-4c88-a186-b288530eb107}*SharedItemsImports = 13
+		Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared.GenTests\FhirKhit.ProfGen.PGShared.GenTests.projitems*{a9ea6a0e-cd01-4636-87d2-f1c725e85604}*SharedItemsImports = 13
+		Projects\Tools\FhirKhit.Tools.FKShared\FhirKhit.Tools.FKShared.projitems*{bf3e3a97-3b43-44aa-838c-24e5e32be8c5}*SharedItemsImports = 13
+		Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared.XUnitTests\FhirKhit.ProfGen.PGShared.XUnitTests.projitems*{e11548b9-456f-4572-b673-7bb1d04d1a71}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

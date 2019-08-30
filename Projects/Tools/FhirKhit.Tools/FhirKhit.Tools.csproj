@@ -27,6 +27,10 @@
     </PackageReference>
     <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
     <PackageReference Include="CommonMark.NET" Version="0.15.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
   </ItemGroup>
@@ -41,5 +45,7 @@
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="del $(OutDir)..\*.nupkg" />
   </Target>
+
+  <Import Project="..\..\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems" Label="PGShared" />
 
 </Project>

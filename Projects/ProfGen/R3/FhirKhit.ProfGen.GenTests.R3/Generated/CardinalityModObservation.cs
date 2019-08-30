@@ -6,7 +6,7 @@ using System.Linq;                                                              
 using System.Collections.Generic;                                               // CSCodeFormatter.cs:77
 using System.Reflection;                                                        // CSCodeFormatter.cs:78
 using System.Text;                                                              // CSCodeFormatter.cs:79
-using FhirKhit.ProfGen.SharedLib;                                               // CSCodeFormatter.cs:80
+using FhirKhit.ProfGen.PGSharedLib;                                               // CSCodeFormatter.cs:80
 using Hl7.Fhir.Model;                                                           // CSCodeFormatter.cs:81
                                                                                 // CSCodeFormatter.cs:82
 namespace FhirKhit.Test.R3                                                      // CSCodeFormatter.cs:83

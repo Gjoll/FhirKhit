@@ -12,11 +12,17 @@
     <DefineConstants>TRACE;FHIR_R2</DefineConstants>
   </PropertyGroup>
 
-  <Import Project="..\FhirKhit.Tools.SharedTests\FhirKhit.Tools.SharedTests.projitems" Label="SharedTests" />
+  <Import Project="..\..\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems" Label="PGShared" />
+
+  <Import Project="..\FhirKhit.Tools.FKSharedTests\FhirKhit.Tools.FKSharedTests.projitems" Label="SharedTests" />
 
   <ItemGroup>
     <PackageReference Include="Hl7.Fhir.DSTU2" Version="1.3.0" />
     <PackageReference Include="Hl7.Fhir.Specification.DSTU2" Version="1.3.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="xunit" Version="2.4.1" />

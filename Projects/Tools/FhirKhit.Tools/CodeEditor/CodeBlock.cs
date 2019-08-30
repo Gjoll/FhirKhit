@@ -6,10 +6,12 @@ namespace FhirKhit.Tools
 {
     public abstract class CodeBlock
     {
-        public String Name;
+        public String Name {get; }
 
         public CodeBlock(String name)
         {
+            if (name is null)
+                throw new ArgumentNullException(nameof(name));
             this.Name = name.Trim();
         }
 

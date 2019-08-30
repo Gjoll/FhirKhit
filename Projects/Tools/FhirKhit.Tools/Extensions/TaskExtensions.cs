@@ -9,6 +9,8 @@ namespace FhirKhit.Tools
     {
         public static T WaitResult<T>(this Task<T> task)
         {
+            if (task is null)
+                throw new ArgumentNullException(nameof(task));
             task.Wait();
             return task.Result;
         }

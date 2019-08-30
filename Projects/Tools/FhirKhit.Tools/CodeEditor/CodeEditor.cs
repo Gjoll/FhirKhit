@@ -13,14 +13,14 @@ namespace FhirKhit.Tools
     /// </summary>
     public class CodeEditor
     {
-        static public bool DebugFlag = false;
+        public static bool DebugFlag { get; set; } = true;
 
         /// <summary>
         /// Strings that make up code file.
         /// </summary>
-        public readonly CodeBlockNested Blocks = new CodeBlockNested("");
+        public CodeBlockNested Blocks { get; } = new CodeBlockNested("");
 
-        public String SavePath;
+        public String SavePath { get; set; }
 
         /// <summary>
         /// Constructor

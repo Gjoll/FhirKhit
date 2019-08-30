@@ -14,6 +14,9 @@ namespace FhirKhit.Tools
         /// <returns></returns>
         public static String ReplacePathBase(this String path, String newBase)
         {
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
+
             Int32 index = path.IndexOf('.');
             if (index < 0)
                 return newBase;
@@ -23,6 +26,17 @@ namespace FhirKhit.Tools
             return $"{newBase}{path.Substring(index)}";
         }
 
+
+        /// <summary>
+        /// Convert string to integer
+        /// </summary>
+        public static Int32 ToMax(this String s)
+        {
+            if (s == "*")
+                return Int32.MaxValue;
+            return Int32.Parse(s);
+        }
+
         /// <summary>
         /// Return the last part of an uri path (i.e. a.bb.ccc == 'ccc')
         /// </summary>
@@ -30,6 +44,9 @@ namespace FhirKhit.Tools
         /// <returns></returns>
         public static String LastUriPart(this String path)
         {
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
+
             Int32 index = path.LastIndexOf('/');
             if (index < 0)
                 return path;
@@ -43,6 +60,8 @@ namespace FhirKhit.Tools
         /// <returns></returns>
         public static String LastPathPart(this String path)
         {
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
             String[] parts = path.Split('.');
             return parts.Last();
         }
@@ -55,6 +74,9 @@ namespace FhirKhit.Tools
         /// <returns></returns>
         public static String ToPath(this List<String> items, Int32 start = 0)
         {
+            if (items is null)
+                throw new ArgumentNullException(nameof(items));
+
             StringBuilder sb = new StringBuilder();
             if (items.Count > start)
             {
@@ -81,7 +103,12 @@ namespace FhirKhit.Tools
             return string.Compare(a, b);
         }
 
-        public static String ResourceNameFromUri(this String uri) => uri.Substring(uri.LastIndexOf('/') + 1);
+        public static String ResourceNameFromUri(this String uri)
+        {
+            if (uri is null)
+                throw new ArgumentNullException(nameof(uri));
+            return uri.Substring(uri.LastIndexOf('/') + 1);
+        }
 
         public static String ToLocalName(this String value)
         {
@@ -93,6 +120,9 @@ namespace FhirKhit.Tools
 
         public static String ToMachineName(this String value)
         {
+            if (value is null)
+                throw new ArgumentNullException(nameof(value));
+
             StringBuilder sb = new StringBuilder();
             Boolean capFlag = true;
             foreach (Char c in value)
@@ -138,7 +168,7 @@ namespace FhirKhit.Tools
         public static String[] ToLines(this String value)
         {
             if (value == null)
-                return new string[0];
+                return Array.Empty<string>();
             value = value.Replace("\r", "");
             if (value.EndsWith("\n"))
                 value = value.Substring(0, value.Length - 1);

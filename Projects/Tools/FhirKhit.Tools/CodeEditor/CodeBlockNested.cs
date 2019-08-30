@@ -9,7 +9,7 @@ namespace FhirKhit.Tools
 {
     public class CodeBlockNested : CodeBlock
     {
-        public Int32 CommentCol = 80;
+        public const Int32 CommentCol = 140;
         public IEnumerable<CodeBlockNested> AllNamedBlocks => this.NamedBlocks.Values;
 
         readonly Dictionary<String, CodeBlockNested> NamedBlocks = new Dictionary<String, CodeBlockNested>();
@@ -25,6 +25,9 @@ namespace FhirKhit.Tools
         /// <param name="usedBlocks"></param>
         public void PurgeUnusedChildren(List<String> usedBlocks)
         {
+            if (usedBlocks is null)
+                throw new ArgumentNullException(nameof(usedBlocks));
+
             Int32 index = 0;
             while (index < this.Children.Count)
             {
@@ -67,6 +70,9 @@ namespace FhirKhit.Tools
             get { return this.startLine; }
             set
             {
+                if (value is null)
+                    throw new ArgumentNullException(nameof(value));
+
                 this.startLine = value;
                 this.baseMargin = value.Substring(0, value.IndexOf("//+"));
             }
@@ -81,12 +87,12 @@ namespace FhirKhit.Tools
         /// <summary>
         /// String that ends block ('//-...')
         /// </summary>
-        public String EndLine;
+        public String EndLine { get; set; }
 
         /// <summary>
         /// Strings that make up code file.
         /// </summary>
-        public readonly List<CodeBlock> Children = new List<CodeBlock>();
+        public List<CodeBlock> Children { get; } = new List<CodeBlock>();
 
         public CodeBlockNested(String name) : base(name)
         {
@@ -205,6 +211,9 @@ namespace FhirKhit.Tools
         /// <param name="path"></param>
         public void Load(String[] lines)
         {
+            if (lines is null)
+                throw new ArgumentNullException(nameof(lines));
+
             this.Children.Clear();
             Int32 index = 0;
             this.DoLoad(lines, ref index);
@@ -260,7 +269,7 @@ namespace FhirKhit.Tools
         /// Add block of indicated name
         /// </summary>
         /// <param name="path"></param>
-        public CodeBlockNested AppendBlock(String blockName = "", String indent = "")
+        public CodeBlockNested AppendBlock(String blockName = "")
         {
             CodeBlockNested block = new CodeBlockNested(blockName)
             {
@@ -299,13 +308,16 @@ namespace FhirKhit.Tools
         /// <param name="path"></param>
         public CodeBlockNested AppendLine(String line)
         {
-            this.AppendRaw(this.ProcessLine($"{this.MarginString}{line}"));
+            this.AppendRaw(CodeBlockNested.ProcessLine($"{this.MarginString}{line}"));
             return this;
         }
 
         public CodeBlockNested OpenSummary()
         {
-            this.AppendLine("/// <summary>");
+            this
+                .BlankLine()
+                .AppendLine("/// <summary>")
+                ;
             return this;
         }
 
@@ -317,6 +329,9 @@ namespace FhirKhit.Tools
 
         public CodeBlockNested AppendSummary(IEnumerable<String> text)
         {
+            if (text is null)
+                throw new ArgumentNullException(nameof(text));
+
             foreach (String line in text)
                 this.AppendSummary(line);
             return this;
@@ -324,7 +339,7 @@ namespace FhirKhit.Tools
 
         public CodeBlockNested CloseSummary()
         {
-            this.AppendRaw("/// </summary>");
+            this.AppendLine("/// </summary>");
             return this;
         }
 
@@ -336,18 +351,30 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        public CodeBlockNested CloseBrace([CallerFilePath] String filePath = "",
+        public CodeBlockNested CloseBrace(String term = "",
+            [CallerFilePath] String filePath = "",
             [CallerLineNumber] Int32 lineNumber = 0)
         {
             this.Unindent();
-            this.AppendCode("}", filePath, lineNumber);
+            this.AppendCode($"}}{term}", filePath, lineNumber);
             return this;
         }
 
-        public CodeBlockNested BlankLine([CallerFilePath] String filePath = "",
-            [CallerLineNumber] Int32 lineNumber = 0)
+        /// <summary>
+        /// Append Summary start line. Muyst have a blank line immed. before it.
+        /// </summary>
+        /// <returns></returns>
+        public CodeBlockNested SummaryStart()
         {
-            this.AppendCode(string.Empty, filePath, lineNumber);
+            this
+                .OpenSummary()
+                ;
+            return this;
+        }
+
+        public CodeBlockNested BlankLine()
+        {
+            this.AppendLine(string.Empty);
             return this;
         }
 
@@ -358,9 +385,9 @@ namespace FhirKhit.Tools
             String line;
             String fileName = Path.GetFileName(filePath);
             if (CodeEditor.DebugFlag)
-                line = this.ProcessLine($"{this.MarginString}{codeLine}%col:{CommentCol}%// {fileName}:{lineNumber}");
+                line = CodeBlockNested.ProcessLine($"{this.MarginString}{codeLine}%col:{CommentCol}%// {fileName}:{lineNumber}");
             else
-                line = this.ProcessLine($"{this.MarginString}{codeLine}");
+                line = CodeBlockNested.ProcessLine($"{this.MarginString}{codeLine}");
 
             this.AppendRaw(line);
             return this;
@@ -368,6 +395,9 @@ namespace FhirKhit.Tools
 
         public CodeBlockNested AppendXml(XmlElement element, String commentChars = "//")
         {
+            if (element is null)
+                throw new ArgumentNullException(nameof(element));
+
             StringBuilder sb = new StringBuilder();
             XmlWriterSettings settings = new XmlWriterSettings
             {
@@ -387,7 +417,7 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        void ProcessMacro(StringBuilder sb,
+        static void ProcessMacro(StringBuilder sb,
             String line,
             ref Int32 index)
         {
@@ -396,11 +426,11 @@ namespace FhirKhit.Tools
             Boolean valueFlag = false;
             while (true)
             {
-                Char c = this.GetChar(line, ref index);
+                Char c = CodeBlockNested.GetChar(line, ref index);
                 switch (c)
                 {
                     case '\\':
-                        c = this.GetChar(line, ref index);
+                        c = CodeBlockNested.GetChar(line, ref index);
                         if (c != '%')
                             sb.Append('\\');
                         sb.Append(c);
@@ -435,14 +465,17 @@ namespace FhirKhit.Tools
             }
         }
 
-        public Char GetChar(String line, ref Int32 index)
+        static Char GetChar(String line, ref Int32 index)
         {
+            if (line is null)
+                throw new ArgumentNullException(nameof(line));
+
             if (index >= line.Length)
                 throw new Exception("Unexpected end of string!");
             return line[index++];
         }
 
-        String ProcessLine(String line)
+        static String ProcessLine(String line)
         {
             StringBuilder sb = new StringBuilder();
             Int32 index = 0;
@@ -459,7 +492,7 @@ namespace FhirKhit.Tools
                         break;
 
                     case '\\':
-                        c = this.GetChar(line, ref index);
+                        c = CodeBlockNested.GetChar(line, ref index);
                         if (c != '%')
                             sb.Append('\\');
                         sb.Append(c);
@@ -469,7 +502,7 @@ namespace FhirKhit.Tools
                         if (quoteFlag == true)
                             sb.Append(c);
                         else
-                            this.ProcessMacro(sb, line, ref index);
+                            CodeBlockNested.ProcessMacro(sb, line, ref index);
                         break;
 
                     default:

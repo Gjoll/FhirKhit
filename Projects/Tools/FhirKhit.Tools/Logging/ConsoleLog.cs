@@ -7,42 +7,42 @@ namespace FhirKhit.Tools
 {
     public class ConsoleLog
     {
-        private readonly Log.LogLevel logLevel;
+        private readonly Log.LogLevels logLevel;
 
-        public static void SetLog(Log.LogLevel logLevel)
+        public static void SetLog(Log.LogLevels logLevel)
         {
             ConsoleLog log = new ConsoleLog(logLevel);
             Log.SetLog(log.LogMessage);
         }
 
-        public ConsoleLog(Log.LogLevel logLevel)
+        public ConsoleLog(Log.LogLevels logLevel)
         {
             this.logLevel = logLevel;
         }
 
-        public void LogMessage(Log.LogLevel logLevel, String caller, String msg)
+        public void LogMessage(Log.LogLevels logLevel, String caller, String msg)
         {
-            if ((this.logLevel & logLevel) == Log.LogLevel.None)
+            if ((this.logLevel & logLevel) == Log.LogLevels.None)
                 return;
 
             switch (logLevel)
             {
-                case Log.LogLevel.Error:
+                case Log.LogLevels.Error:
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"Error: [{caller}] {msg}");
                     break;
 
-                case Log.LogLevel.Warn:
+                case Log.LogLevels.Warn:
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.WriteLine($"Warn: [{caller}] {msg}");
                     break;
 
-                case Log.LogLevel.Info:
+                case Log.LogLevels.Info:
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"Info: [{caller}] {msg}");
                     break;
 
-                case Log.LogLevel.Trace:
+                case Log.LogLevels.Trace:
                     Console.WriteLine($"Console: [{caller}] {msg}");
                     break;
 

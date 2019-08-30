@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>4ce0f4a3-01e9-4bbb-8cdf-0cfe0c4f0da2</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FhirKhit.ProfGen.PGSharedLib</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\ISliceDiscriminator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ItemBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ItemArray.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\SliceOnValue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\Slicing.cs" />
+  </ItemGroup>
+</Project>

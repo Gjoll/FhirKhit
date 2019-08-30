@@ -8,7 +8,7 @@ namespace FhirKhit.Tools
     public static class Log
     {
         [Flags]
-        public enum LogLevel
+        public enum LogLevels
         {
             None = 0,
             Error = 1,
@@ -16,12 +16,12 @@ namespace FhirKhit.Tools
             Info = 4,
             Trace = 8,
 
-            ErrorAndAbove = LogLevel.Error,
-            WarnAndAbove = LogLevel.Error | LogLevel.Warn,
-            InfoAndAbove = LogLevel.Error | LogLevel.Warn | LogLevel.Info,
-            TraceAndAbove = LogLevel.Error | LogLevel.Warn | LogLevel.Info | LogLevel.Trace
+            ErrorAndAbove = LogLevels.Error,
+            WarnAndAbove = LogLevels.Error | LogLevels.Warn,
+            InfoAndAbove = LogLevels.Error | LogLevels.Warn | LogLevels.Info,
+            TraceAndAbove = LogLevels.Error | LogLevels.Warn | LogLevels.Info | LogLevels.Trace
         }
-        public delegate void LogMessageDelegate(LogLevel logLevel, String caller, String message);
+        public delegate void LogMessageDelegate(LogLevels logLevel, String caller, String message);
 
         public static event LogMessageDelegate LogEvent;
 
@@ -31,28 +31,28 @@ namespace FhirKhit.Tools
         {
             if (Log.LogEvent == null)
                 return;
-            Log.LogEvent(LogLevel.Error, caller, msg);
+            Log.LogEvent(LogLevels.Error, caller, msg);
         }
 
         public static void Warn(String caller, String msg)
         {
             if (Log.LogEvent == null)
                 return;
-            Log.LogEvent(LogLevel.Warn, caller, msg);
+            Log.LogEvent(LogLevels.Warn, caller, msg);
         }
 
         public static void Info(String caller, String msg)
         {
             if (Log.LogEvent == null)
                 return;
-            Log.LogEvent(LogLevel.Info, caller, msg);
+            Log.LogEvent(LogLevels.Info, caller, msg);
         }
 
         public static void Trace(String caller, String msg)
         {
             if (Log.LogEvent == null)
                 return;
-            Log.LogEvent(LogLevel.Trace, caller, msg);
+            Log.LogEvent(LogLevels.Trace, caller, msg);
         }
 
     }
