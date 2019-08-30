@@ -390,8 +390,6 @@ namespace FhirKhit.SliceGen.XUnitTests
                 .AppendLine($"using System.Collections.Generic;")
                 .AppendLine($"using System.Reflection;")
                 .AppendLine($"using System.Text;")
-                .AppendLine($"using FhirKhit.SliceGen.Share;")
-                .AppendLine($"using FhirKhit.SliceGen.Share.CodeGen.CSApi.Extensions;")
                 .AppendLine($"using FhirKhit.Tools;")
                 .AppendLine($"using Hl7.Fhir.Introspection;")
                 .AppendLine($"using Hl7.Fhir.Model;")
@@ -448,9 +446,8 @@ namespace FhirKhit.SliceGen.XUnitTests
 
             String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
                 "SliceGen",
-                "Share",
-                "FhirKhit.SliceGen.Share",
-                "CodeGen",
+                "R4",
+                "FhirKhit.SliceGen.R4",
                 "CSApi",
                 "FhirConstruct.cs");
             editor.Save(outputPath);
@@ -577,8 +574,6 @@ namespace FhirKhit.SliceGen.XUnitTests
                 .AppendLine($"using System.Collections.Generic;")
                 .AppendLine($"using System.Reflection;")
                 .AppendLine($"using System.Text;")
-                .AppendLine($"using FhirKhit.SliceGen.Share;")
-                .AppendLine($"using FhirKhit.SliceGen.Share.CodeGen.CSApi.Extensions;")
                 .AppendLine($"using FhirKhit.Tools;")
                 .AppendLine($"using Hl7.Fhir.Introspection;")
                 .AppendLine($"using Hl7.Fhir.Model;")
@@ -667,7 +662,7 @@ namespace FhirKhit.SliceGen.XUnitTests
             String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
                 "SliceGen",
                 "R4",
-                "FhirKhit.SliceGen.Share.XUnitTestsB.R4",
+                "FhirKhit.SliceGen.XUnitTestsB.R4",
                 "Generated",
                 "FhirConstructUse.cs");
 #endif

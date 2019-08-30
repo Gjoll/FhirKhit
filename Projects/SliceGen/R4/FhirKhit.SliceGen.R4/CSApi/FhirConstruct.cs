@@ -3,7 +3,6 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
-using FhirKhit.SliceGen.R4;
 using FhirKhit.Tools;
 using Hl7.Fhir.Introspection;
 using Hl7.Fhir.Model;
@@ -12,23 +11,23 @@ using System.Diagnostics;
 using Hl7.FhirPath;
 
 namespace FhirKhit.SliceGen.CSApi
-{                                                                                                                                           // CodeGeneration.cs:403
+{                                                                                                                                           // CodeGeneration.cs:401
     public static class FhirConstruct
-    {                                                                                                                                       // CodeGeneration.cs:405
+    {                                                                                                                                       // CodeGeneration.cs:403
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,
-            Element fix,                                                                                                                    // CodeGeneration.cs:420
-            String methodName,                                                                                                              // CodeGeneration.cs:421
-            out String propertyType)                                                                                                        // CodeGeneration.cs:422
-        {                                                                                                                                   // CodeGeneration.cs:423
+            Element fix,                                                                                                                    // CodeGeneration.cs:418
+            String methodName,                                                                                                              // CodeGeneration.cs:419
+            out String propertyType)                                                                                                        // CodeGeneration.cs:420
+        {                                                                                                                                   // CodeGeneration.cs:421
             
-            if (fix is null)                                                                                                                // CodeGeneration.cs:426
-                throw new ArgumentNullException(nameof(fix));                                                                               // CodeGeneration.cs:427
-            propertyType = null;                                                                                                            // CodeGeneration.cs:428
-            switch (fix.TypeName)                                                                                                           // CodeGeneration.cs:429
-            {                                                                                                                               // CodeGeneration.cs:430
+            if (fix is null)                                                                                                                // CodeGeneration.cs:424
+                throw new ArgumentNullException(nameof(fix));                                                                               // CodeGeneration.cs:425
+            propertyType = null;                                                                                                            // CodeGeneration.cs:426
+            switch (fix.TypeName)                                                                                                           // CodeGeneration.cs:427
+            {                                                                                                                               // CodeGeneration.cs:428
                 case "Address": // Address  - DataType                                                                                      // CodeGeneration.cs:333
                 {                                                                                                                           // CodeGeneration.cs:334
                     propertyType = "Address";                                                                                               // CodeGeneration.cs:335
@@ -395,9 +394,9 @@ namespace FhirKhit.SliceGen.CSApi
                     return Construct(block, (XHtml)fix, methodName);                                                                        // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
-            }                                                                                                                               // CodeGeneration.cs:444
-            return false;                                                                                                                   // CodeGeneration.cs:445
-        }                                                                                                                                   // CodeGeneration.cs:446
+            }                                                                                                                               // CodeGeneration.cs:442
+            return false;                                                                                                                   // CodeGeneration.cs:443
+        }                                                                                                                                   // CodeGeneration.cs:444
         
         /// <summary>
         /// Return c# text to create indicated element.
@@ -13359,5 +13358,5 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:301
             return  true;                                                                                                                   // CodeGeneration.cs:302
         }                                                                                                                                   // CodeGeneration.cs:303
-    }                                                                                                                                       // CodeGeneration.cs:411
-}                                                                                                                                           // CodeGeneration.cs:412
+    }                                                                                                                                       // CodeGeneration.cs:409
+}                                                                                                                                           // CodeGeneration.cs:410

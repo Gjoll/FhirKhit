@@ -33,7 +33,7 @@ namespace FhirKhit.SliceGen.XUnitTests
         String FVersion = "3.0.1";
         const String OutputNameSpace = "FhirKhit.Test.R3";
 #elif FHIR_R4
-        public static string GenDir => Path.Combine(DirHelper.FindParentDir("SliceGen"), "R4", "FhirKhit.SliceGen.Share.XUnitTestsB.R4", "Generated");
+        public static string GenDir => Path.Combine(DirHelper.FindParentDir("SliceGen"), "R4", "FhirKhit.SliceGen.XUnitTestsB.R4", "Generated");
         FHIRVersion FVersion = FHIRVersion.N3_0_1;
         const String OutputNameSpace = "FhirKhit.Test.R4";
 #endif

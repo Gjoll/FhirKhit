@@ -42,7 +42,6 @@ namespace FhirKhit.SliceGen.CSApi
                 .AppendCode($"using System.Collections.Generic;")
                 .AppendCode($"using System.Reflection;")
                 .AppendCode($"using System.Text;")
-                .AppendCode($"using FhirKhit.SliceGen.CommonLib;")
                 .AppendCode($"using Hl7.Fhir.Model;")
                 .AppendCode($"")
                 .AppendCode($"namespace {nameSpace}")
