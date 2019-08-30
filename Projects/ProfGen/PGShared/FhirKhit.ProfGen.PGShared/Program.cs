@@ -41,6 +41,18 @@ namespace FhirKhit.ProfGen.PGShared
             return args[i];
         }
 
+        public ProfileGenerator.OutputLanguageType ToOutputLang(String language)
+        {
+            if (language is null)
+                throw new ArgumentNullException(nameof(language));
+
+            switch (language.ToLower())
+            {
+                case "csharp": return ProfileGenerator.OutputLanguageType.CSharp;
+                default: throw new Exception($"Unknown output language '{language}'");
+            }
+        }
+
         void ParseArgs(string[] args)
         {
             Int32 i = 0;
@@ -58,7 +70,7 @@ namespace FhirKhit.ProfGen.PGShared
                         break;
 
                     case "-l":
-                        this.outputLanguage = this.GetArg(arg, args, ref i).ToOutputLang();
+                        this.outputLanguage = ToOutputLang(this.GetArg(arg, args, ref i));
                         break;
 
                     case "-i":

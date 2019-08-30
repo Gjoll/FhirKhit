@@ -6,7 +6,6 @@ using System.Linq;
 using System.IO;
 using Xunit;
 using System.Text;
-using FhirKhit.SliceGen.Share;
 using Hl7.Fhir.Serialization;
 using FhirKhit.SliceGen.CSApi;
 using System.Reflection;
@@ -14,6 +13,7 @@ using Hl7.Fhir.Introspection;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Collections;
+using FhirKhit.SliceGen.R4;
 
 
 #if FHIR_R2

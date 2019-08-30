@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FhirKhit.SliceGen.Share
+namespace FhirKhit.SliceGen.R4
 {
     /// <summary>
     /// Interface that each output code formatter (c#, java, etc) must implement.
@@ -30,15 +30,6 @@ namespace FhirKhit.SliceGen.Share
         /// End creating a class.
         /// </summary>
         void EndClass();
-
-
-        /// <summary>
-        /// Create a property for the indicated element.
-        /// </summary>
-        /// <param name="sd"></param>
-        /// <param name="original">This is the original element</param>
-        /// <param name="profile">this is the profile element. It may be the same as the original, or it may be modified</param>
-        void CreateProperty(ElementNode profileElement);
 
 
         /// <summary>

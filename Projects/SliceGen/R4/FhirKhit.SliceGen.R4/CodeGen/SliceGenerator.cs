@@ -20,7 +20,7 @@ using FhirKhit.Tools.R3;
 using FhirKhit.Tools.R4;
 #endif
 
-namespace FhirKhit.SliceGen.Share
+namespace FhirKhit.SliceGen.R4
 {
     /// <summary>
     /// Entry point to profile generator.
@@ -65,16 +65,6 @@ namespace FhirKhit.SliceGen.Share
         /// Output directory
         /// </summary>
         public String OutputDir { get; private set; }
-
-        /// <summary>
-        /// Structure definition of profiles base resource
-        /// </summary>
-        public StructDefHelper BaseSDef { get; private set; }
-
-        /// <summary>
-        /// Structure defininition of profile
-        /// </summary>
-        public StructDefHelper ProfileSDef { get; private set; }
 
         Dictionary<Type, String> SubClasses = new Dictionary<Type, string>();
 
@@ -155,137 +145,6 @@ namespace FhirKhit.SliceGen.Share
             String outputFile = Path.Combine(this.OutputDir, $"{profile.Name}.cs");
             File.WriteAllText(outputFile, gi.GetCode());
         }
-
-#if NEVER
-        void ProcessProfile(StructureDefinition profile)
-        {
-            String fcn = "ProcessProfile";
-
-            if (profile.Snapshot == null)
-                SnapshotCreator.Create(profile);
-            this.ProfileSDef = new StructDefHelper(profile);
-
-            //IEnumerable<string> y = Source.ListArtifactNames();
-            //Resource x = Source.ResolveByUri("http://hl7.org/fhir/DataElement/Identifier");
-            //x = Source.FindStructureDefinitionForCoreType("identifier");
-
-            switch (this.OutputLanguage)
-            {
-                case OutputLanguages.CSharp:
-                    this.Code = new CSCodeFormatter(this);
-                    break;
-
-                default:
-                    throw new Exception($"Output language {OutputLanguage} not found");
-            }
-
-            if (this.ProfileSDef.SDef.Derivation.Value != StructureDefinition.TypeDerivationRule.Constraint)
-            {
-                this.ConversionError(this.GetType().Name, fcn, $"{this.ProfileSDef.SDef.Name} is not a profile (constraint == {this.ProfileSDef.SDef.Derivation.Value.ToString()}");
-                return;
-            }
-
-            ElementManager elements = new ElementManager();
-            elements.Load(profile.Snapshot.Element);
-
-            switch (this.ProfileSDef.SDef.Type)
-            {
-                case "Extension":
-                    this.ProcessExtension(this.ProfileSDef.SDef);
-                    break;
-                default:
-                    this.ProcessResourceConstraint(this.ProfileSDef.SDef);
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Process an extension.
-        /// </summary>
-        /// <param name="sd"></param>
-        /// <returns></returns>
-        bool ProcessExtension(StructureDefinition sd) => false;
-
-        /// <summary>
-        /// Process a constraint
-        /// </summary>
-        /// <param name="sd"></param>
-        /// <returns></returns>
-        bool ProcessResourceConstraint(StructureDefinition sd)
-        {
-            Type fhirType = this.GetFhirApiType(sd.BaseDefinition);
-            {
-                StructureDefinition baseStructDef = SliceGenerator.Source.FindStructureDefinition(sd.BaseDefinition);
-                if (baseStructDef == null)
-                    throw new Exception($"Can not find structdef for {sd.BaseDefinition}");
-                this.BaseSDef = new StructDefHelper(baseStructDef);
-            }
-
-            this.Code.StartNameSpace(this.NameSpace);
-            this.Code.StartClass(sd.Name, fhirType);
-
-            if (sd.Snapshot == null)
-                throw new Exception($"Profile {sd.Name} is missing snapshot section");
-            if (this.BaseSDef.SDef.Snapshot == null)
-                throw new Exception($"Fhir base {this.BaseSDef.SDef.Name} is missing snapshot section");
-
-            foreach (ElementDefinition profileElement in sd.Snapshot.Element.Skip(1))
-            {
-                String[] elementPathItems = profileElement.Path.Split('.');
-                switch (elementPathItems.Length)
-                {
-                    case 0:
-                        throw new NotImplementedException();
-
-                    case 1:         // Only first element should be this.
-                        break;
-
-                    case 2:         // Property
-                        CreateProperty(profileElement);
-                        break;
-
-                    default:        // properties is a structure with sub properties.
-                        break;
-                }
-            }
-
-            this.Code.EndClass();
-            this.Code.EndNameSpace();
-
-            this.OutputFile = Path.Combine(this.OutputDir, $"{sd.Name}.cs");
-            this.Code.Save(this.OutputFile);
-            return true;
-        }
-
-        void CreateProperty(ElementDefinition profileElement)
-        {
-            const String fcn = "CreateProperty";
-            if (this.BaseSDef.SnapshotElement(profileElement.Path, out ElementDefinition originalElement) == false)
-            {
-                this.ConversionError(this.GetType().Name, fcn, $"Property {profileElement.Path} not found in base resource");
-                return;
-            }
-            CreateProperty(originalElement, profileElement);
-        }
-
-        /// <summary>
-        /// Process element that has been modified from parent element.
-        /// </summary>
-        /// <param name="elementPaths"></param>
-        /// <param name="modifiedElement"></param>
-        void CreateProperty(ElementDefinition originalElement, ElementDefinition profileElement)
-        {
-            const String fcn = "CreateProperty";
-            if (profileElement.Path.EndsWith(".extension"))
-            {
-                this.ConversionWarn(this.GetType().Name, fcn, $"TODO: handle extension {profileElement.FullPath()}");
-            }
-            else
-            {
-                Code.CreateProperty(originalElement, profileElement);
-            }
-        }
-#endif
 
         /// <summary>
         /// Get type for FHIR api class of indicated fhir uri (resource uri)

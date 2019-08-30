@@ -26,8 +26,6 @@
     <ProjectReference Include="..\..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
   </ItemGroup>
 
-  <Import Project="..\..\Share\FhirKhit.SliceGen.Share\FhirKhit.SliceGen.Share.projitems" Label="Share" />
-
   <Import Project="..\..\..\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems" Label="Share" />
 
 </Project>

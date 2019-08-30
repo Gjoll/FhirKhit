@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FhirKhit.SliceGen.Share.CodeGen.CSApi.Extensions
+namespace FhirKhit.SliceGen.R4
 {
     public static class StringExtensions
     {

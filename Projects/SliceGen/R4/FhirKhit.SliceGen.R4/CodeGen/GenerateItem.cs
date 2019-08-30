@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using static FhirKhit.SliceGen.Share.SliceGenerator;
+using static FhirKhit.SliceGen.R4.SliceGenerator;
 
-namespace FhirKhit.SliceGen.Share
+namespace FhirKhit.SliceGen.R4
 {
     /// <summary>
     /// Generates one output item. i.e. one profile, or one backbone element, etc.
@@ -105,21 +105,21 @@ namespace FhirKhit.SliceGen.Share
             foreach (ElementNode profileElement in head.Children)
             {
                 String[] elementPathItems = profileElement.Path.Split('.');
-                switch (elementPathItems.Length)
-                {
-                    case 0:
-                        throw new NotImplementedException();
+                //switch (elementPathItems.Length)
+                //{
+                //    case 0:
+                //        throw new NotImplementedException();
 
-                    case 1:         // Only first element should be this.
-                        break;
+                //    case 1:         // Only first element should be this.
+                //        break;
 
-                    case 2:         // Property
-                        CreateProperty(profileElement);
-                        break;
+                //    case 2:         // Property
+                //        CreateProperty(profileElement);
+                //        break;
 
-                    default:        // properties is a structure with sub properties.
-                        break;
-                }
+                //    default:        // properties is a structure with sub properties.
+                //        break;
+                //}
             }
 
             this.Code.EndClass();
@@ -130,24 +130,6 @@ namespace FhirKhit.SliceGen.Share
         public String GetCode()
         {
             return this.Code.GetCode();
-        }
-
-        /// <summary>
-        /// Process element that has been modified from parent element.
-        /// </summary>
-        /// <param name="elementPaths"></param>
-        /// <param name="modifiedElement"></param>
-        void CreateProperty(ElementNode profileElement)
-        {
-            const String fcn = "CreateProperty";
-            if (profileElement.Path.EndsWith(".extension"))
-            {
-                this.gen.ConversionWarn(this.GetType().Name, fcn, $"TODO: handle extension {profileElement.Path}");
-            }
-            else
-            {
-                Code.CreateProperty(profileElement);
-            }
         }
     }
 }

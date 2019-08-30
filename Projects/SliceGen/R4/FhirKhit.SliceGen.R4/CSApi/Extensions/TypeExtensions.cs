@@ -1,11 +1,10 @@
-﻿using FhirKhit.SliceGen.Share.CodeGen.CSApi.Extensions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
-namespace FhirKhit.SliceGen.Share
+namespace FhirKhit.SliceGen.R4
 {
     public static class TypeExtensions
     {

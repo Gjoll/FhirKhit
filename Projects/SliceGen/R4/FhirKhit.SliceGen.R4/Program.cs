@@ -2,14 +2,14 @@
 using System;
 using System.IO;
 
-namespace FhirKhit.SliceGen.Share
+namespace FhirKhit.SliceGen.R4
 {
     class Program
     {
         /// <summary>
         /// Output namespace
         /// </summary>
-        String nameSpace = "Fhir.Profile.Generator";
+        String nameSpace = "Fhir.Slice.Generator";
         String outputDir = ".";
         SliceGenerator.OutputLanguageType outputLanguage = SliceGenerator.OutputLanguageType.CSharp;
         String inputFile = null;
@@ -41,6 +41,18 @@ namespace FhirKhit.SliceGen.Share
             return args[i];
         }
 
+        public SliceGenerator.OutputLanguageType ToOutputLang(String language)
+        {
+            if (language is null)
+                throw new ArgumentNullException(nameof(language));
+
+            switch (language.ToLower())
+            {
+                case "csharp": return SliceGenerator.OutputLanguageType.CSharp;
+                default: throw new Exception($"Unknown output language '{language}'");
+            }
+        }
+
         void ParseArgs(string[] args)
         {
             Int32 i = 0;
@@ -58,7 +70,7 @@ namespace FhirKhit.SliceGen.Share
                         break;
 
                     case "-l":
-                        this.outputLanguage = this.GetArg(arg, args, ref i).ToOutputLang();
+                        this.outputLanguage = this.ToOutputLang(this.GetArg(arg, args, ref i));
                         break;
 
                     case "-i":

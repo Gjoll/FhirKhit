@@ -2,11 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using FhirKhit.SliceGen.Share.CodeGen.CSApi.Extensions;
 using System.Diagnostics;
 using FhirKhit.Tools;
 
-namespace FhirKhit.SliceGen.Share
+namespace FhirKhit.SliceGen.R4
 {
     [DebuggerDisplay("{Path} ")]
     public class ElementNode

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29006.145
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProfGen", "ProfGen", "{97017A3B-D9CB-4367-9751-8AA1E6818F70}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C9277C85-BD7D-4D69-8CEE-A81A646E97AF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Tools", "Projects\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj", "{9A456492-14D0-4D0F-9B81-AC04965516D0}"
@@ -27,37 +25,11 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.FKShared", "
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.FKSharedTests", "Projects\Tools\FhirKhit.Tools.FKSharedTests\FhirKhit.Tools.FKSharedTests.shproj", "{A0663C6D-3386-4C88-A186-B288530EB107}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.PGShared", "Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared\FhirKhit.ProfGen.PGShared.shproj", "{6F57DCB2-CAA2-4ABF-8AFB-C899B460149B}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.PGShared.XUnitTests", "Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared.XUnitTests\FhirKhit.ProfGen.PGShared.XUnitTests.shproj", "{E11548B9-456F-4572-B673-7BB1D04D1A71}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.PGShared.GenTests", "Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared.GenTests\FhirKhit.ProfGen.PGShared.GenTests.shproj", "{A9EA6A0E-CD01-4636-87D2-F1C725E85604}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PGShared", "PGShared", "{B5CD7292-424D-432E-9797-8C5169231A04}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "R3", "R3", "{95000C1A-5FCC-4609-9403-0BDB208D37B9}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.ProfGen.PGSharedLib", "Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGSharedLib\FhirKhit.ProfGen.PGSharedLib.shproj", "{4CE0F4A3-01E9-4BBB-8CDF-0CFE0C4F0DA2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "R4", "R4", "{75C61F9E-DE81-4438-9D85-966E7D3CC4A7}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.ProfGen.GenTests.R4", "Projects\ProfGen\R4\FhirKhit.ProfGen.GenTests.R4\FhirKhit.ProfGen.GenTests.R4.csproj", "{EEE3F99A-E31F-49D7-92DF-B57FF4FB6521}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.ProfGen.R4", "Projects\ProfGen\R4\FhirKhit.ProfGen.R4\FhirKhit.ProfGen.R4.csproj", "{C4D7C099-811E-482E-9414-44470A55C808}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.ProfGen.XUnitTests.R4", "Projects\ProfGen\R4\FhirKhit.ProfGen.XUnitTests.R4\FhirKhit.ProfGen.XUnitTests.R4.csproj", "{C2C0B516-3B8C-4950-8FBB-9E198E204440}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.GlobalSuppressions", "Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.shproj", "{721F484A-1C1A-4A95-AA2C-FF38E18C9D77}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SliceGen", "SliceGen", "{AF118608-D6E7-4372-9DC3-9549A701804D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Share", "Share", "{4FEFBC1A-4736-485C-AF91-BD64E93534B8}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.Share", "Projects\SliceGen\Share\FhirKhit.SliceGen.Share\FhirKhit.SliceGen.Share.shproj", "{C901AB3B-FAE7-4B0F-8068-DCA70D2121D7}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.Share.XUnitTestsA", "Projects\SliceGen\Share\FhirKhit.SliceGen.Share.XUnitTestsA\FhirKhit.SliceGen.Share.XUnitTestsA.shproj", "{8E28636E-7933-4AE0-A984-CBA1B422C680}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.ShareLib", "Projects\SliceGen\Share\FhirKhit.SliceGen.ShareLib\FhirKhit.SliceGen.ShareLib.shproj", "{36579501-A0BA-4373-BBEB-76270290305E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "R4", "R4", "{8DC2F9D8-3B45-4D83-81CB-870F80E814FC}"
 EndProject
@@ -65,18 +37,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.SliceGen.R4", "Pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.SliceGen.XUnitTestsA.R4", "Projects\SliceGen\R4\FhirKhit.SliceGen.XUnitTestsA.R4\FhirKhit.SliceGen.XUnitTestsA.R4.csproj", "{6FD3001D-2A01-4509-9EEE-E698883FC87A}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.Common", "Projects\SliceGen\Share\FhirKhit.SliceGen.Common\FhirKhit.SliceGen.Common.shproj", "{FA2701F7-C409-4703-852D-C0DC193B50DA}"
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGSharedLib\FhirKhit.ProfGen.PGSharedLib.projitems*{4ce0f4a3-01e9-4bbb-8cdf-0cfe0c4f0da2}*SharedItemsImports = 13
-		Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared\FhirKhit.ProfGen.PGShared.projitems*{6f57dcb2-caa2-4abf-8afb-c899b460149b}*SharedItemsImports = 13
 		Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems*{721f484a-1c1a-4a95-aa2c-ff38e18c9d77}*SharedItemsImports = 13
 		Projects\Tools\FhirKhit.Tools.FKSharedTests\FhirKhit.Tools.FKSharedTests.projitems*{a0663c6d-3386-4c88-a186-b288530eb107}*SharedItemsImports = 13
-		Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared.GenTests\FhirKhit.ProfGen.PGShared.GenTests.projitems*{a9ea6a0e-cd01-4636-87d2-f1c725e85604}*SharedItemsImports = 13
 		Projects\Tools\FhirKhit.Tools.FKShared\FhirKhit.Tools.FKShared.projitems*{bf3e3a97-3b43-44aa-838c-24e5e32be8c5}*SharedItemsImports = 13
-		Projects\ProfGen\PGShared\FhirKhit.ProfGen.PGShared.XUnitTests\FhirKhit.ProfGen.PGShared.XUnitTests.projitems*{e11548b9-456f-4572-b673-7bb1d04d1a71}*SharedItemsImports = 13
-		Projects\SliceGen\Share\FhirKhit.SliceGen.Common\FhirKhit.SliceGen.Common.projitems*{fa2701f7-c409-4703-852d-c0dc193b50da}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -149,38 +114,6 @@ Global
 		{1844E064-0460-4076-82B8-D2FD74AEDB8D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1844E064-0460-4076-82B8-D2FD74AEDB8D}.Release|x64.ActiveCfg = Release|Any CPU
 		{1844E064-0460-4076-82B8-D2FD74AEDB8D}.Release|x64.Build.0 = Release|Any CPU
-		{EEE3F99A-E31F-49D7-92DF-B57FF4FB6521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EEE3F99A-E31F-49D7-92DF-B57FF4FB6521}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EEE3F99A-E31F-49D7-92DF-B57FF4FB6521}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{EEE3F99A-E31F-49D7-92DF-B57FF4FB6521}.Debug|x64.Build.0 = Debug|Any CPU
-		{EEE3F99A-E31F-49D7-92DF-B57FF4FB6521}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EEE3F99A-E31F-49D7-92DF-B57FF4FB6521}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EEE3F99A-E31F-49D7-92DF-B57FF4FB6521}.Release|x64.ActiveCfg = Release|Any CPU
-		{EEE3F99A-E31F-49D7-92DF-B57FF4FB6521}.Release|x64.Build.0 = Release|Any CPU
-		{C4D7C099-811E-482E-9414-44470A55C808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4D7C099-811E-482E-9414-44470A55C808}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4D7C099-811E-482E-9414-44470A55C808}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{C4D7C099-811E-482E-9414-44470A55C808}.Debug|x64.Build.0 = Debug|Any CPU
-		{C4D7C099-811E-482E-9414-44470A55C808}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4D7C099-811E-482E-9414-44470A55C808}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C4D7C099-811E-482E-9414-44470A55C808}.Release|x64.ActiveCfg = Release|Any CPU
-		{C4D7C099-811E-482E-9414-44470A55C808}.Release|x64.Build.0 = Release|Any CPU
-		{C2C0B516-3B8C-4950-8FBB-9E198E204440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2C0B516-3B8C-4950-8FBB-9E198E204440}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2C0B516-3B8C-4950-8FBB-9E198E204440}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{C2C0B516-3B8C-4950-8FBB-9E198E204440}.Debug|x64.Build.0 = Debug|Any CPU
-		{C2C0B516-3B8C-4950-8FBB-9E198E204440}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2C0B516-3B8C-4950-8FBB-9E198E204440}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2C0B516-3B8C-4950-8FBB-9E198E204440}.Release|x64.ActiveCfg = Release|Any CPU
-		{C2C0B516-3B8C-4950-8FBB-9E198E204440}.Release|x64.Build.0 = Release|Any CPU
-		{FDD01066-D9B5-40E4-873F-F4DEB8072D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDD01066-D9B5-40E4-873F-F4DEB8072D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDD01066-D9B5-40E4-873F-F4DEB8072D2E}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{FDD01066-D9B5-40E4-873F-F4DEB8072D2E}.Debug|x64.Build.0 = Debug|Any CPU
-		{FDD01066-D9B5-40E4-873F-F4DEB8072D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDD01066-D9B5-40E4-873F-F4DEB8072D2E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FDD01066-D9B5-40E4-873F-F4DEB8072D2E}.Release|x64.ActiveCfg = Release|Any CPU
-		{FDD01066-D9B5-40E4-873F-F4DEB8072D2E}.Release|x64.Build.0 = Release|Any CPU
 		{FB19DF22-0BB6-447D-BFCF-03A4B842503B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FB19DF22-0BB6-447D-BFCF-03A4B842503B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB19DF22-0BB6-447D-BFCF-03A4B842503B}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -212,26 +145,10 @@ Global
 		{1844E064-0460-4076-82B8-D2FD74AEDB8D} = {C9277C85-BD7D-4D69-8CEE-A81A646E97AF}
 		{BF3E3A97-3B43-44AA-838C-24E5E32BE8C5} = {C9277C85-BD7D-4D69-8CEE-A81A646E97AF}
 		{A0663C6D-3386-4C88-A186-B288530EB107} = {C9277C85-BD7D-4D69-8CEE-A81A646E97AF}
-		{6F57DCB2-CAA2-4ABF-8AFB-C899B460149B} = {B5CD7292-424D-432E-9797-8C5169231A04}
-		{E11548B9-456F-4572-B673-7BB1D04D1A71} = {B5CD7292-424D-432E-9797-8C5169231A04}
-		{A9EA6A0E-CD01-4636-87D2-F1C725E85604} = {B5CD7292-424D-432E-9797-8C5169231A04}
-		{B5CD7292-424D-432E-9797-8C5169231A04} = {97017A3B-D9CB-4367-9751-8AA1E6818F70}
-		{95000C1A-5FCC-4609-9403-0BDB208D37B9} = {97017A3B-D9CB-4367-9751-8AA1E6818F70}
-		{4CE0F4A3-01E9-4BBB-8CDF-0CFE0C4F0DA2} = {B5CD7292-424D-432E-9797-8C5169231A04}
-		{75C61F9E-DE81-4438-9D85-966E7D3CC4A7} = {97017A3B-D9CB-4367-9751-8AA1E6818F70}
-		{EEE3F99A-E31F-49D7-92DF-B57FF4FB6521} = {75C61F9E-DE81-4438-9D85-966E7D3CC4A7}
-		{C4D7C099-811E-482E-9414-44470A55C808} = {75C61F9E-DE81-4438-9D85-966E7D3CC4A7}
-		{C2C0B516-3B8C-4950-8FBB-9E198E204440} = {75C61F9E-DE81-4438-9D85-966E7D3CC4A7}
 		{4FEFBC1A-4736-485C-AF91-BD64E93534B8} = {AF118608-D6E7-4372-9DC3-9549A701804D}
-		{C901AB3B-FAE7-4B0F-8068-DCA70D2121D7} = {4FEFBC1A-4736-485C-AF91-BD64E93534B8}
-		{542C552B-E104-44A0-A9AA-33BC0FB92F3D} = {4FEFBC1A-4736-485C-AF91-BD64E93534B8}
-		{8E28636E-7933-4AE0-A984-CBA1B422C680} = {4FEFBC1A-4736-485C-AF91-BD64E93534B8}
-		{36579501-A0BA-4373-BBEB-76270290305E} = {4FEFBC1A-4736-485C-AF91-BD64E93534B8}
 		{8DC2F9D8-3B45-4D83-81CB-870F80E814FC} = {AF118608-D6E7-4372-9DC3-9549A701804D}
-		{FDD01066-D9B5-40E4-873F-F4DEB8072D2E} = {8DC2F9D8-3B45-4D83-81CB-870F80E814FC}
 		{FB19DF22-0BB6-447D-BFCF-03A4B842503B} = {8DC2F9D8-3B45-4D83-81CB-870F80E814FC}
 		{6FD3001D-2A01-4509-9EEE-E698883FC87A} = {8DC2F9D8-3B45-4D83-81CB-870F80E814FC}
-		{FA2701F7-C409-4703-852D-C0DC193B50DA} = {4FEFBC1A-4736-485C-AF91-BD64E93534B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90499BD7-964F-4CE5-A761-BDF9EC6DCE28}

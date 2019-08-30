@@ -5,11 +5,11 @@ using System;
 using System.IO;
 using System.Text;
 using Xunit;
-using FhirKhit.SliceGen.Share;
 using System.Diagnostics;
 using Hl7.Fhir.Serialization;
 using Hl7.Fhir.Specification.Snapshot;
 using System.Collections.Generic;
+using FhirKhit.SliceGen.R4;
 
 
 #if FHIR_R2

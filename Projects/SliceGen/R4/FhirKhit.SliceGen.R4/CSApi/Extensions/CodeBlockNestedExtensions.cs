@@ -5,7 +5,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace FhirKhit.SliceGen.Share.CodeGen.CSApi.Extensions
+namespace FhirKhit.SliceGen.R4
 {
     internal static class CodeBlockNestedExtensions
     {

@@ -6,8 +6,8 @@ using System.Linq;
 using System.IO;
 using Xunit;
 using System.Text;
-using FhirKhit.SliceGen.Share;
 using Hl7.Fhir.Serialization;
+using FhirKhit.SliceGen.R4;
 
 
 #if FHIR_R2
