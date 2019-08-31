@@ -11,410 +11,412 @@ using System.Diagnostics;
 using Hl7.FhirPath;
 
 namespace FhirKhit.SliceGen.CSApi
-{                                                                                                                                           // CodeGeneration.cs:401
+{                                                                                                                                           // CodeGeneration.cs:403
     public static class FhirConstruct
-    {                                                                                                                                       // CodeGeneration.cs:403
+    {                                                                                                                                       // CodeGeneration.cs:405
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,
-            Element fix,                                                                                                                    // CodeGeneration.cs:418
-            String methodName,                                                                                                              // CodeGeneration.cs:419
-            out String propertyType)                                                                                                        // CodeGeneration.cs:420
-        {                                                                                                                                   // CodeGeneration.cs:421
+            Element fix,                                                                                                                    // CodeGeneration.cs:420
+            String methodName,                                                                                                              // CodeGeneration.cs:421
+            String methodPrefix,                                                                                                            // CodeGeneration.cs:422
+            out String propertyType)                                                                                                        // CodeGeneration.cs:423
+        {                                                                                                                                   // CodeGeneration.cs:424
             
-            if (fix is null)                                                                                                                // CodeGeneration.cs:424
-                throw new ArgumentNullException(nameof(fix));                                                                               // CodeGeneration.cs:425
-            propertyType = null;                                                                                                            // CodeGeneration.cs:426
-            switch (fix.TypeName)                                                                                                           // CodeGeneration.cs:427
-            {                                                                                                                               // CodeGeneration.cs:428
-                case "Address": // Address  - DataType                                                                                      // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Address";                                                                                               // CodeGeneration.cs:335
-                    return Construct(block, (Address)fix, methodName);                                                                      // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+            if (fix is null)                                                                                                                // CodeGeneration.cs:427
+                throw new ArgumentNullException(nameof(fix));                                                                               // CodeGeneration.cs:428
+            propertyType = null;                                                                                                            // CodeGeneration.cs:429
+            switch (fix.TypeName)                                                                                                           // CodeGeneration.cs:430
+            {                                                                                                                               // CodeGeneration.cs:431
+                case "Address": // Address  - DataType                                                                                      // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Address";                                                                                               // CodeGeneration.cs:336
+                    return Construct(block, (Address)fix, methodName, methodPrefix);                                                        // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Age": // Age  - DataType                                                                                              // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Age";                                                                                                   // CodeGeneration.cs:335
-                    return Construct(block, (Age)fix, methodName);                                                                          // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Age": // Age  - DataType                                                                                              // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Age";                                                                                                   // CodeGeneration.cs:336
+                    return Construct(block, (Age)fix, methodName, methodPrefix);                                                            // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Annotation": // Annotation  - DataType                                                                                // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Annotation";                                                                                            // CodeGeneration.cs:335
-                    return Construct(block, (Annotation)fix, methodName);                                                                   // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Annotation": // Annotation  - DataType                                                                                // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Annotation";                                                                                            // CodeGeneration.cs:336
+                    return Construct(block, (Annotation)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Attachment": // Attachment  - DataType                                                                                // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Attachment";                                                                                            // CodeGeneration.cs:335
-                    return Construct(block, (Attachment)fix, methodName);                                                                   // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Attachment": // Attachment  - DataType                                                                                // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Attachment";                                                                                            // CodeGeneration.cs:336
+                    return Construct(block, (Attachment)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "CodeableConcept": // CodeableConcept  - DataType                                                                      // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "CodeableConcept";                                                                                       // CodeGeneration.cs:335
-                    return Construct(block, (CodeableConcept)fix, methodName);                                                              // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "CodeableConcept": // CodeableConcept  - DataType                                                                      // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "CodeableConcept";                                                                                       // CodeGeneration.cs:336
+                    return Construct(block, (CodeableConcept)fix, methodName, methodPrefix);                                                // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Coding": // Coding  - DataType                                                                                        // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Coding";                                                                                                // CodeGeneration.cs:335
-                    return Construct(block, (Coding)fix, methodName);                                                                       // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Coding": // Coding  - DataType                                                                                        // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Coding";                                                                                                // CodeGeneration.cs:336
+                    return Construct(block, (Coding)fix, methodName, methodPrefix);                                                         // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "ContactDetail": // ContactDetail  - DataType                                                                          // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "ContactDetail";                                                                                         // CodeGeneration.cs:335
-                    return Construct(block, (ContactDetail)fix, methodName);                                                                // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "ContactDetail": // ContactDetail  - DataType                                                                          // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "ContactDetail";                                                                                         // CodeGeneration.cs:336
+                    return Construct(block, (ContactDetail)fix, methodName, methodPrefix);                                                  // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "ContactPoint": // ContactPoint  - DataType                                                                            // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "ContactPoint";                                                                                          // CodeGeneration.cs:335
-                    return Construct(block, (ContactPoint)fix, methodName);                                                                 // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "ContactPoint": // ContactPoint  - DataType                                                                            // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "ContactPoint";                                                                                          // CodeGeneration.cs:336
+                    return Construct(block, (ContactPoint)fix, methodName, methodPrefix);                                                   // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Contributor": // Contributor  - DataType                                                                              // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Contributor";                                                                                           // CodeGeneration.cs:335
-                    return Construct(block, (Contributor)fix, methodName);                                                                  // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Contributor": // Contributor  - DataType                                                                              // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Contributor";                                                                                           // CodeGeneration.cs:336
+                    return Construct(block, (Contributor)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Count": // Count  - DataType                                                                                          // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Count";                                                                                                 // CodeGeneration.cs:335
-                    return Construct(block, (Count)fix, methodName);                                                                        // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Count": // Count  - DataType                                                                                          // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Count";                                                                                                 // CodeGeneration.cs:336
+                    return Construct(block, (Count)fix, methodName, methodPrefix);                                                          // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "DataRequirement": // DataRequirement  - DataType                                                                      // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "DataRequirement";                                                                                       // CodeGeneration.cs:335
-                    return Construct(block, (DataRequirement)fix, methodName);                                                              // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "DataRequirement": // DataRequirement  - DataType                                                                      // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "DataRequirement";                                                                                       // CodeGeneration.cs:336
+                    return Construct(block, (DataRequirement)fix, methodName, methodPrefix);                                                // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Distance": // Distance  - DataType                                                                                    // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Distance";                                                                                              // CodeGeneration.cs:335
-                    return Construct(block, (Distance)fix, methodName);                                                                     // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Distance": // Distance  - DataType                                                                                    // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Distance";                                                                                              // CodeGeneration.cs:336
+                    return Construct(block, (Distance)fix, methodName, methodPrefix);                                                       // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Dosage": // Dosage  - DataType                                                                                        // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Dosage";                                                                                                // CodeGeneration.cs:335
-                    return Construct(block, (Dosage)fix, methodName);                                                                       // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Dosage": // Dosage  - DataType                                                                                        // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Dosage";                                                                                                // CodeGeneration.cs:336
+                    return Construct(block, (Dosage)fix, methodName, methodPrefix);                                                         // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Duration": // Duration  - DataType                                                                                    // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Duration";                                                                                              // CodeGeneration.cs:335
-                    return Construct(block, (Duration)fix, methodName);                                                                     // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Duration": // Duration  - DataType                                                                                    // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Duration";                                                                                              // CodeGeneration.cs:336
+                    return Construct(block, (Duration)fix, methodName, methodPrefix);                                                       // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "ElementDefinition": // ElementDefinition  - DataType                                                                  // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "ElementDefinition";                                                                                     // CodeGeneration.cs:335
-                    return Construct(block, (ElementDefinition)fix, methodName);                                                            // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "ElementDefinition": // ElementDefinition  - DataType                                                                  // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "ElementDefinition";                                                                                     // CodeGeneration.cs:336
+                    return Construct(block, (ElementDefinition)fix, methodName, methodPrefix);                                              // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Expression": // Expression  - DataType                                                                                // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Expression";                                                                                            // CodeGeneration.cs:335
-                    return Construct(block, (Expression)fix, methodName);                                                                   // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Expression": // Expression  - DataType                                                                                // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Expression";                                                                                            // CodeGeneration.cs:336
+                    return Construct(block, (Expression)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Extension": // Extension  - DataType                                                                                  // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Extension";                                                                                             // CodeGeneration.cs:335
-                    return Construct(block, (Extension)fix, methodName);                                                                    // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Extension": // Extension  - DataType                                                                                  // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Extension";                                                                                             // CodeGeneration.cs:336
+                    return Construct(block, (Extension)fix, methodName, methodPrefix);                                                      // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "HumanName": // HumanName  - DataType                                                                                  // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "HumanName";                                                                                             // CodeGeneration.cs:335
-                    return Construct(block, (HumanName)fix, methodName);                                                                    // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "HumanName": // HumanName  - DataType                                                                                  // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "HumanName";                                                                                             // CodeGeneration.cs:336
+                    return Construct(block, (HumanName)fix, methodName, methodPrefix);                                                      // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Identifier": // Identifier  - DataType                                                                                // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Identifier";                                                                                            // CodeGeneration.cs:335
-                    return Construct(block, (Identifier)fix, methodName);                                                                   // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Identifier": // Identifier  - DataType                                                                                // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Identifier";                                                                                            // CodeGeneration.cs:336
+                    return Construct(block, (Identifier)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "MarketingStatus": // MarketingStatus  - DataType                                                                      // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "MarketingStatus";                                                                                       // CodeGeneration.cs:335
-                    return Construct(block, (MarketingStatus)fix, methodName);                                                              // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "MarketingStatus": // MarketingStatus  - DataType                                                                      // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "MarketingStatus";                                                                                       // CodeGeneration.cs:336
+                    return Construct(block, (MarketingStatus)fix, methodName, methodPrefix);                                                // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Meta": // Meta  - DataType                                                                                            // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Meta";                                                                                                  // CodeGeneration.cs:335
-                    return Construct(block, (Meta)fix, methodName);                                                                         // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Meta": // Meta  - DataType                                                                                            // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Meta";                                                                                                  // CodeGeneration.cs:336
+                    return Construct(block, (Meta)fix, methodName, methodPrefix);                                                           // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Money": // Money  - DataType                                                                                          // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Money";                                                                                                 // CodeGeneration.cs:335
-                    return Construct(block, (Money)fix, methodName);                                                                        // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Money": // Money  - DataType                                                                                          // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Money";                                                                                                 // CodeGeneration.cs:336
+                    return Construct(block, (Money)fix, methodName, methodPrefix);                                                          // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "MoneyQuantity": // MoneyQuantity  - DataType                                                                          // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "MoneyQuantity";                                                                                         // CodeGeneration.cs:335
-                    return Construct(block, (MoneyQuantity)fix, methodName);                                                                // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "MoneyQuantity": // MoneyQuantity  - DataType                                                                          // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "MoneyQuantity";                                                                                         // CodeGeneration.cs:336
+                    return Construct(block, (MoneyQuantity)fix, methodName, methodPrefix);                                                  // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Narrative": // Narrative  - DataType                                                                                  // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Narrative";                                                                                             // CodeGeneration.cs:335
-                    return Construct(block, (Narrative)fix, methodName);                                                                    // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Narrative": // Narrative  - DataType                                                                                  // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Narrative";                                                                                             // CodeGeneration.cs:336
+                    return Construct(block, (Narrative)fix, methodName, methodPrefix);                                                      // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "ParameterDefinition": // ParameterDefinition  - DataType                                                              // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "ParameterDefinition";                                                                                   // CodeGeneration.cs:335
-                    return Construct(block, (ParameterDefinition)fix, methodName);                                                          // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "ParameterDefinition": // ParameterDefinition  - DataType                                                              // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "ParameterDefinition";                                                                                   // CodeGeneration.cs:336
+                    return Construct(block, (ParameterDefinition)fix, methodName, methodPrefix);                                            // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Period": // Period  - DataType                                                                                        // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Period";                                                                                                // CodeGeneration.cs:335
-                    return Construct(block, (Period)fix, methodName);                                                                       // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Period": // Period  - DataType                                                                                        // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Period";                                                                                                // CodeGeneration.cs:336
+                    return Construct(block, (Period)fix, methodName, methodPrefix);                                                         // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Population": // Population  - DataType                                                                                // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Population";                                                                                            // CodeGeneration.cs:335
-                    return Construct(block, (Population)fix, methodName);                                                                   // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Population": // Population  - DataType                                                                                // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Population";                                                                                            // CodeGeneration.cs:336
+                    return Construct(block, (Population)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "ProdCharacteristic": // ProdCharacteristic  - DataType                                                                // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "ProdCharacteristic";                                                                                    // CodeGeneration.cs:335
-                    return Construct(block, (ProdCharacteristic)fix, methodName);                                                           // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "ProdCharacteristic": // ProdCharacteristic  - DataType                                                                // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "ProdCharacteristic";                                                                                    // CodeGeneration.cs:336
+                    return Construct(block, (ProdCharacteristic)fix, methodName, methodPrefix);                                             // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "ProductShelfLife": // ProductShelfLife  - DataType                                                                    // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "ProductShelfLife";                                                                                      // CodeGeneration.cs:335
-                    return Construct(block, (ProductShelfLife)fix, methodName);                                                             // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "ProductShelfLife": // ProductShelfLife  - DataType                                                                    // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "ProductShelfLife";                                                                                      // CodeGeneration.cs:336
+                    return Construct(block, (ProductShelfLife)fix, methodName, methodPrefix);                                               // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Quantity": // Quantity  - DataType                                                                                    // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Quantity";                                                                                              // CodeGeneration.cs:335
-                    return Construct(block, (Quantity)fix, methodName);                                                                     // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Quantity": // Quantity  - DataType                                                                                    // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Quantity";                                                                                              // CodeGeneration.cs:336
+                    return Construct(block, (Quantity)fix, methodName, methodPrefix);                                                       // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Range": // Range  - DataType                                                                                          // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Range";                                                                                                 // CodeGeneration.cs:335
-                    return Construct(block, (Range)fix, methodName);                                                                        // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Range": // Range  - DataType                                                                                          // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Range";                                                                                                 // CodeGeneration.cs:336
+                    return Construct(block, (Range)fix, methodName, methodPrefix);                                                          // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Ratio": // Ratio  - DataType                                                                                          // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Ratio";                                                                                                 // CodeGeneration.cs:335
-                    return Construct(block, (Ratio)fix, methodName);                                                                        // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Ratio": // Ratio  - DataType                                                                                          // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Ratio";                                                                                                 // CodeGeneration.cs:336
+                    return Construct(block, (Ratio)fix, methodName, methodPrefix);                                                          // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Reference": // Reference  - DataType                                                                                  // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Reference";                                                                                             // CodeGeneration.cs:335
-                    return Construct(block, (ResourceReference)fix, methodName);                                                            // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Reference": // Reference  - DataType                                                                                  // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Reference";                                                                                             // CodeGeneration.cs:336
+                    return Construct(block, (ResourceReference)fix, methodName, methodPrefix);                                              // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "RelatedArtifact": // RelatedArtifact  - DataType                                                                      // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "RelatedArtifact";                                                                                       // CodeGeneration.cs:335
-                    return Construct(block, (RelatedArtifact)fix, methodName);                                                              // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "RelatedArtifact": // RelatedArtifact  - DataType                                                                      // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "RelatedArtifact";                                                                                       // CodeGeneration.cs:336
+                    return Construct(block, (RelatedArtifact)fix, methodName, methodPrefix);                                                // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "SampledData": // SampledData  - DataType                                                                              // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "SampledData";                                                                                           // CodeGeneration.cs:335
-                    return Construct(block, (SampledData)fix, methodName);                                                                  // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "SampledData": // SampledData  - DataType                                                                              // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "SampledData";                                                                                           // CodeGeneration.cs:336
+                    return Construct(block, (SampledData)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Signature": // Signature  - DataType                                                                                  // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Signature";                                                                                             // CodeGeneration.cs:335
-                    return Construct(block, (Signature)fix, methodName);                                                                    // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Signature": // Signature  - DataType                                                                                  // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Signature";                                                                                             // CodeGeneration.cs:336
+                    return Construct(block, (Signature)fix, methodName, methodPrefix);                                                      // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "SimpleQuantity": // SimpleQuantity  - DataType                                                                        // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "SimpleQuantity";                                                                                        // CodeGeneration.cs:335
-                    return Construct(block, (SimpleQuantity)fix, methodName);                                                               // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "SimpleQuantity": // SimpleQuantity  - DataType                                                                        // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "SimpleQuantity";                                                                                        // CodeGeneration.cs:336
+                    return Construct(block, (SimpleQuantity)fix, methodName, methodPrefix);                                                 // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "SubstanceAmount": // SubstanceAmount  - DataType                                                                      // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "SubstanceAmount";                                                                                       // CodeGeneration.cs:335
-                    return Construct(block, (SubstanceAmount)fix, methodName);                                                              // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "SubstanceAmount": // SubstanceAmount  - DataType                                                                      // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "SubstanceAmount";                                                                                       // CodeGeneration.cs:336
+                    return Construct(block, (SubstanceAmount)fix, methodName, methodPrefix);                                                // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "Timing": // Timing  - DataType                                                                                        // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "Timing";                                                                                                // CodeGeneration.cs:335
-                    return Construct(block, (Timing)fix, methodName);                                                                       // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "Timing": // Timing  - DataType                                                                                        // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "Timing";                                                                                                // CodeGeneration.cs:336
+                    return Construct(block, (Timing)fix, methodName, methodPrefix);                                                         // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "TriggerDefinition": // TriggerDefinition  - DataType                                                                  // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "TriggerDefinition";                                                                                     // CodeGeneration.cs:335
-                    return Construct(block, (TriggerDefinition)fix, methodName);                                                            // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "TriggerDefinition": // TriggerDefinition  - DataType                                                                  // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "TriggerDefinition";                                                                                     // CodeGeneration.cs:336
+                    return Construct(block, (TriggerDefinition)fix, methodName, methodPrefix);                                              // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
-                case "UsageContext": // UsageContext  - DataType                                                                            // CodeGeneration.cs:333
-                {                                                                                                                           // CodeGeneration.cs:334
-                    propertyType = "UsageContext";                                                                                          // CodeGeneration.cs:335
-                    return Construct(block, (UsageContext)fix, methodName);                                                                 // CodeGeneration.cs:336
-                }                                                                                                                           // CodeGeneration.cs:337
+                case "UsageContext": // UsageContext  - DataType                                                                            // CodeGeneration.cs:334
+                {                                                                                                                           // CodeGeneration.cs:335
+                    propertyType = "UsageContext";                                                                                          // CodeGeneration.cs:336
+                    return Construct(block, (UsageContext)fix, methodName, methodPrefix);                                                   // CodeGeneration.cs:337
+                }                                                                                                                           // CodeGeneration.cs:338
                 
                 case "base64Binary": // Base64Binary  - primitive                                                                           // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "base64Binary";                                                                                          // CodeGeneration.cs:266
-                    return Construct(block, (Base64Binary)fix, methodName);                                                                 // CodeGeneration.cs:267
+                    return Construct(block, (Base64Binary)fix, methodName, methodPrefix);                                                   // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "boolean": // Boolean  - primitive                                                                                     // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "boolean";                                                                                               // CodeGeneration.cs:266
-                    return Construct(block, (FhirBoolean)fix, methodName);                                                                  // CodeGeneration.cs:267
+                    return Construct(block, (FhirBoolean)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "canonical": // Canonical  - primitive                                                                                 // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "canonical";                                                                                             // CodeGeneration.cs:266
-                    return Construct(block, (Canonical)fix, methodName);                                                                    // CodeGeneration.cs:267
+                    return Construct(block, (Canonical)fix, methodName, methodPrefix);                                                      // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "code": // Code  - primitive                                                                                           // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "code";                                                                                                  // CodeGeneration.cs:266
-                    return Construct(block, (Code)fix, methodName);                                                                         // CodeGeneration.cs:267
+                    return Construct(block, (Code)fix, methodName, methodPrefix);                                                           // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "date": // Date  - primitive                                                                                           // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "date";                                                                                                  // CodeGeneration.cs:266
-                    return Construct(block, (Date)fix, methodName);                                                                         // CodeGeneration.cs:267
+                    return Construct(block, (Date)fix, methodName, methodPrefix);                                                           // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "dateTime": // DateTime  - primitive                                                                                   // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "dateTime";                                                                                              // CodeGeneration.cs:266
-                    return Construct(block, (FhirDateTime)fix, methodName);                                                                 // CodeGeneration.cs:267
+                    return Construct(block, (FhirDateTime)fix, methodName, methodPrefix);                                                   // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "decimal": // Decimal  - primitive                                                                                     // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "decimal";                                                                                               // CodeGeneration.cs:266
-                    return Construct(block, (FhirDecimal)fix, methodName);                                                                  // CodeGeneration.cs:267
+                    return Construct(block, (FhirDecimal)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "id": // Id  - primitive                                                                                               // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "id";                                                                                                    // CodeGeneration.cs:266
-                    return Construct(block, (Id)fix, methodName);                                                                           // CodeGeneration.cs:267
+                    return Construct(block, (Id)fix, methodName, methodPrefix);                                                             // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "instant": // Instant  - primitive                                                                                     // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "instant";                                                                                               // CodeGeneration.cs:266
-                    return Construct(block, (Instant)fix, methodName);                                                                      // CodeGeneration.cs:267
+                    return Construct(block, (Instant)fix, methodName, methodPrefix);                                                        // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "integer": // Integer  - primitive                                                                                     // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "integer";                                                                                               // CodeGeneration.cs:266
-                    return Construct(block, (Integer)fix, methodName);                                                                      // CodeGeneration.cs:267
+                    return Construct(block, (Integer)fix, methodName, methodPrefix);                                                        // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "markdown": // Markdown  - primitive                                                                                   // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "markdown";                                                                                              // CodeGeneration.cs:266
-                    return Construct(block, (Markdown)fix, methodName);                                                                     // CodeGeneration.cs:267
+                    return Construct(block, (Markdown)fix, methodName, methodPrefix);                                                       // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "oid": // Oid  - primitive                                                                                             // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "oid";                                                                                                   // CodeGeneration.cs:266
-                    return Construct(block, (Oid)fix, methodName);                                                                          // CodeGeneration.cs:267
+                    return Construct(block, (Oid)fix, methodName, methodPrefix);                                                            // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "positiveInt": // PositiveInt  - primitive                                                                             // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "positiveInt";                                                                                           // CodeGeneration.cs:266
-                    return Construct(block, (PositiveInt)fix, methodName);                                                                  // CodeGeneration.cs:267
+                    return Construct(block, (PositiveInt)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "string": // String  - primitive                                                                                       // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "string";                                                                                                // CodeGeneration.cs:266
-                    return Construct(block, (FhirString)fix, methodName);                                                                   // CodeGeneration.cs:267
+                    return Construct(block, (FhirString)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "time": // Time  - primitive                                                                                           // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "time";                                                                                                  // CodeGeneration.cs:266
-                    return Construct(block, (Time)fix, methodName);                                                                         // CodeGeneration.cs:267
+                    return Construct(block, (Time)fix, methodName, methodPrefix);                                                           // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "unsignedInt": // UnsignedInt  - primitive                                                                             // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "unsignedInt";                                                                                           // CodeGeneration.cs:266
-                    return Construct(block, (UnsignedInt)fix, methodName);                                                                  // CodeGeneration.cs:267
+                    return Construct(block, (UnsignedInt)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "uri": // Uri  - primitive                                                                                             // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "uri";                                                                                                   // CodeGeneration.cs:266
-                    return Construct(block, (FhirUri)fix, methodName);                                                                      // CodeGeneration.cs:267
+                    return Construct(block, (FhirUri)fix, methodName, methodPrefix);                                                        // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "url": // Url  - primitive                                                                                             // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "url";                                                                                                   // CodeGeneration.cs:266
-                    return Construct(block, (FhirUrl)fix, methodName);                                                                      // CodeGeneration.cs:267
+                    return Construct(block, (FhirUrl)fix, methodName, methodPrefix);                                                        // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "uuid": // Uuid  - primitive                                                                                           // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "uuid";                                                                                                  // CodeGeneration.cs:266
-                    return Construct(block, (Uuid)fix, methodName);                                                                         // CodeGeneration.cs:267
+                    return Construct(block, (Uuid)fix, methodName, methodPrefix);                                                           // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
                 case "xhtml": // Xhtml  - primitive                                                                                         // CodeGeneration.cs:264
                 {                                                                                                                           // CodeGeneration.cs:265
                     propertyType = "xhtml";                                                                                                 // CodeGeneration.cs:266
-                    return Construct(block, (XHtml)fix, methodName);                                                                        // CodeGeneration.cs:267
+                    return Construct(block, (XHtml)fix, methodName, methodPrefix);                                                          // CodeGeneration.cs:267
                 }                                                                                                                           // CodeGeneration.cs:268
                 
-            }                                                                                                                               // CodeGeneration.cs:442
-            return false;                                                                                                                   // CodeGeneration.cs:443
-        }                                                                                                                                   // CodeGeneration.cs:444
+            }                                                                                                                               // CodeGeneration.cs:445
+            return false;                                                                                                                   // CodeGeneration.cs:446
+        }                                                                                                                                   // CodeGeneration.cs:447
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Address fix,                                                                                                                    // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Address fix,                                                                                                                    // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Address {methodName}()")                                                                               // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Address retVal = new Address();")                                                                              // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Address {methodName}()")                                                                       // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Address retVal = new Address();")                                                                              // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set UseElement of type Code<Address.AddressUse>)");                                                    // CodeGeneration.cs:64
                 if (fix.UseElement == null)                                                                                                 // CodeGeneration.cs:164
                     block.AppendCode($"retVal.UseElement = null;");                                                                         // CodeGeneration.cs:165
@@ -613,31 +615,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Address();")                                                                               // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Address();")                                                                               // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Age fix,                                                                                                                        // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Age fix,                                                                                                                        // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Age {methodName}()")                                                                                   // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Age retVal = new Age();")                                                                                      // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Age {methodName}()")                                                                           // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Age retVal = new Age();")                                                                                      // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set ValueElement of type FhirDecimal)");                                                               // CodeGeneration.cs:64
                 if (fix.ValueElement == null)                                                                                               // CodeGeneration.cs:232
                     block.AppendCode($"retVal.ValueElement = null;");                                                                       // CodeGeneration.cs:233
@@ -721,31 +724,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Age();")                                                                                   // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Age();")                                                                                   // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Annotation fix,                                                                                                                 // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Annotation fix,                                                                                                                 // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Annotation {methodName}()")                                                                            // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Annotation retVal = new Annotation();")                                                                        // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Annotation {methodName}()")                                                                    // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Annotation retVal = new Annotation();")                                                                        // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Author of type Element)");                                                                         // CodeGeneration.cs:64
                 block.AppendCode("// Set TimeElement of type FhirDateTime)");                                                               // CodeGeneration.cs:64
                 if (fix.TimeElement == null)                                                                                                // CodeGeneration.cs:232
@@ -789,31 +793,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Annotation();")                                                                            // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Annotation();")                                                                            // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Attachment fix,                                                                                                                 // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Attachment fix,                                                                                                                 // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Attachment {methodName}()")                                                                            // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Attachment retVal = new Attachment();")                                                                        // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Attachment {methodName}()")                                                                    // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Attachment retVal = new Attachment();")                                                                        // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set ContentTypeElement of type Code)");                                                                // CodeGeneration.cs:64
                 if (fix.ContentTypeElement == null)                                                                                         // CodeGeneration.cs:232
                     block.AppendCode($"retVal.ContentTypeElement = null;");                                                                 // CodeGeneration.cs:233
@@ -1006,31 +1011,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Attachment();")                                                                            // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Attachment();")                                                                            // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            CodeableConcept fix,                                                                                                            // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            CodeableConcept fix,                                                                                                            // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public CodeableConcept {methodName}()")                                                                       // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("CodeableConcept retVal = new CodeableConcept();")                                                              // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} CodeableConcept {methodName}()")                                                               // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("CodeableConcept retVal = new CodeableConcept();")                                                              // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Coding of type List<Coding>)");                                                                    // CodeGeneration.cs:64
                 if (fix.Coding == null)                                                                                                     // CodeGeneration.cs:178
                     block.AppendCode($"retVal.Coding = null;");                                                                             // CodeGeneration.cs:179
@@ -1167,31 +1173,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new CodeableConcept();")                                                                       // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new CodeableConcept();")                                                                       // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Coding fix,                                                                                                                     // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Coding fix,                                                                                                                     // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Coding {methodName}()")                                                                                // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Coding retVal = new Coding();")                                                                                // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Coding {methodName}()")                                                                        // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Coding retVal = new Coding();")                                                                                // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set SystemElement of type FhirUri)");                                                                  // CodeGeneration.cs:64
                 if (fix.SystemElement == null)                                                                                              // CodeGeneration.cs:232
                     block.AppendCode($"retVal.SystemElement = null;");                                                                      // CodeGeneration.cs:233
@@ -1290,31 +1297,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Coding();")                                                                                // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Coding();")                                                                                // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            ContactDetail fix,                                                                                                              // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            ContactDetail fix,                                                                                                              // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public ContactDetail {methodName}()")                                                                         // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("ContactDetail retVal = new ContactDetail();")                                                                  // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} ContactDetail {methodName}()")                                                                 // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("ContactDetail retVal = new ContactDetail();")                                                                  // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set NameElement of type FhirString)");                                                                 // CodeGeneration.cs:64
                 if (fix.NameElement == null)                                                                                                // CodeGeneration.cs:232
                     block.AppendCode($"retVal.NameElement = null;");                                                                        // CodeGeneration.cs:233
@@ -1454,31 +1462,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new ContactDetail();")                                                                         // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new ContactDetail();")                                                                         // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            ContactPoint fix,                                                                                                               // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            ContactPoint fix,                                                                                                               // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public ContactPoint {methodName}()")                                                                          // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("ContactPoint retVal = new ContactPoint();")                                                                    // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} ContactPoint {methodName}()")                                                                  // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("ContactPoint retVal = new ContactPoint();")                                                                    // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set SystemElement of type Code<ContactPoint.ContactPointSystem>)");                                    // CodeGeneration.cs:64
                 if (fix.SystemElement == null)                                                                                              // CodeGeneration.cs:164
                     block.AppendCode($"retVal.SystemElement = null;");                                                                      // CodeGeneration.cs:165
@@ -1580,31 +1589,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new ContactPoint();")                                                                          // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new ContactPoint();")                                                                          // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Contributor fix,                                                                                                                // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Contributor fix,                                                                                                                // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Contributor {methodName}()")                                                                           // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Contributor retVal = new Contributor();")                                                                      // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Contributor {methodName}()")                                                                   // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Contributor retVal = new Contributor();")                                                                      // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set TypeElement of type Code<Contributor.ContributorType>)");                                          // CodeGeneration.cs:64
                 if (fix.TypeElement == null)                                                                                                // CodeGeneration.cs:164
                     block.AppendCode($"retVal.TypeElement = null;");                                                                        // CodeGeneration.cs:165
@@ -1787,31 +1797,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Contributor();")                                                                           // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Contributor();")                                                                           // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Count fix,                                                                                                                      // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Count fix,                                                                                                                      // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Count {methodName}()")                                                                                 // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Count retVal = new Count();")                                                                                  // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Count {methodName}()")                                                                         // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Count retVal = new Count();")                                                                                  // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set ValueElement of type FhirDecimal)");                                                               // CodeGeneration.cs:64
                 if (fix.ValueElement == null)                                                                                               // CodeGeneration.cs:232
                     block.AppendCode($"retVal.ValueElement = null;");                                                                       // CodeGeneration.cs:233
@@ -1895,31 +1906,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Count();")                                                                                 // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Count();")                                                                                 // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            DataRequirement fix,                                                                                                            // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            DataRequirement fix,                                                                                                            // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public DataRequirement {methodName}()")                                                                       // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("DataRequirement retVal = new DataRequirement();")                                                              // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} DataRequirement {methodName}()")                                                               // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("DataRequirement retVal = new DataRequirement();")                                                              // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set TypeElement of type Code<FHIRAllTypes>)");                                                         // CodeGeneration.cs:64
                 if (fix.TypeElement == null)                                                                                                // CodeGeneration.cs:164
                     block.AppendCode($"retVal.TypeElement = null;");                                                                        // CodeGeneration.cs:165
@@ -2286,31 +2298,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new DataRequirement();")                                                                       // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new DataRequirement();")                                                                       // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Distance fix,                                                                                                                   // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Distance fix,                                                                                                                   // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Distance {methodName}()")                                                                              // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Distance retVal = new Distance();")                                                                            // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Distance {methodName}()")                                                                      // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Distance retVal = new Distance();")                                                                            // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set ValueElement of type FhirDecimal)");                                                               // CodeGeneration.cs:64
                 if (fix.ValueElement == null)                                                                                               // CodeGeneration.cs:232
                     block.AppendCode($"retVal.ValueElement = null;");                                                                       // CodeGeneration.cs:233
@@ -2394,31 +2407,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Distance();")                                                                              // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Distance();")                                                                              // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Dosage fix,                                                                                                                     // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Dosage fix,                                                                                                                     // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Dosage {methodName}()")                                                                                // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Dosage retVal = new Dosage();")                                                                                // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Dosage {methodName}()")                                                                        // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Dosage retVal = new Dosage();")                                                                                // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set SequenceElement of type Integer)");                                                                // CodeGeneration.cs:64
                 if (fix.SequenceElement == null)                                                                                            // CodeGeneration.cs:232
                     block.AppendCode($"retVal.SequenceElement = null;");                                                                    // CodeGeneration.cs:233
@@ -4041,31 +4055,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Dosage();")                                                                                // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Dosage();")                                                                                // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Duration fix,                                                                                                                   // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Duration fix,                                                                                                                   // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Duration {methodName}()")                                                                              // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Duration retVal = new Duration();")                                                                            // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Duration {methodName}()")                                                                      // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Duration retVal = new Duration();")                                                                            // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set ValueElement of type FhirDecimal)");                                                               // CodeGeneration.cs:64
                 if (fix.ValueElement == null)                                                                                               // CodeGeneration.cs:232
                     block.AppendCode($"retVal.ValueElement = null;");                                                                       // CodeGeneration.cs:233
@@ -4149,31 +4164,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Duration();")                                                                              // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Duration();")                                                                              // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            ElementDefinition fix,                                                                                                          // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            ElementDefinition fix,                                                                                                          // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public ElementDefinition {methodName}()")                                                                     // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("ElementDefinition retVal = new ElementDefinition();")                                                          // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} ElementDefinition {methodName}()")                                                             // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("ElementDefinition retVal = new ElementDefinition();")                                                          // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set PathElement of type FhirString)");                                                                 // CodeGeneration.cs:64
                 if (fix.PathElement == null)                                                                                                // CodeGeneration.cs:232
                     block.AppendCode($"retVal.PathElement = null;");                                                                        // CodeGeneration.cs:233
@@ -5307,31 +5323,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new ElementDefinition();")                                                                     // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new ElementDefinition();")                                                                     // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Expression fix,                                                                                                                 // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Expression fix,                                                                                                                 // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Expression {methodName}()")                                                                            // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Expression retVal = new Expression();")                                                                        // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Expression {methodName}()")                                                                    // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Expression retVal = new Expression();")                                                                        // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set DescriptionElement of type FhirString)");                                                          // CodeGeneration.cs:64
                 if (fix.DescriptionElement == null)                                                                                         // CodeGeneration.cs:232
                     block.AppendCode($"retVal.DescriptionElement = null;");                                                                 // CodeGeneration.cs:233
@@ -5428,31 +5445,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Expression();")                                                                            // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Expression();")                                                                            // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Extension fix,                                                                                                                  // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Extension fix,                                                                                                                  // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Extension {methodName}()")                                                                             // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Extension retVal = new Extension();")                                                                          // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Extension {methodName}()")                                                                     // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Extension retVal = new Extension();")                                                                          // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Url of type string)");                                                                             // CodeGeneration.cs:64
                 if (fix.Url == null)                                                                                                        // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Url = null;");                                                                                // CodeGeneration.cs:153
@@ -5465,31 +5483,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Extension();")                                                                             // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Extension();")                                                                             // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            HumanName fix,                                                                                                                  // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            HumanName fix,                                                                                                                  // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public HumanName {methodName}()")                                                                             // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("HumanName retVal = new HumanName();")                                                                          // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} HumanName {methodName}()")                                                                     // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("HumanName retVal = new HumanName();")                                                                          // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set UseElement of type Code<HumanName.NameUse>)");                                                     // CodeGeneration.cs:64
                 if (fix.UseElement == null)                                                                                                 // CodeGeneration.cs:164
                     block.AppendCode($"retVal.UseElement = null;");                                                                         // CodeGeneration.cs:165
@@ -5661,31 +5680,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new HumanName();")                                                                             // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new HumanName();")                                                                             // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Identifier fix,                                                                                                                 // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Identifier fix,                                                                                                                 // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Identifier {methodName}()")                                                                            // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Identifier retVal = new Identifier();")                                                                        // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Identifier {methodName}()")                                                                    // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Identifier retVal = new Identifier();")                                                                        // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set UseElement of type Code<Identifier.IdentifierUse>)");                                              // CodeGeneration.cs:64
                 if (fix.UseElement == null)                                                                                                 // CodeGeneration.cs:164
                     block.AppendCode($"retVal.UseElement = null;");                                                                         // CodeGeneration.cs:165
@@ -5926,31 +5946,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Identifier();")                                                                            // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Identifier();")                                                                            // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            MarketingStatus fix,                                                                                                            // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            MarketingStatus fix,                                                                                                            // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public MarketingStatus {methodName}()")                                                                       // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("MarketingStatus retVal = new MarketingStatus();")                                                              // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} MarketingStatus {methodName}()")                                                               // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("MarketingStatus retVal = new MarketingStatus();")                                                              // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Country of type CodeableConcept)");                                                                // CodeGeneration.cs:64
                 if (fix.Country == null)                                                                                                    // CodeGeneration.cs:232
                     block.AppendCode($"retVal.Country = null;");                                                                            // CodeGeneration.cs:233
@@ -6454,31 +6475,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new MarketingStatus();")                                                                       // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new MarketingStatus();")                                                                       // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Meta fix,                                                                                                                       // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Meta fix,                                                                                                                       // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Meta {methodName}()")                                                                                  // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Meta retVal = new Meta();")                                                                                    // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Meta {methodName}()")                                                                          // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Meta retVal = new Meta();")                                                                                    // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set VersionIdElement of type Id)");                                                                    // CodeGeneration.cs:64
                 if (fix.VersionIdElement == null)                                                                                           // CodeGeneration.cs:232
                     block.AppendCode($"retVal.VersionIdElement = null;");                                                                   // CodeGeneration.cs:233
@@ -6795,31 +6817,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Meta();")                                                                                  // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Meta();")                                                                                  // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Money fix,                                                                                                                      // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Money fix,                                                                                                                      // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Money {methodName}()")                                                                                 // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Money retVal = new Money();")                                                                                  // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Money {methodName}()")                                                                         // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Money retVal = new Money();")                                                                                  // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set ValueElement of type FhirDecimal)");                                                               // CodeGeneration.cs:64
                 if (fix.ValueElement == null)                                                                                               // CodeGeneration.cs:232
                     block.AppendCode($"retVal.ValueElement = null;");                                                                       // CodeGeneration.cs:233
@@ -6849,31 +6872,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Money();")                                                                                 // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Money();")                                                                                 // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            MoneyQuantity fix,                                                                                                              // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            MoneyQuantity fix,                                                                                                              // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public MoneyQuantity {methodName}()")                                                                         // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("MoneyQuantity retVal = new MoneyQuantity();")                                                                  // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} MoneyQuantity {methodName}()")                                                                 // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("MoneyQuantity retVal = new MoneyQuantity();")                                                                  // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set ValueElement of type FhirDecimal)");                                                               // CodeGeneration.cs:64
                 if (fix.ValueElement == null)                                                                                               // CodeGeneration.cs:232
                     block.AppendCode($"retVal.ValueElement = null;");                                                                       // CodeGeneration.cs:233
@@ -6957,31 +6981,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new MoneyQuantity();")                                                                         // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new MoneyQuantity();")                                                                         // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Narrative fix,                                                                                                                  // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Narrative fix,                                                                                                                  // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Narrative {methodName}()")                                                                             // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Narrative retVal = new Narrative();")                                                                          // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Narrative {methodName}()")                                                                     // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Narrative retVal = new Narrative();")                                                                          // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set StatusElement of type Code<Narrative.NarrativeStatus>)");                                          // CodeGeneration.cs:64
                 if (fix.StatusElement == null)                                                                                              // CodeGeneration.cs:164
                     block.AppendCode($"retVal.StatusElement = null;");                                                                      // CodeGeneration.cs:165
@@ -6998,31 +7023,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Narrative();")                                                                             // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Narrative();")                                                                             // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            ParameterDefinition fix,                                                                                                        // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            ParameterDefinition fix,                                                                                                        // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public ParameterDefinition {methodName}()")                                                                   // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("ParameterDefinition retVal = new ParameterDefinition();")                                                      // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} ParameterDefinition {methodName}()")                                                           // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("ParameterDefinition retVal = new ParameterDefinition();")                                                      // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set NameElement of type Code)");                                                                       // CodeGeneration.cs:64
                 if (fix.NameElement == null)                                                                                                // CodeGeneration.cs:232
                     block.AppendCode($"retVal.NameElement = null;");                                                                        // CodeGeneration.cs:233
@@ -7129,31 +7155,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new ParameterDefinition();")                                                                   // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new ParameterDefinition();")                                                                   // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Period fix,                                                                                                                     // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Period fix,                                                                                                                     // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Period {methodName}()")                                                                                // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Period retVal = new Period();")                                                                                // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Period {methodName}()")                                                                        // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Period retVal = new Period();")                                                                                // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set StartElement of type FhirDateTime)");                                                              // CodeGeneration.cs:64
                 if (fix.StartElement == null)                                                                                               // CodeGeneration.cs:232
                     block.AppendCode($"retVal.StartElement = null;");                                                                       // CodeGeneration.cs:233
@@ -7196,31 +7223,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Period();")                                                                                // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Period();")                                                                                // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Population fix,                                                                                                                 // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Population fix,                                                                                                                 // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Population {methodName}()")                                                                            // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Population retVal = new Population();")                                                                        // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Population {methodName}()")                                                                    // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Population retVal = new Population();")                                                                        // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Age of type Element)");                                                                            // CodeGeneration.cs:64
                 block.AppendCode("// Set Gender of type CodeableConcept)");                                                                 // CodeGeneration.cs:64
                 if (fix.Gender == null)                                                                                                     // CodeGeneration.cs:232
@@ -7658,31 +7686,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Population();")                                                                            // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Population();")                                                                            // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            ProdCharacteristic fix,                                                                                                         // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            ProdCharacteristic fix,                                                                                                         // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public ProdCharacteristic {methodName}()")                                                                    // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("ProdCharacteristic retVal = new ProdCharacteristic();")                                                        // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} ProdCharacteristic {methodName}()")                                                            // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("ProdCharacteristic retVal = new ProdCharacteristic();")                                                        // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Height of type Quantity)");                                                                        // CodeGeneration.cs:64
                 if (fix.Height == null)                                                                                                     // CodeGeneration.cs:232
                     block.AppendCode($"retVal.Height = null;");                                                                             // CodeGeneration.cs:233
@@ -8647,31 +8676,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new ProdCharacteristic();")                                                                    // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new ProdCharacteristic();")                                                                    // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            ProductShelfLife fix,                                                                                                           // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            ProductShelfLife fix,                                                                                                           // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public ProductShelfLife {methodName}()")                                                                      // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("ProductShelfLife retVal = new ProductShelfLife();")                                                            // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} ProductShelfLife {methodName}()")                                                              // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("ProductShelfLife retVal = new ProductShelfLife();")                                                            // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Identifier of type Identifier)");                                                                  // CodeGeneration.cs:64
                 if (fix.Identifier == null)                                                                                                 // CodeGeneration.cs:232
                     block.AppendCode($"retVal.Identifier = null;");                                                                         // CodeGeneration.cs:233
@@ -9309,31 +9339,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new ProductShelfLife();")                                                                      // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new ProductShelfLife();")                                                                      // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Quantity fix,                                                                                                                   // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Quantity fix,                                                                                                                   // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Quantity {methodName}()")                                                                              // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Quantity retVal = new Quantity();")                                                                            // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Quantity {methodName}()")                                                                      // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Quantity retVal = new Quantity();")                                                                            // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set ValueElement of type FhirDecimal)");                                                               // CodeGeneration.cs:64
                 if (fix.ValueElement == null)                                                                                               // CodeGeneration.cs:232
                     block.AppendCode($"retVal.ValueElement = null;");                                                                       // CodeGeneration.cs:233
@@ -9417,31 +9448,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Quantity();")                                                                              // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Quantity();")                                                                              // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Range fix,                                                                                                                      // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Range fix,                                                                                                                      // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Range {methodName}()")                                                                                 // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Range retVal = new Range();")                                                                                  // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Range {methodName}()")                                                                         // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Range retVal = new Range();")                                                                                  // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Low of type SimpleQuantity)");                                                                     // CodeGeneration.cs:64
                 if (fix.Low == null)                                                                                                        // CodeGeneration.cs:232
                     block.AppendCode($"retVal.Low = null;");                                                                                // CodeGeneration.cs:233
@@ -9628,31 +9660,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Range();")                                                                                 // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Range();")                                                                                 // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Ratio fix,                                                                                                                      // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Ratio fix,                                                                                                                      // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Ratio {methodName}()")                                                                                 // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Ratio retVal = new Ratio();")                                                                                  // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Ratio {methodName}()")                                                                         // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Ratio retVal = new Ratio();")                                                                                  // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Numerator of type Quantity)");                                                                     // CodeGeneration.cs:64
                 if (fix.Numerator == null)                                                                                                  // CodeGeneration.cs:232
                     block.AppendCode($"retVal.Numerator = null;");                                                                          // CodeGeneration.cs:233
@@ -9839,31 +9872,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Ratio();")                                                                                 // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Ratio();")                                                                                 // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            ResourceReference fix,                                                                                                          // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            ResourceReference fix,                                                                                                          // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public ResourceReference {methodName}()")                                                                     // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("ResourceReference retVal = new ResourceReference();")                                                          // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} ResourceReference {methodName}()")                                                             // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("ResourceReference retVal = new ResourceReference();")                                                          // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set ReferenceElement of type FhirString)");                                                            // CodeGeneration.cs:64
                 if (fix.ReferenceElement == null)                                                                                           // CodeGeneration.cs:232
                     block.AppendCode($"retVal.ReferenceElement = null;");                                                                   // CodeGeneration.cs:233
@@ -10171,31 +10205,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new ResourceReference();")                                                                     // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new ResourceReference();")                                                                     // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            RelatedArtifact fix,                                                                                                            // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            RelatedArtifact fix,                                                                                                            // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public RelatedArtifact {methodName}()")                                                                       // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("RelatedArtifact retVal = new RelatedArtifact();")                                                              // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} RelatedArtifact {methodName}()")                                                               // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("RelatedArtifact retVal = new RelatedArtifact();")                                                              // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set TypeElement of type Code<RelatedArtifact.RelatedArtifactType>)");                                  // CodeGeneration.cs:64
                 if (fix.TypeElement == null)                                                                                                // CodeGeneration.cs:164
                     block.AppendCode($"retVal.TypeElement = null;");                                                                        // CodeGeneration.cs:165
@@ -10496,31 +10531,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new RelatedArtifact();")                                                                       // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new RelatedArtifact();")                                                                       // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            SampledData fix,                                                                                                                // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            SampledData fix,                                                                                                                // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public SampledData {methodName}()")                                                                           // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("SampledData retVal = new SampledData();")                                                                      // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} SampledData {methodName}()")                                                                   // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("SampledData retVal = new SampledData();")                                                                      // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Origin of type SimpleQuantity)");                                                                  // CodeGeneration.cs:64
                 if (fix.Origin == null)                                                                                                     // CodeGeneration.cs:232
                     block.AppendCode($"retVal.Origin = null;");                                                                             // CodeGeneration.cs:233
@@ -10725,31 +10761,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new SampledData();")                                                                           // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new SampledData();")                                                                           // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Signature fix,                                                                                                                  // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Signature fix,                                                                                                                  // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Signature {methodName}()")                                                                             // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Signature retVal = new Signature();")                                                                          // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Signature {methodName}()")                                                                     // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Signature retVal = new Signature();")                                                                          // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Type of type List<Coding>)");                                                                      // CodeGeneration.cs:64
                 if (fix.Type == null)                                                                                                       // CodeGeneration.cs:178
                     block.AppendCode($"retVal.Type = null;");                                                                               // CodeGeneration.cs:179
@@ -10970,31 +11007,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Signature();")                                                                             // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Signature();")                                                                             // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            SimpleQuantity fix,                                                                                                             // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            SimpleQuantity fix,                                                                                                             // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public SimpleQuantity {methodName}()")                                                                        // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("SimpleQuantity retVal = new SimpleQuantity();")                                                                // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} SimpleQuantity {methodName}()")                                                                // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("SimpleQuantity retVal = new SimpleQuantity();")                                                                // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set ValueElement of type FhirDecimal)");                                                               // CodeGeneration.cs:64
                 if (fix.ValueElement == null)                                                                                               // CodeGeneration.cs:232
                     block.AppendCode($"retVal.ValueElement = null;");                                                                       // CodeGeneration.cs:233
@@ -11078,31 +11116,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new SimpleQuantity();")                                                                        // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new SimpleQuantity();")                                                                        // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            SubstanceAmount fix,                                                                                                            // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            SubstanceAmount fix,                                                                                                            // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public SubstanceAmount {methodName}()")                                                                       // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("SubstanceAmount retVal = new SubstanceAmount();")                                                              // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} SubstanceAmount {methodName}()")                                                               // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("SubstanceAmount retVal = new SubstanceAmount();")                                                              // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Amount of type Element)");                                                                         // CodeGeneration.cs:64
                 block.AppendCode("// Set AmountType of type CodeableConcept)");                                                             // CodeGeneration.cs:64
                 if (fix.AmountType == null)                                                                                                 // CodeGeneration.cs:232
@@ -11465,31 +11504,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new SubstanceAmount();")                                                                       // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new SubstanceAmount();")                                                                       // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            Timing fix,                                                                                                                     // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            Timing fix,                                                                                                                     // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public Timing {methodName}()")                                                                                // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("Timing retVal = new Timing();")                                                                                // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} Timing {methodName}()")                                                                        // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("Timing retVal = new Timing();")                                                                                // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set EventElement of type List<FhirDateTime>)");                                                        // CodeGeneration.cs:64
                 if (fix.EventElement == null)                                                                                               // CodeGeneration.cs:178
                     block.AppendCode($"retVal.EventElement = null;");                                                                       // CodeGeneration.cs:179
@@ -11926,31 +11966,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new Timing();")                                                                                // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new Timing();")                                                                                // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            TriggerDefinition fix,                                                                                                          // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            TriggerDefinition fix,                                                                                                          // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public TriggerDefinition {methodName}()")                                                                     // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("TriggerDefinition retVal = new TriggerDefinition();")                                                          // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} TriggerDefinition {methodName}()")                                                             // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("TriggerDefinition retVal = new TriggerDefinition();")                                                          // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set TypeElement of type Code<TriggerDefinition.TriggerType>)");                                        // CodeGeneration.cs:64
                 if (fix.TypeElement == null)                                                                                                // CodeGeneration.cs:164
                     block.AppendCode($"retVal.TypeElement = null;");                                                                        // CodeGeneration.cs:165
@@ -12464,31 +12505,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new TriggerDefinition();")                                                                     // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new TriggerDefinition();")                                                                     // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:347
-            UsageContext fix,                                                                                                               // CodeGeneration.cs:348
-            String methodName)                                                                                                              // CodeGeneration.cs:349
-        {                                                                                                                                   // CodeGeneration.cs:350
+        static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:348
+            UsageContext fix,                                                                                                               // CodeGeneration.cs:349
+            String methodName,                                                                                                              // CodeGeneration.cs:350
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:351
+        {                                                                                                                                   // CodeGeneration.cs:352
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:353
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:354
-            block                                                                                                                           // CodeGeneration.cs:355
-                .AppendCode($"public UsageContext {methodName}()")                                                                          // CodeGeneration.cs:356
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:357
-                .AppendCode("UsageContext retVal = new UsageContext();")                                                                    // CodeGeneration.cs:358
-                ;                                                                                                                           // CodeGeneration.cs:359
-            if (fix != null)                                                                                                                // CodeGeneration.cs:360
-            {                                                                                                                               // CodeGeneration.cs:361
+            if (block is null)                                                                                                              // CodeGeneration.cs:355
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:356
+            block                                                                                                                           // CodeGeneration.cs:357
+                .AppendCode($"{methodPrefix} UsageContext {methodName}()")                                                                  // CodeGeneration.cs:358
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:359
+                .AppendCode("UsageContext retVal = new UsageContext();")                                                                    // CodeGeneration.cs:360
+                ;                                                                                                                           // CodeGeneration.cs:361
+            if (fix != null)                                                                                                                // CodeGeneration.cs:362
+            {                                                                                                                               // CodeGeneration.cs:363
                 block.AppendCode("// Set Code of type Coding)");                                                                            // CodeGeneration.cs:64
                 if (fix.Code == null)                                                                                                       // CodeGeneration.cs:232
                     block.AppendCode($"retVal.Code = null;");                                                                               // CodeGeneration.cs:233
@@ -12601,31 +12643,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:367
-            block                                                                                                                           // CodeGeneration.cs:368
-                .AppendCode("return retVal = new UsageContext();")                                                                          // CodeGeneration.cs:369
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:370
-                ;                                                                                                                           // CodeGeneration.cs:371
-            return  true;                                                                                                                   // CodeGeneration.cs:372
-        }                                                                                                                                   // CodeGeneration.cs:373
+            }                                                                                                                               // CodeGeneration.cs:369
+            block                                                                                                                           // CodeGeneration.cs:370
+                .AppendCode("return retVal = new UsageContext();")                                                                          // CodeGeneration.cs:371
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:372
+                ;                                                                                                                           // CodeGeneration.cs:373
+            return  true;                                                                                                                   // CodeGeneration.cs:374
+        }                                                                                                                                   // CodeGeneration.cs:375
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Base64Binary fix,                                                                                                               // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Base64Binary {methodName}()")                                                                          // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Base64Binary retVal = new Base64Binary();")                                                                    // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Base64Binary {methodName}()")                                                                  // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Base64Binary retVal = new Base64Binary();")                                                                    // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type byte[])");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:88
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:89
@@ -12658,31 +12701,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             FhirBoolean fix,                                                                                                                // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public FhirBoolean {methodName}()")                                                                           // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("FhirBoolean retVal = new FhirBoolean();")                                                                      // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} FhirBoolean {methodName}()")                                                                   // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("FhirBoolean retVal = new FhirBoolean();")                                                                      // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type bool?)");                                                                            // CodeGeneration.cs:64
                 if (fix.Value.HasValue == false)                                                                                            // CodeGeneration.cs:77
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:78
@@ -12696,31 +12740,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Canonical fix,                                                                                                                  // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Canonical {methodName}()")                                                                             // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Canonical retVal = new Canonical();")                                                                          // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Canonical {methodName}()")                                                                     // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Canonical retVal = new Canonical();")                                                                          // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -12732,31 +12777,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Code fix,                                                                                                                       // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Code {methodName}()")                                                                                  // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Code retVal = new Code();")                                                                                    // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Code {methodName}()")                                                                          // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Code retVal = new Code();")                                                                                    // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -12768,31 +12814,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Date fix,                                                                                                                       // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Date {methodName}()")                                                                                  // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Date retVal = new Date();")                                                                                    // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Date {methodName}()")                                                                          // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Date retVal = new Date();")                                                                                    // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -12804,31 +12851,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             FhirDateTime fix,                                                                                                               // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public FhirDateTime {methodName}()")                                                                          // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("FhirDateTime retVal = new FhirDateTime();")                                                                    // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} FhirDateTime {methodName}()")                                                                  // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("FhirDateTime retVal = new FhirDateTime();")                                                                    // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -12840,31 +12888,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             FhirDecimal fix,                                                                                                                // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public FhirDecimal {methodName}()")                                                                           // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("FhirDecimal retVal = new FhirDecimal();")                                                                      // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} FhirDecimal {methodName}()")                                                                   // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("FhirDecimal retVal = new FhirDecimal();")                                                                      // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type decimal?)");                                                                         // CodeGeneration.cs:64
                 if (fix.Value.HasValue == false)                                                                                            // CodeGeneration.cs:134
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:135
@@ -12876,31 +12925,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Id fix,                                                                                                                         // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Id {methodName}()")                                                                                    // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Id retVal = new Id();")                                                                                        // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Id {methodName}()")                                                                            // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Id retVal = new Id();")                                                                                        // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -12912,31 +12962,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Instant fix,                                                                                                                    // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Instant {methodName}()")                                                                               // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Instant retVal = new Instant();")                                                                              // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Instant {methodName}()")                                                                       // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Instant retVal = new Instant();")                                                                              // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type DateTimeOffset?)");                                                                  // CodeGeneration.cs:64
                 if (fix.Value.HasValue == false)                                                                                            // CodeGeneration.cs:118
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:119
@@ -12955,31 +13006,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Integer fix,                                                                                                                    // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Integer {methodName}()")                                                                               // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Integer retVal = new Integer();")                                                                              // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Integer {methodName}()")                                                                       // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Integer retVal = new Integer();")                                                                              // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type int?)");                                                                             // CodeGeneration.cs:64
                 if (fix.Value.HasValue == false)                                                                                            // CodeGeneration.cs:143
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:144
@@ -12991,31 +13043,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Markdown fix,                                                                                                                   // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Markdown {methodName}()")                                                                              // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Markdown retVal = new Markdown();")                                                                            // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Markdown {methodName}()")                                                                      // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Markdown retVal = new Markdown();")                                                                            // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -13027,31 +13080,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Oid fix,                                                                                                                        // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Oid {methodName}()")                                                                                   // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Oid retVal = new Oid();")                                                                                      // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Oid {methodName}()")                                                                           // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Oid retVal = new Oid();")                                                                                      // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -13063,31 +13117,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             PositiveInt fix,                                                                                                                // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public PositiveInt {methodName}()")                                                                           // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("PositiveInt retVal = new PositiveInt();")                                                                      // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} PositiveInt {methodName}()")                                                                   // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("PositiveInt retVal = new PositiveInt();")                                                                      // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type int?)");                                                                             // CodeGeneration.cs:64
                 if (fix.Value.HasValue == false)                                                                                            // CodeGeneration.cs:143
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:144
@@ -13099,31 +13154,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             FhirString fix,                                                                                                                 // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public FhirString {methodName}()")                                                                            // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("FhirString retVal = new FhirString();")                                                                        // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} FhirString {methodName}()")                                                                    // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("FhirString retVal = new FhirString();")                                                                        // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -13135,31 +13191,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Time fix,                                                                                                                       // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Time {methodName}()")                                                                                  // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Time retVal = new Time();")                                                                                    // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Time {methodName}()")                                                                          // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Time retVal = new Time();")                                                                                    // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -13171,31 +13228,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             UnsignedInt fix,                                                                                                                // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public UnsignedInt {methodName}()")                                                                           // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("UnsignedInt retVal = new UnsignedInt();")                                                                      // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} UnsignedInt {methodName}()")                                                                   // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("UnsignedInt retVal = new UnsignedInt();")                                                                      // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type int?)");                                                                             // CodeGeneration.cs:64
                 if (fix.Value.HasValue == false)                                                                                            // CodeGeneration.cs:143
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:144
@@ -13207,31 +13265,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             FhirUri fix,                                                                                                                    // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public FhirUri {methodName}()")                                                                               // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("FhirUri retVal = new FhirUri();")                                                                              // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} FhirUri {methodName}()")                                                                       // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("FhirUri retVal = new FhirUri();")                                                                              // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -13243,31 +13302,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             FhirUrl fix,                                                                                                                    // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public FhirUrl {methodName}()")                                                                               // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("FhirUrl retVal = new FhirUrl();")                                                                              // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} FhirUrl {methodName}()")                                                                       // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("FhirUrl retVal = new FhirUrl();")                                                                              // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -13279,31 +13339,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             Uuid fix,                                                                                                                       // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public Uuid {methodName}()")                                                                                  // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("Uuid retVal = new Uuid();")                                                                                    // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} Uuid {methodName}()")                                                                          // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("Uuid retVal = new Uuid();")                                                                                    // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -13315,31 +13376,32 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
         
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // CodeGeneration.cs:277
             XHtml fix,                                                                                                                      // CodeGeneration.cs:278
-            String methodName)                                                                                                              // CodeGeneration.cs:279
-        {                                                                                                                                   // CodeGeneration.cs:280
+            String methodName,                                                                                                              // CodeGeneration.cs:279
+            String methodPrefix)                                                                                                            // CodeGeneration.cs:280
+        {                                                                                                                                   // CodeGeneration.cs:281
             
-            if (block is null)                                                                                                              // CodeGeneration.cs:283
-                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:284
-            block                                                                                                                           // CodeGeneration.cs:285
-                .AppendCode($"public XHtml {methodName}()")                                                                                 // CodeGeneration.cs:286
-                .OpenBrace()                                                                                                                // CodeGeneration.cs:287
-                .AppendCode("XHtml retVal = new XHtml();")                                                                                  // CodeGeneration.cs:288
-                ;                                                                                                                           // CodeGeneration.cs:289
-            if (fix != null)                                                                                                                // CodeGeneration.cs:290
-            {                                                                                                                               // CodeGeneration.cs:291
+            if (block is null)                                                                                                              // CodeGeneration.cs:284
+                throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:285
+            block                                                                                                                           // CodeGeneration.cs:286
+                .AppendCode($"{methodPrefix} XHtml {methodName}()")                                                                         // CodeGeneration.cs:287
+                .OpenBrace()                                                                                                                // CodeGeneration.cs:288
+                .AppendCode("XHtml retVal = new XHtml();")                                                                                  // CodeGeneration.cs:289
+                ;                                                                                                                           // CodeGeneration.cs:290
+            if (fix != null)                                                                                                                // CodeGeneration.cs:291
+            {                                                                                                                               // CodeGeneration.cs:292
                 block.AppendCode("// Set Value of type string)");                                                                           // CodeGeneration.cs:64
                 if (fix.Value == null)                                                                                                      // CodeGeneration.cs:152
                     block.AppendCode($"retVal.Value = null;");                                                                              // CodeGeneration.cs:153
@@ -13351,12 +13413,12 @@ namespace FhirKhit.SliceGen.CSApi
                 else                                                                                                                        // CodeGeneration.cs:154
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // CodeGeneration.cs:155
                 block.AppendCode("// Set Extension of type List<Extension>)");                                                              // CodeGeneration.cs:64
-            }                                                                                                                               // CodeGeneration.cs:297
-            block                                                                                                                           // CodeGeneration.cs:298
-                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:299
-                .CloseBrace()                                                                                                               // CodeGeneration.cs:300
-                ;                                                                                                                           // CodeGeneration.cs:301
-            return  true;                                                                                                                   // CodeGeneration.cs:302
-        }                                                                                                                                   // CodeGeneration.cs:303
-    }                                                                                                                                       // CodeGeneration.cs:409
-}                                                                                                                                           // CodeGeneration.cs:410
+            }                                                                                                                               // CodeGeneration.cs:298
+            block                                                                                                                           // CodeGeneration.cs:299
+                .AppendCode("return retVal;")                                                                                               // CodeGeneration.cs:300
+                .CloseBrace()                                                                                                               // CodeGeneration.cs:301
+                ;                                                                                                                           // CodeGeneration.cs:302
+            return  true;                                                                                                                   // CodeGeneration.cs:303
+        }                                                                                                                                   // CodeGeneration.cs:304
+    }                                                                                                                                       // CodeGeneration.cs:411
+}                                                                                                                                           // CodeGeneration.cs:412

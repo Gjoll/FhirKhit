@@ -1,18 +1,21 @@
 ﻿using FhirKhit.SliceGen.R4;
 using FhirKhit.Tools;
+using Hl7.Fhir.ElementModel;
+using Hl7.Fhir.FhirPath;
 using Hl7.Fhir.Introspection;
 using Hl7.Fhir.Model;
+using Hl7.FhirPath;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Text;
+using ElementNode = FhirKhit.SliceGen.R4.ElementNode;
 
 namespace FhirKhit.SliceGen.CSApi
 {
     public class CSCodeFormatter : ICodeFormatter
     {
-        Int32 sliceDiscriminatorCounter = 1;
-
         CodeEditor code;
         CodeBlockNested nameSpaceBlock;
         CodeBlockNested classBlock;
@@ -119,37 +122,87 @@ namespace FhirKhit.SliceGen.CSApi
             return true;
         }
 
+        Element GetItem(ElementNode sliceNode, String path)
+        {
+            const String fcn = nameof(GetItem);
+
+            String[] pathParts = path.Split('.');
+            ElementNode node = sliceNode;
+            for (Int32 i = 0; i < pathParts.Length; i++)
+            {
+                String pathPart = pathParts[i];
+                ElementNode next = null;
+                foreach (ElementNode n in node.Children)
+                {
+                    if (n.Name == pathPart)
+                    {
+                        next = n;
+                        break;
+                    }
+                }
+                if (next == null)
+                {
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"Cant find child node '{pathPart}' in '{sliceNode.Path}'");
+                    return null;
+                }
+                node = next;
+            }
+            return node.Element.Fixed;
+        }
+
         /// <summary>
         /// Create slices on indocated node.
         /// </summary>
+        /// <param name="elementNode">Element node containing discriminator</param>
+        /// <returns></returns>
         public bool CreateSlice(ElementNode elementNode)
         {
             if (elementNode is null)
                 throw new ArgumentNullException(nameof(elementNode));
 
+            Int32 patternCount = 1;
+
             const String fcn = nameof(CreateSlice);
 
-            bool DefineDiscriminator(ElementDefinition.DiscriminatorComponent discriminator,
+            bool DefineSliceOnValueDiscriminator(ElementNode sliceNode,
+                ElementDefinition.DiscriminatorComponent discriminator,
+                String term)
+            {
+                Element b = this.GetItem(sliceNode, discriminator.Path);
+                if (b == null)
+                    return false;
+
+                String sliceName = sliceNode.Element.SliceName;
+
+                String patternMethod = $"Fix_{sliceName}_{patternCount}";
+                patternCount += 1;
+
+                FhirConstruct.Construct(this.methodsBlock, b, patternMethod, "static", out String temp);
+                this.fieldsBlock
+                    .AppendCode($"new SliceOnValueDiscriminator")
+                    .OpenBrace()
+                    .AppendCode($"Path = \"{discriminator.Path}\",")
+                    .AppendCode($"Pattern = {patternMethod}()")
+                    .CloseBrace(term)
+                ;
+
+                return true;
+            }
+
+            bool DefineDiscriminator(ElementNode sliceNode,
+                ElementDefinition.DiscriminatorComponent discriminator,
                 String term)
             {
                 switch (discriminator.Type)
                 {
                     case ElementDefinition.DiscriminatorType.Value:
-                        {
-                            this.fieldsBlock
-                                .AppendCode($"new SliceOnValue(\"{discriminator.Path}\"){term}");
-                            ;
-                        }
-                        return true;
+                        return DefineSliceOnValueDiscriminator(sliceNode, discriminator, term);
 
                     default:
                         this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: discriminator.Type {discriminator.Type} currently implemented. '{elementNode.Path}'");
                         return false;
                 }
             }
-
-            String fieldName = $"SliceDiscriminator_{sliceDiscriminatorCounter}";
-            sliceDiscriminatorCounter += 1;
 
             ElementDefinition.SlicingComponent sliceComponent = elementNode.Element.Slicing;
             if (sliceComponent.Ordered == true)
@@ -165,32 +218,47 @@ namespace FhirKhit.SliceGen.CSApi
                 return false;
             }
 
-            this.fieldsBlock
-                .BlankLine()
-                .OpenSummary()
-                .AppendSummary("slicing discriminator for {elementNode.Path}")
-                .CloseSummary()
-                .AppendCode($"static Slicing {fieldName} = new Slicing")
-                .OpenBrace()
-                .AppendCode($"Discriminators = new ISliceDiscriminator[]")
-                .OpenBrace()
-                ;
+            ElementDefinition.DiscriminatorComponent[] discriminators = sliceComponent.Discriminator.ToArray();
 
             bool retVal = true;
-            ElementDefinition.DiscriminatorComponent[] discriminators = sliceComponent.Discriminator.ToArray();
-            for (Int32 i = 0; i < discriminators.Length; i++)
+            foreach (ElementNode sliceNode in elementNode.Slices)
             {
-                ElementDefinition.DiscriminatorComponent discriminator = discriminators[i];
-                String term = (i < discriminators.Length - 1) ? "," : "";
-                if (DefineDiscriminator(discriminator, term) == false)
-                    return false;
+                String sliceName = sliceNode.Element.SliceName;
+                patternCount = 1;
+                if (sliceName == null)
+                {
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{elementNode.Path}' lacks slice name");
+                    retVal = false;
+                }
+                else
+                {
+                    String fieldName = $"SliceDiscriminator_{sliceName}";
+
+                    this.fieldsBlock
+                        .BlankLine()
+                        .OpenSummary()
+                        .AppendSummary($"slicing discriminator for {elementNode.Path}")
+                        .CloseSummary()
+                        .AppendCode($"static Slicing {fieldName} = new Slicing")
+                        .OpenBrace()
+                        .AppendCode($"Discriminators = new ISliceDiscriminator[]")
+                        .OpenBrace()
+                        ;
+
+                    for (Int32 i = 0; i < discriminators.Length; i++)
+                    {
+                        ElementDefinition.DiscriminatorComponent discriminator = discriminators[i];
+                        String term = (i < discriminators.Length - 1) ? "," : "";
+                        if (DefineDiscriminator(sliceNode, discriminator, term) == false)
+                            retVal = false;
+                    }
+
+                    this.fieldsBlock
+                        .CloseBrace()
+                        .CloseBrace(";")
+                        ;
+                }
             }
-
-            this.fieldsBlock
-                .CloseBrace()
-                .CloseBrace(";")
-                ;
-
             return retVal;
         }
 

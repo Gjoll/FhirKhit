@@ -264,7 +264,7 @@ namespace FhirKhit.SliceGen.XUnitTests
                 .AppendCode($"case \"{fhirTypeName}\": // {fhirType}  - primitive")
                 .OpenBrace()
                 .AppendCode($"propertyType = \"{fhirTypeName}\";")
-                .AppendCode($"return Construct(block, ({csTypeName})fix, methodName);")
+                .AppendCode($"return Construct(block, ({csTypeName})fix, methodName, methodPrefix);")
                 .CloseBrace()
                 .BlankLine()
                 ;
@@ -276,14 +276,15 @@ namespace FhirKhit.SliceGen.XUnitTests
                 .AppendLine($"/// </summary>")
                 .AppendCode($"static public bool Construct(CodeBlockNested block,")
                 .AppendCode($"    {csTypeName} fix,")
-                .AppendCode($"    String methodName)")
+                .AppendCode($"    String methodName,")
+                .AppendCode($"    String methodPrefix)")
                 .OpenBrace()
                 //.AppendCode($"const String fcn = \"Construct({fhirTypeName})\";")
                 .BlankLine()
                 .AppendCode($"if (block is null)")
                 .AppendCode($"    throw new ArgumentNullException(nameof(block));")
                 .AppendCode($"block")
-                .AppendCode($"    .AppendCode($\"public {csTypeName} {{methodName}}()\")")
+                .AppendCode($"    .AppendCode($\"{{methodPrefix}} {csTypeName} {{methodName}}()\")")
                 .AppendCode($"    .OpenBrace()")
                 .AppendCode($"    .AppendCode(\"{csTypeName} retVal = new {csTypeName}();\")")
                 .AppendCode($"    ;")
@@ -333,7 +334,7 @@ namespace FhirKhit.SliceGen.XUnitTests
                 .AppendCode($"case \"{fhirTypeName}\": // {fhirType}  - DataType")
                 .OpenBrace()
                 .AppendCode($"propertyType = \"{fhirTypeName}\";")
-                .AppendCode($"return Construct(block, ({csTypeName})fix, methodName);")
+                .AppendCode($"return Construct(block, ({csTypeName})fix, methodName, methodPrefix);")
                 .CloseBrace()
                 .BlankLine()
                 ;
@@ -346,14 +347,15 @@ namespace FhirKhit.SliceGen.XUnitTests
                 .AppendLine($"/// </summary>")
                 .AppendCode($"static public bool Construct(CodeBlockNested block,")
                 .AppendCode($"    {csTypeName} fix,")
-                .AppendCode($"    String methodName)")
-                .OpenBrace()
+                .AppendCode($"    String methodName,")
+                .AppendCode($"    String methodPrefix)")
+               .OpenBrace()
                 //.AppendCode($"const String fcn = \"Construct({fhirTypeName})\";")
                 .BlankLine()
                 .AppendCode($"if (block is null)")
                 .AppendCode($"    throw new ArgumentNullException(nameof(block));")
                 .AppendCode($"block")
-                .AppendCode($"    .AppendCode($\"public {csTypeName} {{methodName}}()\")")
+                .AppendCode($"    .AppendCode($\"{{methodPrefix}} {csTypeName} {{methodName}}()\")")
                 .AppendCode($"    .OpenBrace()")
                 .AppendCode($"    .AppendCode(\"{csTypeName} retVal = new {csTypeName}();\")")
                 .AppendCode($"    ;")
@@ -417,6 +419,7 @@ namespace FhirKhit.SliceGen.XUnitTests
                 .AppendLine($"static public bool Construct(CodeBlockNested block,")
                 .AppendCode($"    Element fix,")
                 .AppendCode($"    String methodName,")
+                .AppendCode($"    String methodPrefix,")
                 .AppendCode($"    out String propertyType)")
                 .OpenBrace()
                 //.AppendCode($"const String fcn = \"Construct\";")
@@ -620,7 +623,7 @@ namespace FhirKhit.SliceGen.XUnitTests
                         ;
 
                     Element fix = CreateFix(fhirCSType);
-                    FhirConstruct.Construct(methods, fix, methodName1, out String propertyType1);
+                    FhirConstruct.Construct(methods, fix, methodName1, "public", out String propertyType1);
                 }
                 else if (ModelInfo.IsDataType(fhirType))
                 {
@@ -634,7 +637,7 @@ namespace FhirKhit.SliceGen.XUnitTests
                             ;
 
                         Element fix = CreateFix(fhirCSType);
-                        FhirConstruct.Construct(methods, fix, methodName1, out String propertyType1);
+                        FhirConstruct.Construct(methods, fix, methodName1, "public", out String propertyType1);
                     }
                 }
             }

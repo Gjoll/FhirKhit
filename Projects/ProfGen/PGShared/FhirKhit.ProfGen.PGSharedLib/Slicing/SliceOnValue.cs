@@ -14,7 +14,7 @@ namespace FhirKhit.ProfGen.PGSharedLib
     /// <summary>
     /// 
     /// </summary>
-    public class SliceOnValue : ISliceDiscriminator 
+    public class SliceOnValueDiscriminator : ISliceDiscriminator 
     {
         /*
         if (FhirConstruct(elementNode, elementSlice, this.subClassBlock, discriminator.,
@@ -27,7 +27,7 @@ namespace FhirKhit.ProfGen.PGSharedLib
          */
         protected String path {get; set; }
 
-        public SliceOnValue(String path)
+        public SliceOnValueDiscriminator(String path)
         {
             this.path = path;
         }
@@ -46,11 +46,11 @@ namespace FhirKhit.ProfGen.PGSharedLib
             if ((results == null) || (results.Length == 0))
                 return false;
             if (results.Length > 1)
-                throw new NotImplementedException($"SliceOnValue.GetValue: Multiple elements found at path '{this.path}'");
+                throw new NotImplementedException($"SliceOnValueDiscriminator.GetValue: Multiple elements found at path '{this.path}'");
             ITypedElement result = results[0];
             Element value = result.Value as Element;
             if (value == null)
-                throw new NotImplementedException($"SliceOnValue.GetValue: Value is not an Element '{this.path}'");
+                throw new NotImplementedException($"SliceOnValueDiscriminator.GetValue: Value is not an Element '{this.path}'");
             //# TODO: I am using Matches here. SHould I be using IsExactly?
             return value.Matches(discriminator);
         }

@@ -1588,7 +1588,7 @@ namespace FhirKhit.ProfGen.CSApi
                     case ElementDefinition.DiscriminatorType.Value:
                         {
                             constructorBlock
-                                .AppendCode($"discriminators.Add(new SliceOnValue(\"{discriminator.Path}\"));");
+                                .AppendCode($"discriminators.Add(new SliceOnValueDiscriminator(\"{discriminator.Path}\"));");
                             ;
                         }
                         break;
