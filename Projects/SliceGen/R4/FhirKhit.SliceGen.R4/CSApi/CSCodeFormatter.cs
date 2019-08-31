@@ -21,6 +21,7 @@ namespace FhirKhit.SliceGen.CSApi
         CodeBlockNested classBlock;
         CodeBlockNested fieldsBlock;
         CodeBlockNested methodsBlock;
+        CodeBlockNested subClassBlock;
 
         SliceGenerator gen;
 
@@ -81,13 +82,15 @@ namespace FhirKhit.SliceGen.CSApi
 
             this.classBlock = this.nameSpaceBlock.AppendBlock();
             this.classBlock
-                .BlankLine()
                 .OpenSummary()
                 .AppendLine($"/// Extension class to add slicing helper methods to {fhirTypeName}")
                 .CloseSummary()
                 .AppendLine($"public static class {className}")
                 .OpenBrace()
                 ;
+
+            this.subClassBlock = classBlock.AppendBlock();
+            this.subClassBlock.AppendLine($"#region classes");
 
             this.fieldsBlock = classBlock.AppendBlock();
             this.fieldsBlock.AppendLine($"#region fields");
@@ -105,6 +108,10 @@ namespace FhirKhit.SliceGen.CSApi
         {
             this.classBlock
                 .CloseBrace()
+                ;
+
+            this.subClassBlock
+                .AppendLine($"#endregion")
                 ;
 
             this.fieldsBlock
@@ -151,18 +158,17 @@ namespace FhirKhit.SliceGen.CSApi
         }
 
         /// <summary>
-        /// Create slices on indocated node.
+        /// Create slices on indicated node.
         /// </summary>
         /// <param name="elementNode">Element node containing discriminator</param>
         /// <returns></returns>
         public bool CreateSlice(ElementNode elementNode)
         {
-            if (elementNode is null)
-                throw new ArgumentNullException(nameof(elementNode));
+            const String fcn = nameof(CreateSlice);
 
             Int32 patternCount = 1;
-
-            const String fcn = nameof(CreateSlice);
+            CodeBlockNested fields;
+            CodeBlockNested methods;
 
             bool DefineSliceOnValueDiscriminator(ElementNode sliceNode,
                 ElementDefinition.DiscriminatorComponent discriminator,
@@ -174,11 +180,16 @@ namespace FhirKhit.SliceGen.CSApi
 
                 String sliceName = sliceNode.Element.SliceName;
 
-                String patternMethod = $"Fix_{sliceName}_{patternCount}";
+                String patternMethod = $"Fix_{patternCount}";
                 patternCount += 1;
 
-                FhirConstruct.Construct(this.methodsBlock, b, patternMethod, "static", out String temp);
-                this.fieldsBlock
+                methods
+                    .OpenSummary()
+                    .AppendSummary($"Method to define fixed field used in slice accessor.")
+                    .CloseSummary()
+                    ;
+                FhirConstruct.Construct(methods, b, patternMethod, "static", out String temp);
+                fields
                     .AppendCode($"new SliceOnValueDiscriminator")
                     .OpenBrace()
                     .AppendCode($"Path = \"{discriminator.Path}\",")
@@ -204,6 +215,9 @@ namespace FhirKhit.SliceGen.CSApi
                 }
             }
 
+            if (elementNode is null)
+                throw new ArgumentNullException(nameof(elementNode));
+
             ElementDefinition.SlicingComponent sliceComponent = elementNode.Element.Slicing;
             if (sliceComponent.Ordered == true)
             {
@@ -224,6 +238,19 @@ namespace FhirKhit.SliceGen.CSApi
             foreach (ElementNode sliceNode in elementNode.Slices)
             {
                 String sliceName = sliceNode.Element.SliceName;
+
+                this.subClassBlock
+                    .AppendCode($"public class {sliceName} : SliceAccessor")
+                    .OpenBrace()
+                    ;
+
+                fields = this.subClassBlock.AppendBlock();
+                methods = this.subClassBlock.AppendBlock();
+
+                this.subClassBlock
+                    .CloseBrace()
+                    ;
+
                 patternCount = 1;
                 if (sliceName == null)
                 {
@@ -232,14 +259,13 @@ namespace FhirKhit.SliceGen.CSApi
                 }
                 else
                 {
-                    String fieldName = $"SliceDiscriminator_{sliceName}";
+                    String sliceFieldName = $"slicing";
 
-                    this.fieldsBlock
-                        .BlankLine()
+                    fields
                         .OpenSummary()
-                        .AppendSummary($"slicing discriminator for {elementNode.Path}")
+                        .AppendSummary($"slicing discriminator for {elementNode.Path} slice {sliceName}")
                         .CloseSummary()
-                        .AppendCode($"static Slicing {fieldName} = new Slicing")
+                        .AppendCode($"static Slicing {sliceFieldName} = new Slicing")
                         .OpenBrace()
                         .AppendCode($"Discriminators = new ISliceDiscriminator[]")
                         .OpenBrace()
@@ -253,9 +279,19 @@ namespace FhirKhit.SliceGen.CSApi
                             retVal = false;
                     }
 
-                    this.fieldsBlock
+                    fields
                         .CloseBrace()
                         .CloseBrace(";")
+                        ;
+
+                    methods
+                        .OpenSummary()
+                        .AppendSummary($"{sliceName} constructor")
+                        .CloseSummary()
+                        .AppendCode($"public {sliceName}()")
+                        .OpenBrace()
+                        .AppendCode($"this.Slicing = {sliceFieldName};")
+                        .CloseBrace()
                         ;
                 }
             }

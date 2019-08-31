@@ -9,7 +9,7 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Support.Model;
 using System.Diagnostics;
 using Hl7.FhirPath;
-
+                                                                                                                                            // CodeGeneration.cs:371
 namespace FhirKhit.SliceGen.CSApi
 {                                                                                                                                           // CodeGeneration.cs:373
     public static class FhirConstruct
@@ -23,7 +23,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodPrefix,                                                                                                            // CodeGeneration.cs:392
             out String propertyType)                                                                                                        // CodeGeneration.cs:393
         {                                                                                                                                   // CodeGeneration.cs:394
-            
+                                                                                                                                            // CodeGeneration.cs:396
             if (fix is null)                                                                                                                // CodeGeneration.cs:397
                 throw new ArgumentNullException(nameof(fix));                                                                               // CodeGeneration.cs:398
             propertyType = null;                                                                                                            // CodeGeneration.cs:399
@@ -34,371 +34,371 @@ namespace FhirKhit.SliceGen.CSApi
                     propertyType = "Address";                                                                                               // CodeGeneration.cs:306
                     return Construct(block, (Address)fix, methodName, methodPrefix);                                                        // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Age": // Age  - DataType                                                                                              // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Age";                                                                                                   // CodeGeneration.cs:306
                     return Construct(block, (Age)fix, methodName, methodPrefix);                                                            // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Annotation": // Annotation  - DataType                                                                                // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Annotation";                                                                                            // CodeGeneration.cs:306
                     return Construct(block, (Annotation)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Attachment": // Attachment  - DataType                                                                                // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Attachment";                                                                                            // CodeGeneration.cs:306
                     return Construct(block, (Attachment)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "CodeableConcept": // CodeableConcept  - DataType                                                                      // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "CodeableConcept";                                                                                       // CodeGeneration.cs:306
                     return Construct(block, (CodeableConcept)fix, methodName, methodPrefix);                                                // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Coding": // Coding  - DataType                                                                                        // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Coding";                                                                                                // CodeGeneration.cs:306
                     return Construct(block, (Coding)fix, methodName, methodPrefix);                                                         // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "ContactDetail": // ContactDetail  - DataType                                                                          // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "ContactDetail";                                                                                         // CodeGeneration.cs:306
                     return Construct(block, (ContactDetail)fix, methodName, methodPrefix);                                                  // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "ContactPoint": // ContactPoint  - DataType                                                                            // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "ContactPoint";                                                                                          // CodeGeneration.cs:306
                     return Construct(block, (ContactPoint)fix, methodName, methodPrefix);                                                   // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Contributor": // Contributor  - DataType                                                                              // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Contributor";                                                                                           // CodeGeneration.cs:306
                     return Construct(block, (Contributor)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Count": // Count  - DataType                                                                                          // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Count";                                                                                                 // CodeGeneration.cs:306
                     return Construct(block, (Count)fix, methodName, methodPrefix);                                                          // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "DataRequirement": // DataRequirement  - DataType                                                                      // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "DataRequirement";                                                                                       // CodeGeneration.cs:306
                     return Construct(block, (DataRequirement)fix, methodName, methodPrefix);                                                // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Distance": // Distance  - DataType                                                                                    // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Distance";                                                                                              // CodeGeneration.cs:306
                     return Construct(block, (Distance)fix, methodName, methodPrefix);                                                       // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Dosage": // Dosage  - DataType                                                                                        // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Dosage";                                                                                                // CodeGeneration.cs:306
                     return Construct(block, (Dosage)fix, methodName, methodPrefix);                                                         // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Duration": // Duration  - DataType                                                                                    // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Duration";                                                                                              // CodeGeneration.cs:306
                     return Construct(block, (Duration)fix, methodName, methodPrefix);                                                       // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "ElementDefinition": // ElementDefinition  - DataType                                                                  // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "ElementDefinition";                                                                                     // CodeGeneration.cs:306
                     return Construct(block, (ElementDefinition)fix, methodName, methodPrefix);                                              // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Expression": // Expression  - DataType                                                                                // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Expression";                                                                                            // CodeGeneration.cs:306
                     return Construct(block, (Expression)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Extension": // Extension  - DataType                                                                                  // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Extension";                                                                                             // CodeGeneration.cs:306
                     return Construct(block, (Extension)fix, methodName, methodPrefix);                                                      // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "HumanName": // HumanName  - DataType                                                                                  // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "HumanName";                                                                                             // CodeGeneration.cs:306
                     return Construct(block, (HumanName)fix, methodName, methodPrefix);                                                      // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Identifier": // Identifier  - DataType                                                                                // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Identifier";                                                                                            // CodeGeneration.cs:306
                     return Construct(block, (Identifier)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "MarketingStatus": // MarketingStatus  - DataType                                                                      // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "MarketingStatus";                                                                                       // CodeGeneration.cs:306
                     return Construct(block, (MarketingStatus)fix, methodName, methodPrefix);                                                // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Meta": // Meta  - DataType                                                                                            // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Meta";                                                                                                  // CodeGeneration.cs:306
                     return Construct(block, (Meta)fix, methodName, methodPrefix);                                                           // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Money": // Money  - DataType                                                                                          // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Money";                                                                                                 // CodeGeneration.cs:306
                     return Construct(block, (Money)fix, methodName, methodPrefix);                                                          // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "MoneyQuantity": // MoneyQuantity  - DataType                                                                          // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "MoneyQuantity";                                                                                         // CodeGeneration.cs:306
                     return Construct(block, (MoneyQuantity)fix, methodName, methodPrefix);                                                  // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Narrative": // Narrative  - DataType                                                                                  // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Narrative";                                                                                             // CodeGeneration.cs:306
                     return Construct(block, (Narrative)fix, methodName, methodPrefix);                                                      // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "ParameterDefinition": // ParameterDefinition  - DataType                                                              // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "ParameterDefinition";                                                                                   // CodeGeneration.cs:306
                     return Construct(block, (ParameterDefinition)fix, methodName, methodPrefix);                                            // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Period": // Period  - DataType                                                                                        // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Period";                                                                                                // CodeGeneration.cs:306
                     return Construct(block, (Period)fix, methodName, methodPrefix);                                                         // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Population": // Population  - DataType                                                                                // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Population";                                                                                            // CodeGeneration.cs:306
                     return Construct(block, (Population)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "ProdCharacteristic": // ProdCharacteristic  - DataType                                                                // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "ProdCharacteristic";                                                                                    // CodeGeneration.cs:306
                     return Construct(block, (ProdCharacteristic)fix, methodName, methodPrefix);                                             // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "ProductShelfLife": // ProductShelfLife  - DataType                                                                    // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "ProductShelfLife";                                                                                      // CodeGeneration.cs:306
                     return Construct(block, (ProductShelfLife)fix, methodName, methodPrefix);                                               // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Quantity": // Quantity  - DataType                                                                                    // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Quantity";                                                                                              // CodeGeneration.cs:306
                     return Construct(block, (Quantity)fix, methodName, methodPrefix);                                                       // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Range": // Range  - DataType                                                                                          // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Range";                                                                                                 // CodeGeneration.cs:306
                     return Construct(block, (Range)fix, methodName, methodPrefix);                                                          // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Ratio": // Ratio  - DataType                                                                                          // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Ratio";                                                                                                 // CodeGeneration.cs:306
                     return Construct(block, (Ratio)fix, methodName, methodPrefix);                                                          // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Reference": // Reference  - DataType                                                                                  // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Reference";                                                                                             // CodeGeneration.cs:306
                     return Construct(block, (ResourceReference)fix, methodName, methodPrefix);                                              // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "RelatedArtifact": // RelatedArtifact  - DataType                                                                      // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "RelatedArtifact";                                                                                       // CodeGeneration.cs:306
                     return Construct(block, (RelatedArtifact)fix, methodName, methodPrefix);                                                // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "SampledData": // SampledData  - DataType                                                                              // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "SampledData";                                                                                           // CodeGeneration.cs:306
                     return Construct(block, (SampledData)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Signature": // Signature  - DataType                                                                                  // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Signature";                                                                                             // CodeGeneration.cs:306
                     return Construct(block, (Signature)fix, methodName, methodPrefix);                                                      // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "SimpleQuantity": // SimpleQuantity  - DataType                                                                        // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "SimpleQuantity";                                                                                        // CodeGeneration.cs:306
                     return Construct(block, (SimpleQuantity)fix, methodName, methodPrefix);                                                 // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "SubstanceAmount": // SubstanceAmount  - DataType                                                                      // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "SubstanceAmount";                                                                                       // CodeGeneration.cs:306
                     return Construct(block, (SubstanceAmount)fix, methodName, methodPrefix);                                                // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "Timing": // Timing  - DataType                                                                                        // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "Timing";                                                                                                // CodeGeneration.cs:306
                     return Construct(block, (Timing)fix, methodName, methodPrefix);                                                         // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "TriggerDefinition": // TriggerDefinition  - DataType                                                                  // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "TriggerDefinition";                                                                                     // CodeGeneration.cs:306
                     return Construct(block, (TriggerDefinition)fix, methodName, methodPrefix);                                              // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "UsageContext": // UsageContext  - DataType                                                                            // CodeGeneration.cs:304
                 {                                                                                                                           // CodeGeneration.cs:305
                     propertyType = "UsageContext";                                                                                          // CodeGeneration.cs:306
                     return Construct(block, (UsageContext)fix, methodName, methodPrefix);                                                   // CodeGeneration.cs:307
                 }                                                                                                                           // CodeGeneration.cs:308
-                
+                                                                                                                                            // CodeGeneration.cs:309
                 case "base64Binary": // Base64Binary  - primitive                                                                           // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "base64Binary";                                                                                          // CodeGeneration.cs:236
                     return Construct(block, (Base64Binary)fix, methodName, methodPrefix);                                                   // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "boolean": // Boolean  - primitive                                                                                     // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "boolean";                                                                                               // CodeGeneration.cs:236
                     return Construct(block, (FhirBoolean)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "canonical": // Canonical  - primitive                                                                                 // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "canonical";                                                                                             // CodeGeneration.cs:236
                     return Construct(block, (Canonical)fix, methodName, methodPrefix);                                                      // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "code": // Code  - primitive                                                                                           // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "code";                                                                                                  // CodeGeneration.cs:236
                     return Construct(block, (Code)fix, methodName, methodPrefix);                                                           // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "date": // Date  - primitive                                                                                           // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "date";                                                                                                  // CodeGeneration.cs:236
                     return Construct(block, (Date)fix, methodName, methodPrefix);                                                           // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "dateTime": // DateTime  - primitive                                                                                   // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "dateTime";                                                                                              // CodeGeneration.cs:236
                     return Construct(block, (FhirDateTime)fix, methodName, methodPrefix);                                                   // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "decimal": // Decimal  - primitive                                                                                     // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "decimal";                                                                                               // CodeGeneration.cs:236
                     return Construct(block, (FhirDecimal)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "id": // Id  - primitive                                                                                               // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "id";                                                                                                    // CodeGeneration.cs:236
                     return Construct(block, (Id)fix, methodName, methodPrefix);                                                             // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "instant": // Instant  - primitive                                                                                     // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "instant";                                                                                               // CodeGeneration.cs:236
                     return Construct(block, (Instant)fix, methodName, methodPrefix);                                                        // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "integer": // Integer  - primitive                                                                                     // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "integer";                                                                                               // CodeGeneration.cs:236
                     return Construct(block, (Integer)fix, methodName, methodPrefix);                                                        // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "markdown": // Markdown  - primitive                                                                                   // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "markdown";                                                                                              // CodeGeneration.cs:236
                     return Construct(block, (Markdown)fix, methodName, methodPrefix);                                                       // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "oid": // Oid  - primitive                                                                                             // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "oid";                                                                                                   // CodeGeneration.cs:236
                     return Construct(block, (Oid)fix, methodName, methodPrefix);                                                            // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "positiveInt": // PositiveInt  - primitive                                                                             // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "positiveInt";                                                                                           // CodeGeneration.cs:236
                     return Construct(block, (PositiveInt)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "string": // String  - primitive                                                                                       // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "string";                                                                                                // CodeGeneration.cs:236
                     return Construct(block, (FhirString)fix, methodName, methodPrefix);                                                     // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "time": // Time  - primitive                                                                                           // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "time";                                                                                                  // CodeGeneration.cs:236
                     return Construct(block, (Time)fix, methodName, methodPrefix);                                                           // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "unsignedInt": // UnsignedInt  - primitive                                                                             // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "unsignedInt";                                                                                           // CodeGeneration.cs:236
                     return Construct(block, (UnsignedInt)fix, methodName, methodPrefix);                                                    // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "uri": // Uri  - primitive                                                                                             // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "uri";                                                                                                   // CodeGeneration.cs:236
                     return Construct(block, (FhirUri)fix, methodName, methodPrefix);                                                        // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "url": // Url  - primitive                                                                                             // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "url";                                                                                                   // CodeGeneration.cs:236
                     return Construct(block, (FhirUrl)fix, methodName, methodPrefix);                                                        // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "uuid": // Uuid  - primitive                                                                                           // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "uuid";                                                                                                  // CodeGeneration.cs:236
                     return Construct(block, (Uuid)fix, methodName, methodPrefix);                                                           // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
                 case "xhtml": // Xhtml  - primitive                                                                                         // CodeGeneration.cs:234
                 {                                                                                                                           // CodeGeneration.cs:235
                     propertyType = "xhtml";                                                                                                 // CodeGeneration.cs:236
                     return Construct(block, (XHtml)fix, methodName, methodPrefix);                                                          // CodeGeneration.cs:237
                 }                                                                                                                           // CodeGeneration.cs:238
-                
+                                                                                                                                            // CodeGeneration.cs:239
             }                                                                                                                               // CodeGeneration.cs:415
             return false;                                                                                                                   // CodeGeneration.cs:416
         }                                                                                                                                   // CodeGeneration.cs:417
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -407,7 +407,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -515,7 +515,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -524,7 +524,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -577,7 +577,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -586,7 +586,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -621,7 +621,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -630,7 +630,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -755,7 +755,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -764,7 +764,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -849,7 +849,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -858,7 +858,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -922,7 +922,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -931,7 +931,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -1013,7 +1013,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -1022,7 +1022,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -1083,7 +1083,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -1092,7 +1092,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -1197,7 +1197,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -1206,7 +1206,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -1259,7 +1259,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -1268,7 +1268,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -1474,7 +1474,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -1483,7 +1483,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -1536,7 +1536,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -1545,7 +1545,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -2354,7 +2354,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -2363,7 +2363,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -2416,7 +2416,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -2425,7 +2425,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -3014,7 +3014,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -3023,7 +3023,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -3082,7 +3082,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -3091,7 +3091,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -3112,7 +3112,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -3121,7 +3121,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -3225,7 +3225,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -3234,7 +3234,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -3365,7 +3365,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -3374,7 +3374,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -3639,7 +3639,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -3648,7 +3648,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -3829,7 +3829,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -3838,7 +3838,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -3867,7 +3867,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -3876,7 +3876,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -3929,7 +3929,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -3938,7 +3938,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -3961,7 +3961,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -3970,7 +3970,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -4033,7 +4033,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -4042,7 +4042,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -4077,7 +4077,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -4086,7 +4086,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -4321,7 +4321,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -4330,7 +4330,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -4818,7 +4818,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -4827,7 +4827,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -5155,7 +5155,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -5164,7 +5164,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -5217,7 +5217,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -5226,7 +5226,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -5325,7 +5325,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -5334,7 +5334,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -5433,7 +5433,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -5442,7 +5442,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -5603,7 +5603,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -5612,7 +5612,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -5785,7 +5785,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -5794,7 +5794,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -5901,7 +5901,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -5910,7 +5910,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -6047,7 +6047,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -6056,7 +6056,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -6109,7 +6109,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -6118,7 +6118,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -6303,7 +6303,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -6312,7 +6312,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -6545,7 +6545,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -6554,7 +6554,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -6829,7 +6829,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:314
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -6838,7 +6838,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:320
             String methodPrefix)                                                                                                            // CodeGeneration.cs:321
         {                                                                                                                                   // CodeGeneration.cs:322
-            
+                                                                                                                                            // CodeGeneration.cs:324
             if (block is null)                                                                                                              // CodeGeneration.cs:325
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:326
             block                                                                                                                           // CodeGeneration.cs:327
@@ -6908,7 +6908,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:343
             return  true;                                                                                                                   // CodeGeneration.cs:344
         }                                                                                                                                   // CodeGeneration.cs:345
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -6917,7 +6917,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -6959,7 +6959,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -6968,7 +6968,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -6994,7 +6994,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7003,7 +7003,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7024,7 +7024,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7033,7 +7033,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7054,7 +7054,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7063,7 +7063,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7084,7 +7084,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7093,7 +7093,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7114,7 +7114,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7123,7 +7123,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7144,7 +7144,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7153,7 +7153,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7174,7 +7174,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7183,7 +7183,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7211,7 +7211,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7220,7 +7220,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7241,7 +7241,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7250,7 +7250,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7271,7 +7271,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7280,7 +7280,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7301,7 +7301,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7310,7 +7310,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7331,7 +7331,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7340,7 +7340,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7361,7 +7361,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7370,7 +7370,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7391,7 +7391,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7400,7 +7400,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7421,7 +7421,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7430,7 +7430,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7451,7 +7451,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7460,7 +7460,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7481,7 +7481,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7490,7 +7490,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256
@@ -7511,7 +7511,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;                                                                                                                           // CodeGeneration.cs:272
             return  true;                                                                                                                   // CodeGeneration.cs:273
         }                                                                                                                                   // CodeGeneration.cs:274
-        
+                                                                                                                                            // CodeGeneration.cs:243
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
@@ -7520,7 +7520,7 @@ namespace FhirKhit.SliceGen.CSApi
             String methodName,                                                                                                              // CodeGeneration.cs:249
             String methodPrefix)                                                                                                            // CodeGeneration.cs:250
         {                                                                                                                                   // CodeGeneration.cs:251
-            
+                                                                                                                                            // CodeGeneration.cs:253
             if (block is null)                                                                                                              // CodeGeneration.cs:254
                 throw new ArgumentNullException(nameof(block));                                                                             // CodeGeneration.cs:255
             block                                                                                                                           // CodeGeneration.cs:256

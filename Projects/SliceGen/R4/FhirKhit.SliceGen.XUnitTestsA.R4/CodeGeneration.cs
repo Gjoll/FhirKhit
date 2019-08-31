@@ -296,6 +296,7 @@ namespace FhirKhit.SliceGen.XUnitTests
             if (Ignore(fhirType))
                 return;
 
+            this.tempCounter = 0;
             String fhirTypeName = ModelInfo.FhirTypeToFhirTypeName(fhirType);
             Type csType = ModelInfo.GetTypeForFhirType(fhirTypeName);
             String csTypeName = csType.FriendlyName();

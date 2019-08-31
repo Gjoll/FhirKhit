@@ -361,9 +361,10 @@ namespace FhirKhit.Tools
         }
 
 
-        public CodeBlockNested BlankLine()
+        public CodeBlockNested BlankLine([CallerFilePath] String filePath = "",
+            [CallerLineNumber] Int32 lineNumber = 0)
         {
-            this.AppendLine(string.Empty);
+            this.AppendCode(string.Empty, filePath, lineNumber);
             return this;
         }
 
