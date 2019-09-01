@@ -320,7 +320,6 @@ namespace FhirKhit.SliceGen.CSApi
                         .OpenSummary()
                         .AppendSummary($"Pointer to element containing all slice(s) elements")
                         .CloseSummary()
-                        .AppendCode($"{elementNode.FhirType.FriendlyName()} items;")
                         .OpenSummary()
                         .AppendSummary($"slicing discriminator for {elementNode.Path} slice {sliceName}")
                         .CloseSummary()
