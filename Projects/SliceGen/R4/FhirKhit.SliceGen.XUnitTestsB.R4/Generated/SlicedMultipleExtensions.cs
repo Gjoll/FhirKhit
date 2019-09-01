@@ -18,29 +18,29 @@ namespace FhirKhit.Test.R4                                                      
     public static class SlicedMultipleExtensions
     {                                                                                                                                       // CSCodeFormatter.cs:89
         #region classes
-        public class Slice1Impl : SliceBaseAccessor<Observation.ComponentComponent>                                                             // CSCodeFormatter.cs:244
-        {                                                                                                                                   // CSCodeFormatter.cs:245
+        public class Slice1Impl : SliceListAccessorMultiple<Observation.ComponentComponent>                                                 // CSCodeFormatter.cs:271
+        {                                                                                                                                   // CSCodeFormatter.cs:272
             #region fields
                                                                                                                                             // CodeBlockNested.cs:318
             /// <summary>
             /// Pointer to element containing all slice(s) elements
             /// </summary>
-            List<Observation.ComponentComponent> items;                                                                                     // CSCodeFormatter.cs:272
+            List<Observation.ComponentComponent> items;                                                                                     // CSCodeFormatter.cs:299
                                                                                                                                             // CodeBlockNested.cs:318
             /// <summary>
             /// slicing discriminator for Observation.component slice Slice1
             /// </summary>
-            static Slicing slicing = new Slicing                                                                                            // CSCodeFormatter.cs:276
-            {                                                                                                                               // CSCodeFormatter.cs:277
-                Discriminators = new ISliceDiscriminator[]                                                                                  // CSCodeFormatter.cs:278
-                {                                                                                                                           // CSCodeFormatter.cs:279
+            static Slicing slicing = new Slicing                                                                                            // CSCodeFormatter.cs:303
+            {                                                                                                                               // CSCodeFormatter.cs:304
+                Discriminators = new ISliceDiscriminator[]                                                                                  // CSCodeFormatter.cs:305
+                {                                                                                                                           // CSCodeFormatter.cs:306
                     new SliceOnValueDiscriminator                                                                                           // CSCodeFormatter.cs:196
                     {                                                                                                                       // CSCodeFormatter.cs:197
                         Path = "code",                                                                                                      // CSCodeFormatter.cs:198
                         Pattern = Fix_1()                                                                                                   // CSCodeFormatter.cs:199
                     }                                                                                                                       // CSCodeFormatter.cs:200
-                }                                                                                                                           // CSCodeFormatter.cs:291
-            };                                                                                                                              // CSCodeFormatter.cs:292
+                }                                                                                                                           // CSCodeFormatter.cs:318
+            };                                                                                                                              // CSCodeFormatter.cs:319
             #endregion
             #region methods
                                                                                                                                             // CodeBlockNested.cs:318
@@ -65,36 +65,36 @@ namespace FhirKhit.Test.R4                                                      
             /// <summary>
             /// Slice1Impl constructor
             /// </summary>
-            public Slice1Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:299
-            {                                                                                                                               // CSCodeFormatter.cs:300
-                this.items = items;                                                                                                         // CSCodeFormatter.cs:301
-                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:302
-            }                                                                                                                               // CSCodeFormatter.cs:303
+            public Slice1Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:326
+            {                                                                                                                               // CSCodeFormatter.cs:327
+                this.items = items;                                                                                                         // CSCodeFormatter.cs:328
+                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:329
+            }                                                                                                                               // CSCodeFormatter.cs:330
             #endregion
-        }                                                                                                                                   // CSCodeFormatter.cs:255
-        public class Slice2Impl : SliceBaseAccessor<Observation.ComponentComponent>                                                             // CSCodeFormatter.cs:244
-        {                                                                                                                                   // CSCodeFormatter.cs:245
+        }                                                                                                                                   // CSCodeFormatter.cs:282
+        public class Slice2Impl : SliceListAccessorMultiple<Observation.ComponentComponent>                                                 // CSCodeFormatter.cs:271
+        {                                                                                                                                   // CSCodeFormatter.cs:272
             #region fields
                                                                                                                                             // CodeBlockNested.cs:318
             /// <summary>
             /// Pointer to element containing all slice(s) elements
             /// </summary>
-            List<Observation.ComponentComponent> items;                                                                                     // CSCodeFormatter.cs:272
+            List<Observation.ComponentComponent> items;                                                                                     // CSCodeFormatter.cs:299
                                                                                                                                             // CodeBlockNested.cs:318
             /// <summary>
             /// slicing discriminator for Observation.component slice Slice2
             /// </summary>
-            static Slicing slicing = new Slicing                                                                                            // CSCodeFormatter.cs:276
-            {                                                                                                                               // CSCodeFormatter.cs:277
-                Discriminators = new ISliceDiscriminator[]                                                                                  // CSCodeFormatter.cs:278
-                {                                                                                                                           // CSCodeFormatter.cs:279
+            static Slicing slicing = new Slicing                                                                                            // CSCodeFormatter.cs:303
+            {                                                                                                                               // CSCodeFormatter.cs:304
+                Discriminators = new ISliceDiscriminator[]                                                                                  // CSCodeFormatter.cs:305
+                {                                                                                                                           // CSCodeFormatter.cs:306
                     new SliceOnValueDiscriminator                                                                                           // CSCodeFormatter.cs:196
                     {                                                                                                                       // CSCodeFormatter.cs:197
                         Path = "code",                                                                                                      // CSCodeFormatter.cs:198
                         Pattern = Fix_1()                                                                                                   // CSCodeFormatter.cs:199
                     }                                                                                                                       // CSCodeFormatter.cs:200
-                }                                                                                                                           // CSCodeFormatter.cs:291
-            };                                                                                                                              // CSCodeFormatter.cs:292
+                }                                                                                                                           // CSCodeFormatter.cs:318
+            };                                                                                                                              // CSCodeFormatter.cs:319
             #endregion
             #region methods
                                                                                                                                             // CodeBlockNested.cs:318
@@ -119,20 +119,20 @@ namespace FhirKhit.Test.R4                                                      
             /// <summary>
             /// Slice2Impl constructor
             /// </summary>
-            public Slice2Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:299
-            {                                                                                                                               // CSCodeFormatter.cs:300
-                this.items = items;                                                                                                         // CSCodeFormatter.cs:301
-                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:302
-            }                                                                                                                               // CSCodeFormatter.cs:303
+            public Slice2Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:326
+            {                                                                                                                               // CSCodeFormatter.cs:327
+                this.items = items;                                                                                                         // CSCodeFormatter.cs:328
+                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:329
+            }                                                                                                                               // CSCodeFormatter.cs:330
             #endregion
-        }                                                                                                                                   // CSCodeFormatter.cs:255
+        }                                                                                                                                   // CSCodeFormatter.cs:282
         #endregion
         #region fields
         #endregion
         #region methods
                                                                                                                                             // CodeBlockNested.cs:318
         /// <summary>
-        /// Create extension method to return slice Slice1 on component
+        /// Extension method to return slice Slice1 on component
         /// </summary>
         public static Slice1Impl Slice1(this List<Observation.ComponentComponent> ptr)                                                      // CSCodeFormatter.cs:230
         {                                                                                                                                   // CSCodeFormatter.cs:231
@@ -141,7 +141,7 @@ namespace FhirKhit.Test.R4                                                      
         }                                                                                                                                   // CSCodeFormatter.cs:234
                                                                                                                                             // CodeBlockNested.cs:318
         /// <summary>
-        /// Create extension method to return slice Slice2 on component
+        /// Extension method to return slice Slice2 on component
         /// </summary>
         public static Slice2Impl Slice2(this List<Observation.ComponentComponent> ptr)                                                      // CSCodeFormatter.cs:230
         {                                                                                                                                   // CSCodeFormatter.cs:231

@@ -244,7 +244,21 @@ namespace FhirKhit.SliceGen.CSApi
 
                 if (baseType.StartsWith("List<"))
                 {
-                    sliceBaseClassName = $"SliceAccessor<{accessorType}>";
+                    switch (sliceNode.Element.Max.ToMax())
+                    {
+                        case 0:
+                            this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{elementNode.Path}' has max of 0. Not sure what I am supposed to do!");
+                            retVal = false;
+                            return;
+
+                        case 1:
+                            sliceBaseClassName = $"SliceListAccessorSingle<{accessorType}>";
+                            break;
+
+                        default:
+                            sliceBaseClassName = $"SliceListAccessorMultiple<{accessorType}>";
+                            break;
+                    }
                 }
                 else
                 {

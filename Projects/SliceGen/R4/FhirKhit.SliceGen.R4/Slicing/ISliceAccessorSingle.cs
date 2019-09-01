@@ -8,7 +8,7 @@ namespace FhirKhit.SliceGen.R4.Slicing
     /// <summary>
     /// Interface that all slice accessors with cardinality == 1 must implememnt.
     /// </summary>
-    public interface ISliceSingleAccessor<T>
+    public interface ISliceAccessorSingle<T>
         where T : Element
     {
         /// <summary>

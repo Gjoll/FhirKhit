@@ -8,7 +8,7 @@ namespace FhirKhit.SliceGen.ShareLib
     /// <summary>
     /// Interface that all slice accessors with cardinality > 1 must implememnt.
     /// </summary>
-    public interface ISliceMultipleAccessor<T>
+    public interface ISliceAccessorMultiple<T>
         where T : Element
     {
         /// <summary>
