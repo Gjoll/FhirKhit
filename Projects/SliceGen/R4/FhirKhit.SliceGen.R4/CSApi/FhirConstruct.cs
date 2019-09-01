@@ -8,7 +8,6 @@ using Hl7.Fhir.Introspection;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Support.Model;
 using System.Diagnostics;
-using Hl7.FhirPath;
                                                                                                                                             // CodeGeneration.cs:371
 namespace FhirKhit.SliceGen.CSApi
 {                                                                                                                                           // CodeGeneration.cs:373
