@@ -225,7 +225,7 @@ namespace FhirKhit.SliceGen.CSApi
 
                 this.methodsBlock
                     .OpenSummary()
-                    .AppendSummary($"Create extension method to return slice {sliceName} on {elementNode.Name}")
+                    .AppendSummary($"Extension method to return slice {sliceName} on {elementNode.Name}")
                     .CloseSummary()
                     .AppendCode($"public static {sliceClassName} {sliceName}(this {baseTypeName} ptr)")
                     .OpenBrace()
@@ -239,9 +239,22 @@ namespace FhirKhit.SliceGen.CSApi
             {
                 String sliceName = sliceNode.Element.SliceName;
                 sliceClassName = $"{sliceName}Impl";
+                String sliceBaseClassName;
+                String baseType = elementNode.FhirType.FriendlyName();
+
+                if (baseType.StartsWith("List<"))
+                {
+                    sliceBaseClassName = $"SliceAccessor<{accessorType}>";
+                }
+                else
+                {
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{elementNode.Path}' unknown base type {baseType}");
+                    retVal = false;
+                    return;
+                }
 
                 this.subClassBlock
-                    .AppendCode($"public class {sliceClassName} : SliceAccessor<{accessorType}>")
+                    .AppendCode($"public class {sliceClassName} : {sliceBaseClassName}")
                     .OpenBrace()
                     ;
 

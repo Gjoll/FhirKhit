@@ -24,8 +24,7 @@ namespace FhirKhit.SliceGen.ShareLib
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        public bool IsSlice(Element discriminator,
-            Element item)
+        public bool IsSlice(Element item)
         {
             var nav = item.ToTypedElement();
             EvaluationContext ctx = new FhirEvaluationContext();
@@ -39,7 +38,7 @@ namespace FhirKhit.SliceGen.ShareLib
             if (value == null)
                 throw new NotImplementedException($"SliceOnValueDiscriminator.GetValue: Value is not an Element '{this.Path}'");
             //# TODO: I am using Matches here. SHould I be using IsExactly?
-            return value.Matches(discriminator);
+            return value.Matches(this.Pattern);
         }
     }
 }

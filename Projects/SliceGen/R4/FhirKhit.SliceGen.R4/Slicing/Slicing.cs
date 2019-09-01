@@ -11,5 +11,15 @@ namespace FhirKhit.SliceGen.ShareLib
     public class Slicing
     {
         public IEnumerable<ISliceDiscriminator> Discriminators { get; set; }
+
+        public bool IsSlice(Element item)
+        {
+            foreach (ISliceDiscriminator discriminator in Discriminators)
+            {
+                if (discriminator.IsSlice(item) == false)
+                    return false;
+            }
+            return true;
+        }
     }
 }

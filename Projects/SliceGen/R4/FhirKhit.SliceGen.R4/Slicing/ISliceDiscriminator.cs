@@ -7,6 +7,6 @@ namespace FhirKhit.SliceGen.ShareLib
 {
     public interface ISliceDiscriminator
     {
-        bool IsSlice(Element discriminator, Element item);
+        bool IsSlice(Element item);
     }
 }

@@ -18,7 +18,7 @@ namespace FhirKhit.Test.R4                                                      
     public static class SlicedMultipleExtensions
     {                                                                                                                                       // CSCodeFormatter.cs:89
         #region classes
-        public class Slice1Impl : SliceAccessor<Observation.ComponentComponent>                                                             // CSCodeFormatter.cs:244
+        public class Slice1Impl : SliceBaseAccessor<Observation.ComponentComponent>                                                             // CSCodeFormatter.cs:244
         {                                                                                                                                   // CSCodeFormatter.cs:245
             #region fields
                                                                                                                                             // CodeBlockNested.cs:318
@@ -72,7 +72,7 @@ namespace FhirKhit.Test.R4                                                      
             }                                                                                                                               // CSCodeFormatter.cs:303
             #endregion
         }                                                                                                                                   // CSCodeFormatter.cs:255
-        public class Slice2Impl : SliceAccessor<Observation.ComponentComponent>                                                             // CSCodeFormatter.cs:244
+        public class Slice2Impl : SliceBaseAccessor<Observation.ComponentComponent>                                                             // CSCodeFormatter.cs:244
         {                                                                                                                                   // CSCodeFormatter.cs:245
             #region fields
                                                                                                                                             // CodeBlockNested.cs:318
