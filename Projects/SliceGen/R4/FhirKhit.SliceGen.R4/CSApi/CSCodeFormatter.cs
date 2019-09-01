@@ -227,9 +227,9 @@ namespace FhirKhit.SliceGen.CSApi
                     .OpenSummary()
                     .AppendSummary($"Extension method to return slice {sliceName} on {elementNode.Name}")
                     .CloseSummary()
-                    .AppendCode($"public static {sliceClassName} {sliceName}(this {baseTypeName} ptr)")
+                    .AppendCode($"public static {sliceClassName} {sliceName}(this {baseTypeName} item)")
                     .OpenBrace()
-                    .AppendCode($"{sliceClassName} retVal = new {sliceClassName}(ptr);")
+                    .AppendCode($"{sliceClassName} retVal = new {sliceClassName}(item);")
                     .AppendCode($"return retVal;")
                     .CloseBrace()
                     ;
@@ -237,6 +237,32 @@ namespace FhirKhit.SliceGen.CSApi
 
             void CreateSliceAccessorClass(ElementNode sliceNode, out String sliceClassName)
             {
+                void CreateConstructor(String className, String fieldName)
+                {
+                    methods
+                        .OpenSummary()
+                        .AppendSummary($"{className} constructor")
+                        .CloseSummary()
+                        .AppendCode($"public {className}({elementNode.FhirType.FriendlyName()} items)")
+                        .OpenBrace()
+                        .AppendCode($"this.items = items;")
+                        .AppendCode($"this.Slicing = {fieldName};")
+                        .CloseBrace()
+                        ;
+                }
+
+                void CreateSliceInit()
+                {
+                    methods
+                        .OpenSummary()
+                        .AppendSummary($"method to initialize slice item with any fixed values")
+                        .CloseSummary()
+                        .AppendCode($"public void Initialize({accessorType} item)")
+                        .OpenBrace()
+                        .CloseBrace()
+                        ;
+                }
+
                 String sliceName = sliceNode.Element.SliceName;
                 sliceClassName = $"{sliceName}Impl";
                 String sliceBaseClassName;
@@ -319,17 +345,10 @@ namespace FhirKhit.SliceGen.CSApi
                         .CloseBrace(";")
                         ;
 
-                    methods
-                        .OpenSummary()
-                        .AppendSummary($"{sliceClassName} constructor")
-                        .CloseSummary()
-                        .AppendCode($"public {sliceClassName}({elementNode.FhirType.FriendlyName()} items)")
-                        .OpenBrace()
-                        .AppendCode($"this.items = items;")
-                        .AppendCode($"this.Slicing = {sliceFieldName};")
-                        .CloseBrace()
-                        ;
+                    CreateConstructor(sliceClassName, sliceFieldName);
+                    CreateSliceInit();
                 }
+
                 fields.AppendLine($"#endregion");
                 methods.AppendLine($"#endregion");
             }
@@ -342,7 +361,6 @@ namespace FhirKhit.SliceGen.CSApi
             {
                 this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Ordered == true not currently implemented. '{elementNode.Path}'");
                 return false;
-
             }
 
             if (sliceComponent.Rules != ElementDefinition.SlicingRules.Open)

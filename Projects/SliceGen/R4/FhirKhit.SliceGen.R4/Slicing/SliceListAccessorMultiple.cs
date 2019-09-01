@@ -8,7 +8,7 @@ namespace FhirKhit.SliceGen.ShareLib
     /// <summary>
     /// Base class for slice accessor classes that have a List as the base type and can cardinality > 1.
     /// </summary>
-    public class SliceListAccessorMultiple<T> : SliceListAccessor<T>, ISliceAccessorMultiple<T>
+    public abstract class SliceListAccessorMultiple<T> : SliceListAccessor<T>, ISliceAccessorMultiple<T>
         where T : Element
     {
         /// <summary>

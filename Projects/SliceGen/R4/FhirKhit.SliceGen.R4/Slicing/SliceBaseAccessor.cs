@@ -11,6 +11,15 @@ namespace FhirKhit.SliceGen.ShareLib
     public abstract class SliceBaseAccessor<T>
         where T : Element
     {
+        /// <summary>
+        /// Access slicing data
+        /// </summary>
         protected Slicing Slicing {get; set; }
+
+        /// <summary>
+        /// Initialize fixed values in item to match that of slice.
+        /// </summary>
+        /// <param name="item"></param>
+        //protected abstract void Initialize(T item);
     }
 }
