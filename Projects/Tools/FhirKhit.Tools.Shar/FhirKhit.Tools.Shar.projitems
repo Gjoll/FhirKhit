@@ -6,7 +6,7 @@
     <SharedGUID>bf3e3a97-3b43-44aa-838c-24e5e32be8c5</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>FhirKhit.Tools.FKShared</Import_RootNamespace>
+    <Import_RootNamespace>FhirKhit.Tools.Shar</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ElementDictionary.cs" />

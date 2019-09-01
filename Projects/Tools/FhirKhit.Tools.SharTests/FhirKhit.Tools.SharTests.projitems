@@ -6,6 +6,6 @@
     <SharedGUID>a0663c6d-3386-4c88-a186-b288530eb107</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>FhirKhit.Tools.FKSharedTests</Import_RootNamespace>
+    <Import_RootNamespace>FhirKhit.Tools.SharTests</Import_RootNamespace>
   </PropertyGroup>
 </Project>

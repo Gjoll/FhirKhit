@@ -10,7 +10,7 @@
 
   <Import Project="..\..\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems" Label="PGShared" />
 
-  <Import Project="..\FhirKhit.Tools.FKSharedTests\FhirKhit.Tools.FKSharedTests.projitems" Label="SharedTests" />
+  <Import Project="..\FhirKhit.Tools.SharTests\FhirKhit.Tools.SharTests.projitems" Label="SharedTests" />
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>TRACE;FHIR_R4</DefineConstants>

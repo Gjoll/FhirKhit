@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Tools.R3", "Projec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Tools.R3.XUnitTests", "Projects\Tools\FhirKhit.Tools.R3.XUnitTests\FhirKhit.Tools.R3.XUnitTests.csproj", "{1844E064-0460-4076-82B8-D2FD74AEDB8D}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.FKShared", "Projects\Tools\FhirKhit.Tools.FKShared\FhirKhit.Tools.FKShared.shproj", "{BF3E3A97-3B43-44AA-838C-24E5E32BE8C5}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.Shar", "Projects\Tools\FhirKhit.Tools.Shar\FhirKhit.Tools.Shar.shproj", "{BF3E3A97-3B43-44AA-838C-24E5E32BE8C5}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.FKSharedTests", "Projects\Tools\FhirKhit.Tools.FKSharedTests\FhirKhit.Tools.FKSharedTests.shproj", "{A0663C6D-3386-4C88-A186-B288530EB107}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.SharTests", "Projects\Tools\FhirKhit.Tools.SharTests\FhirKhit.Tools.SharTests.shproj", "{A0663C6D-3386-4C88-A186-B288530EB107}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.GlobalSuppressions", "Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.shproj", "{721F484A-1C1A-4A95-AA2C-FF38E18C9D77}"
 EndProject
@@ -40,8 +40,8 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems*{721f484a-1c1a-4a95-aa2c-ff38e18c9d77}*SharedItemsImports = 13
-		Projects\Tools\FhirKhit.Tools.FKSharedTests\FhirKhit.Tools.FKSharedTests.projitems*{a0663c6d-3386-4c88-a186-b288530eb107}*SharedItemsImports = 13
-		Projects\Tools\FhirKhit.Tools.FKShared\FhirKhit.Tools.FKShared.projitems*{bf3e3a97-3b43-44aa-838c-24e5e32be8c5}*SharedItemsImports = 13
+		Projects\Tools\FhirKhit.Tools.SharTests\FhirKhit.Tools.SharTests.projitems*{a0663c6d-3386-4c88-a186-b288530eb107}*SharedItemsImports = 13
+		Projects\Tools\FhirKhit.Tools.Shar\FhirKhit.Tools.Shar.projitems*{bf3e3a97-3b43-44aa-838c-24e5e32be8c5}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

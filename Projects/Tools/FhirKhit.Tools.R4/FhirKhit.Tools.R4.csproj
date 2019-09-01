@@ -44,7 +44,7 @@
     </None>
   </ItemGroup>
 
-  <Import Project="..\FhirKhit.Tools.FKShared\FhirKhit.Tools.FKShared.projitems" Label="PGShared" />
+  <Import Project="..\FhirKhit.Tools.Shar\FhirKhit.Tools.Shar.projitems" Label="PGShared" />
 
   <Import Project="..\..\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems" Label="PGShared" />
 
