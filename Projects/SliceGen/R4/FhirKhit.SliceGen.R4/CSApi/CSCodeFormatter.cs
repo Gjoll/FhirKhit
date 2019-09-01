@@ -169,6 +169,9 @@ namespace FhirKhit.SliceGen.CSApi
             Int32 patternCount = 1;
             CodeBlockNested fields;
             CodeBlockNested methods;
+            ElementDefinition.DiscriminatorComponent[] discriminators = null;
+            bool retVal = true;
+            String accessorType = String.Empty;
 
             bool DefineSliceOnValueDiscriminator(ElementNode sliceNode,
                 ElementDefinition.DiscriminatorComponent discriminator,
@@ -215,37 +218,38 @@ namespace FhirKhit.SliceGen.CSApi
                 }
             }
 
-            if (elementNode is null)
-                throw new ArgumentNullException(nameof(elementNode));
-
-            ElementDefinition.SlicingComponent sliceComponent = elementNode.Element.Slicing;
-            if (sliceComponent.Ordered == true)
-            {
-                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Ordered == true not currently implemented. '{elementNode.Path}'");
-                return false;
-
-            }
-
-            if (sliceComponent.Rules != ElementDefinition.SlicingRules.Open)
-            {
-                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Rules != Open not currently implemented. '{elementNode.Path}'");
-                return false;
-            }
-
-            ElementDefinition.DiscriminatorComponent[] discriminators = sliceComponent.Discriminator.ToArray();
-
-            bool retVal = true;
-            foreach (ElementNode sliceNode in elementNode.Slices)
+            void CreateSliceAccessor(ElementNode sliceNode, String sliceClassName)
             {
                 String sliceName = sliceNode.Element.SliceName;
+                String baseTypeName = elementNode.FhirType.FriendlyName();
+
+                this.methodsBlock
+                    .OpenSummary()
+                    .AppendSummary($"Create extension method to return slice {sliceName} on {elementNode.Name}")
+                    .CloseSummary()
+                    .AppendCode($"public static {sliceClassName} {sliceName}(this {baseTypeName} ptr)")
+                    .OpenBrace()
+                    .AppendCode($"{sliceClassName} retVal = new {sliceClassName}(ptr);")
+                    .AppendCode($"return retVal;")
+                    .CloseBrace()
+                    ;
+            }
+
+            void CreateSliceAccessorClass(ElementNode sliceNode, out String sliceClassName)
+            {
+                String sliceName = sliceNode.Element.SliceName;
+                sliceClassName = $"{sliceName}Impl";
 
                 this.subClassBlock
-                    .AppendCode($"public class {sliceName} : SliceAccessor")
+                    .AppendCode($"public class {sliceClassName} : SliceAccessor<{accessorType}>")
                     .OpenBrace()
                     ;
 
                 fields = this.subClassBlock.AppendBlock();
+                fields.AppendLine($"#region fields");
+
                 methods = this.subClassBlock.AppendBlock();
+                methods.AppendLine($"#region methods");
 
                 this.subClassBlock
                     .CloseBrace()
@@ -262,6 +266,10 @@ namespace FhirKhit.SliceGen.CSApi
                     String sliceFieldName = $"slicing";
 
                     fields
+                        .OpenSummary()
+                        .AppendSummary($"Pointer to element containing all slice(s) elements")
+                        .CloseSummary()
+                        .AppendCode($"{elementNode.FhirType.FriendlyName()} items;")
                         .OpenSummary()
                         .AppendSummary($"slicing discriminator for {elementNode.Path} slice {sliceName}")
                         .CloseSummary()
@@ -286,15 +294,44 @@ namespace FhirKhit.SliceGen.CSApi
 
                     methods
                         .OpenSummary()
-                        .AppendSummary($"{sliceName} constructor")
+                        .AppendSummary($"{sliceClassName} constructor")
                         .CloseSummary()
-                        .AppendCode($"public {sliceName}()")
+                        .AppendCode($"public {sliceClassName}({elementNode.FhirType.FriendlyName()} items)")
                         .OpenBrace()
+                        .AppendCode($"this.items = items;")
                         .AppendCode($"this.Slicing = {sliceFieldName};")
                         .CloseBrace()
                         ;
                 }
+                fields.AppendLine($"#endregion");
+                methods.AppendLine($"#endregion");
             }
+
+            if (elementNode is null)
+                throw new ArgumentNullException(nameof(elementNode));
+
+            ElementDefinition.SlicingComponent sliceComponent = elementNode.Element.Slicing;
+            if (sliceComponent.Ordered == true)
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Ordered == true not currently implemented. '{elementNode.Path}'");
+                return false;
+
+            }
+
+            if (sliceComponent.Rules != ElementDefinition.SlicingRules.Open)
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Rules != Open not currently implemented. '{elementNode.Path}'");
+                return false;
+            }
+
+            discriminators = sliceComponent.Discriminator.ToArray();
+            accessorType = elementNode.FhirItemType.FriendlyName();
+            foreach (ElementNode sliceNode in elementNode.Slices)
+            {
+                CreateSliceAccessorClass(sliceNode, out String sliceClassName);
+                CreateSliceAccessor(sliceNode, sliceClassName);
+            }
+
             return retVal;
         }
 

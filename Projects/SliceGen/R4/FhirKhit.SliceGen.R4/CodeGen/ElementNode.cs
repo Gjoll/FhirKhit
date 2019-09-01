@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 using FhirKhit.Tools;
+using System.Reflection;
+using Hl7.Fhir.Introspection;
 
 namespace FhirKhit.SliceGen.R4
 {
@@ -22,15 +24,33 @@ namespace FhirKhit.SliceGen.R4
 
             public ElementNode Create(IEnumerable<ElementDefinition> items)
             {
-                ElementNode head = new ElementNode(null);
-
+                ElementNode head = new ElementNode(null, null);
                 foreach (ElementDefinition item in items)
                     this.Load(head, item);
-
                 return head;
             }
 
-            public void Load(ElementNode head, ElementDefinition loadItem)
+            Type GetFhirType(Type parent, String fhirName)
+            {
+                if (fhirName.EndsWith("[x]"))
+                    fhirName = fhirName.Substring(0, fhirName.Length - 3);
+                foreach (PropertyInfo pi in parent.GetProperties())
+                {
+                    FhirElementAttribute fhirElement = pi.GetCustomAttribute<FhirElementAttribute>();
+                    if (fhirElement != null)
+                    {
+                        if (fhirElement.Name == fhirName)
+                            return pi.PropertyType;
+                    }
+                }
+                parent = parent.BaseType;
+                if (parent == typeof(Object))
+                    throw new Exception($"{parent.FriendlyName()}.{fhirName} not found");
+                return GetFhirType(parent, fhirName);
+            }
+
+            public void Load(ElementNode head,
+                ElementDefinition loadItem)
             {
                 ElementNode nodeElement = head;
 
@@ -80,7 +100,18 @@ namespace FhirKhit.SliceGen.R4
                     {
                         if (nodeElement.TryGetChild(pathItem, out ElementNode dummy) == true)
                             throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
-                        leafNode = new ElementNode(loadItem);
+                        Type fhirType;
+                        if (index == 0)
+                        {
+                            if (ModelInfo.FhirTypeToCsType.TryGetValue(pathItem, out fhirType) == false)
+                                throw new Exception($"Unknown resource '{pathItem}'");
+                        }
+                        else
+                        {
+                            fhirType = GetFhirType(nodeElement.FhirItemType, pathItem);
+                        }
+
+                        leafNode = new ElementNode(loadItem, fhirType);
                         nodeElement.children.Add(pathItem, leafNode);
                     }
                     else
@@ -90,7 +121,8 @@ namespace FhirKhit.SliceGen.R4
                         if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementNode dummySlice) == true)
                             throw new Exception($"Error element node slice {nodeElement.Element.SliceName} already exists in {loadItem.Path}");
 
-                        leafNode = new ElementNode(loadItem);
+                        Type fhirType = GetFhirType(nodeElement.FhirItemType, pathItem);
+                        leafNode = new ElementNode(loadItem, fhirType);
                         sliceNode.slices.Add(loadItem.SliceName, leafNode);
                     }
 
@@ -128,7 +160,35 @@ namespace FhirKhit.SliceGen.R4
             }
         }
 
+        /// <summary>
+        /// fhir element definition
+        /// </summary>
         public ElementDefinition Element { get; set; }
+
+        /// <summary>
+        /// c# type for this element
+        /// </summary>
+        public Type FhirType { get; set; }
+
+        /// <summary>
+        /// c# type for this element
+        /// </summary>
+        public Type FhirItemType
+        {
+            get
+            {
+                switch (this.FhirType.GenericTypeArguments?.Length)
+                {
+                    case null:
+                    case 0:
+                        return this.FhirType;
+                    case 1:
+                        return this.FhirType.GenericTypeArguments[0];
+                    default:
+                        throw new Exception($"Unexpected number of generic type arguments {this.FhirType.GenericTypeArguments.Length} in {this.Element.Path}");
+                }
+            }
+        }
 
         /// <summary>
         /// Element Definition path.
@@ -148,18 +208,22 @@ namespace FhirKhit.SliceGen.R4
         Dictionary<String, ElementNode> children = new Dictionary<String, ElementNode>();
 
 
-        public ElementNode(ElementDefinition element)
+        public ElementNode(ElementDefinition element,
+            Type fhirType)
         {
             this.Element = element;
+            this.FhirType = fhirType;
         }
 
-        public static ElementNode Create(IEnumerable<ElementDefinition> items)
+        public static ElementNode Create(StructureDefinition sDef)
         {
-            if (items is null)
-                throw new ArgumentNullException(nameof(items));
+            if (sDef is null)
+                throw new ArgumentNullException(nameof(sDef));
+
+            String resourceName = sDef.Snapshot.Element[0].Path;
 
             Loader loader = new Loader();
-            return loader.Create(items);
+            return loader.Create(sDef.Snapshot.Element);
         }
 
         public bool TryGetChild(String name, out ElementNode node)

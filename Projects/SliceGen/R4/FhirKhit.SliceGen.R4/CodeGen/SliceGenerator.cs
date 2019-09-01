@@ -124,28 +124,34 @@ namespace FhirKhit.SliceGen.R4
 
         void ProcessProfile(StructureDefinition profile)
         {
-            //String fcn = nameof(ProcessProfile);
+            String fcn = nameof(ProcessProfile);
+            try
+            {
+                if (profile.Snapshot == null)
+                    SnapshotCreator.Create(profile);
+                ElementNode profileItems = ElementNode.Create(profile);
 
-            if (profile.Snapshot == null)
-                SnapshotCreator.Create(profile);
-            ElementNode profileItems = ElementNode.Create(profile.Snapshot.Element);
+                Type fhirType = this.GetFhirApiType(profile.BaseDefinition);
 
-            Type fhirType = this.GetFhirApiType(profile.BaseDefinition);
+                String name = $"{profile.Name}Extensions";
 
-            String name = $"{profile.Name}Extensions";
+                GenerateItem gi = new GenerateItem(this,
+                    this.NameSpace,
+                    name,
+                    profile.Type,
+                    fhirType,
+                    this.OutputLanguage,
+                    profileItems);
 
-            GenerateItem gi = new GenerateItem(this,
-                this.NameSpace,
-                name,
-                profile.Type,
-                fhirType,
-                this.OutputLanguage,
-                profileItems);
+                gi.Process();
 
-            gi.Process();
-
-            String outputFile = Path.Combine(this.OutputDir, $"{name}.cs");
-            File.WriteAllText(outputFile, gi.GetCode());
+                String outputFile = Path.Combine(this.OutputDir, $"{name}.cs");
+                File.WriteAllText(outputFile, gi.GetCode());
+            }
+            catch (Exception err)
+            {
+                this.ConversionError(this.GetType().Name, fcn, $"Profile {profile.Name} failed with exception {err.Message}");
+            }
         }
 
         /// <summary>

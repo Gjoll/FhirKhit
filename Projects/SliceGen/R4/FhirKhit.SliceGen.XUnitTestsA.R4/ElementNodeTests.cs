@@ -113,7 +113,7 @@ namespace FhirKhit.SliceGen.XUnitTests
             }
 
             SnapshotCreator.Create(s);
-            ElementNode head = ElementNode.Create(s.Snapshot.Element);
+            ElementNode head = ElementNode.Create(s);
             Assert.True(head.Slices.Any() == false);
             Assert.True(head.Children.Count() == 1);
 
@@ -147,7 +147,7 @@ namespace FhirKhit.SliceGen.XUnitTests
             s.Differential.Element.Add(e);
 
             SnapshotCreator.Create(s);
-            ElementNode head = ElementNode.Create(s.Snapshot.Element);
+            ElementNode head = ElementNode.Create(s);
             Assert.True(head.Slices.Any() == false);
             Assert.True(head.Children.Count() == 1);
 
@@ -168,7 +168,7 @@ namespace FhirKhit.SliceGen.XUnitTests
         {
             StructureDefinition s = this.CreateBaseObservation();
             SnapshotCreator.Create(s);
-            ElementNode head = ElementNode.Create(s.Snapshot.Element);
+            ElementNode head = ElementNode.Create(s);
             Assert.True(head.Slices.Any() == false);
             Assert.True(head.Children.Count() == 1);
 
@@ -202,7 +202,7 @@ namespace FhirKhit.SliceGen.XUnitTests
             FhirJsonParser fjp = new FhirJsonParser();
             String jsonText = File.ReadAllText(@"TestFiles\breastrad-BreastAbnormality.json");
             StructureDefinition s = fjp.Parse<StructureDefinition>(jsonText);
-            ElementNode head = ElementNode.Create(s.Snapshot.Element);
+            ElementNode head = ElementNode.Create(s);
         }
     }
 }
