@@ -12,7 +12,7 @@ namespace FhirKhit.Tools.R3
 namespace FhirKhit.Tools.R2
 #endif
 {
-    public static class FhirElementDefinitionExtensions
+    public static class ElementDefinitionExtensions
     {
 #if FHIR_R4 || FHIR_R3
         const String DerivationExtensionUri = "http://hl7.org/fhir/StructureDefinition/elementdefinition-derivation";
@@ -113,7 +113,7 @@ namespace FhirKhit.Tools.R2
 #if FHIR_R4 || FHIR_R3
                     Code = type
 #elif FHIR_R2
-                Code = fType
+                    Code = fType
 #else           // default
                 Invalid fhir type
 #endif
@@ -638,7 +638,7 @@ namespace FhirKhit.Tools.R2
             String valueSet)
         {
             if (elementDefinition is null)
-                throw new ArgumentNullException(nameof(elementDefinition ));
+                throw new ArgumentNullException(nameof(elementDefinition));
 
             elementDefinition.Binding = new ElementDefinition.BindingComponent
 #elif FHIR_R3

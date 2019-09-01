@@ -13,7 +13,7 @@ namespace FhirKhit.Tools.R3
 namespace FhirKhit.Tools.R2
 #endif
 {
-    public static class FhirStructureDefinitionExtensions
+    public static class StructureDefinitionExtensions
     {
         /// <summary>
         /// Get all value set bindings in structure definition.

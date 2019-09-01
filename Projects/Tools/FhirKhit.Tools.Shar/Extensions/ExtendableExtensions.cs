@@ -12,7 +12,7 @@ namespace FhirKhit.Tools.R3
 namespace FhirKhit.Tools.R2
 #endif
 {
-    public static class FhirExtendableExtensions
+    public static class ExtendableExtensions
     {
         public const String NamespaceExtensionUri = "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace";
         public const string GenericExtensionUri = GlobalDefs.BaseModelDefUrl + "/ModelDef/GenericExtension";

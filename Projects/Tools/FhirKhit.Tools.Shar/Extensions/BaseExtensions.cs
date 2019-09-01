@@ -17,7 +17,7 @@ namespace FhirKhit.Tools.R3
 namespace FhirKhit.Tools.R2
 #endif
 {
-    public static class FhirBaseExtensions
+    public static class BaseExtensions
     {
         /// <summary>
         /// Save Fhir item
