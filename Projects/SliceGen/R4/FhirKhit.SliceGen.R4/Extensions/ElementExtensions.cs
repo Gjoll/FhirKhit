@@ -46,5 +46,29 @@ namespace FhirKhit.SliceGen.R4
             }
             return node;
         }
+
+        /// <summary>
+        /// Return an ienumerable for a singleton element.
+        /// </summary>
+        /// <param name="element"></param>
+        /// <returns></returns>
+        public static IEnumerable<Element> ToEnumerable(Element element)
+        {
+            if (element == null)
+                return Array.Empty<Element>();
+            return new Element[] { element };
+        }
+
+        /// <summary>
+        /// Return an ienumerable for a list of elements.
+        /// </summary>
+        /// <param name="elements"></param>
+        /// <returns></returns>
+        public static IEnumerable<Element> ToEnumerable(List<Element> elements)
+        {
+            if (elements == null)
+                return Array.Empty<Element>();
+            return elements;
+        }
     }
 }
