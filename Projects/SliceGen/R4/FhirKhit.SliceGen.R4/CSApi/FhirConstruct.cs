@@ -510,7 +510,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Address();")                                                                               // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -572,7 +572,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Age();")                                                                                   // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -616,7 +616,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Annotation();")                                                                            // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -750,7 +750,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Attachment();")                                                                            // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -844,7 +844,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new CodeableConcept();")                                                                       // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -917,7 +917,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Coding();")                                                                                // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -1008,7 +1008,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new ContactDetail();")                                                                         // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -1078,7 +1078,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new ContactPoint();")                                                                          // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -1192,7 +1192,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Contributor();")                                                                           // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -1254,7 +1254,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Count();")                                                                                 // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -1469,7 +1469,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new DataRequirement();")                                                                       // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -1531,7 +1531,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Distance();")                                                                              // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -2349,7 +2349,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Dosage();")                                                                                // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -2411,7 +2411,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Duration();")                                                                              // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -3009,7 +3009,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new ElementDefinition();")                                                                     // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -3077,7 +3077,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Expression();")                                                                            // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -3107,7 +3107,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Extension();")                                                                             // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -3220,7 +3220,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new HumanName();")                                                                             // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -3360,7 +3360,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Identifier();")                                                                            // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -3634,7 +3634,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new MarketingStatus();")                                                                       // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -3824,7 +3824,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Meta();")                                                                                  // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -3862,7 +3862,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Money();")                                                                                 // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -3924,7 +3924,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new MoneyQuantity();")                                                                         // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -3956,7 +3956,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Narrative();")                                                                             // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -4028,7 +4028,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new ParameterDefinition();")                                                                   // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -4072,7 +4072,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Period();")                                                                                // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -4316,7 +4316,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Population();")                                                                            // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -4813,7 +4813,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new ProdCharacteristic();")                                                                    // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -5150,7 +5150,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new ProductShelfLife();")                                                                      // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -5212,7 +5212,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Quantity();")                                                                              // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -5320,7 +5320,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Range();")                                                                                 // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -5428,7 +5428,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Ratio();")                                                                                 // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -5598,7 +5598,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new ResourceReference();")                                                                     // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -5780,7 +5780,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new RelatedArtifact();")                                                                       // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -5896,7 +5896,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new SampledData();")                                                                           // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -6042,7 +6042,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Signature();")                                                                             // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -6104,7 +6104,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new SimpleQuantity();")                                                                        // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -6298,7 +6298,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new SubstanceAmount();")                                                                       // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -6540,7 +6540,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new Timing();")                                                                                // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -6824,7 +6824,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new TriggerDefinition();")                                                                     // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309
@@ -6903,7 +6903,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // GenerateFhirConstruct.cs:113
             }                                                                                                                               // GenerateFhirConstruct.cs:304
             block                                                                                                                           // GenerateFhirConstruct.cs:305
-                .AppendCode("return retVal = new UsageContext();")                                                                          // GenerateFhirConstruct.cs:306
+                .AppendCode("return retVal;")                                                                                               // GenerateFhirConstruct.cs:306
                 .CloseBrace()                                                                                                               // GenerateFhirConstruct.cs:307
                 ;                                                                                                                           // GenerateFhirConstruct.cs:308
             return  true;                                                                                                                   // GenerateFhirConstruct.cs:309

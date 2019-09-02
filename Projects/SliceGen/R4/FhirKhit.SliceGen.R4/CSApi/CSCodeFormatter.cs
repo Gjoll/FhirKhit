@@ -15,6 +15,7 @@ namespace FhirKhit.SliceGen.CSApi
 {
     public class CSCodeFormatter : ICodeFormatter
     {
+        String className;
         CodeEditor code;
         CodeBlockNested nameSpaceBlock;
         CodeBlockNested classBlock;
@@ -77,6 +78,7 @@ namespace FhirKhit.SliceGen.CSApi
         /// </summary>
         public bool StartClass(String className, Type fhirType)
         {
+            this.className = className;
             string fhirTypeName = fhirType.FriendlyName();
 
             this.classBlock = this.nameSpaceBlock.AppendBlock();
@@ -89,13 +91,13 @@ namespace FhirKhit.SliceGen.CSApi
                 ;
 
             this.subClassBlock = classBlock.AppendBlock();
-            this.subClassBlock.AppendLine($"#region classes");
+            this.subClassBlock.AppendLine($"#region {className} sub classes");
 
             this.fieldsBlock = classBlock.AppendBlock();
-            this.fieldsBlock.AppendLine($"#region fields");
+            this.fieldsBlock.AppendLine($"#region fields {className} fields");
 
             this.methodsBlock = classBlock.AppendBlock();
-            this.methodsBlock.AppendLine($"#region methods");
+            this.methodsBlock.AppendLine($"#region methods {className} methods");
 
             return true;
         }
@@ -190,14 +192,19 @@ namespace FhirKhit.SliceGen.CSApi
                     .AppendSummary($"Method to define fixed field used in slice accessor.")
                     .CloseSummary()
                     ;
+                FhirConstruct.Construct(methods, b, patternMethod, "static", out String temp);
 
-                String fhirPathMethod = "FhirPath";
+                methods
+                    .OpenSummary()
+                    .AppendSummary($"Return all elements at discriminator path '{discriminator.Path}'")
+                    .CloseSummary()
+                    ;
+                String fhirPathMethod = "GetDiscriminatorElements";
                 {
                     GenerateSimpleFhirPathMethod gi = new GenerateSimpleFhirPathMethod(this.gen);
                     gi.Generate(methods, "private", fhirPathMethod, elementNode, discriminator.Path);
                 }
 
-                FhirConstruct.Construct(methods, b, patternMethod, "static", out String temp);
                 fields
                     .AppendCode($"new SliceOnValueDiscriminator")
                     .OpenBrace()
@@ -257,14 +264,15 @@ namespace FhirKhit.SliceGen.CSApi
                         ;
                 }
 
-                void CreateSliceInit()
+                void CreateSliceCreate()
                 {
                     methods
                         .OpenSummary()
-                        .AppendSummary($"method to initialize slice item with any fixed values")
+                        .AppendSummary($"Create and initialize a new item")
                         .CloseSummary()
-                        .AppendCode($"public void Initialize({accessorType} item)")
+                        .AppendCode($"protected override {accessorType} Create()")
                         .OpenBrace()
+                        .AppendCode($"throw new NotImplementedException();")
                         .CloseBrace()
                         ;
                 }
@@ -305,10 +313,10 @@ namespace FhirKhit.SliceGen.CSApi
                     ;
 
                 fields = this.subClassBlock.AppendBlock();
-                fields.AppendLine($"#region fields");
+                fields.AppendLine($"#region {this.className}.{sliceClassName} fields");
 
                 methods = this.subClassBlock.AppendBlock();
-                methods.AppendLine($"#region methods");
+                methods.AppendLine($"#region {this.className}.{sliceClassName} methods");
 
                 this.subClassBlock
                     .CloseBrace()
@@ -351,11 +359,11 @@ namespace FhirKhit.SliceGen.CSApi
                         ;
 
                     CreateConstructor(sliceClassName, sliceFieldName);
-                    CreateSliceInit();
+                    CreateSliceCreate();
                 }
 
-                fields.AppendLine($"#endregion");
-                methods.AppendLine($"#endregion");
+                fields.AppendLine($"#endregion  // {this.className}.{sliceClassName}  fields");
+                methods.AppendLine($"#endregion // {this.className}.{sliceClassName}  methods");
             }
 
             if (elementNode is null)

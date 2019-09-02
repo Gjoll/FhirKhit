@@ -96,13 +96,10 @@ namespace FhirKhit.SliceGen.CSApi
 
             String fhirTypeName = node.FhirType.FriendlyName();
             block
-                .OpenSummary()
-                    .AppendSummary($"Method to find element at simple fhir path '{path}'.")
-                    .CloseSummary()
-                    .AppendCode($"{methodModifiers} IEnumerable<Element> {methodName}({fhirTypeName} head)")
-                    .OpenBrace()
-                    .BlankLine()
-                ;
+                .AppendCode($"{methodModifiers} IEnumerable<Element> {methodName}({fhirTypeName} head)")
+                .OpenBrace()
+                .BlankLine()
+            ;
 
             {
                 String fhirItemName = node.FhirType.GenericTypeArguments[0].FriendlyName();

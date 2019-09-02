@@ -312,10 +312,11 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        public CodeBlockNested OpenSummary()
+        public CodeBlockNested OpenSummary([CallerFilePath] String filePath = "",
+            [CallerLineNumber] Int32 lineNumber = 0)
         {
             this
-                .BlankLine()
+                .BlankLine(filePath, lineNumber)
                 .AppendLine("/// <summary>")
                 ;
             return this;

@@ -20,6 +20,6 @@ namespace FhirKhit.SliceGen.ShareLib
         /// Initialize fixed values in item to match that of slice.
         /// </summary>
         /// <param name="item"></param>
-        //protected abstract void Initialize(T item);
+        protected abstract T Create();
     }
 }

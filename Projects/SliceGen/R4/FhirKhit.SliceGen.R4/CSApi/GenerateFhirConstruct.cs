@@ -303,7 +303,7 @@ namespace FhirKhit.SliceGen.R4
             m
                 .CloseBrace()
                 .AppendCode($"block")
-                .AppendCode($"    .AppendCode(\"return retVal = new {csTypeName}();\")")
+                .AppendCode($"    .AppendCode(\"return retVal;\")")
                 .AppendCode($"    .CloseBrace()")
                 .AppendCode($"    ;")
                 .AppendCode($"return  true;")
