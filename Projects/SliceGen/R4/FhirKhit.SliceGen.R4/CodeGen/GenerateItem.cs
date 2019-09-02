@@ -1,4 +1,5 @@
-﻿using FhirKhit.SliceGen.CSApi;
+﻿using FhirKhit.SliceGen.CodeGen;
+using FhirKhit.SliceGen.CSApi;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Specification.Source;
 using System;
@@ -6,7 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using static FhirKhit.SliceGen.R4.SliceGenerator;
+using static FhirKhit.SliceGen.CodeGen.SliceGenerator;
 
 namespace FhirKhit.SliceGen.R4
 {

@@ -1,4 +1,5 @@
-﻿using FhirKhit.SliceGen.R4;
+﻿using FhirKhit.SliceGen.CodeGen;
+using FhirKhit.SliceGen.R4;
 using FhirKhit.Tools;
 using Hl7.Fhir.ElementModel;
 using Hl7.Fhir.Introspection;
@@ -189,6 +190,13 @@ namespace FhirKhit.SliceGen.CSApi
                     .AppendSummary($"Method to define fixed field used in slice accessor.")
                     .CloseSummary()
                     ;
+
+                String fhirPathMethod = "FhirPath";
+                {
+                    GenerateSimpleFhirPathMethod gi = new GenerateSimpleFhirPathMethod(this.gen);
+                    gi.Generate(methods, "private", fhirPathMethod, elementNode, discriminator.Path);
+                }
+
                 FhirConstruct.Construct(methods, b, patternMethod, "static", out String temp);
                 fields
                     .AppendCode($"new SliceOnValueDiscriminator")

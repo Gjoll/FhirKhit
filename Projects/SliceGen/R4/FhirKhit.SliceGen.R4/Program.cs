@@ -1,4 +1,5 @@
 ﻿using FhirKhit.SliceGen;
+using FhirKhit.SliceGen.CodeGen;
 using System;
 using System.IO;
 

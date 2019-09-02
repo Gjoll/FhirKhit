@@ -10,6 +10,7 @@ using Hl7.Fhir.Serialization;
 using Hl7.Fhir.Specification.Snapshot;
 using System.Collections.Generic;
 using FhirKhit.SliceGen.R4;
+using FhirKhit.SliceGen.CodeGen;
 
 
 #if FHIR_R2

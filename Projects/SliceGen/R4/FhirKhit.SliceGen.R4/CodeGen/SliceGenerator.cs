@@ -11,6 +11,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Xml;
+using FhirKhit.SliceGen.R4;
 
 #if FHIR_R2
 using FhirKhit.Tools.R2;
@@ -20,7 +21,7 @@ using FhirKhit.Tools.R3;
 using FhirKhit.Tools.R4;
 #endif
 
-namespace FhirKhit.SliceGen.R4
+namespace FhirKhit.SliceGen.CodeGen
 {
     /// <summary>
     /// Entry point to profile generator.

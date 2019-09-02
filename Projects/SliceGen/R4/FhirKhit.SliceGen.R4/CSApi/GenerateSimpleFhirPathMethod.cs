@@ -1,9 +1,12 @@
-﻿using FhirKhit.Tools;
+﻿using FhirKhit.SliceGen.CodeGen;
+using FhirKhit.SliceGen.R4;
+using FhirKhit.Tools;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
-namespace FhirKhit.SliceGen.R4.CSApi
+namespace FhirKhit.SliceGen.CSApi
 {
     public class GenerateSimpleFhirPathMethod
     {
@@ -25,26 +28,59 @@ namespace FhirKhit.SliceGen.R4.CSApi
             String path)
         {
             const String fcn = nameof(Generate);
+            CodeBlockNested childBlock;
+            Int32 childMethodCounter = 0;
 
-            void GenerateGetChild(String childMethodName, string childPropertyName)
+            // Generate GetChild method.
+            String GenerateGetChild(string childPropertyName,
+                Type inputType,
+                Type outputType)
             {
-                if (childMethodName is null)
-                    throw new ArgumentNullException(nameof(childMethodName));
+                if (childPropertyName is null)
+                    throw new ArgumentNullException(nameof(childPropertyName));
 
-                block
-                    .AppendCode($"IEnumerable<Element> {childMethodName}(IEnumerable<Element> elements)")
+                String inputTypeBaseName = inputType.FriendlyName();
+                String outputTypeBaseName = outputType.FriendlyName();
+                childMethodCounter += 1;
+                String childMethodName = $"GetChild_{childMethodCounter}";
+                String outputTypeItemName;
+                if (outputTypeBaseName.StartsWith("List<"))
+                    outputTypeItemName = outputType.GenericTypeArguments[0].FriendlyName();
+                else
+                    outputTypeItemName = outputTypeBaseName;
+
+
+                childBlock
+                    .AppendCode($"IEnumerable<{outputTypeItemName}> {childMethodName}(IEnumerable<{inputTypeBaseName}> inputElements)")
                     .OpenBrace()
-                    .AppendCode($"if (elements == null)")
-                    .AppendCode($"    return Array.Empty<Element>();")
-                    .AppendCode($"foreach (Element element in elements)")
+                    .AppendCode($"if (inputElements != null)")
                     .OpenBrace()
-                    .AppendCode($"foreach (Element childElement element.{childPropertyName}.ToEnumerable)")
+                    .AppendCode($"foreach ({inputTypeBaseName} inputElement in inputElements)")
                     .OpenBrace()
-                    .AppendCode($"yield return childElement;")
+                    ;
+
+                if (outputType.FriendlyName().StartsWith("List<"))
+                {
+                    childBlock
+                        .AppendCode($"foreach ({outputType.FriendlyName()} childElement in inputElement.{childPropertyName})")
+                        .OpenBrace()
+                        .AppendCode($"yield return childElement;")
+                        .CloseBrace()
+                   ;
+                }
+                else
+                {
+                    childBlock
+                        .AppendCode($"yield return inputElement.{childPropertyName};")
+                   ;
+                }
+
+                childBlock
                     .CloseBrace()
                     .CloseBrace()
                     .CloseBrace()
                     ;
+                return childMethodName;
             }
 
             if (block is null)
@@ -63,11 +99,27 @@ namespace FhirKhit.SliceGen.R4.CSApi
                 .OpenSummary()
                     .AppendSummary($"Method to find element at simple fhir path '{path}'.")
                     .CloseSummary()
-                    .AppendCode($"{methodModifiers} Element {methodName}({fhirTypeName} head)")
+                    .AppendCode($"{methodModifiers} IEnumerable<Element> {methodName}({fhirTypeName} head)")
                     .OpenBrace()
                     .BlankLine()
-                    .AppendCode($"IEnumerable<Element> results = head.ToEnumerable();")
                 ;
+
+            {
+                String fhirItemName = node.FhirType.GenericTypeArguments[0].FriendlyName();
+                if (fhirTypeName.StartsWith("List<"))
+                {
+                    block
+                        .AppendCode($"IEnumerable<{fhirItemName}> results0 = head;")
+                   ;
+                }
+                else
+                {
+                    block
+                        .AppendCode($"IEnumerable<{fhirItemName}> results0 = new {fhirItemName}[] {{ head }};")
+                   ;
+                }
+            }
+            childBlock = block.AppendBlock();
 
             String[] pathItems = path.Split('.');
             Int32 i = 0;
@@ -75,6 +127,7 @@ namespace FhirKhit.SliceGen.R4.CSApi
             if (pathItems[0] == node.Name)
                 i += 1;
 
+            Int32 resultCounter = 0;
             while (i < pathItems.Length)
             {
                 String pathItem = pathItems[i++];
@@ -104,11 +157,24 @@ namespace FhirKhit.SliceGen.R4.CSApi
                         return false;
                     }
 
+                    Type nodeType = node.FhirItemType;
+                    PropertyInfo childProperty = nodeType.GetPropertyByFhirName(pathItem);
+                    String childPropertyName = childProperty.Name;
+                    String childMethodName = GenerateGetChild(childPropertyName, nodeType, childProperty.PropertyType);
+                    Int32 nextResult = resultCounter + 1;
+
+                    block.AppendCode($"IEnumerable<{next.FhirItemType.FriendlyName()}> results{nextResult} = {childMethodName}(results{resultCounter});");
+
+                    resultCounter += 1;
                     node = next;
-                    block.AppendCode($"results = results.GetNamedChildren(\"{pathItem}\");");
-                    block.AppendCode($"if (results == null) return null;");
                 }
+                block.AppendCode($"return results{resultCounter};");
             }
+
+            block
+                .CloseBrace()
+                ;
+
             return true;
         }
     }
