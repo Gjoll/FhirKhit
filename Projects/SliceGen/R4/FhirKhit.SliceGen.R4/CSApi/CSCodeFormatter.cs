@@ -170,6 +170,7 @@ namespace FhirKhit.SliceGen.CSApi
             Int32 patternCount = 1;
             CodeBlockNested fields;
             CodeBlockNested methods;
+            CodeBlockNested methodCreate;
             ElementDefinition.DiscriminatorComponent[] discriminators = null;
             bool retVal = true;
             String accessorType = String.Empty;
@@ -202,7 +203,7 @@ namespace FhirKhit.SliceGen.CSApi
                 String fhirPathMethod = "GetDiscriminatorElements";
                 {
                     GenerateSimpleFhirPathMethod gi = new GenerateSimpleFhirPathMethod(this.gen);
-                    gi.Generate(methods, "private", fhirPathMethod, elementNode, discriminator.Path);
+                    gi.GenerateSearchElements(methods, "private", fhirPathMethod, elementNode, discriminator.Path);
                 }
 
                 fields
@@ -264,19 +265,6 @@ namespace FhirKhit.SliceGen.CSApi
                         ;
                 }
 
-                void CreateSliceCreate()
-                {
-                    methods
-                        .OpenSummary()
-                        .AppendSummary($"Create and initialize a new item")
-                        .CloseSummary()
-                        .AppendCode($"protected override {accessorType} Create()")
-                        .OpenBrace()
-                        .AppendCode($"throw new NotImplementedException();")
-                        .CloseBrace()
-                        ;
-                }
-
                 String sliceName = sliceNode.Element.SliceName;
                 sliceClassName = $"{sliceName}Impl";
                 String sliceBaseClassName;
@@ -317,10 +305,22 @@ namespace FhirKhit.SliceGen.CSApi
 
                 methods = this.subClassBlock.AppendBlock();
                 methods.AppendLine($"#region {this.className}.{sliceClassName} methods");
+                methodCreate = methods.AppendBlock();
 
                 this.subClassBlock
                     .CloseBrace()
                     ;
+
+                methodCreate
+                    .OpenSummary()
+                    .AppendSummary($"Create and initialize a new item")
+                    .CloseSummary()
+                    .AppendCode($"protected override {accessorType} Create()")
+                    .OpenBrace()
+                    .AppendCode($"{accessorType} retVal = new {accessorType}();")
+                    ;
+                //$$GenerateSimpleFhirPathMethod g = new GenerateSimpleFhirPathMethod(this.gen);
+                //$$g.GenerateSetElements(methods, elementNode, String baseName, discriminator.Path);
 
                 patternCount = 1;
                 if (sliceName == null)
@@ -359,8 +359,12 @@ namespace FhirKhit.SliceGen.CSApi
                         ;
 
                     CreateConstructor(sliceClassName, sliceFieldName);
-                    CreateSliceCreate();
                 }
+
+                methodCreate
+                    .AppendCode($"return retVal;")
+                    .CloseBrace()
+                    ;
 
                 fields.AppendLine($"#endregion  // {this.className}.{sliceClassName}  fields");
                 methods.AppendLine($"#endregion // {this.className}.{sliceClassName}  methods");

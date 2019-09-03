@@ -18,8 +18,8 @@ namespace FhirKhit.Test.R4                                                      
     public static class SlicedMultipleExtensions
     {                                                                                                                                       // CSCodeFormatter.cs:90
         #region SlicedMultipleExtensions sub classes
-        public class Slice1Impl : SliceListAccessorMultiple<Observation.ComponentComponent>                                                 // CSCodeFormatter.cs:311
-        {                                                                                                                                   // CSCodeFormatter.cs:312
+        public class Slice1Impl : SliceListAccessorMultiple<Observation.ComponentComponent>                                                 // CSCodeFormatter.cs:299
+        {                                                                                                                                   // CSCodeFormatter.cs:300
             #region SlicedMultipleExtensions.Slice1Impl fields
                                                                                                                                             // CSCodeFormatter.cs:336
             /// <summary>
@@ -33,16 +33,25 @@ namespace FhirKhit.Test.R4                                                      
             {                                                                                                                               // CSCodeFormatter.cs:343
                 Discriminators = new ISliceDiscriminator[]                                                                                  // CSCodeFormatter.cs:344
                 {                                                                                                                           // CSCodeFormatter.cs:345
-                    new SliceOnValueDiscriminator                                                                                           // CSCodeFormatter.cs:209
-                    {                                                                                                                       // CSCodeFormatter.cs:210
-                        Path = "code",                                                                                                      // CSCodeFormatter.cs:211
-                        Pattern = Fix_1()                                                                                                   // CSCodeFormatter.cs:212
-                    }                                                                                                                       // CSCodeFormatter.cs:213
+                    new SliceOnValueDiscriminator                                                                                           // CSCodeFormatter.cs:210
+                    {                                                                                                                       // CSCodeFormatter.cs:211
+                        Path = "code",                                                                                                      // CSCodeFormatter.cs:212
+                        Pattern = Fix_1()                                                                                                   // CSCodeFormatter.cs:213
+                    }                                                                                                                       // CSCodeFormatter.cs:214
                 }                                                                                                                           // CSCodeFormatter.cs:357
             };                                                                                                                              // CSCodeFormatter.cs:358
             #endregion  // SlicedMultipleExtensions.Slice1Impl  fields
             #region SlicedMultipleExtensions.Slice1Impl methods
-                                                                                                                                            // CSCodeFormatter.cs:191
+                                                                                                                                            // CSCodeFormatter.cs:315
+            /// <summary>
+            /// Create and initialize a new item
+            /// </summary>
+            protected override Observation.ComponentComponent Create()                                                                      // CSCodeFormatter.cs:318
+            {                                                                                                                               // CSCodeFormatter.cs:319
+                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSCodeFormatter.cs:320
+                return retVal;                                                                                                              // CSCodeFormatter.cs:365
+            }                                                                                                                               // CSCodeFormatter.cs:366
+                                                                                                                                            // CSCodeFormatter.cs:192
             /// <summary>
             /// Method to define fixed field used in slice accessor.
             /// </summary>
@@ -60,7 +69,7 @@ namespace FhirKhit.Test.R4                                                      
                 }                                                                                                                           // FhirConstruct.cs:832
                 return retVal;                                                                                                              // FhirConstruct.cs:847
             }                                                                                                                               // FhirConstruct.cs:848
-                                                                                                                                            // CSCodeFormatter.cs:198
+                                                                                                                                            // CSCodeFormatter.cs:199
             /// <summary>
             /// Return all elements at discriminator path 'code'
             /// </summary>
@@ -81,27 +90,19 @@ namespace FhirKhit.Test.R4                                                      
                 IEnumerable<CodeableConcept> results1 = GetChild_1(results0);                                                               // GenerateSimpleFhirPathMethod.cs:163
                 return results1;                                                                                                            // GenerateSimpleFhirPathMethod.cs:168
             }                                                                                                                               // GenerateSimpleFhirPathMethod.cs:172
-                                                                                                                                            // CSCodeFormatter.cs:256
+                                                                                                                                            // CSCodeFormatter.cs:257
             /// <summary>
             /// Slice1Impl constructor
             /// </summary>
-            public Slice1Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:259
-            {                                                                                                                               // CSCodeFormatter.cs:260
-                this.items = items;                                                                                                         // CSCodeFormatter.cs:261
-                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:262
-            }                                                                                                                               // CSCodeFormatter.cs:263
-                                                                                                                                            // CSCodeFormatter.cs:270
-            /// <summary>
-            /// Create and initialize a new item
-            /// </summary>
-            protected override Observation.ComponentComponent Create()                                                                      // CSCodeFormatter.cs:273
-            {                                                                                                                               // CSCodeFormatter.cs:274
-                throw new NotImplementedException();                                                                                        // CSCodeFormatter.cs:275
-            }                                                                                                                               // CSCodeFormatter.cs:276
+            public Slice1Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:260
+            {                                                                                                                               // CSCodeFormatter.cs:261
+                this.items = items;                                                                                                         // CSCodeFormatter.cs:262
+                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:263
+            }                                                                                                                               // CSCodeFormatter.cs:264
             #endregion // SlicedMultipleExtensions.Slice1Impl  methods
-        }                                                                                                                                   // CSCodeFormatter.cs:322
-        public class Slice2Impl : SliceListAccessorMultiple<Observation.ComponentComponent>                                                 // CSCodeFormatter.cs:311
-        {                                                                                                                                   // CSCodeFormatter.cs:312
+        }                                                                                                                                   // CSCodeFormatter.cs:311
+        public class Slice2Impl : SliceListAccessorMultiple<Observation.ComponentComponent>                                                 // CSCodeFormatter.cs:299
+        {                                                                                                                                   // CSCodeFormatter.cs:300
             #region SlicedMultipleExtensions.Slice2Impl fields
                                                                                                                                             // CSCodeFormatter.cs:336
             /// <summary>
@@ -115,16 +116,25 @@ namespace FhirKhit.Test.R4                                                      
             {                                                                                                                               // CSCodeFormatter.cs:343
                 Discriminators = new ISliceDiscriminator[]                                                                                  // CSCodeFormatter.cs:344
                 {                                                                                                                           // CSCodeFormatter.cs:345
-                    new SliceOnValueDiscriminator                                                                                           // CSCodeFormatter.cs:209
-                    {                                                                                                                       // CSCodeFormatter.cs:210
-                        Path = "code",                                                                                                      // CSCodeFormatter.cs:211
-                        Pattern = Fix_1()                                                                                                   // CSCodeFormatter.cs:212
-                    }                                                                                                                       // CSCodeFormatter.cs:213
+                    new SliceOnValueDiscriminator                                                                                           // CSCodeFormatter.cs:210
+                    {                                                                                                                       // CSCodeFormatter.cs:211
+                        Path = "code",                                                                                                      // CSCodeFormatter.cs:212
+                        Pattern = Fix_1()                                                                                                   // CSCodeFormatter.cs:213
+                    }                                                                                                                       // CSCodeFormatter.cs:214
                 }                                                                                                                           // CSCodeFormatter.cs:357
             };                                                                                                                              // CSCodeFormatter.cs:358
             #endregion  // SlicedMultipleExtensions.Slice2Impl  fields
             #region SlicedMultipleExtensions.Slice2Impl methods
-                                                                                                                                            // CSCodeFormatter.cs:191
+                                                                                                                                            // CSCodeFormatter.cs:315
+            /// <summary>
+            /// Create and initialize a new item
+            /// </summary>
+            protected override Observation.ComponentComponent Create()                                                                      // CSCodeFormatter.cs:318
+            {                                                                                                                               // CSCodeFormatter.cs:319
+                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSCodeFormatter.cs:320
+                return retVal;                                                                                                              // CSCodeFormatter.cs:365
+            }                                                                                                                               // CSCodeFormatter.cs:366
+                                                                                                                                            // CSCodeFormatter.cs:192
             /// <summary>
             /// Method to define fixed field used in slice accessor.
             /// </summary>
@@ -142,7 +152,7 @@ namespace FhirKhit.Test.R4                                                      
                 }                                                                                                                           // FhirConstruct.cs:832
                 return retVal;                                                                                                              // FhirConstruct.cs:847
             }                                                                                                                               // FhirConstruct.cs:848
-                                                                                                                                            // CSCodeFormatter.cs:198
+                                                                                                                                            // CSCodeFormatter.cs:199
             /// <summary>
             /// Return all elements at discriminator path 'code'
             /// </summary>
@@ -163,47 +173,39 @@ namespace FhirKhit.Test.R4                                                      
                 IEnumerable<CodeableConcept> results1 = GetChild_1(results0);                                                               // GenerateSimpleFhirPathMethod.cs:163
                 return results1;                                                                                                            // GenerateSimpleFhirPathMethod.cs:168
             }                                                                                                                               // GenerateSimpleFhirPathMethod.cs:172
-                                                                                                                                            // CSCodeFormatter.cs:256
+                                                                                                                                            // CSCodeFormatter.cs:257
             /// <summary>
             /// Slice2Impl constructor
             /// </summary>
-            public Slice2Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:259
-            {                                                                                                                               // CSCodeFormatter.cs:260
-                this.items = items;                                                                                                         // CSCodeFormatter.cs:261
-                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:262
-            }                                                                                                                               // CSCodeFormatter.cs:263
-                                                                                                                                            // CSCodeFormatter.cs:270
-            /// <summary>
-            /// Create and initialize a new item
-            /// </summary>
-            protected override Observation.ComponentComponent Create()                                                                      // CSCodeFormatter.cs:273
-            {                                                                                                                               // CSCodeFormatter.cs:274
-                throw new NotImplementedException();                                                                                        // CSCodeFormatter.cs:275
-            }                                                                                                                               // CSCodeFormatter.cs:276
+            public Slice2Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:260
+            {                                                                                                                               // CSCodeFormatter.cs:261
+                this.items = items;                                                                                                         // CSCodeFormatter.cs:262
+                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:263
+            }                                                                                                                               // CSCodeFormatter.cs:264
             #endregion // SlicedMultipleExtensions.Slice2Impl  methods
-        }                                                                                                                                   // CSCodeFormatter.cs:322
+        }                                                                                                                                   // CSCodeFormatter.cs:311
         #endregion
         #region fields SlicedMultipleExtensions fields
         #endregion
         #region methods SlicedMultipleExtensions methods
-                                                                                                                                            // CSCodeFormatter.cs:240
+                                                                                                                                            // CSCodeFormatter.cs:241
         /// <summary>
         /// Extension method to return slice Slice1 on component
         /// </summary>
-        public static Slice1Impl Slice1(this List<Observation.ComponentComponent> item)                                                     // CSCodeFormatter.cs:243
-        {                                                                                                                                   // CSCodeFormatter.cs:244
-            Slice1Impl retVal = new Slice1Impl(item);                                                                                       // CSCodeFormatter.cs:245
-            return retVal;                                                                                                                  // CSCodeFormatter.cs:246
-        }                                                                                                                                   // CSCodeFormatter.cs:247
-                                                                                                                                            // CSCodeFormatter.cs:240
+        public static Slice1Impl Slice1(this List<Observation.ComponentComponent> item)                                                     // CSCodeFormatter.cs:244
+        {                                                                                                                                   // CSCodeFormatter.cs:245
+            Slice1Impl retVal = new Slice1Impl(item);                                                                                       // CSCodeFormatter.cs:246
+            return retVal;                                                                                                                  // CSCodeFormatter.cs:247
+        }                                                                                                                                   // CSCodeFormatter.cs:248
+                                                                                                                                            // CSCodeFormatter.cs:241
         /// <summary>
         /// Extension method to return slice Slice2 on component
         /// </summary>
-        public static Slice2Impl Slice2(this List<Observation.ComponentComponent> item)                                                     // CSCodeFormatter.cs:243
-        {                                                                                                                                   // CSCodeFormatter.cs:244
-            Slice2Impl retVal = new Slice2Impl(item);                                                                                       // CSCodeFormatter.cs:245
-            return retVal;                                                                                                                  // CSCodeFormatter.cs:246
-        }                                                                                                                                   // CSCodeFormatter.cs:247
+        public static Slice2Impl Slice2(this List<Observation.ComponentComponent> item)                                                     // CSCodeFormatter.cs:244
+        {                                                                                                                                   // CSCodeFormatter.cs:245
+            Slice2Impl retVal = new Slice2Impl(item);                                                                                       // CSCodeFormatter.cs:246
+            return retVal;                                                                                                                  // CSCodeFormatter.cs:247
+        }                                                                                                                                   // CSCodeFormatter.cs:248
         #endregion
     }                                                                                                                                       // CSCodeFormatter.cs:111
 }                                                                                                                                           // CSCodeFormatter.cs:70

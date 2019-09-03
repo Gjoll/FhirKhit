@@ -19,15 +19,15 @@ namespace FhirKhit.SliceGen.CSApi
 
         /// <summary>
         /// Traverse children using simple fhir path query.
-        /// Return seleted element, or null if not found.
+        /// Return selected elements, or null if not found.
         /// </summary>
-        public bool Generate(CodeBlockNested block,
+        public bool GenerateSearchElements(CodeBlockNested block,
             String methodModifiers,
             String methodName,
             ElementNode node,
             String path)
         {
-            const String fcn = nameof(Generate);
+            const String fcn = nameof(GenerateSearchElements);
             CodeBlockNested childBlock;
             Int32 childMethodCounter = 0;
 
@@ -166,6 +166,125 @@ namespace FhirKhit.SliceGen.CSApi
                     node = next;
                 }
                 block.AppendCode($"return results{resultCounter};");
+            }
+
+            block
+                .CloseBrace()
+                ;
+
+            return true;
+        }
+
+
+
+
+
+
+        /// <summary>
+        /// Create method to set element at indicated path to pased value.
+        /// </summary>
+        public bool GenerateSetElements(CodeBlockNested block,
+            ElementNode node,
+            String baseName,
+            String path)
+        {
+            const String fcn = nameof(GenerateSetElements);
+            CodeBlockNested childBlock;
+
+            void GenerateGetChildCode(string containerName,
+                Type containerType,
+                string itemName,
+                Type itemType,
+                String fieldName)
+            {
+                if (containerName is null)
+                    throw new ArgumentNullException(nameof(containerName));
+                if (itemName is null)
+                    throw new ArgumentNullException(nameof(itemName));
+
+                String baseTypeName = containerType.FriendlyName();
+                String itemTypeName = itemType.FriendlyName();
+                 
+                if (baseTypeName.StartsWith("List<"))
+                {
+                    childBlock
+                        .AppendCode($"{itemType} {itemName}")
+                        .OpenBrace()
+                        .AppendCode($"if ({containerName}.Count == 0)")
+                        .AppendCode($"    {containerName}.Add(new {itemTypeName});")
+                        .AppendCode($"{itemName} = {containerName}[0];")
+                        .CloseBrace()
+                        ;
+                }
+                else
+                {
+                    childBlock
+                        .AppendCode($"{itemType} {itemName}")
+                        .OpenBrace()
+                        .AppendCode($"if ({containerName} == null)")
+                        .AppendCode($"    {containerName} = new ({containerType.FriendlyName()});")
+                        .AppendCode($"if ({containerName}.{fieldName} == null)")
+                        .AppendCode($"    {containerName}.{fieldName} = new ({containerType.FriendlyName()});")
+                        .AppendCode($"{itemName} = {containerName}.{fieldName};")
+                        .CloseBrace()
+                        ;
+                }
+            }
+
+            if (block is null)
+                throw new ArgumentNullException(nameof(block));
+            if (node is null)
+                throw new ArgumentNullException(nameof(node));
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
+
+            String[] pathItems = path.Split('.');
+            Int32 i = 0;
+
+            if (pathItems[0] == node.Name)
+                i += 1;
+
+            childBlock = block.AppendBlock();
+            Int32 valueCounter = 0;
+            String name = baseName;
+            Type type = node.FhirType;
+            while (i < pathItems.Length)
+            {
+                String pathItem = pathItems[i++];
+                if (pathItem.StartsWith("resolve("))
+                {
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
+                    return false;
+                }
+                else if (pathItem.StartsWith("extension(\""))
+                {
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
+                    return false;
+                }
+                else if (pathItem.StartsWith("ofType("))
+                {
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
+                    return false;
+                }
+                else
+                {
+                    if (
+                        (node.TryGetChild(pathItem, out ElementNode next) == false) ||
+                        (next == null)
+                        )
+                    {
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
+                        return false;
+                    }
+
+                    Type nodeType = node.FhirItemType;
+                    PropertyInfo childProperty = nodeType.GetPropertyByFhirName(pathItem);
+                    String childPropertyName = childProperty.Name;
+
+                    GenerateGetChildCode(name, type, childPropertyName, childProperty.PropertyType, $"value{valueCounter}");
+                    valueCounter += 1;
+                    node = next;
+                }
             }
 
             block
