@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using FhirKhit.SliceGen.R4;
 using FhirKhit.SliceGen.CodeGen;
 using FhirKhit.Test.R4;
+using System.Linq;
 
 
 #if FHIR_R2
@@ -56,6 +57,22 @@ namespace FhirKhit.SliceGen.XUnitTestsB
             Debug.Assert(item2a.Code.Coding[0].System == "http://www.test.com/SliceSystem");
             Debug.Assert(item2a.Code.Coding[0].Code == "Slice2Code");
 
+            Observation.ComponentComponent item2b = slice2.AppendNew();
+            Debug.Assert(slice1.Count == 1);
+            Debug.Assert(slice2.Count == 2);
+
+            Debug.Assert(slice2.Slices.ToArray()[0] == item2a);
+            Debug.Assert(slice2.Slices.ToArray()[1] == item2b);
+
+            Debug.Assert(item2b.Code.Coding.Count == 1);
+            Debug.Assert(item2b.Code.Coding[0].System == "http://www.test.com/SliceSystem");
+            Debug.Assert(item2b.Code.Coding[0].Code == "Slice2Code");
+
+            Debug.Assert(slice2.Remove(item2b) == true);
+            Debug.Assert(slice2.Remove(item2b) == false);
+            Debug.Assert(slice1.Count == 1);
+            Debug.Assert(slice2.Count == 1);
+            Debug.Assert(slice2.Slices.ToArray()[0] == item2a);
         }
     }
 }
