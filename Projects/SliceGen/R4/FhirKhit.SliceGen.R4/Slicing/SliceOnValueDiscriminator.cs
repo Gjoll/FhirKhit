@@ -17,16 +17,16 @@ namespace FhirKhit.SliceGen.ShareLib
     /// </summary>
     /// <typeparam name="TBase">Type of base item that is being sliced</typeparam>
     /// <typeparam name="TValue">Type of child item that is the slice value</typeparam>
-    public class SliceOnValueDiscriminator<TBase, TValue> : ISliceDiscriminator<TBase> 
+    public class SliceOnValueDiscriminator<TBase, TValue> : ISliceDiscriminator<TBase>
         where TBase : Element
         where TValue : Element
     {
         public delegate IEnumerable<TValue> ValueFilterDel(IEnumerable<TBase> item);
-        
+
         /// <summary>
         /// Path to the elements that are the discriminator values.
         /// </summary>
-        public String Path {get; set; }
+        public String Path { get; set; }
 
         /// <summary>
         /// discriminator values must match this pattern.
@@ -37,7 +37,7 @@ namespace FhirKhit.SliceGen.ShareLib
         /// Filter to return the value elements of the discriminator.
         /// </summary>
 
-        public ValueFilterDel ValueFilter {get; set;}
+        public ValueFilterDel ValueFilter { get; set; }
 
         /// <summary>
         /// Return <see langword="true"/>if item is in slice.
@@ -46,20 +46,12 @@ namespace FhirKhit.SliceGen.ShareLib
         /// <returns></returns>
         public bool IsSlice(TBase item)
         {
-            //var nav = item.ToTypedElement();
-            //EvaluationContext ctx = new FhirEvaluationContext();
-            //ITypedElement[] results = nav.Select(Path, ctx).ToArray();
-            //if ((results == null) || (results.Length == 0))
-            //    return false;
-            //if (results.Length > 1)
-            //    throw new NotImplementedException($"SliceOnValueDiscriminator.GetValue: Multiple elements found at path '{this.Path}'");
-            //ITypedElement result = results[0];
-            //Element value = result.Value as Element;
-            //if (value == null)
-            //    throw new NotImplementedException($"SliceOnValueDiscriminator.GetValue: Value is not an Element '{this.Path}'");
-            ////# TODO: I am using Matches here. SHould I be using IsExactly?
-            //return value.Matches(this.Pattern);
-            throw new NotImplementedException();
+            foreach (TValue valueItem in this.ValueFilter(new TBase[] { item }))
+            {
+                if (valueItem.Matches(this.Pattern) == true)
+                    return true;
+            }
+            return false;
         }
     }
 }
