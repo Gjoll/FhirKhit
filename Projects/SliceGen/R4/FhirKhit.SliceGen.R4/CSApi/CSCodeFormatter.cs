@@ -25,10 +25,10 @@ namespace FhirKhit.SliceGen.CSApi
 
         SliceGenerator gen;
 
-        /// <summary>
-        /// Type of the fhir resource class that the profile is derived from (the resource it profiles)
-        /// </summary>
-        Type fhirType;
+        ///// <summary>
+        ///// Type of the fhir resource class that the profile is derived from (the resource it profiles)
+        ///// </summary>
+        //Type fhirType;
 
         public CSCodeFormatter(SliceGenerator gen)
         {
@@ -201,18 +201,19 @@ namespace FhirKhit.SliceGen.CSApi
                     .AppendSummary($"Return all elements at discriminator path '{discriminator.Path}'")
                     .CloseSummary()
                     ;
-                String fhirPathMethod = $"DiscriminatorFilter_{patternCount}";
+                String valueFilterMethod = $"ValueFilter_{patternCount}";
                 Type leafType;
                 {
                     GenerateSimpleFhirPathMethod gi = new GenerateSimpleFhirPathMethod(this.gen);
-                    gi.GenerateSearchElements(methods, "private", fhirPathMethod, elementNode, discriminator.Path, out leafType);
+                    gi.GenerateSearchElements(methods, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType);
                 }
 
                 fields
                     .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
                     .OpenBrace()
                     .AppendCode($"Path = \"{discriminator.Path}\",")
-                    .AppendCode($"Pattern = {patternMethod}()")
+                    .AppendCode($"Pattern = {patternMethod}(),")
+                    .AppendCode($"ValueFilter = {valueFilterMethod}")
                     .CloseBrace(term)
                 ;
 
@@ -264,7 +265,7 @@ namespace FhirKhit.SliceGen.CSApi
                         .CloseSummary()
                         .AppendCode($"public {className}({elementNode.FhirType.FriendlyName()} items)")
                         .OpenBrace()
-                        .AppendCode($"this.items = items;")
+                        .AppendCode($"this.Items = items;")
                         .AppendCode($"this.Slicing = {fieldName};")
                         .CloseBrace()
                         ;

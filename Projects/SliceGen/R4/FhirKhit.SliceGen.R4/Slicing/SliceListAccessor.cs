@@ -11,6 +11,6 @@ namespace FhirKhit.SliceGen.ShareLib
     public abstract class SliceListAccessor<T> : SliceBaseAccessor<T>
         where T : Element
     {
-        protected List<T> items { get; set; }
+        protected List<T> Items { get; set; }
     }
 }

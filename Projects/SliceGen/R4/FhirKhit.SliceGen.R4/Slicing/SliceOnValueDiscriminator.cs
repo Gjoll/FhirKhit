@@ -21,8 +21,23 @@ namespace FhirKhit.SliceGen.ShareLib
         where TBase : Element
         where TValue : Element
     {
+        public delegate IEnumerable<TValue> ValueFilterDel(IEnumerable<TBase> item);
+        
+        /// <summary>
+        /// Path to the elements that are the discriminator values.
+        /// </summary>
         public String Path {get; set; }
-        public Base Pattern { get; set; }
+
+        /// <summary>
+        /// discriminator values must match this pattern.
+        /// </summary>
+        public Element Pattern { get; set; }
+
+        /// <summary>
+        /// Filter to return the value elements of the discriminator.
+        /// </summary>
+
+        public ValueFilterDel ValueFilter {get; set;}
 
         /// <summary>
         /// Return <see langword="true"/>if item is in slice.

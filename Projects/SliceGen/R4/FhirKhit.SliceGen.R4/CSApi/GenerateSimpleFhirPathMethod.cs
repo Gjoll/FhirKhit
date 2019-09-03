@@ -95,28 +95,16 @@ namespace FhirKhit.SliceGen.CSApi
             if (path is null)
                 throw new ArgumentNullException(nameof(path));
 
-            String fhirTypeName = node.FhirType.FriendlyName();
+            //String fhirTypeName = node.FhirType.FriendlyName();
+            String fhirItemTypeName = node.FhirItemType.FriendlyName();
+            // we need to write header after we determine leaf node type.
+            CodeBlockNested methodHeaderBlock = block.AppendBlock();
+
             block
-                .AppendCode($"{methodModifiers} IEnumerable<Element> {methodName}({fhirTypeName} head)")
                 .OpenBrace()
                 .BlankLine()
-            ;
+                ;
 
-            {
-                String fhirItemName = node.FhirType.GenericTypeArguments[0].FriendlyName();
-                if (fhirTypeName.StartsWith("List<"))
-                {
-                    block
-                        .AppendCode($"IEnumerable<{fhirItemName}> results0 = head;")
-                   ;
-                }
-                else
-                {
-                    block
-                        .AppendCode($"IEnumerable<{fhirItemName}> results0 = new {fhirItemName}[] {{ head }};")
-                   ;
-                }
-            }
             childBlock = block.AppendBlock();
 
             String[] pathItems = path.Split('.');
@@ -127,9 +115,13 @@ namespace FhirKhit.SliceGen.CSApi
 
             Int32 resultCounter = 0;
             leafType = null;
+            String resultThis = "head";
 
             while (i < pathItems.Length)
             {
+                resultCounter += 1;
+                String resultNext = $"result{resultCounter}";
+
                 String pathItem = pathItems[i++];
                 if (pathItem.StartsWith("resolve("))
                 {
@@ -161,14 +153,12 @@ namespace FhirKhit.SliceGen.CSApi
                     PropertyInfo childProperty = nodeType.GetPropertyByFhirName(pathItem);
                     String childPropertyName = childProperty.Name;
                     String childMethodName = GenerateGetChild(childPropertyName, nodeType, childProperty.PropertyType);
-                    Int32 nextResult = resultCounter + 1;
 
-                    block.AppendCode($"IEnumerable<{next.FhirItemType.FriendlyName()}> results{nextResult} = {childMethodName}(results{resultCounter});");
-
-                    resultCounter += 1;
+                    block.AppendCode($"IEnumerable<{next.FhirItemType.FriendlyName()}> {resultNext} = {childMethodName}({resultThis});");
+                    resultThis = resultNext;
                     node = next;
                 }
-                block.AppendCode($"return results{resultCounter};");
+                block.AppendCode($"return {resultThis};");
             }
 
             block
@@ -176,6 +166,10 @@ namespace FhirKhit.SliceGen.CSApi
                 ;
 
             leafType = node.FhirItemType;
+
+            methodHeaderBlock
+                .AppendCode($"{methodModifiers} IEnumerable<{leafType.FriendlyName()}> {methodName}(IEnumerable<{fhirItemTypeName}> head)")
+            ;
             return true;
         }
 

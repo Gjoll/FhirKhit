@@ -25,7 +25,7 @@ namespace FhirKhit.SliceGen.ShareLib
         {
             get
             {
-                foreach (T item in this.items)
+                foreach (T item in this.Items)
                 {
                     if (this.Slicing.IsSlice(item))
                         yield return item;
@@ -40,7 +40,7 @@ namespace FhirKhit.SliceGen.ShareLib
         public T AppendNew()
         {
             T retVal = this.Create();
-            this.items.Add(retVal);
+            this.Items.Add(retVal);
             return retVal;
         }
 
@@ -50,7 +50,7 @@ namespace FhirKhit.SliceGen.ShareLib
         /// <returns></returns>
         public bool Remove(T item)
         {
-            return this.items.Remove(item);
+            return this.Items.Remove(item);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace FhirKhit.SliceGen.ShareLib
         /// </summary>
         public void Clear()
         {
-            this.items.Clear();
+            this.Items.Clear();
         }
     }
 }
