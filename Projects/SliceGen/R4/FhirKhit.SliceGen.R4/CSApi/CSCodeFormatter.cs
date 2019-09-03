@@ -214,6 +214,9 @@ namespace FhirKhit.SliceGen.CSApi
                     .CloseBrace(term)
                 ;
 
+                GenerateSimpleFhirPathMethod g = new GenerateSimpleFhirPathMethod(this.gen);
+                g.GenerateSetElements(methodCreate, elementNode, "retVal", discriminator.Path, $"{patternMethod}()");
+
                 return true;
             }
 
@@ -319,8 +322,6 @@ namespace FhirKhit.SliceGen.CSApi
                     .OpenBrace()
                     .AppendCode($"{accessorType} retVal = new {accessorType}();")
                     ;
-                //$$GenerateSimpleFhirPathMethod g = new GenerateSimpleFhirPathMethod(this.gen);
-                //$$g.GenerateSetElements(methods, elementNode, String baseName, discriminator.Path);
 
                 patternCount = 1;
                 if (sliceName == null)

@@ -186,48 +186,44 @@ namespace FhirKhit.SliceGen.CSApi
         public bool GenerateSetElements(CodeBlockNested block,
             ElementNode node,
             String baseName,
-            String path)
+            String path,
+            String leafNodeValue = null)
         {
             const String fcn = nameof(GenerateSetElements);
             CodeBlockNested childBlock;
 
-            void GenerateGetChildCode(string containerName,
+            void GenerateSetChildCode(ref string containerName,
                 Type containerType,
                 string itemName,
                 Type itemType,
-                String fieldName)
+                String value)
             {
                 if (containerName is null)
                     throw new ArgumentNullException(nameof(containerName));
                 if (itemName is null)
                     throw new ArgumentNullException(nameof(itemName));
 
-                String baseTypeName = containerType.FriendlyName();
+                String containerTypeName = containerType.FriendlyName();
                 String itemTypeName = itemType.FriendlyName();
-                 
-                if (baseTypeName.StartsWith("List<"))
+
+                if (value == null)
+                    value = $"new {itemTypeName}()";
+
+                if (containerTypeName.StartsWith("List<"))
                 {
                     childBlock
-                        .AppendCode($"{itemType} {itemName}")
-                        .OpenBrace()
                         .AppendCode($"if ({containerName}.Count == 0)")
-                        .AppendCode($"    {containerName}.Add(new {itemTypeName});")
-                        .AppendCode($"{itemName} = {containerName}[0];")
-                        .CloseBrace()
+                        .AppendCode($"    {containerName}.Add({value});")
                         ;
+                    containerName = $"{containerName}[0].{itemName}";
                 }
                 else
                 {
                     childBlock
-                        .AppendCode($"{itemType} {itemName}")
-                        .OpenBrace()
-                        .AppendCode($"if ({containerName} == null)")
-                        .AppendCode($"    {containerName} = new ({containerType.FriendlyName()});")
-                        .AppendCode($"if ({containerName}.{fieldName} == null)")
-                        .AppendCode($"    {containerName}.{fieldName} = new ({containerType.FriendlyName()});")
-                        .AppendCode($"{itemName} = {containerName}.{fieldName};")
-                        .CloseBrace()
+                        .AppendCode($"if ({containerName}.{itemName} == null)")
+                        .AppendCode($"    {containerName}.{itemName} = {value};")
                         ;
+                    containerName = $"{containerName}.{itemName}";
                 }
             }
 
@@ -245,12 +241,10 @@ namespace FhirKhit.SliceGen.CSApi
                 i += 1;
 
             childBlock = block.AppendBlock();
-            Int32 valueCounter = 0;
-            String name = baseName;
-            Type type = node.FhirType;
+            String fullName = baseName;
             while (i < pathItems.Length)
             {
-                String pathItem = pathItems[i++];
+                String pathItem = pathItems[i];
                 if (pathItem.StartsWith("resolve("))
                 {
                     this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
@@ -277,20 +271,15 @@ namespace FhirKhit.SliceGen.CSApi
                         return false;
                     }
 
-                    Type nodeType = node.FhirItemType;
-                    PropertyInfo childProperty = nodeType.GetPropertyByFhirName(pathItem);
-                    String childPropertyName = childProperty.Name;
-
-                    GenerateGetChildCode(name, type, childPropertyName, childProperty.PropertyType, $"value{valueCounter}");
-                    valueCounter += 1;
+                    PropertyInfo childProperty = node.FhirItemType.GetPropertyByFhirName(pathItem);
+                    String value = null;
+                    if (i == pathItems.Length - 1)
+                        value = leafNodeValue;
+                    GenerateSetChildCode(ref fullName, node.FhirItemType, childProperty.Name, next.FhirType, value);
                     node = next;
                 }
+                i += 1;
             }
-
-            block
-                .CloseBrace()
-                ;
-
             return true;
         }
     }
