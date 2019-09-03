@@ -18,42 +18,42 @@ namespace FhirKhit.Test.R4                                                      
     public static class SlicedMultipleExtensions
     {                                                                                                                                       // CSCodeFormatter.cs:90
         #region SlicedMultipleExtensions sub classes
-        public class Slice1Impl : SliceListAccessorMultiple<Observation.ComponentComponent>                                                 // CSCodeFormatter.cs:302
-        {                                                                                                                                   // CSCodeFormatter.cs:303
+        public class Slice1Impl : SliceListAccessorMultiple<Observation.ComponentComponent>                                                 // CSCodeFormatter.cs:304
+        {                                                                                                                                   // CSCodeFormatter.cs:305
             #region SlicedMultipleExtensions.Slice1Impl fields
-                                                                                                                                            // CSCodeFormatter.cs:337
+                                                                                                                                            // CSCodeFormatter.cs:339
             /// <summary>
             /// Pointer to element containing all slice(s) elements
             /// </summary>
-                                                                                                                                            // CSCodeFormatter.cs:340
+                                                                                                                                            // CSCodeFormatter.cs:342
             /// <summary>
             /// slicing discriminator for Observation.component slice Slice1
             /// </summary>
-            static Slicing slicing = new Slicing                                                                                            // CSCodeFormatter.cs:343
-            {                                                                                                                               // CSCodeFormatter.cs:344
-                Discriminators = new ISliceDiscriminator[]                                                                                  // CSCodeFormatter.cs:345
-                {                                                                                                                           // CSCodeFormatter.cs:346
-                    new SliceOnValueDiscriminator                                                                                           // CSCodeFormatter.cs:210
-                    {                                                                                                                       // CSCodeFormatter.cs:211
-                        Path = "code",                                                                                                      // CSCodeFormatter.cs:212
-                        Pattern = Fix_1()                                                                                                   // CSCodeFormatter.cs:213
-                    }                                                                                                                       // CSCodeFormatter.cs:214
-                }                                                                                                                           // CSCodeFormatter.cs:358
-            };                                                                                                                              // CSCodeFormatter.cs:359
+            static Slicing<Observation.ComponentComponent> slicing = new Slicing<Observation.ComponentComponent>                            // CSCodeFormatter.cs:345
+            {                                                                                                                               // CSCodeFormatter.cs:346
+                Discriminators = new ISliceDiscriminator<Observation.ComponentComponent>[]                                                  // CSCodeFormatter.cs:347
+                {                                                                                                                           // CSCodeFormatter.cs:348
+                    new SliceOnValueDiscriminator<Observation.ComponentComponent, CodeableConcept>                                          // CSCodeFormatter.cs:212
+                    {                                                                                                                       // CSCodeFormatter.cs:213
+                        Path = "code",                                                                                                      // CSCodeFormatter.cs:214
+                        Pattern = Fix_1()                                                                                                   // CSCodeFormatter.cs:215
+                    }                                                                                                                       // CSCodeFormatter.cs:216
+                }                                                                                                                           // CSCodeFormatter.cs:360
+            };                                                                                                                              // CSCodeFormatter.cs:361
             #endregion  // SlicedMultipleExtensions.Slice1Impl  fields
             #region SlicedMultipleExtensions.Slice1Impl methods
-                                                                                                                                            // CSCodeFormatter.cs:318
+                                                                                                                                            // CSCodeFormatter.cs:320
             /// <summary>
             /// Create and initialize a new item
             /// </summary>
-            protected override Observation.ComponentComponent Create()                                                                      // CSCodeFormatter.cs:321
-            {                                                                                                                               // CSCodeFormatter.cs:322
-                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSCodeFormatter.cs:323
-                if (retVal.Code == null)                                                                                                    // GenerateSimpleFhirPathMethod.cs:223
-                    retVal.Code = Fix_1();                                                                                                  // GenerateSimpleFhirPathMethod.cs:224
-                return retVal;                                                                                                              // CSCodeFormatter.cs:366
-            }                                                                                                                               // CSCodeFormatter.cs:367
-                                                                                                                                            // CSCodeFormatter.cs:192
+            protected override Observation.ComponentComponent Create()                                                                      // CSCodeFormatter.cs:323
+            {                                                                                                                               // CSCodeFormatter.cs:324
+                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSCodeFormatter.cs:325
+                if (retVal.Code == null)                                                                                                    // GenerateSimpleFhirPathMethod.cs:227
+                    retVal.Code = Fix_1();                                                                                                  // GenerateSimpleFhirPathMethod.cs:228
+                return retVal;                                                                                                              // CSCodeFormatter.cs:368
+            }                                                                                                                               // CSCodeFormatter.cs:369
+                                                                                                                                            // CSCodeFormatter.cs:193
             /// <summary>
             /// Method to define fixed field used in slice accessor.
             /// </summary>
@@ -71,74 +71,74 @@ namespace FhirKhit.Test.R4                                                      
                 }                                                                                                                           // FhirConstruct.cs:832
                 return retVal;                                                                                                              // FhirConstruct.cs:847
             }                                                                                                                               // FhirConstruct.cs:848
-                                                                                                                                            // CSCodeFormatter.cs:199
+                                                                                                                                            // CSCodeFormatter.cs:200
             /// <summary>
             /// Return all elements at discriminator path 'code'
             /// </summary>
-            private IEnumerable<Element> GetDiscriminatorElements(List<Observation.ComponentComponent> head)                                // GenerateSimpleFhirPathMethod.cs:99
-            {                                                                                                                               // GenerateSimpleFhirPathMethod.cs:100
-                                                                                                                                            // GenerateSimpleFhirPathMethod.cs:101
-                IEnumerable<Observation.ComponentComponent> results0 = head;                                                                // GenerateSimpleFhirPathMethod.cs:109
-                IEnumerable<CodeableConcept> GetChild_1(IEnumerable<Observation.ComponentComponent> inputElements)                          // GenerateSimpleFhirPathMethod.cs:54
-                {                                                                                                                           // GenerateSimpleFhirPathMethod.cs:55
-                    if (inputElements != null)                                                                                              // GenerateSimpleFhirPathMethod.cs:56
-                    {                                                                                                                       // GenerateSimpleFhirPathMethod.cs:57
-                        foreach (Observation.ComponentComponent inputElement in inputElements)                                              // GenerateSimpleFhirPathMethod.cs:58
-                        {                                                                                                                   // GenerateSimpleFhirPathMethod.cs:59
-                            yield return inputElement.Code;                                                                                 // GenerateSimpleFhirPathMethod.cs:74
-                        }                                                                                                                   // GenerateSimpleFhirPathMethod.cs:79
-                    }                                                                                                                       // GenerateSimpleFhirPathMethod.cs:80
-                }                                                                                                                           // GenerateSimpleFhirPathMethod.cs:81
-                IEnumerable<CodeableConcept> results1 = GetChild_1(results0);                                                               // GenerateSimpleFhirPathMethod.cs:163
-                return results1;                                                                                                            // GenerateSimpleFhirPathMethod.cs:168
-            }                                                                                                                               // GenerateSimpleFhirPathMethod.cs:172
-                                                                                                                                            // CSCodeFormatter.cs:260
+            private IEnumerable<Element> DiscriminatorFilter_1(List<Observation.ComponentComponent> head)                                   // GenerateSimpleFhirPathMethod.cs:100
+            {                                                                                                                               // GenerateSimpleFhirPathMethod.cs:101
+                                                                                                                                            // GenerateSimpleFhirPathMethod.cs:102
+                IEnumerable<Observation.ComponentComponent> results0 = head;                                                                // GenerateSimpleFhirPathMethod.cs:110
+                IEnumerable<CodeableConcept> GetChild_1(IEnumerable<Observation.ComponentComponent> inputElements)                          // GenerateSimpleFhirPathMethod.cs:55
+                {                                                                                                                           // GenerateSimpleFhirPathMethod.cs:56
+                    if (inputElements != null)                                                                                              // GenerateSimpleFhirPathMethod.cs:57
+                    {                                                                                                                       // GenerateSimpleFhirPathMethod.cs:58
+                        foreach (Observation.ComponentComponent inputElement in inputElements)                                              // GenerateSimpleFhirPathMethod.cs:59
+                        {                                                                                                                   // GenerateSimpleFhirPathMethod.cs:60
+                            yield return inputElement.Code;                                                                                 // GenerateSimpleFhirPathMethod.cs:75
+                        }                                                                                                                   // GenerateSimpleFhirPathMethod.cs:80
+                    }                                                                                                                       // GenerateSimpleFhirPathMethod.cs:81
+                }                                                                                                                           // GenerateSimpleFhirPathMethod.cs:82
+                IEnumerable<CodeableConcept> results1 = GetChild_1(results0);                                                               // GenerateSimpleFhirPathMethod.cs:166
+                return results1;                                                                                                            // GenerateSimpleFhirPathMethod.cs:171
+            }                                                                                                                               // GenerateSimpleFhirPathMethod.cs:175
+                                                                                                                                            // CSCodeFormatter.cs:262
             /// <summary>
             /// Slice1Impl constructor
             /// </summary>
-            public Slice1Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:263
-            {                                                                                                                               // CSCodeFormatter.cs:264
-                this.items = items;                                                                                                         // CSCodeFormatter.cs:265
-                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:266
-            }                                                                                                                               // CSCodeFormatter.cs:267
+            public Slice1Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:265
+            {                                                                                                                               // CSCodeFormatter.cs:266
+                this.items = items;                                                                                                         // CSCodeFormatter.cs:267
+                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:268
+            }                                                                                                                               // CSCodeFormatter.cs:269
             #endregion // SlicedMultipleExtensions.Slice1Impl  methods
-        }                                                                                                                                   // CSCodeFormatter.cs:314
-        public class Slice2Impl : SliceListAccessorMultiple<Observation.ComponentComponent>                                                 // CSCodeFormatter.cs:302
-        {                                                                                                                                   // CSCodeFormatter.cs:303
+        }                                                                                                                                   // CSCodeFormatter.cs:316
+        public class Slice2Impl : SliceListAccessorMultiple<Observation.ComponentComponent>                                                 // CSCodeFormatter.cs:304
+        {                                                                                                                                   // CSCodeFormatter.cs:305
             #region SlicedMultipleExtensions.Slice2Impl fields
-                                                                                                                                            // CSCodeFormatter.cs:337
+                                                                                                                                            // CSCodeFormatter.cs:339
             /// <summary>
             /// Pointer to element containing all slice(s) elements
             /// </summary>
-                                                                                                                                            // CSCodeFormatter.cs:340
+                                                                                                                                            // CSCodeFormatter.cs:342
             /// <summary>
             /// slicing discriminator for Observation.component slice Slice2
             /// </summary>
-            static Slicing slicing = new Slicing                                                                                            // CSCodeFormatter.cs:343
-            {                                                                                                                               // CSCodeFormatter.cs:344
-                Discriminators = new ISliceDiscriminator[]                                                                                  // CSCodeFormatter.cs:345
-                {                                                                                                                           // CSCodeFormatter.cs:346
-                    new SliceOnValueDiscriminator                                                                                           // CSCodeFormatter.cs:210
-                    {                                                                                                                       // CSCodeFormatter.cs:211
-                        Path = "code",                                                                                                      // CSCodeFormatter.cs:212
-                        Pattern = Fix_1()                                                                                                   // CSCodeFormatter.cs:213
-                    }                                                                                                                       // CSCodeFormatter.cs:214
-                }                                                                                                                           // CSCodeFormatter.cs:358
-            };                                                                                                                              // CSCodeFormatter.cs:359
+            static Slicing<Observation.ComponentComponent> slicing = new Slicing<Observation.ComponentComponent>                            // CSCodeFormatter.cs:345
+            {                                                                                                                               // CSCodeFormatter.cs:346
+                Discriminators = new ISliceDiscriminator<Observation.ComponentComponent>[]                                                  // CSCodeFormatter.cs:347
+                {                                                                                                                           // CSCodeFormatter.cs:348
+                    new SliceOnValueDiscriminator<Observation.ComponentComponent, CodeableConcept>                                          // CSCodeFormatter.cs:212
+                    {                                                                                                                       // CSCodeFormatter.cs:213
+                        Path = "code",                                                                                                      // CSCodeFormatter.cs:214
+                        Pattern = Fix_1()                                                                                                   // CSCodeFormatter.cs:215
+                    }                                                                                                                       // CSCodeFormatter.cs:216
+                }                                                                                                                           // CSCodeFormatter.cs:360
+            };                                                                                                                              // CSCodeFormatter.cs:361
             #endregion  // SlicedMultipleExtensions.Slice2Impl  fields
             #region SlicedMultipleExtensions.Slice2Impl methods
-                                                                                                                                            // CSCodeFormatter.cs:318
+                                                                                                                                            // CSCodeFormatter.cs:320
             /// <summary>
             /// Create and initialize a new item
             /// </summary>
-            protected override Observation.ComponentComponent Create()                                                                      // CSCodeFormatter.cs:321
-            {                                                                                                                               // CSCodeFormatter.cs:322
-                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSCodeFormatter.cs:323
-                if (retVal.Code == null)                                                                                                    // GenerateSimpleFhirPathMethod.cs:223
-                    retVal.Code = Fix_1();                                                                                                  // GenerateSimpleFhirPathMethod.cs:224
-                return retVal;                                                                                                              // CSCodeFormatter.cs:366
-            }                                                                                                                               // CSCodeFormatter.cs:367
-                                                                                                                                            // CSCodeFormatter.cs:192
+            protected override Observation.ComponentComponent Create()                                                                      // CSCodeFormatter.cs:323
+            {                                                                                                                               // CSCodeFormatter.cs:324
+                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSCodeFormatter.cs:325
+                if (retVal.Code == null)                                                                                                    // GenerateSimpleFhirPathMethod.cs:227
+                    retVal.Code = Fix_1();                                                                                                  // GenerateSimpleFhirPathMethod.cs:228
+                return retVal;                                                                                                              // CSCodeFormatter.cs:368
+            }                                                                                                                               // CSCodeFormatter.cs:369
+                                                                                                                                            // CSCodeFormatter.cs:193
             /// <summary>
             /// Method to define fixed field used in slice accessor.
             /// </summary>
@@ -156,60 +156,60 @@ namespace FhirKhit.Test.R4                                                      
                 }                                                                                                                           // FhirConstruct.cs:832
                 return retVal;                                                                                                              // FhirConstruct.cs:847
             }                                                                                                                               // FhirConstruct.cs:848
-                                                                                                                                            // CSCodeFormatter.cs:199
+                                                                                                                                            // CSCodeFormatter.cs:200
             /// <summary>
             /// Return all elements at discriminator path 'code'
             /// </summary>
-            private IEnumerable<Element> GetDiscriminatorElements(List<Observation.ComponentComponent> head)                                // GenerateSimpleFhirPathMethod.cs:99
-            {                                                                                                                               // GenerateSimpleFhirPathMethod.cs:100
-                                                                                                                                            // GenerateSimpleFhirPathMethod.cs:101
-                IEnumerable<Observation.ComponentComponent> results0 = head;                                                                // GenerateSimpleFhirPathMethod.cs:109
-                IEnumerable<CodeableConcept> GetChild_1(IEnumerable<Observation.ComponentComponent> inputElements)                          // GenerateSimpleFhirPathMethod.cs:54
-                {                                                                                                                           // GenerateSimpleFhirPathMethod.cs:55
-                    if (inputElements != null)                                                                                              // GenerateSimpleFhirPathMethod.cs:56
-                    {                                                                                                                       // GenerateSimpleFhirPathMethod.cs:57
-                        foreach (Observation.ComponentComponent inputElement in inputElements)                                              // GenerateSimpleFhirPathMethod.cs:58
-                        {                                                                                                                   // GenerateSimpleFhirPathMethod.cs:59
-                            yield return inputElement.Code;                                                                                 // GenerateSimpleFhirPathMethod.cs:74
-                        }                                                                                                                   // GenerateSimpleFhirPathMethod.cs:79
-                    }                                                                                                                       // GenerateSimpleFhirPathMethod.cs:80
-                }                                                                                                                           // GenerateSimpleFhirPathMethod.cs:81
-                IEnumerable<CodeableConcept> results1 = GetChild_1(results0);                                                               // GenerateSimpleFhirPathMethod.cs:163
-                return results1;                                                                                                            // GenerateSimpleFhirPathMethod.cs:168
-            }                                                                                                                               // GenerateSimpleFhirPathMethod.cs:172
-                                                                                                                                            // CSCodeFormatter.cs:260
+            private IEnumerable<Element> DiscriminatorFilter_1(List<Observation.ComponentComponent> head)                                   // GenerateSimpleFhirPathMethod.cs:100
+            {                                                                                                                               // GenerateSimpleFhirPathMethod.cs:101
+                                                                                                                                            // GenerateSimpleFhirPathMethod.cs:102
+                IEnumerable<Observation.ComponentComponent> results0 = head;                                                                // GenerateSimpleFhirPathMethod.cs:110
+                IEnumerable<CodeableConcept> GetChild_1(IEnumerable<Observation.ComponentComponent> inputElements)                          // GenerateSimpleFhirPathMethod.cs:55
+                {                                                                                                                           // GenerateSimpleFhirPathMethod.cs:56
+                    if (inputElements != null)                                                                                              // GenerateSimpleFhirPathMethod.cs:57
+                    {                                                                                                                       // GenerateSimpleFhirPathMethod.cs:58
+                        foreach (Observation.ComponentComponent inputElement in inputElements)                                              // GenerateSimpleFhirPathMethod.cs:59
+                        {                                                                                                                   // GenerateSimpleFhirPathMethod.cs:60
+                            yield return inputElement.Code;                                                                                 // GenerateSimpleFhirPathMethod.cs:75
+                        }                                                                                                                   // GenerateSimpleFhirPathMethod.cs:80
+                    }                                                                                                                       // GenerateSimpleFhirPathMethod.cs:81
+                }                                                                                                                           // GenerateSimpleFhirPathMethod.cs:82
+                IEnumerable<CodeableConcept> results1 = GetChild_1(results0);                                                               // GenerateSimpleFhirPathMethod.cs:166
+                return results1;                                                                                                            // GenerateSimpleFhirPathMethod.cs:171
+            }                                                                                                                               // GenerateSimpleFhirPathMethod.cs:175
+                                                                                                                                            // CSCodeFormatter.cs:262
             /// <summary>
             /// Slice2Impl constructor
             /// </summary>
-            public Slice2Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:263
-            {                                                                                                                               // CSCodeFormatter.cs:264
-                this.items = items;                                                                                                         // CSCodeFormatter.cs:265
-                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:266
-            }                                                                                                                               // CSCodeFormatter.cs:267
+            public Slice2Impl(List<Observation.ComponentComponent> items)                                                                   // CSCodeFormatter.cs:265
+            {                                                                                                                               // CSCodeFormatter.cs:266
+                this.items = items;                                                                                                         // CSCodeFormatter.cs:267
+                this.Slicing = slicing;                                                                                                     // CSCodeFormatter.cs:268
+            }                                                                                                                               // CSCodeFormatter.cs:269
             #endregion // SlicedMultipleExtensions.Slice2Impl  methods
-        }                                                                                                                                   // CSCodeFormatter.cs:314
+        }                                                                                                                                   // CSCodeFormatter.cs:316
         #endregion
         #region fields SlicedMultipleExtensions fields
         #endregion
         #region methods SlicedMultipleExtensions methods
-                                                                                                                                            // CSCodeFormatter.cs:244
+                                                                                                                                            // CSCodeFormatter.cs:246
         /// <summary>
         /// Extension method to return slice Slice1 on component
         /// </summary>
-        public static Slice1Impl Slice1(this List<Observation.ComponentComponent> item)                                                     // CSCodeFormatter.cs:247
-        {                                                                                                                                   // CSCodeFormatter.cs:248
-            Slice1Impl retVal = new Slice1Impl(item);                                                                                       // CSCodeFormatter.cs:249
-            return retVal;                                                                                                                  // CSCodeFormatter.cs:250
-        }                                                                                                                                   // CSCodeFormatter.cs:251
-                                                                                                                                            // CSCodeFormatter.cs:244
+        public static Slice1Impl Slice1(this List<Observation.ComponentComponent> item)                                                     // CSCodeFormatter.cs:249
+        {                                                                                                                                   // CSCodeFormatter.cs:250
+            Slice1Impl retVal = new Slice1Impl(item);                                                                                       // CSCodeFormatter.cs:251
+            return retVal;                                                                                                                  // CSCodeFormatter.cs:252
+        }                                                                                                                                   // CSCodeFormatter.cs:253
+                                                                                                                                            // CSCodeFormatter.cs:246
         /// <summary>
         /// Extension method to return slice Slice2 on component
         /// </summary>
-        public static Slice2Impl Slice2(this List<Observation.ComponentComponent> item)                                                     // CSCodeFormatter.cs:247
-        {                                                                                                                                   // CSCodeFormatter.cs:248
-            Slice2Impl retVal = new Slice2Impl(item);                                                                                       // CSCodeFormatter.cs:249
-            return retVal;                                                                                                                  // CSCodeFormatter.cs:250
-        }                                                                                                                                   // CSCodeFormatter.cs:251
+        public static Slice2Impl Slice2(this List<Observation.ComponentComponent> item)                                                     // CSCodeFormatter.cs:249
+        {                                                                                                                                   // CSCodeFormatter.cs:250
+            Slice2Impl retVal = new Slice2Impl(item);                                                                                       // CSCodeFormatter.cs:251
+            return retVal;                                                                                                                  // CSCodeFormatter.cs:252
+        }                                                                                                                                   // CSCodeFormatter.cs:253
         #endregion
     }                                                                                                                                       // CSCodeFormatter.cs:111
 }                                                                                                                                           // CSCodeFormatter.cs:70

@@ -12,8 +12,31 @@ namespace FhirKhit.SliceGen.ShareLib
         where T : Element
     {
         /// <summary>
+        /// Return number of items in Slices.
+        /// </summary>
+        Int32 Count { get; }
+
+        /// <summary>
         /// Return all items that are member of this slice.
         /// </summary>
         IEnumerable<T> Slices { get; }
+
+        /// <summary>
+        /// Create new element and add it to collection.
+        /// </summary>
+        /// <returns></returns>
+        T AppendNew();
+
+        /// <summary>
+        /// Remove indicated element.
+        /// </summary>
+        /// <returns></returns>
+        bool Remove(T item);
+
+        /// <summary>
+        /// clear all elements.
+        /// </summary>
+        /// <returns></returns>
+        void Clear();
     }
 }

@@ -25,7 +25,8 @@ namespace FhirKhit.SliceGen.CSApi
             String methodModifiers,
             String methodName,
             ElementNode node,
-            String path)
+            String path,
+            out Type leafType)
         {
             const String fcn = nameof(GenerateSearchElements);
             CodeBlockNested childBlock;
@@ -125,6 +126,8 @@ namespace FhirKhit.SliceGen.CSApi
                 i += 1;
 
             Int32 resultCounter = 0;
+            leafType = null;
+
             while (i < pathItems.Length)
             {
                 String pathItem = pathItems[i++];
@@ -172,6 +175,7 @@ namespace FhirKhit.SliceGen.CSApi
                 .CloseBrace()
                 ;
 
+            leafType = node.FhirItemType;
             return true;
         }
 

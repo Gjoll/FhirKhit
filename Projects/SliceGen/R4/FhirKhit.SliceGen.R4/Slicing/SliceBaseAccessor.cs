@@ -14,7 +14,7 @@ namespace FhirKhit.SliceGen.ShareLib
         /// <summary>
         /// Access slicing data
         /// </summary>
-        protected Slicing Slicing {get; set; }
+        protected Slicing<T> Slicing {get; set; }
 
         /// <summary>
         /// Initialize fixed values in item to match that of slice.

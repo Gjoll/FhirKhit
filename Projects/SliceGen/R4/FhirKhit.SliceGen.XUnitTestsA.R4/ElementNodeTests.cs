@@ -18,7 +18,7 @@ using FhirKhit.Tools.R3;
 using FhirKhit.Tools.R4;
 #endif
 
-namespace FhirKhit.SliceGen.XUnitTests
+namespace FhirKhit.SliceGen.XUnitTestsA
 {
     /// <summary>
     /// Test the output test files generated in FhirKhit.SliceGen.XUnitTests.

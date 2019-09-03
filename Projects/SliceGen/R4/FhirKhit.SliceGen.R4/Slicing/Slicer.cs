@@ -5,12 +5,12 @@ using System.Text;
 
 namespace FhirKhit.SliceGen.ShareLib
 {
-    public class Slicer<TBase>
-        where TBase : Base
+    public class Slicer<T>
+        where T : Element
     {
-        Slicing sliceDiscriminator;
+        Slicing<T> sliceDiscriminator;
 
-        public Slicer(Slicing sliceDiscriminator)
+        public Slicer(Slicing<T> sliceDiscriminator)
         {
             this.sliceDiscriminator = sliceDiscriminator;
         }

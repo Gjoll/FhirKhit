@@ -5,8 +5,9 @@ using System.Text;
 
 namespace FhirKhit.SliceGen.ShareLib
 {
-    public interface ISliceDiscriminator
+    public interface ISliceDiscriminator<T>
+        where T : Element
     {
-        bool IsSlice(Element item);
+        bool IsSlice(T item);
     }
 }

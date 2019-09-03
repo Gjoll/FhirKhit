@@ -21,7 +21,7 @@ using FhirKhit.Tools.R3;
 using FhirKhit.Tools.R4;
 #endif
 
-namespace FhirKhit.SliceGen.XUnitTests
+namespace FhirKhit.SliceGen.XUnitTestsA
 {
     public class GenCreateTests
     {
@@ -44,7 +44,6 @@ namespace FhirKhit.SliceGen.XUnitTests
               "Data",
               "US Core");
         }
-
 
         StructureDefinition CreateObservation(String name)
         {

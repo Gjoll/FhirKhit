@@ -174,6 +174,8 @@ namespace FhirKhit.SliceGen.CSApi
             ElementDefinition.DiscriminatorComponent[] discriminators = null;
             bool retVal = true;
             String accessorType = String.Empty;
+            String baseTypeName;
+            String baseItemTypeName;
 
             bool DefineSliceOnValueDiscriminator(ElementNode sliceNode,
                 ElementDefinition.DiscriminatorComponent discriminator,
@@ -186,7 +188,6 @@ namespace FhirKhit.SliceGen.CSApi
                 String sliceName = sliceNode.Element.SliceName;
 
                 String patternMethod = $"Fix_{patternCount}";
-                patternCount += 1;
 
                 methods
                     .OpenSummary()
@@ -200,14 +201,15 @@ namespace FhirKhit.SliceGen.CSApi
                     .AppendSummary($"Return all elements at discriminator path '{discriminator.Path}'")
                     .CloseSummary()
                     ;
-                String fhirPathMethod = "GetDiscriminatorElements";
+                String fhirPathMethod = $"DiscriminatorFilter_{patternCount}";
+                Type leafType;
                 {
                     GenerateSimpleFhirPathMethod gi = new GenerateSimpleFhirPathMethod(this.gen);
-                    gi.GenerateSearchElements(methods, "private", fhirPathMethod, elementNode, discriminator.Path);
+                    gi.GenerateSearchElements(methods, "private", fhirPathMethod, elementNode, discriminator.Path, out leafType);
                 }
 
                 fields
-                    .AppendCode($"new SliceOnValueDiscriminator")
+                    .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
                     .OpenBrace()
                     .AppendCode($"Path = \"{discriminator.Path}\",")
                     .AppendCode($"Pattern = {patternMethod}()")
@@ -216,6 +218,7 @@ namespace FhirKhit.SliceGen.CSApi
 
                 GenerateSimpleFhirPathMethod g = new GenerateSimpleFhirPathMethod(this.gen);
                 g.GenerateSetElements(methodCreate, elementNode, "retVal", discriminator.Path, $"{patternMethod}()");
+                patternCount += 1;
 
                 return true;
             }
@@ -238,7 +241,6 @@ namespace FhirKhit.SliceGen.CSApi
             void CreateSliceAccessor(ElementNode sliceNode, String sliceClassName)
             {
                 String sliceName = sliceNode.Element.SliceName;
-                String baseTypeName = elementNode.FhirType.FriendlyName();
 
                 this.methodsBlock
                     .OpenSummary()
@@ -340,9 +342,9 @@ namespace FhirKhit.SliceGen.CSApi
                         .OpenSummary()
                         .AppendSummary($"slicing discriminator for {elementNode.Path} slice {sliceName}")
                         .CloseSummary()
-                        .AppendCode($"static Slicing {sliceFieldName} = new Slicing")
+                        .AppendCode($"static Slicing<{baseItemTypeName}> {sliceFieldName} = new Slicing<{baseItemTypeName}>")
                         .OpenBrace()
-                        .AppendCode($"Discriminators = new ISliceDiscriminator[]")
+                        .AppendCode($"Discriminators = new ISliceDiscriminator<{baseItemTypeName}>[]")
                         .OpenBrace()
                         ;
 
@@ -373,6 +375,9 @@ namespace FhirKhit.SliceGen.CSApi
 
             if (elementNode is null)
                 throw new ArgumentNullException(nameof(elementNode));
+
+            baseTypeName = elementNode.FhirType.FriendlyName();
+            baseItemTypeName = elementNode.FhirItemType.FriendlyName();
 
             ElementDefinition.SlicingComponent sliceComponent = elementNode.Element.Slicing;
             if (sliceComponent.Ordered == true)

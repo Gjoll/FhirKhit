@@ -8,13 +8,14 @@ namespace FhirKhit.SliceGen.ShareLib
     /// <summary>
     /// Implements class to handle slice slice discriminator.
     /// </summary>
-    public class Slicing
+    public class Slicing<T>
+        where T : Element
     {
-        public IEnumerable<ISliceDiscriminator> Discriminators { get; set; }
+        public IEnumerable<ISliceDiscriminator<T>> Discriminators { get; set; }
 
-        public bool IsSlice(Element item)
+        public bool IsSlice(T item)
         {
-            foreach (ISliceDiscriminator discriminator in Discriminators)
+            foreach (ISliceDiscriminator<T> discriminator in Discriminators)
             {
                 if (discriminator.IsSlice(item) == false)
                     return false;
