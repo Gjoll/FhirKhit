@@ -165,6 +165,21 @@ namespace FhirKhit.SliceGen.CSApi
             return node.Element.Fixed;
         }
 
+        String FixName(String path) => this.PathName("Fix", path);
+        String ValueFilterName(String path) => this.PathName("ValueFilter", path);
+        String PathName(String prefix, String path)
+        {
+            String[] pathParts = path.Split('.');
+            StringBuilder sb = new StringBuilder();
+            sb.Append(prefix);
+            for (Int32 i = 1; i < pathParts.Length; i++)
+            {
+                String pathPart = pathParts[i].ToMachineName();
+                sb.Append(pathPart);
+            }
+            return sb.ToString();
+        }
+
         /// <summary>
         /// Create slices on indicated node.
         /// </summary>
@@ -174,7 +189,6 @@ namespace FhirKhit.SliceGen.CSApi
         {
             const String fcn = nameof(CreateSlice);
 
-            Int32 patternCount = 1;
             CodeBlockNested fields;
             CodeBlockNested methods;
             CodeBlockNested methodCreate;
@@ -188,41 +202,27 @@ namespace FhirKhit.SliceGen.CSApi
                 ElementDefinition.DiscriminatorComponent discriminator,
                 String term)
             {
-                Element b = this.GetItem(sliceNode, discriminator.Path);
-                if (b == null)
-                    return false;
-
                 String sliceName = sliceNode.Element.SliceName;
-
-                String patternMethod = $"Fix_{patternCount}";
-
-                methods
-                    .BlankLine()
-                    .Summary($"Method to define fixed field used in slice accessor.")
-                    ;
-                FhirConstruct.Construct(methods, b, patternMethod, "static", out String temp);
 
                 methods
                     .BlankLine()
                     .Summary($"Return all elements at discriminator path '{discriminator.Path}'")
                     ;
-                String valueFilterMethod = $"ValueFilter_{patternCount}";
+                String valueFilterMethod = this.ValueFilterName($"{sliceNode.Path}.{discriminator.Path}");
                 Type leafType;
                 {
                     this.GenerateSearchElements(methods, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType);
                 }
 
+                String fullPath = $"{sliceNode.Path}.{discriminator.Path}";
                 fields
                     .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
                     .OpenBrace()
                     .AppendCode($"Path = \"{discriminator.Path}\",")
-                    .AppendCode($"Pattern = {patternMethod}(),")
+                    .AppendCode($"Pattern = {this.FixName(fullPath)}(),")
                     .AppendCode($"ValueFilter = {valueFilterMethod}")
                     .CloseBrace(term)
                 ;
-
-                this.GenerateSetElements(methodCreate, elementNode, "retVal", discriminator.Path, $"{patternMethod}()");
-                patternCount += 1;
 
                 return true;
             }
@@ -311,6 +311,22 @@ namespace FhirKhit.SliceGen.CSApi
                 out String sliceClassName,
                 out String sliceInterfaceName)
             {
+                void CreateFixCode(ElementNode node)
+                {
+                    if (node.Element.Fixed != null)
+                    {
+                        FhirConstruct.Construct(methods,
+                            node.Element.Fixed,
+                            this.FixName(node.Path),
+                            "static",
+                            out String temp);
+                    }
+                    foreach (ElementNode child in node.Children)
+                    {
+                        CreateFixCode(child);
+                    }
+                }
+
                 void CreateConstructor(String className, String fieldName)
                 {
                     methods
@@ -322,6 +338,7 @@ namespace FhirKhit.SliceGen.CSApi
                         .AppendCode($"this.Slicing = {fieldName};")
                         .CloseBrace()
                         ;
+                    CreateFixCode(sliceNode);
                 }
 
                 String sliceName = sliceNode.Element.SliceName;
@@ -383,7 +400,6 @@ namespace FhirKhit.SliceGen.CSApi
                     .AppendCode($"{accessorType} retVal = new {accessorType}();")
                     ;
 
-                patternCount = 1;
                 if (sliceName == null)
                 {
                     this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{elementNode.Path}' lacks slice name");
@@ -622,7 +638,7 @@ namespace FhirKhit.SliceGen.CSApi
 
 
         /// <summary>
-        /// Create method to set element at indicated path to pased value.
+        /// Create method to set element at indicated path to passed value.
         /// </summary>
         public bool GenerateSetElements(CodeBlockNested block,
             ElementNode node,
