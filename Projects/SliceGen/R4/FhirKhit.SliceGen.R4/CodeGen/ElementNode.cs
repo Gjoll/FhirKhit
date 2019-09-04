@@ -24,13 +24,13 @@ namespace FhirKhit.SliceGen.R4
 
             public ElementNode Create(IEnumerable<ElementDefinition> items)
             {
-                ElementNode head = new ElementNode(null, null);
+                ElementNode head = new ElementNode(null, null, null, String.Empty);
                 foreach (ElementDefinition item in items)
                     this.Load(head, item);
                 return head;
             }
 
-            Type GetFhirType(Type parent, String fhirName)
+            Type GetFhirType(Type parent, String fhirName, out String propertyName)
             {
                 if (fhirName.EndsWith("[x]"))
                     fhirName = fhirName.Substring(0, fhirName.Length - 3);
@@ -40,13 +40,16 @@ namespace FhirKhit.SliceGen.R4
                     if (fhirElement != null)
                     {
                         if (fhirElement.Name == fhirName)
+                        {
+                            propertyName = pi.Name;
                             return pi.PropertyType;
+                        }
                     }
                 }
                 parent = parent.BaseType;
                 if (parent == typeof(Object))
                     throw new Exception($"{parent.FriendlyName()}.{fhirName} not found");
-                return GetFhirType(parent, fhirName);
+                return GetFhirType(parent, fhirName, out propertyName);
             }
 
             public void Load(ElementNode head,
@@ -100,18 +103,20 @@ namespace FhirKhit.SliceGen.R4
                     {
                         if (nodeElement.TryGetChild(pathItem, out ElementNode dummy) == true)
                             throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
+                        String propertyName;
                         Type fhirType;
                         if (index == 0)
                         {
+                            propertyName = String.Empty;
                             if (ModelInfo.FhirTypeToCsType.TryGetValue(pathItem, out fhirType) == false)
                                 throw new Exception($"Unknown resource '{pathItem}'");
                         }
                         else
                         {
-                            fhirType = GetFhirType(nodeElement.FhirItemType, pathItem);
+                            fhirType = GetFhirType(nodeElement.FhirItemType, pathItem, out propertyName);
                         }
 
-                        leafNode = new ElementNode(loadItem, fhirType);
+                        leafNode = new ElementNode(nodeElement, loadItem, fhirType, propertyName);
                         nodeElement.children.Add(pathItem, leafNode);
                     }
                     else
@@ -121,8 +126,8 @@ namespace FhirKhit.SliceGen.R4
                         if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementNode dummySlice) == true)
                             throw new Exception($"Error element node slice {nodeElement.Element.SliceName} already exists in {loadItem.Path}");
 
-                        Type fhirType = GetFhirType(nodeElement.FhirItemType, pathItem);
-                        leafNode = new ElementNode(loadItem, fhirType);
+                        Type fhirType = GetFhirType(nodeElement.FhirItemType, pathItem, out String propertyName);
+                        leafNode = new ElementNode(nodeElement, loadItem, fhirType, propertyName);
                         sliceNode.slices.Add(loadItem.SliceName, leafNode);
                     }
 
@@ -140,6 +145,11 @@ namespace FhirKhit.SliceGen.R4
         }
 
         public const String BaseSlice = "";
+
+        /// <summary>
+        /// Node that this node is a child of.
+        /// </summary>
+        public ElementNode Parent { get; set; }
 
         /// <summary>
         /// Return true if element defgintion, ro one or more of its children are have a fixed value.
@@ -200,6 +210,11 @@ namespace FhirKhit.SliceGen.R4
         /// </summary>
         public String Name => this.Element.Path.LastPathPart();
 
+        /// <summary>
+        /// c# class PropertyName.
+        /// </summary>
+        public String PropertyName { get; set; }
+
         public IEnumerable<ElementNode> Slices => this.slices.Values;
         public IEnumerable<ElementNode> Children => this.children.Values;
 
@@ -208,11 +223,15 @@ namespace FhirKhit.SliceGen.R4
         Dictionary<String, ElementNode> children = new Dictionary<String, ElementNode>();
 
 
-        public ElementNode(ElementDefinition element,
-            Type fhirType)
+        public ElementNode(ElementNode parent,
+            ElementDefinition element,
+            Type fhirType,
+            String propertyName)
         {
+            this.Parent = parent;
             this.Element = element;
             this.FhirType = fhirType;
+            this.PropertyName = propertyName;
         }
 
         public static ElementNode Create(StructureDefinition sDef)
@@ -234,6 +253,28 @@ namespace FhirKhit.SliceGen.R4
         public bool TryGetSlice(String name, out ElementNode node)
         {
             return this.slices.TryGetValue(name, out node);
+        }
+
+        public String PropertyPath()
+        {
+            ElementNode node = this;
+
+            List<String> propertyNames = new List<string>();
+            while (String.IsNullOrEmpty(node.PropertyName) == false)
+            {
+                propertyNames.Insert(0, node.PropertyName);
+                node = node.Parent;
+            }
+
+            StringBuilder sb = new StringBuilder();
+            foreach (String propertyName in propertyNames)
+            {
+                if (sb.Length > 0)
+                    sb.Append(".");
+                sb.Append(propertyName);
+            }
+
+            return sb.ToString();
         }
 
         /// <summary>

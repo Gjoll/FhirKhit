@@ -312,35 +312,27 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        public CodeBlockNested OpenSummary([CallerFilePath] String filePath = "",
-            [CallerLineNumber] Int32 lineNumber = 0)
-        {
-            this
-                .BlankLine(filePath, lineNumber)
-                .AppendLine("/// <summary>")
-                ;
-            return this;
-        }
-
-        public CodeBlockNested AppendSummary(String text)
-        {
-            this.AppendLine($"/// {text}");
-            return this;
-        }
-
-        public CodeBlockNested AppendSummary(IEnumerable<String> text)
+        public CodeBlockNested Summary(params String[] text)
         {
             if (text is null)
                 throw new ArgumentNullException(nameof(text));
 
+            this.AppendLine("/// <summary>");
             foreach (String line in text)
-                this.AppendSummary(line);
+                this.AppendLine($"/// {line}");
+            this.AppendLine("/// </summary>");
             return this;
         }
 
-        public CodeBlockNested CloseSummary()
+        public CodeBlockNested Example(params String[] text)
         {
-            this.AppendLine("/// </summary>");
+            if (text is null)
+                throw new ArgumentNullException(nameof(text));
+
+            this.AppendLine("/// <example>");
+            foreach (String line in text)
+                this.AppendLine($"/// {line}");
+            this.AppendLine("/// </example>");
             return this;
         }
 
