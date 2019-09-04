@@ -137,20 +137,48 @@ namespace FhirKhit.SliceGen.R4
                         Child = null
                     };
                 }
+
+                //nodeElement.Load(loadItem);
+                //ElementTreeSlice nodeSlice = nodeElement.GetSlice(sliceName);
+                //nodeSlice.Load(loadItem);
             }
         }
 
         public const String BaseSlice = "";
 
         /// <summary>
-        /// True if any child of this node contains a fixed value.
-        /// </summary>
-        public bool HasFixedValueInChild { get; set; } = false;
-
-        /// <summary>
         /// Node that this node is a child of.
         /// </summary>
         public ElementNode Parent { get; set; }
+
+        /// <summary>
+        /// Return true if element defgintion, ro one or more of its children are have a fixed value.
+        /// </summary>
+        public bool IsFixed
+        {
+            get
+            {
+                if (this.Element.Fixed != null)
+                    return true;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Return true if element defgintion, ro one or more of its children are have a fixed value.
+        /// </summary>
+        public bool HasFixedChild
+        {
+            get
+            {
+                foreach (ElementNode child in this.Children)
+                {
+                    if (child.IsFixed)
+                        return true;
+                }
+                return false;
+            }
+        }
 
         /// <summary>
         /// fhir element definition

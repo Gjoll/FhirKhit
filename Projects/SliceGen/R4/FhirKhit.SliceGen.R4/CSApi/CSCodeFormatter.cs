@@ -191,7 +191,6 @@ namespace FhirKhit.SliceGen.CSApi
 
             CodeBlockNested fields;
             CodeBlockNested methods;
-            CodeBlockNested methodCreate;
             ElementDefinition.DiscriminatorComponent[] discriminators = null;
             bool retVal = true;
             String accessorType = String.Empty;
@@ -214,7 +213,7 @@ namespace FhirKhit.SliceGen.CSApi
                     this.GenerateSearchElements(methods, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType);
                 }
 
-                String fullPath = $"{sliceNode.Path}.{discriminator.Path}";
+                String fullPath = $"{sliceNode.Path}.{sliceNode.Name}.{discriminator.Path}";
                 fields
                     .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
                     .OpenBrace()
@@ -386,18 +385,9 @@ namespace FhirKhit.SliceGen.CSApi
 
                 methods = this.subClassBlock.AppendBlock();
                 methods.AppendLine($"#region {this.className}.{sliceClassName} methods");
-                methodCreate = methods.AppendBlock();
 
                 this.subClassBlock
                     .CloseBrace()
-                    ;
-
-                methodCreate
-                    .BlankLine()
-                    .Summary($"Create and initialize a new item")
-                    .AppendCode($"protected override {accessorType} Create()")
-                    .OpenBrace()
-                    .AppendCode($"{accessorType} retVal = new {accessorType}();")
                     ;
 
                 if (sliceName == null)
@@ -434,7 +424,25 @@ namespace FhirKhit.SliceGen.CSApi
                     CreateConstructor(sliceClassName, sliceFieldName);
                 }
 
-                methodCreate
+                methods
+                    .BlankLine()
+                    .Summary($"Create and initialize a new item")
+                    .AppendCode($"protected override {accessorType} Create()")
+                    .OpenBrace()
+                    .AppendCode($"{accessorType} retVal = new {accessorType}();")
+                    ;
+                foreach (ElementNode child in sliceNode.Children)
+                {
+
+                    if (child.IsFixed)
+                    {
+                        String fullPath = $"{sliceNode.Path}.{sliceNode.Name}.{child.Path}";
+                        methods
+                            .AppendCode($"retVal.{child.PropertyName} {this.FixName(fullPath)}();")
+                            ;
+                    }
+                }
+                methods
                     .AppendCode($"return retVal;")
                     .CloseBrace()
                     ;
