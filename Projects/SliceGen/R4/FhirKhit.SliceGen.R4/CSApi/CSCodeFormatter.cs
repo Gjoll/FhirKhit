@@ -91,6 +91,7 @@ namespace FhirKhit.SliceGen.CSApi
 
             this.classBlock = this.nameSpaceBlock.AppendBlock();
             this.classBlock
+                .BlankLine()
                 .Summary($"Extension class to add slicing helper methods to {fhirTypeName}")
                 .AppendLine($"public static class {className}")
                 .OpenBrace()
@@ -196,11 +197,13 @@ namespace FhirKhit.SliceGen.CSApi
                 String patternMethod = $"Fix_{patternCount}";
 
                 methods
+                    .BlankLine()
                     .Summary($"Method to define fixed field used in slice accessor.")
                     ;
                 FhirConstruct.Construct(methods, b, patternMethod, "static", out String temp);
 
                 methods
+                    .BlankLine()
                     .Summary($"Return all elements at discriminator path '{discriminator.Path}'")
                     ;
                 String valueFilterMethod = $"ValueFilter_{patternCount}";
@@ -239,7 +242,7 @@ namespace FhirKhit.SliceGen.CSApi
                 }
             }
 
-            void CreateSliceAccessor(ElementNode sliceNode, String sliceClassName)
+            void CreateSliceAccessor(ElementNode sliceNode, String sliceClassName, String sliceInterfaceName)
             {
                 String sliceName = sliceNode.Element.SliceName;
                 String propertyPath = sliceNode.PropertyName;
@@ -248,15 +251,15 @@ namespace FhirKhit.SliceGen.CSApi
                 switch (SliceAccessorType(sliceNode))
                 {
                     case SliceAccessorTypes.Error:
-                        sliceBaseClassName = $"**UNKNOWN** ";
+                        sliceBaseClassName = $"??";
                         break;
 
                     case SliceAccessorTypes.Single:
-                        sliceBaseClassName = $"ISliceListAccessorSingle<{accessorType}>";
+                        sliceBaseClassName = $"ISliceAccessorSingle<{accessorType}>";
                         break;
 
                     case SliceAccessorTypes.Multiple:
-                        sliceBaseClassName = $"ISliceListAccessorMultiple<{accessorType}>";
+                        sliceBaseClassName = $"ISliceAccessorMultiple<{accessorType}>";
                         break;
 
                     default:
@@ -264,12 +267,13 @@ namespace FhirKhit.SliceGen.CSApi
                 }
 
                 this.methodsBlock
+                    .BlankLine()
                     .Summary($"Extension method to return slice {sliceName} on {elementNode.Name}")
                     .Example(
                         $"{this.fhirBaseClassType.FriendlyName()} resource = new {this.fhirBaseClassType.FriendlyName()}();",
-                        $"{sliceBaseClassName} sliceAccessor = resource.{propertyPath}.{sliceName}();"
+                        $"{this.className}.{sliceInterfaceName} sliceAccessor = resource.{propertyPath}.{sliceName}();"
                         )
-                    .AppendCode($"public static {sliceClassName} {sliceName}(this {baseTypeName} item)")
+                    .AppendCode($"public static {sliceInterfaceName} {sliceName}(this {baseTypeName} item)")
                     .OpenBrace()
                     .AppendCode($"{sliceClassName} retVal = new {sliceClassName}(item);")
                     .AppendCode($"return retVal;")
@@ -303,11 +307,14 @@ namespace FhirKhit.SliceGen.CSApi
                 }
             }
 
-            void CreateSliceAccessorClass(ElementNode sliceNode, out String sliceClassName)
+            void CreateSliceAccessorClass(ElementNode sliceNode,
+                out String sliceClassName,
+                out String sliceInterfaceName)
             {
                 void CreateConstructor(String className, String fieldName)
                 {
                     methods
+                        .BlankLine()
                         .Summary($"{className} constructor")
                         .AppendCode($"public {className}({elementNode.FhirType.FriendlyName()} items)")
                         .OpenBrace()
@@ -319,21 +326,26 @@ namespace FhirKhit.SliceGen.CSApi
 
                 String sliceName = sliceNode.Element.SliceName;
                 sliceClassName = $"{sliceName}Impl";
+                sliceInterfaceName = $"I{sliceName}";
                 String sliceBaseClassName;
+                String sliceBaseInterfaceName;
                 String baseType = elementNode.FhirType.FriendlyName();
 
                 switch (SliceAccessorType(sliceNode))
                 {
                     case SliceAccessorTypes.Error:
-                        sliceBaseClassName = " **ERROR** ";
+                        sliceBaseClassName = "??";
+                        sliceBaseInterfaceName = "??";
                         break;
 
                     case SliceAccessorTypes.Single:
                         sliceBaseClassName = $"SliceListAccessorSingle<{accessorType}>";
+                        sliceBaseInterfaceName = $"ISliceAccessorSingle<{accessorType}>";
                         break;
 
                     case SliceAccessorTypes.Multiple:
                         sliceBaseClassName = $"SliceListAccessorMultiple<{accessorType}>";
+                        sliceBaseInterfaceName = $"ISliceAccessorMultiple<{accessorType}>";
                         break;
 
                     default:
@@ -341,7 +353,14 @@ namespace FhirKhit.SliceGen.CSApi
                 }
 
                 this.subClassBlock
-                    .AppendCode($"public class {sliceClassName} : {sliceBaseClassName}")
+                    .BlankLine()
+                    .Summary($"public interface that implements the functionality of slice {sliceClassName}")
+                    .AppendCode($"public interface {sliceInterfaceName} : {sliceBaseInterfaceName}")
+                    .OpenBrace()
+                    .CloseBrace()
+                    .BlankLine()
+                    .Summary($"private class that implements the functionality of slice {sliceClassName}")
+                    .AppendCode($"class {sliceClassName} : {sliceBaseClassName}, {sliceInterfaceName}")
                     .OpenBrace()
                     ;
 
@@ -357,6 +376,7 @@ namespace FhirKhit.SliceGen.CSApi
                     ;
 
                 methodCreate
+                    .BlankLine()
                     .Summary($"Create and initialize a new item")
                     .AppendCode($"protected override {accessorType} Create()")
                     .OpenBrace()
@@ -374,6 +394,7 @@ namespace FhirKhit.SliceGen.CSApi
                     String sliceFieldName = $"slicing";
 
                     fields
+                        .BlankLine()
                         .Summary($"slicing discriminator for {elementNode.Path} slice {sliceName}")
                         .AppendCode($"static Slicing<{baseItemTypeName}> {sliceFieldName} = new Slicing<{baseItemTypeName}>")
                         .OpenBrace()
@@ -429,8 +450,8 @@ namespace FhirKhit.SliceGen.CSApi
             accessorType = elementNode.FhirItemType.FriendlyName();
             foreach (ElementNode sliceNode in elementNode.Slices)
             {
-                CreateSliceAccessorClass(sliceNode, out String sliceClassName);
-                CreateSliceAccessor(sliceNode, sliceClassName);
+                CreateSliceAccessorClass(sliceNode, out String sliceClassName, out String sliceInterfaceName);
+                CreateSliceAccessor(sliceNode, sliceClassName, sliceInterfaceName);
             }
 
             return retVal;
