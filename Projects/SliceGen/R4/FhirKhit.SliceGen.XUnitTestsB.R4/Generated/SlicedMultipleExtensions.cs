@@ -100,7 +100,7 @@ namespace FhirKhit.Test.R4                                                      
             protected override Observation.ComponentComponent Create()                                                                      // CSCodeFormatter.cs:462
             {                                                                                                                               // CSCodeFormatter.cs:463
                 Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSCodeFormatter.cs:464
-                retVal.Code = FixComponentSlice1Code();                                                                                     // CSCodeFormatter.cs:438
+                retVal.Code = FixComponentSlice1Code();                                                                                     // CSCodeFormatter.cs:441
                 return retVal;                                                                                                              // CSCodeFormatter.cs:468
             }                                                                                                                               // CSCodeFormatter.cs:469
             #endregion // SlicedMultipleExtensions.Slice1Impl  methods
@@ -187,7 +187,7 @@ namespace FhirKhit.Test.R4                                                      
             protected override Observation.ComponentComponent Create()                                                                      // CSCodeFormatter.cs:462
             {                                                                                                                               // CSCodeFormatter.cs:463
                 Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSCodeFormatter.cs:464
-                retVal.Code = FixComponentSlice2Code();                                                                                     // CSCodeFormatter.cs:438
+                retVal.Code = FixComponentSlice2Code();                                                                                     // CSCodeFormatter.cs:441
                 return retVal;                                                                                                              // CSCodeFormatter.cs:468
             }                                                                                                                               // CSCodeFormatter.cs:469
             #endregion // SlicedMultipleExtensions.Slice2Impl  methods

@@ -432,27 +432,27 @@ namespace FhirKhit.SliceGen.CSApi
                 {
                     foreach (ElementNode setNodeChild in setNode.Children)
                     {
+                        String childPropertyPath = $"{propertyPath}.{setNodeChild.PropertyName}";
                         if (setNodeChild.IsFixed)
                         {
-                            methods
-                                .AppendCode($"{propertyPath}.{setNodeChild.PropertyName} = {this.FixName(setNodeChild.SlicePath())}();")
-                                ;
+                            if (setNodeChild.IsListType)
+                                methods.AppendCode($"{childPropertyPath}.Add({this.FixName(setNodeChild.SlicePath())}());");
+                            else
+                                methods.AppendCode($"{childPropertyPath} = {this.FixName(setNodeChild.SlicePath())}();");
                         }
                         else if (setNodeChild.HasFixedChild)
                         {
-                            String setNodeChildTypeName = setNodeChild.FhirType.FriendlyName();
-
+                            String childItemTypeName = setNodeChild.FhirItemType.FriendlyName();
                             if (setNodeChild.IsListType)
                             {
+                                methods.AppendCode($"{childPropertyPath}.Add( new {childItemTypeName}());");
+                                SetFixedValues(setNodeChild, $"{childPropertyPath}[0]");
                             }
                             else
                             {
+                                methods.AppendCode($"{childPropertyPath} = new {childItemTypeName}();");
+                                SetFixedValues(setNodeChild, childPropertyPath);
                             }
-
-                            //$methods
-                            //$    .AppendCode($"{childPropertyPath} = new ;")
-                            //    ;
-                            //$SetFixedValues(setNodeChild, childPropertyPath, childFhirPath);
                         }
                     }
                 }
