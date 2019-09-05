@@ -108,7 +108,7 @@ namespace FhirKhit.SliceGen.R4
             }
             while (true)
             {
-                Int32 i = s.IndexOfAny(new char[] { ' ', '-'});
+                Int32 i = s.IndexOfAny(new char[] { ' ', '-' });
                 if (i < 0)
                     break;
                 String firstPart = s.Substring(0, i);
@@ -139,8 +139,6 @@ namespace FhirKhit.SliceGen.R4
                 default:
                     return Int32.Parse(value);
             }
-
         }
-
     }
 }

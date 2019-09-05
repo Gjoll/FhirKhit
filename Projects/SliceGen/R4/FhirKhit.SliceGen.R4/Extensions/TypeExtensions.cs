@@ -36,6 +36,16 @@ namespace FhirKhit.SliceGen.R4
             ;
             return name;
         }
+        static bool IsType(this Type t, String typeName)
+        {
+            if (t is null)
+                throw new ArgumentNullException(nameof(t));
+            return t.Name == typeName;
+        }
+
+        public static bool IsListType(this Type t) => t.IsType("List`1");
+        public static bool IsCodeType(this Type t) => t.IsType("Code`1");
+        public static bool IsNullableType(this Type t) => t.IsType("Nullable`1");
 
         public static string FriendlyName(this Type type)
         {

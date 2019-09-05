@@ -190,6 +190,8 @@ namespace FhirKhit.SliceGen.R4
         /// </summary>
         public Type FhirType { get; set; }
 
+        public bool IsListType => FhirType.IsListType();
+
         /// <summary>
         /// c# type for this element
         /// </summary>
@@ -211,9 +213,43 @@ namespace FhirKhit.SliceGen.R4
         }
 
         /// <summary>
-        /// Element Definition path.
+        /// Element Definition path, including slice names.
         /// </summary>
-        public String Path => Element.Path;
+        public String[] SlicePath()
+        {
+            if (this.slicePath == null)
+            {
+                List<String> path = new List<string>();
+                ElementNode node = this;
+                while (node.Element != null)
+                {
+                    if (node.Element.SliceName != null)
+                        path.Insert(0, node.Element.SliceName);
+                    path.Insert(0, node.Name);
+                    node = node.Parent;
+                }
+                this.slicePath = path.ToArray();
+            }
+            return this.slicePath;
+        }
+        String[] slicePath = null;
+
+        public String FullPath()
+        {
+            if (fullPath == null)
+            {
+                StringBuilder sb = new StringBuilder();
+                foreach (String s in this.SlicePath())
+                {
+                    if (sb.Length > 0)
+                        sb.Append(".");
+                    sb.Append(s);
+                }
+                this.fullPath = sb.ToString();
+            }
+            return fullPath;
+        }
+        String fullPath = null;
 
         /// <summary>
         /// Element name.

@@ -4,6 +4,7 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Specification.Source;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -101,9 +102,10 @@ namespace FhirKhit.SliceGen.R4
             }
 
             foreach (var child in node.Children)
+            {
                 if (ProcessElementSlices(child) == false)
                     retVal = false;
-
+            }
             return retVal;
         }
 

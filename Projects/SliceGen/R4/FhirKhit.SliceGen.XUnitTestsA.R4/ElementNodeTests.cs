@@ -152,7 +152,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             Assert.True(head.Children.Count() == 1);
 
             Assert.True(head.TryGetElementNode("Observation.component", out ElementNode observationComponent) == true);
-            Assert.True(observationComponent.Path == "Observation.component");
+            Assert.True(observationComponent.FullPath() == "Observation.component");
             Assert.True(observationComponent.Slices.Any() == false);
             Assert.True(observationComponent.Element.Slicing.ElementId == "5");
             Assert.True(observationComponent.Element.Slicing.Ordered == false);

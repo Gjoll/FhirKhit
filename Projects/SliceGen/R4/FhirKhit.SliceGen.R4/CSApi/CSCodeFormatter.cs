@@ -157,7 +157,7 @@ namespace FhirKhit.SliceGen.CSApi
                 }
                 if (next == null)
                 {
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"Cant find child node '{pathPart}' in '{sliceNode.Path}'");
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"Cant find child node '{pathPart}' in '{sliceNode.FullPath()}'");
                     return null;
                 }
                 node = next;
@@ -165,16 +165,15 @@ namespace FhirKhit.SliceGen.CSApi
             return node.Element.Fixed;
         }
 
-        String FixName(String path) => this.PathName("Fix", path);
-        String ValueFilterName(String path) => this.PathName("ValueFilter", path);
-        String PathName(String prefix, String path)
+        String FixName(String[] path) => this.PathName("Fix", path);
+        String ValueFilterName(String[] path) => this.PathName("ValueFilter", path);
+        String PathName(String prefix, String[] path)
         {
-            String[] pathParts = path.Split('.');
             StringBuilder sb = new StringBuilder();
             sb.Append(prefix);
-            for (Int32 i = 1; i < pathParts.Length; i++)
+            for (Int32 i = 1; i < path.Length; i++)
             {
-                String pathPart = pathParts[i].ToMachineName();
+                String pathPart = path[i].ToMachineName();
                 sb.Append(pathPart);
             }
             return sb.ToString();
@@ -207,18 +206,17 @@ namespace FhirKhit.SliceGen.CSApi
                     .BlankLine()
                     .Summary($"Return all elements at discriminator path '{discriminator.Path}'")
                     ;
-                String valueFilterMethod = this.ValueFilterName($"{sliceNode.Path}.{discriminator.Path}");
+                String valueFilterMethod = this.ValueFilterName(this.MakePath(sliceNode.SlicePath(), discriminator.Path));
                 Type leafType;
                 {
                     this.GenerateSearchElements(methods, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType);
                 }
 
-                String fullPath = $"{sliceNode.Path}.{sliceNode.Name}.{discriminator.Path}";
                 fields
                     .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
                     .OpenBrace()
                     .AppendCode($"Path = \"{discriminator.Path}\",")
-                    .AppendCode($"Pattern = {this.FixName(fullPath)}(),")
+                    .AppendCode($"Pattern = {this.FixName(this.MakePath(sliceNode.SlicePath(), discriminator.Path))}(),")
                     .AppendCode($"ValueFilter = {valueFilterMethod}")
                     .CloseBrace(term)
                 ;
@@ -236,7 +234,7 @@ namespace FhirKhit.SliceGen.CSApi
                         return DefineSliceOnValueDiscriminator(sliceNode, discriminator, term);
 
                     default:
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: discriminator.Type {discriminator.Type} currently implemented. '{elementNode.Path}'");
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: discriminator.Type {discriminator.Type} currently implemented. '{elementNode.FullPath()}'");
                         return false;
                 }
             }
@@ -284,12 +282,12 @@ namespace FhirKhit.SliceGen.CSApi
             {
                 String baseType = sliceNode.FhirType.FriendlyName();
 
-                if (baseType.StartsWith("List<"))
+                if (sliceNode.IsListType)
                 {
                     switch (sliceNode.Element.Max.ToMax())
                     {
                         case 0:
-                            this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{sliceNode.Path}' has max of 0. Not sure what I am supposed to do!");
+                            this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{sliceNode.FullPath()}' has max of 0. Not sure what I am supposed to do!");
                             return SliceAccessorTypes.Error;
 
                         case 1:
@@ -301,7 +299,7 @@ namespace FhirKhit.SliceGen.CSApi
                 }
                 else
                 {
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{sliceNode.Path}' unknown base type {baseType}");
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{sliceNode.FullPath()}' unknown base type {baseType}");
                     return SliceAccessorTypes.Error;
                 }
             }
@@ -316,7 +314,7 @@ namespace FhirKhit.SliceGen.CSApi
                     {
                         FhirConstruct.Construct(methods,
                             node.Element.Fixed,
-                            this.FixName(node.Path),
+                            this.FixName(node.SlicePath()),
                             "static",
                             out String temp);
                     }
@@ -337,7 +335,6 @@ namespace FhirKhit.SliceGen.CSApi
                         .AppendCode($"this.Slicing = {fieldName};")
                         .CloseBrace()
                         ;
-                    CreateFixCode(sliceNode);
                 }
 
                 String sliceName = sliceNode.Element.SliceName;
@@ -392,7 +389,7 @@ namespace FhirKhit.SliceGen.CSApi
 
                 if (sliceName == null)
                 {
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{elementNode.Path}' lacks slice name");
+                    this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{elementNode.FullPath()}' lacks slice name");
                     retVal = false;
                 }
                 else
@@ -401,7 +398,7 @@ namespace FhirKhit.SliceGen.CSApi
 
                     fields
                         .BlankLine()
-                        .Summary($"slicing discriminator for {elementNode.Path} slice {sliceName}")
+                        .Summary($"slicing discriminator for {elementNode.FullPath()} slice {sliceName}")
                         .AppendCode($"static Slicing<{baseItemTypeName}> {sliceFieldName} = new Slicing<{baseItemTypeName}>")
                         .OpenBrace()
                         .AppendCode($"Discriminators = new ISliceDiscriminator<{baseItemTypeName}>[]")
@@ -422,8 +419,43 @@ namespace FhirKhit.SliceGen.CSApi
                         ;
 
                     CreateConstructor(sliceClassName, sliceFieldName);
+                    CreateFixCode(sliceNode);
                 }
 
+                // Recursively crete code to set values that are fixed in object.
+                // If a child object needs to be fixed, make sure that parent objects are created
+                // as well.
+                // i.e. if a.b.c = fix(...)
+                // than we need to create a and a.b as well as setting a.b.c.
+                void SetFixedValues(ElementNode setNode,
+                    String propertyPath)
+                {
+                    foreach (ElementNode setNodeChild in setNode.Children)
+                    {
+                        if (setNodeChild.IsFixed)
+                        {
+                            methods
+                                .AppendCode($"{propertyPath}.{setNodeChild.PropertyName} = {this.FixName(setNodeChild.SlicePath())}();")
+                                ;
+                        }
+                        else if (setNodeChild.HasFixedChild)
+                        {
+                            String setNodeChildTypeName = setNodeChild.FhirType.FriendlyName();
+
+                            if (setNodeChild.IsListType)
+                            {
+                            }
+                            else
+                            {
+                            }
+
+                            //$methods
+                            //$    .AppendCode($"{childPropertyPath} = new ;")
+                            //    ;
+                            //$SetFixedValues(setNodeChild, childPropertyPath, childFhirPath);
+                        }
+                    }
+                }
                 methods
                     .BlankLine()
                     .Summary($"Create and initialize a new item")
@@ -431,17 +463,7 @@ namespace FhirKhit.SliceGen.CSApi
                     .OpenBrace()
                     .AppendCode($"{accessorType} retVal = new {accessorType}();")
                     ;
-                foreach (ElementNode child in sliceNode.Children)
-                {
-
-                    if (child.IsFixed)
-                    {
-                        String fullPath = $"{sliceNode.Path}.{sliceNode.Name}.{child.Path}";
-                        methods
-                            .AppendCode($"retVal.{child.PropertyName} {this.FixName(fullPath)}();")
-                            ;
-                    }
-                }
+                SetFixedValues(sliceNode, "retVal");
                 methods
                     .AppendCode($"return retVal;")
                     .CloseBrace()
@@ -460,13 +482,13 @@ namespace FhirKhit.SliceGen.CSApi
             ElementDefinition.SlicingComponent sliceComponent = elementNode.Element.Slicing;
             if (sliceComponent.Ordered == true)
             {
-                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Ordered == true not currently implemented. '{elementNode.Path}'");
+                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Ordered == true not currently implemented. '{elementNode.FullPath()}'");
                 return false;
             }
 
             if (sliceComponent.Rules != ElementDefinition.SlicingRules.Open)
             {
-                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Rules != Open not currently implemented. '{elementNode.Path}'");
+                this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: Slicing.Rules != Open not currently implemented. '{elementNode.FullPath()}'");
                 return false;
             }
 
@@ -508,15 +530,13 @@ namespace FhirKhit.SliceGen.CSApi
                     throw new ArgumentNullException(nameof(childPropertyName));
 
                 String inputTypeBaseName = inputType.FriendlyName();
-                String outputTypeBaseName = outputType.FriendlyName();
                 childMethodCounter += 1;
                 String childMethodName = $"GetChild_{childMethodCounter}";
                 String outputTypeItemName;
-                if (outputTypeBaseName.StartsWith("List<"))
+                if (outputType.IsListType())
                     outputTypeItemName = outputType.GenericTypeArguments[0].FriendlyName();
                 else
-                    outputTypeItemName = outputTypeBaseName;
-
+                    outputTypeItemName = outputType.FriendlyName();
 
                 childBlock
                     .AppendCode($"IEnumerable<{outputTypeItemName}> {childMethodName}(IEnumerable<{inputTypeBaseName}> inputElements)")
@@ -527,7 +547,7 @@ namespace FhirKhit.SliceGen.CSApi
                     .OpenBrace()
                     ;
 
-                if (outputType.FriendlyName().StartsWith("List<"))
+                if (outputType.IsListType())
                 {
                     childBlock
                         .AppendCode($"foreach ({outputType.FriendlyName()} childElement in inputElement.{childPropertyName})")
@@ -640,11 +660,6 @@ namespace FhirKhit.SliceGen.CSApi
             return true;
         }
 
-
-
-
-
-
         /// <summary>
         /// Create method to set element at indicated path to passed value.
         /// </summary>
@@ -674,7 +689,7 @@ namespace FhirKhit.SliceGen.CSApi
                 if (value == null)
                     value = $"new {itemTypeName}()";
 
-                if (containerTypeName.StartsWith("List<"))
+                if (containerType.IsListType())
                 {
                     childBlock
                         .AppendCode($"if ({containerName}.Count == 0)")
@@ -748,5 +763,26 @@ namespace FhirKhit.SliceGen.CSApi
             return true;
         }
         #endregion
+
+        public String[] MakePath(String subPath)
+        {
+            if (subPath is null)
+                throw new ArgumentNullException(nameof(subPath));
+
+            List<String> retVal = new List<string>();
+            foreach (String pathPart in subPath.Split('.'))
+            {
+                foreach (String pathPart2 in pathPart.Split(':'))
+                    retVal.Add(pathPart2);
+            }
+            return retVal.ToArray();
+        }
+
+        public String[] MakePath(String[] basePath, String subPath)
+        {
+            List<String> retVal = new List<string>(basePath);
+            retVal.AddRange(MakePath(subPath));
+            return retVal.ToArray();
+        }
     }
 }
