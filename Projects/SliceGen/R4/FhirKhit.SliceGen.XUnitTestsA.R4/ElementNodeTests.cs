@@ -8,6 +8,7 @@ using Xunit;
 using System.Text;
 using Hl7.Fhir.Serialization;
 using FhirKhit.SliceGen.R4;
+using System.IO.Compression;
 
 
 #if FHIR_R2
@@ -199,10 +200,21 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         [Trait("Test", "test")]
         public void BreastAbnormalityTest()
         {
-            FhirJsonParser fjp = new FhirJsonParser();
-            String jsonText = File.ReadAllText(@"TestFiles\breastrad-BreastAbnormality.json");
-            StructureDefinition s = fjp.Parse<StructureDefinition>(jsonText);
-            ElementNode head = ElementNode.Create(s);
+            String zipPath = Path.Combine("TestFiles", "BreastRadiology.zip");
+            using (ZipArchive archive = ZipFile.OpenRead(zipPath))
+            {
+                FhirJsonParser fjp = new FhirJsonParser();
+                foreach (ZipArchiveEntry entry in archive.Entries)
+                {
+                    if (entry.FullName.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
+                    {
+                        StreamReader streamReader = new StreamReader(entry.Open());
+                        String jsonText = streamReader.ReadToEndAsync().WaitResult();
+                        StructureDefinition s = fjp.Parse<StructureDefinition>(jsonText);
+                        ElementNode head = ElementNode.Create(s);
+                    }
+                }
+            }
         }
     }
 }

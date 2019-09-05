@@ -430,29 +430,31 @@ namespace FhirKhit.SliceGen.CSApi
                 void SetFixedValues(ElementNode setNode,
                     String propertyPath)
                 {
+                    Int32 varNum = 0;
                     foreach (ElementNode setNodeChild in setNode.Children)
                     {
                         String childPropertyPath = $"{propertyPath}.{setNodeChild.PropertyName}";
+
+                        String varName = $"var{varNum}";
+                        varNum += 1;
+
+                        String childItemTypeName = setNodeChild.FhirItemType.FriendlyName();
                         if (setNodeChild.IsFixed)
                         {
+                            methods.AppendCode($"{childItemTypeName} {varName} = {this.FixName(setNodeChild.SlicePath())}();");
                             if (setNodeChild.IsListType)
-                                methods.AppendCode($"{childPropertyPath}.Add({this.FixName(setNodeChild.SlicePath())}());");
+                                methods.AppendCode($"{childPropertyPath}.Add({varName});");
                             else
-                                methods.AppendCode($"{childPropertyPath} = {this.FixName(setNodeChild.SlicePath())}();");
+                                methods.AppendCode($"{childPropertyPath} = {varName};");
                         }
                         else if (setNodeChild.HasFixedChild)
                         {
-                            String childItemTypeName = setNodeChild.FhirItemType.FriendlyName();
+                            methods.AppendCode($"{childItemTypeName} {varName} = new {childItemTypeName}();");
                             if (setNodeChild.IsListType)
-                            {
-                                methods.AppendCode($"{childPropertyPath}.Add( new {childItemTypeName}());");
-                                SetFixedValues(setNodeChild, $"{childPropertyPath}[0]");
-                            }
+                                methods.AppendCode($"{childPropertyPath}.Add({varName});");
                             else
-                            {
-                                methods.AppendCode($"{childPropertyPath} = new {childItemTypeName}();");
-                                SetFixedValues(setNodeChild, childPropertyPath);
-                            }
+                                methods.AppendCode($"{childPropertyPath} = {varName};");
+                            SetFixedValues(setNodeChild, varName);
                         }
                     }
                 }

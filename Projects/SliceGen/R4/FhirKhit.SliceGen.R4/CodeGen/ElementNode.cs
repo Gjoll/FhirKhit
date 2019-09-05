@@ -26,12 +26,17 @@ namespace FhirKhit.SliceGen.R4
             {
                 ElementNode head = new ElementNode(null, null, null, String.Empty);
                 foreach (ElementDefinition item in items)
+                {
+                    Debug.Assert(item.Path != "Observation.bodySite.extension.extension.valueCodeableConcept.coding");
                     this.Load(head, item);
+                }
                 return head;
             }
 
-            Type GetFhirType(Type parent, String fhirName, out String propertyName)
+            bool GetFhirType(Type parent, String fhirName, out Type type, out String propertyName)
             {
+                if (fhirName.StartsWith("value"))
+                    fhirName = "value";
                 if (fhirName.EndsWith("[x]"))
                     fhirName = fhirName.Substring(0, fhirName.Length - 3);
                 foreach (PropertyInfo pi in parent.GetProperties())
@@ -42,14 +47,19 @@ namespace FhirKhit.SliceGen.R4
                         if (fhirElement.Name == fhirName)
                         {
                             propertyName = pi.Name;
-                            return pi.PropertyType;
+                            type = pi.PropertyType;
+                            return true;
                         }
                     }
                 }
                 parent = parent.BaseType;
                 if (parent == typeof(Object))
-                    throw new Exception($"{parent.FriendlyName()}.{fhirName} not found");
-                return GetFhirType(parent, fhirName, out propertyName);
+                {
+                    type = null;
+                    propertyName = null;
+                    return false;
+                }
+                return GetFhirType(parent, fhirName, out type, out propertyName);
             }
 
             public void Load(ElementNode head,
@@ -113,7 +123,12 @@ namespace FhirKhit.SliceGen.R4
                         }
                         else
                         {
-                            fhirType = GetFhirType(nodeElement.FhirItemType, pathItem, out propertyName);
+                            if (GetFhirType(nodeElement.FhirItemType, pathItem, out fhirType, out propertyName) == false)
+                            {
+                                PropertyInfo[] pis = nodeElement.FhirItemType.GetProperties();
+                                String typeName = nodeElement.FhirItemType.FriendlyName();
+                                throw new Exception($"Cant find '{loadItem.Path}' in {typeName}");
+                            }
                         }
 
                         leafNode = new ElementNode(nodeElement, loadItem, fhirType, propertyName);
@@ -126,7 +141,8 @@ namespace FhirKhit.SliceGen.R4
                         if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementNode dummySlice) == true)
                             throw new Exception($"Error element node slice {nodeElement.Element.SliceName} already exists in {loadItem.Path}");
 
-                        Type fhirType = GetFhirType(nodeElement.FhirItemType, pathItem, out String propertyName);
+                        if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
+                            throw new Exception($"Cant find '{pathItem}' in {nodeElement.FhirItemType.FriendlyName()}");
                         leafNode = new ElementNode(nodeElement, loadItem, fhirType, propertyName);
                         sliceNode.slices.Add(loadItem.SliceName, leafNode);
                     }

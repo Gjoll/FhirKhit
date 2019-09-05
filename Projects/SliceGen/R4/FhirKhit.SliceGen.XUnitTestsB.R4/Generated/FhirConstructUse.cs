@@ -145,7 +145,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.Period.EndElement.ElementId = "String";                                                                                  // FhirConstruct.cs:504
             retVal.Period.ElementId = "String";                                                                                             // FhirConstruct.cs:507
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:510
-            return retVal = new Address();                                                                                                  // FhirConstruct.cs:513
+            return retVal;                                                                                                                  // FhirConstruct.cs:513
         }                                                                                                                                   // FhirConstruct.cs:514
         public Age Method4()                                                                                                                // FhirConstruct.cs:531
         {                                                                                                                                   // FhirConstruct.cs:532
@@ -164,7 +164,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:567
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:569
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:572
-            return retVal = new Age();                                                                                                      // FhirConstruct.cs:575
+            return retVal;                                                                                                                  // FhirConstruct.cs:575
         }                                                                                                                                   // FhirConstruct.cs:576
         public Annotation Method6()                                                                                                         // FhirConstruct.cs:593
         {                                                                                                                                   // FhirConstruct.cs:594
@@ -176,7 +176,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.Text.Value = "String";                                                                                                   // FhirConstruct.cs:611
             retVal.Text.ElementId = "String";                                                                                               // FhirConstruct.cs:613
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:616
-            return retVal = new Annotation();                                                                                               // FhirConstruct.cs:619
+            return retVal;                                                                                                                  // FhirConstruct.cs:619
         }                                                                                                                                   // FhirConstruct.cs:620
         public Attachment Method8()                                                                                                         // FhirConstruct.cs:637
         {                                                                                                                                   // FhirConstruct.cs:638
@@ -218,7 +218,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.CreationElement.Value = "String";                                                                                        // FhirConstruct.cs:745
             retVal.CreationElement.ElementId = "String";                                                                                    // FhirConstruct.cs:747
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:750
-            return retVal = new Attachment();                                                                                               // FhirConstruct.cs:753
+            return retVal;                                                                                                                  // FhirConstruct.cs:753
         }                                                                                                                                   // FhirConstruct.cs:754
         public CodeableConcept Method10()                                                                                                   // FhirConstruct.cs:771
         {                                                                                                                                   // FhirConstruct.cs:772
@@ -328,7 +328,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.TextElement.Value = "String";                                                                                            // FhirConstruct.cs:839
             retVal.TextElement.ElementId = "String";                                                                                        // FhirConstruct.cs:841
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:844
-            return retVal = new CodeableConcept();                                                                                          // FhirConstruct.cs:847
+            return retVal;                                                                                                                  // FhirConstruct.cs:847
         }                                                                                                                                   // FhirConstruct.cs:848
         public Coding Method12()                                                                                                            // FhirConstruct.cs:865
         {                                                                                                                                   // FhirConstruct.cs:866
@@ -349,7 +349,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.UserSelectedElement.Value = true;                                                                                        // FhirConstruct.cs:909
             retVal.UserSelectedElement.ElementId = "String";                                                                                // FhirConstruct.cs:914
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:917
-            return retVal = new Coding();                                                                                                   // FhirConstruct.cs:920
+            return retVal;                                                                                                                  // FhirConstruct.cs:920
         }                                                                                                                                   // FhirConstruct.cs:921
         public ContactDetail Method14()                                                                                                     // FhirConstruct.cs:938
         {                                                                                                                                   // FhirConstruct.cs:939
@@ -464,7 +464,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
                 retVal.Telecom.Add(temp2);                                                                                                  // FhirConstruct.cs:1003
             }                                                                                                                               // FhirConstruct.cs:1004
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1008
-            return retVal = new ContactDetail();                                                                                            // FhirConstruct.cs:1011
+            return retVal;                                                                                                                  // FhirConstruct.cs:1011
         }                                                                                                                                   // FhirConstruct.cs:1012
         public ContactPoint Method16()                                                                                                      // FhirConstruct.cs:1029
         {                                                                                                                                   // FhirConstruct.cs:1030
@@ -486,7 +486,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.Period.EndElement.ElementId = "String";                                                                                  // FhirConstruct.cs:1072
             retVal.Period.ElementId = "String";                                                                                             // FhirConstruct.cs:1075
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1078
-            return retVal = new ContactPoint();                                                                                             // FhirConstruct.cs:1081
+            return retVal;                                                                                                                  // FhirConstruct.cs:1081
         }                                                                                                                                   // FhirConstruct.cs:1082
         public Contributor Method18()                                                                                                       // FhirConstruct.cs:1099
         {                                                                                                                                   // FhirConstruct.cs:1100
@@ -1067,7 +1067,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
                 retVal.Contact.Add(temp2);                                                                                                  // FhirConstruct.cs:1187
             }                                                                                                                               // FhirConstruct.cs:1188
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1192
-            return retVal = new Contributor();                                                                                              // FhirConstruct.cs:1195
+            return retVal;                                                                                                                  // FhirConstruct.cs:1195
         }                                                                                                                                   // FhirConstruct.cs:1196
         public Count Method20()                                                                                                             // FhirConstruct.cs:1213
         {                                                                                                                                   // FhirConstruct.cs:1214
@@ -1086,7 +1086,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:1249
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:1251
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1254
-            return retVal = new Count();                                                                                                    // FhirConstruct.cs:1257
+            return retVal;                                                                                                                  // FhirConstruct.cs:1257
         }                                                                                                                                   // FhirConstruct.cs:1258
         public DataRequirement Method22()                                                                                                   // FhirConstruct.cs:1275
         {                                                                                                                                   // FhirConstruct.cs:1276
@@ -1836,7 +1836,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
                 retVal.Sort.Add(temp12);                                                                                                    // FhirConstruct.cs:1464
             }                                                                                                                               // FhirConstruct.cs:1465
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1469
-            return retVal = new DataRequirement();                                                                                          // FhirConstruct.cs:1472
+            return retVal;                                                                                                                  // FhirConstruct.cs:1472
         }                                                                                                                                   // FhirConstruct.cs:1473
         public Distance Method24()                                                                                                          // FhirConstruct.cs:1490
         {                                                                                                                                   // FhirConstruct.cs:1491
@@ -1855,7 +1855,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:1526
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:1528
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1531
-            return retVal = new Distance();                                                                                                 // FhirConstruct.cs:1534
+            return retVal;                                                                                                                  // FhirConstruct.cs:1534
         }                                                                                                                                   // FhirConstruct.cs:1535
         public Dosage Method26()                                                                                                            // FhirConstruct.cs:1552
         {                                                                                                                                   // FhirConstruct.cs:1553
@@ -3615,7 +3615,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.MaxDosePerLifetime.CodeElement.ElementId = "String";                                                                     // FhirConstruct.cs:2343
             retVal.MaxDosePerLifetime.ElementId = "String";                                                                                 // FhirConstruct.cs:2346
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:2349
-            return retVal = new Dosage();                                                                                                   // FhirConstruct.cs:2352
+            return retVal;                                                                                                                  // FhirConstruct.cs:2352
         }                                                                                                                                   // FhirConstruct.cs:2353
         public Duration Method28()                                                                                                          // FhirConstruct.cs:2370
         {                                                                                                                                   // FhirConstruct.cs:2371
@@ -3634,7 +3634,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:2406
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:2408
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:2411
-            return retVal = new Duration();                                                                                                 // FhirConstruct.cs:2414
+            return retVal;                                                                                                                  // FhirConstruct.cs:2414
         }                                                                                                                                   // FhirConstruct.cs:2415
         public ElementDefinition Method30()                                                                                                 // FhirConstruct.cs:2432
         {                                                                                                                                   // FhirConstruct.cs:2433
@@ -4722,7 +4722,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
                 retVal.Mapping.Add(temp24);                                                                                                 // FhirConstruct.cs:3004
             }                                                                                                                               // FhirConstruct.cs:3005
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3009
-            return retVal = new ElementDefinition();                                                                                        // FhirConstruct.cs:3012
+            return retVal;                                                                                                                  // FhirConstruct.cs:3012
         }                                                                                                                                   // FhirConstruct.cs:3013
         public Expression Method32()                                                                                                        // FhirConstruct.cs:3030
         {                                                                                                                                   // FhirConstruct.cs:3031
@@ -4743,14 +4743,14 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.ReferenceElement.Value = "String";                                                                                       // FhirConstruct.cs:3072
             retVal.ReferenceElement.ElementId = "String";                                                                                   // FhirConstruct.cs:3074
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3077
-            return retVal = new Expression();                                                                                               // FhirConstruct.cs:3080
+            return retVal;                                                                                                                  // FhirConstruct.cs:3080
         }                                                                                                                                   // FhirConstruct.cs:3081
         public Extension Method34()                                                                                                         // FhirConstruct.cs:3098
         {                                                                                                                                   // FhirConstruct.cs:3099
             Extension retVal = new Extension();                                                                                             // FhirConstruct.cs:3100
             retVal.Url = "String";                                                                                                          // FhirConstruct.cs:3105
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3107
-            return retVal = new Extension();                                                                                                // FhirConstruct.cs:3110
+            return retVal;                                                                                                                  // FhirConstruct.cs:3110
         }                                                                                                                                   // FhirConstruct.cs:3111
         public HumanName Method36()                                                                                                         // FhirConstruct.cs:3128
         {                                                                                                                                   // FhirConstruct.cs:3129
@@ -4864,7 +4864,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.Period.EndElement.ElementId = "String";                                                                                  // FhirConstruct.cs:3214
             retVal.Period.ElementId = "String";                                                                                             // FhirConstruct.cs:3217
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3220
-            return retVal = new HumanName();                                                                                                // FhirConstruct.cs:3223
+            return retVal;                                                                                                                  // FhirConstruct.cs:3223
         }                                                                                                                                   // FhirConstruct.cs:3224
         public Identifier Method38()                                                                                                        // FhirConstruct.cs:3241
         {                                                                                                                                   // FhirConstruct.cs:3242
@@ -4991,7 +4991,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.Period.EndElement.ElementId = "String";                                                                                  // FhirConstruct.cs:3354
             retVal.Period.ElementId = "String";                                                                                             // FhirConstruct.cs:3357
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3360
-            return retVal = new Identifier();                                                                                               // FhirConstruct.cs:3363
+            return retVal;                                                                                                                  // FhirConstruct.cs:3363
         }                                                                                                                                   // FhirConstruct.cs:3364
         public MarketingStatus Method40()                                                                                                   // FhirConstruct.cs:3381
         {                                                                                                                                   // FhirConstruct.cs:3382
@@ -5326,7 +5326,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.RestoreDateElement.Value = "String";                                                                                     // FhirConstruct.cs:3629
             retVal.RestoreDateElement.ElementId = "String";                                                                                 // FhirConstruct.cs:3631
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3634
-            return retVal = new MarketingStatus();                                                                                          // FhirConstruct.cs:3637
+            return retVal;                                                                                                                  // FhirConstruct.cs:3637
         }                                                                                                                                   // FhirConstruct.cs:3638
         public Meta Method42()                                                                                                              // FhirConstruct.cs:3655
         {                                                                                                                                   // FhirConstruct.cs:3656
@@ -5335,8 +5335,8 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.VersionIdElement.Value = "String";                                                                                       // FhirConstruct.cs:3665
             retVal.VersionIdElement.ElementId = "String";                                                                                   // FhirConstruct.cs:3667
             retVal.LastUpdatedElement = new Instant();                                                                                      // FhirConstruct.cs:3671
-            retVal.LastUpdatedElement.Value = new DateTimeOffset(2019, 9, 1,                                                                // FhirConstruct.cs:3676
-                18, 26, 46, 286,                                                                                                            // FhirConstruct.cs:3677
+            retVal.LastUpdatedElement.Value = new DateTimeOffset(2019, 9, 5,                                                                // FhirConstruct.cs:3676
+                13, 9, 10, 26,                                                                                                              // FhirConstruct.cs:3677
                 new TimeSpan(-5, 0, 0));                                                                                                    // FhirConstruct.cs:3678
             retVal.LastUpdatedElement.ElementId = "String";                                                                                 // FhirConstruct.cs:3682
             retVal.SourceElement = new FhirUri();                                                                                           // FhirConstruct.cs:3686
@@ -5576,7 +5576,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
                 retVal.Tag.Add(temp6);                                                                                                      // FhirConstruct.cs:3819
             }                                                                                                                               // FhirConstruct.cs:3820
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3824
-            return retVal = new Meta();                                                                                                     // FhirConstruct.cs:3827
+            return retVal;                                                                                                                  // FhirConstruct.cs:3827
         }                                                                                                                                   // FhirConstruct.cs:3828
         public Money Method44()                                                                                                             // FhirConstruct.cs:3845
         {                                                                                                                                   // FhirConstruct.cs:3846
@@ -5586,7 +5586,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.ValueElement.ElementId = "String";                                                                                       // FhirConstruct.cs:3857
             retVal.CurrencyElement = new Code<Money.Currencies>(Money.Currencies.AED);                                                      // FhirConstruct.cs:3860
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3862
-            return retVal = new Money();                                                                                                    // FhirConstruct.cs:3865
+            return retVal;                                                                                                                  // FhirConstruct.cs:3865
         }                                                                                                                                   // FhirConstruct.cs:3866
         public MoneyQuantity Method46()                                                                                                     // FhirConstruct.cs:3883
         {                                                                                                                                   // FhirConstruct.cs:3884
@@ -5605,7 +5605,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:3919
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:3921
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3924
-            return retVal = new MoneyQuantity();                                                                                            // FhirConstruct.cs:3927
+            return retVal;                                                                                                                  // FhirConstruct.cs:3927
         }                                                                                                                                   // FhirConstruct.cs:3928
         public Narrative Method48()                                                                                                         // FhirConstruct.cs:3945
         {                                                                                                                                   // FhirConstruct.cs:3946
@@ -5613,7 +5613,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.StatusElement = new Code<Narrative.NarrativeStatus>(Narrative.NarrativeStatus.Generated);                                // FhirConstruct.cs:3952
             retVal.Div = "String";                                                                                                          // FhirConstruct.cs:3954
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3956
-            return retVal = new Narrative();                                                                                                // FhirConstruct.cs:3959
+            return retVal;                                                                                                                  // FhirConstruct.cs:3959
         }                                                                                                                                   // FhirConstruct.cs:3960
         public ParameterDefinition Method50()                                                                                               // FhirConstruct.cs:3977
         {                                                                                                                                   // FhirConstruct.cs:3978
@@ -5636,7 +5636,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.ProfileElement.Value = "String";                                                                                         // FhirConstruct.cs:4023
             retVal.ProfileElement.ElementId = "String";                                                                                     // FhirConstruct.cs:4025
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:4028
-            return retVal = new ParameterDefinition();                                                                                      // FhirConstruct.cs:4031
+            return retVal;                                                                                                                  // FhirConstruct.cs:4031
         }                                                                                                                                   // FhirConstruct.cs:4032
         public Period Method52()                                                                                                            // FhirConstruct.cs:4049
         {                                                                                                                                   // FhirConstruct.cs:4050
@@ -5648,7 +5648,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.EndElement.Value = "String";                                                                                             // FhirConstruct.cs:4067
             retVal.EndElement.ElementId = "String";                                                                                         // FhirConstruct.cs:4069
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:4072
-            return retVal = new Period();                                                                                                   // FhirConstruct.cs:4075
+            return retVal;                                                                                                                  // FhirConstruct.cs:4075
         }                                                                                                                                   // FhirConstruct.cs:4076
         public Population Method54()                                                                                                        // FhirConstruct.cs:4093
         {                                                                                                                                   // FhirConstruct.cs:4094
@@ -5972,7 +5972,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.PhysiologicalCondition.TextElement.ElementId = "String";                                                                 // FhirConstruct.cs:4310
             retVal.PhysiologicalCondition.ElementId = "String";                                                                             // FhirConstruct.cs:4313
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:4316
-            return retVal = new Population();                                                                                               // FhirConstruct.cs:4319
+            return retVal;                                                                                                                  // FhirConstruct.cs:4319
         }                                                                                                                                   // FhirConstruct.cs:4320
         public ProdCharacteristic Method56()                                                                                                // FhirConstruct.cs:4337
         {                                                                                                                                   // FhirConstruct.cs:4338
@@ -6445,7 +6445,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.Scoring.TextElement.ElementId = "String";                                                                                // FhirConstruct.cs:4807
             retVal.Scoring.ElementId = "String";                                                                                            // FhirConstruct.cs:4810
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:4813
-            return retVal = new ProdCharacteristic();                                                                                       // FhirConstruct.cs:4816
+            return retVal;                                                                                                                  // FhirConstruct.cs:4816
         }                                                                                                                                   // FhirConstruct.cs:4817
         public ProductShelfLife Method58()                                                                                                  // FhirConstruct.cs:4834
         {                                                                                                                                   // FhirConstruct.cs:4835
@@ -7241,7 +7241,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
                 retVal.SpecialPrecautionsForStorage.Add(temp6);                                                                             // FhirConstruct.cs:5145
             }                                                                                                                               // FhirConstruct.cs:5146
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5150
-            return retVal = new ProductShelfLife();                                                                                         // FhirConstruct.cs:5153
+            return retVal;                                                                                                                  // FhirConstruct.cs:5153
         }                                                                                                                                   // FhirConstruct.cs:5154
         public Quantity Method60()                                                                                                          // FhirConstruct.cs:5171
         {                                                                                                                                   // FhirConstruct.cs:5172
@@ -7260,7 +7260,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:5207
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:5209
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5212
-            return retVal = new Quantity();                                                                                                 // FhirConstruct.cs:5215
+            return retVal;                                                                                                                  // FhirConstruct.cs:5215
         }                                                                                                                                   // FhirConstruct.cs:5216
         public Range Method62()                                                                                                             // FhirConstruct.cs:5233
         {                                                                                                                                   // FhirConstruct.cs:5234
@@ -7296,7 +7296,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.High.CodeElement.ElementId = "String";                                                                                   // FhirConstruct.cs:5314
             retVal.High.ElementId = "String";                                                                                               // FhirConstruct.cs:5317
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5320
-            return retVal = new Range();                                                                                                    // FhirConstruct.cs:5323
+            return retVal;                                                                                                                  // FhirConstruct.cs:5323
         }                                                                                                                                   // FhirConstruct.cs:5324
         public Ratio Method64()                                                                                                             // FhirConstruct.cs:5341
         {                                                                                                                                   // FhirConstruct.cs:5342
@@ -7332,7 +7332,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.Denominator.CodeElement.ElementId = "String";                                                                            // FhirConstruct.cs:5422
             retVal.Denominator.ElementId = "String";                                                                                        // FhirConstruct.cs:5425
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5428
-            return retVal = new Ratio();                                                                                                    // FhirConstruct.cs:5431
+            return retVal;                                                                                                                  // FhirConstruct.cs:5431
         }                                                                                                                                   // FhirConstruct.cs:5432
         public ResourceReference Method66()                                                                                                 // FhirConstruct.cs:5449
         {                                                                                                                                   // FhirConstruct.cs:5450
@@ -7470,7 +7470,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.DisplayElement.Value = "String";                                                                                         // FhirConstruct.cs:5593
             retVal.DisplayElement.ElementId = "String";                                                                                     // FhirConstruct.cs:5595
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5598
-            return retVal = new ResourceReference();                                                                                        // FhirConstruct.cs:5601
+            return retVal;                                                                                                                  // FhirConstruct.cs:5601
         }                                                                                                                                   // FhirConstruct.cs:5602
         public RelatedArtifact Method68()                                                                                                   // FhirConstruct.cs:5619
         {                                                                                                                                   // FhirConstruct.cs:5620
@@ -7530,7 +7530,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.ResourceElement.Value = "String";                                                                                        // FhirConstruct.cs:5775
             retVal.ResourceElement.ElementId = "String";                                                                                    // FhirConstruct.cs:5777
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5780
-            return retVal = new RelatedArtifact();                                                                                          // FhirConstruct.cs:5783
+            return retVal;                                                                                                                  // FhirConstruct.cs:5783
         }                                                                                                                                   // FhirConstruct.cs:5784
         public SampledData Method70()                                                                                                       // FhirConstruct.cs:5801
         {                                                                                                                                   // FhirConstruct.cs:5802
@@ -7569,7 +7569,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.DataElement.Value = "String";                                                                                            // FhirConstruct.cs:5891
             retVal.DataElement.ElementId = "String";                                                                                        // FhirConstruct.cs:5893
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5896
-            return retVal = new SampledData();                                                                                              // FhirConstruct.cs:5899
+            return retVal;                                                                                                                  // FhirConstruct.cs:5899
         }                                                                                                                                   // FhirConstruct.cs:5900
         public Signature Method72()                                                                                                         // FhirConstruct.cs:5917
         {                                                                                                                                   // FhirConstruct.cs:5918
@@ -7676,8 +7676,8 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
                 retVal.Type.Add(temp2);                                                                                                     // FhirConstruct.cs:5977
             }                                                                                                                               // FhirConstruct.cs:5978
             retVal.WhenElement = new Instant();                                                                                             // FhirConstruct.cs:5983
-            retVal.WhenElement.Value = new DateTimeOffset(2019, 9, 1,                                                                       // FhirConstruct.cs:5988
-                18, 26, 46, 408,                                                                                                            // FhirConstruct.cs:5989
+            retVal.WhenElement.Value = new DateTimeOffset(2019, 9, 5,                                                                       // FhirConstruct.cs:5988
+                13, 9, 10, 178,                                                                                                             // FhirConstruct.cs:5989
                 new TimeSpan(-5, 0, 0));                                                                                                    // FhirConstruct.cs:5990
             retVal.WhenElement.ElementId = "String";                                                                                        // FhirConstruct.cs:5994
             retVal.TargetFormatElement = new Code();                                                                                        // FhirConstruct.cs:5998
@@ -7696,7 +7696,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             };                                                                                                                              // FhirConstruct.cs:6036
             retVal.DataElement.ElementId = "String";                                                                                        // FhirConstruct.cs:6039
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:6042
-            return retVal = new Signature();                                                                                                // FhirConstruct.cs:6045
+            return retVal;                                                                                                                  // FhirConstruct.cs:6045
         }                                                                                                                                   // FhirConstruct.cs:6046
         public SimpleQuantity Method74()                                                                                                    // FhirConstruct.cs:6063
         {                                                                                                                                   // FhirConstruct.cs:6064
@@ -7715,7 +7715,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:6099
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:6101
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:6104
-            return retVal = new SimpleQuantity();                                                                                           // FhirConstruct.cs:6107
+            return retVal;                                                                                                                  // FhirConstruct.cs:6107
         }                                                                                                                                   // FhirConstruct.cs:6108
         public SubstanceAmount Method76()                                                                                                   // FhirConstruct.cs:6125
         {                                                                                                                                   // FhirConstruct.cs:6126
@@ -7862,7 +7862,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.ReferenceRange.HighLimit.ElementId = "String";                                                                           // FhirConstruct.cs:6292
             retVal.ReferenceRange.ElementId = "String";                                                                                     // FhirConstruct.cs:6295
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:6298
-            return retVal = new SubstanceAmount();                                                                                          // FhirConstruct.cs:6301
+            return retVal;                                                                                                                  // FhirConstruct.cs:6301
         }                                                                                                                                   // FhirConstruct.cs:6302
         public Timing Method78()                                                                                                            // FhirConstruct.cs:6319
         {                                                                                                                                   // FhirConstruct.cs:6320
@@ -8129,7 +8129,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.Code.TextElement.ElementId = "String";                                                                                   // FhirConstruct.cs:6534
             retVal.Code.ElementId = "String";                                                                                               // FhirConstruct.cs:6537
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:6540
-            return retVal = new Timing();                                                                                                   // FhirConstruct.cs:6543
+            return retVal;                                                                                                                  // FhirConstruct.cs:6543
         }                                                                                                                                   // FhirConstruct.cs:6544
         public TriggerDefinition Method80()                                                                                                 // FhirConstruct.cs:6561
         {                                                                                                                                   // FhirConstruct.cs:6562
@@ -11902,7 +11902,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.Condition.ReferenceElement.ElementId = "String";                                                                         // FhirConstruct.cs:6818
             retVal.Condition.ElementId = "String";                                                                                          // FhirConstruct.cs:6821
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:6824
-            return retVal = new TriggerDefinition();                                                                                        // FhirConstruct.cs:6827
+            return retVal;                                                                                                                  // FhirConstruct.cs:6827
         }                                                                                                                                   // FhirConstruct.cs:6828
         public UsageContext Method82()                                                                                                      // FhirConstruct.cs:6845
         {                                                                                                                                   // FhirConstruct.cs:6846
@@ -11925,7 +11925,7 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
             retVal.Code.UserSelectedElement.ElementId = "String";                                                                           // FhirConstruct.cs:6897
             retVal.Code.ElementId = "String";                                                                                               // FhirConstruct.cs:6900
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:6903
-            return retVal = new UsageContext();                                                                                             // FhirConstruct.cs:6906
+            return retVal;                                                                                                                  // FhirConstruct.cs:6906
         }                                                                                                                                   // FhirConstruct.cs:6907
         public Base64Binary Method84()                                                                                                      // FhirConstruct.cs:6924
         {                                                                                                                                   // FhirConstruct.cs:6925
@@ -11992,8 +11992,8 @@ namespace FhirKhit.SliceGen.Share.XUnitTestsB
         public Instant Method100()                                                                                                          // FhirConstruct.cs:7190
         {                                                                                                                                   // FhirConstruct.cs:7191
             Instant retVal = new Instant();                                                                                                 // FhirConstruct.cs:7192
-            retVal.Value = new DateTimeOffset(2019, 9, 1,                                                                                   // FhirConstruct.cs:7200
-                18, 26, 46, 547,                                                                                                            // FhirConstruct.cs:7201
+            retVal.Value = new DateTimeOffset(2019, 9, 5,                                                                                   // FhirConstruct.cs:7200
+                13, 9, 10, 339,                                                                                                             // FhirConstruct.cs:7201
                 new TimeSpan(-5, 0, 0));                                                                                                    // FhirConstruct.cs:7202
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:7206
             return retVal;                                                                                                                  // FhirConstruct.cs:7209
