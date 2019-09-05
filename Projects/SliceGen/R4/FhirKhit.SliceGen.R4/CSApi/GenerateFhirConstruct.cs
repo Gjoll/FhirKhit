@@ -115,7 +115,7 @@ namespace FhirKhit.SliceGen.R4
                     break;
 
                 default:
-                    if (name.StartsWith("Code<"))
+                    if (pi.PropertyType.IsCode())
                     {
                         String enumName = pi.PropertyType.GenericTypeArguments[0].FriendlyName();
                         code
@@ -123,7 +123,7 @@ namespace FhirKhit.SliceGen.R4
                             .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = new {name}({enumName}.{{{varName}.{pi.Name}.Value}});\");")
                             ;
                     }
-                    else if (name.StartsWith("List<"))
+                    else if (pi.PropertyType.IsList())
                     {
                         String source = TempName();
                         String target = TempName();
@@ -149,7 +149,7 @@ namespace FhirKhit.SliceGen.R4
                             .CloseBrace()
                             ;
                     }
-                    else if (name.EndsWith("?"))
+                    else if (pi.PropertyType.IsNullable())
                     {
                         Type nullableType = pi.PropertyType.GenericTypeArguments[0];
                         String nullableTypeName = nullableType.FriendlyName();

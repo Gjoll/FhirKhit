@@ -190,7 +190,7 @@ namespace FhirKhit.SliceGen.R4
         /// </summary>
         public Type FhirType { get; set; }
 
-        public bool IsListType => FhirType.IsListType();
+        public bool IsListType => FhirType.IsList();
 
         /// <summary>
         /// c# type for this element

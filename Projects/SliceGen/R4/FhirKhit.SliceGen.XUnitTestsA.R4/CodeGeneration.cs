@@ -101,13 +101,13 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                     break;
 
                 default:
-                    if (pi.PropertyType.IsCodeType())
+                    if (pi.PropertyType.IsCode())
                     {
                         Array enumValues = Enum.GetValues(pi.PropertyType.GenericTypeArguments[0]);
                         var code = Activator.CreateInstance(pi.PropertyType, enumValues.GetValue(0));
                         pi.SetValue(retVal, code);
                     }
-                    else if (pi.PropertyType.IsListType())
+                    else if (pi.PropertyType.IsList())
                     {
                         Type listType = pi.PropertyType.GenericTypeArguments[0];
                         IList list = (IList)Activator.CreateInstance(pi.PropertyType);
@@ -119,7 +119,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                         }
                         pi.SetValue(retVal, list);
                     }
-                    else if (pi.PropertyType.IsNullableType())
+                    else if (pi.PropertyType.IsNullable())
                     {
                         Type nullableType = pi.PropertyType.GenericTypeArguments[0];
                         if (nullableType.IsEnum)

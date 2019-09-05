@@ -533,7 +533,7 @@ namespace FhirKhit.SliceGen.CSApi
                 childMethodCounter += 1;
                 String childMethodName = $"GetChild_{childMethodCounter}";
                 String outputTypeItemName;
-                if (outputType.IsListType())
+                if (outputType.IsList())
                     outputTypeItemName = outputType.GenericTypeArguments[0].FriendlyName();
                 else
                     outputTypeItemName = outputType.FriendlyName();
@@ -547,7 +547,7 @@ namespace FhirKhit.SliceGen.CSApi
                     .OpenBrace()
                     ;
 
-                if (outputType.IsListType())
+                if (outputType.IsList())
                 {
                     childBlock
                         .AppendCode($"foreach ({outputType.FriendlyName()} childElement in inputElement.{childPropertyName})")
@@ -689,7 +689,7 @@ namespace FhirKhit.SliceGen.CSApi
                 if (value == null)
                     value = $"new {itemTypeName}()";
 
-                if (containerType.IsListType())
+                if (containerType.IsList())
                 {
                     childBlock
                         .AppendCode($"if ({containerName}.Count == 0)")

@@ -43,9 +43,9 @@ namespace FhirKhit.SliceGen.R4
             return t.Name == typeName;
         }
 
-        public static bool IsListType(this Type t) => t.IsType("List`1");
-        public static bool IsCodeType(this Type t) => t.IsType("Code`1");
-        public static bool IsNullableType(this Type t) => t.IsType("Nullable`1");
+        public static bool IsList(this Type t) => t.IsType("List`1");
+        public static bool IsCode(this Type t) => t.IsType("Code`1");
+        public static bool IsNullable(this Type t) => t.IsType("Nullable`1");
 
         public static string FriendlyName(this Type type)
         {
