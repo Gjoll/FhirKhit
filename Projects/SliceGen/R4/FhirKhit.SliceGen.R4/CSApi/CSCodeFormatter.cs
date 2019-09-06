@@ -208,19 +208,17 @@ namespace FhirKhit.SliceGen.CSApi
                     ;
                 String valueFilterMethod = this.ValueFilterName(this.MakePath(sliceNode.SlicePath(), discriminator.Path));
                 Type leafType;
+                if (this.GenerateSearchElements(methods, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType) == true)
                 {
-                    this.GenerateSearchElements(methods, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType);
+                    fields
+                        .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
+                        .OpenBrace()
+                        .AppendCode($"Path = \"{discriminator.Path}\",")
+                        .AppendCode($"Pattern = {this.FixName(this.MakePath(sliceNode.SlicePath(), discriminator.Path))}(),")
+                        .AppendCode($"ValueFilter = {valueFilterMethod}")
+                        .CloseBrace(term)
+                    ;
                 }
-
-                fields
-                    .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
-                    .OpenBrace()
-                    .AppendCode($"Path = \"{discriminator.Path}\",")
-                    .AppendCode($"Pattern = {this.FixName(this.MakePath(sliceNode.SlicePath(), discriminator.Path))}(),")
-                    .AppendCode($"ValueFilter = {valueFilterMethod}")
-                    .CloseBrace(term)
-                ;
-
                 return true;
             }
 

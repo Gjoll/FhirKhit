@@ -13,6 +13,7 @@ using FhirKhit.SliceGen.R4;
 using FhirKhit.SliceGen.CodeGen;
 using FhirKhit.Test.R4;
 using System.Linq;
+using System.IO.Compression;
 
 
 #if FHIR_R2
@@ -30,9 +31,9 @@ namespace FhirKhit.SliceGen.XUnitTestsB
         /// <summary>
         /// Test functionality of generated file 'SlicedMultipleTests'.
         /// </summary>
-        [Fact(DisplayName = "SliceGen.SlicedMultipleTests")]
+        [Fact(DisplayName = "Generate.SlicedMultiple")]
         [Trait("Test", "test")]
-        public void SlicedMultipleTests1()
+        public void SlicedMultiple()
         {
             Observation o = new Observation
             {

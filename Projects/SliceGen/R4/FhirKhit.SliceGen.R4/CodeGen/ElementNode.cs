@@ -26,19 +26,14 @@ namespace FhirKhit.SliceGen.R4
             {
                 ElementNode head = new ElementNode(null, null, null, String.Empty);
                 foreach (ElementDefinition item in items)
-                {
-                    Debug.Assert(item.Path != "Observation.bodySite.extension.extension.valueCodeableConcept.coding");
                     this.Load(head, item);
-                }
                 return head;
             }
 
             bool GetFhirType(Type parent, String fhirName, out Type type, out String propertyName)
             {
-                if (fhirName.StartsWith("value"))
-                    fhirName = "value";
-                if (fhirName.EndsWith("[x]"))
-                    fhirName = fhirName.Substring(0, fhirName.Length - 3);
+                Debug.Assert(fhirName.EndsWith("[x]") == false);
+
                 foreach (PropertyInfo pi in parent.GetProperties())
                 {
                     FhirElementAttribute fhirElement = pi.GetCustomAttribute<FhirElementAttribute>();
@@ -61,12 +56,38 @@ namespace FhirKhit.SliceGen.R4
                 }
                 return GetFhirType(parent, fhirName, out type, out propertyName);
             }
+            void NormalizePathItem(ElementDefinition loadItem, ref String pathItem, out Type actualType)
+            {
+                actualType = null;
+
+                const string multiType = "[x]";
+                if (pathItem.EndsWith(multiType))
+                {
+                    pathItem = pathItem.Substring(0, pathItem.Length - multiType.Length);
+                    return;
+                }
+
+                if (loadItem.Base.Path.EndsWith(multiType) == false)
+                    return;
+                String lcPathItem = pathItem.ToLower();
+                foreach (ElementDefinition.TypeRefComponent typeRef in loadItem.Type)
+                {
+                    if (lcPathItem.EndsWith(typeRef.Code.ToLower()))
+                    {
+                        // change things like effectiveDateTime to effective.
+                        if (pathItem.Length > typeRef.Code.Length)
+                            pathItem = pathItem.Substring(0, pathItem.Length - typeRef.Code.Length);
+                        if (ModelInfo.FhirTypeToCsType.TryGetValue(typeRef.Code, out actualType) == false)
+                            throw new Exception($"Unknown fhor type '{typeRef.Code}'");
+                        return;
+                    }
+                }
+            }
 
             public void Load(ElementNode head,
                 ElementDefinition loadItem)
             {
-                Debug.Assert(loadItem.Path != "Observation.bodySite.extension.extension.valueCodeableConcept");
-
+                Debug.Assert(loadItem.Path != "Extension.valuePositiveInt");
                 ElementNode nodeElement = head;
 
                 String[] pathItems = loadItem.Path.Split('.');
@@ -94,19 +115,21 @@ namespace FhirKhit.SliceGen.R4
                     index += 1;
                 }
 
-                while (index < pathItems.Length - 1)
-                {
-                    pathItem = pathItems[index];
-                    if (nodeElement.TryGetChild(pathItem, out ElementNode next) == false)
-                        throw new Exception($"Error element node {pathItem} in {loadItem.Path}");
-                    tree.Child = new TreeItem
-                    {
-                        Element = next,
-                        Child = null
-                    };
-                    nodeElement = next;
-                    index += 1;
-                }
+                if (index < pathItems.Length - 1)
+                    throw new Exception($"Invalid element tree {loadItem.Path}");
+                //while (index < pathItems.Length - 1)
+                //{
+                //    pathItem = pathItems[index];
+                //    if (nodeElement.TryGetChild(pathItem, out ElementNode next) == false)
+                //        throw new Exception($"Error element node {pathItem} in {loadItem.Path}");
+                //    tree.Child = new TreeItem
+                //    {
+                //        Element = next,
+                //        Child = null
+                //    };
+                //    nodeElement = next;
+                //    index += 1;
+                //}
 
                 pathItem = pathItems[index];
                 ElementNode leafNode;
@@ -120,22 +143,24 @@ namespace FhirKhit.SliceGen.R4
                 }
                 else if (String.IsNullOrEmpty(loadItem.SliceName))
                 {
+                    NormalizePathItem(loadItem, ref pathItem, out Type actualType);
                     if (nodeElement.TryGetChild(pathItem, out ElementNode dummy) == true)
                         throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
                     if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
                         throw new Exception($"Cant find '{loadItem.Path}' in {nodeElement.FhirItemType.FriendlyName()}");
-                    leafNode = new ElementNode(nodeElement, loadItem, fhirType, propertyName);
+                    leafNode = new ElementNode(nodeElement, loadItem, fhirType, actualType, propertyName);
                     nodeElement.children.Add(pathItem, leafNode);
                 }
                 else
                 {
+                    NormalizePathItem(loadItem, ref pathItem, out Type actualType);
                     if (nodeElement.TryGetChild(pathItem, out ElementNode sliceNode) == false)
                         throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
                     if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementNode dummySlice) == true)
                         throw new Exception($"Error element node slice {nodeElement.Element.SliceName} already exists in {loadItem.Path}");
                     if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
                         throw new Exception($"Cant find '{pathItem}' in {nodeElement.FhirItemType.FriendlyName()}");
-                    leafNode = new ElementNode(nodeElement, loadItem, fhirType, propertyName);
+                    leafNode = new ElementNode(nodeElement, loadItem, fhirType, actualType, propertyName);
                     sliceNode.slices.Add(loadItem.SliceName, leafNode);
                 }
 
@@ -148,6 +173,8 @@ namespace FhirKhit.SliceGen.R4
         }
 
         public const String BaseSlice = "";
+
+        public String Path => this.Element.Path;
 
         /// <summary>
         /// Node that this node is a child of.
@@ -252,10 +279,8 @@ namespace FhirKhit.SliceGen.R4
         public IEnumerable<ElementNode> Slices => this.slices.Values;
         public IEnumerable<ElementNode> Children => this.children.Values;
 
-
         Dictionary<String, ElementNode> slices = new Dictionary<String, ElementNode>();
         Dictionary<String, ElementNode> children = new Dictionary<String, ElementNode>();
-
 
         public ElementNode(ElementNode parent,
             ElementDefinition element,
@@ -266,6 +291,8 @@ namespace FhirKhit.SliceGen.R4
             this.Parent = parent;
             this.Element = element;
             this.FhirType = fhirType;
+            if (fhirItemType == null)
+                fhirItemType = ItemType(fhirType);
             this.FhirItemType = fhirItemType;
             this.PropertyName = propertyName;
         }
@@ -279,21 +306,25 @@ namespace FhirKhit.SliceGen.R4
             this.Element = element;
             this.FhirType = fhirType;
             this.PropertyName = propertyName;
+            this.FhirItemType = ItemType(fhirType);
+        }
 
-            if (fhirType != null)
+        static Type ItemType(Type fhirType)
+        {
+            if (fhirType == null)
+                return null;
+
+            switch (fhirType.GenericTypeArguments?.Length)
             {
-                switch (this.FhirType.GenericTypeArguments?.Length)
-                {
-                    case null:
-                    case 0:
-                        this.FhirItemType = this.FhirType;
-                        break;
-                    case 1:
-                        this.FhirItemType = FhirType.GenericTypeArguments[0];
-                        break;
-                    default:
-                        throw new Exception($"Unexpected number of generic type arguments {this.FhirType.GenericTypeArguments.Length} in {this.Element.Path}");
-                }
+                case null:
+                case 0:
+                    return fhirType;
+
+                case 1:
+                    return fhirType.GenericTypeArguments[0];
+
+                default:
+                    throw new Exception($"Unexpected number of generic type arguments {fhirType.GenericTypeArguments.Length} in {fhirType.FriendlyName()}");
             }
         }
 

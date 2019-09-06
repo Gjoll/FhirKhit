@@ -11,6 +11,7 @@ using Hl7.Fhir.Specification.Snapshot;
 using System.Collections.Generic;
 using FhirKhit.SliceGen.R4;
 using FhirKhit.SliceGen.CodeGen;
+using System.IO.Compression;
 
 
 #if FHIR_R2
@@ -138,9 +139,9 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         }
 
 
-        [Fact(DisplayName = "SliceGen.CreateGenTest")]
+        [Fact(DisplayName = "GenCreate.Create")]
         [Trait("Test", "test")]
-        public void CreateGenTest()
+        public void Create()
         {
             SliceGenerator p = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
                 OutputNameSpace,
@@ -152,6 +153,40 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             p.FormatMessages(sb);
             Trace.WriteLine(sb.ToString());
             Assert.True(success == true);
+        }
+
+        [Fact(DisplayName = "GenCreate.BreastAbnormality")]
+        [Trait("Test", "test")]
+        public void BreastAbnormality()
+        {
+            String zipPath = Path.Combine("TestFiles", "BreastRadiology.zip");
+            using (ZipArchive archive = ZipFile.OpenRead(zipPath))
+            {
+                FhirJsonParser fjp = new FhirJsonParser();
+                foreach (ZipArchiveEntry entry in archive.Entries)
+                {
+                    if (entry.FullName.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
+                    {
+                        StructureDefinition profile;
+                        using (StreamReader streamReader = new StreamReader(entry.Open()))
+                        {
+                            String jsonText = streamReader.ReadToEndAsync().WaitResult();
+                            profile = fjp.Parse<StructureDefinition>(jsonText);
+                            ElementNode head = ElementNode.Create(profile);
+                        }
+                        SliceGenerator p = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
+                            OutputNameSpace,
+                            GenDir);
+                        p.AddProfile(profile);
+                        bool success = p.Process();
+                        StringBuilder sb = new StringBuilder();
+                        p.FormatMessages(sb);
+                        Trace.WriteLine(sb.ToString());
+                        Assert.True(success == true);
+                    }
+                }
+
+            }
         }
     }
 }

@@ -46,9 +46,9 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             return s;
         }
 
-        [Fact(DisplayName = "ElementNode.SliceTest")]
+        [Fact(DisplayName = "ElementNode.Slice")]
         [Trait("Test", "test")]
-        public void SliceTest()
+        public void Slice()
         {
             StructureDefinition s = this.CreateBaseObservation();
             {
@@ -124,9 +124,9 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             Assert.True(head.TryGetElementNode("Observation.code.coding:Slice.code", out coding) == true);
         }
 
-        [Fact(DisplayName = "ElementNode.SliceDiscriminatorTest")]
+        [Fact(DisplayName = "ElementNode.SliceDiscriminator")]
         [Trait("Test", "test")]
-        public void SliceDiscriminatorTest()
+        public void SliceDiscriminator()
         {
             StructureDefinition s = this.CreateBaseObservation();
             ElementDefinition e = new ElementDefinition
@@ -163,9 +163,9 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             Assert.True(observationComponent.Element.Slicing.Discriminator[0].Path == "code.coding.code");
         }
 
-        [Fact(DisplayName = "ElementNode.CardinalityTest")]
+        [Fact(DisplayName = "ElementNode.Cardinality")]
         [Trait("Test", "test")]
-        public void CardinalityTest()
+        public void Cardinality()
         {
             StructureDefinition s = this.CreateBaseObservation();
             SnapshotCreator.Create(s);
@@ -196,9 +196,10 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 Assert.True(statusNode.Element.Base.Max == "1");
             }
         }
-        [Fact(DisplayName = "ElementNode.BreastAbnormalityTest")]
+
+        [Fact(DisplayName = "ElementNode.LoadElementsInBreastAbnormality")]
         [Trait("Test", "test")]
-        public void BreastAbnormalityTest()
+        public void LoadElementsInBreastAbnormality()
         {
             String zipPath = Path.Combine("TestFiles", "BreastRadiology.zip");
             using (ZipArchive archive = ZipFile.OpenRead(zipPath))
