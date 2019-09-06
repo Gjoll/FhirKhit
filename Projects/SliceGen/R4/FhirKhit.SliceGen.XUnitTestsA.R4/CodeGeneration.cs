@@ -297,7 +297,6 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                         .OpenBrace()
                         .AppendCode($"ElementNode {varName} = new ElementNode(this, null, typeof({pi.PropertyType.FriendlyName()}), \"{pi.PropertyType.FriendlyName()}\");")
                         .AppendCode($"this.children.Add(\"{attribute.Name}\", {varName});")
-                        .AppendCode($"{varName}.AddCommonChildren();")
                         .CloseBrace()
                         ;
                 }

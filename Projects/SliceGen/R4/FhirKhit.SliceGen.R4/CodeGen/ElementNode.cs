@@ -337,7 +337,8 @@ namespace FhirKhit.SliceGen.R4
                         throw new Exception($"Unexpected number of generic type arguments {fhirType.GenericTypeArguments.Length} in {fhirType.FriendlyName()}");
                 }
             }
-
+            this.FhirType = fhirType;
+            this.FhirItemType = fhirItemType;
             this.AddCommonChildren();
         }
 
