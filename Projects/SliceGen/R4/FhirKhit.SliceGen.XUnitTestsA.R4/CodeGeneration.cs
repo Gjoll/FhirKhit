@@ -37,7 +37,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         /// <summary>
         /// Generate Construct method.
         /// </summary>
-        [Fact(DisplayName = "CodeGeneration.GenerateFhirConstructClasses")]
+        [Fact(DisplayName = "CodeGen.GenerateFhirConstructClasses")]
         [Trait("CodeGen", "CodeGen")]
         public void GenerateFhirConstructClasses()
         {
@@ -159,7 +159,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         /// The main purpose of this is to make sure that each class compiles and doesnt
         /// throw a common error. It is not a complete test of each generated FhirCreate class.
         /// </summary>
-        [Fact(DisplayName = "CodeGeneration.CallFhirConstructClasses")]
+        [Fact(DisplayName = "CodeGen.CallFhirConstructClasses")]
         [Trait("CodeGen", "CodeGen")]
         public void CallFhirConstructClasses()
         {
@@ -194,7 +194,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
 
             construct
                 .AppendLine($"/// <summary>")
-                .AppendLine($"/// generate code for eqch fhri element. Makes sure it compiles.")
+                .AppendLine($"/// generate code for each fhir element. Makes sure it compiles.")
                 .AppendLine($"/// </summary>")
                 .AppendCode($"public void Use()")
                 .OpenBrace()
@@ -267,10 +267,151 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             editor.Save(outputPath);
         }
 
+        void GenerateElementNodeChild(CodeBlockNested construct,
+            CodeBlockNested methods,
+            FHIRAllTypes fhirType)
+        {
+            Trace.WriteLine($"fhirType {fhirType}");
+            String fhirTypeName = ModelInfo.FhirTypeToFhirTypeName(fhirType);
+            Type fhirCSType = ModelInfo.GetTypeForFhirType(fhirTypeName);
+
+            String methodName = $"AddChildren{fhirTypeName}()";
+            construct
+                .AppendCode($"case \"{fhirCSType.FriendlyName()}\": {methodName}; break;")
+                ;
+
+            methods
+                .BlankLine()
+                .Summary($"Manually add the children of a Coding element.")
+                .AppendCode($"void {methodName}")
+                .OpenBrace()
+                ;
+
+            foreach (PropertyInfo pi in fhirCSType.GetProperties())
+            {
+                FhirElementAttribute attribute = pi.GetCustomAttribute<FhirElementAttribute>();
+                if (attribute != null)
+                {
+                    String varName = $"{attribute.Name}Var";
+                    methods
+                        .OpenBrace()
+                        .AppendCode($"ElementNode {varName} = new ElementNode(this, null, typeof({pi.PropertyType.FriendlyName()}), \"{pi.PropertyType.FriendlyName()}\");")
+                        .AppendCode($"this.children.Add(\"{attribute.Name}\", {varName});")
+                        .AppendCode($"{varName}.AddCommonChildren();")
+                        .CloseBrace()
+                        ;
+                }
+            }
+
+            methods
+                .CloseBrace()
+                ;
+        }
+
+        /// <summary>
+        /// Create the AddChildXXX methods of ElementNode.
+        /// </summary>
+        [Fact(DisplayName = "CodeGen.GenerateElementNodeChildren")]
+        [Trait("CodeGen", "CodeGen")]
+        void GenerateElementNodeChildren()
+        {
+            CodeEditor editor = new CodeEditor();
+
+            CodeBlockNested main = editor.Blocks.AppendBlock();
+            main
+                .AppendLine($"using System;")
+                .AppendLine($"using System.Linq;")
+                .AppendLine($"using System.Collections.Generic;")
+                .AppendLine($"using System.Reflection;")
+                .AppendLine($"using System.Text;")
+                .AppendLine($"using FhirKhit.Tools;")
+                .AppendLine($"using Hl7.Fhir.Introspection;")
+                .AppendLine($"using Hl7.Fhir.Model;")
+                .AppendLine($"using Hl7.Fhir.Support.Model;")
+                .AppendLine($"using System.Diagnostics;")
+                .AppendLine($"using Hl7.FhirPath;")
+                .BlankLine()
+                .AppendLine($"namespace FhirKhit.SliceGen.R4")
+                .OpenBrace()
+                .AppendCode($"public partial class ElementNode")
+                .OpenBrace()
+                ;
+            CodeBlockNested construct = main.AppendBlock();
+            CodeBlockNested methods = main.AppendBlock();
+
+            main
+                .CloseBrace()
+                .CloseBrace()
+                ;
+
+            construct
+                .AppendLine($"/// <summary>")
+                .AppendLine($"/// generate code for each fhir element. Makes sure it compiles.")
+                .AppendLine($"/// </summary>")
+                .AppendCode($"public void AddCommonChildren()")
+                .OpenBrace()
+                .AppendCode($"switch (this.FhirItemType.FriendlyName())")
+                .OpenBrace()
+                ;
+
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Ratio);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Period);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Range);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Attachment);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Identifier);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Annotation);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.HumanName);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.CodeableConcept);
+
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.ContactPoint);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Coding);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Money);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Address);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Timing);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Quantity);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.SampledData);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Signature);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Age);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Distance);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Duration);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Count);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.MoneyQuantity);
+            GenerateElementNodeChild(construct, methods, FHIRAllTypes.SimpleQuantity);
+
+            construct
+                .CloseBrace()
+                .CloseBrace()
+                ;
+
+#if FHIR_R2
+            String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
+                "SliceGen",
+                "R2",
+                "FhirKhit.SliceGen.R2",
+                "CodeGen",
+                "ElementNode.AddChildren.cs");
+#elif FHIR_R3
+            String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
+                "SliceGen",
+                "R3",
+                "FhirKhit.SliceGen.R3",
+                "CodeGen",
+                "ElementNode.AddChildren.cs");
+#elif FHIR_R4
+            String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
+                "SliceGen",
+                "R4",
+                "FhirKhit.SliceGen.R4",
+                "CodeGen",
+                "ElementNode.AddChildren.cs");
+#endif
+            editor.Save(outputPath);
+        }
+
         /// <summary>
         /// Print out all primitive values used in api.
         /// </summary>
-        [Fact(DisplayName = "CodeGeneration.ShowPrimitiveValues")]
+        [Fact(DisplayName = "CodeGen.ShowPrimitiveValues")]
         [Trait("CodeGen", "CodeGen")]
         void ShowPrimitiveValues()
         {
@@ -326,7 +467,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             }
         }
 
-        [Fact(DisplayName = "CodeGeneration.ShowPrimitives")]
+        [Fact(DisplayName = "CodeGen.ShowPrimitives")]
         [Trait("CodeGen", "CodeGen")]
         void ShowPrimitives()
         {

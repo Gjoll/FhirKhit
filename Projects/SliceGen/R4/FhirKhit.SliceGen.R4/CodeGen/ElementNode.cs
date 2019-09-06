@@ -10,7 +10,7 @@ using Hl7.Fhir.Introspection;
 namespace FhirKhit.SliceGen.R4
 {
     [DebuggerDisplay("{Path} ")]
-    public class ElementNode
+    public partial class ElementNode
     {
         class Loader
         {
@@ -290,11 +290,8 @@ namespace FhirKhit.SliceGen.R4
         {
             this.Parent = parent;
             this.Element = element;
-            this.FhirType = fhirType;
-            if (fhirItemType == null)
-                fhirItemType = ItemType(fhirType);
-            this.FhirItemType = fhirItemType;
             this.PropertyName = propertyName;
+            SetTypes(fhirType, fhirItemType);
         }
 
         public ElementNode(ElementNode parent,
@@ -304,28 +301,8 @@ namespace FhirKhit.SliceGen.R4
         {
             this.Parent = parent;
             this.Element = element;
-            this.FhirType = fhirType;
             this.PropertyName = propertyName;
-            this.FhirItemType = ItemType(fhirType);
-        }
-
-        static Type ItemType(Type fhirType)
-        {
-            if (fhirType == null)
-                return null;
-
-            switch (fhirType.GenericTypeArguments?.Length)
-            {
-                case null:
-                case 0:
-                    return fhirType;
-
-                case 1:
-                    return fhirType.GenericTypeArguments[0];
-
-                default:
-                    throw new Exception($"Unexpected number of generic type arguments {fhirType.GenericTypeArguments.Length} in {fhirType.FriendlyName()}");
-            }
+            SetTypes(fhirType, null);
         }
 
         public static ElementNode Create(StructureDefinition sDef)
@@ -337,6 +314,31 @@ namespace FhirKhit.SliceGen.R4
 
             Loader loader = new Loader();
             return loader.Create(sDef.Snapshot.Element);
+        }
+
+        void SetTypes(Type fhirType, Type fhirItemType)
+        {
+            if (fhirType == null)
+                return;
+
+            if (fhirItemType == null)
+            {
+                switch (fhirType.GenericTypeArguments?.Length)
+                {
+                    case null:
+                    case 0:
+                        fhirItemType = fhirType;
+                        break;
+                    case 1:
+                        fhirItemType = fhirType.GenericTypeArguments[0];
+                        break;
+
+                    default:
+                        throw new Exception($"Unexpected number of generic type arguments {fhirType.GenericTypeArguments.Length} in {fhirType.FriendlyName()}");
+                }
+            }
+
+            this.AddCommonChildren();
         }
 
         public bool TryGetChild(String name, out ElementNode node)
