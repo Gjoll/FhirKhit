@@ -182,7 +182,7 @@ namespace FhirKhit.SliceGen.R4
         public ElementNode Parent { get; set; }
 
         /// <summary>
-        /// Return true if element defgintion, ro one or more of its children are have a fixed value.
+        /// Return true if element definition, or one or more of its children are have a fixed value.
         /// </summary>
         public bool IsFixed
         {
@@ -195,7 +195,7 @@ namespace FhirKhit.SliceGen.R4
         }
 
         /// <summary>
-        /// Return true if element defgintion, ro one or more of its children are have a fixed value.
+        /// Return true if element definition, or one or more of its children are have a fixed value.
         /// </summary>
         public bool HasFixedChild
         {
