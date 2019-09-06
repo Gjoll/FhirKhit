@@ -65,6 +65,8 @@ namespace FhirKhit.SliceGen.R4
             public void Load(ElementNode head,
                 ElementDefinition loadItem)
             {
+                Debug.Assert(loadItem.Path != "Observation.bodySite.extension.extension.valueCodeableConcept");
+
                 ElementNode nodeElement = head;
 
                 String[] pathItems = loadItem.Path.Split('.');
@@ -81,7 +83,7 @@ namespace FhirKhit.SliceGen.R4
                     pathItem = pathItems[index];
                     if (
                         (tree.Child == null) ||
-                        (tree.Child.Element.Name != pathItems[index])
+                        (tree.Child.Element.Name != pathItem)
                         )
                     {
                         tree.Child = null;
@@ -106,57 +108,42 @@ namespace FhirKhit.SliceGen.R4
                     index += 1;
                 }
 
+                pathItem = pathItems[index];
+                ElementNode leafNode;
+                if (index == 0)
                 {
-                    pathItem = pathItems[index];
-                    ElementNode leafNode = null;
-                    if (String.IsNullOrEmpty(loadItem.SliceName))
-                    {
-                        if (nodeElement.TryGetChild(pathItem, out ElementNode dummy) == true)
-                            throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
-                        String propertyName;
-                        Type fhirType;
-                        if (index == 0)
-                        {
-                            propertyName = String.Empty;
-                            if (ModelInfo.FhirTypeToCsType.TryGetValue(pathItem, out fhirType) == false)
-                                throw new Exception($"Unknown resource '{pathItem}'");
-                        }
-                        else
-                        {
-                            if (GetFhirType(nodeElement.FhirItemType, pathItem, out fhirType, out propertyName) == false)
-                            {
-                                PropertyInfo[] pis = nodeElement.FhirItemType.GetProperties();
-                                String typeName = nodeElement.FhirItemType.FriendlyName();
-                                throw new Exception($"Cant find '{loadItem.Path}' in {typeName}");
-                            }
-                        }
-
-                        leafNode = new ElementNode(nodeElement, loadItem, fhirType, propertyName);
-                        nodeElement.children.Add(pathItem, leafNode);
-                    }
-                    else
-                    {
-                        if (nodeElement.TryGetChild(pathItem, out ElementNode sliceNode) == false)
-                            throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
-                        if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementNode dummySlice) == true)
-                            throw new Exception($"Error element node slice {nodeElement.Element.SliceName} already exists in {loadItem.Path}");
-
-                        if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
-                            throw new Exception($"Cant find '{pathItem}' in {nodeElement.FhirItemType.FriendlyName()}");
-                        leafNode = new ElementNode(nodeElement, loadItem, fhirType, propertyName);
-                        sliceNode.slices.Add(loadItem.SliceName, leafNode);
-                    }
-
-                    tree.Child = new TreeItem
-                    {
-                        Element = leafNode,
-                        Child = null
-                    };
+                    // This is the first element of the path (i.e. Observation...)
+                    if (ModelInfo.FhirTypeToCsType.TryGetValue(pathItem, out Type fhirType) == false)
+                        throw new Exception($"Unknown resource '{pathItem}'");
+                    leafNode = new ElementNode(nodeElement, loadItem, fhirType, String.Empty);
+                    nodeElement.children.Add(pathItem, leafNode);
+                }
+                else if (String.IsNullOrEmpty(loadItem.SliceName))
+                {
+                    if (nodeElement.TryGetChild(pathItem, out ElementNode dummy) == true)
+                        throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
+                    if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
+                        throw new Exception($"Cant find '{loadItem.Path}' in {nodeElement.FhirItemType.FriendlyName()}");
+                    leafNode = new ElementNode(nodeElement, loadItem, fhirType, propertyName);
+                    nodeElement.children.Add(pathItem, leafNode);
+                }
+                else
+                {
+                    if (nodeElement.TryGetChild(pathItem, out ElementNode sliceNode) == false)
+                        throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
+                    if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementNode dummySlice) == true)
+                        throw new Exception($"Error element node slice {nodeElement.Element.SliceName} already exists in {loadItem.Path}");
+                    if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
+                        throw new Exception($"Cant find '{pathItem}' in {nodeElement.FhirItemType.FriendlyName()}");
+                    leafNode = new ElementNode(nodeElement, loadItem, fhirType, propertyName);
+                    sliceNode.slices.Add(loadItem.SliceName, leafNode);
                 }
 
-                //nodeElement.Load(loadItem);
-                //ElementTreeSlice nodeSlice = nodeElement.GetSlice(sliceName);
-                //nodeSlice.Load(loadItem);
+                tree.Child = new TreeItem
+                {
+                    Element = leafNode,
+                    Child = null
+                };
             }
         }
 
@@ -211,22 +198,7 @@ namespace FhirKhit.SliceGen.R4
         /// <summary>
         /// c# type for this element
         /// </summary>
-        public Type FhirItemType
-        {
-            get
-            {
-                switch (this.FhirType.GenericTypeArguments?.Length)
-                {
-                    case null:
-                    case 0:
-                        return this.FhirType;
-                    case 1:
-                        return this.FhirType.GenericTypeArguments[0];
-                    default:
-                        throw new Exception($"Unexpected number of generic type arguments {this.FhirType.GenericTypeArguments.Length} in {this.Element.Path}");
-                }
-            }
-        }
+        public Type FhirItemType { get; set; }
 
         /// <summary>
         /// Element Definition path, including slice names.
@@ -288,12 +260,41 @@ namespace FhirKhit.SliceGen.R4
         public ElementNode(ElementNode parent,
             ElementDefinition element,
             Type fhirType,
+            Type fhirItemType,
+            String propertyName)
+        {
+            this.Parent = parent;
+            this.Element = element;
+            this.FhirType = fhirType;
+            this.FhirItemType = fhirItemType;
+            this.PropertyName = propertyName;
+        }
+
+        public ElementNode(ElementNode parent,
+            ElementDefinition element,
+            Type fhirType,
             String propertyName)
         {
             this.Parent = parent;
             this.Element = element;
             this.FhirType = fhirType;
             this.PropertyName = propertyName;
+
+            if (fhirType != null)
+            {
+                switch (this.FhirType.GenericTypeArguments?.Length)
+                {
+                    case null:
+                    case 0:
+                        this.FhirItemType = this.FhirType;
+                        break;
+                    case 1:
+                        this.FhirItemType = FhirType.GenericTypeArguments[0];
+                        break;
+                    default:
+                        throw new Exception($"Unexpected number of generic type arguments {this.FhirType.GenericTypeArguments.Length} in {this.Element.Path}");
+                }
+            }
         }
 
         public static ElementNode Create(StructureDefinition sDef)

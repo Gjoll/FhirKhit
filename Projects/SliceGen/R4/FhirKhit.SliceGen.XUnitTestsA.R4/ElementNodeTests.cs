@@ -208,10 +208,12 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 {
                     if (entry.FullName.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
                     {
-                        StreamReader streamReader = new StreamReader(entry.Open());
-                        String jsonText = streamReader.ReadToEndAsync().WaitResult();
-                        StructureDefinition s = fjp.Parse<StructureDefinition>(jsonText);
-                        ElementNode head = ElementNode.Create(s);
+                        using (StreamReader streamReader = new StreamReader(entry.Open()))
+                        {
+                            String jsonText = streamReader.ReadToEndAsync().WaitResult();
+                            StructureDefinition s = fjp.Parse<StructureDefinition>(jsonText);
+                            ElementNode head = ElementNode.Create(s);
+                        }
                     }
                 }
             }
