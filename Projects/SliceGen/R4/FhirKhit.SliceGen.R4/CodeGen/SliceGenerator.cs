@@ -35,6 +35,8 @@ namespace FhirKhit.SliceGen.CodeGen
     /// </summary>
     public class SliceGenerator : ConverterBase
     {
+        public bool SaveFlag { get; set; } = true;
+
         public enum OutputLanguageType
         {
             Unset,
@@ -146,8 +148,11 @@ namespace FhirKhit.SliceGen.CodeGen
 
                 gi.Process();
 
-                String outputFile = Path.Combine(this.OutputDir, $"{name}.cs");
-                File.WriteAllText(outputFile, gi.GetCode());
+                if (this.SaveFlag == true)
+                {
+                    String outputFile = Path.Combine(this.OutputDir, $"{name}.cs");
+                    File.WriteAllText(outputFile, gi.GetCode());
+                }
             }
             catch (Exception err)
             {

@@ -155,7 +155,10 @@ namespace FhirKhit.SliceGen.R4
                 {
                     NormalizePathItem(loadItem, ref pathItem, out Type actualType);
                     if (nodeElement.TryGetChild(pathItem, out ElementNode sliceNode) == false)
-                        throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
+                    {
+                        if (nodeElement.TryGetCommonChild(pathItem, out sliceNode) == false)
+                            throw new Exception($"Error element node {pathItem} not found {loadItem.Path}");
+                    }
                     if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementNode dummySlice) == true)
                         throw new Exception($"Error element node slice {nodeElement.Element.SliceName} already exists in {loadItem.Path}");
                     if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
@@ -339,12 +342,20 @@ namespace FhirKhit.SliceGen.R4
             }
             this.FhirType = fhirType;
             this.FhirItemType = fhirItemType;
-            this.AddCommonChildren();
         }
 
         public bool TryGetChild(String name, out ElementNode node)
         {
-            return this.children.TryGetValue(name, out node);
+            if (this.children.TryGetValue(name, out node))
+                return true;
+
+            return false;
+        }
+
+        public bool TryGetCommonChild(String name, out ElementNode node)
+        {
+            node = this.FindCommonChild(name);
+            return (node != null);
         }
 
         public bool TryGetSlice(String name, out ElementNode node)
@@ -395,7 +406,10 @@ namespace FhirKhit.SliceGen.R4
 
                 pathPart = pathItemParts[0];
                 if (currentItem.TryGetChild(pathPart, out currentItem) == false)
-                    return false;
+                {
+                    if (currentItem.TryGetCommonChild(pathPart, out currentItem) == false)
+                        return false;
+                }
 
                 if (pathItemParts.Length == 2)
                 {

@@ -267,7 +267,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             editor.Save(outputPath);
         }
 
-        void GenerateElementNodeChild(CodeBlockNested construct,
+        void GenerateFindCommonChild(CodeBlockNested construct,
             CodeBlockNested methods,
             FHIRAllTypes fhirType)
         {
@@ -275,15 +275,18 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             String fhirTypeName = ModelInfo.FhirTypeToFhirTypeName(fhirType);
             Type fhirCSType = ModelInfo.GetTypeForFhirType(fhirTypeName);
 
-            String methodName = $"AddChildren{fhirTypeName}()";
+            String methodName = $"FindChild{fhirTypeName}";
             construct
-                .AppendCode($"case \"{fhirCSType.FriendlyName()}\": {methodName}; break;")
+                .AppendCode($"case \"{fhirCSType.FriendlyName()}\": return {methodName}(childName);")
                 ;
 
             methods
                 .BlankLine()
                 .Summary($"Manually add the children of a Coding element.")
-                .AppendCode($"void {methodName}")
+                .AppendCode($"ElementNode {methodName}(String childName)")
+                .OpenBrace()
+                .AppendCode($"ElementNode retVal;")
+                .AppendCode($"switch (childName)")
                 .OpenBrace()
                 ;
 
@@ -294,15 +297,18 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 {
                     String varName = $"{attribute.Name}Var";
                     methods
-                        .OpenBrace()
-                        .AppendCode($"ElementNode {varName} = new ElementNode(this, null, typeof({pi.PropertyType.FriendlyName()}), \"{pi.PropertyType.FriendlyName()}\");")
-                        .AppendCode($"this.children.Add(\"{attribute.Name}\", {varName});")
-                        .CloseBrace()
+                        .AppendCode($"case \"{attribute.Name}\":")
+                        .AppendCode($"    retVal = new ElementNode(this, null, typeof({pi.PropertyType.FriendlyName()}), nameof({fhirCSType.FriendlyName()}.{pi.Name}));")
+                        .AppendCode($"    break;")
                         ;
                 }
             }
 
             methods
+                .AppendCode($"default: return null;")
+                .CloseBrace()
+                .AppendCode($"this.children.Add(childName, retVal);")
+                .AppendCode($"return retVal;")
                 .CloseBrace()
                 ;
         }
@@ -312,7 +318,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         /// </summary>
         [Fact(DisplayName = "CodeGen.GenerateElementNodeChildren")]
         [Trait("CodeGen", "CodeGen")]
-        void GenerateElementNodeChildren()
+        void GenerateFindCommonChildren()
         {
             CodeEditor editor = new CodeEditor();
 
@@ -344,40 +350,41 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 ;
 
             construct
-                .AppendLine($"/// <summary>")
-                .AppendLine($"/// generate code for each fhir element. Makes sure it compiles.")
-                .AppendLine($"/// </summary>")
-                .AppendCode($"public void AddCommonChildren()")
+                .Summary($"Create ElementNode for child of common/primitive Fhir data type elements")
+                .AppendCode($"public ElementNode FindCommonChild(String childName)")
                 .OpenBrace()
                 .AppendCode($"switch (this.FhirItemType.FriendlyName())")
                 .OpenBrace()
                 ;
 
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Ratio);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Period);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Range);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Attachment);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Identifier);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Annotation);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.HumanName);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.CodeableConcept);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Ratio);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Period);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Range);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Attachment);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Identifier);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Annotation);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.HumanName);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.CodeableConcept);
 
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.ContactPoint);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Coding);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Money);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Address);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Timing);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Quantity);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.SampledData);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Signature);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Age);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Distance);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Duration);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.Count);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.MoneyQuantity);
-            GenerateElementNodeChild(construct, methods, FHIRAllTypes.SimpleQuantity);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.ContactPoint);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Coding);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Money);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Address);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Timing);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Quantity);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.SampledData);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Signature);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Age);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Distance);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Duration);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Count);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.MoneyQuantity);
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.SimpleQuantity);
+
+            GenerateFindCommonChild(construct, methods, FHIRAllTypes.Extension);
 
             construct
+                .AppendCode($"default: return null;")
                 .CloseBrace()
                 .CloseBrace()
                 ;
@@ -388,21 +395,21 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 "R2",
                 "FhirKhit.SliceGen.R2",
                 "CodeGen",
-                "ElementNode.AddChildren.cs");
+                "ElementNode.FindChild.cs");
 #elif FHIR_R3
             String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
                 "SliceGen",
                 "R3",
                 "FhirKhit.SliceGen.R3",
                 "CodeGen",
-                "ElementNode.AddChildren.cs");
+                "ElementNode.FindChild.cs");
 #elif FHIR_R4
             String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
                 "SliceGen",
                 "R4",
                 "FhirKhit.SliceGen.R4",
                 "CodeGen",
-                "ElementNode.AddChildren.cs");
+                "ElementNode.FindChild.cs");
 #endif
             editor.Save(outputPath);
         }

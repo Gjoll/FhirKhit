@@ -174,13 +174,14 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                             profile = fjp.Parse<StructureDefinition>(jsonText);
                             ElementNode head = ElementNode.Create(profile);
                         }
-                        SliceGenerator p = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
+                        SliceGenerator sliceGen = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
                             OutputNameSpace,
                             GenDir);
-                        p.AddProfile(profile);
-                        bool success = p.Process();
+                        sliceGen.SaveFlag = false;
+                        sliceGen.AddProfile(profile);
+                        bool success = sliceGen.Process();
                         StringBuilder sb = new StringBuilder();
-                        p.FormatMessages(sb);
+                        sliceGen.FormatMessages(sb);
                         Trace.WriteLine(sb.ToString());
                         Assert.True(success == true);
                     }

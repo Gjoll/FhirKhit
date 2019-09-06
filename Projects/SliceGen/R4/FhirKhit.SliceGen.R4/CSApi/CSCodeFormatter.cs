@@ -627,13 +627,13 @@ namespace FhirKhit.SliceGen.CSApi
                 }
                 else
                 {
-                    if (
-                        (node.TryGetChild(pathItem, out ElementNode next) == false) ||
-                        (next == null)
-                        )
+                    if (node.TryGetChild(pathItem, out ElementNode next) == false)
                     {
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
-                        return false;
+                        if (node.TryGetCommonChild(pathItem, out next) == false)
+                        {
+                            this.gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
+                            return false;
+                        }
                     }
 
                     Type nodeType = node.FhirItemType;
@@ -742,13 +742,13 @@ namespace FhirKhit.SliceGen.CSApi
                 }
                 else
                 {
-                    if (
-                        (node.TryGetChild(pathItem, out ElementNode next) == false) ||
-                        (next == null)
-                        )
+                    if (node.TryGetChild(pathItem, out ElementNode next) == false)
                     {
-                        this.gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
-                        return false;
+                        if (node.TryGetCommonChild(pathItem, out next) == false)
+                        {
+                            this.gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
+                            return false;
+                        }
                     }
 
                     PropertyInfo childProperty = node.FhirItemType.GetPropertyByFhirName(pathItem);
