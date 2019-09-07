@@ -110,6 +110,12 @@ namespace FhirKhit.SliceGen.R4
                 if (ProcessElementSlices(child) == false)
                     retVal = false;
             }
+
+            foreach (var slice in node.Slices)
+            {
+                if (ProcessElementSlices(slice) == false)
+                    retVal = false;
+            }
             return retVal;
         }
 

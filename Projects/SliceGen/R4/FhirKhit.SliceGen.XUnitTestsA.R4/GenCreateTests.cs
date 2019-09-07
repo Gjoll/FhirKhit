@@ -75,8 +75,106 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             return profile;
         }
 
-        void Create_SlicedMultiple(SliceGenerator p)
+
+        [Fact(DisplayName = "GenCreate.SlicedNested")]
+        [Trait("Test", "test")]
+        public void SlicedNested()
         {
+            SliceGenerator p = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
+                OutputNameSpace,
+                GenDir);
+
+
+            StructureDefinition profile = CreateObservation("SlicedMultiple");
+            {
+                ElementDefinition e = profile.Differential.Element.GetOrCreateElement("Observation.component");
+                e.Slicing = new ElementDefinition.SlicingComponent
+                {
+                    ElementId = "ObservationComponentSlice",
+                    Ordered = false,
+                    Rules = ElementDefinition.SlicingRules.Open
+                };
+                e.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
+                {
+                    Type = ElementDefinition.DiscriminatorType.Value,
+                    Path = "code"
+                });
+            }
+
+
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    ElementId = "Observation.component:Slice1",
+                    Path = "Observation.component",
+                    SliceName = "Slice1"
+                };
+                profile.Differential.Element.Add(e);
+            }
+
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    Path = "Observation.component.code",
+                    ElementId = "Observation.component:Slice1.code",
+                };
+                profile.Differential.Element.Add(e);
+            }
+
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    Path = "Observation.component.code.coding",
+                    ElementId = "Observation.component:Slice1.code.coding",
+                };
+                profile.Differential.Element.Add(e);
+
+                e.Slicing = new ElementDefinition.SlicingComponent
+                {
+                    ElementId = "ObservationComponentSlice1",
+                    Ordered = false,
+                    Rules = ElementDefinition.SlicingRules.Open
+                };
+                e.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
+                {
+                    Type = ElementDefinition.DiscriminatorType.Value,
+                    Path = "code"
+                });
+            }
+
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    Path = "Observation.component.code.coding.code",
+                    ElementId = "Observation.component:Slice1.code.coding.code",
+                    Fixed = new CodeableConcept("http://www.test.com/SliceSystem", "Slice3aCode")
+                };
+                profile.Differential.Element.Add(e);
+            }
+
+            SnapshotCreator.Create(profile);
+            p.AddProfile(profile);
+            profile.SaveJson($@"c:\Temp\SlicedNested.json");
+
+
+
+            bool success = p.Process();
+
+            StringBuilder sb = new StringBuilder();
+            p.FormatMessages(sb);
+            Trace.WriteLine(sb.ToString());
+            Assert.True(success == true);
+        }
+
+        [Fact(DisplayName = "GenCreate.SlicedMultiple")]
+        [Trait("Test", "test")]
+        public void SlicedMultiple()
+        {
+            SliceGenerator p = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
+                OutputNameSpace,
+                GenDir);
+
+
             StructureDefinition profile = CreateObservation("SlicedMultiple");
             {
                 ElementDefinition e = profile.Differential.Element.GetOrCreateElement("Observation.component");
@@ -136,17 +234,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             SnapshotCreator.Create(profile);
             p.AddProfile(profile);
             profile.SaveJson($@"c:\Temp\SlicedMultiple.json");
-        }
 
-
-        [Fact(DisplayName = "GenCreate.Create")]
-        [Trait("Test", "test")]
-        public void Create()
-        {
-            SliceGenerator p = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
-                OutputNameSpace,
-                GenDir);
-            this.Create_SlicedMultiple(p);
             bool success = p.Process();
 
             StringBuilder sb = new StringBuilder();
