@@ -312,15 +312,43 @@ namespace FhirKhit.Tools
             return this;
         }
 
+        public CodeBlockNested SummaryOpen()
+        {
+            this.AppendLine("/// <summary>");
+            return this;
+        }
+
+        public CodeBlockNested SummaryClose()
+        {
+            this.AppendLine("/// </summary>");
+            return this;
+        }
+
         public CodeBlockNested Summary(params String[] text)
         {
             if (text is null)
                 throw new ArgumentNullException(nameof(text));
 
-            this.AppendLine("/// <summary>");
+            this.SummaryOpen();
             foreach (String line in text)
                 this.AppendLine($"/// {line}");
-            this.AppendLine("/// </summary>");
+            this.SummaryClose();
+            return this;
+        }
+
+        public CodeBlockNested SummaryLines(String lines)
+        {
+            String[] lineArr = lines.ToLines();
+            foreach (String line in lineArr)
+                this.AppendLine($"/// {line}");
+            return this;
+        }
+
+        public CodeBlockNested AppendLines(String prefix, String lines)
+        {
+            String[] lineArr = lines.ToLines();
+            foreach (String line in lineArr)
+                this.AppendLine($"{prefix}{line}");
             return this;
         }
 

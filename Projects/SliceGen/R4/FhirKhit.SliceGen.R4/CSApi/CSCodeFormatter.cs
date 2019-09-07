@@ -1,6 +1,7 @@
 ﻿using FhirKhit.SliceGen.CodeGen;
 using FhirKhit.SliceGen.R4;
 using FhirKhit.Tools;
+using FhirKhit.Tools.R4;
 using Hl7.Fhir.ElementModel;
 using Hl7.Fhir.Introspection;
 using Hl7.Fhir.Model;
@@ -204,13 +205,18 @@ namespace FhirKhit.SliceGen.CSApi
 
                 methods
                     .BlankLine()
-                    .Summary($"Return all elements at discriminator path '{discriminator.Path}'")
+                    .SummaryOpen()
+                    .AppendCode($"/// Return all elements for discriminator'")
+                    .SummaryLines(discriminator.ToFormatedJson())
+                    .SummaryClose()
                     ;
                 String valueFilterMethod = this.ValueFilterName(this.MakePath(sliceNode.SlicePath(), discriminator.Path));
                 Type leafType;
                 if (this.GenerateSearchElements(methods, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType) == true)
                 {
                     fields
+                        .AppendLine($"/// Define discriminator'")
+                        .AppendLines("/// ", discriminator.ToFormatedJson())
                         .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
                         .OpenBrace()
                         .AppendCode($"Path = \"{discriminator.Path}\",")
