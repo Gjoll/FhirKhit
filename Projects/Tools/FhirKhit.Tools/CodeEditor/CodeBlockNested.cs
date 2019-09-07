@@ -318,21 +318,21 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        public CodeBlockNested SummaryClose()
+        public CodeBlockNested Summary(String line)
         {
-            this.AppendLine("/// </summary>");
+            this.AppendLine($"/// {line}");
             return this;
         }
 
-        public CodeBlockNested Summary(params String[] text)
+        public CodeBlockNested Summary(IEnumerable<String> lines)
         {
-            if (text is null)
-                throw new ArgumentNullException(nameof(text));
+            this.AppendLines("/// ", lines);
+            return this;
+        }
 
-            this.SummaryOpen();
-            foreach (String line in text)
-                this.AppendLine($"/// {line}");
-            this.SummaryClose();
+        public CodeBlockNested SummaryClose()
+        {
+            this.AppendLine("/// </summary>");
             return this;
         }
 
@@ -344,10 +344,9 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        public CodeBlockNested AppendLines(String prefix, String lines)
+        public CodeBlockNested AppendLines(String prefix, IEnumerable<String> lines)
         {
-            String[] lineArr = lines.ToLines();
-            foreach (String line in lineArr)
+            foreach (String line in lines)
                 this.AppendLine($"{prefix}{line}");
             return this;
         }

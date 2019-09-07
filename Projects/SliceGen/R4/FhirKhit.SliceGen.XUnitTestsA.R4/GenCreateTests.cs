@@ -172,7 +172,6 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                         {
                             String jsonText = streamReader.ReadToEndAsync().WaitResult();
                             profile = fjp.Parse<StructureDefinition>(jsonText);
-                            ElementNode head = ElementNode.Create(profile);
                         }
                         SliceGenerator sliceGen = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
                             OutputNameSpace,

@@ -116,19 +116,6 @@ namespace FhirKhit.SliceGen.R4
 
                 if (index < pathItems.Length - 1)
                     throw new Exception($"Invalid element tree {loadItem.Path}");
-                //while (index < pathItems.Length - 1)
-                //{
-                //    pathItem = pathItems[index];
-                //    if (nodeElement.TryGetChild(pathItem, out ElementNode next) == false)
-                //        throw new Exception($"Error element node {pathItem} in {loadItem.Path}");
-                //    tree.Child = new TreeItem
-                //    {
-                //        Element = next,
-                //        Child = null
-                //    };
-                //    nodeElement = next;
-                //    index += 1;
-                //}
 
                 pathItem = pathItems[index];
                 ElementNode leafNode;
@@ -152,6 +139,7 @@ namespace FhirKhit.SliceGen.R4
                 }
                 else
                 {
+                    //Debug.Assert(loadItem.SliceName != "breastrad-AbnormalityDensity");
                     NormalizePathItem(loadItem, ref pathItem, out Type actualType);
                     if (nodeElement.TryGetChild(pathItem, out ElementNode sliceNode) == false)
                     {
@@ -197,7 +185,23 @@ namespace FhirKhit.SliceGen.R4
         }
 
         /// <summary>
-        /// Return true if element definition, or one or more of its children are have a fixed value.
+        /// Return true if one or more of elements slice's have a fixed value.
+        /// </summary>
+        public bool HasFixedSlice
+        {
+            get
+            {
+                foreach (ElementNode slice in this.Slices)
+                {
+                    if ((slice.IsFixed) || (slice.HasFixedChild))
+                        return true;
+                }
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Return true if one or more of elements children have a fixed value.
         /// </summary>
         public bool HasFixedChild
         {
@@ -205,7 +209,7 @@ namespace FhirKhit.SliceGen.R4
             {
                 foreach (ElementNode child in this.Children)
                 {
-                    if (child.IsFixed)
+                    if ((child.IsFixed) || (child.HasFixedChild) || (child.HasFixedSlice))
                         return true;
                 }
                 return false;

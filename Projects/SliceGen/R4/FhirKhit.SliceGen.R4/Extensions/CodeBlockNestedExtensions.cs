@@ -21,7 +21,9 @@ namespace FhirKhit.SliceGen.R4
             block
                 .BlankLine()
                 .AppendLine($"// called from {Path.GetFileName(filePath)} #{lineNumber}")
+                .SummaryOpen()
                 .Summary($"static creator")
+                .SummaryClose()
                 .AppendCode($"public static {profileClassName} Create({fhirClassName} ptr)")
                 .OpenBrace()
                 .AppendLine($"{profileClassName} retVal = new {profileClassName}();")
@@ -42,7 +44,9 @@ namespace FhirKhit.SliceGen.R4
         {
             block
                 .BlankLine()
+                .SummaryOpen()
                 .Summary($"Constructor")
+                .SummaryClose()
                 .AppendLine($"// called from {Path.GetFileName(filePath)} #{lineNumber}")
                 .AppendCode($"public {className}() : base()")
                 .OpenBrace()
@@ -84,7 +88,9 @@ namespace FhirKhit.SliceGen.R4
             block
                 .BlankLine()
                 .AppendLine($"// called from {Path.GetFileName(filePath)} #{lineNumber}")
+                .SummaryOpen()
                 .Summary($"/// Init method")
+                .SummaryClose()
                 .AppendCode($"public override void Init({className} ptr)")
                 .OpenBrace()
                 .AppendCode($"base.Init(ptr);")

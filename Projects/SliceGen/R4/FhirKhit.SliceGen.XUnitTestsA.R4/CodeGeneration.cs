@@ -282,7 +282,9 @@ namespace FhirKhit.SliceGen.XUnitTestsA
 
             methods
                 .BlankLine()
+                .SummaryOpen()
                 .Summary($"Manually add the children of a Coding element.")
+                .SummaryClose()
                 .AppendCode($"ElementNode {methodName}(String childName)")
                 .OpenBrace()
                 .AppendCode($"ElementNode retVal;")
@@ -350,7 +352,9 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 ;
 
             construct
+                .SummaryOpen()
                 .Summary($"Create ElementNode for child of common/primitive Fhir data type elements")
+                .SummaryClose()
                 .AppendCode($"public ElementNode FindCommonChild(String childName)")
                 .OpenBrace()
                 .AppendCode($"switch (this.FhirItemType.FriendlyName())")

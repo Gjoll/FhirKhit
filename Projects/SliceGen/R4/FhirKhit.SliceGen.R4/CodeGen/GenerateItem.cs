@@ -94,6 +94,10 @@ namespace FhirKhit.SliceGen.R4
         {
             //const String fcn = nameof(ProcessResourceConstraint);
 
+            // Dont create slices on extensions. Those will be handled by another tool.
+            if (node.FhirItemType == typeof(Extension))
+                return false;
+
             bool retVal = true;
             if (node.Slices.Any())
             {

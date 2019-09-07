@@ -7,6 +7,7 @@ using Hl7.Fhir.Introspection;
 using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -93,7 +94,9 @@ namespace FhirKhit.SliceGen.CSApi
             this.classBlock = this.nameSpaceBlock.AppendBlock();
             this.classBlock
                 .BlankLine()
+                .SummaryOpen()
                 .Summary($"Extension class to add slicing helper methods to {fhirTypeName}")
+                .SummaryClose()
                 .AppendLine($"public static class {className}")
                 .OpenBrace()
                 ;
@@ -216,7 +219,7 @@ namespace FhirKhit.SliceGen.CSApi
                 {
                     fields
                         .AppendLine($"/// Define discriminator'")
-                        .AppendLines("/// ", discriminator.ToFormatedJson())
+                        .AppendLines("/// ", discriminator.ToFormatedJson().ToLines())
                         .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
                         .OpenBrace()
                         .AppendCode($"Path = \"{discriminator.Path}\",")
@@ -269,7 +272,9 @@ namespace FhirKhit.SliceGen.CSApi
 
                 this.methodsBlock
                     .BlankLine()
+                    .SummaryOpen()
                     .Summary($"Extension method to return slice {sliceName} on {elementNode.Name}")
+                    .SummaryClose()
                     .Example(
                         $"{this.fhirBaseClassType.FriendlyName()} resource = new {this.fhirBaseClassType.FriendlyName()}();",
                         $"{this.className}.{sliceInterfaceName} sliceAccessor = resource.{propertyPath}.{sliceName}();"
@@ -332,7 +337,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {
                     methods
                         .BlankLine()
+                        .SummaryOpen()
                         .Summary($"{className} constructor")
+                        .SummaryClose()
                         .AppendCode($"public {className}({elementNode.FhirType.FriendlyName()} items)")
                         .OpenBrace()
                         .AppendCode($"this.Items = items;")
@@ -347,6 +354,8 @@ namespace FhirKhit.SliceGen.CSApi
                 String sliceBaseClassName;
                 String sliceBaseInterfaceName;
                 String baseType = elementNode.FhirType.FriendlyName();
+
+                // Debug.Assert(sliceClassName != "BreastradAbnormalityDensityImpl");
 
                 switch (SliceAccessorType(sliceNode))
                 {
@@ -369,14 +378,21 @@ namespace FhirKhit.SliceGen.CSApi
                         throw new NotImplementedException("Unknown SliceAccessorTypes value");
                 }
 
+                String elementJson = sliceNode.Element.ToFormatedJson();
                 this.subClassBlock
                     .BlankLine()
+                    .SummaryOpen()
                     .Summary($"public interface that implements the functionality of slice {sliceClassName}")
+                    .SummaryClose()
                     .AppendCode($"public interface {sliceInterfaceName} : {sliceBaseInterfaceName}")
                     .OpenBrace()
                     .CloseBrace()
                     .BlankLine()
+                    .SummaryOpen()
                     .Summary($"private class that implements the functionality of slice {sliceClassName}")
+                    .Summary("")
+                    .Summary(elementJson.ToLines())
+                    .SummaryClose()
                     .AppendCode($"class {sliceClassName} : {sliceBaseClassName}, {sliceInterfaceName}")
                     .OpenBrace()
                     ;
@@ -402,7 +418,9 @@ namespace FhirKhit.SliceGen.CSApi
 
                     fields
                         .BlankLine()
+                        .SummaryOpen()
                         .Summary($"slicing discriminator for {elementNode.FullPath()} slice {sliceName}")
+                        .SummaryClose()
                         .AppendCode($"static Slicing<{baseItemTypeName}> {sliceFieldName} = new Slicing<{baseItemTypeName}>")
                         .OpenBrace()
                         .AppendCode($"Discriminators = new ISliceDiscriminator<{baseItemTypeName}>[]")
@@ -460,11 +478,23 @@ namespace FhirKhit.SliceGen.CSApi
                                 methods.AppendCode($"{childPropertyPath} = {varName};");
                             SetFixedValues(setNodeChild, varName);
                         }
+                        else if (setNodeChild.HasFixedSlice)
+                        {
+                            methods.AppendCode($"// {childItemTypeName} {varName} = xxyyz;");
+                            //methods.AppendCode($"{childItemTypeName} {varName} = new {childItemTypeName}();");
+                            //if (setNodeChild.IsListType)
+                            //    methods.AppendCode($"{childPropertyPath}.Add({varName});");
+                            //else
+                            //    methods.AppendCode($"{childPropertyPath} = {varName};");
+                            //SetFixedValues(setNodeChild, varName);
+                        }
                     }
                 }
                 methods
                     .BlankLine()
+                    .SummaryOpen()
                     .Summary($"Create and initialize a new item")
+                    .SummaryClose()
                     .AppendCode($"protected override {accessorType} Create()")
                     .OpenBrace()
                     .AppendCode($"{accessorType} retVal = new {accessorType}();")
@@ -651,10 +681,10 @@ namespace FhirKhit.SliceGen.CSApi
                     resultThis = resultNext;
                     node = next;
                 }
-                block.AppendCode($"return {resultThis};");
             }
 
             block
+                .AppendCode($"return {resultThis};")
                 .CloseBrace()
                 ;
 

@@ -31,13 +31,18 @@ namespace FhirKhit.SliceGen.SharedLib
         /// <summary>
         /// discriminator values must match this pattern.
         /// </summary>
-        public Element Pattern { get; set; }
+        public TValue Pattern { get; set; }
 
         /// <summary>
         /// Filter to return the value elements of the discriminator.
         /// </summary>
 
         public ValueFilterDel ValueFilter { get; set; }
+
+        static bool IsSame(Element valueItem, Element pattern)
+        {
+                return (valueItem.Matches(pattern));
+        }
 
         /// <summary>
         /// Return <see langword="true"/>if item is in slice.
@@ -48,7 +53,7 @@ namespace FhirKhit.SliceGen.SharedLib
         {
             foreach (TValue valueItem in this.ValueFilter(new TBase[] { item }))
             {
-                if (valueItem.Matches(this.Pattern) == true)
+                if (IsSame(valueItem, this.Pattern) == true)
                     return true;
             }
             return false;

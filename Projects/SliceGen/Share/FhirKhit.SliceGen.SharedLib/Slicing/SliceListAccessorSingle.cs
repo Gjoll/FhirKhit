@@ -11,5 +11,20 @@ namespace FhirKhit.SliceGen.SharedLib
     public abstract class SliceListAccessorSingle<T> : SliceListAccessor<T>
         where T : Element
     {
+        /// <summary>
+        /// Return member that is this slice.
+        /// </summary>
+        public T Slice
+        {
+            get
+            {
+                foreach (T item in this.Items)
+                {
+                    if (this.Slicing.IsSlice(item))
+                        return item;
+                }
+                return null;
+            }
+        }
     }
 }
