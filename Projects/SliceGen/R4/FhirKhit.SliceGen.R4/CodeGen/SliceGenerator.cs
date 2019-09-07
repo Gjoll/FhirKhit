@@ -134,7 +134,10 @@ namespace FhirKhit.SliceGen.CodeGen
                     SnapshotCreator.Create(profile);
                 ElementNode profileItems = ElementNode.Create(profile);
 
-                Type fhirType = this.GetFhirApiType(profile.BaseDefinition);
+                String baseFhirResourceName = profile.Type;
+                Type fhirType = ModelInfo.GetTypeForFhirType(baseFhirResourceName);
+                if (fhirType == null)
+                    throw new Exception($"Can not find Fhir Resource Class for '{baseFhirResourceName}'");
 
                 String name = $"{profile.Name}Extensions";
 
@@ -158,29 +161,6 @@ namespace FhirKhit.SliceGen.CodeGen
             {
                 this.ConversionError(this.GetType().Name, fcn, $"Profile {profile.Name} failed with exception {err.Message}");
             }
-        }
-
-        /// <summary>
-        /// Get type for FHIR api class of indicated fhir uri (resource uri)
-        /// </summary>
-        /// <param name="baseClassUri"></param>
-        /// <returns></returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1054:Uri parameters should not be strings", Justification = "<Pending>")]
-        public Type GetFhirApiType(String baseClassUri)
-        {
-            const String uriPrefix = "HTTP://HL7.ORG/FHIR/STRUCTUREDEFINITION/";
-
-            if (baseClassUri is null)
-                throw new ArgumentNullException(nameof(baseClassUri));
-
-            if (baseClassUri.ToUpper().StartsWith(uriPrefix) == false)
-                throw new Exception($"Expected Fhir Base Uri to start with '{uriPrefix}'");
-            String baseClassName = baseClassUri.Substring(uriPrefix.Length);
-
-            Type fhirType = ModelInfo.GetTypeForFhirType(baseClassName);
-            if (fhirType == null)
-                throw new Exception($"Can not find Fhir Resource Class for '{baseClassName}'");
-            return fhirType;
         }
 
         /// <summary>

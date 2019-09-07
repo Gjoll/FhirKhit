@@ -87,7 +87,6 @@ namespace FhirKhit.SliceGen.R4
             public void Load(ElementNode head,
                 ElementDefinition loadItem)
             {
-                Debug.Assert(loadItem.Path != "Extension.valuePositiveInt");
                 ElementNode nodeElement = head;
 
                 String[] pathItems = loadItem.Path.Split('.');
