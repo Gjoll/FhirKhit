@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FhirKhit.SliceGen.ShareLib
+namespace FhirKhit.SliceGen.SharedLib
 {
     /// <summary>
     /// Slice on value discriminator.

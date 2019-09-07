@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FhirKhit.SliceGen.ShareLib
+namespace FhirKhit.SliceGen.SharedLib
 {
     /// <summary>
     /// Base class for all slice accessor classes.

@@ -1,22 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-
-    <IsPackable>false</IsPackable>
-
     <LangVersion>7.1</LangVersion>
+    <ApplicationIcon />
+    <StartupObject />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>TRACE;FHIR_R4</DefineConstants>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="TestFiles\**" />
-    <EmbeddedResource Remove="TestFiles\**" />
-    <None Remove="TestFiles\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Hl7.Fhir.R4" Version="1.3.0" />
@@ -26,25 +20,15 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
     <ProjectReference Include="..\..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
-    <ProjectReference Include="..\FhirKhit.SliceGen.Lib.R4\FhirKhit.SliceGen.Lib.R4.csproj" />
-    <ProjectReference Include="..\FhirKhit.SliceGen.R4\FhirKhit.SliceGen.R4.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Generated\" />
-  </ItemGroup>
+  <Import Project="..\..\Share\FhirKhit.SliceGen.SharedLib\FhirKhit.SliceGen.SharedLib.projitems" Label="Shared" />
 
   <Import Project="..\..\..\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems" Label="Share" />
 

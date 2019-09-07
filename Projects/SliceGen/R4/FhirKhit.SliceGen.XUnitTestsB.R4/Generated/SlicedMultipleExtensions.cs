@@ -7,7 +7,7 @@ using System.Collections.Generic;                                               
 using System.Reflection;                                                                                                                    // CSCodeFormatter.cs:60
 using System.Text;                                                                                                                          // CSCodeFormatter.cs:61
 using Hl7.Fhir.Model;                                                                                                                       // CSCodeFormatter.cs:62
-using FhirKhit.SliceGen.ShareLib;                                                                                                           // CSCodeFormatter.cs:63
+using FhirKhit.SliceGen.SharedLib;                                                                                                           // CSCodeFormatter.cs:63
                                                                                                                                             // CSCodeFormatter.cs:64
 namespace FhirKhit.Test.R4                                                                                                                  // CSCodeFormatter.cs:65
 {                                                                                                                                           // CSCodeFormatter.cs:66

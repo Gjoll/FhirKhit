@@ -60,7 +60,7 @@ namespace FhirKhit.SliceGen.CSApi
                 .AppendCode($"using System.Reflection;")
                 .AppendCode($"using System.Text;")
                 .AppendCode($"using Hl7.Fhir.Model;")
-                .AppendCode($"using FhirKhit.SliceGen.ShareLib;")
+                .AppendCode($"using FhirKhit.SliceGen.SharedLib;")
                 .BlankLine()
                 .AppendCode($"namespace {nameSpace}")
                 .OpenBrace()

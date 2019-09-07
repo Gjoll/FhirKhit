@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FhirKhit.SliceGen.ShareLib
+namespace FhirKhit.SliceGen.SharedLib
 {
     /// <summary>
     /// Interface that all slice accessors with cardinality == 1 must implememnt.
