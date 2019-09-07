@@ -177,7 +177,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                         SliceGenerator sliceGen = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
                             OutputNameSpace,
                             GenDir);
-                        sliceGen.SaveFlag = false;
+                        //sliceGen.SaveFlag = false;
                         sliceGen.AddProfile(profile);
                         bool success = sliceGen.Process();
                         StringBuilder sb = new StringBuilder();

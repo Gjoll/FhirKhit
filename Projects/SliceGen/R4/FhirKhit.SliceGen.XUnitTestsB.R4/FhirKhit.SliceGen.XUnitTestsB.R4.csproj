@@ -41,6 +41,10 @@
     <ProjectReference Include="..\FhirKhit.SliceGen.R4\FhirKhit.SliceGen.R4.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Generated\" />
+  </ItemGroup>
+
   <Import Project="..\..\..\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems" Label="Share" />
 
 </Project>

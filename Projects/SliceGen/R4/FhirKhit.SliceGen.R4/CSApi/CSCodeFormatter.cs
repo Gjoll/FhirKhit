@@ -239,7 +239,7 @@ namespace FhirKhit.SliceGen.CSApi
 
             void CreateSliceAccessor(ElementNode sliceNode, String sliceClassName, String sliceInterfaceName)
             {
-                String sliceName = sliceNode.Element.SliceName;
+                String sliceName = sliceNode.Element.SliceName.ToMachineName();
                 String propertyPath = sliceNode.PropertyName;
 
                 String sliceBaseClassName;
@@ -335,7 +335,7 @@ namespace FhirKhit.SliceGen.CSApi
                         ;
                 }
 
-                String sliceName = sliceNode.Element.SliceName;
+                String sliceName = sliceNode.Element.SliceName.ToMachineName();
                 sliceClassName = $"{sliceName}Impl";
                 sliceInterfaceName = $"I{sliceName}";
                 String sliceBaseClassName;
