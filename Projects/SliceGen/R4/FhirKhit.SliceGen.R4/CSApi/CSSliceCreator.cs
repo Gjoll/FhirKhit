@@ -33,16 +33,17 @@ namespace FhirKhit.SliceGen.CSApi
         String accessorType = String.Empty;
         String baseTypeName;
         String baseItemTypeName;
-        SliceGenerator gen;
+        CSCodeFormatter csCode;
+        SliceGenerator gen => csCode.Gen;
 
-        public CSSliceCreator(String className, 
-            SliceGenerator gen,
+        public CSSliceCreator(String className,
+            CSCodeFormatter csCode,
             CodeBlockNested subClassBlock,
             CodeBlockNested methodsBlock,
             ElementNode elementNode,
             Type fhirBaseClassType)
         {
-            this.gen = gen;
+            this.csCode = csCode;
             if (elementNode is null)
                 throw new ArgumentNullException(nameof(elementNode));
 
@@ -57,6 +58,8 @@ namespace FhirKhit.SliceGen.CSApi
             ElementDefinition.DiscriminatorComponent discriminator,
             String term)
         {
+            const String fcn = nameof(DefineSliceOnValueDiscriminator);
+
             String sliceName = sliceNode.Element.SliceName;
 
             sliceClassMethods
@@ -66,6 +69,19 @@ namespace FhirKhit.SliceGen.CSApi
                 .SummaryLines(discriminator.ToFormatedJson())
                 .SummaryClose()
                 ;
+
+            String[] fixPath = CSMisc.MakePath(sliceNode.SlicePath(), discriminator.Path);
+            String fixMethodName = CSMisc.FixName(fixPath);
+            if (this.csCode.FixMethods.Contains(fixMethodName) == false)
+            {
+                String msg = $"Error defining slice {sliceNode.Element.SliceName}'. Fixed discriminator field {discriminator.Path} not set";
+                sliceClassFields
+                    .AppendLine($"/// {msg}")
+                    ;
+                this.gen.ConversionError(this.GetType().Name, fcn, msg);
+                return false;
+            }
+
             String valueFilterMethod = CSMisc.ValueFilterName(CSMisc.MakePath(sliceNode.SlicePath(), discriminator.Path));
             Type leafType;
             if (this.GenerateSearchElements(sliceClassMethods, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType) == true)
@@ -76,7 +92,7 @@ namespace FhirKhit.SliceGen.CSApi
                     .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
                     .OpenBrace()
                     .AppendCode($"Path = \"{discriminator.Path}\",")
-                    .AppendCode($"Pattern = {CSMisc.FixName(CSMisc.MakePath(sliceNode.SlicePath(), discriminator.Path))}(),")
+                    .AppendCode($"Pattern = {fixMethodName}(),")
                     .AppendCode($"ValueFilter = {valueFilterMethod}")
                     .CloseBrace(term)
                 ;
@@ -174,11 +190,14 @@ namespace FhirKhit.SliceGen.CSApi
         {
             if (node.Element.Fixed != null)
             {
+                String[] slicePath = node.SlicePath();
+                String fixMethodName = CSMisc.FixName(slicePath);
                 FhirConstruct.Construct(sliceClassMethods,
                     node.Element.Fixed,
-                    CSMisc.FixName(node.SlicePath()),
+                    fixMethodName,
                     "static",
                     out String temp);
+                this.csCode.FixMethods.Add(fixMethodName);
             }
             foreach (ElementNode child in node.Children)
             {
@@ -273,7 +292,10 @@ namespace FhirKhit.SliceGen.CSApi
             }
             else
             {
-                String sliceFieldName = $"slicing";
+                const String sliceFieldName = "slicing";
+
+                CreateConstructor(sliceClassName, sliceFieldName);
+                CreateFixCode(sliceNode);
 
                 sliceClassFields
                     .BlankLine()
@@ -298,9 +320,6 @@ namespace FhirKhit.SliceGen.CSApi
                     .CloseBrace()
                     .CloseBrace(";")
                     ;
-
-                CreateConstructor(sliceClassName, sliceFieldName);
-                CreateFixCode(sliceNode);
             }
 
             // Recursively crete code to set values that are fixed in object.

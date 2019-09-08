@@ -25,7 +25,12 @@ namespace FhirKhit.SliceGen.CSApi
         CodeBlockNested methodsBlock;
         CodeBlockNested subClassBlock;
 
-        SliceGenerator gen;
+        public SliceGenerator Gen;
+
+        /// <summary>
+        /// Dictionary of <fhir path, fix method name> tuples.</fhir>
+        /// </summary>
+        public HashSet<String> FixMethods { get; } = new HashSet<String>();
 
         /// <summary>
         /// Type of the fhir resource class that the profile is derived from (the resource it profiles)
@@ -34,7 +39,7 @@ namespace FhirKhit.SliceGen.CSApi
 
         public CSCodeFormatter(SliceGenerator gen)
         {
-            this.gen = gen;
+            this.Gen = gen;
             this.code = new CodeEditor();
         }
 
@@ -154,7 +159,7 @@ namespace FhirKhit.SliceGen.CSApi
                 }
                 if (next == null)
                 {
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"Cant find child node '{pathPart}' in '{sliceNode.FullPath()}'");
+                    this.Gen.ConversionError(this.GetType().Name, fcn, $"Cant find child node '{pathPart}' in '{sliceNode.FullPath()}'");
                     return null;
                 }
                 node = next;
@@ -169,7 +174,7 @@ namespace FhirKhit.SliceGen.CSApi
         /// <returns></returns>
         public bool CreateSlice(ElementNode elementNode)
         {
-            CSSliceCreator c = new CSSliceCreator(this.className, this.gen, this.subClassBlock, this.methodsBlock, elementNode, this.fhirBaseClassType);
+            CSSliceCreator c = new CSSliceCreator(this.className, this, this.subClassBlock, this.methodsBlock, elementNode, this.fhirBaseClassType);
             return c.CreateSlice();
         }
 
@@ -242,17 +247,17 @@ namespace FhirKhit.SliceGen.CSApi
                 String pathItem = pathItems[i];
                 if (pathItem.StartsWith("resolve("))
                 {
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
+                    this.Gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
                     return false;
                 }
                 else if (pathItem.StartsWith("extension(\""))
                 {
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
+                    this.Gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
                     return false;
                 }
                 else if (pathItem.StartsWith("ofType("))
                 {
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
+                    this.Gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
                     return false;
                 }
                 else
@@ -261,7 +266,7 @@ namespace FhirKhit.SliceGen.CSApi
                     {
                         if (node.TryGetCommonChild(pathItem, out next) == false)
                         {
-                            this.gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
+                            this.Gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
                             return false;
                         }
                     }
