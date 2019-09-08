@@ -36,7 +36,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         const String OutputNameSpace = "FhirKhit.Test.R3";
 #elif FHIR_R4
         public static string GenDir => Path.Combine(DirHelper.FindParentDir("SliceGen"), "R4", "FhirKhit.SliceGen.XUnitTestsB.R4", "Generated");
-        FHIRVersion FVersion = FHIRVersion.N3_0_1;
+        FHIRVersion FVersion = FHIRVersion.N4_0_0;
         const String OutputNameSpace = "FhirKhit.Test.R4";
 #endif
         static String TestDir()
@@ -80,12 +80,10 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         [Trait("Test", "test")]
         public void SlicedNested()
         {
-            SliceGenerator p = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
+            SliceGenerator sliceGen = new SliceGenerator(SliceGenerator.OutputLanguageType.CSharp,
                 OutputNameSpace,
                 GenDir);
-
-
-            StructureDefinition profile = CreateObservation("SlicedMultiple");
+            StructureDefinition profile = CreateObservation("SlicedNested");
             {
                 ElementDefinition e = profile.Differential.Element.GetOrCreateElement("Observation.component");
                 e.Slicing = new ElementDefinition.SlicingComponent
@@ -100,8 +98,6 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                     Path = "code"
                 });
             }
-
-
             {
                 ElementDefinition e = new ElementDefinition
                 {
@@ -153,17 +149,25 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             }
 
             SnapshotCreator.Create(profile);
-            p.AddProfile(profile);
-            profile.SaveJson($@"c:\Temp\SlicedNested.json");
+            String outputPath = $@"c:\Temp\SlicedNested.json";
+            profile.SaveJson(outputPath);
+            FhirValidator f = new FhirValidator();
+            {
+                bool success = f.Validate("4.0.0", outputPath);
+                StringBuilder sb = new StringBuilder();
+                f.FormatMessages(sb);
+                Trace.WriteLine(sb.ToString());
+                Assert.True(success == true);
+            }
+            sliceGen.AddProfile(profile);
+            {
+                bool success = sliceGen.Process();
 
-
-
-            bool success = p.Process();
-
-            StringBuilder sb = new StringBuilder();
-            p.FormatMessages(sb);
-            Trace.WriteLine(sb.ToString());
-            Assert.True(success == true);
+                StringBuilder sb = new StringBuilder();
+                sliceGen.FormatMessages(sb);
+                Trace.WriteLine(sb.ToString());
+                Assert.True(success == true);
+            }
         }
 
         [Fact(DisplayName = "GenCreate.SlicedMultiple")]

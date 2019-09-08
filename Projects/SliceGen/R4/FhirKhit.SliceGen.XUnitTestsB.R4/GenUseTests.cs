@@ -40,7 +40,7 @@ namespace FhirKhit.SliceGen.XUnitTestsB
                 Id = "SlicedMultipleTests"
             };
 
-            SlicedMultipleExtensions.ISlice1 slice1 = o.Component.Slice1();
+            SlicedMultipleExtensions.ISlice1 slice1 = SlicedMultipleExtensions.Slice1(o.Component);
             SlicedMultipleExtensions.ISlice2 slice2 = o.Component.Slice2();
             Debug.Assert(slice1.Count == 0);
             Debug.Assert(slice2.Count == 0);

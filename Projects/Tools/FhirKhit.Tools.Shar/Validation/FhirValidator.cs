@@ -51,7 +51,7 @@ namespace FhirKhit.Tools.R2
             }
 
             if (files.Length > 0)
-                if (this.Validate(files, version) == false)
+                if (this.Validate(version, files) == false)
                     retVal = false;
 
             foreach (String subDir in Directory.GetDirectories(baseDir))
@@ -64,7 +64,7 @@ namespace FhirKhit.Tools.R2
         }
 
 
-        public bool Validate(String[] resourcePaths, String version)
+        public bool Validate(String version, params String[] resourcePaths)
         {
             if (resourcePaths is null)
                 throw new ArgumentNullException(nameof(resourcePaths));
