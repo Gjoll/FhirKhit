@@ -43,6 +43,13 @@ namespace FhirKhit.SliceGen.CSApi
             ElementNode elementNode,
             Type fhirBaseClassType)
         {
+            if (subClassBlock is null)
+                throw new ArgumentNullException(nameof(subClassBlock));
+            if (methodsBlock is null)
+                throw new ArgumentNullException(nameof(methodsBlock));
+            if (elementNode is null)
+                throw new ArgumentNullException(nameof(elementNode));
+
             this.csCode = csCode;
             if (elementNode is null)
                 throw new ArgumentNullException(nameof(elementNode));
@@ -54,15 +61,19 @@ namespace FhirKhit.SliceGen.CSApi
             this.fhirBaseClassType = fhirBaseClassType;
         }
 
-        bool DefineSliceOnValueDiscriminator(ElementNode sliceNode,
+        bool DefineValueFilterMethod(ElementNode sliceNode,
             ElementDefinition.DiscriminatorComponent discriminator,
-            String term)
+            out String valueFilterMethod,
+            out Type leafType)
         {
-            const String fcn = nameof(DefineSliceOnValueDiscriminator);
+            const String fcn = nameof(DefineValueFilterMethod);
 
             String sliceName = sliceNode.Element.SliceName;
+            CodeBlockNested valueMethodBlock = sliceClassMethods.AppendBlock();
 
-            sliceClassMethods
+            valueFilterMethod = CSMisc.ValueFilterName(CSMisc.MakePath(sliceNode.SlicePath(), discriminator.Path));
+            // Note: We are defining method here, after we know the return value type.
+            valueMethodBlock
                 .BlankLine()
                 .SummaryOpen()
                 .AppendCode($"/// Return all elements for discriminator'")
@@ -70,11 +81,24 @@ namespace FhirKhit.SliceGen.CSApi
                 .SummaryClose()
                 ;
 
-            String[] fixPath = CSMisc.MakePath(sliceNode.SlicePath(), discriminator.Path);
-            String fixMethodName = CSMisc.FixName(fixPath);
-            if (this.csCode.FixMethods.Contains(fixMethodName) == false)
+            if (this.GenerateSearchElements(valueMethodBlock, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType) == false)
+                return false;
+            if (sliceNode.TryGetChild(discriminator.Path, out ElementNode discriminatorNode) == false)
             {
-                String msg = $"Error defining slice {sliceNode.Element.SliceName}'. Fixed discriminator field {discriminator.Path} not set";
+                this.gen.ConversionError(this.GetType().Name, fcn, $"Child element {discriminator.Path} not found in element {sliceNode.Path}");
+                return false;
+            }
+
+            Element fixElement = discriminatorNode.Element.Fixed;
+            if (fixElement == null)
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node lacks fixed element {discriminator.Path}");
+                return false;
+            }
+
+            if (ElementFixCode.Construct(valueMethodBlock, fixElement, "xxyyz", out String propertyType) == false)
+            {
+                String msg = $"Error defining slice {sliceNode.Element.SliceName}'. Fixed discriminator field {discriminator.Path} not fixed";
                 sliceClassFields
                     .AppendLine($"/// {msg}")
                     ;
@@ -82,21 +106,32 @@ namespace FhirKhit.SliceGen.CSApi
                 return false;
             }
 
-            String valueFilterMethod = CSMisc.ValueFilterName(CSMisc.MakePath(sliceNode.SlicePath(), discriminator.Path));
-            Type leafType;
-            if (this.GenerateSearchElements(sliceClassMethods, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType) == true)
-            {
-                sliceClassFields
-                    .AppendLine($"/// Define discriminator'")
-                    .AppendLines("/// ", discriminator.ToFormatedJson().ToLines())
-                    .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
-                    .OpenBrace()
-                    .AppendCode($"Path = \"{discriminator.Path}\",")
-                    .AppendCode($"Pattern = {fixMethodName}(),")
-                    .AppendCode($"ValueFilter = {valueFilterMethod}")
-                    .CloseBrace(term)
+            valueMethodBlock
+                .CloseBrace()
                 ;
-            }
+
+            return true;
+        }
+
+        bool DefineSliceOnValueDiscriminator(ElementNode sliceNode,
+            ElementDefinition.DiscriminatorComponent discriminator,
+            String valueFilterMethod,
+            Type leafType,
+            String term)
+        {
+            const String fcn = nameof(DefineSliceOnValueDiscriminator);
+
+            String sliceName = sliceNode.Element.SliceName;
+            sliceClassFields
+                .AppendLine($"/// Define discriminator'")
+                .AppendLines("/// ", discriminator.ToFormatedJson().ToLines())
+                .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
+                .OpenBrace()
+                .AppendCode($"Path = \"{discriminator.Path}\",")
+                //$$$$.AppendCode($"Pattern = {fixMethodName}(),")
+                .AppendCode($"ValueFilter = {valueFilterMethod}")
+                .CloseBrace(term)
+            ;
             return true;
         }
 
@@ -109,7 +144,11 @@ namespace FhirKhit.SliceGen.CSApi
             switch (discriminator.Type)
             {
                 case ElementDefinition.DiscriminatorType.Value:
-                    return DefineSliceOnValueDiscriminator(sliceNode, discriminator, term);
+                    if (DefineValueFilterMethod(sliceNode, discriminator, out String valueFilterMethod, out Type leafType) == false)
+                        return false;
+                    if (DefineSliceOnValueDiscriminator(sliceNode, discriminator, valueFilterMethod, leafType, term) == false)
+                        return false;
+                    return true;
 
                 default:
                     this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: discriminator.Type {discriminator.Type} currently implemented. '{elementNode.FullPath()}'");
@@ -183,25 +222,6 @@ namespace FhirKhit.SliceGen.CSApi
             {
                 this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node '{sliceNode.FullPath()}' unknown base type {baseType}");
                 return SliceAccessorTypes.Error;
-            }
-        }
-
-        void CreateFixCode(ElementNode node)
-        {
-            if (node.Element.Fixed != null)
-            {
-                String[] slicePath = node.SlicePath();
-                String fixMethodName = CSMisc.FixName(slicePath);
-                FhirConstruct.Construct(sliceClassMethods,
-                    node.Element.Fixed,
-                    fixMethodName,
-                    "static",
-                    out String temp);
-                this.csCode.FixMethods.Add(fixMethodName);
-            }
-            foreach (ElementNode child in node.Children)
-            {
-                CreateFixCode(child);
             }
         }
 
@@ -295,7 +315,6 @@ namespace FhirKhit.SliceGen.CSApi
                 const String sliceFieldName = "slicing";
 
                 CreateConstructor(sliceClassName, sliceFieldName);
-                CreateFixCode(sliceNode);
 
                 sliceClassFields
                     .BlankLine()
@@ -322,7 +341,7 @@ namespace FhirKhit.SliceGen.CSApi
                     ;
             }
 
-            // Recursively crete code to set values that are fixed in object.
+            // Recursively create code to set values that are fixed in object.
             // If a child object needs to be fixed, make sure that parent objects are created
             // as well.
             // i.e. if a.b.c = fix(...)
@@ -341,7 +360,7 @@ namespace FhirKhit.SliceGen.CSApi
                     String childItemTypeName = setNodeChild.FhirItemType.FriendlyName();
                     if (setNodeChild.IsFixed)
                     {
-                        sliceClassMethods.AppendCode($"{childItemTypeName} {varName} = {CSMisc.FixName(setNodeChild.SlicePath())}();");
+                        //$$sliceClassMethods.AppendCode($"{childItemTypeName} {varName} = {CSMisc.FixName(setNodeChild.SlicePath())}();");
                         if (setNodeChild.IsListType)
                             sliceClassMethods.AppendCode($"{childPropertyPath}.Add({varName});");
                         else

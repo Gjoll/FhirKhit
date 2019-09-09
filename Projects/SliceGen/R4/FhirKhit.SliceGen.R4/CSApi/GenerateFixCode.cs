@@ -10,7 +10,7 @@ using System.Text;
 
 namespace FhirKhit.SliceGen.R4
 {
-    public class GenerateFhirConstruct
+    public class GenerateFixCode
     {
         Int32 tempCounter = 0;
         String TempName()
@@ -212,7 +212,7 @@ namespace FhirKhit.SliceGen.R4
                 .AppendCode($"case \"{fhirTypeName}\": // {fhirType}  - primitive")
                 .OpenBrace()
                 .AppendCode($"propertyType = \"{fhirTypeName}\";")
-                .AppendCode($"return Construct(block, ({csTypeName})fix, methodName, methodPrefix);")
+                .AppendCode($"return Construct(block, ({csTypeName})fix, varName);")
                 .CloseBrace()
                 .BlankLine()
                 ;
@@ -224,28 +224,26 @@ namespace FhirKhit.SliceGen.R4
                 .AppendLine($"/// </summary>")
                 .AppendCode($"static public bool Construct(CodeBlockNested block,")
                 .AppendCode($"    {csTypeName} fix,")
-                .AppendCode($"    String methodName,")
-                .AppendCode($"    String methodPrefix)")
+                .AppendCode($"    String varName)")
                 .OpenBrace()
                 //.AppendCode($"const String fcn = \"Construct({fhirTypeName})\";")
                 .BlankLine()
                 .AppendCode($"if (block is null)")
                 .AppendCode($"    throw new ArgumentNullException(nameof(block));")
                 .AppendCode($"block")
-                .AppendCode($"    .AppendCode($\"{{methodPrefix}} {csTypeName} {{methodName}}()\")")
                 .AppendCode($"    .OpenBrace()")
-                .AppendCode($"    .AppendCode(\"{csTypeName} retVal = new {csTypeName}();\")")
+                .AppendCode($"    .AppendCode(\"{csTypeName} temp = new {csTypeName}();\")")
                 .AppendCode($"    ;")
                 .AppendCode($"if (fix != null)")
                 .OpenBrace()
                 ;
 
-            FixElements(m, csType, "fix", "retVal");
+            FixElements(m, csType, "fix", "temp");
 
             m
                 .CloseBrace()
                 .AppendCode($"block")
-                .AppendCode($"    .AppendCode(\"return retVal;\")")
+                .AppendCode($"    .AppendCode($\"{{varName}} = temp;\")")
                 .AppendCode($"    .CloseBrace()")
                 .AppendCode($"    ;")
                 .AppendCode($"return  true;")
@@ -269,7 +267,7 @@ namespace FhirKhit.SliceGen.R4
                 .AppendCode($"case \"{fhirTypeName}\": // {fhirType}  - DataType")
                 .OpenBrace()
                 .AppendCode($"propertyType = \"{fhirTypeName}\";")
-                .AppendCode($"return Construct(block, ({csTypeName})fix, methodName, methodPrefix);")
+                .AppendCode($"return Construct(block, ({csTypeName})fix, varName);")
                 .CloseBrace()
                 .BlankLine()
                 ;
@@ -282,28 +280,26 @@ namespace FhirKhit.SliceGen.R4
                 .AppendLine($"/// </summary>")
                 .AppendCode($"static public bool Construct(CodeBlockNested block,")
                 .AppendCode($"    {csTypeName} fix,")
-                .AppendCode($"    String methodName,")
-                .AppendCode($"    String methodPrefix)")
+                .AppendCode($"    String varName)")
                .OpenBrace()
                 //.AppendCode($"const String fcn = \"Construct({fhirTypeName})\";")
                 .BlankLine()
                 .AppendCode($"if (block is null)")
                 .AppendCode($"    throw new ArgumentNullException(nameof(block));")
                 .AppendCode($"block")
-                .AppendCode($"    .AppendCode($\"{{methodPrefix}} {csTypeName} {{methodName}}()\")")
                 .AppendCode($"    .OpenBrace()")
-                .AppendCode($"    .AppendCode(\"{csTypeName} retVal = new {csTypeName}();\")")
+                .AppendCode($"    .AppendCode(\"{csTypeName} temp = new {csTypeName}();\")")
                 .AppendCode($"    ;")
                 .AppendCode($"if (fix != null)")
                 .OpenBrace()
                 ;
 
-            FixElements(m, csType, "fix", "retVal");
+            FixElements(m, csType, "fix", "temp");
 
             m
                 .CloseBrace()
                 .AppendCode($"block")
-                .AppendCode($"    .AppendCode(\"return retVal;\")")
+                .AppendCode($"    .AppendCode($\"{{varName}} = temp;\")")
                 .AppendCode($"    .CloseBrace()")
                 .AppendCode($"    ;")
                 .AppendCode($"return  true;")
@@ -334,7 +330,7 @@ namespace FhirKhit.SliceGen.R4
                 .BlankLine()
                 .AppendLine($"namespace FhirKhit.SliceGen.CSApi")
                 .OpenBrace()
-                .AppendLine($"public static class FhirConstruct")
+                .AppendLine($"public static class ElementFixCode")
                 .OpenBrace()
                 ;
             CodeBlockNested construct = main.AppendBlock();
@@ -351,8 +347,7 @@ namespace FhirKhit.SliceGen.R4
                 .AppendLine($"/// </summary>")
                 .AppendLine($"static public bool Construct(CodeBlockNested block,")
                 .AppendCode($"    Element fix,")
-                .AppendCode($"    String methodName,")
-                .AppendCode($"    String methodPrefix,")
+                .AppendCode($"    String varName,")
                 .AppendCode($"    out String propertyType)")
                 .OpenBrace()
                 //.AppendCode($"const String fcn = \"Construct\";")

@@ -7,12 +7,13 @@ namespace FhirKhit.SliceGen.CSApi
 {
     public static class CSMisc
     {
-        public static String FixName(String[] path) => CSMisc.PathName("Fix", path);
-
         public static String ValueFilterName(String[] path) => CSMisc.PathName("ValueFilter", path);
 
         public static String PathName(String prefix, String[] path)
         {
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
+
             StringBuilder sb = new StringBuilder();
             sb.Append(prefix);
             for (Int32 i = 1; i < path.Length; i++)

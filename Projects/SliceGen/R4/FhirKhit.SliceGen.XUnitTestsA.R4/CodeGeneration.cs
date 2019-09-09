@@ -35,20 +35,20 @@ namespace FhirKhit.SliceGen.XUnitTestsA
     {
 
         /// <summary>
-        /// Generate Construct method.
+        /// Generate Fix code method.
         /// </summary>
-        [Fact(DisplayName = "CodeGen.GenerateFhirConstructClasses")]
+        [Fact(DisplayName = "CodeGen.GenerateFixCode")]
         [Trait("CodeGen", "CodeGen")]
-        public void GenerateFhirConstructClasses()
+        public void GenerateFixCode()
         {
             String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
                 "SliceGen",
                 "R4",
                 "FhirKhit.SliceGen.R4",
                 "CSApi",
-                "FhirConstruct.cs");
+                "ElementFixCode.cs");
 
-            GenerateFhirConstruct g = new GenerateFhirConstruct();
+            GenerateFixCode g = new GenerateFixCode();
             g.Generate(outputPath);
         }
 
@@ -154,119 +154,6 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             return retVal;
         }
 
-        /// <summary>
-        /// Use FhirConstruct method to generate code to call each generated class.
-        /// The main purpose of this is to make sure that each class compiles and doesnt
-        /// throw a common error. It is not a complete test of each generated FhirCreate class.
-        /// </summary>
-        [Fact(DisplayName = "CodeGen.CallFhirConstructClasses")]
-        [Trait("CodeGen", "CodeGen")]
-        public void CallFhirConstructClasses()
-        {
-            CodeEditor editor = new CodeEditor();
-
-            CodeBlockNested main = editor.Blocks.AppendBlock();
-            main
-                .AppendLine($"using System;")
-                .AppendLine($"using System.Linq;")
-                .AppendLine($"using System.Collections.Generic;")
-                .AppendLine($"using System.Reflection;")
-                .AppendLine($"using System.Text;")
-                .AppendLine($"using FhirKhit.Tools;")
-                .AppendLine($"using Hl7.Fhir.Introspection;")
-                .AppendLine($"using Hl7.Fhir.Model;")
-                .AppendLine($"using Hl7.Fhir.Support.Model;")
-                .AppendLine($"using System.Diagnostics;")
-                .AppendLine($"using Hl7.FhirPath;")
-                .BlankLine()
-                .AppendLine($"namespace FhirKhit.SliceGen.Share.XUnitTestsB")
-                .OpenBrace()
-                .AppendCode($"public class FhirConstructUse")
-                .OpenBrace()
-                ;
-            CodeBlockNested construct = main.AppendBlock();
-            CodeBlockNested methods = main.AppendBlock();
-
-            main
-                .CloseBrace()
-                .CloseBrace()
-                ;
-
-            construct
-                .AppendLine($"/// <summary>")
-                .AppendLine($"/// generate code for each fhir element. Makes sure it compiles.")
-                .AppendLine($"/// </summary>")
-                .AppendCode($"public void Use()")
-                .OpenBrace()
-                .BlankLine()
-                ;
-
-            Int32 varNum = 0;
-            foreach (FHIRAllTypes fhirType in Enum.GetValues(typeof(FHIRAllTypes)).OfType<FHIRAllTypes>())
-            {
-                Trace.WriteLine($"fhirType {fhirType}");
-                String fhirTypeName = ModelInfo.FhirTypeToFhirTypeName(fhirType);
-                Type fhirCSType = ModelInfo.GetTypeForFhirType(fhirTypeName);
-
-                if (ModelInfo.IsPrimitive(fhirType))
-                {
-                    String varName1 = $"x{++varNum}";
-                    String methodName1 = $"Method{++varNum}";
-
-                    construct
-                        .AppendCode($"{fhirCSType} {varName1} = {methodName1}();")
-                        ;
-
-                    Element fix = CreateFix(fhirCSType);
-                    FhirConstruct.Construct(methods, fix, methodName1, "public", out String propertyType1);
-                }
-                else if (ModelInfo.IsDataType(fhirType))
-                {
-                    if (GenerateCommon.Ignore(fhirType) == false)
-                    {
-                        String varName1 = $"x{++varNum}";
-                        String methodName1 = $"Method{++varNum}";
-
-                        construct
-                        .AppendCode($"{fhirCSType} {varName1} = {methodName1}();")
-                            ;
-
-                        Element fix = CreateFix(fhirCSType);
-                        FhirConstruct.Construct(methods, fix, methodName1, "public", out String propertyType1);
-                    }
-                }
-            }
-
-            construct
-                .CloseBrace()
-                ;
-
-
-#if FHIR_R2
-            String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
-                "SliceGen",
-                "R2",
-                "FhirKhit.SliceGen.Share.XUnitTestsB.R2",
-                "Generated",
-                "FhirConstructUse.cs");
-#elif FHIR_R3
-            String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
-                "SliceGen",
-                "R3",
-                "FhirKhit.SliceGen.Share.XUnitTestsB.R3",
-                "Generated",
-                "FhirConstructUse.cs");
-#elif FHIR_R4
-            String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
-                "SliceGen",
-                "R4",
-                "FhirKhit.SliceGen.XUnitTestsB.R4",
-                "Generated",
-                "FhirConstructUse.cs");
-#endif
-            editor.Save(outputPath);
-        }
-
         void GenerateFindCommonChild(CodeBlockNested construct,
             CodeBlockNested methods,
             FHIRAllTypes fhirType)
@@ -318,7 +205,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         /// <summary>
         /// Create the AddChildXXX methods of ElementNode.
         /// </summary>
-        [Fact(DisplayName = "CodeGen.GenerateElementNodeChildren")]
+        [Fact(DisplayName = "CodeGen.GenerateFindCommonChildren")]
         [Trait("CodeGen", "CodeGen")]
         void GenerateFindCommonChildren()
         {

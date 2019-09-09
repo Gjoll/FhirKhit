@@ -28,11 +28,6 @@ namespace FhirKhit.SliceGen.CSApi
         public SliceGenerator Gen;
 
         /// <summary>
-        /// Dictionary of <fhir path, fix method name> tuples.</fhir>
-        /// </summary>
-        public HashSet<String> FixMethods { get; } = new HashSet<String>();
-
-        /// <summary>
         /// Type of the fhir resource class that the profile is derived from (the resource it profiles)
         /// </summary>
         Type fhirBaseClassType;
@@ -192,6 +187,13 @@ namespace FhirKhit.SliceGen.CSApi
             const String fcn = nameof(GenerateSetElements);
             CodeBlockNested childBlock;
 
+            if (block is null)
+                throw new ArgumentNullException(nameof(block));
+            if (node is null)
+                throw new ArgumentNullException(nameof(node));
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
+
             void GenerateSetChildCode(ref string containerName,
                 Type containerType,
                 string itemName,
@@ -226,13 +228,6 @@ namespace FhirKhit.SliceGen.CSApi
                     containerName = $"{containerName}.{itemName}";
                 }
             }
-
-            if (block is null)
-                throw new ArgumentNullException(nameof(block));
-            if (node is null)
-                throw new ArgumentNullException(nameof(node));
-            if (path is null)
-                throw new ArgumentNullException(nameof(path));
 
             String[] pathItems = path.Split('.');
             Int32 i = 0;

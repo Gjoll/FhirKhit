@@ -347,12 +347,18 @@ namespace FhirKhit.SliceGen.R4
             this.FhirItemType = fhirItemType;
         }
 
-        public bool TryGetChild(String name, out ElementNode node)
+        public bool TryGetChild(String path, out ElementNode node)
         {
-            if (this.children.TryGetValue(name, out node))
-                return true;
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
 
-            return false;
+            node = this;
+            foreach (String name in path.Split('.'))
+            {
+                if (node.children.TryGetValue(name, out node) == false)
+                    return false;
+            }
+            return true;
         }
 
         public bool TryGetCommonChild(String name, out ElementNode node)
