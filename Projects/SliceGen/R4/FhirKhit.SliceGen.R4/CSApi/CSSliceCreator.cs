@@ -18,8 +18,8 @@ namespace FhirKhit.SliceGen.CSApi
     {
         String className;
         ElementNode elementNode;
-        CodeBlockNested subClassBlock;
         CodeBlockNested methodsBlock;
+        CodeBlockNested subClassBlock;
 
         /// <summary>
         /// Type of the fhir resource class that the profile is derived from (the resource it profiles)
@@ -28,6 +28,8 @@ namespace FhirKhit.SliceGen.CSApi
 
         CodeBlockNested sliceClassFields;
         CodeBlockNested sliceClassMethods;
+        CodeBlockNested sliceStaticConstructor;
+        CodeBlockNested sliceStaticFields;
         ElementDefinition.DiscriminatorComponent[] discriminators = null;
         bool retVal = true;
         String accessorType = String.Empty;
@@ -61,7 +63,9 @@ namespace FhirKhit.SliceGen.CSApi
             this.fhirBaseClassType = fhirBaseClassType;
         }
 
-        bool DefineValueFilterMethod(ElementNode sliceNode,
+        bool DefineValueFilterMethod(CodeBlockNested sliceVars,
+            CodeBlockNested sliceDiscriminators,
+            ElementNode sliceNode,
             ElementDefinition.DiscriminatorComponent discriminator,
             out String valueFilterMethod,
             out Type leafType)
@@ -83,6 +87,19 @@ namespace FhirKhit.SliceGen.CSApi
 
             if (this.GenerateSearchElements(valueMethodBlock, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType) == false)
                 return false;
+
+            return true;
+        }
+
+        bool DefineSliceOnValueDiscriminator(CodeBlockNested sliceDiscriminators,
+            ElementNode sliceNode,
+            String varName,
+            ElementDefinition.DiscriminatorComponent discriminator,
+            String valueFilterMethod,
+            String leafType)
+        {
+            const String fcn = nameof(DefineSliceOnValueDiscriminator);
+
             if (sliceNode.TryGetChild(discriminator.Path, out ElementNode discriminatorNode) == false)
             {
                 this.gen.ConversionError(this.GetType().Name, fcn, $"Child element {discriminator.Path} not found in element {sliceNode.Path}");
@@ -96,57 +113,33 @@ namespace FhirKhit.SliceGen.CSApi
                 return false;
             }
 
-            if (ElementFixCode.Construct(valueMethodBlock, fixElement, "xxyyz", out String propertyType) == false)
-            {
-                String msg = $"Error defining slice {sliceNode.Element.SliceName}'. Fixed discriminator field {discriminator.Path} not fixed";
-                sliceClassFields
-                    .AppendLine($"/// {msg}")
-                    ;
-                this.gen.ConversionError(this.GetType().Name, fcn, msg);
-                return false;
-            }
-
-            valueMethodBlock
-                .CloseBrace()
-                ;
-
-            return true;
-        }
-
-        bool DefineSliceOnValueDiscriminator(ElementNode sliceNode,
-            ElementDefinition.DiscriminatorComponent discriminator,
-            String valueFilterMethod,
-            Type leafType,
-            String term)
-        {
-            const String fcn = nameof(DefineSliceOnValueDiscriminator);
-
             String sliceName = sliceNode.Element.SliceName;
-            sliceClassFields
+            sliceDiscriminators
                 .AppendLine($"/// Define discriminator'")
                 .AppendLines("/// ", discriminator.ToFormatedJson().ToLines())
-                .AppendCode($"new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType.FriendlyName()}>")
+                .AppendCode($"{varName} = new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType}>()")
                 .OpenBrace()
                 .AppendCode($"Path = \"{discriminator.Path}\",")
                 //$$$$.AppendCode($"Pattern = {fixMethodName}(),")
                 .AppendCode($"ValueFilter = {valueFilterMethod}")
-                .CloseBrace(term)
+                .CloseBrace(";")
             ;
             return true;
         }
 
-        bool DefineDiscriminator(ElementNode sliceNode,
-            ElementDefinition.DiscriminatorComponent discriminator,
-            String term)
+        bool DefineDiscriminator(CodeBlockNested sliceDiscriminators,
+            ElementNode sliceNode,
+            String varName,
+            ElementDefinition.DiscriminatorComponent discriminator)
         {
             const String fcn = nameof(DefineDiscriminator);
 
             switch (discriminator.Type)
             {
                 case ElementDefinition.DiscriminatorType.Value:
-                    if (DefineValueFilterMethod(sliceNode, discriminator, out String valueFilterMethod, out Type leafType) == false)
-                        return false;
-                    if (DefineSliceOnValueDiscriminator(sliceNode, discriminator, valueFilterMethod, leafType, term) == false)
+                    //if (DefineValueFilterMethod(sliceVars, sliceDiscriminators, sliceNode, discriminator, out String valueFilterMethod, out Type leafType) == false)
+                    //    return false;
+                    if (DefineSliceOnValueDiscriminator(sliceDiscriminators, sliceNode, varName, discriminator, "valueFilterMethod", "leafType") == false)
                         return false;
                     return true;
 
@@ -293,15 +286,21 @@ namespace FhirKhit.SliceGen.CSApi
                 .SummaryClose()
                 .AppendCode($"class {sliceClassName} : {sliceBaseClassName}, {sliceInterfaceName}")
                 .OpenBrace()
+                .DefineBlock(out this.sliceStaticFields)
+                .DefineBlock(out CodeBlockNested staticConstructorHeader)
+                .DefineBlock(out this.sliceClassFields)
+                .DefineBlock(out this.sliceClassMethods)
+                .CloseBrace()
                 ;
 
-            sliceClassFields = this.subClassBlock.AppendBlock();
-            sliceClassFields.AppendLine($"#region {this.className}.{sliceClassName} fields");
-
-            sliceClassMethods = this.subClassBlock.AppendBlock();
-            sliceClassMethods.AppendLine($"#region {this.className}.{sliceClassName} methods");
-
-            this.subClassBlock
+            staticConstructorHeader
+                .SummaryOpen()
+                .Summary("Static constructor")
+                .SummaryClose()
+                .AppendLine("[System.Diagnostics.CodeAnalysis.SuppressMessage(\"Performance\", \"CA1810:Initialize reference type static fields inline\")]")
+                .AppendCode($"static {sliceClassName}()")
+                .OpenBrace()
+                .DefineBlock(out this.sliceStaticConstructor)
                 .CloseBrace()
                 ;
 
@@ -316,29 +315,49 @@ namespace FhirKhit.SliceGen.CSApi
 
                 CreateConstructor(sliceClassName, sliceFieldName);
 
-                sliceClassFields
+                this.sliceStaticFields
                     .BlankLine()
                     .SummaryOpen()
                     .Summary($"slicing discriminator for {elementNode.FullPath()} slice {sliceName}")
                     .SummaryClose()
-                    .AppendCode($"static Slicing<{baseItemTypeName}> {sliceFieldName} = new Slicing<{baseItemTypeName}>")
+                    .AppendCode($"static Slicing<{baseItemTypeName}> {sliceFieldName};")
+                    ;
+
+                this.sliceStaticConstructor
+                    .BlankLine()
+                    ;
+
+                //$if (ElementFixCode.Construct(sliceVars, fixElement, "xxyyz", out String propertyType) == false)
+                //${
+                //$    String msg = $"Error defining slice {sliceNode.Element.SliceName}'. Fixed discriminator field {discriminator.Path} not fixed";
+                //$    sliceClassFields
+                //$        .AppendLine($"/// {msg}")
+                //$        ;
+                //$    this.gen.ConversionError(this.GetType().Name, fcn, msg);
+                //$    return false;
+                //$}
+
+                this.sliceStaticConstructor
+                    .AppendLine("// Instantiate slicing discriminator")
                     .OpenBrace()
-                    .AppendCode($"Discriminators = new ISliceDiscriminator<{baseItemTypeName}>[]")
-                    .OpenBrace()
+                    .AppendCode($"ISliceDiscriminator<{baseItemTypeName}>[] discriminators = ")
+                    .AppendCode($"    new ISliceDiscriminator<{baseItemTypeName}>[{discriminators.Length}];")
                     ;
 
                 for (Int32 i = 0; i < discriminators.Length; i++)
                 {
-                    ElementDefinition.DiscriminatorComponent discriminator = discriminators[i];
-                    String term = (i < discriminators.Length - 1) ? "," : "";
-                    if (DefineDiscriminator(sliceNode, discriminator, term) == false)
+                    if (DefineDiscriminator(this.sliceStaticConstructor, sliceNode, $"discriminators[{i}]", discriminators[i]) == false)
                         retVal = false;
                 }
 
-                sliceClassFields
-                    .CloseBrace()
+                this.sliceStaticConstructor
+                    .AppendCode($"{sliceFieldName} = new Slicing<{baseItemTypeName}>")
+                    .OpenBrace()
+                    .AppendCode($"Discriminators = discriminators")
                     .CloseBrace(";")
+                    .CloseBrace()
                     ;
+
             }
 
             // Recursively create code to set values that are fixed in object.
@@ -401,9 +420,6 @@ namespace FhirKhit.SliceGen.CSApi
                 .AppendCode($"return retVal;")
                 .CloseBrace()
                 ;
-
-            sliceClassFields.AppendLine($"#endregion  // {this.className}.{sliceClassName}  fields");
-            sliceClassMethods.AppendLine($"#endregion // {this.className}.{sliceClassName}  methods");
         }
 
         /// <summary>

@@ -35,45 +35,45 @@ namespace FhirKhit.SliceGen.XUnitTestsB
         [Trait("Test", "test")]
         public void SlicedMultiple()
         {
-            Observation o = new Observation
-            {
-                Id = "SlicedMultipleTests"
-            };
+            //$Observation o = new Observation
+            //{
+            //    Id = "SlicedMultipleTests"
+            //};
 
-            SlicedMultipleExtensions.ISlice1 slice1 = SlicedMultipleExtensions.Slice1(o.Component);
-            SlicedMultipleExtensions.ISlice2 slice2 = o.Component.Slice2();
-            Debug.Assert(slice1.Count == 0);
-            Debug.Assert(slice2.Count == 0);
+            //SlicedMultipleExtensions.ISlice1 slice1 = SlicedMultipleExtensions.Slice1(o.Component);
+            //SlicedMultipleExtensions.ISlice2 slice2 = o.Component.Slice2();
+            //Debug.Assert(slice1.Count == 0);
+            //Debug.Assert(slice2.Count == 0);
 
-            Observation.ComponentComponent item1a = slice1.AppendNew();
-            Observation.ComponentComponent item2a = slice2.AppendNew();
-            Debug.Assert(slice1.Count == 1);
-            Debug.Assert(slice2.Count == 1);
+            //Observation.ComponentComponent item1a = slice1.AppendNew();
+            //Observation.ComponentComponent item2a = slice2.AppendNew();
+            //Debug.Assert(slice1.Count == 1);
+            //Debug.Assert(slice2.Count == 1);
 
-            Debug.Assert(item1a.Code.Coding.Count == 1);
-            Debug.Assert(item1a.Code.Coding[0].System == "http://www.test.com/SliceSystem");
-            Debug.Assert(item1a.Code.Coding[0].Code == "Slice1Code");
+            //Debug.Assert(item1a.Code.Coding.Count == 1);
+            //Debug.Assert(item1a.Code.Coding[0].System == "http://www.test.com/SliceSystem");
+            //Debug.Assert(item1a.Code.Coding[0].Code == "Slice1Code");
 
-            Debug.Assert(item2a.Code.Coding.Count == 1);
-            Debug.Assert(item2a.Code.Coding[0].System == "http://www.test.com/SliceSystem");
-            Debug.Assert(item2a.Code.Coding[0].Code == "Slice2Code");
+            //Debug.Assert(item2a.Code.Coding.Count == 1);
+            //Debug.Assert(item2a.Code.Coding[0].System == "http://www.test.com/SliceSystem");
+            //Debug.Assert(item2a.Code.Coding[0].Code == "Slice2Code");
 
-            Observation.ComponentComponent item2b = slice2.AppendNew();
-            Debug.Assert(slice1.Count == 1);
-            Debug.Assert(slice2.Count == 2);
+            //Observation.ComponentComponent item2b = slice2.AppendNew();
+            //Debug.Assert(slice1.Count == 1);
+            //Debug.Assert(slice2.Count == 2);
 
-            Debug.Assert(slice2.Slices.ToArray()[0] == item2a);
-            Debug.Assert(slice2.Slices.ToArray()[1] == item2b);
+            //Debug.Assert(slice2.Slices.ToArray()[0] == item2a);
+            //Debug.Assert(slice2.Slices.ToArray()[1] == item2b);
 
-            Debug.Assert(item2b.Code.Coding.Count == 1);
-            Debug.Assert(item2b.Code.Coding[0].System == "http://www.test.com/SliceSystem");
-            Debug.Assert(item2b.Code.Coding[0].Code == "Slice2Code");
+            //Debug.Assert(item2b.Code.Coding.Count == 1);
+            //Debug.Assert(item2b.Code.Coding[0].System == "http://www.test.com/SliceSystem");
+            //Debug.Assert(item2b.Code.Coding[0].Code == "Slice2Code");
 
-            Debug.Assert(slice2.Remove(item2b) == true);
-            Debug.Assert(slice2.Remove(item2b) == false);
-            Debug.Assert(slice1.Count == 1);
-            Debug.Assert(slice2.Count == 1);
-            Debug.Assert(slice2.Slices.ToArray()[0] == item2a);
+            //Debug.Assert(slice2.Remove(item2b) == true);
+            //Debug.Assert(slice2.Remove(item2b) == false);
+            //Debug.Assert(slice1.Count == 1);
+            //Debug.Assert(slice2.Count == 1);
+            //Debug.Assert(slice2.Slices.ToArray()[0] == item2a);
         }
     }
 }
