@@ -62,7 +62,8 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 Type = "Observation",
                 Kind = StructureDefinition.StructureDefinitionKind.Resource,
                 Abstract = false,
-                Differential = new StructureDefinition.DifferentialComponent()
+                Differential = new StructureDefinition.DifferentialComponent(),
+                Status = PublicationStatus.Active
             };
 
             profile.Differential.Element.Add(
@@ -150,7 +151,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             }
 
             SnapshotCreator.Create(profile);
-            String outputPath = $@"c:\Temp\SlicedNested.json";
+            String outputPath = $@"\Temp\SlicedNested.json";
             profile.SaveJson(outputPath);
             //FhirValidator f = new FhirValidator();
             //{
@@ -237,15 +238,26 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             }
 
             SnapshotCreator.Create(profile);
+            String outputPath  = @"\Temp\SlicedMultiple.json";
+            profile.SaveJson(outputPath);
+            //FhirValidator f = new FhirValidator();
+            //{
+            //    bool success = f.Validate("4.0.0", outputPath);
+            //    StringBuilder sb = new StringBuilder();
+            //    f.FormatMessages(sb);
+            //    Trace.WriteLine(sb.ToString());
+            //    Assert.True(success == true);
+            //}
+
             p.AddProfile(profile);
-            profile.SaveJson($@"c:\Temp\SlicedMultiple.json");
+            {
+                bool success = p.Process();
 
-            bool success = p.Process();
-
-            StringBuilder sb = new StringBuilder();
-            p.FormatMessages(sb);
-            Trace.WriteLine(sb.ToString());
-            Assert.True(success == true);
+                StringBuilder sb = new StringBuilder();
+                p.FormatMessages(sb);
+                Trace.WriteLine(sb.ToString());
+                Assert.True(success == true);
+            }
         }
 
         [Fact(DisplayName = "GenCreate.BreastAbnormality")]

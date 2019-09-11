@@ -96,15 +96,6 @@ namespace FhirKhit.Test.R4                                                      
                     ///   "type": "value",
                     ///   "path": "code"
                     /// }
-                    discriminators[0] = new SliceOnValueDiscriminator<Observation.ComponentComponent, leafType>()                           // CSSliceCreator.cs:120
-                    {                                                                                                                       // CSSliceCreator.cs:121
-                        Path = "code",                                                                                                      // CSSliceCreator.cs:122
-                        ValueFilter = valueFilterMethod                                                                                     // CSSliceCreator.cs:124
-                    };                                                                                                                      // CSSliceCreator.cs:125
-                    slicing = new Slicing<Observation.ComponentComponent>                                                                   // CSSliceCreator.cs:354
-                    {                                                                                                                       // CSSliceCreator.cs:355
-                        Discriminators = discriminators                                                                                     // CSSliceCreator.cs:356
-                    };                                                                                                                      // CSSliceCreator.cs:357
                 }                                                                                                                           // CSSliceCreator.cs:358
             }                                                                                                                               // CSSliceCreator.cs:304
                                                                                                                                             // CSSliceCreator.cs:224
@@ -123,7 +114,6 @@ namespace FhirKhit.Test.R4                                                      
             protected override Observation.ComponentComponent Create()                                                                      // CSSliceCreator.cs:414
             {                                                                                                                               // CSSliceCreator.cs:415
                 Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSSliceCreator.cs:416
-                retVal.Code = var3;                                                                                                         // CSSliceCreator.cs:386
                 return retVal;                                                                                                              // CSSliceCreator.cs:420
             }                                                                                                                               // CSSliceCreator.cs:421
         }                                                                                                                                   // CSSliceCreator.cs:293
@@ -205,15 +195,6 @@ namespace FhirKhit.Test.R4                                                      
                     ///   "type": "value",
                     ///   "path": "code"
                     /// }
-                    discriminators[0] = new SliceOnValueDiscriminator<Observation.ComponentComponent, leafType>()                           // CSSliceCreator.cs:120
-                    {                                                                                                                       // CSSliceCreator.cs:121
-                        Path = "code",                                                                                                      // CSSliceCreator.cs:122
-                        ValueFilter = valueFilterMethod                                                                                     // CSSliceCreator.cs:124
-                    };                                                                                                                      // CSSliceCreator.cs:125
-                    slicing = new Slicing<Observation.ComponentComponent>                                                                   // CSSliceCreator.cs:354
-                    {                                                                                                                       // CSSliceCreator.cs:355
-                        Discriminators = discriminators                                                                                     // CSSliceCreator.cs:356
-                    };                                                                                                                      // CSSliceCreator.cs:357
                 }                                                                                                                           // CSSliceCreator.cs:358
             }                                                                                                                               // CSSliceCreator.cs:304
                                                                                                                                             // CSSliceCreator.cs:224
@@ -232,7 +213,6 @@ namespace FhirKhit.Test.R4                                                      
             protected override Observation.ComponentComponent Create()                                                                      // CSSliceCreator.cs:414
             {                                                                                                                               // CSSliceCreator.cs:415
                 Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSSliceCreator.cs:416
-                retVal.Code = var3;                                                                                                         // CSSliceCreator.cs:386
                 return retVal;                                                                                                              // CSSliceCreator.cs:420
             }                                                                                                                               // CSSliceCreator.cs:421
         }                                                                                                                                   // CSSliceCreator.cs:293
