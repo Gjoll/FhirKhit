@@ -372,8 +372,8 @@ namespace FhirKhit.SliceGen.CSApi
                         {
                             String varName = $"var{varNum}";
                             varNum += 1;
-                            ElementFixCode.Construct(sliceClassMethods, setNodeChild.Element.Fixed, $"{varName}.Pattern", out String propertyType);
-                            sliceClassMethods.AppendCode($"//${childPropertyPath}.Add({varName});");
+                            ElementFixCode.Construct(sliceClassMethods, setNodeChild.Element.Fixed, $"{varName}", out String propertyType);
+                            sliceClassMethods.AppendCode($"{childPropertyPath}.Add({varName});");
                         }
                         else
                         {
