@@ -74,7 +74,7 @@ namespace FhirKhit.Tools.R2
             executingDir = Path.GetFullPath(executingDir);
             String validationPath = Path.Combine(executingDir, "validation.xml");
 
-            String jarPath = Path.Combine(executingDir, "Validation", "org.hl7.fhir.validator.jar");
+            String jarPath = Path.Combine(executingDir, "Validation", "org.hl7.fhir.validation.jar");
             StringBuilder args = new StringBuilder();
             args.Append($"-jar  \"{jarPath}\" ");
             foreach (String resourcePath in resourcePaths)
