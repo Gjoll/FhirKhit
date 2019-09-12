@@ -37,9 +37,9 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         /// <summary>
         /// Generate Fix code method.
         /// </summary>
-        [Fact(DisplayName = "CodeGen.GenerateFixCode")]
+        [Fact(DisplayName = "CodeGen.GenerateElementFixCode")]
         [Trait("CodeGen", "CodeGen")]
-        public void GenerateFixCode()
+        public void GenerateElementFixCode()
         {
             String outputPath = Path.Combine(DirHelper.FindParentDir("Projects"),
                 "SliceGen",
