@@ -63,34 +63,6 @@ namespace FhirKhit.SliceGen.CSApi
             this.fhirBaseClassType = fhirBaseClassType;
         }
 
-        bool DefineValueFilterMethod(CodeBlockNested sliceVars,
-            CodeBlockNested sliceDiscriminators,
-            ElementNode sliceNode,
-            ElementDefinition.DiscriminatorComponent discriminator,
-            out String valueFilterMethod,
-            out Type leafType)
-        {
-            const String fcn = nameof(DefineValueFilterMethod);
-
-            String sliceName = sliceNode.Element.SliceName;
-            CodeBlockNested valueMethodBlock = sliceClassMethods.AppendBlock();
-
-            valueFilterMethod = CSMisc.ValueFilterName(CSMisc.MakePath(sliceNode.SlicePath(), discriminator.Path));
-            // Note: We are defining method here, after we know the return value type.
-            valueMethodBlock
-                .BlankLine()
-                .SummaryOpen()
-                .AppendCode($"/// Return all elements for discriminator'")
-                .SummaryLines(discriminator.ToFormatedJson())
-                .SummaryClose()
-                ;
-
-            if (this.GenerateSearchElements(valueMethodBlock, "static", valueFilterMethod, elementNode, discriminator.Path, out leafType) == false)
-                return false;
-
-            return true;
-        }
-
         bool DefineSliceOnValueDiscriminator(CodeBlockNested sliceDiscriminators,
             ElementNode sliceNode,
             String varName,
@@ -114,13 +86,35 @@ namespace FhirKhit.SliceGen.CSApi
             }
 
             String sliceName = sliceNode.Element.SliceName;
+
+            CodeBlockNested valueMethodBlock = sliceClassMethods.AppendBlock();
+
+            valueFilterMethod = CSMisc.ValueFilterName(CSMisc.MakePath(sliceNode.SlicePath(), discriminator.Path));
+            // Note: We are defining method here, after we know the return value type.
+            valueMethodBlock
+                .BlankLine()
+                .SummaryOpen()
+                .AppendCode($"/// Return all elements for discriminator'")
+                .SummaryLines(discriminator.ToFormatedJson())
+                .SummaryClose()
+                ;
+
+            {
+                GenerateFhirPathSearch g = new GenerateFhirPathSearch(this.gen);
+                if (g.Generate(valueMethodBlock, "static", valueFilterMethod, elementNode, discriminator.Path, out Type leaf) == false)
+                    return false;
+                leafType = leaf.FriendlyName();
+            }
+
+
+
             sliceDiscriminators
                 .AppendLine($"/// Define discriminator'")
                 .AppendLines("/// ", discriminator.ToFormatedJson().ToLines())
                 .AppendCode($"{varName} = new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType}>()")
                 .OpenBrace()
                 .AppendCode($"Path = \"{discriminator.Path}\",")
-                //$$$$.AppendCode($"Pattern = {fixMethodName}(),")
+                .AppendCode($"//$Pattern = ,")
                 .AppendCode($"ValueFilter = {valueFilterMethod}")
                 .CloseBrace(";")
             ;
@@ -137,8 +131,6 @@ namespace FhirKhit.SliceGen.CSApi
             switch (discriminator.Type)
             {
                 case ElementDefinition.DiscriminatorType.Value:
-                    //if (DefineValueFilterMethod(sliceVars, sliceDiscriminators, sliceNode, discriminator, out String valueFilterMethod, out Type leafType) == false)
-                    //    return false;
                     if (DefineSliceOnValueDiscriminator(sliceDiscriminators, sliceNode, varName, discriminator, "valueFilterMethod", "leafType") == false)
                         return false;
                     return true;
@@ -379,11 +371,11 @@ namespace FhirKhit.SliceGen.CSApi
                     String childItemTypeName = setNodeChild.FhirItemType.FriendlyName();
                     if (setNodeChild.IsFixed)
                     {
-                        //$$sliceClassMethods.AppendCode($"{childItemTypeName} {varName} = {CSMisc.FixName(setNodeChild.SlicePath())}();");
+                        sliceClassMethods.AppendCode($"//${childItemTypeName} {varName} = {setNodeChild.SlicePath()}();");
                         if (setNodeChild.IsListType)
-                            sliceClassMethods.AppendCode($"{childPropertyPath}.Add({varName});");
+                            sliceClassMethods.AppendCode($"//${childPropertyPath}.Add({varName});");
                         else
-                            sliceClassMethods.AppendCode($"{childPropertyPath} = {varName};");
+                            sliceClassMethods.AppendCode($"//${childPropertyPath} = {varName};");
                     }
                     else if (setNodeChild.HasFixedChild)
                     {
@@ -456,160 +448,6 @@ namespace FhirKhit.SliceGen.CSApi
             }
 
             return retVal;
-        }
-
-        /// <summary>
-        /// Traverse children using simple fhir path query.
-        /// Return selected elements, or null if not found.
-        /// </summary>
-        public bool GenerateSearchElements(CodeBlockNested block,
-            String methodModifiers,
-            String methodName,
-            ElementNode node,
-            String path,
-            out Type leafType)
-        {
-            const String fcn = nameof(GenerateSearchElements);
-            CodeBlockNested childBlock;
-            Int32 childMethodCounter = 0;
-
-            // Generate GetChild method.
-            String GenerateGetChild(string childPropertyName,
-                Type inputType,
-                Type outputType)
-            {
-                if (childPropertyName is null)
-                    throw new ArgumentNullException(nameof(childPropertyName));
-
-                String inputTypeBaseName = inputType.FriendlyName();
-                childMethodCounter += 1;
-                String childMethodName = $"GetChild_{childMethodCounter}";
-                String outputTypeItemName;
-                if (outputType.IsList())
-                    outputTypeItemName = outputType.GenericTypeArguments[0].FriendlyName();
-                else
-                    outputTypeItemName = outputType.FriendlyName();
-
-                childBlock
-                    .AppendCode($"IEnumerable<{outputTypeItemName}> {childMethodName}(IEnumerable<{inputTypeBaseName}> inputElements)")
-                    .OpenBrace()
-                    .AppendCode($"if (inputElements != null)")
-                    .OpenBrace()
-                    .AppendCode($"foreach ({inputTypeBaseName} inputElement in inputElements)")
-                    .OpenBrace()
-                    ;
-
-                if (outputType.IsList())
-                {
-                    childBlock
-                        .AppendCode($"foreach ({outputType.FriendlyName()} childElement in inputElement.{childPropertyName})")
-                        .OpenBrace()
-                        .AppendCode($"yield return childElement;")
-                        .CloseBrace()
-                   ;
-                }
-                else
-                {
-                    childBlock
-                        .AppendCode($"yield return inputElement.{childPropertyName};")
-                   ;
-                }
-
-                childBlock
-                    .CloseBrace()
-                    .CloseBrace()
-                    .CloseBrace()
-                    ;
-                return childMethodName;
-            }
-
-            if (block is null)
-                throw new ArgumentNullException(nameof(block));
-            if (methodModifiers is null)
-                throw new ArgumentNullException(nameof(methodModifiers));
-            if (methodName is null)
-                throw new ArgumentNullException(nameof(methodName));
-            if (node is null)
-                throw new ArgumentNullException(nameof(node));
-            if (path is null)
-                throw new ArgumentNullException(nameof(path));
-
-            //String fhirTypeName = node.FhirType.FriendlyName();
-            String fhirItemTypeName = node.FhirItemType.FriendlyName();
-            // we need to write header after we determine leaf node type.
-            CodeBlockNested methodHeaderBlock = block.AppendBlock();
-
-            block
-                .OpenBrace()
-                .BlankLine()
-                ;
-
-            childBlock = block.AppendBlock();
-
-            String[] pathItems = path.Split('.');
-            Int32 i = 0;
-
-            if (pathItems[0] == node.Name)
-                i += 1;
-
-            Int32 resultCounter = 0;
-            leafType = null;
-            String resultThis = "head";
-
-            while (i < pathItems.Length)
-            {
-                resultCounter += 1;
-                String resultNext = $"result{resultCounter}";
-
-                String pathItem = pathItems[i++];
-                if (pathItem.StartsWith("resolve("))
-                {
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
-                    return false;
-                }
-                else if (pathItem.StartsWith("extension(\""))
-                {
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
-                    return false;
-                }
-                else if (pathItem.StartsWith("ofType("))
-                {
-                    this.gen.ConversionError(this.GetType().Name, fcn, $"TODO: FhirPath operator {pathItem} not implemented");
-                    return false;
-                }
-                else
-                {
-                    if (node.TryGetChild(pathItem, out ElementNode next) == false)
-                    {
-                        if (node.TryGetCommonChild(pathItem, out next) == false)
-                        {
-                            this.gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
-                            return false;
-                        }
-                    }
-
-                    Type nodeType = node.FhirItemType;
-                    PropertyInfo childProperty = nodeType.GetPropertyByFhirName(pathItem);
-                    String childPropertyName = childProperty.Name;
-                    String childMethodName = GenerateGetChild(childPropertyName, nodeType, childProperty.PropertyType);
-
-                    block.AppendCode($"IEnumerable<{next.FhirItemType.FriendlyName()}> {resultNext} = {childMethodName}({resultThis});");
-                    resultThis = resultNext;
-                    node = next;
-                }
-            }
-
-            block
-                .AppendCode($"return {resultThis};")
-                .CloseBrace()
-                ;
-
-            leafType = node.FhirItemType;
-
-            methodHeaderBlock
-                .AppendCode($"{methodModifiers} IEnumerable<{leafType.FriendlyName()}> {methodName}(IEnumerable<{fhirItemTypeName}> head)")
-            ;
-            return true;
         }
     }
 }

@@ -52,6 +52,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="specification.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Validation\org.hl7.fhir.validation.cli.jar">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

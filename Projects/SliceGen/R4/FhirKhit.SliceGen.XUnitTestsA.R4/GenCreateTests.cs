@@ -185,60 +185,60 @@ namespace FhirKhit.SliceGen.XUnitTestsA
 
 
             StructureDefinition profile = CreateObservation("SlicedMultiple");
-            //{
-            //    ElementDefinition e = profile.Differential.Element.GetOrCreateElement("Observation.component");
-            //    e.Slicing = new ElementDefinition.SlicingComponent
-            //    {
-            //        ElementId = "ObservationComponentSlice",
-            //        Ordered = false,
-            //        Rules = ElementDefinition.SlicingRules.Open
-            //    };
-            //    e.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
-            //    {
-            //        Type = ElementDefinition.DiscriminatorType.Value,
-            //        Path = "code"
-            //    });
-            //}
+            {
+                ElementDefinition e = profile.Differential.Element.GetOrCreateElement("Observation.component");
+                e.Slicing = new ElementDefinition.SlicingComponent
+                {
+                    ElementId = "ObservationComponentSlice",
+                    Ordered = false,
+                    Rules = ElementDefinition.SlicingRules.Open
+                };
+                e.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
+                {
+                    Type = ElementDefinition.DiscriminatorType.Value,
+                    Path = "code"
+                });
+            }
 
-            //{
-            //    ElementDefinition e = new ElementDefinition
-            //    {
-            //        ElementId = "Observation.component:Slice1",
-            //        Path = "Observation.component",
-            //        SliceName = "Slice1"
-            //    };
-            //    profile.Differential.Element.Add(e);
-            //}
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    ElementId = "Observation.component:Slice1",
+                    Path = "Observation.component",
+                    SliceName = "Slice1"
+                };
+                profile.Differential.Element.Add(e);
+            }
 
-            //{
-            //    ElementDefinition e = new ElementDefinition
-            //    {
-            //        Path = "Observation.component.code",
-            //        ElementId = "Observation.component:Slice1.code",
-            //        Fixed = new CodeableConcept("http://www.test.com/SliceSystem", "Slice1Code")
-            //    };
-            //    profile.Differential.Element.Add(e);
-            //}
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    Path = "Observation.component.code",
+                    ElementId = "Observation.component:Slice1.code",
+                    Fixed = new CodeableConcept("http://www.test.com/SliceSystem", "Slice1Code")
+                };
+                profile.Differential.Element.Add(e);
+            }
 
-            //{
-            //    ElementDefinition e = new ElementDefinition
-            //    {
-            //        ElementId = "Observation.component:Slice2",
-            //        Path = "Observation.component",
-            //        SliceName = "Slice2"
-            //    };
-            //    profile.Differential.Element.Add(e);
-            //}
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    ElementId = "Observation.component:Slice2",
+                    Path = "Observation.component",
+                    SliceName = "Slice2"
+                };
+                profile.Differential.Element.Add(e);
+            }
 
-            //{
-            //    ElementDefinition e = new ElementDefinition
-            //    {
-            //        Path = "Observation.component.code",
-            //        ElementId = "Observation.component:Slice2.code",
-            //        Fixed = new CodeableConcept("http://www.test.com/SliceSystem", "Slice2Code")
-            //    };
-            //    profile.Differential.Element.Add(e);
-            //}
+            {
+                ElementDefinition e = new ElementDefinition
+                {
+                    Path = "Observation.component.code",
+                    ElementId = "Observation.component:Slice2.code",
+                    Fixed = new CodeableConcept("http://www.test.com/SliceSystem", "Slice2Code")
+                };
+                profile.Differential.Element.Add(e);
+            }
 
             SnapshotCreator.Create(profile);
             String outputPath  = @"\Temp\SlicedMultiple.json";
@@ -261,61 +261,6 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 Trace.WriteLine(sb.ToString());
                 Assert.True(success == true);
             }
-        }
-
-
-
-        [Fact(DisplayName = "GenCreate.SnapshotError")]
-        [Trait("Test", "test")]
-        public void SnapshotError()
-        {
-            String name = "SnapshotError";
-            StructureDefinition profile = new StructureDefinition
-            {
-                Url = $"http://xxyyz.com/{name}",
-                Name = name,
-                Title = name,
-                Description = new Markdown("Profile on Observation with fixed values"),
-                BaseDefinition = "http://hl7.org/fhir/StructureDefinition/Observation",
-                Derivation = StructureDefinition.TypeDerivationRule.Constraint,
-                DateElement = new FhirDateTime(2019, 1, 1, 0, 0, 0, new TimeSpan(0)),
-                Publisher = "Me",
-                FhirVersion = FVersion,
-                Type = "Observation",
-                Kind = StructureDefinition.StructureDefinitionKind.Resource,
-                Abstract = false,
-                Differential = new StructureDefinition.DifferentialComponent(),
-                Status = PublicationStatus.Active
-            };
-
-            profile.Differential.Element.Add(
-                new ElementDefinition
-                {
-                    Path = "Observation",
-                    ElementId = "Observation"
-                });
-
-
-            String specificationPath = Assembly.GetAssembly(typeof(ZipSource)).Location;
-            specificationPath = Path.GetDirectoryName(specificationPath);
-            specificationPath = Path.Combine(specificationPath, "specification.zip");
-            if (File.Exists(specificationPath) == false)
-            {
-                specificationPath = Assembly.GetExecutingAssembly().Location;
-                specificationPath = Path.GetDirectoryName(specificationPath);
-                specificationPath = Path.Combine(specificationPath, "specification.zip");
-            }
-            ZipSource source = new ZipSource(specificationPath);
-
-            SnapshotGeneratorSettings settings = SnapshotGeneratorSettings.CreateDefault();
-            SnapshotGenerator generator = new SnapshotGenerator(source, settings);
-            profile.Snapshot = null;
-            generator.Update(profile);
-
-            String outputPath = @"\Temp\SlicedMultiple.json";
-            profile.SaveJson(outputPath);
-
-            Assert.True(profile.Snapshot.Element.Any() == true);
         }
 
 

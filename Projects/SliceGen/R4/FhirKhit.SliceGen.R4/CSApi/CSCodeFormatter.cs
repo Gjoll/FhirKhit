@@ -25,7 +25,7 @@ namespace FhirKhit.SliceGen.CSApi
         CodeBlockNested methodsBlock;
         CodeBlockNested subClassBlock;
 
-        public SliceGenerator Gen;
+        public SliceGenerator Gen { get; set; }
 
         /// <summary>
         /// Type of the fhir resource class that the profile is derived from (the resource it profiles)
