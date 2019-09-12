@@ -63,7 +63,8 @@ namespace FhirKhit.SliceGen.CSApi
             this.fhirBaseClassType = fhirBaseClassType;
         }
 
-        bool DefineSliceOnValueDiscriminator(CodeBlockNested sliceDiscriminators,
+        bool DefineSliceOnValueDiscriminator(Int32 index,
+            CodeBlockNested sliceDiscriminators,
             ElementNode sliceNode,
             String varName,
             ElementDefinition.DiscriminatorComponent discriminator,
@@ -94,7 +95,7 @@ namespace FhirKhit.SliceGen.CSApi
             valueMethodBlock
                 .BlankLine()
                 .SummaryOpen()
-                .AppendCode($"/// Return all elements for discriminator'")
+                .AppendCode($"/// Return all elements for discriminator # {index+1}'")
                 .SummaryLines(discriminator.ToFormatedJson())
                 .SummaryClose()
                 ;
@@ -107,21 +108,30 @@ namespace FhirKhit.SliceGen.CSApi
             }
 
 
-
+            String tempVarName = $"sliceOnValueDiscriminator";
             sliceDiscriminators
+                .OpenBrace()
                 .AppendLine($"/// Define discriminator'")
                 .AppendLines("/// ", discriminator.ToFormatedJson().ToLines())
-                .AppendCode($"{varName} = new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType}>()")
+                .AppendCode($"var {tempVarName} = new SliceOnValueDiscriminator<{baseItemTypeName}, {leafType}>()")
                 .OpenBrace()
                 .AppendCode($"Path = \"{discriminator.Path}\",")
-                .AppendCode($"//$Pattern = ,")
                 .AppendCode($"ValueFilter = {valueFilterMethod}")
                 .CloseBrace(";")
-            ;
+                ;
+
+            ElementFixCode.Construct(sliceDiscriminators, fixElement, $"{tempVarName}.Pattern", out String propertyType);
+
+            sliceDiscriminators
+                .AppendCode($"{varName} = {tempVarName};")
+                .CloseBrace("")
+                ;
+
             return true;
         }
 
-        bool DefineDiscriminator(CodeBlockNested sliceDiscriminators,
+        bool DefineDiscriminator(Int32 index,
+            CodeBlockNested sliceDiscriminators,
             ElementNode sliceNode,
             String varName,
             ElementDefinition.DiscriminatorComponent discriminator)
@@ -131,7 +141,7 @@ namespace FhirKhit.SliceGen.CSApi
             switch (discriminator.Type)
             {
                 case ElementDefinition.DiscriminatorType.Value:
-                    if (DefineSliceOnValueDiscriminator(sliceDiscriminators, sliceNode, varName, discriminator, "valueFilterMethod", "leafType") == false)
+                    if (DefineSliceOnValueDiscriminator(index, sliceDiscriminators, sliceNode, varName, discriminator, "valueFilterMethod", "leafType") == false)
                         return false;
                     return true;
 
@@ -338,7 +348,7 @@ namespace FhirKhit.SliceGen.CSApi
 
                 for (Int32 i = 0; i < discriminators.Length; i++)
                 {
-                    if (DefineDiscriminator(this.sliceStaticConstructor, sliceNode, $"discriminators[{i}]", discriminators[i]) == false)
+                    if (DefineDiscriminator(i, this.sliceStaticConstructor, sliceNode, $"discriminators[{i}]", discriminators[i]) == false)
                         retVal = false;
                 }
 

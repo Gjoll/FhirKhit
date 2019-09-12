@@ -18,14 +18,14 @@ namespace FhirKhit.Test.R4                                                      
     public static class SlicedMultipleExtensions
     {                                                                                                                                       // CSCodeFormatter.cs:94
         #region SlicedMultipleExtensions sub classes
-                                                                                                                                            // CSSliceCreator.cs:301
+                                                                                                                                            // CSSliceCreator.cs:276
         /// <summary>
         /// public interface that implements the functionality of slice Slice1Impl
         /// </summary>
-        public interface ISlice1 : ISliceAccessorMultiple<Observation.ComponentComponent>                                                   // CSSliceCreator.cs:305
-        {                                                                                                                                   // CSSliceCreator.cs:306
-        }                                                                                                                                   // CSSliceCreator.cs:307
-                                                                                                                                            // CSSliceCreator.cs:308
+        public interface ISlice1 : ISliceAccessorMultiple<Observation.ComponentComponent>                                                   // CSSliceCreator.cs:280
+        {                                                                                                                                   // CSSliceCreator.cs:281
+        }                                                                                                                                   // CSSliceCreator.cs:282
+                                                                                                                                            // CSSliceCreator.cs:283
         /// <summary>
         /// private class that implements the functionality of slice Slice1Impl
         /// 
@@ -73,53 +73,68 @@ namespace FhirKhit.Test.R4                                                      
         ///   ]
         /// }
         /// </summary>
-        class Slice1Impl : SliceListAccessorMultiple<Observation.ComponentComponent>, ISlice1                                               // CSSliceCreator.cs:314
-        {                                                                                                                                   // CSSliceCreator.cs:315
-                                                                                                                                            // CSSliceCreator.cs:346
+        class Slice1Impl : SliceListAccessorMultiple<Observation.ComponentComponent>, ISlice1                                               // CSSliceCreator.cs:289
+        {                                                                                                                                   // CSSliceCreator.cs:290
+                                                                                                                                            // CSSliceCreator.cs:321
             /// <summary>
             /// slicing discriminator for Observation.component slice Slice1
             /// </summary>
-            static Slicing<Observation.ComponentComponent> slicing;                                                                         // CSSliceCreator.cs:350
+            static Slicing<Observation.ComponentComponent> slicing;                                                                         // CSSliceCreator.cs:325
             /// <summary>
             /// Static constructor
             /// </summary>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1810:Initialize reference type static fields inline")]
-            static Slice1Impl()                                                                                                             // CSSliceCreator.cs:328
-            {                                                                                                                               // CSSliceCreator.cs:329
-                                                                                                                                            // CSSliceCreator.cs:354
+            static Slice1Impl()                                                                                                             // CSSliceCreator.cs:303
+            {                                                                                                                               // CSSliceCreator.cs:304
+                                                                                                                                            // CSSliceCreator.cs:329
                 // Instantiate slicing discriminator
-                {                                                                                                                           // CSSliceCreator.cs:369
-                    ISliceDiscriminator<Observation.ComponentComponent>[] discriminators =                                                  // CSSliceCreator.cs:370
-                        new ISliceDiscriminator<Observation.ComponentComponent>[1];                                                         // CSSliceCreator.cs:371
-                    /// Define discriminator'
-                    /// {
-                    ///   "type": "value",
-                    ///   "path": "code"
-                    /// }
-                    discriminators[0] = new SliceOnValueDiscriminator<Observation.ComponentComponent, CodeableConcept>()                    // CSSliceCreator.cs:149
-                    {                                                                                                                       // CSSliceCreator.cs:150
-                        Path = "code",                                                                                                      // CSSliceCreator.cs:151
-                        //$Pattern = ,                                                                                                      // CSSliceCreator.cs:152
-                        ValueFilter = ValueFilterComponentSlice1Code                                                                        // CSSliceCreator.cs:153
-                    };                                                                                                                      // CSSliceCreator.cs:154
-                    slicing = new Slicing<Observation.ComponentComponent>                                                                   // CSSliceCreator.cs:381
-                    {                                                                                                                       // CSSliceCreator.cs:382
-                        Discriminators = discriminators                                                                                     // CSSliceCreator.cs:383
-                    };                                                                                                                      // CSSliceCreator.cs:384
-                }                                                                                                                           // CSSliceCreator.cs:385
-            }                                                                                                                               // CSSliceCreator.cs:331
-                                                                                                                                            // CSSliceCreator.cs:251
+                {                                                                                                                           // CSSliceCreator.cs:344
+                    ISliceDiscriminator<Observation.ComponentComponent>[] discriminators =                                                  // CSSliceCreator.cs:345
+                        new ISliceDiscriminator<Observation.ComponentComponent>[1];                                                         // CSSliceCreator.cs:346
+                    {                                                                                                                       // CSSliceCreator.cs:113
+                        /// Define discriminator'
+                        /// {
+                        ///   "type": "value",
+                        ///   "path": "code"
+                        /// }
+                        var sliceOnValueDiscriminator = new SliceOnValueDiscriminator<Observation.ComponentComponent, CodeableConcept>()    // CSSliceCreator.cs:116
+                        {                                                                                                                   // CSSliceCreator.cs:117
+                            Path = "code",                                                                                                  // CSSliceCreator.cs:118
+                            ValueFilter = ValueFilterComponentSlice1Code                                                                    // CSSliceCreator.cs:119
+                        };                                                                                                                  // CSSliceCreator.cs:120
+                        {                                                                                                                   // ElementFixCode.cs:766
+                            CodeableConcept temp = new CodeableConcept();                                                                   // ElementFixCode.cs:767
+                            temp.Coding = new List<Coding>();                                                                               // ElementFixCode.cs:773
+                            {                                                                                                               // ElementFixCode.cs:776
+                                var temp2 = new Coding();                                                                                   // ElementFixCode.cs:777
+                                temp2.SystemElement = new FhirUri();                                                                        // ElementFixCode.cs:780
+                                temp2.SystemElement.Value = "http://www.test.com/SliceSystem";                                              // ElementFixCode.cs:782
+                                temp2.CodeElement = new Code();                                                                             // ElementFixCode.cs:796
+                                temp2.CodeElement.Value = "Slice1Code";                                                                     // ElementFixCode.cs:798
+                                temp.Coding.Add(temp2);                                                                                     // ElementFixCode.cs:825
+                            }                                                                                                               // ElementFixCode.cs:826
+                            sliceOnValueDiscriminator.Pattern = temp;                                                                       // ElementFixCode.cs:841
+                        }                                                                                                                   // ElementFixCode.cs:842
+                        discriminators[0] = sliceOnValueDiscriminator;                                                                      // CSSliceCreator.cs:126
+                    }                                                                                                                       // CSSliceCreator.cs:127
+                    slicing = new Slicing<Observation.ComponentComponent>                                                                   // CSSliceCreator.cs:356
+                    {                                                                                                                       // CSSliceCreator.cs:357
+                        Discriminators = discriminators                                                                                     // CSSliceCreator.cs:358
+                    };                                                                                                                      // CSSliceCreator.cs:359
+                }                                                                                                                           // CSSliceCreator.cs:360
+            }                                                                                                                               // CSSliceCreator.cs:306
+                                                                                                                                            // CSSliceCreator.cs:226
             /// <summary>
             /// Slice1Impl constructor
             /// </summary>
-            public Slice1Impl(List<Observation.ComponentComponent> items)                                                                   // CSSliceCreator.cs:255
-            {                                                                                                                               // CSSliceCreator.cs:256
-                this.Items = items;                                                                                                         // CSSliceCreator.cs:257
-                this.Slicing = slicing;                                                                                                     // CSSliceCreator.cs:258
-            }                                                                                                                               // CSSliceCreator.cs:259
-                                                                                                                                            // CSSliceCreator.cs:128
+            public Slice1Impl(List<Observation.ComponentComponent> items)                                                                   // CSSliceCreator.cs:230
+            {                                                                                                                               // CSSliceCreator.cs:231
+                this.Items = items;                                                                                                         // CSSliceCreator.cs:232
+                this.Slicing = slicing;                                                                                                     // CSSliceCreator.cs:233
+            }                                                                                                                               // CSSliceCreator.cs:234
+                                                                                                                                            // CSSliceCreator.cs:96
             /// <summary>
-            /// Return all elements for discriminator'                                                                                      // CSSliceCreator.cs:130
+            /// Return all elements for discriminator # 1'                                                                                  // CSSliceCreator.cs:98
             /// {
             ///   "type": "value",
             ///   "path": "code"
@@ -141,26 +156,26 @@ namespace FhirKhit.Test.R4                                                      
                 IEnumerable<CodeableConcept> result1 = GetChild_1(head);                                                                    // GenerateFhirPathSearch.cs:158
                 return result1;                                                                                                             // GenerateFhirPathSearch.cs:165
             }                                                                                                                               // GenerateFhirPathSearch.cs:166
-                                                                                                                                            // CSSliceCreator.cs:437
+                                                                                                                                            // CSSliceCreator.cs:412
             /// <summary>
             /// Create and initialize a new item
             /// </summary>
-            protected override Observation.ComponentComponent Create()                                                                      // CSSliceCreator.cs:441
-            {                                                                                                                               // CSSliceCreator.cs:442
-                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSSliceCreator.cs:443
-                //$CodeableConcept var3 = System.String[]();                                                                                // CSSliceCreator.cs:409
-                //$retVal.Code = var3;                                                                                                      // CSSliceCreator.cs:413
-                return retVal;                                                                                                              // CSSliceCreator.cs:447
-            }                                                                                                                               // CSSliceCreator.cs:448
-        }                                                                                                                                   // CSSliceCreator.cs:320
-                                                                                                                                            // CSSliceCreator.cs:301
+            protected override Observation.ComponentComponent Create()                                                                      // CSSliceCreator.cs:416
+            {                                                                                                                               // CSSliceCreator.cs:417
+                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSSliceCreator.cs:418
+                //$CodeableConcept var3 = System.String[]();                                                                                // CSSliceCreator.cs:384
+                //$retVal.Code = var3;                                                                                                      // CSSliceCreator.cs:388
+                return retVal;                                                                                                              // CSSliceCreator.cs:422
+            }                                                                                                                               // CSSliceCreator.cs:423
+        }                                                                                                                                   // CSSliceCreator.cs:295
+                                                                                                                                            // CSSliceCreator.cs:276
         /// <summary>
         /// public interface that implements the functionality of slice Slice2Impl
         /// </summary>
-        public interface ISlice2 : ISliceAccessorMultiple<Observation.ComponentComponent>                                                   // CSSliceCreator.cs:305
-        {                                                                                                                                   // CSSliceCreator.cs:306
-        }                                                                                                                                   // CSSliceCreator.cs:307
-                                                                                                                                            // CSSliceCreator.cs:308
+        public interface ISlice2 : ISliceAccessorMultiple<Observation.ComponentComponent>                                                   // CSSliceCreator.cs:280
+        {                                                                                                                                   // CSSliceCreator.cs:281
+        }                                                                                                                                   // CSSliceCreator.cs:282
+                                                                                                                                            // CSSliceCreator.cs:283
         /// <summary>
         /// private class that implements the functionality of slice Slice2Impl
         /// 
@@ -208,53 +223,68 @@ namespace FhirKhit.Test.R4                                                      
         ///   ]
         /// }
         /// </summary>
-        class Slice2Impl : SliceListAccessorMultiple<Observation.ComponentComponent>, ISlice2                                               // CSSliceCreator.cs:314
-        {                                                                                                                                   // CSSliceCreator.cs:315
-                                                                                                                                            // CSSliceCreator.cs:346
+        class Slice2Impl : SliceListAccessorMultiple<Observation.ComponentComponent>, ISlice2                                               // CSSliceCreator.cs:289
+        {                                                                                                                                   // CSSliceCreator.cs:290
+                                                                                                                                            // CSSliceCreator.cs:321
             /// <summary>
             /// slicing discriminator for Observation.component slice Slice2
             /// </summary>
-            static Slicing<Observation.ComponentComponent> slicing;                                                                         // CSSliceCreator.cs:350
+            static Slicing<Observation.ComponentComponent> slicing;                                                                         // CSSliceCreator.cs:325
             /// <summary>
             /// Static constructor
             /// </summary>
             [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1810:Initialize reference type static fields inline")]
-            static Slice2Impl()                                                                                                             // CSSliceCreator.cs:328
-            {                                                                                                                               // CSSliceCreator.cs:329
-                                                                                                                                            // CSSliceCreator.cs:354
+            static Slice2Impl()                                                                                                             // CSSliceCreator.cs:303
+            {                                                                                                                               // CSSliceCreator.cs:304
+                                                                                                                                            // CSSliceCreator.cs:329
                 // Instantiate slicing discriminator
-                {                                                                                                                           // CSSliceCreator.cs:369
-                    ISliceDiscriminator<Observation.ComponentComponent>[] discriminators =                                                  // CSSliceCreator.cs:370
-                        new ISliceDiscriminator<Observation.ComponentComponent>[1];                                                         // CSSliceCreator.cs:371
-                    /// Define discriminator'
-                    /// {
-                    ///   "type": "value",
-                    ///   "path": "code"
-                    /// }
-                    discriminators[0] = new SliceOnValueDiscriminator<Observation.ComponentComponent, CodeableConcept>()                    // CSSliceCreator.cs:149
-                    {                                                                                                                       // CSSliceCreator.cs:150
-                        Path = "code",                                                                                                      // CSSliceCreator.cs:151
-                        //$Pattern = ,                                                                                                      // CSSliceCreator.cs:152
-                        ValueFilter = ValueFilterComponentSlice2Code                                                                        // CSSliceCreator.cs:153
-                    };                                                                                                                      // CSSliceCreator.cs:154
-                    slicing = new Slicing<Observation.ComponentComponent>                                                                   // CSSliceCreator.cs:381
-                    {                                                                                                                       // CSSliceCreator.cs:382
-                        Discriminators = discriminators                                                                                     // CSSliceCreator.cs:383
-                    };                                                                                                                      // CSSliceCreator.cs:384
-                }                                                                                                                           // CSSliceCreator.cs:385
-            }                                                                                                                               // CSSliceCreator.cs:331
-                                                                                                                                            // CSSliceCreator.cs:251
+                {                                                                                                                           // CSSliceCreator.cs:344
+                    ISliceDiscriminator<Observation.ComponentComponent>[] discriminators =                                                  // CSSliceCreator.cs:345
+                        new ISliceDiscriminator<Observation.ComponentComponent>[1];                                                         // CSSliceCreator.cs:346
+                    {                                                                                                                       // CSSliceCreator.cs:113
+                        /// Define discriminator'
+                        /// {
+                        ///   "type": "value",
+                        ///   "path": "code"
+                        /// }
+                        var sliceOnValueDiscriminator = new SliceOnValueDiscriminator<Observation.ComponentComponent, CodeableConcept>()    // CSSliceCreator.cs:116
+                        {                                                                                                                   // CSSliceCreator.cs:117
+                            Path = "code",                                                                                                  // CSSliceCreator.cs:118
+                            ValueFilter = ValueFilterComponentSlice2Code                                                                    // CSSliceCreator.cs:119
+                        };                                                                                                                  // CSSliceCreator.cs:120
+                        {                                                                                                                   // ElementFixCode.cs:766
+                            CodeableConcept temp = new CodeableConcept();                                                                   // ElementFixCode.cs:767
+                            temp.Coding = new List<Coding>();                                                                               // ElementFixCode.cs:773
+                            {                                                                                                               // ElementFixCode.cs:776
+                                var temp2 = new Coding();                                                                                   // ElementFixCode.cs:777
+                                temp2.SystemElement = new FhirUri();                                                                        // ElementFixCode.cs:780
+                                temp2.SystemElement.Value = "http://www.test.com/SliceSystem";                                              // ElementFixCode.cs:782
+                                temp2.CodeElement = new Code();                                                                             // ElementFixCode.cs:796
+                                temp2.CodeElement.Value = "Slice2Code";                                                                     // ElementFixCode.cs:798
+                                temp.Coding.Add(temp2);                                                                                     // ElementFixCode.cs:825
+                            }                                                                                                               // ElementFixCode.cs:826
+                            sliceOnValueDiscriminator.Pattern = temp;                                                                       // ElementFixCode.cs:841
+                        }                                                                                                                   // ElementFixCode.cs:842
+                        discriminators[0] = sliceOnValueDiscriminator;                                                                      // CSSliceCreator.cs:126
+                    }                                                                                                                       // CSSliceCreator.cs:127
+                    slicing = new Slicing<Observation.ComponentComponent>                                                                   // CSSliceCreator.cs:356
+                    {                                                                                                                       // CSSliceCreator.cs:357
+                        Discriminators = discriminators                                                                                     // CSSliceCreator.cs:358
+                    };                                                                                                                      // CSSliceCreator.cs:359
+                }                                                                                                                           // CSSliceCreator.cs:360
+            }                                                                                                                               // CSSliceCreator.cs:306
+                                                                                                                                            // CSSliceCreator.cs:226
             /// <summary>
             /// Slice2Impl constructor
             /// </summary>
-            public Slice2Impl(List<Observation.ComponentComponent> items)                                                                   // CSSliceCreator.cs:255
-            {                                                                                                                               // CSSliceCreator.cs:256
-                this.Items = items;                                                                                                         // CSSliceCreator.cs:257
-                this.Slicing = slicing;                                                                                                     // CSSliceCreator.cs:258
-            }                                                                                                                               // CSSliceCreator.cs:259
-                                                                                                                                            // CSSliceCreator.cs:128
+            public Slice2Impl(List<Observation.ComponentComponent> items)                                                                   // CSSliceCreator.cs:230
+            {                                                                                                                               // CSSliceCreator.cs:231
+                this.Items = items;                                                                                                         // CSSliceCreator.cs:232
+                this.Slicing = slicing;                                                                                                     // CSSliceCreator.cs:233
+            }                                                                                                                               // CSSliceCreator.cs:234
+                                                                                                                                            // CSSliceCreator.cs:96
             /// <summary>
-            /// Return all elements for discriminator'                                                                                      // CSSliceCreator.cs:130
+            /// Return all elements for discriminator # 1'                                                                                  // CSSliceCreator.cs:98
             /// {
             ///   "type": "value",
             ///   "path": "code"
@@ -276,23 +306,23 @@ namespace FhirKhit.Test.R4                                                      
                 IEnumerable<CodeableConcept> result1 = GetChild_1(head);                                                                    // GenerateFhirPathSearch.cs:158
                 return result1;                                                                                                             // GenerateFhirPathSearch.cs:165
             }                                                                                                                               // GenerateFhirPathSearch.cs:166
-                                                                                                                                            // CSSliceCreator.cs:437
+                                                                                                                                            // CSSliceCreator.cs:412
             /// <summary>
             /// Create and initialize a new item
             /// </summary>
-            protected override Observation.ComponentComponent Create()                                                                      // CSSliceCreator.cs:441
-            {                                                                                                                               // CSSliceCreator.cs:442
-                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSSliceCreator.cs:443
-                //$CodeableConcept var3 = System.String[]();                                                                                // CSSliceCreator.cs:409
-                //$retVal.Code = var3;                                                                                                      // CSSliceCreator.cs:413
-                return retVal;                                                                                                              // CSSliceCreator.cs:447
-            }                                                                                                                               // CSSliceCreator.cs:448
-        }                                                                                                                                   // CSSliceCreator.cs:320
+            protected override Observation.ComponentComponent Create()                                                                      // CSSliceCreator.cs:416
+            {                                                                                                                               // CSSliceCreator.cs:417
+                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSSliceCreator.cs:418
+                //$CodeableConcept var3 = System.String[]();                                                                                // CSSliceCreator.cs:384
+                //$retVal.Code = var3;                                                                                                      // CSSliceCreator.cs:388
+                return retVal;                                                                                                              // CSSliceCreator.cs:422
+            }                                                                                                                               // CSSliceCreator.cs:423
+        }                                                                                                                                   // CSSliceCreator.cs:295
         #endregion
         #region fields SlicedMultipleExtensions fields
         #endregion
         #region methods SlicedMultipleExtensions methods
-                                                                                                                                            // CSSliceCreator.cs:204
+                                                                                                                                            // CSSliceCreator.cs:179
         /// <summary>
         /// Extension method to return slice Slice1 on component
         /// </summary>
@@ -300,12 +330,12 @@ namespace FhirKhit.Test.R4                                                      
         /// Observation resource = new Observation();
         /// SlicedMultipleExtensions.ISlice1 sliceAccessor = resource.Component.Slice1();
         /// </example>
-        public static ISlice1 Slice1(this List<Observation.ComponentComponent> item)                                                        // CSSliceCreator.cs:212
-        {                                                                                                                                   // CSSliceCreator.cs:213
-            Slice1Impl retVal = new Slice1Impl(item);                                                                                       // CSSliceCreator.cs:214
-            return retVal;                                                                                                                  // CSSliceCreator.cs:215
-        }                                                                                                                                   // CSSliceCreator.cs:216
-                                                                                                                                            // CSSliceCreator.cs:204
+        public static ISlice1 Slice1(this List<Observation.ComponentComponent> item)                                                        // CSSliceCreator.cs:187
+        {                                                                                                                                   // CSSliceCreator.cs:188
+            Slice1Impl retVal = new Slice1Impl(item);                                                                                       // CSSliceCreator.cs:189
+            return retVal;                                                                                                                  // CSSliceCreator.cs:190
+        }                                                                                                                                   // CSSliceCreator.cs:191
+                                                                                                                                            // CSSliceCreator.cs:179
         /// <summary>
         /// Extension method to return slice Slice2 on component
         /// </summary>
@@ -313,11 +343,11 @@ namespace FhirKhit.Test.R4                                                      
         /// Observation resource = new Observation();
         /// SlicedMultipleExtensions.ISlice2 sliceAccessor = resource.Component.Slice2();
         /// </example>
-        public static ISlice2 Slice2(this List<Observation.ComponentComponent> item)                                                        // CSSliceCreator.cs:212
-        {                                                                                                                                   // CSSliceCreator.cs:213
-            Slice2Impl retVal = new Slice2Impl(item);                                                                                       // CSSliceCreator.cs:214
-            return retVal;                                                                                                                  // CSSliceCreator.cs:215
-        }                                                                                                                                   // CSSliceCreator.cs:216
+        public static ISlice2 Slice2(this List<Observation.ComponentComponent> item)                                                        // CSSliceCreator.cs:187
+        {                                                                                                                                   // CSSliceCreator.cs:188
+            Slice2Impl retVal = new Slice2Impl(item);                                                                                       // CSSliceCreator.cs:189
+            return retVal;                                                                                                                  // CSSliceCreator.cs:190
+        }                                                                                                                                   // CSSliceCreator.cs:191
         #endregion
     }                                                                                                                                       // CSCodeFormatter.cs:115
 }                                                                                                                                           // CSCodeFormatter.cs:72
