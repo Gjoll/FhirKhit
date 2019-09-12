@@ -88,9 +88,9 @@ namespace FhirKhit.Test.R4                                                      
             {                                                                                                                               // CSSliceCreator.cs:304
                                                                                                                                             // CSSliceCreator.cs:329
                 // Instantiate slicing discriminator
-                {                                                                                                                           // CSSliceCreator.cs:344
-                    ISliceDiscriminator<Observation.ComponentComponent>[] discriminators =                                                  // CSSliceCreator.cs:345
-                        new ISliceDiscriminator<Observation.ComponentComponent>[1];                                                         // CSSliceCreator.cs:346
+                {                                                                                                                           // CSSliceCreator.cs:334
+                    ISliceDiscriminator<Observation.ComponentComponent>[] discriminators =                                                  // CSSliceCreator.cs:335
+                        new ISliceDiscriminator<Observation.ComponentComponent>[1];                                                         // CSSliceCreator.cs:336
                     {                                                                                                                       // CSSliceCreator.cs:113
                         /// Define discriminator'
                         /// {
@@ -102,26 +102,26 @@ namespace FhirKhit.Test.R4                                                      
                             Path = "code",                                                                                                  // CSSliceCreator.cs:118
                             ValueFilter = ValueFilterComponentSlice1Code                                                                    // CSSliceCreator.cs:119
                         };                                                                                                                  // CSSliceCreator.cs:120
-                        {                                                                                                                   // ElementFixCode.cs:766
-                            CodeableConcept temp = new CodeableConcept();                                                                   // ElementFixCode.cs:767
-                            temp.Coding = new List<Coding>();                                                                               // ElementFixCode.cs:773
-                            {                                                                                                               // ElementFixCode.cs:776
-                                var temp2 = new Coding();                                                                                   // ElementFixCode.cs:777
-                                temp2.SystemElement = new FhirUri();                                                                        // ElementFixCode.cs:780
-                                temp2.SystemElement.Value = "http://www.test.com/SliceSystem";                                              // ElementFixCode.cs:782
-                                temp2.CodeElement = new Code();                                                                             // ElementFixCode.cs:796
-                                temp2.CodeElement.Value = "Slice1Code";                                                                     // ElementFixCode.cs:798
-                                temp.Coding.Add(temp2);                                                                                     // ElementFixCode.cs:825
-                            }                                                                                                               // ElementFixCode.cs:826
-                            sliceOnValueDiscriminator.Pattern = temp;                                                                       // ElementFixCode.cs:841
-                        }                                                                                                                   // ElementFixCode.cs:842
+                        {                                                                                                                   // ElementFixCode.cs:767
+                            CodeableConcept temp = new CodeableConcept();                                                                   // ElementFixCode.cs:768
+                            temp.Coding = new List<Coding>();                                                                               // ElementFixCode.cs:774
+                            {                                                                                                               // ElementFixCode.cs:777
+                                var temp2 = new Coding();                                                                                   // ElementFixCode.cs:778
+                                temp2.SystemElement = new FhirUri();                                                                        // ElementFixCode.cs:781
+                                temp2.SystemElement.Value = "http://www.test.com/SliceSystem";                                              // ElementFixCode.cs:783
+                                temp2.CodeElement = new Code();                                                                             // ElementFixCode.cs:797
+                                temp2.CodeElement.Value = "Slice1Code";                                                                     // ElementFixCode.cs:799
+                                temp.Coding.Add(temp2);                                                                                     // ElementFixCode.cs:826
+                            }                                                                                                               // ElementFixCode.cs:827
+                            sliceOnValueDiscriminator.Pattern = temp;                                                                       // ElementFixCode.cs:842
+                        }                                                                                                                   // ElementFixCode.cs:843
                         discriminators[0] = sliceOnValueDiscriminator;                                                                      // CSSliceCreator.cs:126
                     }                                                                                                                       // CSSliceCreator.cs:127
-                    slicing = new Slicing<Observation.ComponentComponent>                                                                   // CSSliceCreator.cs:356
-                    {                                                                                                                       // CSSliceCreator.cs:357
-                        Discriminators = discriminators                                                                                     // CSSliceCreator.cs:358
-                    };                                                                                                                      // CSSliceCreator.cs:359
-                }                                                                                                                           // CSSliceCreator.cs:360
+                    slicing = new Slicing<Observation.ComponentComponent>                                                                   // CSSliceCreator.cs:346
+                    {                                                                                                                       // CSSliceCreator.cs:347
+                        Discriminators = discriminators                                                                                     // CSSliceCreator.cs:348
+                    };                                                                                                                      // CSSliceCreator.cs:349
+                }                                                                                                                           // CSSliceCreator.cs:350
             }                                                                                                                               // CSSliceCreator.cs:306
                                                                                                                                             // CSSliceCreator.cs:226
             /// <summary>
@@ -156,17 +156,28 @@ namespace FhirKhit.Test.R4                                                      
                 IEnumerable<CodeableConcept> result1 = GetChild_1(head);                                                                    // GenerateFhirPathSearch.cs:158
                 return result1;                                                                                                             // GenerateFhirPathSearch.cs:165
             }                                                                                                                               // GenerateFhirPathSearch.cs:166
-                                                                                                                                            // CSSliceCreator.cs:412
+                                                                                                                                            // CSSliceCreator.cs:409
             /// <summary>
             /// Create and initialize a new item
             /// </summary>
-            protected override Observation.ComponentComponent Create()                                                                      // CSSliceCreator.cs:416
-            {                                                                                                                               // CSSliceCreator.cs:417
-                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSSliceCreator.cs:418
-                //$CodeableConcept var3 = System.String[]();                                                                                // CSSliceCreator.cs:384
-                //$retVal.Code = var3;                                                                                                      // CSSliceCreator.cs:388
-                return retVal;                                                                                                              // CSSliceCreator.cs:422
-            }                                                                                                                               // CSSliceCreator.cs:423
+            protected override Observation.ComponentComponent Create()                                                                      // CSSliceCreator.cs:413
+            {                                                                                                                               // CSSliceCreator.cs:414
+                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSSliceCreator.cs:415
+                {                                                                                                                           // ElementFixCode.cs:767
+                    CodeableConcept temp = new CodeableConcept();                                                                           // ElementFixCode.cs:768
+                    temp.Coding = new List<Coding>();                                                                                       // ElementFixCode.cs:774
+                    {                                                                                                                       // ElementFixCode.cs:777
+                        var temp2 = new Coding();                                                                                           // ElementFixCode.cs:778
+                        temp2.SystemElement = new FhirUri();                                                                                // ElementFixCode.cs:781
+                        temp2.SystemElement.Value = "http://www.test.com/SliceSystem";                                                      // ElementFixCode.cs:783
+                        temp2.CodeElement = new Code();                                                                                     // ElementFixCode.cs:797
+                        temp2.CodeElement.Value = "Slice1Code";                                                                             // ElementFixCode.cs:799
+                        temp.Coding.Add(temp2);                                                                                             // ElementFixCode.cs:826
+                    }                                                                                                                       // ElementFixCode.cs:827
+                    retVal.Code = temp;                                                                                                     // ElementFixCode.cs:842
+                }                                                                                                                           // ElementFixCode.cs:843
+                return retVal;                                                                                                              // CSSliceCreator.cs:419
+            }                                                                                                                               // CSSliceCreator.cs:420
         }                                                                                                                                   // CSSliceCreator.cs:295
                                                                                                                                             // CSSliceCreator.cs:276
         /// <summary>
@@ -238,9 +249,9 @@ namespace FhirKhit.Test.R4                                                      
             {                                                                                                                               // CSSliceCreator.cs:304
                                                                                                                                             // CSSliceCreator.cs:329
                 // Instantiate slicing discriminator
-                {                                                                                                                           // CSSliceCreator.cs:344
-                    ISliceDiscriminator<Observation.ComponentComponent>[] discriminators =                                                  // CSSliceCreator.cs:345
-                        new ISliceDiscriminator<Observation.ComponentComponent>[1];                                                         // CSSliceCreator.cs:346
+                {                                                                                                                           // CSSliceCreator.cs:334
+                    ISliceDiscriminator<Observation.ComponentComponent>[] discriminators =                                                  // CSSliceCreator.cs:335
+                        new ISliceDiscriminator<Observation.ComponentComponent>[1];                                                         // CSSliceCreator.cs:336
                     {                                                                                                                       // CSSliceCreator.cs:113
                         /// Define discriminator'
                         /// {
@@ -252,26 +263,26 @@ namespace FhirKhit.Test.R4                                                      
                             Path = "code",                                                                                                  // CSSliceCreator.cs:118
                             ValueFilter = ValueFilterComponentSlice2Code                                                                    // CSSliceCreator.cs:119
                         };                                                                                                                  // CSSliceCreator.cs:120
-                        {                                                                                                                   // ElementFixCode.cs:766
-                            CodeableConcept temp = new CodeableConcept();                                                                   // ElementFixCode.cs:767
-                            temp.Coding = new List<Coding>();                                                                               // ElementFixCode.cs:773
-                            {                                                                                                               // ElementFixCode.cs:776
-                                var temp2 = new Coding();                                                                                   // ElementFixCode.cs:777
-                                temp2.SystemElement = new FhirUri();                                                                        // ElementFixCode.cs:780
-                                temp2.SystemElement.Value = "http://www.test.com/SliceSystem";                                              // ElementFixCode.cs:782
-                                temp2.CodeElement = new Code();                                                                             // ElementFixCode.cs:796
-                                temp2.CodeElement.Value = "Slice2Code";                                                                     // ElementFixCode.cs:798
-                                temp.Coding.Add(temp2);                                                                                     // ElementFixCode.cs:825
-                            }                                                                                                               // ElementFixCode.cs:826
-                            sliceOnValueDiscriminator.Pattern = temp;                                                                       // ElementFixCode.cs:841
-                        }                                                                                                                   // ElementFixCode.cs:842
+                        {                                                                                                                   // ElementFixCode.cs:767
+                            CodeableConcept temp = new CodeableConcept();                                                                   // ElementFixCode.cs:768
+                            temp.Coding = new List<Coding>();                                                                               // ElementFixCode.cs:774
+                            {                                                                                                               // ElementFixCode.cs:777
+                                var temp2 = new Coding();                                                                                   // ElementFixCode.cs:778
+                                temp2.SystemElement = new FhirUri();                                                                        // ElementFixCode.cs:781
+                                temp2.SystemElement.Value = "http://www.test.com/SliceSystem";                                              // ElementFixCode.cs:783
+                                temp2.CodeElement = new Code();                                                                             // ElementFixCode.cs:797
+                                temp2.CodeElement.Value = "Slice2Code";                                                                     // ElementFixCode.cs:799
+                                temp.Coding.Add(temp2);                                                                                     // ElementFixCode.cs:826
+                            }                                                                                                               // ElementFixCode.cs:827
+                            sliceOnValueDiscriminator.Pattern = temp;                                                                       // ElementFixCode.cs:842
+                        }                                                                                                                   // ElementFixCode.cs:843
                         discriminators[0] = sliceOnValueDiscriminator;                                                                      // CSSliceCreator.cs:126
                     }                                                                                                                       // CSSliceCreator.cs:127
-                    slicing = new Slicing<Observation.ComponentComponent>                                                                   // CSSliceCreator.cs:356
-                    {                                                                                                                       // CSSliceCreator.cs:357
-                        Discriminators = discriminators                                                                                     // CSSliceCreator.cs:358
-                    };                                                                                                                      // CSSliceCreator.cs:359
-                }                                                                                                                           // CSSliceCreator.cs:360
+                    slicing = new Slicing<Observation.ComponentComponent>                                                                   // CSSliceCreator.cs:346
+                    {                                                                                                                       // CSSliceCreator.cs:347
+                        Discriminators = discriminators                                                                                     // CSSliceCreator.cs:348
+                    };                                                                                                                      // CSSliceCreator.cs:349
+                }                                                                                                                           // CSSliceCreator.cs:350
             }                                                                                                                               // CSSliceCreator.cs:306
                                                                                                                                             // CSSliceCreator.cs:226
             /// <summary>
@@ -306,17 +317,28 @@ namespace FhirKhit.Test.R4                                                      
                 IEnumerable<CodeableConcept> result1 = GetChild_1(head);                                                                    // GenerateFhirPathSearch.cs:158
                 return result1;                                                                                                             // GenerateFhirPathSearch.cs:165
             }                                                                                                                               // GenerateFhirPathSearch.cs:166
-                                                                                                                                            // CSSliceCreator.cs:412
+                                                                                                                                            // CSSliceCreator.cs:409
             /// <summary>
             /// Create and initialize a new item
             /// </summary>
-            protected override Observation.ComponentComponent Create()                                                                      // CSSliceCreator.cs:416
-            {                                                                                                                               // CSSliceCreator.cs:417
-                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSSliceCreator.cs:418
-                //$CodeableConcept var3 = System.String[]();                                                                                // CSSliceCreator.cs:384
-                //$retVal.Code = var3;                                                                                                      // CSSliceCreator.cs:388
-                return retVal;                                                                                                              // CSSliceCreator.cs:422
-            }                                                                                                                               // CSSliceCreator.cs:423
+            protected override Observation.ComponentComponent Create()                                                                      // CSSliceCreator.cs:413
+            {                                                                                                                               // CSSliceCreator.cs:414
+                Observation.ComponentComponent retVal = new Observation.ComponentComponent();                                               // CSSliceCreator.cs:415
+                {                                                                                                                           // ElementFixCode.cs:767
+                    CodeableConcept temp = new CodeableConcept();                                                                           // ElementFixCode.cs:768
+                    temp.Coding = new List<Coding>();                                                                                       // ElementFixCode.cs:774
+                    {                                                                                                                       // ElementFixCode.cs:777
+                        var temp2 = new Coding();                                                                                           // ElementFixCode.cs:778
+                        temp2.SystemElement = new FhirUri();                                                                                // ElementFixCode.cs:781
+                        temp2.SystemElement.Value = "http://www.test.com/SliceSystem";                                                      // ElementFixCode.cs:783
+                        temp2.CodeElement = new Code();                                                                                     // ElementFixCode.cs:797
+                        temp2.CodeElement.Value = "Slice2Code";                                                                             // ElementFixCode.cs:799
+                        temp.Coding.Add(temp2);                                                                                             // ElementFixCode.cs:826
+                    }                                                                                                                       // ElementFixCode.cs:827
+                    retVal.Code = temp;                                                                                                     // ElementFixCode.cs:842
+                }                                                                                                                           // ElementFixCode.cs:843
+                return retVal;                                                                                                              // CSSliceCreator.cs:419
+            }                                                                                                                               // CSSliceCreator.cs:420
         }                                                                                                                                   // CSSliceCreator.cs:295
         #endregion
         #region fields SlicedMultipleExtensions fields

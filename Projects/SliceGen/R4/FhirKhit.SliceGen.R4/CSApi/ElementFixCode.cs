@@ -19,20 +19,21 @@ namespace FhirKhit.SliceGen.CSApi
     /// </summary>
     public static class ElementFixCode
     {                                                                                                                                       // GenerateFixCode.cs:339
+        static String CleanString(String s) => s.Replace("\"", "\\\"");
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,
-            Element fix,                                                                                                                    // GenerateFixCode.cs:354
-            String varName,                                                                                                                 // GenerateFixCode.cs:355
-            out String propertyType)                                                                                                        // GenerateFixCode.cs:356
-        {                                                                                                                                   // GenerateFixCode.cs:357
-                                                                                                                                            // GenerateFixCode.cs:359
-            if (fix is null)                                                                                                                // GenerateFixCode.cs:360
-                throw new ArgumentNullException(nameof(fix));                                                                               // GenerateFixCode.cs:361
-            propertyType = null;                                                                                                            // GenerateFixCode.cs:362
-            switch (fix.TypeName)                                                                                                           // GenerateFixCode.cs:363
-            {                                                                                                                               // GenerateFixCode.cs:364
+            Element fix,                                                                                                                    // GenerateFixCode.cs:355
+            String varName,                                                                                                                 // GenerateFixCode.cs:356
+            out String propertyType)                                                                                                        // GenerateFixCode.cs:357
+        {                                                                                                                                   // GenerateFixCode.cs:358
+                                                                                                                                            // GenerateFixCode.cs:360
+            if (fix is null)                                                                                                                // GenerateFixCode.cs:361
+                throw new ArgumentNullException(nameof(fix));                                                                               // GenerateFixCode.cs:362
+            propertyType = null;                                                                                                            // GenerateFixCode.cs:363
+            switch (fix.TypeName)                                                                                                           // GenerateFixCode.cs:364
+            {                                                                                                                               // GenerateFixCode.cs:365
                 case "Address": // Address  - DataType                                                                                      // GenerateFixCode.cs:267
                 {                                                                                                                           // GenerateFixCode.cs:268
                     propertyType = "Address";                                                                                               // GenerateFixCode.cs:269
@@ -399,9 +400,9 @@ namespace FhirKhit.SliceGen.CSApi
                     return Construct(block, (XHtml)fix, varName);                                                                           // GenerateFixCode.cs:215
                 }                                                                                                                           // GenerateFixCode.cs:216
                                                                                                                                             // GenerateFixCode.cs:217
-            }                                                                                                                               // GenerateFixCode.cs:378
-            return false;                                                                                                                   // GenerateFixCode.cs:379
-        }                                                                                                                                   // GenerateFixCode.cs:380
+            }                                                                                                                               // GenerateFixCode.cs:379
+            return false;                                                                                                                   // GenerateFixCode.cs:380
+        }                                                                                                                                   // GenerateFixCode.cs:381
                                                                                                                                             // GenerateFixCode.cs:277
         /// <summary>
         /// Return c# text to create indicated element.
@@ -427,9 +428,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.TextElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.TextElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TextElement.Value = \"{fix.TextElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TextElement.Value = \"{CleanString(fix.TextElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.TextElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TextElement.ElementId = \"{fix.TextElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TextElement.ElementId = \"{CleanString(fix.TextElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.LineElement != null)                                                                                                // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -439,9 +440,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp2 = new FhirString();");                                                                  // GenerateFixCode.cs:140
                         if (temp1.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.Value = \"{temp1.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.Value = \"{CleanString(temp1.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.LineElement.Add(temp2);");                                                                  // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -450,41 +451,41 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CityElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.CityElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CityElement.Value = \"{fix.CityElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CityElement.Value = \"{CleanString(fix.CityElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.CityElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CityElement.ElementId = \"{fix.CityElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CityElement.ElementId = \"{CleanString(fix.CityElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DistrictElement != null)                                                                                            // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.DistrictElement = new FhirString();");                                                          // GenerateFixCode.cs:184
                     if (fix.DistrictElement.Value != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DistrictElement.Value = \"{fix.DistrictElement.Value}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DistrictElement.Value = \"{CleanString(fix.DistrictElement.Value)}\";");                    // GenerateFixCode.cs:113
                     if (fix.DistrictElement.ElementId != null)                                                                              // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DistrictElement.ElementId = \"{fix.DistrictElement.ElementId}\";");                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DistrictElement.ElementId = \"{CleanString(fix.DistrictElement.ElementId)}\";");            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.StateElement != null)                                                                                               // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.StateElement = new FhirString();");                                                             // GenerateFixCode.cs:184
                     if (fix.StateElement.Value != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.StateElement.Value = \"{fix.StateElement.Value}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.StateElement.Value = \"{CleanString(fix.StateElement.Value)}\";");                          // GenerateFixCode.cs:113
                     if (fix.StateElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.StateElement.ElementId = \"{fix.StateElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.StateElement.ElementId = \"{CleanString(fix.StateElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.PostalCodeElement != null)                                                                                          // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.PostalCodeElement = new FhirString();");                                                        // GenerateFixCode.cs:184
                     if (fix.PostalCodeElement.Value != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.PostalCodeElement.Value = \"{fix.PostalCodeElement.Value}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.PostalCodeElement.Value = \"{CleanString(fix.PostalCodeElement.Value)}\";");                // GenerateFixCode.cs:113
                     if (fix.PostalCodeElement.ElementId != null)                                                                            // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.PostalCodeElement.ElementId = \"{fix.PostalCodeElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.PostalCodeElement.ElementId = \"{CleanString(fix.PostalCodeElement.ElementId)}\";");        // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CountryElement != null)                                                                                             // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CountryElement = new FhirString();");                                                           // GenerateFixCode.cs:184
                     if (fix.CountryElement.Value != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CountryElement.Value = \"{fix.CountryElement.Value}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CountryElement.Value = \"{CleanString(fix.CountryElement.Value)}\";");                      // GenerateFixCode.cs:113
                     if (fix.CountryElement.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CountryElement.ElementId = \"{fix.CountryElement.ElementId}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CountryElement.ElementId = \"{CleanString(fix.CountryElement.ElementId)}\";");              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Period != null)                                                                                                     // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -493,23 +494,23 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.StartElement = new FhirDateTime();");                                                // GenerateFixCode.cs:184
                         if (fix.Period.StartElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.StartElement.Value = \"{fix.Period.StartElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.StartElement.Value = \"{CleanString(fix.Period.StartElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Period.StartElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.StartElement.ElementId = \"{fix.Period.StartElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.StartElement.ElementId = \"{CleanString(fix.Period.StartElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.EndElement != null)                                                                                      // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.EndElement = new FhirDateTime();");                                                  // GenerateFixCode.cs:184
                         if (fix.Period.EndElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.EndElement.Value = \"{fix.Period.EndElement.Value}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.EndElement.Value = \"{CleanString(fix.Period.EndElement.Value)}\";");            // GenerateFixCode.cs:113
                         if (fix.Period.EndElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.EndElement.ElementId = \"{fix.Period.EndElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.EndElement.ElementId = \"{CleanString(fix.Period.EndElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Period.ElementId = \"{fix.Period.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Period.ElementId = \"{CleanString(fix.Period.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -540,7 +541,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.ValueElement.Value.HasValue == true)                                                                            // GenerateFixCode.cs:98
                         block.AppendCode($"temp.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ValueElement.Value.Value});");    // GenerateFixCode.cs:99
                     if (fix.ValueElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.ElementId = \"{fix.ValueElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.ElementId = \"{CleanString(fix.ValueElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ComparatorElement != null)                                                                                          // GenerateFixCode.cs:122
                     block.AppendCode($"temp.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -548,28 +549,28 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.UnitElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.UnitElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.Value = \"{fix.UnitElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.Value = \"{CleanString(fix.UnitElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.UnitElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.ElementId = \"{fix.UnitElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.ElementId = \"{CleanString(fix.UnitElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SystemElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SystemElement = new FhirUri();");                                                               // GenerateFixCode.cs:184
                     if (fix.SystemElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.Value = \"{fix.SystemElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.Value = \"{CleanString(fix.SystemElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.SystemElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.ElementId = \"{fix.SystemElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.ElementId = \"{CleanString(fix.SystemElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CodeElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CodeElement = new Code();");                                                                    // GenerateFixCode.cs:184
                     if (fix.CodeElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.Value = \"{fix.CodeElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.Value = \"{CleanString(fix.CodeElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.CodeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.ElementId = \"{fix.CodeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.ElementId = \"{CleanString(fix.CodeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -598,20 +599,20 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.TimeElement = new FhirDateTime();");                                                            // GenerateFixCode.cs:184
                     if (fix.TimeElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TimeElement.Value = \"{fix.TimeElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TimeElement.Value = \"{CleanString(fix.TimeElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.TimeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TimeElement.ElementId = \"{fix.TimeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TimeElement.ElementId = \"{CleanString(fix.TimeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Text != null)                                                                                                       // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.Text = new Markdown();");                                                                       // GenerateFixCode.cs:184
                     if (fix.Text.Value != null)                                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Text.Value = \"{fix.Text.Value}\";");                                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Text.Value = \"{CleanString(fix.Text.Value)}\";");                                          // GenerateFixCode.cs:113
                     if (fix.Text.ElementId != null)                                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Text.ElementId = \"{fix.Text.ElementId}\";");                                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Text.ElementId = \"{CleanString(fix.Text.ElementId)}\";");                                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -640,17 +641,17 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ContentTypeElement = new Code();");                                                             // GenerateFixCode.cs:184
                     if (fix.ContentTypeElement.Value != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ContentTypeElement.Value = \"{fix.ContentTypeElement.Value}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ContentTypeElement.Value = \"{CleanString(fix.ContentTypeElement.Value)}\";");              // GenerateFixCode.cs:113
                     if (fix.ContentTypeElement.ElementId != null)                                                                           // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ContentTypeElement.ElementId = \"{fix.ContentTypeElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ContentTypeElement.ElementId = \"{CleanString(fix.ContentTypeElement.ElementId)}\";");      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.LanguageElement != null)                                                                                            // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.LanguageElement = new Code();");                                                                // GenerateFixCode.cs:184
                     if (fix.LanguageElement.Value != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LanguageElement.Value = \"{fix.LanguageElement.Value}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LanguageElement.Value = \"{CleanString(fix.LanguageElement.Value)}\";");                    // GenerateFixCode.cs:113
                     if (fix.LanguageElement.ElementId != null)                                                                              // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LanguageElement.ElementId = \"{fix.LanguageElement.ElementId}\";");                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LanguageElement.ElementId = \"{CleanString(fix.LanguageElement.ElementId)}\";");            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DataElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -679,15 +680,15 @@ namespace FhirKhit.SliceGen.CSApi
                         block.CloseBrace(";");                                                                                              // GenerateFixCode.cs:77
                     }                                                                                                                       // GenerateFixCode.cs:78
                     if (fix.DataElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DataElement.ElementId = \"{fix.DataElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DataElement.ElementId = \"{CleanString(fix.DataElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.UrlElement != null)                                                                                                 // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.UrlElement = new FhirUrl();");                                                                  // GenerateFixCode.cs:184
                     if (fix.UrlElement.Value != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UrlElement.Value = \"{fix.UrlElement.Value}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UrlElement.Value = \"{CleanString(fix.UrlElement.Value)}\";");                              // GenerateFixCode.cs:113
                     if (fix.UrlElement.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UrlElement.ElementId = \"{fix.UrlElement.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UrlElement.ElementId = \"{CleanString(fix.UrlElement.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SizeElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -695,7 +696,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.SizeElement.Value.HasValue == true)                                                                             // GenerateFixCode.cs:105
                         block.AppendCode($"temp.SizeElement.Value = new Nullable<int>((int) {fix.SizeElement.Value.Value});");              // GenerateFixCode.cs:106
                     if (fix.SizeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SizeElement.ElementId = \"{fix.SizeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SizeElement.ElementId = \"{CleanString(fix.SizeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.HashElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -724,26 +725,26 @@ namespace FhirKhit.SliceGen.CSApi
                         block.CloseBrace(";");                                                                                              // GenerateFixCode.cs:77
                     }                                                                                                                       // GenerateFixCode.cs:78
                     if (fix.HashElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.HashElement.ElementId = \"{fix.HashElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.HashElement.ElementId = \"{CleanString(fix.HashElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.TitleElement != null)                                                                                               // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.TitleElement = new FhirString();");                                                             // GenerateFixCode.cs:184
                     if (fix.TitleElement.Value != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TitleElement.Value = \"{fix.TitleElement.Value}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TitleElement.Value = \"{CleanString(fix.TitleElement.Value)}\";");                          // GenerateFixCode.cs:113
                     if (fix.TitleElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TitleElement.ElementId = \"{fix.TitleElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TitleElement.ElementId = \"{CleanString(fix.TitleElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CreationElement != null)                                                                                            // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CreationElement = new FhirDateTime();");                                                        // GenerateFixCode.cs:184
                     if (fix.CreationElement.Value != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CreationElement.Value = \"{fix.CreationElement.Value}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CreationElement.Value = \"{CleanString(fix.CreationElement.Value)}\";");                    // GenerateFixCode.cs:113
                     if (fix.CreationElement.ElementId != null)                                                                              // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CreationElement.ElementId = \"{fix.CreationElement.ElementId}\";");                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CreationElement.ElementId = \"{CleanString(fix.CreationElement.ElementId)}\";");            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -779,33 +780,33 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.SystemElement = new FhirUri();");                                                      // GenerateFixCode.cs:184
                             if (temp1.SystemElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.SystemElement.Value = \"{temp1.SystemElement.Value}\";");                          // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.SystemElement.Value = \"{CleanString(temp1.SystemElement.Value)}\";");             // GenerateFixCode.cs:113
                             if (temp1.SystemElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.SystemElement.ElementId = \"{temp1.SystemElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.SystemElement.ElementId = \"{CleanString(temp1.SystemElement.ElementId)}\";");     // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.VersionElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.VersionElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                             if (temp1.VersionElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.VersionElement.Value = \"{temp1.VersionElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.VersionElement.Value = \"{CleanString(temp1.VersionElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp1.VersionElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.VersionElement.ElementId = \"{temp1.VersionElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.VersionElement.ElementId = \"{CleanString(temp1.VersionElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.CodeElement != null)                                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.CodeElement = new Code();");                                                           // GenerateFixCode.cs:184
                             if (temp1.CodeElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.CodeElement.Value = \"{temp1.CodeElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.CodeElement.Value = \"{CleanString(temp1.CodeElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp1.CodeElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.CodeElement.ElementId = \"{temp1.CodeElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.CodeElement.ElementId = \"{CleanString(temp1.CodeElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.DisplayElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.DisplayElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                             if (temp1.DisplayElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.DisplayElement.Value = \"{temp1.DisplayElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.DisplayElement.Value = \"{CleanString(temp1.DisplayElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp1.DisplayElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.DisplayElement.ElementId = \"{temp1.DisplayElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.DisplayElement.ElementId = \"{CleanString(temp1.DisplayElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.UserSelectedElement != null)                                                                              // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -818,10 +819,10 @@ namespace FhirKhit.SliceGen.CSApi
                                     block.AppendCode($"temp2.UserSelectedElement.Value = false;");                                          // GenerateFixCode.cs:49
                             }                                                                                                               // GenerateFixCode.cs:50
                             if (temp1.UserSelectedElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{temp1.UserSelectedElement.ElementId}\";");      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{CleanString(temp1.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Coding.Add(temp2);");                                                                       // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -830,12 +831,12 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.TextElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.TextElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TextElement.Value = \"{fix.TextElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TextElement.Value = \"{CleanString(fix.TextElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.TextElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TextElement.ElementId = \"{fix.TextElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TextElement.ElementId = \"{CleanString(fix.TextElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -864,33 +865,33 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SystemElement = new FhirUri();");                                                               // GenerateFixCode.cs:184
                     if (fix.SystemElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.Value = \"{fix.SystemElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.Value = \"{CleanString(fix.SystemElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.SystemElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.ElementId = \"{fix.SystemElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.ElementId = \"{CleanString(fix.SystemElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.VersionElement != null)                                                                                             // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.VersionElement = new FhirString();");                                                           // GenerateFixCode.cs:184
                     if (fix.VersionElement.Value != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.VersionElement.Value = \"{fix.VersionElement.Value}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.VersionElement.Value = \"{CleanString(fix.VersionElement.Value)}\";");                      // GenerateFixCode.cs:113
                     if (fix.VersionElement.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.VersionElement.ElementId = \"{fix.VersionElement.ElementId}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.VersionElement.ElementId = \"{CleanString(fix.VersionElement.ElementId)}\";");              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CodeElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CodeElement = new Code();");                                                                    // GenerateFixCode.cs:184
                     if (fix.CodeElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.Value = \"{fix.CodeElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.Value = \"{CleanString(fix.CodeElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.CodeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.ElementId = \"{fix.CodeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.ElementId = \"{CleanString(fix.CodeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DisplayElement != null)                                                                                             // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.DisplayElement = new FhirString();");                                                           // GenerateFixCode.cs:184
                     if (fix.DisplayElement.Value != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DisplayElement.Value = \"{fix.DisplayElement.Value}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DisplayElement.Value = \"{CleanString(fix.DisplayElement.Value)}\";");                      // GenerateFixCode.cs:113
                     if (fix.DisplayElement.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DisplayElement.ElementId = \"{fix.DisplayElement.ElementId}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DisplayElement.ElementId = \"{CleanString(fix.DisplayElement.ElementId)}\";");              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.UserSelectedElement != null)                                                                                        // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -903,10 +904,10 @@ namespace FhirKhit.SliceGen.CSApi
                             block.AppendCode($"temp.UserSelectedElement.Value = false;");                                                   // GenerateFixCode.cs:49
                     }                                                                                                                       // GenerateFixCode.cs:50
                     if (fix.UserSelectedElement.ElementId != null)                                                                          // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UserSelectedElement.ElementId = \"{fix.UserSelectedElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UserSelectedElement.ElementId = \"{CleanString(fix.UserSelectedElement.ElementId)}\";");    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -935,9 +936,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.NameElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.NameElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NameElement.Value = \"{fix.NameElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NameElement.Value = \"{CleanString(fix.NameElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.NameElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NameElement.ElementId = \"{fix.NameElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NameElement.ElementId = \"{CleanString(fix.NameElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Telecom != null)                                                                                                    // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -952,9 +953,9 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.ValueElement = new FhirString();");                                                    // GenerateFixCode.cs:184
                             if (temp1.ValueElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.ValueElement.Value = \"{temp1.ValueElement.Value}\";");                            // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.ValueElement.Value = \"{CleanString(temp1.ValueElement.Value)}\";");               // GenerateFixCode.cs:113
                             if (temp1.ValueElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.ValueElement.ElementId = \"{temp1.ValueElement.ElementId}\";");                    // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.ValueElement.ElementId = \"{CleanString(temp1.ValueElement.ElementId)}\";");       // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.UseElement != null)                                                                                       // GenerateFixCode.cs:122
                             block.AppendCode($"temp2.UseElement = new Code<ContactPoint.ContactPointUse>(ContactPoint.ContactPointUse.{temp1.UseElement.Value});");// GenerateFixCode.cs:123
@@ -964,7 +965,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (temp1.RankElement.Value.HasValue == true)                                                                   // GenerateFixCode.cs:105
                                 block.AppendCode($"temp2.RankElement.Value = new Nullable<int>((int) {temp1.RankElement.Value.Value});");   // GenerateFixCode.cs:106
                             if (temp1.RankElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.RankElement.ElementId = \"{temp1.RankElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.RankElement.ElementId = \"{CleanString(temp1.RankElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.Period != null)                                                                                           // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -973,29 +974,29 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.Period.StartElement = new FhirDateTime();");                                       // GenerateFixCode.cs:184
                                 if (temp1.Period.StartElement.Value != null)                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.Period.StartElement.Value = \"{temp1.Period.StartElement.Value}\";");          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.Period.StartElement.Value = \"{CleanString(temp1.Period.StartElement.Value)}\";");// GenerateFixCode.cs:113
                                 if (temp1.Period.StartElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.Period.StartElement.ElementId = \"{temp1.Period.StartElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.Period.StartElement.ElementId = \"{CleanString(temp1.Period.StartElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.Period.EndElement != null)                                                                            // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.Period.EndElement = new FhirDateTime();");                                         // GenerateFixCode.cs:184
                                 if (temp1.Period.EndElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.Period.EndElement.Value = \"{temp1.Period.EndElement.Value}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.Period.EndElement.Value = \"{CleanString(temp1.Period.EndElement.Value)}\";"); // GenerateFixCode.cs:113
                                 if (temp1.Period.EndElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.Period.EndElement.ElementId = \"{temp1.Period.EndElement.ElementId}\";");      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.Period.EndElement.ElementId = \"{CleanString(temp1.Period.EndElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.Period.ElementId != null)                                                                             // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.Period.ElementId = \"{temp1.Period.ElementId}\";");                                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.Period.ElementId = \"{CleanString(temp1.Period.ElementId)}\";");                   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Telecom.Add(temp2);");                                                                      // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
                 }                                                                                                                           // GenerateFixCode.cs:149
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -1026,9 +1027,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ValueElement = new FhirString();");                                                             // GenerateFixCode.cs:184
                     if (fix.ValueElement.Value != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.Value = \"{fix.ValueElement.Value}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.Value = \"{CleanString(fix.ValueElement.Value)}\";");                          // GenerateFixCode.cs:113
                     if (fix.ValueElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.ElementId = \"{fix.ValueElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.ElementId = \"{CleanString(fix.ValueElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.UseElement != null)                                                                                                 // GenerateFixCode.cs:122
                     block.AppendCode($"temp.UseElement = new Code<ContactPoint.ContactPointUse>(ContactPoint.ContactPointUse.{fix.UseElement.Value});");// GenerateFixCode.cs:123
@@ -1038,7 +1039,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.RankElement.Value.HasValue == true)                                                                             // GenerateFixCode.cs:105
                         block.AppendCode($"temp.RankElement.Value = new Nullable<int>((int) {fix.RankElement.Value.Value});");              // GenerateFixCode.cs:106
                     if (fix.RankElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.RankElement.ElementId = \"{fix.RankElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.RankElement.ElementId = \"{CleanString(fix.RankElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Period != null)                                                                                                     // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -1047,23 +1048,23 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.StartElement = new FhirDateTime();");                                                // GenerateFixCode.cs:184
                         if (fix.Period.StartElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.StartElement.Value = \"{fix.Period.StartElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.StartElement.Value = \"{CleanString(fix.Period.StartElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Period.StartElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.StartElement.ElementId = \"{fix.Period.StartElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.StartElement.ElementId = \"{CleanString(fix.Period.StartElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.EndElement != null)                                                                                      // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.EndElement = new FhirDateTime();");                                                  // GenerateFixCode.cs:184
                         if (fix.Period.EndElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.EndElement.Value = \"{fix.Period.EndElement.Value}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.EndElement.Value = \"{CleanString(fix.Period.EndElement.Value)}\";");            // GenerateFixCode.cs:113
                         if (fix.Period.EndElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.EndElement.ElementId = \"{fix.Period.EndElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.EndElement.ElementId = \"{CleanString(fix.Period.EndElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Period.ElementId = \"{fix.Period.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Period.ElementId = \"{CleanString(fix.Period.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -1094,9 +1095,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.NameElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.NameElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NameElement.Value = \"{fix.NameElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NameElement.Value = \"{CleanString(fix.NameElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.NameElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NameElement.ElementId = \"{fix.NameElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NameElement.ElementId = \"{CleanString(fix.NameElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Contact != null)                                                                                                    // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -1109,9 +1110,9 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.NameElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                             if (temp1.NameElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.NameElement.Value = \"{temp1.NameElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.NameElement.Value = \"{CleanString(temp1.NameElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp1.NameElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.NameElement.ElementId = \"{temp1.NameElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.NameElement.ElementId = \"{CleanString(temp1.NameElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.Telecom != null)                                                                                          // GenerateFixCode.cs:134
                         {                                                                                                                   // GenerateFixCode.cs:135
@@ -1126,9 +1127,9 @@ namespace FhirKhit.SliceGen.CSApi
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp4.ValueElement = new FhirString();");                                            // GenerateFixCode.cs:184
                                     if (temp3.ValueElement.Value != null)                                                                   // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.ValueElement.Value = \"{temp3.ValueElement.Value}\";");                    // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.ValueElement.Value = \"{CleanString(temp3.ValueElement.Value)}\";");       // GenerateFixCode.cs:113
                                     if (temp3.ValueElement.ElementId != null)                                                               // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.ValueElement.ElementId = \"{temp3.ValueElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.ValueElement.ElementId = \"{CleanString(temp3.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp3.UseElement != null)                                                                               // GenerateFixCode.cs:122
                                     block.AppendCode($"temp4.UseElement = new Code<ContactPoint.ContactPointUse>(ContactPoint.ContactPointUse.{temp3.UseElement.Value});");// GenerateFixCode.cs:123
@@ -1138,7 +1139,7 @@ namespace FhirKhit.SliceGen.CSApi
                                     if (temp3.RankElement.Value.HasValue == true)                                                           // GenerateFixCode.cs:105
                                         block.AppendCode($"temp4.RankElement.Value = new Nullable<int>((int) {temp3.RankElement.Value.Value});");// GenerateFixCode.cs:106
                                     if (temp3.RankElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.RankElement.ElementId = \"{temp3.RankElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.RankElement.ElementId = \"{CleanString(temp3.RankElement.ElementId)}\";"); // GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp3.Period != null)                                                                                   // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
@@ -1147,35 +1148,35 @@ namespace FhirKhit.SliceGen.CSApi
                                     {                                                                                                       // GenerateFixCode.cs:183
                                         block.AppendCode($"temp4.Period.StartElement = new FhirDateTime();");                               // GenerateFixCode.cs:184
                                         if (temp3.Period.StartElement.Value != null)                                                        // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp4.Period.StartElement.Value = \"{temp3.Period.StartElement.Value}\";");  // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp4.Period.StartElement.Value = \"{CleanString(temp3.Period.StartElement.Value)}\";");// GenerateFixCode.cs:113
                                         if (temp3.Period.StartElement.ElementId != null)                                                    // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp4.Period.StartElement.ElementId = \"{temp3.Period.StartElement.ElementId}\";");// GenerateFixCode.cs:113
+                                            block.AppendCode($"temp4.Period.StartElement.ElementId = \"{CleanString(temp3.Period.StartElement.ElementId)}\";");// GenerateFixCode.cs:113
                                     }                                                                                                       // GenerateFixCode.cs:188
                                     if (temp3.Period.EndElement != null)                                                                    // GenerateFixCode.cs:182
                                     {                                                                                                       // GenerateFixCode.cs:183
                                         block.AppendCode($"temp4.Period.EndElement = new FhirDateTime();");                                 // GenerateFixCode.cs:184
                                         if (temp3.Period.EndElement.Value != null)                                                          // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp4.Period.EndElement.Value = \"{temp3.Period.EndElement.Value}\";");      // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp4.Period.EndElement.Value = \"{CleanString(temp3.Period.EndElement.Value)}\";");// GenerateFixCode.cs:113
                                         if (temp3.Period.EndElement.ElementId != null)                                                      // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp4.Period.EndElement.ElementId = \"{temp3.Period.EndElement.ElementId}\";");// GenerateFixCode.cs:113
+                                            block.AppendCode($"temp4.Period.EndElement.ElementId = \"{CleanString(temp3.Period.EndElement.ElementId)}\";");// GenerateFixCode.cs:113
                                     }                                                                                                       // GenerateFixCode.cs:188
                                     if (temp3.Period.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.Period.ElementId = \"{temp3.Period.ElementId}\";");                        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.Period.ElementId = \"{CleanString(temp3.Period.ElementId)}\";");           // GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp3.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                             // GenerateFixCode.cs:113
                                 block.AppendCode($"temp2.Telecom.Add(temp4);");                                                             // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
                         }                                                                                                                   // GenerateFixCode.cs:149
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Contact.Add(temp2);");                                                                      // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
                 }                                                                                                                           // GenerateFixCode.cs:149
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -1206,7 +1207,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.ValueElement.Value.HasValue == true)                                                                            // GenerateFixCode.cs:98
                         block.AppendCode($"temp.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ValueElement.Value.Value});");    // GenerateFixCode.cs:99
                     if (fix.ValueElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.ElementId = \"{fix.ValueElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.ElementId = \"{CleanString(fix.ValueElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ComparatorElement != null)                                                                                          // GenerateFixCode.cs:122
                     block.AppendCode($"temp.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -1214,28 +1215,28 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.UnitElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.UnitElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.Value = \"{fix.UnitElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.Value = \"{CleanString(fix.UnitElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.UnitElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.ElementId = \"{fix.UnitElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.ElementId = \"{CleanString(fix.UnitElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SystemElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SystemElement = new FhirUri();");                                                               // GenerateFixCode.cs:184
                     if (fix.SystemElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.Value = \"{fix.SystemElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.Value = \"{CleanString(fix.SystemElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.SystemElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.ElementId = \"{fix.SystemElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.ElementId = \"{CleanString(fix.SystemElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CodeElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CodeElement = new Code();");                                                                    // GenerateFixCode.cs:184
                     if (fix.CodeElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.Value = \"{fix.CodeElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.Value = \"{CleanString(fix.CodeElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.CodeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.ElementId = \"{fix.CodeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.ElementId = \"{CleanString(fix.CodeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -1270,9 +1271,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp2 = new Canonical();");                                                                   // GenerateFixCode.cs:140
                         if (temp1.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.Value = \"{temp1.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.Value = \"{CleanString(temp1.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.ProfileElement.Add(temp2);");                                                               // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -1285,9 +1286,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp4 = new FhirString();");                                                                  // GenerateFixCode.cs:140
                         if (temp3.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp4.Value = \"{temp3.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp4.Value = \"{CleanString(temp3.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp3.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.MustSupportElement.Add(temp4);");                                                           // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -1303,25 +1304,25 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.PathElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                             if (temp5.PathElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.PathElement.Value = \"{temp5.PathElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.PathElement.Value = \"{CleanString(temp5.PathElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp5.PathElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.PathElement.ElementId = \"{temp5.PathElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.PathElement.ElementId = \"{CleanString(temp5.PathElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.SearchParamElement != null)                                                                               // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.SearchParamElement = new FhirString();");                                              // GenerateFixCode.cs:184
                             if (temp5.SearchParamElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.SearchParamElement.Value = \"{temp5.SearchParamElement.Value}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.SearchParamElement.Value = \"{CleanString(temp5.SearchParamElement.Value)}\";");   // GenerateFixCode.cs:113
                             if (temp5.SearchParamElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.SearchParamElement.ElementId = \"{temp5.SearchParamElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.SearchParamElement.ElementId = \"{CleanString(temp5.SearchParamElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.ValueSetElement != null)                                                                                  // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.ValueSetElement = new Canonical();");                                                  // GenerateFixCode.cs:184
                             if (temp5.ValueSetElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.ValueSetElement.Value = \"{temp5.ValueSetElement.Value}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.ValueSetElement.Value = \"{CleanString(temp5.ValueSetElement.Value)}\";");         // GenerateFixCode.cs:113
                             if (temp5.ValueSetElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.ValueSetElement.ElementId = \"{temp5.ValueSetElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.ValueSetElement.ElementId = \"{CleanString(temp5.ValueSetElement.ElementId)}\";"); // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.Code != null)                                                                                             // GenerateFixCode.cs:134
                         {                                                                                                                   // GenerateFixCode.cs:135
@@ -1334,33 +1335,33 @@ namespace FhirKhit.SliceGen.CSApi
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.SystemElement = new FhirUri();");                                              // GenerateFixCode.cs:184
                                     if (temp7.SystemElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.SystemElement.Value = \"{temp7.SystemElement.Value}\";");                  // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.SystemElement.Value = \"{CleanString(temp7.SystemElement.Value)}\";");     // GenerateFixCode.cs:113
                                     if (temp7.SystemElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.SystemElement.ElementId = \"{temp7.SystemElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.SystemElement.ElementId = \"{CleanString(temp7.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.VersionElement != null)                                                                           // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.VersionElement = new FhirString();");                                          // GenerateFixCode.cs:184
                                     if (temp7.VersionElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.VersionElement.Value = \"{temp7.VersionElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.VersionElement.Value = \"{CleanString(temp7.VersionElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp7.VersionElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.VersionElement.ElementId = \"{temp7.VersionElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.VersionElement.ElementId = \"{CleanString(temp7.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.CodeElement != null)                                                                              // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.CodeElement = new Code();");                                                   // GenerateFixCode.cs:184
                                     if (temp7.CodeElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.CodeElement.Value = \"{temp7.CodeElement.Value}\";");                      // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.CodeElement.Value = \"{CleanString(temp7.CodeElement.Value)}\";");         // GenerateFixCode.cs:113
                                     if (temp7.CodeElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.CodeElement.ElementId = \"{temp7.CodeElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.CodeElement.ElementId = \"{CleanString(temp7.CodeElement.ElementId)}\";"); // GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.DisplayElement != null)                                                                           // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.DisplayElement = new FhirString();");                                          // GenerateFixCode.cs:184
                                     if (temp7.DisplayElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.DisplayElement.Value = \"{temp7.DisplayElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.DisplayElement.Value = \"{CleanString(temp7.DisplayElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp7.DisplayElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.DisplayElement.ElementId = \"{temp7.DisplayElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.DisplayElement.ElementId = \"{CleanString(temp7.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.UserSelectedElement != null)                                                                      // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
@@ -1373,16 +1374,16 @@ namespace FhirKhit.SliceGen.CSApi
                                             block.AppendCode($"temp8.UserSelectedElement.Value = false;");                                  // GenerateFixCode.cs:49
                                     }                                                                                                       // GenerateFixCode.cs:50
                                     if (temp7.UserSelectedElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.UserSelectedElement.ElementId = \"{temp7.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.UserSelectedElement.ElementId = \"{CleanString(temp7.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.ElementId = \"{temp7.ElementId}\";");                                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.ElementId = \"{CleanString(temp7.ElementId)}\";");                             // GenerateFixCode.cs:113
                                 block.AppendCode($"temp6.Code.Add(temp8);");                                                                // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
                         }                                                                                                                   // GenerateFixCode.cs:149
                         if (temp5.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.CodeFilter.Add(temp6);");                                                                   // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -1398,20 +1399,20 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp10.PathElement = new FhirString();");                                                    // GenerateFixCode.cs:184
                             if (temp9.PathElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp10.PathElement.Value = \"{temp9.PathElement.Value}\";");                             // GenerateFixCode.cs:113
+                                block.AppendCode($"temp10.PathElement.Value = \"{CleanString(temp9.PathElement.Value)}\";");                // GenerateFixCode.cs:113
                             if (temp9.PathElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp10.PathElement.ElementId = \"{temp9.PathElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                                block.AppendCode($"temp10.PathElement.ElementId = \"{CleanString(temp9.PathElement.ElementId)}\";");        // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp9.SearchParamElement != null)                                                                               // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp10.SearchParamElement = new FhirString();");                                             // GenerateFixCode.cs:184
                             if (temp9.SearchParamElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp10.SearchParamElement.Value = \"{temp9.SearchParamElement.Value}\";");               // GenerateFixCode.cs:113
+                                block.AppendCode($"temp10.SearchParamElement.Value = \"{CleanString(temp9.SearchParamElement.Value)}\";");  // GenerateFixCode.cs:113
                             if (temp9.SearchParamElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                block.AppendCode($"temp10.SearchParamElement.ElementId = \"{temp9.SearchParamElement.ElementId}\";");       // GenerateFixCode.cs:113
+                                block.AppendCode($"temp10.SearchParamElement.ElementId = \"{CleanString(temp9.SearchParamElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp9.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp10.ElementId = \"{temp9.ElementId}\";");                                                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp10.ElementId = \"{CleanString(temp9.ElementId)}\";");                                    // GenerateFixCode.cs:113
                         block.AppendCode($"temp.DateFilter.Add(temp10);");                                                                  // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -1422,7 +1423,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.LimitElement.Value.HasValue == true)                                                                            // GenerateFixCode.cs:105
                         block.AppendCode($"temp.LimitElement.Value = new Nullable<int>((int) {fix.LimitElement.Value.Value});");            // GenerateFixCode.cs:106
                     if (fix.LimitElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LimitElement.ElementId = \"{fix.LimitElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LimitElement.ElementId = \"{CleanString(fix.LimitElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Sort != null)                                                                                                       // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -1435,20 +1436,20 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp12.PathElement = new FhirString();");                                                    // GenerateFixCode.cs:184
                             if (temp11.PathElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                                block.AppendCode($"temp12.PathElement.Value = \"{temp11.PathElement.Value}\";");                            // GenerateFixCode.cs:113
+                                block.AppendCode($"temp12.PathElement.Value = \"{CleanString(temp11.PathElement.Value)}\";");               // GenerateFixCode.cs:113
                             if (temp11.PathElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                                block.AppendCode($"temp12.PathElement.ElementId = \"{temp11.PathElement.ElementId}\";");                    // GenerateFixCode.cs:113
+                                block.AppendCode($"temp12.PathElement.ElementId = \"{CleanString(temp11.PathElement.ElementId)}\";");       // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp11.DirectionElement != null)                                                                                // GenerateFixCode.cs:122
                             block.AppendCode($"temp12.DirectionElement = new Code<DataRequirement.SortDirection>(DataRequirement.SortDirection.{temp11.DirectionElement.Value});");// GenerateFixCode.cs:123
                         if (temp11.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp12.ElementId = \"{temp11.ElementId}\";");                                                // GenerateFixCode.cs:113
+                            block.AppendCode($"temp12.ElementId = \"{CleanString(temp11.ElementId)}\";");                                   // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Sort.Add(temp12);");                                                                        // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
                 }                                                                                                                           // GenerateFixCode.cs:149
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -1479,7 +1480,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.ValueElement.Value.HasValue == true)                                                                            // GenerateFixCode.cs:98
                         block.AppendCode($"temp.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ValueElement.Value.Value});");    // GenerateFixCode.cs:99
                     if (fix.ValueElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.ElementId = \"{fix.ValueElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.ElementId = \"{CleanString(fix.ValueElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ComparatorElement != null)                                                                                          // GenerateFixCode.cs:122
                     block.AppendCode($"temp.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -1487,28 +1488,28 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.UnitElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.UnitElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.Value = \"{fix.UnitElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.Value = \"{CleanString(fix.UnitElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.UnitElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.ElementId = \"{fix.UnitElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.ElementId = \"{CleanString(fix.UnitElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SystemElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SystemElement = new FhirUri();");                                                               // GenerateFixCode.cs:184
                     if (fix.SystemElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.Value = \"{fix.SystemElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.Value = \"{CleanString(fix.SystemElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.SystemElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.ElementId = \"{fix.SystemElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.ElementId = \"{CleanString(fix.SystemElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CodeElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CodeElement = new Code();");                                                                    // GenerateFixCode.cs:184
                     if (fix.CodeElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.Value = \"{fix.CodeElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.Value = \"{CleanString(fix.CodeElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.CodeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.ElementId = \"{fix.CodeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.ElementId = \"{CleanString(fix.CodeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -1539,15 +1540,15 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.SequenceElement.Value.HasValue == true)                                                                         // GenerateFixCode.cs:105
                         block.AppendCode($"temp.SequenceElement.Value = new Nullable<int>((int) {fix.SequenceElement.Value.Value});");      // GenerateFixCode.cs:106
                     if (fix.SequenceElement.ElementId != null)                                                                              // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SequenceElement.ElementId = \"{fix.SequenceElement.ElementId}\";");                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SequenceElement.ElementId = \"{CleanString(fix.SequenceElement.ElementId)}\";");            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.TextElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.TextElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.TextElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TextElement.Value = \"{fix.TextElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TextElement.Value = \"{CleanString(fix.TextElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.TextElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TextElement.ElementId = \"{fix.TextElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TextElement.ElementId = \"{CleanString(fix.TextElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.AdditionalInstruction != null)                                                                                      // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -1567,33 +1568,33 @@ namespace FhirKhit.SliceGen.CSApi
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp4.SystemElement = new FhirUri();");                                              // GenerateFixCode.cs:184
                                     if (temp3.SystemElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.SystemElement.Value = \"{temp3.SystemElement.Value}\";");                  // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.SystemElement.Value = \"{CleanString(temp3.SystemElement.Value)}\";");     // GenerateFixCode.cs:113
                                     if (temp3.SystemElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.SystemElement.ElementId = \"{temp3.SystemElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.SystemElement.ElementId = \"{CleanString(temp3.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp3.VersionElement != null)                                                                           // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp4.VersionElement = new FhirString();");                                          // GenerateFixCode.cs:184
                                     if (temp3.VersionElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.VersionElement.Value = \"{temp3.VersionElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.VersionElement.Value = \"{CleanString(temp3.VersionElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp3.VersionElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.VersionElement.ElementId = \"{temp3.VersionElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.VersionElement.ElementId = \"{CleanString(temp3.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp3.CodeElement != null)                                                                              // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp4.CodeElement = new Code();");                                                   // GenerateFixCode.cs:184
                                     if (temp3.CodeElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.CodeElement.Value = \"{temp3.CodeElement.Value}\";");                      // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.CodeElement.Value = \"{CleanString(temp3.CodeElement.Value)}\";");         // GenerateFixCode.cs:113
                                     if (temp3.CodeElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.CodeElement.ElementId = \"{temp3.CodeElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.CodeElement.ElementId = \"{CleanString(temp3.CodeElement.ElementId)}\";"); // GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp3.DisplayElement != null)                                                                           // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp4.DisplayElement = new FhirString();");                                          // GenerateFixCode.cs:184
                                     if (temp3.DisplayElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.DisplayElement.Value = \"{temp3.DisplayElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.DisplayElement.Value = \"{CleanString(temp3.DisplayElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp3.DisplayElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.DisplayElement.ElementId = \"{temp3.DisplayElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.DisplayElement.ElementId = \"{CleanString(temp3.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp3.UserSelectedElement != null)                                                                      // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
@@ -1606,10 +1607,10 @@ namespace FhirKhit.SliceGen.CSApi
                                             block.AppendCode($"temp4.UserSelectedElement.Value = false;");                                  // GenerateFixCode.cs:49
                                     }                                                                                                       // GenerateFixCode.cs:50
                                     if (temp3.UserSelectedElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{temp3.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                        block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{CleanString(temp3.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp3.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                             // GenerateFixCode.cs:113
                                 block.AppendCode($"temp2.Coding.Add(temp4);");                                                              // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -1618,12 +1619,12 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.TextElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                             if (temp1.TextElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.TextElement.Value = \"{temp1.TextElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.TextElement.Value = \"{CleanString(temp1.TextElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp1.TextElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.TextElement.ElementId = \"{temp1.TextElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.TextElement.ElementId = \"{CleanString(temp1.TextElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.AdditionalInstruction.Add(temp2);");                                                        // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -1632,9 +1633,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.PatientInstructionElement = new FhirString();");                                                // GenerateFixCode.cs:184
                     if (fix.PatientInstructionElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.PatientInstructionElement.Value = \"{fix.PatientInstructionElement.Value}\";");             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.PatientInstructionElement.Value = \"{CleanString(fix.PatientInstructionElement.Value)}\";");// GenerateFixCode.cs:113
                     if (fix.PatientInstructionElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.PatientInstructionElement.ElementId = \"{fix.PatientInstructionElement.ElementId}\";");     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.PatientInstructionElement.ElementId = \"{CleanString(fix.PatientInstructionElement.ElementId)}\";");// GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Timing != null)                                                                                                     // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -1647,9 +1648,9 @@ namespace FhirKhit.SliceGen.CSApi
                             block.OpenBrace();                                                                                              // GenerateFixCode.cs:139
                             block.AppendCode("var temp6 = new FhirDateTime();");                                                            // GenerateFixCode.cs:140
                             if (temp5.Value != null)                                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.Value = \"{temp5.Value}\";");                                                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.Value = \"{CleanString(temp5.Value)}\";");                                         // GenerateFixCode.cs:113
                             if (temp5.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Timing.EventElement.Add(temp6);");                                                      // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -1663,7 +1664,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.Timing.Repeat.CountElement.Value.HasValue == true)                                                      // GenerateFixCode.cs:105
                                 block.AppendCode($"temp.Timing.Repeat.CountElement.Value = new Nullable<int>((int) {fix.Timing.Repeat.CountElement.Value.Value});");// GenerateFixCode.cs:106
                             if (fix.Timing.Repeat.CountElement.ElementId != null)                                                           // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Repeat.CountElement.ElementId = \"{fix.Timing.Repeat.CountElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Repeat.CountElement.ElementId = \"{CleanString(fix.Timing.Repeat.CountElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Timing.Repeat.CountMaxElement != null)                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -1671,7 +1672,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.Timing.Repeat.CountMaxElement.Value.HasValue == true)                                                   // GenerateFixCode.cs:105
                                 block.AppendCode($"temp.Timing.Repeat.CountMaxElement.Value = new Nullable<int>((int) {fix.Timing.Repeat.CountMaxElement.Value.Value});");// GenerateFixCode.cs:106
                             if (fix.Timing.Repeat.CountMaxElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Repeat.CountMaxElement.ElementId = \"{fix.Timing.Repeat.CountMaxElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Repeat.CountMaxElement.ElementId = \"{CleanString(fix.Timing.Repeat.CountMaxElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Timing.Repeat.DurationElement != null)                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -1679,7 +1680,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.Timing.Repeat.DurationElement.Value.HasValue == true)                                                   // GenerateFixCode.cs:98
                                 block.AppendCode($"temp.Timing.Repeat.DurationElement.Value = new Nullable<decimal>((decimal) {fix.Timing.Repeat.DurationElement.Value.Value});");// GenerateFixCode.cs:99
                             if (fix.Timing.Repeat.DurationElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Repeat.DurationElement.ElementId = \"{fix.Timing.Repeat.DurationElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Repeat.DurationElement.ElementId = \"{CleanString(fix.Timing.Repeat.DurationElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Timing.Repeat.DurationMaxElement != null)                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -1687,7 +1688,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.Timing.Repeat.DurationMaxElement.Value.HasValue == true)                                                // GenerateFixCode.cs:98
                                 block.AppendCode($"temp.Timing.Repeat.DurationMaxElement.Value = new Nullable<decimal>((decimal) {fix.Timing.Repeat.DurationMaxElement.Value.Value});");// GenerateFixCode.cs:99
                             if (fix.Timing.Repeat.DurationMaxElement.ElementId != null)                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Repeat.DurationMaxElement.ElementId = \"{fix.Timing.Repeat.DurationMaxElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Repeat.DurationMaxElement.ElementId = \"{CleanString(fix.Timing.Repeat.DurationMaxElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Timing.Repeat.DurationUnitElement != null)                                                                  // GenerateFixCode.cs:122
                             block.AppendCode($"temp.Timing.Repeat.DurationUnitElement = new Code<Timing.UnitsOfTime>(Timing.UnitsOfTime.{fix.Timing.Repeat.DurationUnitElement.Value});");// GenerateFixCode.cs:123
@@ -1697,7 +1698,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.Timing.Repeat.FrequencyElement.Value.HasValue == true)                                                  // GenerateFixCode.cs:105
                                 block.AppendCode($"temp.Timing.Repeat.FrequencyElement.Value = new Nullable<int>((int) {fix.Timing.Repeat.FrequencyElement.Value.Value});");// GenerateFixCode.cs:106
                             if (fix.Timing.Repeat.FrequencyElement.ElementId != null)                                                       // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Repeat.FrequencyElement.ElementId = \"{fix.Timing.Repeat.FrequencyElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Repeat.FrequencyElement.ElementId = \"{CleanString(fix.Timing.Repeat.FrequencyElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Timing.Repeat.FrequencyMaxElement != null)                                                                  // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -1705,7 +1706,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.Timing.Repeat.FrequencyMaxElement.Value.HasValue == true)                                               // GenerateFixCode.cs:105
                                 block.AppendCode($"temp.Timing.Repeat.FrequencyMaxElement.Value = new Nullable<int>((int) {fix.Timing.Repeat.FrequencyMaxElement.Value.Value});");// GenerateFixCode.cs:106
                             if (fix.Timing.Repeat.FrequencyMaxElement.ElementId != null)                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Repeat.FrequencyMaxElement.ElementId = \"{fix.Timing.Repeat.FrequencyMaxElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Repeat.FrequencyMaxElement.ElementId = \"{CleanString(fix.Timing.Repeat.FrequencyMaxElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Timing.Repeat.PeriodElement != null)                                                                        // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -1713,7 +1714,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.Timing.Repeat.PeriodElement.Value.HasValue == true)                                                     // GenerateFixCode.cs:98
                                 block.AppendCode($"temp.Timing.Repeat.PeriodElement.Value = new Nullable<decimal>((decimal) {fix.Timing.Repeat.PeriodElement.Value.Value});");// GenerateFixCode.cs:99
                             if (fix.Timing.Repeat.PeriodElement.ElementId != null)                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Repeat.PeriodElement.ElementId = \"{fix.Timing.Repeat.PeriodElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Repeat.PeriodElement.ElementId = \"{CleanString(fix.Timing.Repeat.PeriodElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Timing.Repeat.PeriodMaxElement != null)                                                                     // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -1721,7 +1722,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.Timing.Repeat.PeriodMaxElement.Value.HasValue == true)                                                  // GenerateFixCode.cs:98
                                 block.AppendCode($"temp.Timing.Repeat.PeriodMaxElement.Value = new Nullable<decimal>((decimal) {fix.Timing.Repeat.PeriodMaxElement.Value.Value});");// GenerateFixCode.cs:99
                             if (fix.Timing.Repeat.PeriodMaxElement.ElementId != null)                                                       // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Repeat.PeriodMaxElement.ElementId = \"{fix.Timing.Repeat.PeriodMaxElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Repeat.PeriodMaxElement.ElementId = \"{CleanString(fix.Timing.Repeat.PeriodMaxElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Timing.Repeat.PeriodUnitElement != null)                                                                    // GenerateFixCode.cs:122
                             block.AppendCode($"temp.Timing.Repeat.PeriodUnitElement = new Code<Timing.UnitsOfTime>(Timing.UnitsOfTime.{fix.Timing.Repeat.PeriodUnitElement.Value});");// GenerateFixCode.cs:123
@@ -1735,7 +1736,7 @@ namespace FhirKhit.SliceGen.CSApi
                                 if (temp7.Value.HasValue == true)                                                                           // GenerateFixCode.cs:159
                                     block.AppendCode($"temp8.Value = DaysOfWeek.{temp7.Value.Value};");                                     // GenerateFixCode.cs:160
                                 if (temp7.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.ElementId = \"{temp7.ElementId}\";");                                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.ElementId = \"{CleanString(temp7.ElementId)}\";");                             // GenerateFixCode.cs:113
                                 block.AppendCode($"temp.Timing.Repeat.DayOfWeekElement.Add(temp8);");                                       // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -1748,9 +1749,9 @@ namespace FhirKhit.SliceGen.CSApi
                                 block.OpenBrace();                                                                                          // GenerateFixCode.cs:139
                                 block.AppendCode("var temp10 = new Time();");                                                               // GenerateFixCode.cs:140
                                 if (temp9.Value != null)                                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.Value = \"{temp9.Value}\";");                                                 // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.Value = \"{CleanString(temp9.Value)}\";");                                    // GenerateFixCode.cs:113
                                 if (temp9.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.ElementId = \"{temp9.ElementId}\";");                                         // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.ElementId = \"{CleanString(temp9.ElementId)}\";");                            // GenerateFixCode.cs:113
                                 block.AppendCode($"temp.Timing.Repeat.TimeOfDayElement.Add(temp10);");                                      // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -1765,7 +1766,7 @@ namespace FhirKhit.SliceGen.CSApi
                                 if (temp11.Value.HasValue == true)                                                                          // GenerateFixCode.cs:159
                                     block.AppendCode($"temp12.Value = Timing.EventTiming.{temp11.Value.Value};");                           // GenerateFixCode.cs:160
                                 if (temp11.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp12.ElementId = \"{temp11.ElementId}\";");                                        // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp12.ElementId = \"{CleanString(temp11.ElementId)}\";");                           // GenerateFixCode.cs:113
                                 block.AppendCode($"temp.Timing.Repeat.WhenElement.Add(temp12);");                                           // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -1776,10 +1777,10 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.Timing.Repeat.OffsetElement.Value.HasValue == true)                                                     // GenerateFixCode.cs:105
                                 block.AppendCode($"temp.Timing.Repeat.OffsetElement.Value = new Nullable<int>((int) {fix.Timing.Repeat.OffsetElement.Value.Value});");// GenerateFixCode.cs:106
                             if (fix.Timing.Repeat.OffsetElement.ElementId != null)                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Repeat.OffsetElement.ElementId = \"{fix.Timing.Repeat.OffsetElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Repeat.OffsetElement.ElementId = \"{CleanString(fix.Timing.Repeat.OffsetElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Timing.Repeat.ElementId != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Timing.Repeat.ElementId = \"{fix.Timing.Repeat.ElementId}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Timing.Repeat.ElementId = \"{CleanString(fix.Timing.Repeat.ElementId)}\";");            // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Timing.Code != null)                                                                                            // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -1795,33 +1796,33 @@ namespace FhirKhit.SliceGen.CSApi
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp14.SystemElement = new FhirUri();");                                             // GenerateFixCode.cs:184
                                     if (temp13.SystemElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.SystemElement.Value = \"{temp13.SystemElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.SystemElement.Value = \"{CleanString(temp13.SystemElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp13.SystemElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.SystemElement.ElementId = \"{temp13.SystemElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.SystemElement.ElementId = \"{CleanString(temp13.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp13.VersionElement != null)                                                                          // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp14.VersionElement = new FhirString();");                                         // GenerateFixCode.cs:184
                                     if (temp13.VersionElement.Value != null)                                                                // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.VersionElement.Value = \"{temp13.VersionElement.Value}\";");              // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.VersionElement.Value = \"{CleanString(temp13.VersionElement.Value)}\";"); // GenerateFixCode.cs:113
                                     if (temp13.VersionElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.VersionElement.ElementId = \"{temp13.VersionElement.ElementId}\";");      // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.VersionElement.ElementId = \"{CleanString(temp13.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp13.CodeElement != null)                                                                             // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp14.CodeElement = new Code();");                                                  // GenerateFixCode.cs:184
                                     if (temp13.CodeElement.Value != null)                                                                   // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.CodeElement.Value = \"{temp13.CodeElement.Value}\";");                    // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.CodeElement.Value = \"{CleanString(temp13.CodeElement.Value)}\";");       // GenerateFixCode.cs:113
                                     if (temp13.CodeElement.ElementId != null)                                                               // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.CodeElement.ElementId = \"{temp13.CodeElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.CodeElement.ElementId = \"{CleanString(temp13.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp13.DisplayElement != null)                                                                          // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp14.DisplayElement = new FhirString();");                                         // GenerateFixCode.cs:184
                                     if (temp13.DisplayElement.Value != null)                                                                // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.DisplayElement.Value = \"{temp13.DisplayElement.Value}\";");              // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.DisplayElement.Value = \"{CleanString(temp13.DisplayElement.Value)}\";"); // GenerateFixCode.cs:113
                                     if (temp13.DisplayElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.DisplayElement.ElementId = \"{temp13.DisplayElement.ElementId}\";");      // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.DisplayElement.ElementId = \"{CleanString(temp13.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp13.UserSelectedElement != null)                                                                     // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
@@ -1834,10 +1835,10 @@ namespace FhirKhit.SliceGen.CSApi
                                             block.AppendCode($"temp14.UserSelectedElement.Value = false;");                                 // GenerateFixCode.cs:49
                                     }                                                                                                       // GenerateFixCode.cs:50
                                     if (temp13.UserSelectedElement.ElementId != null)                                                       // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.UserSelectedElement.ElementId = \"{temp13.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.UserSelectedElement.ElementId = \"{CleanString(temp13.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp13.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp14.ElementId = \"{temp13.ElementId}\";");                                        // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp14.ElementId = \"{CleanString(temp13.ElementId)}\";");                           // GenerateFixCode.cs:113
                                 block.AppendCode($"temp.Timing.Code.Coding.Add(temp14);");                                                  // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -1846,15 +1847,15 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.Timing.Code.TextElement = new FhirString();");                                          // GenerateFixCode.cs:184
                             if (fix.Timing.Code.TextElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Code.TextElement.Value = \"{fix.Timing.Code.TextElement.Value}\";");         // GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Code.TextElement.Value = \"{CleanString(fix.Timing.Code.TextElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.Timing.Code.TextElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Timing.Code.TextElement.ElementId = \"{fix.Timing.Code.TextElement.ElementId}\";"); // GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Timing.Code.TextElement.ElementId = \"{CleanString(fix.Timing.Code.TextElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Timing.Code.ElementId != null)                                                                              // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Timing.Code.ElementId = \"{fix.Timing.Code.ElementId}\";");                             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Timing.Code.ElementId = \"{CleanString(fix.Timing.Code.ElementId)}\";");                // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Timing.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Timing.ElementId = \"{fix.Timing.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Timing.ElementId = \"{CleanString(fix.Timing.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Site != null)                                                                                                       // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -1870,33 +1871,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp16.SystemElement = new FhirUri();");                                                 // GenerateFixCode.cs:184
                                 if (temp15.SystemElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp16.SystemElement.Value = \"{temp15.SystemElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp16.SystemElement.Value = \"{CleanString(temp15.SystemElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp15.SystemElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp16.SystemElement.ElementId = \"{temp15.SystemElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp16.SystemElement.ElementId = \"{CleanString(temp15.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp15.VersionElement != null)                                                                              // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp16.VersionElement = new FhirString();");                                             // GenerateFixCode.cs:184
                                 if (temp15.VersionElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp16.VersionElement.Value = \"{temp15.VersionElement.Value}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp16.VersionElement.Value = \"{CleanString(temp15.VersionElement.Value)}\";");     // GenerateFixCode.cs:113
                                 if (temp15.VersionElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp16.VersionElement.ElementId = \"{temp15.VersionElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp16.VersionElement.ElementId = \"{CleanString(temp15.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp15.CodeElement != null)                                                                                 // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp16.CodeElement = new Code();");                                                      // GenerateFixCode.cs:184
                                 if (temp15.CodeElement.Value != null)                                                                       // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp16.CodeElement.Value = \"{temp15.CodeElement.Value}\";");                        // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp16.CodeElement.Value = \"{CleanString(temp15.CodeElement.Value)}\";");           // GenerateFixCode.cs:113
                                 if (temp15.CodeElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp16.CodeElement.ElementId = \"{temp15.CodeElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp16.CodeElement.ElementId = \"{CleanString(temp15.CodeElement.ElementId)}\";");   // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp15.DisplayElement != null)                                                                              // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp16.DisplayElement = new FhirString();");                                             // GenerateFixCode.cs:184
                                 if (temp15.DisplayElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp16.DisplayElement.Value = \"{temp15.DisplayElement.Value}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp16.DisplayElement.Value = \"{CleanString(temp15.DisplayElement.Value)}\";");     // GenerateFixCode.cs:113
                                 if (temp15.DisplayElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp16.DisplayElement.ElementId = \"{temp15.DisplayElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp16.DisplayElement.ElementId = \"{CleanString(temp15.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp15.UserSelectedElement != null)                                                                         // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -1909,10 +1910,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp16.UserSelectedElement.Value = false;");                                     // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp15.UserSelectedElement.ElementId != null)                                                           // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp16.UserSelectedElement.ElementId = \"{temp15.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                    block.AppendCode($"temp16.UserSelectedElement.ElementId = \"{CleanString(temp15.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp15.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                                block.AppendCode($"temp16.ElementId = \"{temp15.ElementId}\";");                                            // GenerateFixCode.cs:113
+                                block.AppendCode($"temp16.ElementId = \"{CleanString(temp15.ElementId)}\";");                               // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Site.Coding.Add(temp16);");                                                             // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -1921,12 +1922,12 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Site.TextElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                         if (fix.Site.TextElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Site.TextElement.Value = \"{fix.Site.TextElement.Value}\";");                           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Site.TextElement.Value = \"{CleanString(fix.Site.TextElement.Value)}\";");              // GenerateFixCode.cs:113
                         if (fix.Site.TextElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Site.TextElement.ElementId = \"{fix.Site.TextElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Site.TextElement.ElementId = \"{CleanString(fix.Site.TextElement.ElementId)}\";");      // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Site.ElementId != null)                                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Site.ElementId = \"{fix.Site.ElementId}\";");                                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Site.ElementId = \"{CleanString(fix.Site.ElementId)}\";");                                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Route != null)                                                                                                      // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -1942,33 +1943,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp18.SystemElement = new FhirUri();");                                                 // GenerateFixCode.cs:184
                                 if (temp17.SystemElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp18.SystemElement.Value = \"{temp17.SystemElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp18.SystemElement.Value = \"{CleanString(temp17.SystemElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp17.SystemElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp18.SystemElement.ElementId = \"{temp17.SystemElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp18.SystemElement.ElementId = \"{CleanString(temp17.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp17.VersionElement != null)                                                                              // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp18.VersionElement = new FhirString();");                                             // GenerateFixCode.cs:184
                                 if (temp17.VersionElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp18.VersionElement.Value = \"{temp17.VersionElement.Value}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp18.VersionElement.Value = \"{CleanString(temp17.VersionElement.Value)}\";");     // GenerateFixCode.cs:113
                                 if (temp17.VersionElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp18.VersionElement.ElementId = \"{temp17.VersionElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp18.VersionElement.ElementId = \"{CleanString(temp17.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp17.CodeElement != null)                                                                                 // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp18.CodeElement = new Code();");                                                      // GenerateFixCode.cs:184
                                 if (temp17.CodeElement.Value != null)                                                                       // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp18.CodeElement.Value = \"{temp17.CodeElement.Value}\";");                        // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp18.CodeElement.Value = \"{CleanString(temp17.CodeElement.Value)}\";");           // GenerateFixCode.cs:113
                                 if (temp17.CodeElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp18.CodeElement.ElementId = \"{temp17.CodeElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp18.CodeElement.ElementId = \"{CleanString(temp17.CodeElement.ElementId)}\";");   // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp17.DisplayElement != null)                                                                              // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp18.DisplayElement = new FhirString();");                                             // GenerateFixCode.cs:184
                                 if (temp17.DisplayElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp18.DisplayElement.Value = \"{temp17.DisplayElement.Value}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp18.DisplayElement.Value = \"{CleanString(temp17.DisplayElement.Value)}\";");     // GenerateFixCode.cs:113
                                 if (temp17.DisplayElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp18.DisplayElement.ElementId = \"{temp17.DisplayElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp18.DisplayElement.ElementId = \"{CleanString(temp17.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp17.UserSelectedElement != null)                                                                         // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -1981,10 +1982,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp18.UserSelectedElement.Value = false;");                                     // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp17.UserSelectedElement.ElementId != null)                                                           // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp18.UserSelectedElement.ElementId = \"{temp17.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                    block.AppendCode($"temp18.UserSelectedElement.ElementId = \"{CleanString(temp17.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp17.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                                block.AppendCode($"temp18.ElementId = \"{temp17.ElementId}\";");                                            // GenerateFixCode.cs:113
+                                block.AppendCode($"temp18.ElementId = \"{CleanString(temp17.ElementId)}\";");                               // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Route.Coding.Add(temp18);");                                                            // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -1993,12 +1994,12 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Route.TextElement = new FhirString();");                                                    // GenerateFixCode.cs:184
                         if (fix.Route.TextElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Route.TextElement.Value = \"{fix.Route.TextElement.Value}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Route.TextElement.Value = \"{CleanString(fix.Route.TextElement.Value)}\";");            // GenerateFixCode.cs:113
                         if (fix.Route.TextElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Route.TextElement.ElementId = \"{fix.Route.TextElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Route.TextElement.ElementId = \"{CleanString(fix.Route.TextElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Route.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Route.ElementId = \"{fix.Route.ElementId}\";");                                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Route.ElementId = \"{CleanString(fix.Route.ElementId)}\";");                                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Method != null)                                                                                                     // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -2014,33 +2015,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp20.SystemElement = new FhirUri();");                                                 // GenerateFixCode.cs:184
                                 if (temp19.SystemElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp20.SystemElement.Value = \"{temp19.SystemElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp20.SystemElement.Value = \"{CleanString(temp19.SystemElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp19.SystemElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp20.SystemElement.ElementId = \"{temp19.SystemElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp20.SystemElement.ElementId = \"{CleanString(temp19.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp19.VersionElement != null)                                                                              // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp20.VersionElement = new FhirString();");                                             // GenerateFixCode.cs:184
                                 if (temp19.VersionElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp20.VersionElement.Value = \"{temp19.VersionElement.Value}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp20.VersionElement.Value = \"{CleanString(temp19.VersionElement.Value)}\";");     // GenerateFixCode.cs:113
                                 if (temp19.VersionElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp20.VersionElement.ElementId = \"{temp19.VersionElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp20.VersionElement.ElementId = \"{CleanString(temp19.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp19.CodeElement != null)                                                                                 // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp20.CodeElement = new Code();");                                                      // GenerateFixCode.cs:184
                                 if (temp19.CodeElement.Value != null)                                                                       // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp20.CodeElement.Value = \"{temp19.CodeElement.Value}\";");                        // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp20.CodeElement.Value = \"{CleanString(temp19.CodeElement.Value)}\";");           // GenerateFixCode.cs:113
                                 if (temp19.CodeElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp20.CodeElement.ElementId = \"{temp19.CodeElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp20.CodeElement.ElementId = \"{CleanString(temp19.CodeElement.ElementId)}\";");   // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp19.DisplayElement != null)                                                                              // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp20.DisplayElement = new FhirString();");                                             // GenerateFixCode.cs:184
                                 if (temp19.DisplayElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp20.DisplayElement.Value = \"{temp19.DisplayElement.Value}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp20.DisplayElement.Value = \"{CleanString(temp19.DisplayElement.Value)}\";");     // GenerateFixCode.cs:113
                                 if (temp19.DisplayElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp20.DisplayElement.ElementId = \"{temp19.DisplayElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp20.DisplayElement.ElementId = \"{CleanString(temp19.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp19.UserSelectedElement != null)                                                                         // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -2053,10 +2054,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp20.UserSelectedElement.Value = false;");                                     // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp19.UserSelectedElement.ElementId != null)                                                           // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp20.UserSelectedElement.ElementId = \"{temp19.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                    block.AppendCode($"temp20.UserSelectedElement.ElementId = \"{CleanString(temp19.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp19.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                                block.AppendCode($"temp20.ElementId = \"{temp19.ElementId}\";");                                            // GenerateFixCode.cs:113
+                                block.AppendCode($"temp20.ElementId = \"{CleanString(temp19.ElementId)}\";");                               // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Method.Coding.Add(temp20);");                                                           // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -2065,12 +2066,12 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Method.TextElement = new FhirString();");                                                   // GenerateFixCode.cs:184
                         if (fix.Method.TextElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Method.TextElement.Value = \"{fix.Method.TextElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Method.TextElement.Value = \"{CleanString(fix.Method.TextElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Method.TextElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Method.TextElement.ElementId = \"{fix.Method.TextElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Method.TextElement.ElementId = \"{CleanString(fix.Method.TextElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Method.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Method.ElementId = \"{fix.Method.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Method.ElementId = \"{CleanString(fix.Method.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DoseAndRate != null)                                                                                                // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -2093,33 +2094,33 @@ namespace FhirKhit.SliceGen.CSApi
                                     {                                                                                                       // GenerateFixCode.cs:183
                                         block.AppendCode($"temp24.SystemElement = new FhirUri();");                                         // GenerateFixCode.cs:184
                                         if (temp23.SystemElement.Value != null)                                                             // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp24.SystemElement.Value = \"{temp23.SystemElement.Value}\";");            // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp24.SystemElement.Value = \"{CleanString(temp23.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                                         if (temp23.SystemElement.ElementId != null)                                                         // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp24.SystemElement.ElementId = \"{temp23.SystemElement.ElementId}\";");    // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp24.SystemElement.ElementId = \"{CleanString(temp23.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                                     }                                                                                                       // GenerateFixCode.cs:188
                                     if (temp23.VersionElement != null)                                                                      // GenerateFixCode.cs:182
                                     {                                                                                                       // GenerateFixCode.cs:183
                                         block.AppendCode($"temp24.VersionElement = new FhirString();");                                     // GenerateFixCode.cs:184
                                         if (temp23.VersionElement.Value != null)                                                            // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp24.VersionElement.Value = \"{temp23.VersionElement.Value}\";");          // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp24.VersionElement.Value = \"{CleanString(temp23.VersionElement.Value)}\";");// GenerateFixCode.cs:113
                                         if (temp23.VersionElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp24.VersionElement.ElementId = \"{temp23.VersionElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp24.VersionElement.ElementId = \"{CleanString(temp23.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                                     }                                                                                                       // GenerateFixCode.cs:188
                                     if (temp23.CodeElement != null)                                                                         // GenerateFixCode.cs:182
                                     {                                                                                                       // GenerateFixCode.cs:183
                                         block.AppendCode($"temp24.CodeElement = new Code();");                                              // GenerateFixCode.cs:184
                                         if (temp23.CodeElement.Value != null)                                                               // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp24.CodeElement.Value = \"{temp23.CodeElement.Value}\";");                // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp24.CodeElement.Value = \"{CleanString(temp23.CodeElement.Value)}\";");   // GenerateFixCode.cs:113
                                         if (temp23.CodeElement.ElementId != null)                                                           // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp24.CodeElement.ElementId = \"{temp23.CodeElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp24.CodeElement.ElementId = \"{CleanString(temp23.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                                     }                                                                                                       // GenerateFixCode.cs:188
                                     if (temp23.DisplayElement != null)                                                                      // GenerateFixCode.cs:182
                                     {                                                                                                       // GenerateFixCode.cs:183
                                         block.AppendCode($"temp24.DisplayElement = new FhirString();");                                     // GenerateFixCode.cs:184
                                         if (temp23.DisplayElement.Value != null)                                                            // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp24.DisplayElement.Value = \"{temp23.DisplayElement.Value}\";");          // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp24.DisplayElement.Value = \"{CleanString(temp23.DisplayElement.Value)}\";");// GenerateFixCode.cs:113
                                         if (temp23.DisplayElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp24.DisplayElement.ElementId = \"{temp23.DisplayElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp24.DisplayElement.ElementId = \"{CleanString(temp23.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                                     }                                                                                                       // GenerateFixCode.cs:188
                                     if (temp23.UserSelectedElement != null)                                                                 // GenerateFixCode.cs:182
                                     {                                                                                                       // GenerateFixCode.cs:183
@@ -2132,10 +2133,10 @@ namespace FhirKhit.SliceGen.CSApi
                                                 block.AppendCode($"temp24.UserSelectedElement.Value = false;");                             // GenerateFixCode.cs:49
                                         }                                                                                                   // GenerateFixCode.cs:50
                                         if (temp23.UserSelectedElement.ElementId != null)                                                   // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp24.UserSelectedElement.ElementId = \"{temp23.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                            block.AppendCode($"temp24.UserSelectedElement.ElementId = \"{CleanString(temp23.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                                     }                                                                                                       // GenerateFixCode.cs:188
                                     if (temp23.ElementId != null)                                                                           // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp24.ElementId = \"{temp23.ElementId}\";");                                    // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp24.ElementId = \"{CleanString(temp23.ElementId)}\";");                       // GenerateFixCode.cs:113
                                     block.AppendCode($"temp22.Type.Coding.Add(temp24);");                                                   // GenerateFixCode.cs:146
                                     block.CloseBrace();                                                                                     // GenerateFixCode.cs:147
                                 }                                                                                                           // GenerateFixCode.cs:148
@@ -2144,15 +2145,15 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp22.Type.TextElement = new FhirString();");                                           // GenerateFixCode.cs:184
                                 if (temp21.Type.TextElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp22.Type.TextElement.Value = \"{temp21.Type.TextElement.Value}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp22.Type.TextElement.Value = \"{CleanString(temp21.Type.TextElement.Value)}\";"); // GenerateFixCode.cs:113
                                 if (temp21.Type.TextElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp22.Type.TextElement.ElementId = \"{temp21.Type.TextElement.ElementId}\";");      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp22.Type.TextElement.ElementId = \"{CleanString(temp21.Type.TextElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp21.Type.ElementId != null)                                                                              // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.Type.ElementId = \"{temp21.Type.ElementId}\";");                                  // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.Type.ElementId = \"{CleanString(temp21.Type.ElementId)}\";");                     // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp21.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp22.ElementId = \"{temp21.ElementId}\";");                                                // GenerateFixCode.cs:113
+                            block.AppendCode($"temp22.ElementId = \"{CleanString(temp21.ElementId)}\";");                                   // GenerateFixCode.cs:113
                         block.AppendCode($"temp.DoseAndRate.Add(temp22);");                                                                 // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -2169,7 +2170,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.MaxDosePerPeriod.Numerator.ValueElement.Value.HasValue == true)                                         // GenerateFixCode.cs:98
                                 block.AppendCode($"temp.MaxDosePerPeriod.Numerator.ValueElement.Value = new Nullable<decimal>((decimal) {fix.MaxDosePerPeriod.Numerator.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                             if (fix.MaxDosePerPeriod.Numerator.ValueElement.ElementId != null)                                              // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.ValueElement.ElementId = \"{fix.MaxDosePerPeriod.Numerator.ValueElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.ValueElement.ElementId = \"{CleanString(fix.MaxDosePerPeriod.Numerator.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.MaxDosePerPeriod.Numerator.ComparatorElement != null)                                                       // GenerateFixCode.cs:122
                             block.AppendCode($"temp.MaxDosePerPeriod.Numerator.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.MaxDosePerPeriod.Numerator.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -2177,28 +2178,28 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.MaxDosePerPeriod.Numerator.UnitElement = new FhirString();");                           // GenerateFixCode.cs:184
                             if (fix.MaxDosePerPeriod.Numerator.UnitElement.Value != null)                                                   // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.UnitElement.Value = \"{fix.MaxDosePerPeriod.Numerator.UnitElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.UnitElement.Value = \"{CleanString(fix.MaxDosePerPeriod.Numerator.UnitElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.MaxDosePerPeriod.Numerator.UnitElement.ElementId != null)                                               // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.UnitElement.ElementId = \"{fix.MaxDosePerPeriod.Numerator.UnitElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.UnitElement.ElementId = \"{CleanString(fix.MaxDosePerPeriod.Numerator.UnitElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.MaxDosePerPeriod.Numerator.SystemElement != null)                                                           // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.MaxDosePerPeriod.Numerator.SystemElement = new FhirUri();");                            // GenerateFixCode.cs:184
                             if (fix.MaxDosePerPeriod.Numerator.SystemElement.Value != null)                                                 // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.SystemElement.Value = \"{fix.MaxDosePerPeriod.Numerator.SystemElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.SystemElement.Value = \"{CleanString(fix.MaxDosePerPeriod.Numerator.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.MaxDosePerPeriod.Numerator.SystemElement.ElementId != null)                                             // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.SystemElement.ElementId = \"{fix.MaxDosePerPeriod.Numerator.SystemElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.SystemElement.ElementId = \"{CleanString(fix.MaxDosePerPeriod.Numerator.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.MaxDosePerPeriod.Numerator.CodeElement != null)                                                             // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.MaxDosePerPeriod.Numerator.CodeElement = new Code();");                                 // GenerateFixCode.cs:184
                             if (fix.MaxDosePerPeriod.Numerator.CodeElement.Value != null)                                                   // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.CodeElement.Value = \"{fix.MaxDosePerPeriod.Numerator.CodeElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.CodeElement.Value = \"{CleanString(fix.MaxDosePerPeriod.Numerator.CodeElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.MaxDosePerPeriod.Numerator.CodeElement.ElementId != null)                                               // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.CodeElement.ElementId = \"{fix.MaxDosePerPeriod.Numerator.CodeElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Numerator.CodeElement.ElementId = \"{CleanString(fix.MaxDosePerPeriod.Numerator.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.MaxDosePerPeriod.Numerator.ElementId != null)                                                               // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerPeriod.Numerator.ElementId = \"{fix.MaxDosePerPeriod.Numerator.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerPeriod.Numerator.ElementId = \"{CleanString(fix.MaxDosePerPeriod.Numerator.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.MaxDosePerPeriod.Denominator != null)                                                                           // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -2209,7 +2210,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.MaxDosePerPeriod.Denominator.ValueElement.Value.HasValue == true)                                       // GenerateFixCode.cs:98
                                 block.AppendCode($"temp.MaxDosePerPeriod.Denominator.ValueElement.Value = new Nullable<decimal>((decimal) {fix.MaxDosePerPeriod.Denominator.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                             if (fix.MaxDosePerPeriod.Denominator.ValueElement.ElementId != null)                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.ValueElement.ElementId = \"{fix.MaxDosePerPeriod.Denominator.ValueElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.ValueElement.ElementId = \"{CleanString(fix.MaxDosePerPeriod.Denominator.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.MaxDosePerPeriod.Denominator.ComparatorElement != null)                                                     // GenerateFixCode.cs:122
                             block.AppendCode($"temp.MaxDosePerPeriod.Denominator.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.MaxDosePerPeriod.Denominator.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -2217,31 +2218,31 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.MaxDosePerPeriod.Denominator.UnitElement = new FhirString();");                         // GenerateFixCode.cs:184
                             if (fix.MaxDosePerPeriod.Denominator.UnitElement.Value != null)                                                 // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.UnitElement.Value = \"{fix.MaxDosePerPeriod.Denominator.UnitElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.UnitElement.Value = \"{CleanString(fix.MaxDosePerPeriod.Denominator.UnitElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.MaxDosePerPeriod.Denominator.UnitElement.ElementId != null)                                             // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.UnitElement.ElementId = \"{fix.MaxDosePerPeriod.Denominator.UnitElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.UnitElement.ElementId = \"{CleanString(fix.MaxDosePerPeriod.Denominator.UnitElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.MaxDosePerPeriod.Denominator.SystemElement != null)                                                         // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.MaxDosePerPeriod.Denominator.SystemElement = new FhirUri();");                          // GenerateFixCode.cs:184
                             if (fix.MaxDosePerPeriod.Denominator.SystemElement.Value != null)                                               // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.SystemElement.Value = \"{fix.MaxDosePerPeriod.Denominator.SystemElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.SystemElement.Value = \"{CleanString(fix.MaxDosePerPeriod.Denominator.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.MaxDosePerPeriod.Denominator.SystemElement.ElementId != null)                                           // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.SystemElement.ElementId = \"{fix.MaxDosePerPeriod.Denominator.SystemElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.SystemElement.ElementId = \"{CleanString(fix.MaxDosePerPeriod.Denominator.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.MaxDosePerPeriod.Denominator.CodeElement != null)                                                           // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.MaxDosePerPeriod.Denominator.CodeElement = new Code();");                               // GenerateFixCode.cs:184
                             if (fix.MaxDosePerPeriod.Denominator.CodeElement.Value != null)                                                 // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.CodeElement.Value = \"{fix.MaxDosePerPeriod.Denominator.CodeElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.CodeElement.Value = \"{CleanString(fix.MaxDosePerPeriod.Denominator.CodeElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.MaxDosePerPeriod.Denominator.CodeElement.ElementId != null)                                             // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.CodeElement.ElementId = \"{fix.MaxDosePerPeriod.Denominator.CodeElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.MaxDosePerPeriod.Denominator.CodeElement.ElementId = \"{CleanString(fix.MaxDosePerPeriod.Denominator.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.MaxDosePerPeriod.Denominator.ElementId != null)                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerPeriod.Denominator.ElementId = \"{fix.MaxDosePerPeriod.Denominator.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerPeriod.Denominator.ElementId = \"{CleanString(fix.MaxDosePerPeriod.Denominator.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.MaxDosePerPeriod.ElementId != null)                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MaxDosePerPeriod.ElementId = \"{fix.MaxDosePerPeriod.ElementId}\";");                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MaxDosePerPeriod.ElementId = \"{CleanString(fix.MaxDosePerPeriod.ElementId)}\";");          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.MaxDosePerAdministration != null)                                                                                   // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -2252,7 +2253,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.MaxDosePerAdministration.ValueElement.Value.HasValue == true)                                               // GenerateFixCode.cs:98
                             block.AppendCode($"temp.MaxDosePerAdministration.ValueElement.Value = new Nullable<decimal>((decimal) {fix.MaxDosePerAdministration.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.MaxDosePerAdministration.ValueElement.ElementId != null)                                                    // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerAdministration.ValueElement.ElementId = \"{fix.MaxDosePerAdministration.ValueElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerAdministration.ValueElement.ElementId = \"{CleanString(fix.MaxDosePerAdministration.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.MaxDosePerAdministration.ComparatorElement != null)                                                             // GenerateFixCode.cs:122
                         block.AppendCode($"temp.MaxDosePerAdministration.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.MaxDosePerAdministration.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -2260,28 +2261,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.MaxDosePerAdministration.UnitElement = new FhirString();");                                 // GenerateFixCode.cs:184
                         if (fix.MaxDosePerAdministration.UnitElement.Value != null)                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerAdministration.UnitElement.Value = \"{fix.MaxDosePerAdministration.UnitElement.Value}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerAdministration.UnitElement.Value = \"{CleanString(fix.MaxDosePerAdministration.UnitElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.MaxDosePerAdministration.UnitElement.ElementId != null)                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerAdministration.UnitElement.ElementId = \"{fix.MaxDosePerAdministration.UnitElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerAdministration.UnitElement.ElementId = \"{CleanString(fix.MaxDosePerAdministration.UnitElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.MaxDosePerAdministration.SystemElement != null)                                                                 // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.MaxDosePerAdministration.SystemElement = new FhirUri();");                                  // GenerateFixCode.cs:184
                         if (fix.MaxDosePerAdministration.SystemElement.Value != null)                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerAdministration.SystemElement.Value = \"{fix.MaxDosePerAdministration.SystemElement.Value}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerAdministration.SystemElement.Value = \"{CleanString(fix.MaxDosePerAdministration.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.MaxDosePerAdministration.SystemElement.ElementId != null)                                                   // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerAdministration.SystemElement.ElementId = \"{fix.MaxDosePerAdministration.SystemElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerAdministration.SystemElement.ElementId = \"{CleanString(fix.MaxDosePerAdministration.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.MaxDosePerAdministration.CodeElement != null)                                                                   // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.MaxDosePerAdministration.CodeElement = new Code();");                                       // GenerateFixCode.cs:184
                         if (fix.MaxDosePerAdministration.CodeElement.Value != null)                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerAdministration.CodeElement.Value = \"{fix.MaxDosePerAdministration.CodeElement.Value}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerAdministration.CodeElement.Value = \"{CleanString(fix.MaxDosePerAdministration.CodeElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.MaxDosePerAdministration.CodeElement.ElementId != null)                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerAdministration.CodeElement.ElementId = \"{fix.MaxDosePerAdministration.CodeElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerAdministration.CodeElement.ElementId = \"{CleanString(fix.MaxDosePerAdministration.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.MaxDosePerAdministration.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MaxDosePerAdministration.ElementId = \"{fix.MaxDosePerAdministration.ElementId}\";");       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MaxDosePerAdministration.ElementId = \"{CleanString(fix.MaxDosePerAdministration.ElementId)}\";");// GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.MaxDosePerLifetime != null)                                                                                         // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -2292,7 +2293,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.MaxDosePerLifetime.ValueElement.Value.HasValue == true)                                                     // GenerateFixCode.cs:98
                             block.AppendCode($"temp.MaxDosePerLifetime.ValueElement.Value = new Nullable<decimal>((decimal) {fix.MaxDosePerLifetime.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.MaxDosePerLifetime.ValueElement.ElementId != null)                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerLifetime.ValueElement.ElementId = \"{fix.MaxDosePerLifetime.ValueElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerLifetime.ValueElement.ElementId = \"{CleanString(fix.MaxDosePerLifetime.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.MaxDosePerLifetime.ComparatorElement != null)                                                                   // GenerateFixCode.cs:122
                         block.AppendCode($"temp.MaxDosePerLifetime.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.MaxDosePerLifetime.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -2300,31 +2301,31 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.MaxDosePerLifetime.UnitElement = new FhirString();");                                       // GenerateFixCode.cs:184
                         if (fix.MaxDosePerLifetime.UnitElement.Value != null)                                                               // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerLifetime.UnitElement.Value = \"{fix.MaxDosePerLifetime.UnitElement.Value}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerLifetime.UnitElement.Value = \"{CleanString(fix.MaxDosePerLifetime.UnitElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.MaxDosePerLifetime.UnitElement.ElementId != null)                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerLifetime.UnitElement.ElementId = \"{fix.MaxDosePerLifetime.UnitElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerLifetime.UnitElement.ElementId = \"{CleanString(fix.MaxDosePerLifetime.UnitElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.MaxDosePerLifetime.SystemElement != null)                                                                       // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.MaxDosePerLifetime.SystemElement = new FhirUri();");                                        // GenerateFixCode.cs:184
                         if (fix.MaxDosePerLifetime.SystemElement.Value != null)                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerLifetime.SystemElement.Value = \"{fix.MaxDosePerLifetime.SystemElement.Value}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerLifetime.SystemElement.Value = \"{CleanString(fix.MaxDosePerLifetime.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.MaxDosePerLifetime.SystemElement.ElementId != null)                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerLifetime.SystemElement.ElementId = \"{fix.MaxDosePerLifetime.SystemElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerLifetime.SystemElement.ElementId = \"{CleanString(fix.MaxDosePerLifetime.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.MaxDosePerLifetime.CodeElement != null)                                                                         // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.MaxDosePerLifetime.CodeElement = new Code();");                                             // GenerateFixCode.cs:184
                         if (fix.MaxDosePerLifetime.CodeElement.Value != null)                                                               // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerLifetime.CodeElement.Value = \"{fix.MaxDosePerLifetime.CodeElement.Value}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerLifetime.CodeElement.Value = \"{CleanString(fix.MaxDosePerLifetime.CodeElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.MaxDosePerLifetime.CodeElement.ElementId != null)                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.MaxDosePerLifetime.CodeElement.ElementId = \"{fix.MaxDosePerLifetime.CodeElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.MaxDosePerLifetime.CodeElement.ElementId = \"{CleanString(fix.MaxDosePerLifetime.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.MaxDosePerLifetime.ElementId != null)                                                                           // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MaxDosePerLifetime.ElementId = \"{fix.MaxDosePerLifetime.ElementId}\";");                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MaxDosePerLifetime.ElementId = \"{CleanString(fix.MaxDosePerLifetime.ElementId)}\";");      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -2355,7 +2356,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.ValueElement.Value.HasValue == true)                                                                            // GenerateFixCode.cs:98
                         block.AppendCode($"temp.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ValueElement.Value.Value});");    // GenerateFixCode.cs:99
                     if (fix.ValueElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.ElementId = \"{fix.ValueElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.ElementId = \"{CleanString(fix.ValueElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ComparatorElement != null)                                                                                          // GenerateFixCode.cs:122
                     block.AppendCode($"temp.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -2363,28 +2364,28 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.UnitElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.UnitElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.Value = \"{fix.UnitElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.Value = \"{CleanString(fix.UnitElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.UnitElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.ElementId = \"{fix.UnitElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.ElementId = \"{CleanString(fix.UnitElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SystemElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SystemElement = new FhirUri();");                                                               // GenerateFixCode.cs:184
                     if (fix.SystemElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.Value = \"{fix.SystemElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.Value = \"{CleanString(fix.SystemElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.SystemElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.ElementId = \"{fix.SystemElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.ElementId = \"{CleanString(fix.SystemElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CodeElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CodeElement = new Code();");                                                                    // GenerateFixCode.cs:184
                     if (fix.CodeElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.Value = \"{fix.CodeElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.Value = \"{CleanString(fix.CodeElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.CodeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.ElementId = \"{fix.CodeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.ElementId = \"{CleanString(fix.CodeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -2413,9 +2414,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.PathElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.PathElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.PathElement.Value = \"{fix.PathElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.PathElement.Value = \"{CleanString(fix.PathElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.PathElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.PathElement.ElementId = \"{fix.PathElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.PathElement.ElementId = \"{CleanString(fix.PathElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.RepresentationElement != null)                                                                                      // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -2427,7 +2428,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (temp1.Value.HasValue == true)                                                                                   // GenerateFixCode.cs:159
                             block.AppendCode($"temp2.Value = ElementDefinition.PropertyRepresentation.{temp1.Value.Value};");               // GenerateFixCode.cs:160
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.RepresentationElement.Add(temp2);");                                                        // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -2436,9 +2437,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SliceNameElement = new FhirString();");                                                         // GenerateFixCode.cs:184
                     if (fix.SliceNameElement.Value != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SliceNameElement.Value = \"{fix.SliceNameElement.Value}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SliceNameElement.Value = \"{CleanString(fix.SliceNameElement.Value)}\";");                  // GenerateFixCode.cs:113
                     if (fix.SliceNameElement.ElementId != null)                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SliceNameElement.ElementId = \"{fix.SliceNameElement.ElementId}\";");                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SliceNameElement.ElementId = \"{CleanString(fix.SliceNameElement.ElementId)}\";");          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SliceIsConstrainingElement != null)                                                                                 // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -2451,15 +2452,15 @@ namespace FhirKhit.SliceGen.CSApi
                             block.AppendCode($"temp.SliceIsConstrainingElement.Value = false;");                                            // GenerateFixCode.cs:49
                     }                                                                                                                       // GenerateFixCode.cs:50
                     if (fix.SliceIsConstrainingElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SliceIsConstrainingElement.ElementId = \"{fix.SliceIsConstrainingElement.ElementId}\";");   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SliceIsConstrainingElement.ElementId = \"{CleanString(fix.SliceIsConstrainingElement.ElementId)}\";");// GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.LabelElement != null)                                                                                               // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.LabelElement = new FhirString();");                                                             // GenerateFixCode.cs:184
                     if (fix.LabelElement.Value != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LabelElement.Value = \"{fix.LabelElement.Value}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LabelElement.Value = \"{CleanString(fix.LabelElement.Value)}\";");                          // GenerateFixCode.cs:113
                     if (fix.LabelElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LabelElement.ElementId = \"{fix.LabelElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LabelElement.ElementId = \"{CleanString(fix.LabelElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Code != null)                                                                                                       // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -2472,33 +2473,33 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp4.SystemElement = new FhirUri();");                                                      // GenerateFixCode.cs:184
                             if (temp3.SystemElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.SystemElement.Value = \"{temp3.SystemElement.Value}\";");                          // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.SystemElement.Value = \"{CleanString(temp3.SystemElement.Value)}\";");             // GenerateFixCode.cs:113
                             if (temp3.SystemElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.SystemElement.ElementId = \"{temp3.SystemElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.SystemElement.ElementId = \"{CleanString(temp3.SystemElement.ElementId)}\";");     // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp3.VersionElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp4.VersionElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                             if (temp3.VersionElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.VersionElement.Value = \"{temp3.VersionElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.VersionElement.Value = \"{CleanString(temp3.VersionElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp3.VersionElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.VersionElement.ElementId = \"{temp3.VersionElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.VersionElement.ElementId = \"{CleanString(temp3.VersionElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp3.CodeElement != null)                                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp4.CodeElement = new Code();");                                                           // GenerateFixCode.cs:184
                             if (temp3.CodeElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.CodeElement.Value = \"{temp3.CodeElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.CodeElement.Value = \"{CleanString(temp3.CodeElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp3.CodeElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.CodeElement.ElementId = \"{temp3.CodeElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.CodeElement.ElementId = \"{CleanString(temp3.CodeElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp3.DisplayElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp4.DisplayElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                             if (temp3.DisplayElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.DisplayElement.Value = \"{temp3.DisplayElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.DisplayElement.Value = \"{CleanString(temp3.DisplayElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp3.DisplayElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.DisplayElement.ElementId = \"{temp3.DisplayElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.DisplayElement.ElementId = \"{CleanString(temp3.DisplayElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp3.UserSelectedElement != null)                                                                              // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -2511,10 +2512,10 @@ namespace FhirKhit.SliceGen.CSApi
                                     block.AppendCode($"temp4.UserSelectedElement.Value = false;");                                          // GenerateFixCode.cs:49
                             }                                                                                                               // GenerateFixCode.cs:50
                             if (temp3.UserSelectedElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{temp3.UserSelectedElement.ElementId}\";");      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{CleanString(temp3.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp3.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Code.Add(temp4);");                                                                         // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -2535,12 +2536,12 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp6.PathElement = new FhirString();");                                                 // GenerateFixCode.cs:184
                                 if (temp5.PathElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.PathElement.Value = \"{temp5.PathElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.PathElement.Value = \"{CleanString(temp5.PathElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp5.PathElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.PathElement.ElementId = \"{temp5.PathElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.PathElement.ElementId = \"{CleanString(temp5.PathElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Slicing.Discriminator.Add(temp6);");                                                    // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -2549,9 +2550,9 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Slicing.DescriptionElement = new FhirString();");                                           // GenerateFixCode.cs:184
                         if (fix.Slicing.DescriptionElement.Value != null)                                                                   // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Slicing.DescriptionElement.Value = \"{fix.Slicing.DescriptionElement.Value}\";");       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Slicing.DescriptionElement.Value = \"{CleanString(fix.Slicing.DescriptionElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Slicing.DescriptionElement.ElementId != null)                                                               // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Slicing.DescriptionElement.ElementId = \"{fix.Slicing.DescriptionElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Slicing.DescriptionElement.ElementId = \"{CleanString(fix.Slicing.DescriptionElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Slicing.OrderedElement != null)                                                                                 // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -2564,44 +2565,44 @@ namespace FhirKhit.SliceGen.CSApi
                                 block.AppendCode($"temp.Slicing.OrderedElement.Value = false;");                                            // GenerateFixCode.cs:49
                         }                                                                                                                   // GenerateFixCode.cs:50
                         if (fix.Slicing.OrderedElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Slicing.OrderedElement.ElementId = \"{fix.Slicing.OrderedElement.ElementId}\";");       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Slicing.OrderedElement.ElementId = \"{CleanString(fix.Slicing.OrderedElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Slicing.RulesElement != null)                                                                                   // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Slicing.RulesElement = new Code<ElementDefinition.SlicingRules>(ElementDefinition.SlicingRules.{fix.Slicing.RulesElement.Value});");// GenerateFixCode.cs:123
                     if (fix.Slicing.ElementId != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Slicing.ElementId = \"{fix.Slicing.ElementId}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Slicing.ElementId = \"{CleanString(fix.Slicing.ElementId)}\";");                            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ShortElement != null)                                                                                               // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ShortElement = new FhirString();");                                                             // GenerateFixCode.cs:184
                     if (fix.ShortElement.Value != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ShortElement.Value = \"{fix.ShortElement.Value}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ShortElement.Value = \"{CleanString(fix.ShortElement.Value)}\";");                          // GenerateFixCode.cs:113
                     if (fix.ShortElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ShortElement.ElementId = \"{fix.ShortElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ShortElement.ElementId = \"{CleanString(fix.ShortElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Definition != null)                                                                                                 // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.Definition = new Markdown();");                                                                 // GenerateFixCode.cs:184
                     if (fix.Definition.Value != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Definition.Value = \"{fix.Definition.Value}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Definition.Value = \"{CleanString(fix.Definition.Value)}\";");                              // GenerateFixCode.cs:113
                     if (fix.Definition.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Definition.ElementId = \"{fix.Definition.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Definition.ElementId = \"{CleanString(fix.Definition.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Comment != null)                                                                                                    // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.Comment = new Markdown();");                                                                    // GenerateFixCode.cs:184
                     if (fix.Comment.Value != null)                                                                                          // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Comment.Value = \"{fix.Comment.Value}\";");                                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Comment.Value = \"{CleanString(fix.Comment.Value)}\";");                                    // GenerateFixCode.cs:113
                     if (fix.Comment.ElementId != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Comment.ElementId = \"{fix.Comment.ElementId}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Comment.ElementId = \"{CleanString(fix.Comment.ElementId)}\";");                            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Requirements != null)                                                                                               // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.Requirements = new Markdown();");                                                               // GenerateFixCode.cs:184
                     if (fix.Requirements.Value != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Requirements.Value = \"{fix.Requirements.Value}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Requirements.Value = \"{CleanString(fix.Requirements.Value)}\";");                          // GenerateFixCode.cs:113
                     if (fix.Requirements.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Requirements.ElementId = \"{fix.Requirements.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Requirements.ElementId = \"{CleanString(fix.Requirements.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.AliasElement != null)                                                                                               // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -2611,9 +2612,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp8 = new FhirString();");                                                                  // GenerateFixCode.cs:140
                         if (temp7.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp8.Value = \"{temp7.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp8.Value = \"{CleanString(temp7.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp7.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp8.ElementId = \"{temp7.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp8.ElementId = \"{CleanString(temp7.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.AliasElement.Add(temp8);");                                                                 // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -2624,15 +2625,15 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.MinElement.Value.HasValue == true)                                                                              // GenerateFixCode.cs:105
                         block.AppendCode($"temp.MinElement.Value = new Nullable<int>((int) {fix.MinElement.Value.Value});");                // GenerateFixCode.cs:106
                     if (fix.MinElement.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MinElement.ElementId = \"{fix.MinElement.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MinElement.ElementId = \"{CleanString(fix.MinElement.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.MaxElement != null)                                                                                                 // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.MaxElement = new FhirString();");                                                               // GenerateFixCode.cs:184
                     if (fix.MaxElement.Value != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MaxElement.Value = \"{fix.MaxElement.Value}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MaxElement.Value = \"{CleanString(fix.MaxElement.Value)}\";");                              // GenerateFixCode.cs:113
                     if (fix.MaxElement.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MaxElement.ElementId = \"{fix.MaxElement.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MaxElement.ElementId = \"{CleanString(fix.MaxElement.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Base != null)                                                                                                       // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -2641,9 +2642,9 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Base.PathElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                         if (fix.Base.PathElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Base.PathElement.Value = \"{fix.Base.PathElement.Value}\";");                           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Base.PathElement.Value = \"{CleanString(fix.Base.PathElement.Value)}\";");              // GenerateFixCode.cs:113
                         if (fix.Base.PathElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Base.PathElement.ElementId = \"{fix.Base.PathElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Base.PathElement.ElementId = \"{CleanString(fix.Base.PathElement.ElementId)}\";");      // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Base.MinElement != null)                                                                                        // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -2651,26 +2652,26 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Base.MinElement.Value.HasValue == true)                                                                     // GenerateFixCode.cs:105
                             block.AppendCode($"temp.Base.MinElement.Value = new Nullable<int>((int) {fix.Base.MinElement.Value.Value});");  // GenerateFixCode.cs:106
                         if (fix.Base.MinElement.ElementId != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Base.MinElement.ElementId = \"{fix.Base.MinElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Base.MinElement.ElementId = \"{CleanString(fix.Base.MinElement.ElementId)}\";");        // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Base.MaxElement != null)                                                                                        // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Base.MaxElement = new FhirString();");                                                      // GenerateFixCode.cs:184
                         if (fix.Base.MaxElement.Value != null)                                                                              // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Base.MaxElement.Value = \"{fix.Base.MaxElement.Value}\";");                             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Base.MaxElement.Value = \"{CleanString(fix.Base.MaxElement.Value)}\";");                // GenerateFixCode.cs:113
                         if (fix.Base.MaxElement.ElementId != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Base.MaxElement.ElementId = \"{fix.Base.MaxElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Base.MaxElement.ElementId = \"{CleanString(fix.Base.MaxElement.ElementId)}\";");        // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Base.ElementId != null)                                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Base.ElementId = \"{fix.Base.ElementId}\";");                                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Base.ElementId = \"{CleanString(fix.Base.ElementId)}\";");                                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ContentReferenceElement != null)                                                                                    // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ContentReferenceElement = new FhirUri();");                                                     // GenerateFixCode.cs:184
                     if (fix.ContentReferenceElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ContentReferenceElement.Value = \"{fix.ContentReferenceElement.Value}\";");                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ContentReferenceElement.Value = \"{CleanString(fix.ContentReferenceElement.Value)}\";");    // GenerateFixCode.cs:113
                     if (fix.ContentReferenceElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ContentReferenceElement.ElementId = \"{fix.ContentReferenceElement.ElementId}\";");         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ContentReferenceElement.ElementId = \"{CleanString(fix.ContentReferenceElement.ElementId)}\";");// GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Type != null)                                                                                                       // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -2683,9 +2684,9 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp10.CodeElement = new FhirUri();");                                                       // GenerateFixCode.cs:184
                             if (temp9.CodeElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp10.CodeElement.Value = \"{temp9.CodeElement.Value}\";");                             // GenerateFixCode.cs:113
+                                block.AppendCode($"temp10.CodeElement.Value = \"{CleanString(temp9.CodeElement.Value)}\";");                // GenerateFixCode.cs:113
                             if (temp9.CodeElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp10.CodeElement.ElementId = \"{temp9.CodeElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                                block.AppendCode($"temp10.CodeElement.ElementId = \"{CleanString(temp9.CodeElement.ElementId)}\";");        // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp9.ProfileElement != null)                                                                                   // GenerateFixCode.cs:134
                         {                                                                                                                   // GenerateFixCode.cs:135
@@ -2695,9 +2696,9 @@ namespace FhirKhit.SliceGen.CSApi
                                 block.OpenBrace();                                                                                          // GenerateFixCode.cs:139
                                 block.AppendCode("var temp12 = new Canonical();");                                                          // GenerateFixCode.cs:140
                                 if (temp11.Value != null)                                                                                   // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp12.Value = \"{temp11.Value}\";");                                                // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp12.Value = \"{CleanString(temp11.Value)}\";");                                   // GenerateFixCode.cs:113
                                 if (temp11.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp12.ElementId = \"{temp11.ElementId}\";");                                        // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp12.ElementId = \"{CleanString(temp11.ElementId)}\";");                           // GenerateFixCode.cs:113
                                 block.AppendCode($"temp10.ProfileElement.Add(temp12);");                                                    // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -2710,9 +2711,9 @@ namespace FhirKhit.SliceGen.CSApi
                                 block.OpenBrace();                                                                                          // GenerateFixCode.cs:139
                                 block.AppendCode("var temp14 = new Canonical();");                                                          // GenerateFixCode.cs:140
                                 if (temp13.Value != null)                                                                                   // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp14.Value = \"{temp13.Value}\";");                                                // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp14.Value = \"{CleanString(temp13.Value)}\";");                                   // GenerateFixCode.cs:113
                                 if (temp13.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp14.ElementId = \"{temp13.ElementId}\";");                                        // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp14.ElementId = \"{CleanString(temp13.ElementId)}\";");                           // GenerateFixCode.cs:113
                                 block.AppendCode($"temp10.TargetProfileElement.Add(temp14);");                                              // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -2727,7 +2728,7 @@ namespace FhirKhit.SliceGen.CSApi
                                 if (temp15.Value.HasValue == true)                                                                          // GenerateFixCode.cs:159
                                     block.AppendCode($"temp16.Value = ElementDefinition.AggregationMode.{temp15.Value.Value};");            // GenerateFixCode.cs:160
                                 if (temp15.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp16.ElementId = \"{temp15.ElementId}\";");                                        // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp16.ElementId = \"{CleanString(temp15.ElementId)}\";");                           // GenerateFixCode.cs:113
                                 block.AppendCode($"temp10.AggregationElement.Add(temp16);");                                                // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -2735,7 +2736,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (temp9.VersioningElement != null)                                                                                // GenerateFixCode.cs:122
                             block.AppendCode($"temp10.VersioningElement = new Code<ElementDefinition.ReferenceVersionRules>(ElementDefinition.ReferenceVersionRules.{temp9.VersioningElement.Value});");// GenerateFixCode.cs:123
                         if (temp9.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp10.ElementId = \"{temp9.ElementId}\";");                                                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp10.ElementId = \"{CleanString(temp9.ElementId)}\";");                                    // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Type.Add(temp10);");                                                                        // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -2744,17 +2745,17 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.MeaningWhenMissing = new Markdown();");                                                         // GenerateFixCode.cs:184
                     if (fix.MeaningWhenMissing.Value != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MeaningWhenMissing.Value = \"{fix.MeaningWhenMissing.Value}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MeaningWhenMissing.Value = \"{CleanString(fix.MeaningWhenMissing.Value)}\";");              // GenerateFixCode.cs:113
                     if (fix.MeaningWhenMissing.ElementId != null)                                                                           // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MeaningWhenMissing.ElementId = \"{fix.MeaningWhenMissing.ElementId}\";");                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MeaningWhenMissing.ElementId = \"{CleanString(fix.MeaningWhenMissing.ElementId)}\";");      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.OrderMeaningElement != null)                                                                                        // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.OrderMeaningElement = new FhirString();");                                                      // GenerateFixCode.cs:184
                     if (fix.OrderMeaningElement.Value != null)                                                                              // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.OrderMeaningElement.Value = \"{fix.OrderMeaningElement.Value}\";");                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.OrderMeaningElement.Value = \"{CleanString(fix.OrderMeaningElement.Value)}\";");            // GenerateFixCode.cs:113
                     if (fix.OrderMeaningElement.ElementId != null)                                                                          // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.OrderMeaningElement.ElementId = \"{fix.OrderMeaningElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.OrderMeaningElement.ElementId = \"{CleanString(fix.OrderMeaningElement.ElementId)}\";");    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Example != null)                                                                                                    // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -2767,12 +2768,12 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp18.LabelElement = new FhirString();");                                                   // GenerateFixCode.cs:184
                             if (temp17.LabelElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp18.LabelElement.Value = \"{temp17.LabelElement.Value}\";");                          // GenerateFixCode.cs:113
+                                block.AppendCode($"temp18.LabelElement.Value = \"{CleanString(temp17.LabelElement.Value)}\";");             // GenerateFixCode.cs:113
                             if (temp17.LabelElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                                block.AppendCode($"temp18.LabelElement.ElementId = \"{temp17.LabelElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                block.AppendCode($"temp18.LabelElement.ElementId = \"{CleanString(temp17.LabelElement.ElementId)}\";");     // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp17.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp18.ElementId = \"{temp17.ElementId}\";");                                                // GenerateFixCode.cs:113
+                            block.AppendCode($"temp18.ElementId = \"{CleanString(temp17.ElementId)}\";");                                   // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Example.Add(temp18);");                                                                     // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -2783,7 +2784,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.MaxLengthElement.Value.HasValue == true)                                                                        // GenerateFixCode.cs:105
                         block.AppendCode($"temp.MaxLengthElement.Value = new Nullable<int>((int) {fix.MaxLengthElement.Value.Value});");    // GenerateFixCode.cs:106
                     if (fix.MaxLengthElement.ElementId != null)                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MaxLengthElement.ElementId = \"{fix.MaxLengthElement.ElementId}\";");                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MaxLengthElement.ElementId = \"{CleanString(fix.MaxLengthElement.ElementId)}\";");          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ConditionElement != null)                                                                                           // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -2793,9 +2794,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp20 = new Id();");                                                                         // GenerateFixCode.cs:140
                         if (temp19.Value != null)                                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp20.Value = \"{temp19.Value}\";");                                                        // GenerateFixCode.cs:113
+                            block.AppendCode($"temp20.Value = \"{CleanString(temp19.Value)}\";");                                           // GenerateFixCode.cs:113
                         if (temp19.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp20.ElementId = \"{temp19.ElementId}\";");                                                // GenerateFixCode.cs:113
+                            block.AppendCode($"temp20.ElementId = \"{CleanString(temp19.ElementId)}\";");                                   // GenerateFixCode.cs:113
                         block.AppendCode($"temp.ConditionElement.Add(temp20);");                                                            // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -2811,17 +2812,17 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp22.KeyElement = new Id();");                                                             // GenerateFixCode.cs:184
                             if (temp21.KeyElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.KeyElement.Value = \"{temp21.KeyElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.KeyElement.Value = \"{CleanString(temp21.KeyElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp21.KeyElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.KeyElement.ElementId = \"{temp21.KeyElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.KeyElement.ElementId = \"{CleanString(temp21.KeyElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp21.RequirementsElement != null)                                                                             // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp22.RequirementsElement = new FhirString();");                                            // GenerateFixCode.cs:184
                             if (temp21.RequirementsElement.Value != null)                                                                   // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.RequirementsElement.Value = \"{temp21.RequirementsElement.Value}\";");            // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.RequirementsElement.Value = \"{CleanString(temp21.RequirementsElement.Value)}\";");// GenerateFixCode.cs:113
                             if (temp21.RequirementsElement.ElementId != null)                                                               // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.RequirementsElement.ElementId = \"{temp21.RequirementsElement.ElementId}\";");    // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.RequirementsElement.ElementId = \"{CleanString(temp21.RequirementsElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp21.SeverityElement != null)                                                                                 // GenerateFixCode.cs:122
                             block.AppendCode($"temp22.SeverityElement = new Code<ElementDefinition.ConstraintSeverity>(ElementDefinition.ConstraintSeverity.{temp21.SeverityElement.Value});");// GenerateFixCode.cs:123
@@ -2829,36 +2830,36 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp22.HumanElement = new FhirString();");                                                   // GenerateFixCode.cs:184
                             if (temp21.HumanElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.HumanElement.Value = \"{temp21.HumanElement.Value}\";");                          // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.HumanElement.Value = \"{CleanString(temp21.HumanElement.Value)}\";");             // GenerateFixCode.cs:113
                             if (temp21.HumanElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.HumanElement.ElementId = \"{temp21.HumanElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.HumanElement.ElementId = \"{CleanString(temp21.HumanElement.ElementId)}\";");     // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp21.ExpressionElement != null)                                                                               // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp22.ExpressionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                             if (temp21.ExpressionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.ExpressionElement.Value = \"{temp21.ExpressionElement.Value}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.ExpressionElement.Value = \"{CleanString(temp21.ExpressionElement.Value)}\";");   // GenerateFixCode.cs:113
                             if (temp21.ExpressionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.ExpressionElement.ElementId = \"{temp21.ExpressionElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.ExpressionElement.ElementId = \"{CleanString(temp21.ExpressionElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp21.XpathElement != null)                                                                                    // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp22.XpathElement = new FhirString();");                                                   // GenerateFixCode.cs:184
                             if (temp21.XpathElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.XpathElement.Value = \"{temp21.XpathElement.Value}\";");                          // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.XpathElement.Value = \"{CleanString(temp21.XpathElement.Value)}\";");             // GenerateFixCode.cs:113
                             if (temp21.XpathElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.XpathElement.ElementId = \"{temp21.XpathElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.XpathElement.ElementId = \"{CleanString(temp21.XpathElement.ElementId)}\";");     // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp21.SourceElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp22.SourceElement = new Canonical();");                                                   // GenerateFixCode.cs:184
                             if (temp21.SourceElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.SourceElement.Value = \"{temp21.SourceElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.SourceElement.Value = \"{CleanString(temp21.SourceElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp21.SourceElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp22.SourceElement.ElementId = \"{temp21.SourceElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp22.SourceElement.ElementId = \"{CleanString(temp21.SourceElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp21.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp22.ElementId = \"{temp21.ElementId}\";");                                                // GenerateFixCode.cs:113
+                            block.AppendCode($"temp22.ElementId = \"{CleanString(temp21.ElementId)}\";");                                   // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Constraint.Add(temp22);");                                                                  // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -2874,7 +2875,7 @@ namespace FhirKhit.SliceGen.CSApi
                             block.AppendCode($"temp.MustSupportElement.Value = false;");                                                    // GenerateFixCode.cs:49
                     }                                                                                                                       // GenerateFixCode.cs:50
                     if (fix.MustSupportElement.ElementId != null)                                                                           // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MustSupportElement.ElementId = \"{fix.MustSupportElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MustSupportElement.ElementId = \"{CleanString(fix.MustSupportElement.ElementId)}\";");      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.IsModifierElement != null)                                                                                          // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -2887,15 +2888,15 @@ namespace FhirKhit.SliceGen.CSApi
                             block.AppendCode($"temp.IsModifierElement.Value = false;");                                                     // GenerateFixCode.cs:49
                     }                                                                                                                       // GenerateFixCode.cs:50
                     if (fix.IsModifierElement.ElementId != null)                                                                            // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.IsModifierElement.ElementId = \"{fix.IsModifierElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.IsModifierElement.ElementId = \"{CleanString(fix.IsModifierElement.ElementId)}\";");        // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.IsModifierReasonElement != null)                                                                                    // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.IsModifierReasonElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                     if (fix.IsModifierReasonElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.IsModifierReasonElement.Value = \"{fix.IsModifierReasonElement.Value}\";");                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.IsModifierReasonElement.Value = \"{CleanString(fix.IsModifierReasonElement.Value)}\";");    // GenerateFixCode.cs:113
                     if (fix.IsModifierReasonElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.IsModifierReasonElement.ElementId = \"{fix.IsModifierReasonElement.ElementId}\";");         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.IsModifierReasonElement.ElementId = \"{CleanString(fix.IsModifierReasonElement.ElementId)}\";");// GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.IsSummaryElement != null)                                                                                           // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -2908,7 +2909,7 @@ namespace FhirKhit.SliceGen.CSApi
                             block.AppendCode($"temp.IsSummaryElement.Value = false;");                                                      // GenerateFixCode.cs:49
                     }                                                                                                                       // GenerateFixCode.cs:50
                     if (fix.IsSummaryElement.ElementId != null)                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.IsSummaryElement.ElementId = \"{fix.IsSummaryElement.ElementId}\";");                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.IsSummaryElement.ElementId = \"{CleanString(fix.IsSummaryElement.ElementId)}\";");          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Binding != null)                                                                                                    // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -2919,20 +2920,20 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Binding.DescriptionElement = new FhirString();");                                           // GenerateFixCode.cs:184
                         if (fix.Binding.DescriptionElement.Value != null)                                                                   // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Binding.DescriptionElement.Value = \"{fix.Binding.DescriptionElement.Value}\";");       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Binding.DescriptionElement.Value = \"{CleanString(fix.Binding.DescriptionElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Binding.DescriptionElement.ElementId != null)                                                               // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Binding.DescriptionElement.ElementId = \"{fix.Binding.DescriptionElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Binding.DescriptionElement.ElementId = \"{CleanString(fix.Binding.DescriptionElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Binding.ValueSetElement != null)                                                                                // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Binding.ValueSetElement = new Canonical();");                                               // GenerateFixCode.cs:184
                         if (fix.Binding.ValueSetElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Binding.ValueSetElement.Value = \"{fix.Binding.ValueSetElement.Value}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Binding.ValueSetElement.Value = \"{CleanString(fix.Binding.ValueSetElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Binding.ValueSetElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Binding.ValueSetElement.ElementId = \"{fix.Binding.ValueSetElement.ElementId}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Binding.ValueSetElement.ElementId = \"{CleanString(fix.Binding.ValueSetElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Binding.ElementId != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Binding.ElementId = \"{fix.Binding.ElementId}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Binding.ElementId = \"{CleanString(fix.Binding.ElementId)}\";");                            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Mapping != null)                                                                                                    // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -2945,42 +2946,42 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp24.IdentityElement = new Id();");                                                        // GenerateFixCode.cs:184
                             if (temp23.IdentityElement.Value != null)                                                                       // GenerateFixCode.cs:112
-                                block.AppendCode($"temp24.IdentityElement.Value = \"{temp23.IdentityElement.Value}\";");                    // GenerateFixCode.cs:113
+                                block.AppendCode($"temp24.IdentityElement.Value = \"{CleanString(temp23.IdentityElement.Value)}\";");       // GenerateFixCode.cs:113
                             if (temp23.IdentityElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                                block.AppendCode($"temp24.IdentityElement.ElementId = \"{temp23.IdentityElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                block.AppendCode($"temp24.IdentityElement.ElementId = \"{CleanString(temp23.IdentityElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp23.LanguageElement != null)                                                                                 // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp24.LanguageElement = new Code();");                                                      // GenerateFixCode.cs:184
                             if (temp23.LanguageElement.Value != null)                                                                       // GenerateFixCode.cs:112
-                                block.AppendCode($"temp24.LanguageElement.Value = \"{temp23.LanguageElement.Value}\";");                    // GenerateFixCode.cs:113
+                                block.AppendCode($"temp24.LanguageElement.Value = \"{CleanString(temp23.LanguageElement.Value)}\";");       // GenerateFixCode.cs:113
                             if (temp23.LanguageElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                                block.AppendCode($"temp24.LanguageElement.ElementId = \"{temp23.LanguageElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                block.AppendCode($"temp24.LanguageElement.ElementId = \"{CleanString(temp23.LanguageElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp23.MapElement != null)                                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp24.MapElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                             if (temp23.MapElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp24.MapElement.Value = \"{temp23.MapElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp24.MapElement.Value = \"{CleanString(temp23.MapElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp23.MapElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp24.MapElement.ElementId = \"{temp23.MapElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp24.MapElement.ElementId = \"{CleanString(temp23.MapElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp23.CommentElement != null)                                                                                  // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp24.CommentElement = new FhirString();");                                                 // GenerateFixCode.cs:184
                             if (temp23.CommentElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp24.CommentElement.Value = \"{temp23.CommentElement.Value}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp24.CommentElement.Value = \"{CleanString(temp23.CommentElement.Value)}\";");         // GenerateFixCode.cs:113
                             if (temp23.CommentElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp24.CommentElement.ElementId = \"{temp23.CommentElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp24.CommentElement.ElementId = \"{CleanString(temp23.CommentElement.ElementId)}\";"); // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp23.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp24.ElementId = \"{temp23.ElementId}\";");                                                // GenerateFixCode.cs:113
+                            block.AppendCode($"temp24.ElementId = \"{CleanString(temp23.ElementId)}\";");                                   // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Mapping.Add(temp24);");                                                                     // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
                 }                                                                                                                           // GenerateFixCode.cs:149
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -3009,44 +3010,44 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.DescriptionElement = new FhirString();");                                                       // GenerateFixCode.cs:184
                     if (fix.DescriptionElement.Value != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DescriptionElement.Value = \"{fix.DescriptionElement.Value}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DescriptionElement.Value = \"{CleanString(fix.DescriptionElement.Value)}\";");              // GenerateFixCode.cs:113
                     if (fix.DescriptionElement.ElementId != null)                                                                           // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DescriptionElement.ElementId = \"{fix.DescriptionElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DescriptionElement.ElementId = \"{CleanString(fix.DescriptionElement.ElementId)}\";");      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.NameElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.NameElement = new Id();");                                                                      // GenerateFixCode.cs:184
                     if (fix.NameElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NameElement.Value = \"{fix.NameElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NameElement.Value = \"{CleanString(fix.NameElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.NameElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NameElement.ElementId = \"{fix.NameElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NameElement.ElementId = \"{CleanString(fix.NameElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.LanguageElement != null)                                                                                            // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.LanguageElement = new Code();");                                                                // GenerateFixCode.cs:184
                     if (fix.LanguageElement.Value != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LanguageElement.Value = \"{fix.LanguageElement.Value}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LanguageElement.Value = \"{CleanString(fix.LanguageElement.Value)}\";");                    // GenerateFixCode.cs:113
                     if (fix.LanguageElement.ElementId != null)                                                                              // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LanguageElement.ElementId = \"{fix.LanguageElement.ElementId}\";");                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LanguageElement.ElementId = \"{CleanString(fix.LanguageElement.ElementId)}\";");            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ExpressionElement != null)                                                                                          // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ExpressionElement = new FhirString();");                                                        // GenerateFixCode.cs:184
                     if (fix.ExpressionElement.Value != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ExpressionElement.Value = \"{fix.ExpressionElement.Value}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ExpressionElement.Value = \"{CleanString(fix.ExpressionElement.Value)}\";");                // GenerateFixCode.cs:113
                     if (fix.ExpressionElement.ElementId != null)                                                                            // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ExpressionElement.ElementId = \"{fix.ExpressionElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ExpressionElement.ElementId = \"{CleanString(fix.ExpressionElement.ElementId)}\";");        // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ReferenceElement != null)                                                                                           // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ReferenceElement = new FhirUri();");                                                            // GenerateFixCode.cs:184
                     if (fix.ReferenceElement.Value != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ReferenceElement.Value = \"{fix.ReferenceElement.Value}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ReferenceElement.Value = \"{CleanString(fix.ReferenceElement.Value)}\";");                  // GenerateFixCode.cs:113
                     if (fix.ReferenceElement.ElementId != null)                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ReferenceElement.ElementId = \"{fix.ReferenceElement.ElementId}\";");                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ReferenceElement.ElementId = \"{CleanString(fix.ReferenceElement.ElementId)}\";");          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -3072,9 +3073,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:293
             {                                                                                                                               // GenerateFixCode.cs:294
                 if (fix.Url != null)                                                                                                        // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Url = \"{fix.Url}\";");                                                                         // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Url = \"{CleanString(fix.Url)}\";");                                                            // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -3105,17 +3106,17 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.TextElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.TextElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TextElement.Value = \"{fix.TextElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TextElement.Value = \"{CleanString(fix.TextElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.TextElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TextElement.ElementId = \"{fix.TextElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TextElement.ElementId = \"{CleanString(fix.TextElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.FamilyElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.FamilyElement = new FhirString();");                                                            // GenerateFixCode.cs:184
                     if (fix.FamilyElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.FamilyElement.Value = \"{fix.FamilyElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.FamilyElement.Value = \"{CleanString(fix.FamilyElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.FamilyElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.FamilyElement.ElementId = \"{fix.FamilyElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.FamilyElement.ElementId = \"{CleanString(fix.FamilyElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.GivenElement != null)                                                                                               // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -3125,9 +3126,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp2 = new FhirString();");                                                                  // GenerateFixCode.cs:140
                         if (temp1.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.Value = \"{temp1.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.Value = \"{CleanString(temp1.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.GivenElement.Add(temp2);");                                                                 // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -3140,9 +3141,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp4 = new FhirString();");                                                                  // GenerateFixCode.cs:140
                         if (temp3.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp4.Value = \"{temp3.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp4.Value = \"{CleanString(temp3.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp3.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.PrefixElement.Add(temp4);");                                                                // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -3155,9 +3156,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp6 = new FhirString();");                                                                  // GenerateFixCode.cs:140
                         if (temp5.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp6.Value = \"{temp5.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp6.Value = \"{CleanString(temp5.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp5.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.SuffixElement.Add(temp6);");                                                                // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -3169,23 +3170,23 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.StartElement = new FhirDateTime();");                                                // GenerateFixCode.cs:184
                         if (fix.Period.StartElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.StartElement.Value = \"{fix.Period.StartElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.StartElement.Value = \"{CleanString(fix.Period.StartElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Period.StartElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.StartElement.ElementId = \"{fix.Period.StartElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.StartElement.ElementId = \"{CleanString(fix.Period.StartElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.EndElement != null)                                                                                      // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.EndElement = new FhirDateTime();");                                                  // GenerateFixCode.cs:184
                         if (fix.Period.EndElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.EndElement.Value = \"{fix.Period.EndElement.Value}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.EndElement.Value = \"{CleanString(fix.Period.EndElement.Value)}\";");            // GenerateFixCode.cs:113
                         if (fix.Period.EndElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.EndElement.ElementId = \"{fix.Period.EndElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.EndElement.ElementId = \"{CleanString(fix.Period.EndElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Period.ElementId = \"{fix.Period.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Period.ElementId = \"{CleanString(fix.Period.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -3226,33 +3227,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.SystemElement = new FhirUri();");                                                  // GenerateFixCode.cs:184
                                 if (temp1.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.SystemElement.Value = \"{temp1.SystemElement.Value}\";");                      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.SystemElement.Value = \"{CleanString(temp1.SystemElement.Value)}\";");         // GenerateFixCode.cs:113
                                 if (temp1.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.SystemElement.ElementId = \"{temp1.SystemElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.SystemElement.ElementId = \"{CleanString(temp1.SystemElement.ElementId)}\";"); // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.VersionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp1.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.VersionElement.Value = \"{temp1.VersionElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.VersionElement.Value = \"{CleanString(temp1.VersionElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp1.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.VersionElement.ElementId = \"{temp1.VersionElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.VersionElement.ElementId = \"{CleanString(temp1.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.CodeElement = new Code();");                                                       // GenerateFixCode.cs:184
                                 if (temp1.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.CodeElement.Value = \"{temp1.CodeElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.CodeElement.Value = \"{CleanString(temp1.CodeElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp1.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.CodeElement.ElementId = \"{temp1.CodeElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.CodeElement.ElementId = \"{CleanString(temp1.CodeElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.DisplayElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp1.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.DisplayElement.Value = \"{temp1.DisplayElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.DisplayElement.Value = \"{CleanString(temp1.DisplayElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp1.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.DisplayElement.ElementId = \"{temp1.DisplayElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.DisplayElement.ElementId = \"{CleanString(temp1.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -3265,10 +3266,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp2.UserSelectedElement.Value = false;");                                      // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp1.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{temp1.UserSelectedElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{CleanString(temp1.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Type.Coding.Add(temp2);");                                                              // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -3277,28 +3278,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Type.TextElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                         if (fix.Type.TextElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Type.TextElement.Value = \"{fix.Type.TextElement.Value}\";");                           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Type.TextElement.Value = \"{CleanString(fix.Type.TextElement.Value)}\";");              // GenerateFixCode.cs:113
                         if (fix.Type.TextElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Type.TextElement.ElementId = \"{fix.Type.TextElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Type.TextElement.ElementId = \"{CleanString(fix.Type.TextElement.ElementId)}\";");      // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Type.ElementId != null)                                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Type.ElementId = \"{fix.Type.ElementId}\";");                                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Type.ElementId = \"{CleanString(fix.Type.ElementId)}\";");                                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SystemElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SystemElement = new FhirUri();");                                                               // GenerateFixCode.cs:184
                     if (fix.SystemElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.Value = \"{fix.SystemElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.Value = \"{CleanString(fix.SystemElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.SystemElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.ElementId = \"{fix.SystemElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.ElementId = \"{CleanString(fix.SystemElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ValueElement != null)                                                                                               // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ValueElement = new FhirString();");                                                             // GenerateFixCode.cs:184
                     if (fix.ValueElement.Value != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.Value = \"{fix.ValueElement.Value}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.Value = \"{CleanString(fix.ValueElement.Value)}\";");                          // GenerateFixCode.cs:113
                     if (fix.ValueElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.ElementId = \"{fix.ValueElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.ElementId = \"{CleanString(fix.ValueElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Period != null)                                                                                                     // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -3307,23 +3308,23 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.StartElement = new FhirDateTime();");                                                // GenerateFixCode.cs:184
                         if (fix.Period.StartElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.StartElement.Value = \"{fix.Period.StartElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.StartElement.Value = \"{CleanString(fix.Period.StartElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Period.StartElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.StartElement.ElementId = \"{fix.Period.StartElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.StartElement.ElementId = \"{CleanString(fix.Period.StartElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.EndElement != null)                                                                                      // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.EndElement = new FhirDateTime();");                                                  // GenerateFixCode.cs:184
                         if (fix.Period.EndElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.EndElement.Value = \"{fix.Period.EndElement.Value}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.EndElement.Value = \"{CleanString(fix.Period.EndElement.Value)}\";");            // GenerateFixCode.cs:113
                         if (fix.Period.EndElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.EndElement.ElementId = \"{fix.Period.EndElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.EndElement.ElementId = \"{CleanString(fix.Period.EndElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Period.ElementId = \"{fix.Period.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Period.ElementId = \"{CleanString(fix.Period.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -3362,33 +3363,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.SystemElement = new FhirUri();");                                                  // GenerateFixCode.cs:184
                                 if (temp1.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.SystemElement.Value = \"{temp1.SystemElement.Value}\";");                      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.SystemElement.Value = \"{CleanString(temp1.SystemElement.Value)}\";");         // GenerateFixCode.cs:113
                                 if (temp1.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.SystemElement.ElementId = \"{temp1.SystemElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.SystemElement.ElementId = \"{CleanString(temp1.SystemElement.ElementId)}\";"); // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.VersionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp1.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.VersionElement.Value = \"{temp1.VersionElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.VersionElement.Value = \"{CleanString(temp1.VersionElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp1.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.VersionElement.ElementId = \"{temp1.VersionElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.VersionElement.ElementId = \"{CleanString(temp1.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.CodeElement = new Code();");                                                       // GenerateFixCode.cs:184
                                 if (temp1.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.CodeElement.Value = \"{temp1.CodeElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.CodeElement.Value = \"{CleanString(temp1.CodeElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp1.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.CodeElement.ElementId = \"{temp1.CodeElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.CodeElement.ElementId = \"{CleanString(temp1.CodeElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.DisplayElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp1.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.DisplayElement.Value = \"{temp1.DisplayElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.DisplayElement.Value = \"{CleanString(temp1.DisplayElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp1.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.DisplayElement.ElementId = \"{temp1.DisplayElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.DisplayElement.ElementId = \"{CleanString(temp1.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -3401,10 +3402,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp2.UserSelectedElement.Value = false;");                                      // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp1.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{temp1.UserSelectedElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{CleanString(temp1.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Country.Coding.Add(temp2);");                                                           // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -3413,12 +3414,12 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Country.TextElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                         if (fix.Country.TextElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Country.TextElement.Value = \"{fix.Country.TextElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Country.TextElement.Value = \"{CleanString(fix.Country.TextElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Country.TextElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Country.TextElement.ElementId = \"{fix.Country.TextElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Country.TextElement.ElementId = \"{CleanString(fix.Country.TextElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Country.ElementId != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Country.ElementId = \"{fix.Country.ElementId}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Country.ElementId = \"{CleanString(fix.Country.ElementId)}\";");                            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Jurisdiction != null)                                                                                               // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -3434,33 +3435,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.SystemElement = new FhirUri();");                                                  // GenerateFixCode.cs:184
                                 if (temp3.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.SystemElement.Value = \"{temp3.SystemElement.Value}\";");                      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.SystemElement.Value = \"{CleanString(temp3.SystemElement.Value)}\";");         // GenerateFixCode.cs:113
                                 if (temp3.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.SystemElement.ElementId = \"{temp3.SystemElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.SystemElement.ElementId = \"{CleanString(temp3.SystemElement.ElementId)}\";"); // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.VersionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp3.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.VersionElement.Value = \"{temp3.VersionElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.VersionElement.Value = \"{CleanString(temp3.VersionElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp3.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.VersionElement.ElementId = \"{temp3.VersionElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.VersionElement.ElementId = \"{CleanString(temp3.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.CodeElement = new Code();");                                                       // GenerateFixCode.cs:184
                                 if (temp3.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.CodeElement.Value = \"{temp3.CodeElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.CodeElement.Value = \"{CleanString(temp3.CodeElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp3.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.CodeElement.ElementId = \"{temp3.CodeElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.CodeElement.ElementId = \"{CleanString(temp3.CodeElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.DisplayElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp3.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.DisplayElement.Value = \"{temp3.DisplayElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.DisplayElement.Value = \"{CleanString(temp3.DisplayElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp3.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.DisplayElement.ElementId = \"{temp3.DisplayElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.DisplayElement.ElementId = \"{CleanString(temp3.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -3473,10 +3474,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp4.UserSelectedElement.Value = false;");                                      // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp3.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{temp3.UserSelectedElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{CleanString(temp3.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Jurisdiction.Coding.Add(temp4);");                                                      // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -3485,12 +3486,12 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Jurisdiction.TextElement = new FhirString();");                                             // GenerateFixCode.cs:184
                         if (fix.Jurisdiction.TextElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Jurisdiction.TextElement.Value = \"{fix.Jurisdiction.TextElement.Value}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Jurisdiction.TextElement.Value = \"{CleanString(fix.Jurisdiction.TextElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Jurisdiction.TextElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Jurisdiction.TextElement.ElementId = \"{fix.Jurisdiction.TextElement.ElementId}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Jurisdiction.TextElement.ElementId = \"{CleanString(fix.Jurisdiction.TextElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Jurisdiction.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Jurisdiction.ElementId = \"{fix.Jurisdiction.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Jurisdiction.ElementId = \"{CleanString(fix.Jurisdiction.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Status != null)                                                                                                     // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -3506,33 +3507,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp6.SystemElement = new FhirUri();");                                                  // GenerateFixCode.cs:184
                                 if (temp5.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.SystemElement.Value = \"{temp5.SystemElement.Value}\";");                      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.SystemElement.Value = \"{CleanString(temp5.SystemElement.Value)}\";");         // GenerateFixCode.cs:113
                                 if (temp5.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.SystemElement.ElementId = \"{temp5.SystemElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.SystemElement.ElementId = \"{CleanString(temp5.SystemElement.ElementId)}\";"); // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp6.VersionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp5.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.VersionElement.Value = \"{temp5.VersionElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.VersionElement.Value = \"{CleanString(temp5.VersionElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp5.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.VersionElement.ElementId = \"{temp5.VersionElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.VersionElement.ElementId = \"{CleanString(temp5.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp6.CodeElement = new Code();");                                                       // GenerateFixCode.cs:184
                                 if (temp5.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.CodeElement.Value = \"{temp5.CodeElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.CodeElement.Value = \"{CleanString(temp5.CodeElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp5.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.CodeElement.ElementId = \"{temp5.CodeElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.CodeElement.ElementId = \"{CleanString(temp5.CodeElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp6.DisplayElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp5.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.DisplayElement.Value = \"{temp5.DisplayElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.DisplayElement.Value = \"{CleanString(temp5.DisplayElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp5.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.DisplayElement.ElementId = \"{temp5.DisplayElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.DisplayElement.ElementId = \"{CleanString(temp5.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -3545,10 +3546,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp6.UserSelectedElement.Value = false;");                                      // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp5.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.UserSelectedElement.ElementId = \"{temp5.UserSelectedElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.UserSelectedElement.ElementId = \"{CleanString(temp5.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Status.Coding.Add(temp6);");                                                            // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -3557,12 +3558,12 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Status.TextElement = new FhirString();");                                                   // GenerateFixCode.cs:184
                         if (fix.Status.TextElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Status.TextElement.Value = \"{fix.Status.TextElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Status.TextElement.Value = \"{CleanString(fix.Status.TextElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Status.TextElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Status.TextElement.ElementId = \"{fix.Status.TextElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Status.TextElement.ElementId = \"{CleanString(fix.Status.TextElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Status.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Status.ElementId = \"{fix.Status.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Status.ElementId = \"{CleanString(fix.Status.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DateRange != null)                                                                                                  // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -3571,31 +3572,31 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.DateRange.StartElement = new FhirDateTime();");                                             // GenerateFixCode.cs:184
                         if (fix.DateRange.StartElement.Value != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.DateRange.StartElement.Value = \"{fix.DateRange.StartElement.Value}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.DateRange.StartElement.Value = \"{CleanString(fix.DateRange.StartElement.Value)}\";");  // GenerateFixCode.cs:113
                         if (fix.DateRange.StartElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.DateRange.StartElement.ElementId = \"{fix.DateRange.StartElement.ElementId}\";");       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.DateRange.StartElement.ElementId = \"{CleanString(fix.DateRange.StartElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.DateRange.EndElement != null)                                                                                   // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.DateRange.EndElement = new FhirDateTime();");                                               // GenerateFixCode.cs:184
                         if (fix.DateRange.EndElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.DateRange.EndElement.Value = \"{fix.DateRange.EndElement.Value}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.DateRange.EndElement.Value = \"{CleanString(fix.DateRange.EndElement.Value)}\";");      // GenerateFixCode.cs:113
                         if (fix.DateRange.EndElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.DateRange.EndElement.ElementId = \"{fix.DateRange.EndElement.ElementId}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.DateRange.EndElement.ElementId = \"{CleanString(fix.DateRange.EndElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.DateRange.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DateRange.ElementId = \"{fix.DateRange.ElementId}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DateRange.ElementId = \"{CleanString(fix.DateRange.ElementId)}\";");                        // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.RestoreDateElement != null)                                                                                         // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.RestoreDateElement = new FhirDateTime();");                                                     // GenerateFixCode.cs:184
                     if (fix.RestoreDateElement.Value != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.RestoreDateElement.Value = \"{fix.RestoreDateElement.Value}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.RestoreDateElement.Value = \"{CleanString(fix.RestoreDateElement.Value)}\";");              // GenerateFixCode.cs:113
                     if (fix.RestoreDateElement.ElementId != null)                                                                           // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.RestoreDateElement.ElementId = \"{fix.RestoreDateElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.RestoreDateElement.ElementId = \"{CleanString(fix.RestoreDateElement.ElementId)}\";");      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -3624,9 +3625,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.VersionIdElement = new Id();");                                                                 // GenerateFixCode.cs:184
                     if (fix.VersionIdElement.Value != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.VersionIdElement.Value = \"{fix.VersionIdElement.Value}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.VersionIdElement.Value = \"{CleanString(fix.VersionIdElement.Value)}\";");                  // GenerateFixCode.cs:113
                     if (fix.VersionIdElement.ElementId != null)                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.VersionIdElement.ElementId = \"{fix.VersionIdElement.ElementId}\";");                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.VersionIdElement.ElementId = \"{CleanString(fix.VersionIdElement.ElementId)}\";");          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.LastUpdatedElement != null)                                                                                         // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -3641,15 +3642,15 @@ namespace FhirKhit.SliceGen.CSApi
                         ;                                                                                                                   // GenerateFixCode.cs:91
                     }                                                                                                                       // GenerateFixCode.cs:92
                     if (fix.LastUpdatedElement.ElementId != null)                                                                           // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LastUpdatedElement.ElementId = \"{fix.LastUpdatedElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LastUpdatedElement.ElementId = \"{CleanString(fix.LastUpdatedElement.ElementId)}\";");      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SourceElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SourceElement = new FhirUri();");                                                               // GenerateFixCode.cs:184
                     if (fix.SourceElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SourceElement.Value = \"{fix.SourceElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SourceElement.Value = \"{CleanString(fix.SourceElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.SourceElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SourceElement.ElementId = \"{fix.SourceElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SourceElement.ElementId = \"{CleanString(fix.SourceElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ProfileElement != null)                                                                                             // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -3659,9 +3660,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp2 = new Canonical();");                                                                   // GenerateFixCode.cs:140
                         if (temp1.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.Value = \"{temp1.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.Value = \"{CleanString(temp1.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.ProfileElement.Add(temp2);");                                                               // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -3677,33 +3678,33 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp4.SystemElement = new FhirUri();");                                                      // GenerateFixCode.cs:184
                             if (temp3.SystemElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.SystemElement.Value = \"{temp3.SystemElement.Value}\";");                          // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.SystemElement.Value = \"{CleanString(temp3.SystemElement.Value)}\";");             // GenerateFixCode.cs:113
                             if (temp3.SystemElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.SystemElement.ElementId = \"{temp3.SystemElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.SystemElement.ElementId = \"{CleanString(temp3.SystemElement.ElementId)}\";");     // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp3.VersionElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp4.VersionElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                             if (temp3.VersionElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.VersionElement.Value = \"{temp3.VersionElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.VersionElement.Value = \"{CleanString(temp3.VersionElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp3.VersionElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.VersionElement.ElementId = \"{temp3.VersionElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.VersionElement.ElementId = \"{CleanString(temp3.VersionElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp3.CodeElement != null)                                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp4.CodeElement = new Code();");                                                           // GenerateFixCode.cs:184
                             if (temp3.CodeElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.CodeElement.Value = \"{temp3.CodeElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.CodeElement.Value = \"{CleanString(temp3.CodeElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp3.CodeElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.CodeElement.ElementId = \"{temp3.CodeElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.CodeElement.ElementId = \"{CleanString(temp3.CodeElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp3.DisplayElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp4.DisplayElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                             if (temp3.DisplayElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.DisplayElement.Value = \"{temp3.DisplayElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.DisplayElement.Value = \"{CleanString(temp3.DisplayElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp3.DisplayElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.DisplayElement.ElementId = \"{temp3.DisplayElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.DisplayElement.ElementId = \"{CleanString(temp3.DisplayElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp3.UserSelectedElement != null)                                                                              // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -3716,10 +3717,10 @@ namespace FhirKhit.SliceGen.CSApi
                                     block.AppendCode($"temp4.UserSelectedElement.Value = false;");                                          // GenerateFixCode.cs:49
                             }                                                                                                               // GenerateFixCode.cs:50
                             if (temp3.UserSelectedElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{temp3.UserSelectedElement.ElementId}\";");      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{CleanString(temp3.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp3.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Security.Add(temp4);");                                                                     // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -3735,33 +3736,33 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.SystemElement = new FhirUri();");                                                      // GenerateFixCode.cs:184
                             if (temp5.SystemElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.SystemElement.Value = \"{temp5.SystemElement.Value}\";");                          // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.SystemElement.Value = \"{CleanString(temp5.SystemElement.Value)}\";");             // GenerateFixCode.cs:113
                             if (temp5.SystemElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.SystemElement.ElementId = \"{temp5.SystemElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.SystemElement.ElementId = \"{CleanString(temp5.SystemElement.ElementId)}\";");     // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.VersionElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.VersionElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                             if (temp5.VersionElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.VersionElement.Value = \"{temp5.VersionElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.VersionElement.Value = \"{CleanString(temp5.VersionElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp5.VersionElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.VersionElement.ElementId = \"{temp5.VersionElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.VersionElement.ElementId = \"{CleanString(temp5.VersionElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.CodeElement != null)                                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.CodeElement = new Code();");                                                           // GenerateFixCode.cs:184
                             if (temp5.CodeElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.CodeElement.Value = \"{temp5.CodeElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.CodeElement.Value = \"{CleanString(temp5.CodeElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp5.CodeElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.CodeElement.ElementId = \"{temp5.CodeElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.CodeElement.ElementId = \"{CleanString(temp5.CodeElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.DisplayElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.DisplayElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                             if (temp5.DisplayElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.DisplayElement.Value = \"{temp5.DisplayElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.DisplayElement.Value = \"{CleanString(temp5.DisplayElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp5.DisplayElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.DisplayElement.ElementId = \"{temp5.DisplayElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.DisplayElement.ElementId = \"{CleanString(temp5.DisplayElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.UserSelectedElement != null)                                                                              // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -3774,16 +3775,16 @@ namespace FhirKhit.SliceGen.CSApi
                                     block.AppendCode($"temp6.UserSelectedElement.Value = false;");                                          // GenerateFixCode.cs:49
                             }                                                                                                               // GenerateFixCode.cs:50
                             if (temp5.UserSelectedElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.UserSelectedElement.ElementId = \"{temp5.UserSelectedElement.ElementId}\";");      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.UserSelectedElement.ElementId = \"{CleanString(temp5.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Tag.Add(temp6);");                                                                          // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
                 }                                                                                                                           // GenerateFixCode.cs:149
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -3814,12 +3815,12 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.ValueElement.Value.HasValue == true)                                                                            // GenerateFixCode.cs:98
                         block.AppendCode($"temp.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ValueElement.Value.Value});");    // GenerateFixCode.cs:99
                     if (fix.ValueElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.ElementId = \"{fix.ValueElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.ElementId = \"{CleanString(fix.ValueElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CurrencyElement != null)                                                                                            // GenerateFixCode.cs:122
                     block.AppendCode($"temp.CurrencyElement = new Code<Money.Currencies>(Money.Currencies.{fix.CurrencyElement.Value});");  // GenerateFixCode.cs:123
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -3850,7 +3851,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.ValueElement.Value.HasValue == true)                                                                            // GenerateFixCode.cs:98
                         block.AppendCode($"temp.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ValueElement.Value.Value});");    // GenerateFixCode.cs:99
                     if (fix.ValueElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.ElementId = \"{fix.ValueElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.ElementId = \"{CleanString(fix.ValueElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ComparatorElement != null)                                                                                          // GenerateFixCode.cs:122
                     block.AppendCode($"temp.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -3858,28 +3859,28 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.UnitElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.UnitElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.Value = \"{fix.UnitElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.Value = \"{CleanString(fix.UnitElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.UnitElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.ElementId = \"{fix.UnitElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.ElementId = \"{CleanString(fix.UnitElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SystemElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SystemElement = new FhirUri();");                                                               // GenerateFixCode.cs:184
                     if (fix.SystemElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.Value = \"{fix.SystemElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.Value = \"{CleanString(fix.SystemElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.SystemElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.ElementId = \"{fix.SystemElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.ElementId = \"{CleanString(fix.SystemElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CodeElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CodeElement = new Code();");                                                                    // GenerateFixCode.cs:184
                     if (fix.CodeElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.Value = \"{fix.CodeElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.Value = \"{CleanString(fix.CodeElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.CodeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.ElementId = \"{fix.CodeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.ElementId = \"{CleanString(fix.CodeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -3907,9 +3908,9 @@ namespace FhirKhit.SliceGen.CSApi
                 if (fix.StatusElement != null)                                                                                              // GenerateFixCode.cs:122
                     block.AppendCode($"temp.StatusElement = new Code<Narrative.NarrativeStatus>(Narrative.NarrativeStatus.{fix.StatusElement.Value});");// GenerateFixCode.cs:123
                 if (fix.Div != null)                                                                                                        // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Div = \"{fix.Div}\";");                                                                         // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Div = \"{CleanString(fix.Div)}\";");                                                            // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -3938,9 +3939,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.NameElement = new Code();");                                                                    // GenerateFixCode.cs:184
                     if (fix.NameElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NameElement.Value = \"{fix.NameElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NameElement.Value = \"{CleanString(fix.NameElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.NameElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NameElement.ElementId = \"{fix.NameElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NameElement.ElementId = \"{CleanString(fix.NameElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.UseElement != null)                                                                                                 // GenerateFixCode.cs:122
                     block.AppendCode($"temp.UseElement = new Code<OperationParameterUse>(OperationParameterUse.{fix.UseElement.Value});");  // GenerateFixCode.cs:123
@@ -3950,23 +3951,23 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.MinElement.Value.HasValue == true)                                                                              // GenerateFixCode.cs:105
                         block.AppendCode($"temp.MinElement.Value = new Nullable<int>((int) {fix.MinElement.Value.Value});");                // GenerateFixCode.cs:106
                     if (fix.MinElement.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MinElement.ElementId = \"{fix.MinElement.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MinElement.ElementId = \"{CleanString(fix.MinElement.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.MaxElement != null)                                                                                                 // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.MaxElement = new FhirString();");                                                               // GenerateFixCode.cs:184
                     if (fix.MaxElement.Value != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MaxElement.Value = \"{fix.MaxElement.Value}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MaxElement.Value = \"{CleanString(fix.MaxElement.Value)}\";");                              // GenerateFixCode.cs:113
                     if (fix.MaxElement.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.MaxElement.ElementId = \"{fix.MaxElement.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.MaxElement.ElementId = \"{CleanString(fix.MaxElement.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DocumentationElement != null)                                                                                       // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.DocumentationElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                     if (fix.DocumentationElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DocumentationElement.Value = \"{fix.DocumentationElement.Value}\";");                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DocumentationElement.Value = \"{CleanString(fix.DocumentationElement.Value)}\";");          // GenerateFixCode.cs:113
                     if (fix.DocumentationElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DocumentationElement.ElementId = \"{fix.DocumentationElement.ElementId}\";");               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DocumentationElement.ElementId = \"{CleanString(fix.DocumentationElement.ElementId)}\";");  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.TypeElement != null)                                                                                                // GenerateFixCode.cs:122
                     block.AppendCode($"temp.TypeElement = new Code<FHIRAllTypes>(FHIRAllTypes.{fix.TypeElement.Value});");                  // GenerateFixCode.cs:123
@@ -3974,12 +3975,12 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ProfileElement = new Canonical();");                                                            // GenerateFixCode.cs:184
                     if (fix.ProfileElement.Value != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ProfileElement.Value = \"{fix.ProfileElement.Value}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ProfileElement.Value = \"{CleanString(fix.ProfileElement.Value)}\";");                      // GenerateFixCode.cs:113
                     if (fix.ProfileElement.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ProfileElement.ElementId = \"{fix.ProfileElement.ElementId}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ProfileElement.ElementId = \"{CleanString(fix.ProfileElement.ElementId)}\";");              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -4008,20 +4009,20 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.StartElement = new FhirDateTime();");                                                           // GenerateFixCode.cs:184
                     if (fix.StartElement.Value != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.StartElement.Value = \"{fix.StartElement.Value}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.StartElement.Value = \"{CleanString(fix.StartElement.Value)}\";");                          // GenerateFixCode.cs:113
                     if (fix.StartElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.StartElement.ElementId = \"{fix.StartElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.StartElement.ElementId = \"{CleanString(fix.StartElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.EndElement != null)                                                                                                 // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.EndElement = new FhirDateTime();");                                                             // GenerateFixCode.cs:184
                     if (fix.EndElement.Value != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.EndElement.Value = \"{fix.EndElement.Value}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.EndElement.Value = \"{CleanString(fix.EndElement.Value)}\";");                              // GenerateFixCode.cs:113
                     if (fix.EndElement.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.EndElement.ElementId = \"{fix.EndElement.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.EndElement.ElementId = \"{CleanString(fix.EndElement.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -4060,33 +4061,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.SystemElement = new FhirUri();");                                                  // GenerateFixCode.cs:184
                                 if (temp1.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.SystemElement.Value = \"{temp1.SystemElement.Value}\";");                      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.SystemElement.Value = \"{CleanString(temp1.SystemElement.Value)}\";");         // GenerateFixCode.cs:113
                                 if (temp1.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.SystemElement.ElementId = \"{temp1.SystemElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.SystemElement.ElementId = \"{CleanString(temp1.SystemElement.ElementId)}\";"); // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.VersionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp1.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.VersionElement.Value = \"{temp1.VersionElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.VersionElement.Value = \"{CleanString(temp1.VersionElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp1.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.VersionElement.ElementId = \"{temp1.VersionElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.VersionElement.ElementId = \"{CleanString(temp1.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.CodeElement = new Code();");                                                       // GenerateFixCode.cs:184
                                 if (temp1.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.CodeElement.Value = \"{temp1.CodeElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.CodeElement.Value = \"{CleanString(temp1.CodeElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp1.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.CodeElement.ElementId = \"{temp1.CodeElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.CodeElement.ElementId = \"{CleanString(temp1.CodeElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.DisplayElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp1.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.DisplayElement.Value = \"{temp1.DisplayElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.DisplayElement.Value = \"{CleanString(temp1.DisplayElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp1.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.DisplayElement.ElementId = \"{temp1.DisplayElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.DisplayElement.ElementId = \"{CleanString(temp1.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -4099,10 +4100,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp2.UserSelectedElement.Value = false;");                                      // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp1.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{temp1.UserSelectedElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{CleanString(temp1.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Gender.Coding.Add(temp2);");                                                            // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -4111,12 +4112,12 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Gender.TextElement = new FhirString();");                                                   // GenerateFixCode.cs:184
                         if (fix.Gender.TextElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Gender.TextElement.Value = \"{fix.Gender.TextElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Gender.TextElement.Value = \"{CleanString(fix.Gender.TextElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Gender.TextElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Gender.TextElement.ElementId = \"{fix.Gender.TextElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Gender.TextElement.ElementId = \"{CleanString(fix.Gender.TextElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Gender.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Gender.ElementId = \"{fix.Gender.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Gender.ElementId = \"{CleanString(fix.Gender.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Race != null)                                                                                                       // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -4132,33 +4133,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.SystemElement = new FhirUri();");                                                  // GenerateFixCode.cs:184
                                 if (temp3.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.SystemElement.Value = \"{temp3.SystemElement.Value}\";");                      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.SystemElement.Value = \"{CleanString(temp3.SystemElement.Value)}\";");         // GenerateFixCode.cs:113
                                 if (temp3.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.SystemElement.ElementId = \"{temp3.SystemElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.SystemElement.ElementId = \"{CleanString(temp3.SystemElement.ElementId)}\";"); // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.VersionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp3.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.VersionElement.Value = \"{temp3.VersionElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.VersionElement.Value = \"{CleanString(temp3.VersionElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp3.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.VersionElement.ElementId = \"{temp3.VersionElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.VersionElement.ElementId = \"{CleanString(temp3.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.CodeElement = new Code();");                                                       // GenerateFixCode.cs:184
                                 if (temp3.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.CodeElement.Value = \"{temp3.CodeElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.CodeElement.Value = \"{CleanString(temp3.CodeElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp3.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.CodeElement.ElementId = \"{temp3.CodeElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.CodeElement.ElementId = \"{CleanString(temp3.CodeElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.DisplayElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp3.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.DisplayElement.Value = \"{temp3.DisplayElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.DisplayElement.Value = \"{CleanString(temp3.DisplayElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp3.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.DisplayElement.ElementId = \"{temp3.DisplayElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.DisplayElement.ElementId = \"{CleanString(temp3.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -4171,10 +4172,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp4.UserSelectedElement.Value = false;");                                      // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp3.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{temp3.UserSelectedElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{CleanString(temp3.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Race.Coding.Add(temp4);");                                                              // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -4183,12 +4184,12 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Race.TextElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                         if (fix.Race.TextElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Race.TextElement.Value = \"{fix.Race.TextElement.Value}\";");                           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Race.TextElement.Value = \"{CleanString(fix.Race.TextElement.Value)}\";");              // GenerateFixCode.cs:113
                         if (fix.Race.TextElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Race.TextElement.ElementId = \"{fix.Race.TextElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Race.TextElement.ElementId = \"{CleanString(fix.Race.TextElement.ElementId)}\";");      // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Race.ElementId != null)                                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Race.ElementId = \"{fix.Race.ElementId}\";");                                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Race.ElementId = \"{CleanString(fix.Race.ElementId)}\";");                                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.PhysiologicalCondition != null)                                                                                     // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -4204,33 +4205,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp6.SystemElement = new FhirUri();");                                                  // GenerateFixCode.cs:184
                                 if (temp5.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.SystemElement.Value = \"{temp5.SystemElement.Value}\";");                      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.SystemElement.Value = \"{CleanString(temp5.SystemElement.Value)}\";");         // GenerateFixCode.cs:113
                                 if (temp5.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.SystemElement.ElementId = \"{temp5.SystemElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.SystemElement.ElementId = \"{CleanString(temp5.SystemElement.ElementId)}\";"); // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp6.VersionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp5.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.VersionElement.Value = \"{temp5.VersionElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.VersionElement.Value = \"{CleanString(temp5.VersionElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp5.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.VersionElement.ElementId = \"{temp5.VersionElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.VersionElement.ElementId = \"{CleanString(temp5.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp6.CodeElement = new Code();");                                                       // GenerateFixCode.cs:184
                                 if (temp5.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.CodeElement.Value = \"{temp5.CodeElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.CodeElement.Value = \"{CleanString(temp5.CodeElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp5.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.CodeElement.ElementId = \"{temp5.CodeElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.CodeElement.ElementId = \"{CleanString(temp5.CodeElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp6.DisplayElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp5.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.DisplayElement.Value = \"{temp5.DisplayElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.DisplayElement.Value = \"{CleanString(temp5.DisplayElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp5.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.DisplayElement.ElementId = \"{temp5.DisplayElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.DisplayElement.ElementId = \"{CleanString(temp5.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -4243,10 +4244,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp6.UserSelectedElement.Value = false;");                                      // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp5.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.UserSelectedElement.ElementId = \"{temp5.UserSelectedElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.UserSelectedElement.ElementId = \"{CleanString(temp5.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp5.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.PhysiologicalCondition.Coding.Add(temp6);");                                            // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -4255,15 +4256,15 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.PhysiologicalCondition.TextElement = new FhirString();");                                   // GenerateFixCode.cs:184
                         if (fix.PhysiologicalCondition.TextElement.Value != null)                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.PhysiologicalCondition.TextElement.Value = \"{fix.PhysiologicalCondition.TextElement.Value}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.PhysiologicalCondition.TextElement.Value = \"{CleanString(fix.PhysiologicalCondition.TextElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.PhysiologicalCondition.TextElement.ElementId != null)                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.PhysiologicalCondition.TextElement.ElementId = \"{fix.PhysiologicalCondition.TextElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.PhysiologicalCondition.TextElement.ElementId = \"{CleanString(fix.PhysiologicalCondition.TextElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.PhysiologicalCondition.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.PhysiologicalCondition.ElementId = \"{fix.PhysiologicalCondition.ElementId}\";");           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.PhysiologicalCondition.ElementId = \"{CleanString(fix.PhysiologicalCondition.ElementId)}\";");// GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -4297,7 +4298,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Height.ValueElement.Value.HasValue == true)                                                                 // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Height.ValueElement.Value = new Nullable<decimal>((decimal) {fix.Height.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Height.ValueElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Height.ValueElement.ElementId = \"{fix.Height.ValueElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Height.ValueElement.ElementId = \"{CleanString(fix.Height.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Height.ComparatorElement != null)                                                                               // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Height.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.Height.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -4305,28 +4306,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Height.UnitElement = new FhirString();");                                                   // GenerateFixCode.cs:184
                         if (fix.Height.UnitElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Height.UnitElement.Value = \"{fix.Height.UnitElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Height.UnitElement.Value = \"{CleanString(fix.Height.UnitElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Height.UnitElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Height.UnitElement.ElementId = \"{fix.Height.UnitElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Height.UnitElement.ElementId = \"{CleanString(fix.Height.UnitElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Height.SystemElement != null)                                                                                   // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Height.SystemElement = new FhirUri();");                                                    // GenerateFixCode.cs:184
                         if (fix.Height.SystemElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Height.SystemElement.Value = \"{fix.Height.SystemElement.Value}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Height.SystemElement.Value = \"{CleanString(fix.Height.SystemElement.Value)}\";");      // GenerateFixCode.cs:113
                         if (fix.Height.SystemElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Height.SystemElement.ElementId = \"{fix.Height.SystemElement.ElementId}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Height.SystemElement.ElementId = \"{CleanString(fix.Height.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Height.CodeElement != null)                                                                                     // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Height.CodeElement = new Code();");                                                         // GenerateFixCode.cs:184
                         if (fix.Height.CodeElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Height.CodeElement.Value = \"{fix.Height.CodeElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Height.CodeElement.Value = \"{CleanString(fix.Height.CodeElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Height.CodeElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Height.CodeElement.ElementId = \"{fix.Height.CodeElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Height.CodeElement.ElementId = \"{CleanString(fix.Height.CodeElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Height.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Height.ElementId = \"{fix.Height.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Height.ElementId = \"{CleanString(fix.Height.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Width != null)                                                                                                      // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -4337,7 +4338,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Width.ValueElement.Value.HasValue == true)                                                                  // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Width.ValueElement.Value = new Nullable<decimal>((decimal) {fix.Width.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Width.ValueElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Width.ValueElement.ElementId = \"{fix.Width.ValueElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Width.ValueElement.ElementId = \"{CleanString(fix.Width.ValueElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Width.ComparatorElement != null)                                                                                // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Width.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.Width.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -4345,28 +4346,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Width.UnitElement = new FhirString();");                                                    // GenerateFixCode.cs:184
                         if (fix.Width.UnitElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Width.UnitElement.Value = \"{fix.Width.UnitElement.Value}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Width.UnitElement.Value = \"{CleanString(fix.Width.UnitElement.Value)}\";");            // GenerateFixCode.cs:113
                         if (fix.Width.UnitElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Width.UnitElement.ElementId = \"{fix.Width.UnitElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Width.UnitElement.ElementId = \"{CleanString(fix.Width.UnitElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Width.SystemElement != null)                                                                                    // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Width.SystemElement = new FhirUri();");                                                     // GenerateFixCode.cs:184
                         if (fix.Width.SystemElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Width.SystemElement.Value = \"{fix.Width.SystemElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Width.SystemElement.Value = \"{CleanString(fix.Width.SystemElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Width.SystemElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Width.SystemElement.ElementId = \"{fix.Width.SystemElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Width.SystemElement.ElementId = \"{CleanString(fix.Width.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Width.CodeElement != null)                                                                                      // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Width.CodeElement = new Code();");                                                          // GenerateFixCode.cs:184
                         if (fix.Width.CodeElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Width.CodeElement.Value = \"{fix.Width.CodeElement.Value}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Width.CodeElement.Value = \"{CleanString(fix.Width.CodeElement.Value)}\";");            // GenerateFixCode.cs:113
                         if (fix.Width.CodeElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Width.CodeElement.ElementId = \"{fix.Width.CodeElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Width.CodeElement.ElementId = \"{CleanString(fix.Width.CodeElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Width.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Width.ElementId = \"{fix.Width.ElementId}\";");                                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Width.ElementId = \"{CleanString(fix.Width.ElementId)}\";");                                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Depth != null)                                                                                                      // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -4377,7 +4378,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Depth.ValueElement.Value.HasValue == true)                                                                  // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Depth.ValueElement.Value = new Nullable<decimal>((decimal) {fix.Depth.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Depth.ValueElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Depth.ValueElement.ElementId = \"{fix.Depth.ValueElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Depth.ValueElement.ElementId = \"{CleanString(fix.Depth.ValueElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Depth.ComparatorElement != null)                                                                                // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Depth.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.Depth.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -4385,28 +4386,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Depth.UnitElement = new FhirString();");                                                    // GenerateFixCode.cs:184
                         if (fix.Depth.UnitElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Depth.UnitElement.Value = \"{fix.Depth.UnitElement.Value}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Depth.UnitElement.Value = \"{CleanString(fix.Depth.UnitElement.Value)}\";");            // GenerateFixCode.cs:113
                         if (fix.Depth.UnitElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Depth.UnitElement.ElementId = \"{fix.Depth.UnitElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Depth.UnitElement.ElementId = \"{CleanString(fix.Depth.UnitElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Depth.SystemElement != null)                                                                                    // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Depth.SystemElement = new FhirUri();");                                                     // GenerateFixCode.cs:184
                         if (fix.Depth.SystemElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Depth.SystemElement.Value = \"{fix.Depth.SystemElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Depth.SystemElement.Value = \"{CleanString(fix.Depth.SystemElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Depth.SystemElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Depth.SystemElement.ElementId = \"{fix.Depth.SystemElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Depth.SystemElement.ElementId = \"{CleanString(fix.Depth.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Depth.CodeElement != null)                                                                                      // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Depth.CodeElement = new Code();");                                                          // GenerateFixCode.cs:184
                         if (fix.Depth.CodeElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Depth.CodeElement.Value = \"{fix.Depth.CodeElement.Value}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Depth.CodeElement.Value = \"{CleanString(fix.Depth.CodeElement.Value)}\";");            // GenerateFixCode.cs:113
                         if (fix.Depth.CodeElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Depth.CodeElement.ElementId = \"{fix.Depth.CodeElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Depth.CodeElement.ElementId = \"{CleanString(fix.Depth.CodeElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Depth.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Depth.ElementId = \"{fix.Depth.ElementId}\";");                                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Depth.ElementId = \"{CleanString(fix.Depth.ElementId)}\";");                                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Weight != null)                                                                                                     // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -4417,7 +4418,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Weight.ValueElement.Value.HasValue == true)                                                                 // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Weight.ValueElement.Value = new Nullable<decimal>((decimal) {fix.Weight.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Weight.ValueElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Weight.ValueElement.ElementId = \"{fix.Weight.ValueElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Weight.ValueElement.ElementId = \"{CleanString(fix.Weight.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Weight.ComparatorElement != null)                                                                               // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Weight.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.Weight.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -4425,28 +4426,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Weight.UnitElement = new FhirString();");                                                   // GenerateFixCode.cs:184
                         if (fix.Weight.UnitElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Weight.UnitElement.Value = \"{fix.Weight.UnitElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Weight.UnitElement.Value = \"{CleanString(fix.Weight.UnitElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Weight.UnitElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Weight.UnitElement.ElementId = \"{fix.Weight.UnitElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Weight.UnitElement.ElementId = \"{CleanString(fix.Weight.UnitElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Weight.SystemElement != null)                                                                                   // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Weight.SystemElement = new FhirUri();");                                                    // GenerateFixCode.cs:184
                         if (fix.Weight.SystemElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Weight.SystemElement.Value = \"{fix.Weight.SystemElement.Value}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Weight.SystemElement.Value = \"{CleanString(fix.Weight.SystemElement.Value)}\";");      // GenerateFixCode.cs:113
                         if (fix.Weight.SystemElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Weight.SystemElement.ElementId = \"{fix.Weight.SystemElement.ElementId}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Weight.SystemElement.ElementId = \"{CleanString(fix.Weight.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Weight.CodeElement != null)                                                                                     // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Weight.CodeElement = new Code();");                                                         // GenerateFixCode.cs:184
                         if (fix.Weight.CodeElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Weight.CodeElement.Value = \"{fix.Weight.CodeElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Weight.CodeElement.Value = \"{CleanString(fix.Weight.CodeElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Weight.CodeElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Weight.CodeElement.ElementId = \"{fix.Weight.CodeElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Weight.CodeElement.ElementId = \"{CleanString(fix.Weight.CodeElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Weight.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Weight.ElementId = \"{fix.Weight.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Weight.ElementId = \"{CleanString(fix.Weight.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.NominalVolume != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -4457,7 +4458,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.NominalVolume.ValueElement.Value.HasValue == true)                                                          // GenerateFixCode.cs:98
                             block.AppendCode($"temp.NominalVolume.ValueElement.Value = new Nullable<decimal>((decimal) {fix.NominalVolume.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.NominalVolume.ValueElement.ElementId != null)                                                               // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.NominalVolume.ValueElement.ElementId = \"{fix.NominalVolume.ValueElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.NominalVolume.ValueElement.ElementId = \"{CleanString(fix.NominalVolume.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.NominalVolume.ComparatorElement != null)                                                                        // GenerateFixCode.cs:122
                         block.AppendCode($"temp.NominalVolume.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.NominalVolume.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -4465,28 +4466,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.NominalVolume.UnitElement = new FhirString();");                                            // GenerateFixCode.cs:184
                         if (fix.NominalVolume.UnitElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.NominalVolume.UnitElement.Value = \"{fix.NominalVolume.UnitElement.Value}\";");         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.NominalVolume.UnitElement.Value = \"{CleanString(fix.NominalVolume.UnitElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.NominalVolume.UnitElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.NominalVolume.UnitElement.ElementId = \"{fix.NominalVolume.UnitElement.ElementId}\";"); // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.NominalVolume.UnitElement.ElementId = \"{CleanString(fix.NominalVolume.UnitElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.NominalVolume.SystemElement != null)                                                                            // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.NominalVolume.SystemElement = new FhirUri();");                                             // GenerateFixCode.cs:184
                         if (fix.NominalVolume.SystemElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.NominalVolume.SystemElement.Value = \"{fix.NominalVolume.SystemElement.Value}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.NominalVolume.SystemElement.Value = \"{CleanString(fix.NominalVolume.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.NominalVolume.SystemElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.NominalVolume.SystemElement.ElementId = \"{fix.NominalVolume.SystemElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.NominalVolume.SystemElement.ElementId = \"{CleanString(fix.NominalVolume.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.NominalVolume.CodeElement != null)                                                                              // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.NominalVolume.CodeElement = new Code();");                                                  // GenerateFixCode.cs:184
                         if (fix.NominalVolume.CodeElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.NominalVolume.CodeElement.Value = \"{fix.NominalVolume.CodeElement.Value}\";");         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.NominalVolume.CodeElement.Value = \"{CleanString(fix.NominalVolume.CodeElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.NominalVolume.CodeElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.NominalVolume.CodeElement.ElementId = \"{fix.NominalVolume.CodeElement.ElementId}\";"); // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.NominalVolume.CodeElement.ElementId = \"{CleanString(fix.NominalVolume.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.NominalVolume.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NominalVolume.ElementId = \"{fix.NominalVolume.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NominalVolume.ElementId = \"{CleanString(fix.NominalVolume.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ExternalDiameter != null)                                                                                           // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -4497,7 +4498,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.ExternalDiameter.ValueElement.Value.HasValue == true)                                                       // GenerateFixCode.cs:98
                             block.AppendCode($"temp.ExternalDiameter.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ExternalDiameter.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.ExternalDiameter.ValueElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.ExternalDiameter.ValueElement.ElementId = \"{fix.ExternalDiameter.ValueElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.ExternalDiameter.ValueElement.ElementId = \"{CleanString(fix.ExternalDiameter.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.ExternalDiameter.ComparatorElement != null)                                                                     // GenerateFixCode.cs:122
                         block.AppendCode($"temp.ExternalDiameter.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.ExternalDiameter.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -4505,36 +4506,36 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.ExternalDiameter.UnitElement = new FhirString();");                                         // GenerateFixCode.cs:184
                         if (fix.ExternalDiameter.UnitElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.ExternalDiameter.UnitElement.Value = \"{fix.ExternalDiameter.UnitElement.Value}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.ExternalDiameter.UnitElement.Value = \"{CleanString(fix.ExternalDiameter.UnitElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.ExternalDiameter.UnitElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.ExternalDiameter.UnitElement.ElementId = \"{fix.ExternalDiameter.UnitElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.ExternalDiameter.UnitElement.ElementId = \"{CleanString(fix.ExternalDiameter.UnitElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.ExternalDiameter.SystemElement != null)                                                                         // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.ExternalDiameter.SystemElement = new FhirUri();");                                          // GenerateFixCode.cs:184
                         if (fix.ExternalDiameter.SystemElement.Value != null)                                                               // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.ExternalDiameter.SystemElement.Value = \"{fix.ExternalDiameter.SystemElement.Value}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.ExternalDiameter.SystemElement.Value = \"{CleanString(fix.ExternalDiameter.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.ExternalDiameter.SystemElement.ElementId != null)                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.ExternalDiameter.SystemElement.ElementId = \"{fix.ExternalDiameter.SystemElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.ExternalDiameter.SystemElement.ElementId = \"{CleanString(fix.ExternalDiameter.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.ExternalDiameter.CodeElement != null)                                                                           // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.ExternalDiameter.CodeElement = new Code();");                                               // GenerateFixCode.cs:184
                         if (fix.ExternalDiameter.CodeElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.ExternalDiameter.CodeElement.Value = \"{fix.ExternalDiameter.CodeElement.Value}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.ExternalDiameter.CodeElement.Value = \"{CleanString(fix.ExternalDiameter.CodeElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.ExternalDiameter.CodeElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.ExternalDiameter.CodeElement.ElementId = \"{fix.ExternalDiameter.CodeElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.ExternalDiameter.CodeElement.ElementId = \"{CleanString(fix.ExternalDiameter.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.ExternalDiameter.ElementId != null)                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ExternalDiameter.ElementId = \"{fix.ExternalDiameter.ElementId}\";");                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ExternalDiameter.ElementId = \"{CleanString(fix.ExternalDiameter.ElementId)}\";");          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ShapeElement != null)                                                                                               // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ShapeElement = new FhirString();");                                                             // GenerateFixCode.cs:184
                     if (fix.ShapeElement.Value != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ShapeElement.Value = \"{fix.ShapeElement.Value}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ShapeElement.Value = \"{CleanString(fix.ShapeElement.Value)}\";");                          // GenerateFixCode.cs:113
                     if (fix.ShapeElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ShapeElement.ElementId = \"{fix.ShapeElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ShapeElement.ElementId = \"{CleanString(fix.ShapeElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ColorElement != null)                                                                                               // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -4544,9 +4545,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp2 = new FhirString();");                                                                  // GenerateFixCode.cs:140
                         if (temp1.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.Value = \"{temp1.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.Value = \"{CleanString(temp1.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.ColorElement.Add(temp2);");                                                                 // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -4559,9 +4560,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp4 = new FhirString();");                                                                  // GenerateFixCode.cs:140
                         if (temp3.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp4.Value = \"{temp3.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp4.Value = \"{CleanString(temp3.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp3.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.ImprintElement.Add(temp4);");                                                               // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -4577,17 +4578,17 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.ContentTypeElement = new Code();");                                                    // GenerateFixCode.cs:184
                             if (temp5.ContentTypeElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.ContentTypeElement.Value = \"{temp5.ContentTypeElement.Value}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.ContentTypeElement.Value = \"{CleanString(temp5.ContentTypeElement.Value)}\";");   // GenerateFixCode.cs:113
                             if (temp5.ContentTypeElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.ContentTypeElement.ElementId = \"{temp5.ContentTypeElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.ContentTypeElement.ElementId = \"{CleanString(temp5.ContentTypeElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.LanguageElement != null)                                                                                  // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.LanguageElement = new Code();");                                                       // GenerateFixCode.cs:184
                             if (temp5.LanguageElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.LanguageElement.Value = \"{temp5.LanguageElement.Value}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.LanguageElement.Value = \"{CleanString(temp5.LanguageElement.Value)}\";");         // GenerateFixCode.cs:113
                             if (temp5.LanguageElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.LanguageElement.ElementId = \"{temp5.LanguageElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.LanguageElement.ElementId = \"{CleanString(temp5.LanguageElement.ElementId)}\";"); // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.DataElement != null)                                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -4616,15 +4617,15 @@ namespace FhirKhit.SliceGen.CSApi
                                 block.CloseBrace(";");                                                                                      // GenerateFixCode.cs:77
                             }                                                                                                               // GenerateFixCode.cs:78
                             if (temp5.DataElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.DataElement.ElementId = \"{temp5.DataElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.DataElement.ElementId = \"{CleanString(temp5.DataElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.UrlElement != null)                                                                                       // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.UrlElement = new FhirUrl();");                                                         // GenerateFixCode.cs:184
                             if (temp5.UrlElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.UrlElement.Value = \"{temp5.UrlElement.Value}\";");                                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.UrlElement.Value = \"{CleanString(temp5.UrlElement.Value)}\";");                   // GenerateFixCode.cs:113
                             if (temp5.UrlElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.UrlElement.ElementId = \"{temp5.UrlElement.ElementId}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.UrlElement.ElementId = \"{CleanString(temp5.UrlElement.ElementId)}\";");           // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.SizeElement != null)                                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -4632,7 +4633,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (temp5.SizeElement.Value.HasValue == true)                                                                   // GenerateFixCode.cs:105
                                 block.AppendCode($"temp6.SizeElement.Value = new Nullable<int>((int) {temp5.SizeElement.Value.Value});");   // GenerateFixCode.cs:106
                             if (temp5.SizeElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.SizeElement.ElementId = \"{temp5.SizeElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.SizeElement.ElementId = \"{CleanString(temp5.SizeElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.HashElement != null)                                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -4661,26 +4662,26 @@ namespace FhirKhit.SliceGen.CSApi
                                 block.CloseBrace(";");                                                                                      // GenerateFixCode.cs:77
                             }                                                                                                               // GenerateFixCode.cs:78
                             if (temp5.HashElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.HashElement.ElementId = \"{temp5.HashElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.HashElement.ElementId = \"{CleanString(temp5.HashElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.TitleElement != null)                                                                                     // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.TitleElement = new FhirString();");                                                    // GenerateFixCode.cs:184
                             if (temp5.TitleElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.TitleElement.Value = \"{temp5.TitleElement.Value}\";");                            // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.TitleElement.Value = \"{CleanString(temp5.TitleElement.Value)}\";");               // GenerateFixCode.cs:113
                             if (temp5.TitleElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.TitleElement.ElementId = \"{temp5.TitleElement.ElementId}\";");                    // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.TitleElement.ElementId = \"{CleanString(temp5.TitleElement.ElementId)}\";");       // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.CreationElement != null)                                                                                  // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.CreationElement = new FhirDateTime();");                                               // GenerateFixCode.cs:184
                             if (temp5.CreationElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.CreationElement.Value = \"{temp5.CreationElement.Value}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.CreationElement.Value = \"{CleanString(temp5.CreationElement.Value)}\";");         // GenerateFixCode.cs:113
                             if (temp5.CreationElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.CreationElement.ElementId = \"{temp5.CreationElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.CreationElement.ElementId = \"{CleanString(temp5.CreationElement.ElementId)}\";"); // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Image.Add(temp6);");                                                                        // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -4699,33 +4700,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp8.SystemElement = new FhirUri();");                                                  // GenerateFixCode.cs:184
                                 if (temp7.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.SystemElement.Value = \"{temp7.SystemElement.Value}\";");                      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.SystemElement.Value = \"{CleanString(temp7.SystemElement.Value)}\";");         // GenerateFixCode.cs:113
                                 if (temp7.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.SystemElement.ElementId = \"{temp7.SystemElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.SystemElement.ElementId = \"{CleanString(temp7.SystemElement.ElementId)}\";"); // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp7.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp8.VersionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp7.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.VersionElement.Value = \"{temp7.VersionElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.VersionElement.Value = \"{CleanString(temp7.VersionElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp7.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.VersionElement.ElementId = \"{temp7.VersionElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.VersionElement.ElementId = \"{CleanString(temp7.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp7.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp8.CodeElement = new Code();");                                                       // GenerateFixCode.cs:184
                                 if (temp7.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.CodeElement.Value = \"{temp7.CodeElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.CodeElement.Value = \"{CleanString(temp7.CodeElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp7.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.CodeElement.ElementId = \"{temp7.CodeElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.CodeElement.ElementId = \"{CleanString(temp7.CodeElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp7.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp8.DisplayElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp7.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.DisplayElement.Value = \"{temp7.DisplayElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.DisplayElement.Value = \"{CleanString(temp7.DisplayElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp7.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.DisplayElement.ElementId = \"{temp7.DisplayElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.DisplayElement.ElementId = \"{CleanString(temp7.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp7.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -4738,10 +4739,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp8.UserSelectedElement.Value = false;");                                      // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp7.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.UserSelectedElement.ElementId = \"{temp7.UserSelectedElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.UserSelectedElement.ElementId = \"{CleanString(temp7.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp7.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp8.ElementId = \"{temp7.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp8.ElementId = \"{CleanString(temp7.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Scoring.Coding.Add(temp8);");                                                           // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -4750,15 +4751,15 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Scoring.TextElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                         if (fix.Scoring.TextElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Scoring.TextElement.Value = \"{fix.Scoring.TextElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Scoring.TextElement.Value = \"{CleanString(fix.Scoring.TextElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Scoring.TextElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Scoring.TextElement.ElementId = \"{fix.Scoring.TextElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Scoring.TextElement.ElementId = \"{CleanString(fix.Scoring.TextElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Scoring.ElementId != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Scoring.ElementId = \"{fix.Scoring.ElementId}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Scoring.ElementId = \"{CleanString(fix.Scoring.ElementId)}\";");                            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -4802,33 +4803,33 @@ namespace FhirKhit.SliceGen.CSApi
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp2.SystemElement = new FhirUri();");                                              // GenerateFixCode.cs:184
                                     if (temp1.SystemElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.SystemElement.Value = \"{temp1.SystemElement.Value}\";");                  // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.SystemElement.Value = \"{CleanString(temp1.SystemElement.Value)}\";");     // GenerateFixCode.cs:113
                                     if (temp1.SystemElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.SystemElement.ElementId = \"{temp1.SystemElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.SystemElement.ElementId = \"{CleanString(temp1.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp1.VersionElement != null)                                                                           // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp2.VersionElement = new FhirString();");                                          // GenerateFixCode.cs:184
                                     if (temp1.VersionElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.VersionElement.Value = \"{temp1.VersionElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.VersionElement.Value = \"{CleanString(temp1.VersionElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp1.VersionElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.VersionElement.ElementId = \"{temp1.VersionElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.VersionElement.ElementId = \"{CleanString(temp1.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp1.CodeElement != null)                                                                              // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp2.CodeElement = new Code();");                                                   // GenerateFixCode.cs:184
                                     if (temp1.CodeElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.CodeElement.Value = \"{temp1.CodeElement.Value}\";");                      // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.CodeElement.Value = \"{CleanString(temp1.CodeElement.Value)}\";");         // GenerateFixCode.cs:113
                                     if (temp1.CodeElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.CodeElement.ElementId = \"{temp1.CodeElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.CodeElement.ElementId = \"{CleanString(temp1.CodeElement.ElementId)}\";"); // GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp1.DisplayElement != null)                                                                           // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp2.DisplayElement = new FhirString();");                                          // GenerateFixCode.cs:184
                                     if (temp1.DisplayElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.DisplayElement.Value = \"{temp1.DisplayElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.DisplayElement.Value = \"{CleanString(temp1.DisplayElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp1.DisplayElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.DisplayElement.ElementId = \"{temp1.DisplayElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.DisplayElement.ElementId = \"{CleanString(temp1.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp1.UserSelectedElement != null)                                                                      // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
@@ -4841,10 +4842,10 @@ namespace FhirKhit.SliceGen.CSApi
                                             block.AppendCode($"temp2.UserSelectedElement.Value = false;");                                  // GenerateFixCode.cs:49
                                     }                                                                                                       // GenerateFixCode.cs:50
                                     if (temp1.UserSelectedElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{temp1.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{CleanString(temp1.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp1.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                             // GenerateFixCode.cs:113
                                 block.AppendCode($"temp.Identifier.Type.Coding.Add(temp2);");                                               // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -4853,28 +4854,28 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.Identifier.Type.TextElement = new FhirString();");                                      // GenerateFixCode.cs:184
                             if (fix.Identifier.Type.TextElement.Value != null)                                                              // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Type.TextElement.Value = \"{fix.Identifier.Type.TextElement.Value}\";"); // GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Type.TextElement.Value = \"{CleanString(fix.Identifier.Type.TextElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.Identifier.Type.TextElement.ElementId != null)                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Type.TextElement.ElementId = \"{fix.Identifier.Type.TextElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Type.TextElement.ElementId = \"{CleanString(fix.Identifier.Type.TextElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Identifier.Type.ElementId != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.Type.ElementId = \"{fix.Identifier.Type.ElementId}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.Type.ElementId = \"{CleanString(fix.Identifier.Type.ElementId)}\";");        // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Identifier.SystemElement != null)                                                                               // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Identifier.SystemElement = new FhirUri();");                                                // GenerateFixCode.cs:184
                         if (fix.Identifier.SystemElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.SystemElement.Value = \"{fix.Identifier.SystemElement.Value}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.SystemElement.Value = \"{CleanString(fix.Identifier.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Identifier.SystemElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.SystemElement.ElementId = \"{fix.Identifier.SystemElement.ElementId}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.SystemElement.ElementId = \"{CleanString(fix.Identifier.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Identifier.ValueElement != null)                                                                                // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Identifier.ValueElement = new FhirString();");                                              // GenerateFixCode.cs:184
                         if (fix.Identifier.ValueElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.ValueElement.Value = \"{fix.Identifier.ValueElement.Value}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.ValueElement.Value = \"{CleanString(fix.Identifier.ValueElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Identifier.ValueElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.ValueElement.ElementId = \"{fix.Identifier.ValueElement.ElementId}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.ValueElement.ElementId = \"{CleanString(fix.Identifier.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Identifier.Period != null)                                                                                      // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -4883,23 +4884,23 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.Identifier.Period.StartElement = new FhirDateTime();");                                 // GenerateFixCode.cs:184
                             if (fix.Identifier.Period.StartElement.Value != null)                                                           // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Period.StartElement.Value = \"{fix.Identifier.Period.StartElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Period.StartElement.Value = \"{CleanString(fix.Identifier.Period.StartElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.Identifier.Period.StartElement.ElementId != null)                                                       // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Period.StartElement.ElementId = \"{fix.Identifier.Period.StartElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Period.StartElement.ElementId = \"{CleanString(fix.Identifier.Period.StartElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Identifier.Period.EndElement != null)                                                                       // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.Identifier.Period.EndElement = new FhirDateTime();");                                   // GenerateFixCode.cs:184
                             if (fix.Identifier.Period.EndElement.Value != null)                                                             // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Period.EndElement.Value = \"{fix.Identifier.Period.EndElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Period.EndElement.Value = \"{CleanString(fix.Identifier.Period.EndElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.Identifier.Period.EndElement.ElementId != null)                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Period.EndElement.ElementId = \"{fix.Identifier.Period.EndElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Period.EndElement.ElementId = \"{CleanString(fix.Identifier.Period.EndElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Identifier.Period.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.Period.ElementId = \"{fix.Identifier.Period.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.Period.ElementId = \"{CleanString(fix.Identifier.Period.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Identifier.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Identifier.ElementId = \"{fix.Identifier.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Identifier.ElementId = \"{CleanString(fix.Identifier.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Type != null)                                                                                                       // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -4915,33 +4916,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.SystemElement = new FhirUri();");                                                  // GenerateFixCode.cs:184
                                 if (temp3.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.SystemElement.Value = \"{temp3.SystemElement.Value}\";");                      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.SystemElement.Value = \"{CleanString(temp3.SystemElement.Value)}\";");         // GenerateFixCode.cs:113
                                 if (temp3.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.SystemElement.ElementId = \"{temp3.SystemElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.SystemElement.ElementId = \"{CleanString(temp3.SystemElement.ElementId)}\";"); // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.VersionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp3.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.VersionElement.Value = \"{temp3.VersionElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.VersionElement.Value = \"{CleanString(temp3.VersionElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp3.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.VersionElement.ElementId = \"{temp3.VersionElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.VersionElement.ElementId = \"{CleanString(temp3.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.CodeElement = new Code();");                                                       // GenerateFixCode.cs:184
                                 if (temp3.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.CodeElement.Value = \"{temp3.CodeElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.CodeElement.Value = \"{CleanString(temp3.CodeElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp3.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.CodeElement.ElementId = \"{temp3.CodeElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.CodeElement.ElementId = \"{CleanString(temp3.CodeElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp4.DisplayElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp3.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.DisplayElement.Value = \"{temp3.DisplayElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.DisplayElement.Value = \"{CleanString(temp3.DisplayElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp3.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.DisplayElement.ElementId = \"{temp3.DisplayElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.DisplayElement.ElementId = \"{CleanString(temp3.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -4954,10 +4955,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp4.UserSelectedElement.Value = false;");                                      // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp3.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{temp3.UserSelectedElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.UserSelectedElement.ElementId = \"{CleanString(temp3.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp3.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Type.Coding.Add(temp4);");                                                              // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -4966,12 +4967,12 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Type.TextElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                         if (fix.Type.TextElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Type.TextElement.Value = \"{fix.Type.TextElement.Value}\";");                           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Type.TextElement.Value = \"{CleanString(fix.Type.TextElement.Value)}\";");              // GenerateFixCode.cs:113
                         if (fix.Type.TextElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Type.TextElement.ElementId = \"{fix.Type.TextElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Type.TextElement.ElementId = \"{CleanString(fix.Type.TextElement.ElementId)}\";");      // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Type.ElementId != null)                                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Type.ElementId = \"{fix.Type.ElementId}\";");                                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Type.ElementId = \"{CleanString(fix.Type.ElementId)}\";");                                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Period != null)                                                                                                     // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -4982,7 +4983,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Period.ValueElement.Value.HasValue == true)                                                                 // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Period.ValueElement.Value = new Nullable<decimal>((decimal) {fix.Period.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Period.ValueElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.ValueElement.ElementId = \"{fix.Period.ValueElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.ValueElement.ElementId = \"{CleanString(fix.Period.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.ComparatorElement != null)                                                                               // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Period.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.Period.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -4990,28 +4991,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.UnitElement = new FhirString();");                                                   // GenerateFixCode.cs:184
                         if (fix.Period.UnitElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.UnitElement.Value = \"{fix.Period.UnitElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.UnitElement.Value = \"{CleanString(fix.Period.UnitElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Period.UnitElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.UnitElement.ElementId = \"{fix.Period.UnitElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.UnitElement.ElementId = \"{CleanString(fix.Period.UnitElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.SystemElement != null)                                                                                   // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.SystemElement = new FhirUri();");                                                    // GenerateFixCode.cs:184
                         if (fix.Period.SystemElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.SystemElement.Value = \"{fix.Period.SystemElement.Value}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.SystemElement.Value = \"{CleanString(fix.Period.SystemElement.Value)}\";");      // GenerateFixCode.cs:113
                         if (fix.Period.SystemElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.SystemElement.ElementId = \"{fix.Period.SystemElement.ElementId}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.SystemElement.ElementId = \"{CleanString(fix.Period.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.CodeElement != null)                                                                                     // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Period.CodeElement = new Code();");                                                         // GenerateFixCode.cs:184
                         if (fix.Period.CodeElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.CodeElement.Value = \"{fix.Period.CodeElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.CodeElement.Value = \"{CleanString(fix.Period.CodeElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Period.CodeElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Period.CodeElement.ElementId = \"{fix.Period.CodeElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Period.CodeElement.ElementId = \"{CleanString(fix.Period.CodeElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Period.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Period.ElementId = \"{fix.Period.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Period.ElementId = \"{CleanString(fix.Period.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SpecialPrecautionsForStorage != null)                                                                               // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -5031,33 +5032,33 @@ namespace FhirKhit.SliceGen.CSApi
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.SystemElement = new FhirUri();");                                              // GenerateFixCode.cs:184
                                     if (temp7.SystemElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.SystemElement.Value = \"{temp7.SystemElement.Value}\";");                  // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.SystemElement.Value = \"{CleanString(temp7.SystemElement.Value)}\";");     // GenerateFixCode.cs:113
                                     if (temp7.SystemElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.SystemElement.ElementId = \"{temp7.SystemElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.SystemElement.ElementId = \"{CleanString(temp7.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.VersionElement != null)                                                                           // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.VersionElement = new FhirString();");                                          // GenerateFixCode.cs:184
                                     if (temp7.VersionElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.VersionElement.Value = \"{temp7.VersionElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.VersionElement.Value = \"{CleanString(temp7.VersionElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp7.VersionElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.VersionElement.ElementId = \"{temp7.VersionElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.VersionElement.ElementId = \"{CleanString(temp7.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.CodeElement != null)                                                                              // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.CodeElement = new Code();");                                                   // GenerateFixCode.cs:184
                                     if (temp7.CodeElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.CodeElement.Value = \"{temp7.CodeElement.Value}\";");                      // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.CodeElement.Value = \"{CleanString(temp7.CodeElement.Value)}\";");         // GenerateFixCode.cs:113
                                     if (temp7.CodeElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.CodeElement.ElementId = \"{temp7.CodeElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.CodeElement.ElementId = \"{CleanString(temp7.CodeElement.ElementId)}\";"); // GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.DisplayElement != null)                                                                           // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.DisplayElement = new FhirString();");                                          // GenerateFixCode.cs:184
                                     if (temp7.DisplayElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.DisplayElement.Value = \"{temp7.DisplayElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.DisplayElement.Value = \"{CleanString(temp7.DisplayElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp7.DisplayElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.DisplayElement.ElementId = \"{temp7.DisplayElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.DisplayElement.ElementId = \"{CleanString(temp7.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.UserSelectedElement != null)                                                                      // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
@@ -5070,10 +5071,10 @@ namespace FhirKhit.SliceGen.CSApi
                                             block.AppendCode($"temp8.UserSelectedElement.Value = false;");                                  // GenerateFixCode.cs:49
                                     }                                                                                                       // GenerateFixCode.cs:50
                                     if (temp7.UserSelectedElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.UserSelectedElement.ElementId = \"{temp7.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.UserSelectedElement.ElementId = \"{CleanString(temp7.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.ElementId = \"{temp7.ElementId}\";");                                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.ElementId = \"{CleanString(temp7.ElementId)}\";");                             // GenerateFixCode.cs:113
                                 block.AppendCode($"temp6.Coding.Add(temp8);");                                                              // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -5082,18 +5083,18 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp6.TextElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                             if (temp5.TextElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.TextElement.Value = \"{temp5.TextElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.TextElement.Value = \"{CleanString(temp5.TextElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp5.TextElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.TextElement.ElementId = \"{temp5.TextElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.TextElement.ElementId = \"{CleanString(temp5.TextElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp5.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.SpecialPrecautionsForStorage.Add(temp6);");                                                 // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
                 }                                                                                                                           // GenerateFixCode.cs:149
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -5124,7 +5125,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.ValueElement.Value.HasValue == true)                                                                            // GenerateFixCode.cs:98
                         block.AppendCode($"temp.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ValueElement.Value.Value});");    // GenerateFixCode.cs:99
                     if (fix.ValueElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.ElementId = \"{fix.ValueElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.ElementId = \"{CleanString(fix.ValueElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ComparatorElement != null)                                                                                          // GenerateFixCode.cs:122
                     block.AppendCode($"temp.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -5132,28 +5133,28 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.UnitElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.UnitElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.Value = \"{fix.UnitElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.Value = \"{CleanString(fix.UnitElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.UnitElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.ElementId = \"{fix.UnitElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.ElementId = \"{CleanString(fix.UnitElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SystemElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SystemElement = new FhirUri();");                                                               // GenerateFixCode.cs:184
                     if (fix.SystemElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.Value = \"{fix.SystemElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.Value = \"{CleanString(fix.SystemElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.SystemElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.ElementId = \"{fix.SystemElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.ElementId = \"{CleanString(fix.SystemElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CodeElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CodeElement = new Code();");                                                                    // GenerateFixCode.cs:184
                     if (fix.CodeElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.Value = \"{fix.CodeElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.Value = \"{CleanString(fix.CodeElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.CodeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.ElementId = \"{fix.CodeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.ElementId = \"{CleanString(fix.CodeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -5187,7 +5188,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Low.ValueElement.Value.HasValue == true)                                                                    // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Low.ValueElement.Value = new Nullable<decimal>((decimal) {fix.Low.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Low.ValueElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Low.ValueElement.ElementId = \"{fix.Low.ValueElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Low.ValueElement.ElementId = \"{CleanString(fix.Low.ValueElement.ElementId)}\";");      // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Low.ComparatorElement != null)                                                                                  // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Low.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.Low.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -5195,28 +5196,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Low.UnitElement = new FhirString();");                                                      // GenerateFixCode.cs:184
                         if (fix.Low.UnitElement.Value != null)                                                                              // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Low.UnitElement.Value = \"{fix.Low.UnitElement.Value}\";");                             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Low.UnitElement.Value = \"{CleanString(fix.Low.UnitElement.Value)}\";");                // GenerateFixCode.cs:113
                         if (fix.Low.UnitElement.ElementId != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Low.UnitElement.ElementId = \"{fix.Low.UnitElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Low.UnitElement.ElementId = \"{CleanString(fix.Low.UnitElement.ElementId)}\";");        // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Low.SystemElement != null)                                                                                      // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Low.SystemElement = new FhirUri();");                                                       // GenerateFixCode.cs:184
                         if (fix.Low.SystemElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Low.SystemElement.Value = \"{fix.Low.SystemElement.Value}\";");                         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Low.SystemElement.Value = \"{CleanString(fix.Low.SystemElement.Value)}\";");            // GenerateFixCode.cs:113
                         if (fix.Low.SystemElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Low.SystemElement.ElementId = \"{fix.Low.SystemElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Low.SystemElement.ElementId = \"{CleanString(fix.Low.SystemElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Low.CodeElement != null)                                                                                        // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Low.CodeElement = new Code();");                                                            // GenerateFixCode.cs:184
                         if (fix.Low.CodeElement.Value != null)                                                                              // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Low.CodeElement.Value = \"{fix.Low.CodeElement.Value}\";");                             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Low.CodeElement.Value = \"{CleanString(fix.Low.CodeElement.Value)}\";");                // GenerateFixCode.cs:113
                         if (fix.Low.CodeElement.ElementId != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Low.CodeElement.ElementId = \"{fix.Low.CodeElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Low.CodeElement.ElementId = \"{CleanString(fix.Low.CodeElement.ElementId)}\";");        // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Low.ElementId != null)                                                                                          // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Low.ElementId = \"{fix.Low.ElementId}\";");                                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Low.ElementId = \"{CleanString(fix.Low.ElementId)}\";");                                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.High != null)                                                                                                       // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -5227,7 +5228,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.High.ValueElement.Value.HasValue == true)                                                                   // GenerateFixCode.cs:98
                             block.AppendCode($"temp.High.ValueElement.Value = new Nullable<decimal>((decimal) {fix.High.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.High.ValueElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.High.ValueElement.ElementId = \"{fix.High.ValueElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.High.ValueElement.ElementId = \"{CleanString(fix.High.ValueElement.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.High.ComparatorElement != null)                                                                                 // GenerateFixCode.cs:122
                         block.AppendCode($"temp.High.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.High.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -5235,31 +5236,31 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.High.UnitElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                         if (fix.High.UnitElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.High.UnitElement.Value = \"{fix.High.UnitElement.Value}\";");                           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.High.UnitElement.Value = \"{CleanString(fix.High.UnitElement.Value)}\";");              // GenerateFixCode.cs:113
                         if (fix.High.UnitElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.High.UnitElement.ElementId = \"{fix.High.UnitElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.High.UnitElement.ElementId = \"{CleanString(fix.High.UnitElement.ElementId)}\";");      // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.High.SystemElement != null)                                                                                     // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.High.SystemElement = new FhirUri();");                                                      // GenerateFixCode.cs:184
                         if (fix.High.SystemElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.High.SystemElement.Value = \"{fix.High.SystemElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.High.SystemElement.Value = \"{CleanString(fix.High.SystemElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.High.SystemElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.High.SystemElement.ElementId = \"{fix.High.SystemElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.High.SystemElement.ElementId = \"{CleanString(fix.High.SystemElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.High.CodeElement != null)                                                                                       // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.High.CodeElement = new Code();");                                                           // GenerateFixCode.cs:184
                         if (fix.High.CodeElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.High.CodeElement.Value = \"{fix.High.CodeElement.Value}\";");                           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.High.CodeElement.Value = \"{CleanString(fix.High.CodeElement.Value)}\";");              // GenerateFixCode.cs:113
                         if (fix.High.CodeElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.High.CodeElement.ElementId = \"{fix.High.CodeElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.High.CodeElement.ElementId = \"{CleanString(fix.High.CodeElement.ElementId)}\";");      // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.High.ElementId != null)                                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.High.ElementId = \"{fix.High.ElementId}\";");                                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.High.ElementId = \"{CleanString(fix.High.ElementId)}\";");                                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -5293,7 +5294,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Numerator.ValueElement.Value.HasValue == true)                                                              // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Numerator.ValueElement.Value = new Nullable<decimal>((decimal) {fix.Numerator.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Numerator.ValueElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Numerator.ValueElement.ElementId = \"{fix.Numerator.ValueElement.ElementId}\";");       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Numerator.ValueElement.ElementId = \"{CleanString(fix.Numerator.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Numerator.ComparatorElement != null)                                                                            // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Numerator.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.Numerator.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -5301,28 +5302,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Numerator.UnitElement = new FhirString();");                                                // GenerateFixCode.cs:184
                         if (fix.Numerator.UnitElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Numerator.UnitElement.Value = \"{fix.Numerator.UnitElement.Value}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Numerator.UnitElement.Value = \"{CleanString(fix.Numerator.UnitElement.Value)}\";");    // GenerateFixCode.cs:113
                         if (fix.Numerator.UnitElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Numerator.UnitElement.ElementId = \"{fix.Numerator.UnitElement.ElementId}\";");         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Numerator.UnitElement.ElementId = \"{CleanString(fix.Numerator.UnitElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Numerator.SystemElement != null)                                                                                // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Numerator.SystemElement = new FhirUri();");                                                 // GenerateFixCode.cs:184
                         if (fix.Numerator.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Numerator.SystemElement.Value = \"{fix.Numerator.SystemElement.Value}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Numerator.SystemElement.Value = \"{CleanString(fix.Numerator.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Numerator.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Numerator.SystemElement.ElementId = \"{fix.Numerator.SystemElement.ElementId}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Numerator.SystemElement.ElementId = \"{CleanString(fix.Numerator.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Numerator.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Numerator.CodeElement = new Code();");                                                      // GenerateFixCode.cs:184
                         if (fix.Numerator.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Numerator.CodeElement.Value = \"{fix.Numerator.CodeElement.Value}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Numerator.CodeElement.Value = \"{CleanString(fix.Numerator.CodeElement.Value)}\";");    // GenerateFixCode.cs:113
                         if (fix.Numerator.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Numerator.CodeElement.ElementId = \"{fix.Numerator.CodeElement.ElementId}\";");         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Numerator.CodeElement.ElementId = \"{CleanString(fix.Numerator.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Numerator.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Numerator.ElementId = \"{fix.Numerator.ElementId}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Numerator.ElementId = \"{CleanString(fix.Numerator.ElementId)}\";");                        // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Denominator != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -5333,7 +5334,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Denominator.ValueElement.Value.HasValue == true)                                                            // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Denominator.ValueElement.Value = new Nullable<decimal>((decimal) {fix.Denominator.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Denominator.ValueElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Denominator.ValueElement.ElementId = \"{fix.Denominator.ValueElement.ElementId}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Denominator.ValueElement.ElementId = \"{CleanString(fix.Denominator.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Denominator.ComparatorElement != null)                                                                          // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Denominator.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.Denominator.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -5341,31 +5342,31 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Denominator.UnitElement = new FhirString();");                                              // GenerateFixCode.cs:184
                         if (fix.Denominator.UnitElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Denominator.UnitElement.Value = \"{fix.Denominator.UnitElement.Value}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Denominator.UnitElement.Value = \"{CleanString(fix.Denominator.UnitElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Denominator.UnitElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Denominator.UnitElement.ElementId = \"{fix.Denominator.UnitElement.ElementId}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Denominator.UnitElement.ElementId = \"{CleanString(fix.Denominator.UnitElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Denominator.SystemElement != null)                                                                              // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Denominator.SystemElement = new FhirUri();");                                               // GenerateFixCode.cs:184
                         if (fix.Denominator.SystemElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Denominator.SystemElement.Value = \"{fix.Denominator.SystemElement.Value}\";");         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Denominator.SystemElement.Value = \"{CleanString(fix.Denominator.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Denominator.SystemElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Denominator.SystemElement.ElementId = \"{fix.Denominator.SystemElement.ElementId}\";"); // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Denominator.SystemElement.ElementId = \"{CleanString(fix.Denominator.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Denominator.CodeElement != null)                                                                                // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Denominator.CodeElement = new Code();");                                                    // GenerateFixCode.cs:184
                         if (fix.Denominator.CodeElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Denominator.CodeElement.Value = \"{fix.Denominator.CodeElement.Value}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Denominator.CodeElement.Value = \"{CleanString(fix.Denominator.CodeElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Denominator.CodeElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Denominator.CodeElement.ElementId = \"{fix.Denominator.CodeElement.ElementId}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Denominator.CodeElement.ElementId = \"{CleanString(fix.Denominator.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Denominator.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Denominator.ElementId = \"{fix.Denominator.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Denominator.ElementId = \"{CleanString(fix.Denominator.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -5394,17 +5395,17 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ReferenceElement = new FhirString();");                                                         // GenerateFixCode.cs:184
                     if (fix.ReferenceElement.Value != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ReferenceElement.Value = \"{fix.ReferenceElement.Value}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ReferenceElement.Value = \"{CleanString(fix.ReferenceElement.Value)}\";");                  // GenerateFixCode.cs:113
                     if (fix.ReferenceElement.ElementId != null)                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ReferenceElement.ElementId = \"{fix.ReferenceElement.ElementId}\";");                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ReferenceElement.ElementId = \"{CleanString(fix.ReferenceElement.ElementId)}\";");          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.TypeElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.TypeElement = new FhirUri();");                                                                 // GenerateFixCode.cs:184
                     if (fix.TypeElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TypeElement.Value = \"{fix.TypeElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TypeElement.Value = \"{CleanString(fix.TypeElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.TypeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TypeElement.ElementId = \"{fix.TypeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TypeElement.ElementId = \"{CleanString(fix.TypeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Identifier != null)                                                                                                 // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -5425,33 +5426,33 @@ namespace FhirKhit.SliceGen.CSApi
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp2.SystemElement = new FhirUri();");                                              // GenerateFixCode.cs:184
                                     if (temp1.SystemElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.SystemElement.Value = \"{temp1.SystemElement.Value}\";");                  // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.SystemElement.Value = \"{CleanString(temp1.SystemElement.Value)}\";");     // GenerateFixCode.cs:113
                                     if (temp1.SystemElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.SystemElement.ElementId = \"{temp1.SystemElement.ElementId}\";");          // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.SystemElement.ElementId = \"{CleanString(temp1.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp1.VersionElement != null)                                                                           // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp2.VersionElement = new FhirString();");                                          // GenerateFixCode.cs:184
                                     if (temp1.VersionElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.VersionElement.Value = \"{temp1.VersionElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.VersionElement.Value = \"{CleanString(temp1.VersionElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp1.VersionElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.VersionElement.ElementId = \"{temp1.VersionElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.VersionElement.ElementId = \"{CleanString(temp1.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp1.CodeElement != null)                                                                              // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp2.CodeElement = new Code();");                                                   // GenerateFixCode.cs:184
                                     if (temp1.CodeElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.CodeElement.Value = \"{temp1.CodeElement.Value}\";");                      // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.CodeElement.Value = \"{CleanString(temp1.CodeElement.Value)}\";");         // GenerateFixCode.cs:113
                                     if (temp1.CodeElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.CodeElement.ElementId = \"{temp1.CodeElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.CodeElement.ElementId = \"{CleanString(temp1.CodeElement.ElementId)}\";"); // GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp1.DisplayElement != null)                                                                           // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp2.DisplayElement = new FhirString();");                                          // GenerateFixCode.cs:184
                                     if (temp1.DisplayElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.DisplayElement.Value = \"{temp1.DisplayElement.Value}\";");                // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.DisplayElement.Value = \"{CleanString(temp1.DisplayElement.Value)}\";");   // GenerateFixCode.cs:113
                                     if (temp1.DisplayElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.DisplayElement.ElementId = \"{temp1.DisplayElement.ElementId}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.DisplayElement.ElementId = \"{CleanString(temp1.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp1.UserSelectedElement != null)                                                                      // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
@@ -5464,10 +5465,10 @@ namespace FhirKhit.SliceGen.CSApi
                                             block.AppendCode($"temp2.UserSelectedElement.Value = false;");                                  // GenerateFixCode.cs:49
                                     }                                                                                                       // GenerateFixCode.cs:50
                                     if (temp1.UserSelectedElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{temp1.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                        block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{CleanString(temp1.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp1.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                             // GenerateFixCode.cs:113
                                 block.AppendCode($"temp.Identifier.Type.Coding.Add(temp2);");                                               // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -5476,28 +5477,28 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.Identifier.Type.TextElement = new FhirString();");                                      // GenerateFixCode.cs:184
                             if (fix.Identifier.Type.TextElement.Value != null)                                                              // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Type.TextElement.Value = \"{fix.Identifier.Type.TextElement.Value}\";"); // GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Type.TextElement.Value = \"{CleanString(fix.Identifier.Type.TextElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.Identifier.Type.TextElement.ElementId != null)                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Type.TextElement.ElementId = \"{fix.Identifier.Type.TextElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Type.TextElement.ElementId = \"{CleanString(fix.Identifier.Type.TextElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Identifier.Type.ElementId != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.Type.ElementId = \"{fix.Identifier.Type.ElementId}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.Type.ElementId = \"{CleanString(fix.Identifier.Type.ElementId)}\";");        // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Identifier.SystemElement != null)                                                                               // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Identifier.SystemElement = new FhirUri();");                                                // GenerateFixCode.cs:184
                         if (fix.Identifier.SystemElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.SystemElement.Value = \"{fix.Identifier.SystemElement.Value}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.SystemElement.Value = \"{CleanString(fix.Identifier.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Identifier.SystemElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.SystemElement.ElementId = \"{fix.Identifier.SystemElement.ElementId}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.SystemElement.ElementId = \"{CleanString(fix.Identifier.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Identifier.ValueElement != null)                                                                                // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Identifier.ValueElement = new FhirString();");                                              // GenerateFixCode.cs:184
                         if (fix.Identifier.ValueElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.ValueElement.Value = \"{fix.Identifier.ValueElement.Value}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.ValueElement.Value = \"{CleanString(fix.Identifier.ValueElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Identifier.ValueElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.ValueElement.ElementId = \"{fix.Identifier.ValueElement.ElementId}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.ValueElement.ElementId = \"{CleanString(fix.Identifier.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Identifier.Period != null)                                                                                      // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -5506,34 +5507,34 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.Identifier.Period.StartElement = new FhirDateTime();");                                 // GenerateFixCode.cs:184
                             if (fix.Identifier.Period.StartElement.Value != null)                                                           // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Period.StartElement.Value = \"{fix.Identifier.Period.StartElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Period.StartElement.Value = \"{CleanString(fix.Identifier.Period.StartElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.Identifier.Period.StartElement.ElementId != null)                                                       // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Period.StartElement.ElementId = \"{fix.Identifier.Period.StartElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Period.StartElement.ElementId = \"{CleanString(fix.Identifier.Period.StartElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Identifier.Period.EndElement != null)                                                                       // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.Identifier.Period.EndElement = new FhirDateTime();");                                   // GenerateFixCode.cs:184
                             if (fix.Identifier.Period.EndElement.Value != null)                                                             // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Period.EndElement.Value = \"{fix.Identifier.Period.EndElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Period.EndElement.Value = \"{CleanString(fix.Identifier.Period.EndElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.Identifier.Period.EndElement.ElementId != null)                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.Identifier.Period.EndElement.ElementId = \"{fix.Identifier.Period.EndElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.Identifier.Period.EndElement.ElementId = \"{CleanString(fix.Identifier.Period.EndElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.Identifier.Period.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Identifier.Period.ElementId = \"{fix.Identifier.Period.ElementId}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Identifier.Period.ElementId = \"{CleanString(fix.Identifier.Period.ElementId)}\";");    // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Identifier.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Identifier.ElementId = \"{fix.Identifier.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Identifier.ElementId = \"{CleanString(fix.Identifier.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DisplayElement != null)                                                                                             // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.DisplayElement = new FhirString();");                                                           // GenerateFixCode.cs:184
                     if (fix.DisplayElement.Value != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DisplayElement.Value = \"{fix.DisplayElement.Value}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DisplayElement.Value = \"{CleanString(fix.DisplayElement.Value)}\";");                      // GenerateFixCode.cs:113
                     if (fix.DisplayElement.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DisplayElement.ElementId = \"{fix.DisplayElement.ElementId}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DisplayElement.ElementId = \"{CleanString(fix.DisplayElement.ElementId)}\";");              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -5564,33 +5565,33 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.LabelElement = new FhirString();");                                                             // GenerateFixCode.cs:184
                     if (fix.LabelElement.Value != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LabelElement.Value = \"{fix.LabelElement.Value}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LabelElement.Value = \"{CleanString(fix.LabelElement.Value)}\";");                          // GenerateFixCode.cs:113
                     if (fix.LabelElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LabelElement.ElementId = \"{fix.LabelElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LabelElement.ElementId = \"{CleanString(fix.LabelElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DisplayElement != null)                                                                                             // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.DisplayElement = new FhirString();");                                                           // GenerateFixCode.cs:184
                     if (fix.DisplayElement.Value != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DisplayElement.Value = \"{fix.DisplayElement.Value}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DisplayElement.Value = \"{CleanString(fix.DisplayElement.Value)}\";");                      // GenerateFixCode.cs:113
                     if (fix.DisplayElement.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DisplayElement.ElementId = \"{fix.DisplayElement.ElementId}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DisplayElement.ElementId = \"{CleanString(fix.DisplayElement.ElementId)}\";");              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Citation != null)                                                                                                   // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.Citation = new Markdown();");                                                                   // GenerateFixCode.cs:184
                     if (fix.Citation.Value != null)                                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Citation.Value = \"{fix.Citation.Value}\";");                                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Citation.Value = \"{CleanString(fix.Citation.Value)}\";");                                  // GenerateFixCode.cs:113
                     if (fix.Citation.ElementId != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Citation.ElementId = \"{fix.Citation.ElementId}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Citation.ElementId = \"{CleanString(fix.Citation.ElementId)}\";");                          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.UrlElement != null)                                                                                                 // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.UrlElement = new FhirUrl();");                                                                  // GenerateFixCode.cs:184
                     if (fix.UrlElement.Value != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UrlElement.Value = \"{fix.UrlElement.Value}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UrlElement.Value = \"{CleanString(fix.UrlElement.Value)}\";");                              // GenerateFixCode.cs:113
                     if (fix.UrlElement.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UrlElement.ElementId = \"{fix.UrlElement.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UrlElement.ElementId = \"{CleanString(fix.UrlElement.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Document != null)                                                                                                   // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -5599,17 +5600,17 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Document.ContentTypeElement = new Code();");                                                // GenerateFixCode.cs:184
                         if (fix.Document.ContentTypeElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.ContentTypeElement.Value = \"{fix.Document.ContentTypeElement.Value}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.ContentTypeElement.Value = \"{CleanString(fix.Document.ContentTypeElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Document.ContentTypeElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.ContentTypeElement.ElementId = \"{fix.Document.ContentTypeElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.ContentTypeElement.ElementId = \"{CleanString(fix.Document.ContentTypeElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Document.LanguageElement != null)                                                                               // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Document.LanguageElement = new Code();");                                                   // GenerateFixCode.cs:184
                         if (fix.Document.LanguageElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.LanguageElement.Value = \"{fix.Document.LanguageElement.Value}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.LanguageElement.Value = \"{CleanString(fix.Document.LanguageElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Document.LanguageElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.LanguageElement.ElementId = \"{fix.Document.LanguageElement.ElementId}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.LanguageElement.ElementId = \"{CleanString(fix.Document.LanguageElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Document.DataElement != null)                                                                                   // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -5638,15 +5639,15 @@ namespace FhirKhit.SliceGen.CSApi
                             block.CloseBrace(";");                                                                                          // GenerateFixCode.cs:77
                         }                                                                                                                   // GenerateFixCode.cs:78
                         if (fix.Document.DataElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.DataElement.ElementId = \"{fix.Document.DataElement.ElementId}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.DataElement.ElementId = \"{CleanString(fix.Document.DataElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Document.UrlElement != null)                                                                                    // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Document.UrlElement = new FhirUrl();");                                                     // GenerateFixCode.cs:184
                         if (fix.Document.UrlElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.UrlElement.Value = \"{fix.Document.UrlElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.UrlElement.Value = \"{CleanString(fix.Document.UrlElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Document.UrlElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.UrlElement.ElementId = \"{fix.Document.UrlElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.UrlElement.ElementId = \"{CleanString(fix.Document.UrlElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Document.SizeElement != null)                                                                                   // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -5654,7 +5655,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Document.SizeElement.Value.HasValue == true)                                                                // GenerateFixCode.cs:105
                             block.AppendCode($"temp.Document.SizeElement.Value = new Nullable<int>((int) {fix.Document.SizeElement.Value.Value});");// GenerateFixCode.cs:106
                         if (fix.Document.SizeElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.SizeElement.ElementId = \"{fix.Document.SizeElement.ElementId}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.SizeElement.ElementId = \"{CleanString(fix.Document.SizeElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Document.HashElement != null)                                                                                   // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -5683,37 +5684,37 @@ namespace FhirKhit.SliceGen.CSApi
                             block.CloseBrace(";");                                                                                          // GenerateFixCode.cs:77
                         }                                                                                                                   // GenerateFixCode.cs:78
                         if (fix.Document.HashElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.HashElement.ElementId = \"{fix.Document.HashElement.ElementId}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.HashElement.ElementId = \"{CleanString(fix.Document.HashElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Document.TitleElement != null)                                                                                  // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Document.TitleElement = new FhirString();");                                                // GenerateFixCode.cs:184
                         if (fix.Document.TitleElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.TitleElement.Value = \"{fix.Document.TitleElement.Value}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.TitleElement.Value = \"{CleanString(fix.Document.TitleElement.Value)}\";");    // GenerateFixCode.cs:113
                         if (fix.Document.TitleElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.TitleElement.ElementId = \"{fix.Document.TitleElement.ElementId}\";");         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.TitleElement.ElementId = \"{CleanString(fix.Document.TitleElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Document.CreationElement != null)                                                                               // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Document.CreationElement = new FhirDateTime();");                                           // GenerateFixCode.cs:184
                         if (fix.Document.CreationElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.CreationElement.Value = \"{fix.Document.CreationElement.Value}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.CreationElement.Value = \"{CleanString(fix.Document.CreationElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Document.CreationElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Document.CreationElement.ElementId = \"{fix.Document.CreationElement.ElementId}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Document.CreationElement.ElementId = \"{CleanString(fix.Document.CreationElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Document.ElementId != null)                                                                                     // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Document.ElementId = \"{fix.Document.ElementId}\";");                                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Document.ElementId = \"{CleanString(fix.Document.ElementId)}\";");                          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ResourceElement != null)                                                                                            // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.ResourceElement = new Canonical();");                                                           // GenerateFixCode.cs:184
                     if (fix.ResourceElement.Value != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ResourceElement.Value = \"{fix.ResourceElement.Value}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ResourceElement.Value = \"{CleanString(fix.ResourceElement.Value)}\";");                    // GenerateFixCode.cs:113
                     if (fix.ResourceElement.ElementId != null)                                                                              // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ResourceElement.ElementId = \"{fix.ResourceElement.ElementId}\";");                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ResourceElement.ElementId = \"{CleanString(fix.ResourceElement.ElementId)}\";");            // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -5747,7 +5748,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Origin.ValueElement.Value.HasValue == true)                                                                 // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Origin.ValueElement.Value = new Nullable<decimal>((decimal) {fix.Origin.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Origin.ValueElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Origin.ValueElement.ElementId = \"{fix.Origin.ValueElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Origin.ValueElement.ElementId = \"{CleanString(fix.Origin.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Origin.ComparatorElement != null)                                                                               // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Origin.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.Origin.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -5755,28 +5756,28 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Origin.UnitElement = new FhirString();");                                                   // GenerateFixCode.cs:184
                         if (fix.Origin.UnitElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Origin.UnitElement.Value = \"{fix.Origin.UnitElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Origin.UnitElement.Value = \"{CleanString(fix.Origin.UnitElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Origin.UnitElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Origin.UnitElement.ElementId = \"{fix.Origin.UnitElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Origin.UnitElement.ElementId = \"{CleanString(fix.Origin.UnitElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Origin.SystemElement != null)                                                                                   // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Origin.SystemElement = new FhirUri();");                                                    // GenerateFixCode.cs:184
                         if (fix.Origin.SystemElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Origin.SystemElement.Value = \"{fix.Origin.SystemElement.Value}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Origin.SystemElement.Value = \"{CleanString(fix.Origin.SystemElement.Value)}\";");      // GenerateFixCode.cs:113
                         if (fix.Origin.SystemElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Origin.SystemElement.ElementId = \"{fix.Origin.SystemElement.ElementId}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Origin.SystemElement.ElementId = \"{CleanString(fix.Origin.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Origin.CodeElement != null)                                                                                     // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Origin.CodeElement = new Code();");                                                         // GenerateFixCode.cs:184
                         if (fix.Origin.CodeElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Origin.CodeElement.Value = \"{fix.Origin.CodeElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Origin.CodeElement.Value = \"{CleanString(fix.Origin.CodeElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Origin.CodeElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Origin.CodeElement.ElementId = \"{fix.Origin.CodeElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Origin.CodeElement.ElementId = \"{CleanString(fix.Origin.CodeElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Origin.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Origin.ElementId = \"{fix.Origin.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Origin.ElementId = \"{CleanString(fix.Origin.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.PeriodElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -5784,7 +5785,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.PeriodElement.Value.HasValue == true)                                                                           // GenerateFixCode.cs:98
                         block.AppendCode($"temp.PeriodElement.Value = new Nullable<decimal>((decimal) {fix.PeriodElement.Value.Value});");  // GenerateFixCode.cs:99
                     if (fix.PeriodElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.PeriodElement.ElementId = \"{fix.PeriodElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.PeriodElement.ElementId = \"{CleanString(fix.PeriodElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.FactorElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -5792,7 +5793,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.FactorElement.Value.HasValue == true)                                                                           // GenerateFixCode.cs:98
                         block.AppendCode($"temp.FactorElement.Value = new Nullable<decimal>((decimal) {fix.FactorElement.Value.Value});");  // GenerateFixCode.cs:99
                     if (fix.FactorElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.FactorElement.ElementId = \"{fix.FactorElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.FactorElement.ElementId = \"{CleanString(fix.FactorElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.LowerLimitElement != null)                                                                                          // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -5800,7 +5801,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.LowerLimitElement.Value.HasValue == true)                                                                       // GenerateFixCode.cs:98
                         block.AppendCode($"temp.LowerLimitElement.Value = new Nullable<decimal>((decimal) {fix.LowerLimitElement.Value.Value});");// GenerateFixCode.cs:99
                     if (fix.LowerLimitElement.ElementId != null)                                                                            // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.LowerLimitElement.ElementId = \"{fix.LowerLimitElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.LowerLimitElement.ElementId = \"{CleanString(fix.LowerLimitElement.ElementId)}\";");        // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.UpperLimitElement != null)                                                                                          // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -5808,7 +5809,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.UpperLimitElement.Value.HasValue == true)                                                                       // GenerateFixCode.cs:98
                         block.AppendCode($"temp.UpperLimitElement.Value = new Nullable<decimal>((decimal) {fix.UpperLimitElement.Value.Value});");// GenerateFixCode.cs:99
                     if (fix.UpperLimitElement.ElementId != null)                                                                            // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UpperLimitElement.ElementId = \"{fix.UpperLimitElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UpperLimitElement.ElementId = \"{CleanString(fix.UpperLimitElement.ElementId)}\";");        // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DimensionsElement != null)                                                                                          // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -5816,18 +5817,18 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.DimensionsElement.Value.HasValue == true)                                                                       // GenerateFixCode.cs:105
                         block.AppendCode($"temp.DimensionsElement.Value = new Nullable<int>((int) {fix.DimensionsElement.Value.Value});");  // GenerateFixCode.cs:106
                     if (fix.DimensionsElement.ElementId != null)                                                                            // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DimensionsElement.ElementId = \"{fix.DimensionsElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DimensionsElement.ElementId = \"{CleanString(fix.DimensionsElement.ElementId)}\";");        // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DataElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.DataElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.DataElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DataElement.Value = \"{fix.DataElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DataElement.Value = \"{CleanString(fix.DataElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.DataElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DataElement.ElementId = \"{fix.DataElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DataElement.ElementId = \"{CleanString(fix.DataElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -5863,33 +5864,33 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.SystemElement = new FhirUri();");                                                      // GenerateFixCode.cs:184
                             if (temp1.SystemElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.SystemElement.Value = \"{temp1.SystemElement.Value}\";");                          // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.SystemElement.Value = \"{CleanString(temp1.SystemElement.Value)}\";");             // GenerateFixCode.cs:113
                             if (temp1.SystemElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.SystemElement.ElementId = \"{temp1.SystemElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.SystemElement.ElementId = \"{CleanString(temp1.SystemElement.ElementId)}\";");     // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.VersionElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.VersionElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                             if (temp1.VersionElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.VersionElement.Value = \"{temp1.VersionElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.VersionElement.Value = \"{CleanString(temp1.VersionElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp1.VersionElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.VersionElement.ElementId = \"{temp1.VersionElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.VersionElement.ElementId = \"{CleanString(temp1.VersionElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.CodeElement != null)                                                                                      // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.CodeElement = new Code();");                                                           // GenerateFixCode.cs:184
                             if (temp1.CodeElement.Value != null)                                                                            // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.CodeElement.Value = \"{temp1.CodeElement.Value}\";");                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.CodeElement.Value = \"{CleanString(temp1.CodeElement.Value)}\";");                 // GenerateFixCode.cs:113
                             if (temp1.CodeElement.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.CodeElement.ElementId = \"{temp1.CodeElement.ElementId}\";");                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.CodeElement.ElementId = \"{CleanString(temp1.CodeElement.ElementId)}\";");         // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.DisplayElement != null)                                                                                   // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp2.DisplayElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                             if (temp1.DisplayElement.Value != null)                                                                         // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.DisplayElement.Value = \"{temp1.DisplayElement.Value}\";");                        // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.DisplayElement.Value = \"{CleanString(temp1.DisplayElement.Value)}\";");           // GenerateFixCode.cs:113
                             if (temp1.DisplayElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.DisplayElement.ElementId = \"{temp1.DisplayElement.ElementId}\";");                // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.DisplayElement.ElementId = \"{CleanString(temp1.DisplayElement.ElementId)}\";");   // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.UserSelectedElement != null)                                                                              // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
@@ -5902,10 +5903,10 @@ namespace FhirKhit.SliceGen.CSApi
                                     block.AppendCode($"temp2.UserSelectedElement.Value = false;");                                          // GenerateFixCode.cs:49
                             }                                                                                                               // GenerateFixCode.cs:50
                             if (temp1.UserSelectedElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{temp1.UserSelectedElement.ElementId}\";");      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{CleanString(temp1.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Type.Add(temp2);");                                                                         // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -5923,23 +5924,23 @@ namespace FhirKhit.SliceGen.CSApi
                         ;                                                                                                                   // GenerateFixCode.cs:91
                     }                                                                                                                       // GenerateFixCode.cs:92
                     if (fix.WhenElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.WhenElement.ElementId = \"{fix.WhenElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.WhenElement.ElementId = \"{CleanString(fix.WhenElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.TargetFormatElement != null)                                                                                        // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.TargetFormatElement = new Code();");                                                            // GenerateFixCode.cs:184
                     if (fix.TargetFormatElement.Value != null)                                                                              // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TargetFormatElement.Value = \"{fix.TargetFormatElement.Value}\";");                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TargetFormatElement.Value = \"{CleanString(fix.TargetFormatElement.Value)}\";");            // GenerateFixCode.cs:113
                     if (fix.TargetFormatElement.ElementId != null)                                                                          // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.TargetFormatElement.ElementId = \"{fix.TargetFormatElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.TargetFormatElement.ElementId = \"{CleanString(fix.TargetFormatElement.ElementId)}\";");    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SigFormatElement != null)                                                                                           // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SigFormatElement = new Code();");                                                               // GenerateFixCode.cs:184
                     if (fix.SigFormatElement.Value != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SigFormatElement.Value = \"{fix.SigFormatElement.Value}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SigFormatElement.Value = \"{CleanString(fix.SigFormatElement.Value)}\";");                  // GenerateFixCode.cs:113
                     if (fix.SigFormatElement.ElementId != null)                                                                             // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SigFormatElement.ElementId = \"{fix.SigFormatElement.ElementId}\";");                       // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SigFormatElement.ElementId = \"{CleanString(fix.SigFormatElement.ElementId)}\";");          // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.DataElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -5968,10 +5969,10 @@ namespace FhirKhit.SliceGen.CSApi
                         block.CloseBrace(";");                                                                                              // GenerateFixCode.cs:77
                     }                                                                                                                       // GenerateFixCode.cs:78
                     if (fix.DataElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.DataElement.ElementId = \"{fix.DataElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.DataElement.ElementId = \"{CleanString(fix.DataElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -6002,7 +6003,7 @@ namespace FhirKhit.SliceGen.CSApi
                     if (fix.ValueElement.Value.HasValue == true)                                                                            // GenerateFixCode.cs:98
                         block.AppendCode($"temp.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ValueElement.Value.Value});");    // GenerateFixCode.cs:99
                     if (fix.ValueElement.ElementId != null)                                                                                 // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ValueElement.ElementId = \"{fix.ValueElement.ElementId}\";");                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ValueElement.ElementId = \"{CleanString(fix.ValueElement.ElementId)}\";");                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ComparatorElement != null)                                                                                          // GenerateFixCode.cs:122
                     block.AppendCode($"temp.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -6010,28 +6011,28 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.UnitElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.UnitElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.Value = \"{fix.UnitElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.Value = \"{CleanString(fix.UnitElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.UnitElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.UnitElement.ElementId = \"{fix.UnitElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.UnitElement.ElementId = \"{CleanString(fix.UnitElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.SystemElement != null)                                                                                              // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.SystemElement = new FhirUri();");                                                               // GenerateFixCode.cs:184
                     if (fix.SystemElement.Value != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.Value = \"{fix.SystemElement.Value}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.Value = \"{CleanString(fix.SystemElement.Value)}\";");                        // GenerateFixCode.cs:113
                     if (fix.SystemElement.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.SystemElement.ElementId = \"{fix.SystemElement.ElementId}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.SystemElement.ElementId = \"{CleanString(fix.SystemElement.ElementId)}\";");                // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.CodeElement != null)                                                                                                // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.CodeElement = new Code();");                                                                    // GenerateFixCode.cs:184
                     if (fix.CodeElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.Value = \"{fix.CodeElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.Value = \"{CleanString(fix.CodeElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.CodeElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.CodeElement.ElementId = \"{fix.CodeElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.CodeElement.ElementId = \"{CleanString(fix.CodeElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -6070,33 +6071,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.SystemElement = new FhirUri();");                                                  // GenerateFixCode.cs:184
                                 if (temp1.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.SystemElement.Value = \"{temp1.SystemElement.Value}\";");                      // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.SystemElement.Value = \"{CleanString(temp1.SystemElement.Value)}\";");         // GenerateFixCode.cs:113
                                 if (temp1.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.SystemElement.ElementId = \"{temp1.SystemElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.SystemElement.ElementId = \"{CleanString(temp1.SystemElement.ElementId)}\";"); // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.VersionElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp1.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.VersionElement.Value = \"{temp1.VersionElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.VersionElement.Value = \"{CleanString(temp1.VersionElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp1.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.VersionElement.ElementId = \"{temp1.VersionElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.VersionElement.ElementId = \"{CleanString(temp1.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.CodeElement = new Code();");                                                       // GenerateFixCode.cs:184
                                 if (temp1.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.CodeElement.Value = \"{temp1.CodeElement.Value}\";");                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.CodeElement.Value = \"{CleanString(temp1.CodeElement.Value)}\";");             // GenerateFixCode.cs:113
                                 if (temp1.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.CodeElement.ElementId = \"{temp1.CodeElement.ElementId}\";");                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.CodeElement.ElementId = \"{CleanString(temp1.CodeElement.ElementId)}\";");     // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp2.DisplayElement = new FhirString();");                                              // GenerateFixCode.cs:184
                                 if (temp1.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.DisplayElement.Value = \"{temp1.DisplayElement.Value}\";");                    // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.DisplayElement.Value = \"{CleanString(temp1.DisplayElement.Value)}\";");       // GenerateFixCode.cs:113
                                 if (temp1.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.DisplayElement.ElementId = \"{temp1.DisplayElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.DisplayElement.ElementId = \"{CleanString(temp1.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -6109,10 +6110,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp2.UserSelectedElement.Value = false;");                                      // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp1.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{temp1.UserSelectedElement.ElementId}\";");  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp2.UserSelectedElement.ElementId = \"{CleanString(temp1.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp1.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.AmountType.Coding.Add(temp2);");                                                        // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -6121,20 +6122,20 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.AmountType.TextElement = new FhirString();");                                               // GenerateFixCode.cs:184
                         if (fix.AmountType.TextElement.Value != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.AmountType.TextElement.Value = \"{fix.AmountType.TextElement.Value}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.AmountType.TextElement.Value = \"{CleanString(fix.AmountType.TextElement.Value)}\";");  // GenerateFixCode.cs:113
                         if (fix.AmountType.TextElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.AmountType.TextElement.ElementId = \"{fix.AmountType.TextElement.ElementId}\";");       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.AmountType.TextElement.ElementId = \"{CleanString(fix.AmountType.TextElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.AmountType.ElementId != null)                                                                                   // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.AmountType.ElementId = \"{fix.AmountType.ElementId}\";");                                   // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.AmountType.ElementId = \"{CleanString(fix.AmountType.ElementId)}\";");                      // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.AmountTextElement != null)                                                                                          // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.AmountTextElement = new FhirString();");                                                        // GenerateFixCode.cs:184
                     if (fix.AmountTextElement.Value != null)                                                                                // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.AmountTextElement.Value = \"{fix.AmountTextElement.Value}\";");                             // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.AmountTextElement.Value = \"{CleanString(fix.AmountTextElement.Value)}\";");                // GenerateFixCode.cs:113
                     if (fix.AmountTextElement.ElementId != null)                                                                            // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.AmountTextElement.ElementId = \"{fix.AmountTextElement.ElementId}\";");                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.AmountTextElement.ElementId = \"{CleanString(fix.AmountTextElement.ElementId)}\";");        // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ReferenceRange != null)                                                                                             // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -6148,7 +6149,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.ReferenceRange.LowLimit.ValueElement.Value.HasValue == true)                                            // GenerateFixCode.cs:98
                                 block.AppendCode($"temp.ReferenceRange.LowLimit.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ReferenceRange.LowLimit.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                             if (fix.ReferenceRange.LowLimit.ValueElement.ElementId != null)                                                 // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.LowLimit.ValueElement.ElementId = \"{fix.ReferenceRange.LowLimit.ValueElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.LowLimit.ValueElement.ElementId = \"{CleanString(fix.ReferenceRange.LowLimit.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.ReferenceRange.LowLimit.ComparatorElement != null)                                                          // GenerateFixCode.cs:122
                             block.AppendCode($"temp.ReferenceRange.LowLimit.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.ReferenceRange.LowLimit.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -6156,28 +6157,28 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.ReferenceRange.LowLimit.UnitElement = new FhirString();");                              // GenerateFixCode.cs:184
                             if (fix.ReferenceRange.LowLimit.UnitElement.Value != null)                                                      // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.LowLimit.UnitElement.Value = \"{fix.ReferenceRange.LowLimit.UnitElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.LowLimit.UnitElement.Value = \"{CleanString(fix.ReferenceRange.LowLimit.UnitElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.ReferenceRange.LowLimit.UnitElement.ElementId != null)                                                  // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.LowLimit.UnitElement.ElementId = \"{fix.ReferenceRange.LowLimit.UnitElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.LowLimit.UnitElement.ElementId = \"{CleanString(fix.ReferenceRange.LowLimit.UnitElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.ReferenceRange.LowLimit.SystemElement != null)                                                              // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.ReferenceRange.LowLimit.SystemElement = new FhirUri();");                               // GenerateFixCode.cs:184
                             if (fix.ReferenceRange.LowLimit.SystemElement.Value != null)                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.LowLimit.SystemElement.Value = \"{fix.ReferenceRange.LowLimit.SystemElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.LowLimit.SystemElement.Value = \"{CleanString(fix.ReferenceRange.LowLimit.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.ReferenceRange.LowLimit.SystemElement.ElementId != null)                                                // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.LowLimit.SystemElement.ElementId = \"{fix.ReferenceRange.LowLimit.SystemElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.LowLimit.SystemElement.ElementId = \"{CleanString(fix.ReferenceRange.LowLimit.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.ReferenceRange.LowLimit.CodeElement != null)                                                                // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.ReferenceRange.LowLimit.CodeElement = new Code();");                                    // GenerateFixCode.cs:184
                             if (fix.ReferenceRange.LowLimit.CodeElement.Value != null)                                                      // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.LowLimit.CodeElement.Value = \"{fix.ReferenceRange.LowLimit.CodeElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.LowLimit.CodeElement.Value = \"{CleanString(fix.ReferenceRange.LowLimit.CodeElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.ReferenceRange.LowLimit.CodeElement.ElementId != null)                                                  // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.LowLimit.CodeElement.ElementId = \"{fix.ReferenceRange.LowLimit.CodeElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.LowLimit.CodeElement.ElementId = \"{CleanString(fix.ReferenceRange.LowLimit.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.ReferenceRange.LowLimit.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.ReferenceRange.LowLimit.ElementId = \"{fix.ReferenceRange.LowLimit.ElementId}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.ReferenceRange.LowLimit.ElementId = \"{CleanString(fix.ReferenceRange.LowLimit.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.ReferenceRange.HighLimit != null)                                                                               // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -6188,7 +6189,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (fix.ReferenceRange.HighLimit.ValueElement.Value.HasValue == true)                                           // GenerateFixCode.cs:98
                                 block.AppendCode($"temp.ReferenceRange.HighLimit.ValueElement.Value = new Nullable<decimal>((decimal) {fix.ReferenceRange.HighLimit.ValueElement.Value.Value});");// GenerateFixCode.cs:99
                             if (fix.ReferenceRange.HighLimit.ValueElement.ElementId != null)                                                // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.HighLimit.ValueElement.ElementId = \"{fix.ReferenceRange.HighLimit.ValueElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.HighLimit.ValueElement.ElementId = \"{CleanString(fix.ReferenceRange.HighLimit.ValueElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.ReferenceRange.HighLimit.ComparatorElement != null)                                                         // GenerateFixCode.cs:122
                             block.AppendCode($"temp.ReferenceRange.HighLimit.ComparatorElement = new Code<Quantity.QuantityComparator>(Quantity.QuantityComparator.{fix.ReferenceRange.HighLimit.ComparatorElement.Value});");// GenerateFixCode.cs:123
@@ -6196,34 +6197,34 @@ namespace FhirKhit.SliceGen.CSApi
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.ReferenceRange.HighLimit.UnitElement = new FhirString();");                             // GenerateFixCode.cs:184
                             if (fix.ReferenceRange.HighLimit.UnitElement.Value != null)                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.HighLimit.UnitElement.Value = \"{fix.ReferenceRange.HighLimit.UnitElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.HighLimit.UnitElement.Value = \"{CleanString(fix.ReferenceRange.HighLimit.UnitElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.ReferenceRange.HighLimit.UnitElement.ElementId != null)                                                 // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.HighLimit.UnitElement.ElementId = \"{fix.ReferenceRange.HighLimit.UnitElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.HighLimit.UnitElement.ElementId = \"{CleanString(fix.ReferenceRange.HighLimit.UnitElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.ReferenceRange.HighLimit.SystemElement != null)                                                             // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.ReferenceRange.HighLimit.SystemElement = new FhirUri();");                              // GenerateFixCode.cs:184
                             if (fix.ReferenceRange.HighLimit.SystemElement.Value != null)                                                   // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.HighLimit.SystemElement.Value = \"{fix.ReferenceRange.HighLimit.SystemElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.HighLimit.SystemElement.Value = \"{CleanString(fix.ReferenceRange.HighLimit.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.ReferenceRange.HighLimit.SystemElement.ElementId != null)                                               // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.HighLimit.SystemElement.ElementId = \"{fix.ReferenceRange.HighLimit.SystemElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.HighLimit.SystemElement.ElementId = \"{CleanString(fix.ReferenceRange.HighLimit.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.ReferenceRange.HighLimit.CodeElement != null)                                                               // GenerateFixCode.cs:182
                         {                                                                                                                   // GenerateFixCode.cs:183
                             block.AppendCode($"temp.ReferenceRange.HighLimit.CodeElement = new Code();");                                   // GenerateFixCode.cs:184
                             if (fix.ReferenceRange.HighLimit.CodeElement.Value != null)                                                     // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.HighLimit.CodeElement.Value = \"{fix.ReferenceRange.HighLimit.CodeElement.Value}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.HighLimit.CodeElement.Value = \"{CleanString(fix.ReferenceRange.HighLimit.CodeElement.Value)}\";");// GenerateFixCode.cs:113
                             if (fix.ReferenceRange.HighLimit.CodeElement.ElementId != null)                                                 // GenerateFixCode.cs:112
-                                block.AppendCode($"temp.ReferenceRange.HighLimit.CodeElement.ElementId = \"{fix.ReferenceRange.HighLimit.CodeElement.ElementId}\";");// GenerateFixCode.cs:113
+                                block.AppendCode($"temp.ReferenceRange.HighLimit.CodeElement.ElementId = \"{CleanString(fix.ReferenceRange.HighLimit.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (fix.ReferenceRange.HighLimit.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.ReferenceRange.HighLimit.ElementId = \"{fix.ReferenceRange.HighLimit.ElementId}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.ReferenceRange.HighLimit.ElementId = \"{CleanString(fix.ReferenceRange.HighLimit.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.ReferenceRange.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.ReferenceRange.ElementId = \"{fix.ReferenceRange.ElementId}\";");                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.ReferenceRange.ElementId = \"{CleanString(fix.ReferenceRange.ElementId)}\";");              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -6256,9 +6257,9 @@ namespace FhirKhit.SliceGen.CSApi
                         block.OpenBrace();                                                                                                  // GenerateFixCode.cs:139
                         block.AppendCode("var temp2 = new FhirDateTime();");                                                                // GenerateFixCode.cs:140
                         if (temp1.Value != null)                                                                                            // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.Value = \"{temp1.Value}\";");                                                          // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.Value = \"{CleanString(temp1.Value)}\";");                                             // GenerateFixCode.cs:113
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.EventElement.Add(temp2);");                                                                 // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -6272,7 +6273,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Repeat.CountElement.Value.HasValue == true)                                                                 // GenerateFixCode.cs:105
                             block.AppendCode($"temp.Repeat.CountElement.Value = new Nullable<int>((int) {fix.Repeat.CountElement.Value.Value});");// GenerateFixCode.cs:106
                         if (fix.Repeat.CountElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Repeat.CountElement.ElementId = \"{fix.Repeat.CountElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Repeat.CountElement.ElementId = \"{CleanString(fix.Repeat.CountElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Repeat.CountMaxElement != null)                                                                                 // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -6280,7 +6281,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Repeat.CountMaxElement.Value.HasValue == true)                                                              // GenerateFixCode.cs:105
                             block.AppendCode($"temp.Repeat.CountMaxElement.Value = new Nullable<int>((int) {fix.Repeat.CountMaxElement.Value.Value});");// GenerateFixCode.cs:106
                         if (fix.Repeat.CountMaxElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Repeat.CountMaxElement.ElementId = \"{fix.Repeat.CountMaxElement.ElementId}\";");       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Repeat.CountMaxElement.ElementId = \"{CleanString(fix.Repeat.CountMaxElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Repeat.DurationElement != null)                                                                                 // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -6288,7 +6289,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Repeat.DurationElement.Value.HasValue == true)                                                              // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Repeat.DurationElement.Value = new Nullable<decimal>((decimal) {fix.Repeat.DurationElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Repeat.DurationElement.ElementId != null)                                                                   // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Repeat.DurationElement.ElementId = \"{fix.Repeat.DurationElement.ElementId}\";");       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Repeat.DurationElement.ElementId = \"{CleanString(fix.Repeat.DurationElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Repeat.DurationMaxElement != null)                                                                              // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -6296,7 +6297,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Repeat.DurationMaxElement.Value.HasValue == true)                                                           // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Repeat.DurationMaxElement.Value = new Nullable<decimal>((decimal) {fix.Repeat.DurationMaxElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Repeat.DurationMaxElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Repeat.DurationMaxElement.ElementId = \"{fix.Repeat.DurationMaxElement.ElementId}\";"); // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Repeat.DurationMaxElement.ElementId = \"{CleanString(fix.Repeat.DurationMaxElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Repeat.DurationUnitElement != null)                                                                             // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Repeat.DurationUnitElement = new Code<Timing.UnitsOfTime>(Timing.UnitsOfTime.{fix.Repeat.DurationUnitElement.Value});");// GenerateFixCode.cs:123
@@ -6306,7 +6307,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Repeat.FrequencyElement.Value.HasValue == true)                                                             // GenerateFixCode.cs:105
                             block.AppendCode($"temp.Repeat.FrequencyElement.Value = new Nullable<int>((int) {fix.Repeat.FrequencyElement.Value.Value});");// GenerateFixCode.cs:106
                         if (fix.Repeat.FrequencyElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Repeat.FrequencyElement.ElementId = \"{fix.Repeat.FrequencyElement.ElementId}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Repeat.FrequencyElement.ElementId = \"{CleanString(fix.Repeat.FrequencyElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Repeat.FrequencyMaxElement != null)                                                                             // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -6314,7 +6315,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Repeat.FrequencyMaxElement.Value.HasValue == true)                                                          // GenerateFixCode.cs:105
                             block.AppendCode($"temp.Repeat.FrequencyMaxElement.Value = new Nullable<int>((int) {fix.Repeat.FrequencyMaxElement.Value.Value});");// GenerateFixCode.cs:106
                         if (fix.Repeat.FrequencyMaxElement.ElementId != null)                                                               // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Repeat.FrequencyMaxElement.ElementId = \"{fix.Repeat.FrequencyMaxElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Repeat.FrequencyMaxElement.ElementId = \"{CleanString(fix.Repeat.FrequencyMaxElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Repeat.PeriodElement != null)                                                                                   // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -6322,7 +6323,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Repeat.PeriodElement.Value.HasValue == true)                                                                // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Repeat.PeriodElement.Value = new Nullable<decimal>((decimal) {fix.Repeat.PeriodElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Repeat.PeriodElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Repeat.PeriodElement.ElementId = \"{fix.Repeat.PeriodElement.ElementId}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Repeat.PeriodElement.ElementId = \"{CleanString(fix.Repeat.PeriodElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Repeat.PeriodMaxElement != null)                                                                                // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -6330,7 +6331,7 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Repeat.PeriodMaxElement.Value.HasValue == true)                                                             // GenerateFixCode.cs:98
                             block.AppendCode($"temp.Repeat.PeriodMaxElement.Value = new Nullable<decimal>((decimal) {fix.Repeat.PeriodMaxElement.Value.Value});");// GenerateFixCode.cs:99
                         if (fix.Repeat.PeriodMaxElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Repeat.PeriodMaxElement.ElementId = \"{fix.Repeat.PeriodMaxElement.ElementId}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Repeat.PeriodMaxElement.ElementId = \"{CleanString(fix.Repeat.PeriodMaxElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Repeat.PeriodUnitElement != null)                                                                               // GenerateFixCode.cs:122
                         block.AppendCode($"temp.Repeat.PeriodUnitElement = new Code<Timing.UnitsOfTime>(Timing.UnitsOfTime.{fix.Repeat.PeriodUnitElement.Value});");// GenerateFixCode.cs:123
@@ -6344,7 +6345,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (temp3.Value.HasValue == true)                                                                               // GenerateFixCode.cs:159
                                 block.AppendCode($"temp4.Value = DaysOfWeek.{temp3.Value.Value};");                                         // GenerateFixCode.cs:160
                             if (temp3.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Repeat.DayOfWeekElement.Add(temp4);");                                                  // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -6357,9 +6358,9 @@ namespace FhirKhit.SliceGen.CSApi
                             block.OpenBrace();                                                                                              // GenerateFixCode.cs:139
                             block.AppendCode("var temp6 = new Time();");                                                                    // GenerateFixCode.cs:140
                             if (temp5.Value != null)                                                                                        // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.Value = \"{temp5.Value}\";");                                                      // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.Value = \"{CleanString(temp5.Value)}\";");                                         // GenerateFixCode.cs:113
                             if (temp5.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Repeat.TimeOfDayElement.Add(temp6);");                                                  // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -6374,7 +6375,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (temp7.Value.HasValue == true)                                                                               // GenerateFixCode.cs:159
                                 block.AppendCode($"temp8.Value = Timing.EventTiming.{temp7.Value.Value};");                                 // GenerateFixCode.cs:160
                             if (temp7.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp8.ElementId = \"{temp7.ElementId}\";");                                              // GenerateFixCode.cs:113
+                                block.AppendCode($"temp8.ElementId = \"{CleanString(temp7.ElementId)}\";");                                 // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Repeat.WhenElement.Add(temp8);");                                                       // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -6385,10 +6386,10 @@ namespace FhirKhit.SliceGen.CSApi
                         if (fix.Repeat.OffsetElement.Value.HasValue == true)                                                                // GenerateFixCode.cs:105
                             block.AppendCode($"temp.Repeat.OffsetElement.Value = new Nullable<int>((int) {fix.Repeat.OffsetElement.Value.Value});");// GenerateFixCode.cs:106
                         if (fix.Repeat.OffsetElement.ElementId != null)                                                                     // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Repeat.OffsetElement.ElementId = \"{fix.Repeat.OffsetElement.ElementId}\";");           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Repeat.OffsetElement.ElementId = \"{CleanString(fix.Repeat.OffsetElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Repeat.ElementId != null)                                                                                       // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Repeat.ElementId = \"{fix.Repeat.ElementId}\";");                                           // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Repeat.ElementId = \"{CleanString(fix.Repeat.ElementId)}\";");                              // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Code != null)                                                                                                       // GenerateFixCode.cs:182
                 {                                                                                                                           // GenerateFixCode.cs:183
@@ -6404,33 +6405,33 @@ namespace FhirKhit.SliceGen.CSApi
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp10.SystemElement = new FhirUri();");                                                 // GenerateFixCode.cs:184
                                 if (temp9.SystemElement.Value != null)                                                                      // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.SystemElement.Value = \"{temp9.SystemElement.Value}\";");                     // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.SystemElement.Value = \"{CleanString(temp9.SystemElement.Value)}\";");        // GenerateFixCode.cs:113
                                 if (temp9.SystemElement.ElementId != null)                                                                  // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.SystemElement.ElementId = \"{temp9.SystemElement.ElementId}\";");             // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.SystemElement.ElementId = \"{CleanString(temp9.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp9.VersionElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp10.VersionElement = new FhirString();");                                             // GenerateFixCode.cs:184
                                 if (temp9.VersionElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.VersionElement.Value = \"{temp9.VersionElement.Value}\";");                   // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.VersionElement.Value = \"{CleanString(temp9.VersionElement.Value)}\";");      // GenerateFixCode.cs:113
                                 if (temp9.VersionElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.VersionElement.ElementId = \"{temp9.VersionElement.ElementId}\";");           // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.VersionElement.ElementId = \"{CleanString(temp9.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp9.CodeElement != null)                                                                                  // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp10.CodeElement = new Code();");                                                      // GenerateFixCode.cs:184
                                 if (temp9.CodeElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.CodeElement.Value = \"{temp9.CodeElement.Value}\";");                         // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.CodeElement.Value = \"{CleanString(temp9.CodeElement.Value)}\";");            // GenerateFixCode.cs:113
                                 if (temp9.CodeElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.CodeElement.ElementId = \"{temp9.CodeElement.ElementId}\";");                 // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.CodeElement.ElementId = \"{CleanString(temp9.CodeElement.ElementId)}\";");    // GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp9.DisplayElement != null)                                                                               // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
                                 block.AppendCode($"temp10.DisplayElement = new FhirString();");                                             // GenerateFixCode.cs:184
                                 if (temp9.DisplayElement.Value != null)                                                                     // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.DisplayElement.Value = \"{temp9.DisplayElement.Value}\";");                   // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.DisplayElement.Value = \"{CleanString(temp9.DisplayElement.Value)}\";");      // GenerateFixCode.cs:113
                                 if (temp9.DisplayElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.DisplayElement.ElementId = \"{temp9.DisplayElement.ElementId}\";");           // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.DisplayElement.ElementId = \"{CleanString(temp9.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp9.UserSelectedElement != null)                                                                          // GenerateFixCode.cs:182
                             {                                                                                                               // GenerateFixCode.cs:183
@@ -6443,10 +6444,10 @@ namespace FhirKhit.SliceGen.CSApi
                                         block.AppendCode($"temp10.UserSelectedElement.Value = false;");                                     // GenerateFixCode.cs:49
                                 }                                                                                                           // GenerateFixCode.cs:50
                                 if (temp9.UserSelectedElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp10.UserSelectedElement.ElementId = \"{temp9.UserSelectedElement.ElementId}\";"); // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp10.UserSelectedElement.ElementId = \"{CleanString(temp9.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                             }                                                                                                               // GenerateFixCode.cs:188
                             if (temp9.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                                block.AppendCode($"temp10.ElementId = \"{temp9.ElementId}\";");                                             // GenerateFixCode.cs:113
+                                block.AppendCode($"temp10.ElementId = \"{CleanString(temp9.ElementId)}\";");                                // GenerateFixCode.cs:113
                             block.AppendCode($"temp.Code.Coding.Add(temp10);");                                                             // GenerateFixCode.cs:146
                             block.CloseBrace();                                                                                             // GenerateFixCode.cs:147
                         }                                                                                                                   // GenerateFixCode.cs:148
@@ -6455,15 +6456,15 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Code.TextElement = new FhirString();");                                                     // GenerateFixCode.cs:184
                         if (fix.Code.TextElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.TextElement.Value = \"{fix.Code.TextElement.Value}\";");                           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.TextElement.Value = \"{CleanString(fix.Code.TextElement.Value)}\";");              // GenerateFixCode.cs:113
                         if (fix.Code.TextElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.TextElement.ElementId = \"{fix.Code.TextElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.TextElement.ElementId = \"{CleanString(fix.Code.TextElement.ElementId)}\";");      // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Code.ElementId != null)                                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Code.ElementId = \"{fix.Code.ElementId}\";");                                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Code.ElementId = \"{CleanString(fix.Code.ElementId)}\";");                                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -6494,9 +6495,9 @@ namespace FhirKhit.SliceGen.CSApi
                 {                                                                                                                           // GenerateFixCode.cs:183
                     block.AppendCode($"temp.NameElement = new FhirString();");                                                              // GenerateFixCode.cs:184
                     if (fix.NameElement.Value != null)                                                                                      // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NameElement.Value = \"{fix.NameElement.Value}\";");                                         // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NameElement.Value = \"{CleanString(fix.NameElement.Value)}\";");                            // GenerateFixCode.cs:113
                     if (fix.NameElement.ElementId != null)                                                                                  // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.NameElement.ElementId = \"{fix.NameElement.ElementId}\";");                                 // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.NameElement.ElementId = \"{CleanString(fix.NameElement.ElementId)}\";");                    // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.Data != null)                                                                                                       // GenerateFixCode.cs:134
                 {                                                                                                                           // GenerateFixCode.cs:135
@@ -6515,9 +6516,9 @@ namespace FhirKhit.SliceGen.CSApi
                                 block.OpenBrace();                                                                                          // GenerateFixCode.cs:139
                                 block.AppendCode("var temp4 = new Canonical();");                                                           // GenerateFixCode.cs:140
                                 if (temp3.Value != null)                                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.Value = \"{temp3.Value}\";");                                                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.Value = \"{CleanString(temp3.Value)}\";");                                     // GenerateFixCode.cs:113
                                 if (temp3.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp4.ElementId = \"{temp3.ElementId}\";");                                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp4.ElementId = \"{CleanString(temp3.ElementId)}\";");                             // GenerateFixCode.cs:113
                                 block.AppendCode($"temp2.ProfileElement.Add(temp4);");                                                      // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -6530,9 +6531,9 @@ namespace FhirKhit.SliceGen.CSApi
                                 block.OpenBrace();                                                                                          // GenerateFixCode.cs:139
                                 block.AppendCode("var temp6 = new FhirString();");                                                          // GenerateFixCode.cs:140
                                 if (temp5.Value != null)                                                                                    // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.Value = \"{temp5.Value}\";");                                                  // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.Value = \"{CleanString(temp5.Value)}\";");                                     // GenerateFixCode.cs:113
                                 if (temp5.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp6.ElementId = \"{temp5.ElementId}\";");                                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp6.ElementId = \"{CleanString(temp5.ElementId)}\";");                             // GenerateFixCode.cs:113
                                 block.AppendCode($"temp2.MustSupportElement.Add(temp6);");                                                  // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -6548,25 +6549,25 @@ namespace FhirKhit.SliceGen.CSApi
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.PathElement = new FhirString();");                                             // GenerateFixCode.cs:184
                                     if (temp7.PathElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.PathElement.Value = \"{temp7.PathElement.Value}\";");                      // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.PathElement.Value = \"{CleanString(temp7.PathElement.Value)}\";");         // GenerateFixCode.cs:113
                                     if (temp7.PathElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.PathElement.ElementId = \"{temp7.PathElement.ElementId}\";");              // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.PathElement.ElementId = \"{CleanString(temp7.PathElement.ElementId)}\";"); // GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.SearchParamElement != null)                                                                       // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.SearchParamElement = new FhirString();");                                      // GenerateFixCode.cs:184
                                     if (temp7.SearchParamElement.Value != null)                                                             // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.SearchParamElement.Value = \"{temp7.SearchParamElement.Value}\";");        // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.SearchParamElement.Value = \"{CleanString(temp7.SearchParamElement.Value)}\";");// GenerateFixCode.cs:113
                                     if (temp7.SearchParamElement.ElementId != null)                                                         // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.SearchParamElement.ElementId = \"{temp7.SearchParamElement.ElementId}\";");// GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.SearchParamElement.ElementId = \"{CleanString(temp7.SearchParamElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.ValueSetElement != null)                                                                          // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp8.ValueSetElement = new Canonical();");                                          // GenerateFixCode.cs:184
                                     if (temp7.ValueSetElement.Value != null)                                                                // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.ValueSetElement.Value = \"{temp7.ValueSetElement.Value}\";");              // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.ValueSetElement.Value = \"{CleanString(temp7.ValueSetElement.Value)}\";"); // GenerateFixCode.cs:113
                                     if (temp7.ValueSetElement.ElementId != null)                                                            // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp8.ValueSetElement.ElementId = \"{temp7.ValueSetElement.ElementId}\";");      // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp8.ValueSetElement.ElementId = \"{CleanString(temp7.ValueSetElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp7.Code != null)                                                                                     // GenerateFixCode.cs:134
                                 {                                                                                                           // GenerateFixCode.cs:135
@@ -6579,33 +6580,33 @@ namespace FhirKhit.SliceGen.CSApi
                                         {                                                                                                   // GenerateFixCode.cs:183
                                             block.AppendCode($"temp10.SystemElement = new FhirUri();");                                     // GenerateFixCode.cs:184
                                             if (temp9.SystemElement.Value != null)                                                          // GenerateFixCode.cs:112
-                                                block.AppendCode($"temp10.SystemElement.Value = \"{temp9.SystemElement.Value}\";");         // GenerateFixCode.cs:113
+                                                block.AppendCode($"temp10.SystemElement.Value = \"{CleanString(temp9.SystemElement.Value)}\";");// GenerateFixCode.cs:113
                                             if (temp9.SystemElement.ElementId != null)                                                      // GenerateFixCode.cs:112
-                                                block.AppendCode($"temp10.SystemElement.ElementId = \"{temp9.SystemElement.ElementId}\";"); // GenerateFixCode.cs:113
+                                                block.AppendCode($"temp10.SystemElement.ElementId = \"{CleanString(temp9.SystemElement.ElementId)}\";");// GenerateFixCode.cs:113
                                         }                                                                                                   // GenerateFixCode.cs:188
                                         if (temp9.VersionElement != null)                                                                   // GenerateFixCode.cs:182
                                         {                                                                                                   // GenerateFixCode.cs:183
                                             block.AppendCode($"temp10.VersionElement = new FhirString();");                                 // GenerateFixCode.cs:184
                                             if (temp9.VersionElement.Value != null)                                                         // GenerateFixCode.cs:112
-                                                block.AppendCode($"temp10.VersionElement.Value = \"{temp9.VersionElement.Value}\";");       // GenerateFixCode.cs:113
+                                                block.AppendCode($"temp10.VersionElement.Value = \"{CleanString(temp9.VersionElement.Value)}\";");// GenerateFixCode.cs:113
                                             if (temp9.VersionElement.ElementId != null)                                                     // GenerateFixCode.cs:112
-                                                block.AppendCode($"temp10.VersionElement.ElementId = \"{temp9.VersionElement.ElementId}\";");// GenerateFixCode.cs:113
+                                                block.AppendCode($"temp10.VersionElement.ElementId = \"{CleanString(temp9.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                                         }                                                                                                   // GenerateFixCode.cs:188
                                         if (temp9.CodeElement != null)                                                                      // GenerateFixCode.cs:182
                                         {                                                                                                   // GenerateFixCode.cs:183
                                             block.AppendCode($"temp10.CodeElement = new Code();");                                          // GenerateFixCode.cs:184
                                             if (temp9.CodeElement.Value != null)                                                            // GenerateFixCode.cs:112
-                                                block.AppendCode($"temp10.CodeElement.Value = \"{temp9.CodeElement.Value}\";");             // GenerateFixCode.cs:113
+                                                block.AppendCode($"temp10.CodeElement.Value = \"{CleanString(temp9.CodeElement.Value)}\";");// GenerateFixCode.cs:113
                                             if (temp9.CodeElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                                block.AppendCode($"temp10.CodeElement.ElementId = \"{temp9.CodeElement.ElementId}\";");     // GenerateFixCode.cs:113
+                                                block.AppendCode($"temp10.CodeElement.ElementId = \"{CleanString(temp9.CodeElement.ElementId)}\";");// GenerateFixCode.cs:113
                                         }                                                                                                   // GenerateFixCode.cs:188
                                         if (temp9.DisplayElement != null)                                                                   // GenerateFixCode.cs:182
                                         {                                                                                                   // GenerateFixCode.cs:183
                                             block.AppendCode($"temp10.DisplayElement = new FhirString();");                                 // GenerateFixCode.cs:184
                                             if (temp9.DisplayElement.Value != null)                                                         // GenerateFixCode.cs:112
-                                                block.AppendCode($"temp10.DisplayElement.Value = \"{temp9.DisplayElement.Value}\";");       // GenerateFixCode.cs:113
+                                                block.AppendCode($"temp10.DisplayElement.Value = \"{CleanString(temp9.DisplayElement.Value)}\";");// GenerateFixCode.cs:113
                                             if (temp9.DisplayElement.ElementId != null)                                                     // GenerateFixCode.cs:112
-                                                block.AppendCode($"temp10.DisplayElement.ElementId = \"{temp9.DisplayElement.ElementId}\";");// GenerateFixCode.cs:113
+                                                block.AppendCode($"temp10.DisplayElement.ElementId = \"{CleanString(temp9.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                                         }                                                                                                   // GenerateFixCode.cs:188
                                         if (temp9.UserSelectedElement != null)                                                              // GenerateFixCode.cs:182
                                         {                                                                                                   // GenerateFixCode.cs:183
@@ -6618,16 +6619,16 @@ namespace FhirKhit.SliceGen.CSApi
                                                     block.AppendCode($"temp10.UserSelectedElement.Value = false;");                         // GenerateFixCode.cs:49
                                             }                                                                                               // GenerateFixCode.cs:50
                                             if (temp9.UserSelectedElement.ElementId != null)                                                // GenerateFixCode.cs:112
-                                                block.AppendCode($"temp10.UserSelectedElement.ElementId = \"{temp9.UserSelectedElement.ElementId}\";");// GenerateFixCode.cs:113
+                                                block.AppendCode($"temp10.UserSelectedElement.ElementId = \"{CleanString(temp9.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                                         }                                                                                                   // GenerateFixCode.cs:188
                                         if (temp9.ElementId != null)                                                                        // GenerateFixCode.cs:112
-                                            block.AppendCode($"temp10.ElementId = \"{temp9.ElementId}\";");                                 // GenerateFixCode.cs:113
+                                            block.AppendCode($"temp10.ElementId = \"{CleanString(temp9.ElementId)}\";");                    // GenerateFixCode.cs:113
                                         block.AppendCode($"temp8.Code.Add(temp10);");                                                       // GenerateFixCode.cs:146
                                         block.CloseBrace();                                                                                 // GenerateFixCode.cs:147
                                     }                                                                                                       // GenerateFixCode.cs:148
                                 }                                                                                                           // GenerateFixCode.cs:149
                                 if (temp7.ElementId != null)                                                                                // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp8.ElementId = \"{temp7.ElementId}\";");                                          // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp8.ElementId = \"{CleanString(temp7.ElementId)}\";");                             // GenerateFixCode.cs:113
                                 block.AppendCode($"temp2.CodeFilter.Add(temp8);");                                                          // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -6643,20 +6644,20 @@ namespace FhirKhit.SliceGen.CSApi
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp12.PathElement = new FhirString();");                                            // GenerateFixCode.cs:184
                                     if (temp11.PathElement.Value != null)                                                                   // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp12.PathElement.Value = \"{temp11.PathElement.Value}\";");                    // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp12.PathElement.Value = \"{CleanString(temp11.PathElement.Value)}\";");       // GenerateFixCode.cs:113
                                     if (temp11.PathElement.ElementId != null)                                                               // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp12.PathElement.ElementId = \"{temp11.PathElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp12.PathElement.ElementId = \"{CleanString(temp11.PathElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp11.SearchParamElement != null)                                                                      // GenerateFixCode.cs:182
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp12.SearchParamElement = new FhirString();");                                     // GenerateFixCode.cs:184
                                     if (temp11.SearchParamElement.Value != null)                                                            // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp12.SearchParamElement.Value = \"{temp11.SearchParamElement.Value}\";");      // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp12.SearchParamElement.Value = \"{CleanString(temp11.SearchParamElement.Value)}\";");// GenerateFixCode.cs:113
                                     if (temp11.SearchParamElement.ElementId != null)                                                        // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp12.SearchParamElement.ElementId = \"{temp11.SearchParamElement.ElementId}\";");// GenerateFixCode.cs:113
+                                        block.AppendCode($"temp12.SearchParamElement.ElementId = \"{CleanString(temp11.SearchParamElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp11.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp12.ElementId = \"{temp11.ElementId}\";");                                        // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp12.ElementId = \"{CleanString(temp11.ElementId)}\";");                           // GenerateFixCode.cs:113
                                 block.AppendCode($"temp2.DateFilter.Add(temp12);");                                                         // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
@@ -6667,7 +6668,7 @@ namespace FhirKhit.SliceGen.CSApi
                             if (temp1.LimitElement.Value.HasValue == true)                                                                  // GenerateFixCode.cs:105
                                 block.AppendCode($"temp2.LimitElement.Value = new Nullable<int>((int) {temp1.LimitElement.Value.Value});"); // GenerateFixCode.cs:106
                             if (temp1.LimitElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                                block.AppendCode($"temp2.LimitElement.ElementId = \"{temp1.LimitElement.ElementId}\";");                    // GenerateFixCode.cs:113
+                                block.AppendCode($"temp2.LimitElement.ElementId = \"{CleanString(temp1.LimitElement.ElementId)}\";");       // GenerateFixCode.cs:113
                         }                                                                                                                   // GenerateFixCode.cs:188
                         if (temp1.Sort != null)                                                                                             // GenerateFixCode.cs:134
                         {                                                                                                                   // GenerateFixCode.cs:135
@@ -6680,20 +6681,20 @@ namespace FhirKhit.SliceGen.CSApi
                                 {                                                                                                           // GenerateFixCode.cs:183
                                     block.AppendCode($"temp14.PathElement = new FhirString();");                                            // GenerateFixCode.cs:184
                                     if (temp13.PathElement.Value != null)                                                                   // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.PathElement.Value = \"{temp13.PathElement.Value}\";");                    // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.PathElement.Value = \"{CleanString(temp13.PathElement.Value)}\";");       // GenerateFixCode.cs:113
                                     if (temp13.PathElement.ElementId != null)                                                               // GenerateFixCode.cs:112
-                                        block.AppendCode($"temp14.PathElement.ElementId = \"{temp13.PathElement.ElementId}\";");            // GenerateFixCode.cs:113
+                                        block.AppendCode($"temp14.PathElement.ElementId = \"{CleanString(temp13.PathElement.ElementId)}\";");// GenerateFixCode.cs:113
                                 }                                                                                                           // GenerateFixCode.cs:188
                                 if (temp13.DirectionElement != null)                                                                        // GenerateFixCode.cs:122
                                     block.AppendCode($"temp14.DirectionElement = new Code<DataRequirement.SortDirection>(DataRequirement.SortDirection.{temp13.DirectionElement.Value});");// GenerateFixCode.cs:123
                                 if (temp13.ElementId != null)                                                                               // GenerateFixCode.cs:112
-                                    block.AppendCode($"temp14.ElementId = \"{temp13.ElementId}\";");                                        // GenerateFixCode.cs:113
+                                    block.AppendCode($"temp14.ElementId = \"{CleanString(temp13.ElementId)}\";");                           // GenerateFixCode.cs:113
                                 block.AppendCode($"temp2.Sort.Add(temp14);");                                                               // GenerateFixCode.cs:146
                                 block.CloseBrace();                                                                                         // GenerateFixCode.cs:147
                             }                                                                                                               // GenerateFixCode.cs:148
                         }                                                                                                                   // GenerateFixCode.cs:149
                         if (temp1.ElementId != null)                                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp2.ElementId = \"{temp1.ElementId}\";");                                                  // GenerateFixCode.cs:113
+                            block.AppendCode($"temp2.ElementId = \"{CleanString(temp1.ElementId)}\";");                                     // GenerateFixCode.cs:113
                         block.AppendCode($"temp.Data.Add(temp2);");                                                                         // GenerateFixCode.cs:146
                         block.CloseBrace();                                                                                                 // GenerateFixCode.cs:147
                     }                                                                                                                       // GenerateFixCode.cs:148
@@ -6705,47 +6706,47 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Condition.DescriptionElement = new FhirString();");                                         // GenerateFixCode.cs:184
                         if (fix.Condition.DescriptionElement.Value != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Condition.DescriptionElement.Value = \"{fix.Condition.DescriptionElement.Value}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Condition.DescriptionElement.Value = \"{CleanString(fix.Condition.DescriptionElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Condition.DescriptionElement.ElementId != null)                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Condition.DescriptionElement.ElementId = \"{fix.Condition.DescriptionElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Condition.DescriptionElement.ElementId = \"{CleanString(fix.Condition.DescriptionElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Condition.NameElement != null)                                                                                  // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Condition.NameElement = new Id();");                                                        // GenerateFixCode.cs:184
                         if (fix.Condition.NameElement.Value != null)                                                                        // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Condition.NameElement.Value = \"{fix.Condition.NameElement.Value}\";");                 // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Condition.NameElement.Value = \"{CleanString(fix.Condition.NameElement.Value)}\";");    // GenerateFixCode.cs:113
                         if (fix.Condition.NameElement.ElementId != null)                                                                    // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Condition.NameElement.ElementId = \"{fix.Condition.NameElement.ElementId}\";");         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Condition.NameElement.ElementId = \"{CleanString(fix.Condition.NameElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Condition.LanguageElement != null)                                                                              // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Condition.LanguageElement = new Code();");                                                  // GenerateFixCode.cs:184
                         if (fix.Condition.LanguageElement.Value != null)                                                                    // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Condition.LanguageElement.Value = \"{fix.Condition.LanguageElement.Value}\";");         // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Condition.LanguageElement.Value = \"{CleanString(fix.Condition.LanguageElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Condition.LanguageElement.ElementId != null)                                                                // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Condition.LanguageElement.ElementId = \"{fix.Condition.LanguageElement.ElementId}\";"); // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Condition.LanguageElement.ElementId = \"{CleanString(fix.Condition.LanguageElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Condition.ExpressionElement != null)                                                                            // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Condition.ExpressionElement = new FhirString();");                                          // GenerateFixCode.cs:184
                         if (fix.Condition.ExpressionElement.Value != null)                                                                  // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Condition.ExpressionElement.Value = \"{fix.Condition.ExpressionElement.Value}\";");     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Condition.ExpressionElement.Value = \"{CleanString(fix.Condition.ExpressionElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Condition.ExpressionElement.ElementId != null)                                                              // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Condition.ExpressionElement.ElementId = \"{fix.Condition.ExpressionElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Condition.ExpressionElement.ElementId = \"{CleanString(fix.Condition.ExpressionElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Condition.ReferenceElement != null)                                                                             // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Condition.ReferenceElement = new FhirUri();");                                              // GenerateFixCode.cs:184
                         if (fix.Condition.ReferenceElement.Value != null)                                                                   // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Condition.ReferenceElement.Value = \"{fix.Condition.ReferenceElement.Value}\";");       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Condition.ReferenceElement.Value = \"{CleanString(fix.Condition.ReferenceElement.Value)}\";");// GenerateFixCode.cs:113
                         if (fix.Condition.ReferenceElement.ElementId != null)                                                               // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Condition.ReferenceElement.ElementId = \"{fix.Condition.ReferenceElement.ElementId}\";");// GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Condition.ReferenceElement.ElementId = \"{CleanString(fix.Condition.ReferenceElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Condition.ElementId != null)                                                                                    // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Condition.ElementId = \"{fix.Condition.ElementId}\";");                                     // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Condition.ElementId = \"{CleanString(fix.Condition.ElementId)}\";");                        // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -6777,33 +6778,33 @@ namespace FhirKhit.SliceGen.CSApi
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Code.SystemElement = new FhirUri();");                                                      // GenerateFixCode.cs:184
                         if (fix.Code.SystemElement.Value != null)                                                                           // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.SystemElement.Value = \"{fix.Code.SystemElement.Value}\";");                       // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.SystemElement.Value = \"{CleanString(fix.Code.SystemElement.Value)}\";");          // GenerateFixCode.cs:113
                         if (fix.Code.SystemElement.ElementId != null)                                                                       // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.SystemElement.ElementId = \"{fix.Code.SystemElement.ElementId}\";");               // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.SystemElement.ElementId = \"{CleanString(fix.Code.SystemElement.ElementId)}\";");  // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Code.VersionElement != null)                                                                                    // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Code.VersionElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                         if (fix.Code.VersionElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.VersionElement.Value = \"{fix.Code.VersionElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.VersionElement.Value = \"{CleanString(fix.Code.VersionElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Code.VersionElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.VersionElement.ElementId = \"{fix.Code.VersionElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.VersionElement.ElementId = \"{CleanString(fix.Code.VersionElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Code.CodeElement != null)                                                                                       // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Code.CodeElement = new Code();");                                                           // GenerateFixCode.cs:184
                         if (fix.Code.CodeElement.Value != null)                                                                             // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.CodeElement.Value = \"{fix.Code.CodeElement.Value}\";");                           // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.CodeElement.Value = \"{CleanString(fix.Code.CodeElement.Value)}\";");              // GenerateFixCode.cs:113
                         if (fix.Code.CodeElement.ElementId != null)                                                                         // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.CodeElement.ElementId = \"{fix.Code.CodeElement.ElementId}\";");                   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.CodeElement.ElementId = \"{CleanString(fix.Code.CodeElement.ElementId)}\";");      // GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Code.DisplayElement != null)                                                                                    // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
                         block.AppendCode($"temp.Code.DisplayElement = new FhirString();");                                                  // GenerateFixCode.cs:184
                         if (fix.Code.DisplayElement.Value != null)                                                                          // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.DisplayElement.Value = \"{fix.Code.DisplayElement.Value}\";");                     // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.DisplayElement.Value = \"{CleanString(fix.Code.DisplayElement.Value)}\";");        // GenerateFixCode.cs:113
                         if (fix.Code.DisplayElement.ElementId != null)                                                                      // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.DisplayElement.ElementId = \"{fix.Code.DisplayElement.ElementId}\";");             // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.DisplayElement.ElementId = \"{CleanString(fix.Code.DisplayElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Code.UserSelectedElement != null)                                                                               // GenerateFixCode.cs:182
                     {                                                                                                                       // GenerateFixCode.cs:183
@@ -6816,13 +6817,13 @@ namespace FhirKhit.SliceGen.CSApi
                                 block.AppendCode($"temp.Code.UserSelectedElement.Value = false;");                                          // GenerateFixCode.cs:49
                         }                                                                                                                   // GenerateFixCode.cs:50
                         if (fix.Code.UserSelectedElement.ElementId != null)                                                                 // GenerateFixCode.cs:112
-                            block.AppendCode($"temp.Code.UserSelectedElement.ElementId = \"{fix.Code.UserSelectedElement.ElementId}\";");   // GenerateFixCode.cs:113
+                            block.AppendCode($"temp.Code.UserSelectedElement.ElementId = \"{CleanString(fix.Code.UserSelectedElement.ElementId)}\";");// GenerateFixCode.cs:113
                     }                                                                                                                       // GenerateFixCode.cs:188
                     if (fix.Code.ElementId != null)                                                                                         // GenerateFixCode.cs:112
-                        block.AppendCode($"temp.Code.ElementId = \"{fix.Code.ElementId}\";");                                               // GenerateFixCode.cs:113
+                        block.AppendCode($"temp.Code.ElementId = \"{CleanString(fix.Code.ElementId)}\";");                                  // GenerateFixCode.cs:113
                 }                                                                                                                           // GenerateFixCode.cs:188
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:300
             block                                                                                                                           // GenerateFixCode.cs:301
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:302
@@ -6871,7 +6872,7 @@ namespace FhirKhit.SliceGen.CSApi
                     block.CloseBrace(";");                                                                                                  // GenerateFixCode.cs:77
                 }                                                                                                                           // GenerateFixCode.cs:78
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -6904,7 +6905,7 @@ namespace FhirKhit.SliceGen.CSApi
                         block.AppendCode($"temp.Value = false;");                                                                           // GenerateFixCode.cs:49
                 }                                                                                                                           // GenerateFixCode.cs:50
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -6930,9 +6931,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -6958,9 +6959,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -6986,9 +6987,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7014,9 +7015,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7044,7 +7045,7 @@ namespace FhirKhit.SliceGen.CSApi
                 if (fix.Value.HasValue == true)                                                                                             // GenerateFixCode.cs:98
                     block.AppendCode($"temp.Value = new Nullable<decimal>((decimal) {fix.Value.Value});");                                  // GenerateFixCode.cs:99
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7070,9 +7071,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7107,7 +7108,7 @@ namespace FhirKhit.SliceGen.CSApi
                     ;                                                                                                                       // GenerateFixCode.cs:91
                 }                                                                                                                           // GenerateFixCode.cs:92
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7135,7 +7136,7 @@ namespace FhirKhit.SliceGen.CSApi
                 if (fix.Value.HasValue == true)                                                                                             // GenerateFixCode.cs:105
                     block.AppendCode($"temp.Value = new Nullable<int>((int) {fix.Value.Value});");                                          // GenerateFixCode.cs:106
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7161,9 +7162,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7189,9 +7190,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7219,7 +7220,7 @@ namespace FhirKhit.SliceGen.CSApi
                 if (fix.Value.HasValue == true)                                                                                             // GenerateFixCode.cs:105
                     block.AppendCode($"temp.Value = new Nullable<int>((int) {fix.Value.Value});");                                          // GenerateFixCode.cs:106
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7245,9 +7246,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7273,9 +7274,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7303,7 +7304,7 @@ namespace FhirKhit.SliceGen.CSApi
                 if (fix.Value.HasValue == true)                                                                                             // GenerateFixCode.cs:105
                     block.AppendCode($"temp.Value = new Nullable<int>((int) {fix.Value.Value});");                                          // GenerateFixCode.cs:106
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7329,9 +7330,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7357,9 +7358,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7385,9 +7386,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246
@@ -7413,9 +7414,9 @@ namespace FhirKhit.SliceGen.CSApi
             if (fix != null)                                                                                                                // GenerateFixCode.cs:237
             {                                                                                                                               // GenerateFixCode.cs:238
                 if (fix.Value != null)                                                                                                      // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.Value = \"{fix.Value}\";");                                                                     // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.Value = \"{CleanString(fix.Value)}\";");                                                        // GenerateFixCode.cs:113
                 if (fix.ElementId != null)                                                                                                  // GenerateFixCode.cs:112
-                    block.AppendCode($"temp.ElementId = \"{fix.ElementId}\";");                                                             // GenerateFixCode.cs:113
+                    block.AppendCode($"temp.ElementId = \"{CleanString(fix.ElementId)}\";");                                                // GenerateFixCode.cs:113
             }                                                                                                                               // GenerateFixCode.cs:244
             block                                                                                                                           // GenerateFixCode.cs:245
                 .AppendCode($"{varName} = temp;")                                                                                           // GenerateFixCode.cs:246

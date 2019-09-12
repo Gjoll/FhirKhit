@@ -329,16 +329,6 @@ namespace FhirKhit.SliceGen.CSApi
                     .BlankLine()
                     ;
 
-                //$if (ElementFixCode.Construct(sliceVars, fixElement, "xxyyz", out String propertyType) == false)
-                //${
-                //$    String msg = $"Error defining slice {sliceNode.Element.SliceName}'. Fixed discriminator field {discriminator.Path} not fixed";
-                //$    sliceClassFields
-                //$        .AppendLine($"/// {msg}")
-                //$        ;
-                //$    this.gen.ConversionError(this.GetType().Name, fcn, msg);
-                //$    return false;
-                //$}
-
                 this.sliceStaticConstructor
                     .AppendLine("// Instantiate slicing discriminator")
                     .OpenBrace()
@@ -375,20 +365,25 @@ namespace FhirKhit.SliceGen.CSApi
                 {
                     String childPropertyPath = $"{propertyPath}.{setNodeChild.PropertyName}";
 
-                    String varName = $"var{varNum}";
-                    varNum += 1;
-
                     String childItemTypeName = setNodeChild.FhirItemType.FriendlyName();
                     if (setNodeChild.IsFixed)
                     {
-                        sliceClassMethods.AppendCode($"//${childItemTypeName} {varName} = {setNodeChild.SlicePath()}();");
                         if (setNodeChild.IsListType)
+                        {
+                            String varName = $"var{varNum}";
+                            varNum += 1;
+                            ElementFixCode.Construct(sliceClassMethods, setNodeChild.Element.Fixed, $"{varName}.Pattern", out String propertyType);
                             sliceClassMethods.AppendCode($"//${childPropertyPath}.Add({varName});");
+                        }
                         else
-                            sliceClassMethods.AppendCode($"//${childPropertyPath} = {varName};");
+                        {
+                            ElementFixCode.Construct(sliceClassMethods, setNodeChild.Element.Fixed, childPropertyPath, out String propertyType);
+                        }
                     }
                     else if (setNodeChild.HasFixedChild)
                     {
+                        String varName = $"var{varNum}";
+                        varNum += 1;
                         sliceClassMethods.AppendCode($"{childItemTypeName} {varName} = new {childItemTypeName}();");
                         if (setNodeChild.IsListType)
                             sliceClassMethods.AppendCode($"{childPropertyPath}.Add({varName});");
@@ -398,6 +393,8 @@ namespace FhirKhit.SliceGen.CSApi
                     }
                     else if (setNodeChild.HasFixedSlice)
                     {
+                        String varName = $"var{varNum}";
+                        varNum += 1;
                         sliceClassMethods.AppendCode($"// {childItemTypeName} {varName} = xxyyz;");
                         //methods.AppendCode($"{childItemTypeName} {varName} = new {childItemTypeName}();");
                         //if (setNodeChild.IsListType)

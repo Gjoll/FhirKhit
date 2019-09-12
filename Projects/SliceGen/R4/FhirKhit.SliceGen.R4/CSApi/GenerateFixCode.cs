@@ -110,7 +110,7 @@ namespace FhirKhit.SliceGen.R4
                 case "string":
                     code
                         .AppendCode($"if ({varName}.{pi.Name} != null)")
-                        .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = \\\"{{{varName}.{pi.Name}}}\\\";\");")
+                        .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = \\\"{{CleanString({varName}.{pi.Name})}}\\\";\");")
                         ;
                     break;
 
@@ -347,9 +347,10 @@ namespace FhirKhit.SliceGen.R4
                 ;
 
             construct
+                .AppendLine("static String CleanString(String s) => s.Replace(\"\\\"\", \"\\\\\\\"\");")
                 .AppendLine($"/// <summary>")
                 .AppendLine($"/// Return c# text to create indicated element.")
-                .AppendLine($"/// </summary>")
+                .AppendLine($"/// </summary>") 
                 .AppendLine($"static public bool Construct(CodeBlockNested block,")
                 .AppendCode($"    Element fix,")
                 .AppendCode($"    String varName,")
