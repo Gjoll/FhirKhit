@@ -12,6 +12,9 @@ using System.Collections.Generic;
 using FhirKhit.SliceGen.R4;
 using FhirKhit.SliceGen.CodeGen;
 using System.IO.Compression;
+using Hl7.Fhir.Specification.Source;
+using System.Reflection;
+using System.Linq;
 
 
 #if FHIR_R2
@@ -36,7 +39,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         const String OutputNameSpace = "FhirKhit.Test.R3";
 #elif FHIR_R4
         public static string GenDir => Path.Combine(DirHelper.FindParentDir("SliceGen"), "R4", "FhirKhit.SliceGen.XUnitTestsB.R4", "Generated");
-        FHIRVersion FVersion = FHIRVersion.N4_0_0;
+        FHIRVersion FVersion = FHIRVersion.N3_5_0;
         const String OutputNameSpace = "FhirKhit.Test.R4";
 #endif
         static String TestDir()
@@ -259,6 +262,62 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 Assert.True(success == true);
             }
         }
+
+
+
+        [Fact(DisplayName = "GenCreate.SnapshotError")]
+        [Trait("Test", "test")]
+        public void SnapshotError()
+        {
+            String name = "SnapshotError";
+            StructureDefinition profile = new StructureDefinition
+            {
+                Url = $"http://xxyyz.com/{name}",
+                Name = name,
+                Title = name,
+                Description = new Markdown("Profile on Observation with fixed values"),
+                BaseDefinition = "http://hl7.org/fhir/StructureDefinition/Observation",
+                Derivation = StructureDefinition.TypeDerivationRule.Constraint,
+                DateElement = new FhirDateTime(2019, 1, 1, 0, 0, 0, new TimeSpan(0)),
+                Publisher = "Me",
+                FhirVersion = FVersion,
+                Type = "Observation",
+                Kind = StructureDefinition.StructureDefinitionKind.Resource,
+                Abstract = false,
+                Differential = new StructureDefinition.DifferentialComponent(),
+                Status = PublicationStatus.Active
+            };
+
+            profile.Differential.Element.Add(
+                new ElementDefinition
+                {
+                    Path = "Observation",
+                    ElementId = "Observation"
+                });
+
+
+            String specificationPath = Assembly.GetAssembly(typeof(ZipSource)).Location;
+            specificationPath = Path.GetDirectoryName(specificationPath);
+            specificationPath = Path.Combine(specificationPath, "specification.zip");
+            if (File.Exists(specificationPath) == false)
+            {
+                specificationPath = Assembly.GetExecutingAssembly().Location;
+                specificationPath = Path.GetDirectoryName(specificationPath);
+                specificationPath = Path.Combine(specificationPath, "specification.zip");
+            }
+            ZipSource source = new ZipSource(specificationPath);
+
+            SnapshotGeneratorSettings settings = SnapshotGeneratorSettings.CreateDefault();
+            SnapshotGenerator generator = new SnapshotGenerator(source, settings);
+            profile.Snapshot = null;
+            generator.Update(profile);
+
+            String outputPath = @"\Temp\SlicedMultiple.json";
+            profile.SaveJson(outputPath);
+
+            Assert.True(profile.Snapshot.Element.Any() == true);
+        }
+
 
         [Fact(DisplayName = "GenCreate.BreastAbnormality")]
         [Trait("Test", "test")]
