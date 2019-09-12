@@ -71,11 +71,11 @@ namespace FhirKhit.SliceGen.CSApi
                 ;
             return childMethodName;
         }
-        
+
         /// <summary>
-                 /// Traverse children using simple fhir path query.
-                 /// Return selected elements, or null if not found.
-                 /// </summary>
+        /// Traverse children using simple fhir path query.
+        /// Return selected elements, or null if not found.
+        /// </summary>
         public bool Generate(CodeBlockNested block,
             String methodModifiers,
             String methodName,
@@ -141,13 +141,10 @@ namespace FhirKhit.SliceGen.CSApi
                 }
                 else
                 {
-                    if (node.TryGetChild(pathItem, out ElementNode next) == false)
+                    if (node.TryGetAnyChild(pathItem, out ElementNode next) == false)
                     {
-                        if (node.TryGetCommonChild(pathItem, out next) == false)
-                        {
-                            this.gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
-                            return false;
-                        }
+                        this.gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
+                        return false;
                     }
 
                     Type nodeType = node.FhirItemType;

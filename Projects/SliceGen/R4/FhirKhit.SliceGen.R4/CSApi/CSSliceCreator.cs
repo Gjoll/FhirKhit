@@ -73,7 +73,7 @@ namespace FhirKhit.SliceGen.CSApi
         {
             const String fcn = nameof(DefineSliceOnValueDiscriminator);
 
-            if (sliceNode.TryGetChild(discriminator.Path, out ElementNode discriminatorNode) == false)
+            if (sliceNode.TryGetAnyChild(discriminator.Path, out ElementNode discriminatorNode) == false)
             {
                 this.gen.ConversionError(this.GetType().Name, fcn, $"Child element {discriminator.Path} not found in element {sliceNode.Path}");
                 return false;

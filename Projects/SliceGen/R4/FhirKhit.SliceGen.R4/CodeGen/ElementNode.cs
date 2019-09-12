@@ -130,7 +130,7 @@ namespace FhirKhit.SliceGen.R4
                 else if (String.IsNullOrEmpty(loadItem.SliceName))
                 {
                     NormalizePathItem(loadItem, ref pathItem, out Type actualType);
-                    if (nodeElement.TryGetChild(pathItem, out ElementNode dummy) == true)
+                    if (nodeElement.TryGetDirectChild(pathItem, out ElementNode dummy) == true)
                         throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
                     if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
                         throw new Exception($"Cant find '{loadItem.Path}' in {nodeElement.FhirItemType.FriendlyName()}");
@@ -141,11 +141,8 @@ namespace FhirKhit.SliceGen.R4
                 {
                     //Debug.Assert(loadItem.SliceName != "breastrad-AbnormalityDensity");
                     NormalizePathItem(loadItem, ref pathItem, out Type actualType);
-                    if (nodeElement.TryGetChild(pathItem, out ElementNode sliceNode) == false)
-                    {
-                        if (nodeElement.TryGetCommonChild(pathItem, out sliceNode) == false)
-                            throw new Exception($"Error element node {pathItem} not found {loadItem.Path}");
-                    }
+                    if (nodeElement.TryGetAnyChild(pathItem, out ElementNode sliceNode) == false)
+                        throw new Exception($"Error element node {pathItem} not found {loadItem.Path}");
                     if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementNode dummySlice) == true)
                         throw new Exception($"Error element node slice {nodeElement.Element.SliceName} already exists in {loadItem.Path}");
                     if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
@@ -347,7 +344,26 @@ namespace FhirKhit.SliceGen.R4
             this.FhirItemType = fhirItemType;
         }
 
-        public bool TryGetChild(String path, out ElementNode node)
+        public bool TryGetAnyChild(String path, out ElementNode node)
+        {
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
+
+            node = this;
+            foreach (String name in path.Split('.'))
+            {
+                if (node.children.TryGetValue(name, out ElementNode newNode) == false)
+                {
+                    newNode = node.FindCommonChild(name);
+                    if (newNode == null)
+                        return false;
+                }
+                node = newNode;
+            }
+            return true;
+        }
+
+        public bool TryGetDirectChild(String path, out ElementNode node)
         {
             if (path is null)
                 throw new ArgumentNullException(nameof(path));
@@ -414,11 +430,8 @@ namespace FhirKhit.SliceGen.R4
                 String sliceName;
 
                 pathPart = pathItemParts[0];
-                if (currentItem.TryGetChild(pathPart, out currentItem) == false)
-                {
-                    if (currentItem.TryGetCommonChild(pathPart, out currentItem) == false)
-                        return false;
-                }
+                if (currentItem.TryGetAnyChild(pathPart, out currentItem) == false)
+                    return false;
 
                 if (pathItemParts.Length == 2)
                 {

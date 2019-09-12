@@ -257,13 +257,10 @@ namespace FhirKhit.SliceGen.CSApi
                 }
                 else
                 {
-                    if (node.TryGetChild(pathItem, out ElementNode next) == false)
+                    if (node.TryGetAnyChild(pathItem, out ElementNode next) == false)
                     {
-                        if (node.TryGetCommonChild(pathItem, out next) == false)
-                        {
-                            this.Gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
-                            return false;
-                        }
+                        this.Gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
+                        return false;
                     }
 
                     PropertyInfo childProperty = node.FhirItemType.GetPropertyByFhirName(pathItem);
