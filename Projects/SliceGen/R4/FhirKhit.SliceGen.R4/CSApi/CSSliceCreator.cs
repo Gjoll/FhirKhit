@@ -1,5 +1,6 @@
 ﻿using FhirKhit.SliceGen.CodeGen;
 using FhirKhit.SliceGen.R4;
+using FhirKhit.SliceGen.SharedLib;
 using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
@@ -80,17 +81,10 @@ namespace FhirKhit.SliceGen.CSApi
                 return false;
             }
 
-            ElementNode fixNode = sliceNode.Select(discriminator.Path).SingleOrDefault();
-            if (fixNode == null)
+            Element fixedValue = sliceNode.Select(discriminator.Path).FixedValues().SingleOrDefault();
+            if (fixedValue == null)
             {
                 this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node lacks fixed element {discriminator.Path}");
-                return false;
-            }
-
-            Element fixElement = fixNode.Element?.Fixed;
-            if (fixElement == null)
-            {
-                this.gen.ConversionError(this.GetType().Name, fcn, $"Fixed element {discriminator.Path} lacks fixed element");
                 return false;
             }
 
@@ -128,7 +122,7 @@ namespace FhirKhit.SliceGen.CSApi
                 .CloseBrace(";")
                 ;
 
-            ElementFixCode.Construct(sliceDiscriminators, fixElement, $"{tempVarName}.Pattern", out String propertyType);
+            ElementFixCode.Construct(sliceDiscriminators, fixedValue, $"{tempVarName}.Pattern", out String propertyType);
 
             sliceDiscriminators
                 .AppendCode($"{varName} = {tempVarName};")
