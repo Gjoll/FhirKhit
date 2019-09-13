@@ -75,13 +75,9 @@ namespace FhirKhit.SliceGen.CSApi
         {
             const String fcn = nameof(DefineSliceOnValueDiscriminator);
 
-            if (sliceNode.TryGetDirectChild(discriminator.Path, out ElementNode discriminatorNode) == false)
-            {
-                this.gen.ConversionError(this.GetType().Name, fcn, $"Child element {discriminator.Path} not found in element {sliceNode.Path}");
-                return false;
-            }
-
-            Element fixedValue = sliceNode.Select(discriminator.Path).FixedValues().SingleOrDefault();
+            var selectedNodes = sliceNode.Select(discriminator.Path).ToArray();
+            var fixedNodes = selectedNodes.FixedValues().ToArray();
+            Element fixedValue = fixedNodes.SingleOrDefault();
             if (fixedValue == null)
             {
                 this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node lacks fixed element {discriminator.Path}");

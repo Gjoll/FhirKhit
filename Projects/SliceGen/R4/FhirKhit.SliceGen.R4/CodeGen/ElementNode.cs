@@ -511,15 +511,6 @@ namespace FhirKhit.SliceGen.R4
                         yield return childNode;
                 }
             }
-
-            if (String.IsNullOrEmpty(name) == false)
-            {
-                ElementNode commonChild = this.FindCommonChild(this.Path, name);
-                if (commonChild != null)
-                    yield return commonChild;
-            }
-            else
-                throw new NotImplementedException($"Did not implement child search with name == null");
         }
 
         private CompiledExpression getCompiledExpression(string expression)
