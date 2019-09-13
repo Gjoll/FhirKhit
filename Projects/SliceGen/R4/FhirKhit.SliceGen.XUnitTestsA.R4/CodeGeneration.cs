@@ -164,7 +164,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
 
             String methodName = $"FindChild{fhirTypeName}";
             construct
-                .AppendCode($"case \"{fhirCSType.FriendlyName()}\": return {methodName}(childName);")
+                .AppendCode($"case \"{fhirCSType.FriendlyName()}\": return {methodName}(parentPath, childName);")
                 ;
 
             methods
@@ -172,7 +172,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 .SummaryOpen()
                 .Summary($"Manually add the children of a Coding element.")
                 .SummaryClose()
-                .AppendCode($"ElementNode {methodName}(String childName)")
+                .AppendCode($"ElementNode {methodName}(String parentPath, String childName)")
                 .OpenBrace()
                 .AppendCode($"ElementNode retVal;")
                 .AppendCode($"switch (childName)")
@@ -187,8 +187,14 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                     String varName = $"{attribute.Name}Var";
                     methods
                         .AppendCode($"case \"{attribute.Name}\":")
-                        .AppendCode($"    retVal = new ElementNode(this, null, typeof({pi.PropertyType.FriendlyName()}), nameof({fhirCSType.FriendlyName()}.{pi.Name}));")
-                        .AppendCode($"    break;")
+                        .OpenBrace()
+                        .AppendCode($"ElementDefinition e = new ElementDefinition")
+                        .OpenBrace()
+                        .AppendCode($"Path = $\"{{parentPath}}.{attribute.Name}\"")
+                        .CloseBrace(";")
+                        .AppendCode($"retVal = new ElementNode(this, e, typeof({pi.PropertyType.FriendlyName()}), nameof({fhirCSType.FriendlyName()}.{pi.Name}));")
+                        .AppendCode($"break;")
+                        .CloseBrace(";")
                         ;
                 }
             }
@@ -196,7 +202,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             methods
                 .AppendCode($"default: return null;")
                 .CloseBrace()
-                .AppendCode($"this.children.Add(childName, retVal);")
+                .AppendCode($"this.childNodeDictionary.Add(childName, retVal);")
                 .AppendCode($"return retVal;")
                 .CloseBrace()
                 ;
@@ -242,7 +248,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 .SummaryOpen()
                 .Summary($"Create ElementNode for child of common/primitive Fhir data type elements")
                 .SummaryClose()
-                .AppendCode($"public ElementNode FindCommonChild(String childName)")
+                .AppendCode($"public ElementNode FindCommonChild(String parentPath, String childName)")
                 .OpenBrace()
                 .AppendCode($"switch (this.FhirItemType.FriendlyName())")
                 .OpenBrace()

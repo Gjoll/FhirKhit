@@ -163,7 +163,7 @@ namespace FhirKhit.SliceGen.R4
             }
         }
 
-        public static int MAX_FP_EXPRESSION_CACHE_SIZE = 500;
+        public const int MAX_FP_EXPRESSION_CACHE_SIZE = 500;
         private static readonly Cache<string, CompiledExpression> _cache = new Cache<string, CompiledExpression>(expr => Compile(expr), new CacheSettings() { MaxCacheSize = MAX_FP_EXPRESSION_CACHE_SIZE });
 
 
@@ -387,16 +387,18 @@ namespace FhirKhit.SliceGen.R4
                 throw new ArgumentNullException(nameof(path));
 
             node = this;
+            String partialPath = "";
             foreach (String name in path.Split('.'))
             {
                 if (node.childNodeDictionary.TryGetValue(name, out ElementNode newNode) == false)
                 {
-                    newNode = node.FindCommonChild(name);
+                    newNode = node.FindCommonChild(partialPath, name);
                     if (newNode == null)
                         return false;
                 }
                 node = newNode;
-            }
+                path = $"{partialPath}.{name}";
+            };
             return true;
         }
 
@@ -416,7 +418,7 @@ namespace FhirKhit.SliceGen.R4
 
         public bool TryGetCommonChild(String name, out ElementNode node)
         {
-            node = this.FindCommonChild(name);
+            node = this.FindCommonChild(this.Path, name);
             return (node != null);
         }
 
@@ -494,7 +496,7 @@ namespace FhirKhit.SliceGen.R4
 
             if (String.IsNullOrEmpty(name) == false)
             {
-                ElementNode commonChild = this.FindCommonChild(name);
+                ElementNode commonChild = this.FindCommonChild(this.Path, name);
                 if (commonChild != null)
                     yield return commonChild;
             }

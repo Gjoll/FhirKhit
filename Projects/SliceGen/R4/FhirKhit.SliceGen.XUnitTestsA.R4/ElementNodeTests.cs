@@ -54,7 +54,16 @@ namespace FhirKhit.SliceGen.XUnitTestsA
 
             SnapshotCreator.Create(s);
             ElementNode head = ElementNode.Create(s);
-            ElementNode[] nodes = head.ChildNodes.First().Select("Observation.code.coding").ToArray();
+            {
+                ElementNode[] nodes = head.ChildNodes.First().Select("Observation.code.coding").ToArray();
+                Assert.True(nodes.Length == 1);
+                Assert.True(nodes[0].Name == "coding");
+            }
+            {
+                ElementNode[] nodes = head.ChildNodes.First().Select("Observation.code.coding.code").ToArray();
+                Assert.True(nodes.Length == 1);
+                Assert.True(nodes[0].Name == "code");
+            }
         }
 
 
