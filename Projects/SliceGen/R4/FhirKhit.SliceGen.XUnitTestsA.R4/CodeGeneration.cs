@@ -209,6 +209,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                         .AppendCode($"ElementDefinition e = new ElementDefinition")
                         .OpenBrace()
                         .AppendCode($"Path = $\"{{parentPath}}.{attribute.Name}\",")
+                        .AppendCode($"Short = \"{fhirType}.{attribute.Name} common attribute\",")
                         .AppendCode($"Min = {min},")
                         .AppendCode($"Max = \"{max}\"")
                         .CloseBrace(";")
