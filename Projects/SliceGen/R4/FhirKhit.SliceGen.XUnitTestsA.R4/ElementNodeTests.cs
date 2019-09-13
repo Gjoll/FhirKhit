@@ -116,7 +116,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             SnapshotCreator.Create(s);
             ElementNode head = ElementNode.Create(s);
             Assert.True(head.Slices.Any() == false);
-            Assert.True(head.Children.Count() == 1);
+            Assert.True(head.ChildNodes.Count() == 1);
 
             Assert.True(head.TryGetElementNode("Observation.code.coding", out ElementNode coding) == true);
             Assert.True(coding.Slices.Count() == 1);
@@ -150,7 +150,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             SnapshotCreator.Create(s);
             ElementNode head = ElementNode.Create(s);
             Assert.True(head.Slices.Any() == false);
-            Assert.True(head.Children.Count() == 1);
+            Assert.True(head.ChildNodes.Count() == 1);
 
             Assert.True(head.TryGetElementNode("Observation.component", out ElementNode observationComponent) == true);
             Assert.True(observationComponent.FullPath() == "Observation.component");
@@ -171,7 +171,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             SnapshotCreator.Create(s);
             ElementNode head = ElementNode.Create(s);
             Assert.True(head.Slices.Any() == false);
-            Assert.True(head.Children.Count() == 1);
+            Assert.True(head.ChildNodes.Count() == 1);
 
             {
                 Assert.True(head.TryGetElementNode("Observation.id", out ElementNode idNode) == true);

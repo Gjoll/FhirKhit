@@ -105,7 +105,7 @@ namespace FhirKhit.SliceGen.R4
                     retVal = false;
             }
 
-            foreach (var child in node.Children)
+            foreach (var child in node.ChildNodes)
             {
                 if (ProcessElementSlices(child) == false)
                     retVal = false;
@@ -149,13 +149,13 @@ namespace FhirKhit.SliceGen.R4
             if (this.Code.StartClass(this.className, fhirType) == false)
                 return false;
 
-            if (profileElements.Children.Count() != 1)
+            if (profileElements.ChildNodes.Count() != 1)
             {
-                this.gen.ConversionError(this.GetType().Name, fcn, $"Profile head element has invalid number of children {profileElements.Children.Count()}");
+                this.gen.ConversionError(this.GetType().Name, fcn, $"Profile head element has invalid number of children {profileElements.ChildNodes.Count()}");
                 return false;
             }
 
-            bool retVal = ProcessElementSlices(profileElements.Children.First());
+            bool retVal = ProcessElementSlices(profileElements.ChildNodes.First());
 
             if (this.Code.EndClass() == false)
                 retVal = false;

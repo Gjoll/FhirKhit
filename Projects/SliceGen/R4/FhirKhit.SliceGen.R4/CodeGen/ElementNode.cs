@@ -6,11 +6,15 @@ using System.Diagnostics;
 using FhirKhit.Tools;
 using System.Reflection;
 using Hl7.Fhir.Introspection;
+using Hl7.Fhir.ElementModel;
+using Hl7.Fhir.Specification;
+using Hl7.FhirPath;
+using Hl7.Fhir.Utility;
 
 namespace FhirKhit.SliceGen.R4
 {
     [DebuggerDisplay("{Path} ")]
-    public partial class ElementNode
+    public partial class ElementNode : ITypedElement
     {
         class Loader
         {
@@ -125,7 +129,7 @@ namespace FhirKhit.SliceGen.R4
                     if (ModelInfo.FhirTypeToCsType.TryGetValue(pathItem, out Type fhirType) == false)
                         throw new Exception($"Unknown resource '{pathItem}'");
                     leafNode = new ElementNode(nodeElement, loadItem, fhirType, String.Empty);
-                    nodeElement.children.Add(pathItem, leafNode);
+                    nodeElement.childNodeDictionary.Add(pathItem, leafNode);
                 }
                 else if (String.IsNullOrEmpty(loadItem.SliceName))
                 {
@@ -135,7 +139,7 @@ namespace FhirKhit.SliceGen.R4
                     if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
                         throw new Exception($"Cant find '{loadItem.Path}' in {nodeElement.FhirItemType.FriendlyName()}");
                     leafNode = new ElementNode(nodeElement, loadItem, fhirType, actualType, propertyName);
-                    nodeElement.children.Add(pathItem, leafNode);
+                    nodeElement.childNodeDictionary.Add(pathItem, leafNode);
                 }
                 else
                 {
@@ -158,6 +162,10 @@ namespace FhirKhit.SliceGen.R4
                 };
             }
         }
+
+        public static int MAX_FP_EXPRESSION_CACHE_SIZE = 500;
+        private static readonly Cache<string, CompiledExpression> _cache = new Cache<string, CompiledExpression>(expr => Compile(expr), new CacheSettings() { MaxCacheSize = MAX_FP_EXPRESSION_CACHE_SIZE });
+
 
         public const String BaseSlice = "";
 
@@ -204,7 +212,7 @@ namespace FhirKhit.SliceGen.R4
         {
             get
             {
-                foreach (ElementNode child in this.Children)
+                foreach (ElementNode child in this.ChildNodes)
                 {
                     if ((child.IsFixed) || (child.HasFixedChild) || (child.HasFixedSlice))
                         return true;
@@ -280,10 +288,30 @@ namespace FhirKhit.SliceGen.R4
         public String PropertyName { get; set; }
 
         public IEnumerable<ElementNode> Slices => this.slices.Values;
-        public IEnumerable<ElementNode> Children => this.children.Values;
+        public IEnumerable<ElementNode> ChildNodes => this.childNodeDictionary.Values;
+
+        /// <summary>
+        /// Implementation of ITypedElement.InstanceType
+        /// </summary>
+        public string InstanceType => this.Element.TypeName;
+
+        /// <summary>
+        /// Implementation of ITypedElement.Value
+        /// </summary>
+        public object Value => this.Element;
+
+        /// <summary>
+        /// Implementation of ITypedElement.Location
+        /// </summary>
+        public string Location => this.Name;
+
+        /// <summary>
+        /// Implementation of ITypedElement.Definition
+        /// </summary>
+        public IElementDefinitionSummary Definition => this.Element.GetElementDefinitionSummary();
 
         Dictionary<String, ElementNode> slices = new Dictionary<String, ElementNode>();
-        Dictionary<String, ElementNode> children = new Dictionary<String, ElementNode>();
+        Dictionary<String, ElementNode> childNodeDictionary = new Dictionary<String, ElementNode>();
 
         public ElementNode(ElementNode parent,
             ElementDefinition element,
@@ -352,7 +380,7 @@ namespace FhirKhit.SliceGen.R4
             node = this;
             foreach (String name in path.Split('.'))
             {
-                if (node.children.TryGetValue(name, out ElementNode newNode) == false)
+                if (node.childNodeDictionary.TryGetValue(name, out ElementNode newNode) == false)
                 {
                     newNode = node.FindCommonChild(name);
                     if (newNode == null)
@@ -371,7 +399,7 @@ namespace FhirKhit.SliceGen.R4
             node = this;
             foreach (String name in path.Split('.'))
             {
-                if (node.children.TryGetValue(name, out node) == false)
+                if (node.childNodeDictionary.TryGetValue(name, out node) == false)
                     return false;
             }
             return true;
@@ -443,5 +471,44 @@ namespace FhirKhit.SliceGen.R4
 
             return true;
         }
+
+        /// <summary>
+        /// Implementation of ITypedElement.Children
+        /// </summary>
+        public IEnumerable<ITypedElement> Children(string name)
+        {
+            foreach (ElementNode childNode in this.ChildNodes)
+            {
+                if ((name == null) || (childNode.Name == name))
+                    yield return childNode;
+            }
+
+            foreach (ElementNode slice in this.slices.Values)
+            {
+                foreach (ElementNode childNode in this.ChildNodes)
+                {
+                    if ((name == null) || (childNode.Name == name))
+                        yield return childNode;
+                }
+            }
+        }
+
+        private CompiledExpression getCompiledExpression(string expression)
+        {
+            return _cache.GetValue(expression);
+        }
+
+        private static CompiledExpression Compile(string expression)
+        {
+            var compiler = new FhirPathCompiler();
+            return compiler.Compile(expression);
+        }
+
+        public IEnumerable<ITypedElement> Select(string expression, EvaluationContext ctx = null)
+        {
+            var evaluator = getCompiledExpression(expression);
+            return evaluator(this, ctx ?? EvaluationContext.CreateDefault());
+        }
+
     }
 }

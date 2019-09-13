@@ -144,7 +144,7 @@ namespace FhirKhit.SliceGen.CSApi
             {
                 String pathPart = pathParts[i];
                 ElementNode next = null;
-                foreach (ElementNode n in node.Children)
+                foreach (ElementNode n in node.ChildNodes)
                 {
                     if (n.Name == pathPart)
                     {

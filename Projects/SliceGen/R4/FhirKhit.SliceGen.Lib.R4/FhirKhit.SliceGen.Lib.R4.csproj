@@ -27,6 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Hl7.Fhir.ElementModel">
+      <HintPath>..\..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Specification\bin\Debug\netstandard2.0\Hl7.Fhir.ElementModel.dll</HintPath>
+    </Reference>
     <Reference Include="Hl7.Fhir.R4.Core">
       <HintPath>..\..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Core\bin\Debug\netstandard2.0\Hl7.Fhir.R4.Core.dll</HintPath>
     </Reference>

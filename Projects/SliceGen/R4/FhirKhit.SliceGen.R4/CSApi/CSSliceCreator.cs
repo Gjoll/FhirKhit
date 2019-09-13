@@ -361,7 +361,7 @@ namespace FhirKhit.SliceGen.CSApi
                 String propertyPath)
             {
                 Int32 varNum = 0;
-                foreach (ElementNode setNodeChild in setNode.Children)
+                foreach (ElementNode setNodeChild in setNode.ChildNodes)
                 {
                     String childPropertyPath = $"{propertyPath}.{setNodeChild.PropertyName}";
 
