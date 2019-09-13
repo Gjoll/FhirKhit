@@ -214,6 +214,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                         .AppendCode($"Max = \"{max}\"")
                         .CloseBrace(";")
                         .AppendCode($"retVal = new ElementNode(this, e, typeof({pi.PropertyType.FriendlyName()}), nameof({fhirCSType.FriendlyName()}.{pi.Name}));")
+                        .AppendCode($"retVal.CommonElementFlag = true;")
                         .AppendCode($"break;")
                         .CloseBrace(";")
                         ;

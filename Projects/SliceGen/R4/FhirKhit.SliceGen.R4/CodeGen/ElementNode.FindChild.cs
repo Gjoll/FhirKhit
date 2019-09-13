@@ -9,18 +9,18 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Support.Model;
 using System.Diagnostics;
 using Hl7.FhirPath;
-                                                                                                                                            // CodeGeneration.cs:254
+                                                                                                                                            // CodeGeneration.cs:255
 namespace FhirKhit.SliceGen.R4
-{                                                                                                                                           // CodeGeneration.cs:256
-    public partial class ElementNode                                                                                                        // CodeGeneration.cs:257
-    {                                                                                                                                       // CodeGeneration.cs:258
+{                                                                                                                                           // CodeGeneration.cs:257
+    public partial class ElementNode                                                                                                        // CodeGeneration.cs:258
+    {                                                                                                                                       // CodeGeneration.cs:259
         /// <summary>
         /// Create ElementNode for child of common/primitive Fhir data type elements
         /// </summary>
-        public ElementNode FindCommonChild(String parentPath, String childName)                                                             // CodeGeneration.cs:272
-        {                                                                                                                                   // CodeGeneration.cs:273
-            switch (this.FhirItemType.FriendlyName())                                                                                       // CodeGeneration.cs:274
-            {                                                                                                                               // CodeGeneration.cs:275
+        public ElementNode FindCommonChild(String parentPath, String childName)                                                             // CodeGeneration.cs:273
+        {                                                                                                                                   // CodeGeneration.cs:274
+            switch (this.FhirItemType.FriendlyName())                                                                                       // CodeGeneration.cs:275
+            {                                                                                                                               // CodeGeneration.cs:276
                 case "Ratio": return FindChildRatio(parentPath, childName);                                                                 // CodeGeneration.cs:167
                 case "Period": return FindChildPeriod(parentPath, childName);                                                               // CodeGeneration.cs:167
                 case "Range": return FindChildRange(parentPath, childName);                                                                 // CodeGeneration.cs:167
@@ -44,9 +44,9 @@ namespace FhirKhit.SliceGen.R4
                 case "MoneyQuantity": return FindChildMoneyQuantity(parentPath, childName);                                                 // CodeGeneration.cs:167
                 case "SimpleQuantity": return FindChildSimpleQuantity(parentPath, childName);                                               // CodeGeneration.cs:167
                 case "Extension": return FindChildExtension(parentPath, childName);                                                         // CodeGeneration.cs:167
-                default: return null;                                                                                                       // CodeGeneration.cs:305
-            }                                                                                                                               // CodeGeneration.cs:306
-        }                                                                                                                                   // CodeGeneration.cs:307
+                default: return null;                                                                                                       // CodeGeneration.cs:306
+            }                                                                                                                               // CodeGeneration.cs:307
+        }                                                                                                                                   // CodeGeneration.cs:308
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -66,8 +66,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Quantity), nameof(Ratio.Numerator));                                           // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "denominator":                                                                                                         // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -78,8 +79,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Quantity), nameof(Ratio.Denominator));                                         // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -90,8 +92,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Ratio.ElementId));                                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -102,13 +105,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Ratio.Extension));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -128,8 +132,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDateTime), nameof(Period.StartElement));                                   // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "end":                                                                                                                 // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -140,8 +145,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDateTime), nameof(Period.EndElement));                                     // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -152,8 +158,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Period.ElementId));                                            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -164,13 +171,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Period.Extension));                                   // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -190,8 +198,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(SimpleQuantity), nameof(Range.Low));                                           // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "high":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -202,8 +211,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(SimpleQuantity), nameof(Range.High));                                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -214,8 +224,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Range.ElementId));                                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -226,13 +237,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Range.Extension));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -252,8 +264,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(Attachment.ContentTypeElement));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "language":                                                                                                            // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -264,8 +277,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(Attachment.LanguageElement));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "data":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -276,8 +290,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Base64Binary), nameof(Attachment.DataElement));                                // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "url":                                                                                                                 // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -288,8 +303,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirUrl), nameof(Attachment.UrlElement));                                      // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "size":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -300,8 +316,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(UnsignedInt), nameof(Attachment.SizeElement));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "hash":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -312,8 +329,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Base64Binary), nameof(Attachment.HashElement));                                // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "title":                                                                                                               // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -324,8 +342,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Attachment.TitleElement));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "creation":                                                                                                            // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -336,8 +355,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDateTime), nameof(Attachment.CreationElement));                            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -348,8 +368,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Attachment.ElementId));                                        // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -360,13 +381,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Attachment.Extension));                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -386,8 +408,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Identifier.IdentifierUse>), nameof(Identifier.UseElement));               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "type":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -398,8 +421,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(CodeableConcept), nameof(Identifier.Type));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "system":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -410,8 +434,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirUri), nameof(Identifier.SystemElement));                                   // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "value":                                                                                                               // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -422,8 +447,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Identifier.ValueElement));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "period":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -434,8 +460,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Period), nameof(Identifier.Period));                                           // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "assigner":                                                                                                            // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -446,8 +473,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(ResourceReference), nameof(Identifier.Assigner));                              // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -458,8 +486,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Identifier.ElementId));                                        // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -470,13 +499,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Identifier.Extension));                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -496,8 +526,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Element), nameof(Annotation.Author));                                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "time":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -508,8 +539,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDateTime), nameof(Annotation.TimeElement));                                // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "text":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -520,8 +552,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Markdown), nameof(Annotation.Text));                                           // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -532,8 +565,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Annotation.ElementId));                                        // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -544,13 +578,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Annotation.Extension));                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -570,8 +605,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<HumanName.NameUse>), nameof(HumanName.UseElement));                       // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "text":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -582,8 +618,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(HumanName.TextElement));                                   // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "family":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -594,8 +631,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(HumanName.FamilyElement));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "given":                                                                                                               // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -606,8 +644,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<FhirString>), nameof(HumanName.GivenElement));                            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "prefix":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -618,8 +657,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<FhirString>), nameof(HumanName.PrefixElement));                           // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "suffix":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -630,8 +670,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<FhirString>), nameof(HumanName.SuffixElement));                           // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "period":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -642,8 +683,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Period), nameof(HumanName.Period));                                            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -654,8 +696,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(HumanName.ElementId));                                         // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -666,13 +709,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(HumanName.Extension));                                // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -692,8 +736,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Coding>), nameof(CodeableConcept.Coding));                                // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "text":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -704,8 +749,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(CodeableConcept.TextElement));                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -716,8 +762,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(CodeableConcept.ElementId));                                   // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -728,13 +775,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(CodeableConcept.Extension));                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -754,8 +802,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<ContactPoint.ContactPointSystem>), nameof(ContactPoint.SystemElement));   // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "value":                                                                                                               // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -766,8 +815,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(ContactPoint.ValueElement));                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "use":                                                                                                                 // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -778,8 +828,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<ContactPoint.ContactPointUse>), nameof(ContactPoint.UseElement));         // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "rank":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -790,8 +841,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(PositiveInt), nameof(ContactPoint.RankElement));                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "period":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -802,8 +854,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Period), nameof(ContactPoint.Period));                                         // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -814,8 +867,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(ContactPoint.ElementId));                                      // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -826,13 +880,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(ContactPoint.Extension));                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -852,8 +907,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirUri), nameof(Coding.SystemElement));                                       // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "version":                                                                                                             // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -864,8 +920,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Coding.VersionElement));                                   // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "code":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -876,8 +933,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(Coding.CodeElement));                                            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "display":                                                                                                             // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -888,8 +946,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Coding.DisplayElement));                                   // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "userSelected":                                                                                                        // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -900,8 +959,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirBoolean), nameof(Coding.UserSelectedElement));                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -912,8 +972,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Coding.ElementId));                                            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -924,13 +985,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Coding.Extension));                                   // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -950,8 +1012,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(Money.ValueElement));                                     // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "currency":                                                                                                            // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -962,8 +1025,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Money.Currencies>), nameof(Money.CurrencyElement));                       // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -974,8 +1038,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Money.ElementId));                                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -986,13 +1051,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Money.Extension));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -1012,8 +1078,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Address.AddressUse>), nameof(Address.UseElement));                        // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "type":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1024,8 +1091,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Address.AddressType>), nameof(Address.TypeElement));                      // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "text":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1036,8 +1104,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Address.TextElement));                                     // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "line":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1048,8 +1117,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<FhirString>), nameof(Address.LineElement));                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "city":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1060,8 +1130,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Address.CityElement));                                     // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "district":                                                                                                            // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1072,8 +1143,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Address.DistrictElement));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "state":                                                                                                               // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1084,8 +1156,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Address.StateElement));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "postalCode":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1096,8 +1169,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Address.PostalCodeElement));                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "country":                                                                                                             // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1108,8 +1182,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Address.CountryElement));                                  // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "period":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1120,8 +1195,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Period), nameof(Address.Period));                                              // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1132,8 +1208,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Address.ElementId));                                           // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1144,13 +1221,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Address.Extension));                                  // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -1170,8 +1248,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<FhirDateTime>), nameof(Timing.EventElement));                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "repeat":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1182,8 +1261,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Timing.RepeatComponent), nameof(Timing.Repeat));                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "code":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1194,8 +1274,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(CodeableConcept), nameof(Timing.Code));                                        // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "modifierExtension":                                                                                                   // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1206,8 +1287,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Timing.ModifierExtension));                           // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1218,8 +1300,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Timing.ElementId));                                            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1230,13 +1313,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Timing.Extension));                                   // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -1256,8 +1340,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(Quantity.ValueElement));                                  // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "comparator":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1268,8 +1353,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Quantity.QuantityComparator>), nameof(Quantity.ComparatorElement));       // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "unit":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1280,8 +1366,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Quantity.UnitElement));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "system":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1292,8 +1379,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirUri), nameof(Quantity.SystemElement));                                     // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "code":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1304,8 +1392,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(Quantity.CodeElement));                                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1316,8 +1405,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Quantity.ElementId));                                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1328,13 +1418,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Quantity.Extension));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -1354,8 +1445,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(SimpleQuantity), nameof(SampledData.Origin));                                  // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "period":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1366,8 +1458,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(SampledData.PeriodElement));                              // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "factor":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1378,8 +1471,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(SampledData.FactorElement));                              // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "lowerLimit":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1390,8 +1484,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(SampledData.LowerLimitElement));                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "upperLimit":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1402,8 +1497,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(SampledData.UpperLimitElement));                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "dimensions":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1414,8 +1510,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(PositiveInt), nameof(SampledData.DimensionsElement));                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "data":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1426,8 +1523,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(SampledData.DataElement));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1438,8 +1536,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(SampledData.ElementId));                                       // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1450,13 +1549,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(SampledData.Extension));                              // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -1476,8 +1576,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Coding>), nameof(Signature.Type));                                        // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "when":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1488,8 +1589,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Instant), nameof(Signature.WhenElement));                                      // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "who":                                                                                                                 // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1500,8 +1602,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(ResourceReference), nameof(Signature.Who));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "onBehalfOf":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1512,8 +1615,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(ResourceReference), nameof(Signature.OnBehalfOf));                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "targetFormat":                                                                                                        // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1524,8 +1628,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(Signature.TargetFormatElement));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "sigFormat":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1536,8 +1641,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(Signature.SigFormatElement));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "data":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1548,8 +1654,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Base64Binary), nameof(Signature.DataElement));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1560,8 +1667,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Signature.ElementId));                                         // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1572,13 +1680,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Signature.Extension));                                // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -1598,8 +1707,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(Age.ValueElement));                                       // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "comparator":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1610,8 +1720,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Quantity.QuantityComparator>), nameof(Age.ComparatorElement));            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "unit":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1622,8 +1733,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Age.UnitElement));                                         // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "system":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1634,8 +1746,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirUri), nameof(Age.SystemElement));                                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "code":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1646,8 +1759,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(Age.CodeElement));                                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1658,8 +1772,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Age.ElementId));                                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1670,13 +1785,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Age.Extension));                                      // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -1696,8 +1812,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(Distance.ValueElement));                                  // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "comparator":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1708,8 +1825,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Quantity.QuantityComparator>), nameof(Distance.ComparatorElement));       // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "unit":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1720,8 +1838,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Distance.UnitElement));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "system":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1732,8 +1851,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirUri), nameof(Distance.SystemElement));                                     // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "code":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1744,8 +1864,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(Distance.CodeElement));                                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1756,8 +1877,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Distance.ElementId));                                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1768,13 +1890,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Distance.Extension));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -1794,8 +1917,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(Duration.ValueElement));                                  // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "comparator":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1806,8 +1930,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Quantity.QuantityComparator>), nameof(Duration.ComparatorElement));       // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "unit":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1818,8 +1943,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Duration.UnitElement));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "system":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1830,8 +1956,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirUri), nameof(Duration.SystemElement));                                     // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "code":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1842,8 +1969,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(Duration.CodeElement));                                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1854,8 +1982,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Duration.ElementId));                                          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1866,13 +1995,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Duration.Extension));                                 // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -1892,8 +2022,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(Count.ValueElement));                                     // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "comparator":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1904,8 +2035,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Quantity.QuantityComparator>), nameof(Count.ComparatorElement));          // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "unit":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1916,8 +2048,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(Count.UnitElement));                                       // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "system":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1928,8 +2061,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirUri), nameof(Count.SystemElement));                                        // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "code":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1940,8 +2074,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(Count.CodeElement));                                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1952,8 +2087,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Count.ElementId));                                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -1964,13 +2100,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Count.Extension));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -1990,8 +2127,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(MoneyQuantity.ValueElement));                             // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "comparator":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2002,8 +2140,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Quantity.QuantityComparator>), nameof(MoneyQuantity.ComparatorElement));  // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "unit":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2014,8 +2153,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(MoneyQuantity.UnitElement));                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "system":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2026,8 +2166,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirUri), nameof(MoneyQuantity.SystemElement));                                // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "code":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2038,8 +2179,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(MoneyQuantity.CodeElement));                                     // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2050,8 +2192,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(MoneyQuantity.ElementId));                                     // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2062,13 +2205,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(MoneyQuantity.Extension));                            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -2088,8 +2232,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirDecimal), nameof(SimpleQuantity.ValueElement));                            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "comparator":                                                                                                          // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2100,8 +2245,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code<Quantity.QuantityComparator>), nameof(SimpleQuantity.ComparatorElement)); // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "unit":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2112,8 +2258,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirString), nameof(SimpleQuantity.UnitElement));                              // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "system":                                                                                                              // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2124,8 +2271,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(FhirUri), nameof(SimpleQuantity.SystemElement));                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "code":                                                                                                                // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2136,8 +2284,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Code), nameof(SimpleQuantity.CodeElement));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2148,8 +2297,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(SimpleQuantity.ElementId));                                    // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2160,13 +2310,14 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(SimpleQuantity.Extension));                           // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
                                                                                                                                             // CodeGeneration.cs:171
         /// <summary>
         /// Manually add the children of a Coding element.
@@ -2186,8 +2337,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Extension.Url));                                               // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "value":                                                                                                               // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2198,8 +2350,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(Element), nameof(Extension.Value));                                            // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "id":                                                                                                                  // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2210,8 +2363,9 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(string), nameof(Extension.ElementId));                                         // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
                 case "extension":                                                                                                           // CodeGeneration.cs:207
                 {                                                                                                                           // CodeGeneration.cs:208
                     ElementDefinition e = new ElementDefinition                                                                             // CodeGeneration.cs:209
@@ -2222,12 +2376,13 @@ namespace FhirKhit.SliceGen.R4
                         Max = "1"                                                                                                           // CodeGeneration.cs:214
                     };                                                                                                                      // CodeGeneration.cs:215
                     retVal = new ElementNode(this, e, typeof(List<Extension>), nameof(Extension.Extension));                                // CodeGeneration.cs:216
-                    break;                                                                                                                  // CodeGeneration.cs:217
-                };                                                                                                                          // CodeGeneration.cs:218
-                default: return null;                                                                                                       // CodeGeneration.cs:224
-            }                                                                                                                               // CodeGeneration.cs:225
-            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:226
-            return retVal;                                                                                                                  // CodeGeneration.cs:227
-        }                                                                                                                                   // CodeGeneration.cs:228
-    }                                                                                                                                       // CodeGeneration.cs:264
-}                                                                                                                                           // CodeGeneration.cs:265
+                    retVal.CommonElementFlag = true;                                                                                        // CodeGeneration.cs:217
+                    break;                                                                                                                  // CodeGeneration.cs:218
+                };                                                                                                                          // CodeGeneration.cs:219
+                default: return null;                                                                                                       // CodeGeneration.cs:225
+            }                                                                                                                               // CodeGeneration.cs:226
+            this.childNodeDictionary.Add(childName, retVal);                                                                                // CodeGeneration.cs:227
+            return retVal;                                                                                                                  // CodeGeneration.cs:228
+        }                                                                                                                                   // CodeGeneration.cs:229
+    }                                                                                                                                       // CodeGeneration.cs:265
+}                                                                                                                                           // CodeGeneration.cs:266

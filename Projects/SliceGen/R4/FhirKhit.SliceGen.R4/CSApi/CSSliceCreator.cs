@@ -5,6 +5,7 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -79,10 +80,17 @@ namespace FhirKhit.SliceGen.CSApi
                 return false;
             }
 
-            Element fixElement = discriminatorNode.Element.Fixed;
-            if (fixElement == null)
+            ElementNode fixNode = sliceNode.Select(discriminator.Path).SingleOrDefault();
+            if (fixNode == null)
             {
                 this.gen.ConversionError(this.GetType().Name, fcn, $"Slice node lacks fixed element {discriminator.Path}");
+                return false;
+            }
+
+            Element fixElement = fixNode.Element?.Fixed;
+            if (fixElement == null)
+            {
+                this.gen.ConversionError(this.GetType().Name, fcn, $"Fixed element {discriminator.Path} lacks fixed element");
                 return false;
             }
 

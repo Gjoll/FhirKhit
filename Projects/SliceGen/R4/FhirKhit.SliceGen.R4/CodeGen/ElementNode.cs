@@ -166,6 +166,10 @@ namespace FhirKhit.SliceGen.R4
         public const int MAX_FP_EXPRESSION_CACHE_SIZE = 500;
         private static readonly Cache<string, CompiledExpression> _cache = new Cache<string, CompiledExpression>(expr => Compile(expr), new CacheSettings() { MaxCacheSize = MAX_FP_EXPRESSION_CACHE_SIZE });
 
+        /// <summary>
+        /// True if this is generated from a common data element child (i.e. CodeableCocept.Coding)
+        /// </summary>
+        public bool CommonElementFlag { get; set; } = false;
 
         public const String BaseSlice = "";
 
@@ -240,7 +244,7 @@ namespace FhirKhit.SliceGen.R4
 
         /// <summary>
         /// Element Definition path, including slice names.
-        /// </summary>
+        /// </summaryElementNode
         public String[] SlicePath()
         {
             if (this.slicePath == null)
@@ -322,6 +326,10 @@ namespace FhirKhit.SliceGen.R4
         Dictionary<String, ElementNode> slices = new Dictionary<String, ElementNode>();
         Dictionary<String, ElementNode> childNodeDictionary = new Dictionary<String, ElementNode>();
 
+        public ElementNode()
+        {
+        }
+
         public ElementNode(ElementNode parent,
             ElementDefinition element,
             Type fhirType,
@@ -402,6 +410,7 @@ namespace FhirKhit.SliceGen.R4
             return true;
         }
 
+        //$$ delete
         public bool TryGetDirectChild(String path, out ElementNode node)
         {
             if (path is null)
@@ -494,15 +503,6 @@ namespace FhirKhit.SliceGen.R4
                     yield return childNode;
             }
 
-            if (String.IsNullOrEmpty(name) == false)
-            {
-                ElementNode commonChild = this.FindCommonChild(this.Path, name);
-                if (commonChild != null)
-                    yield return commonChild;
-            }
-            else
-                throw new NotImplementedException($"Did not implement child search with name == null");
-
             foreach (ElementNode slice in this.slices.Values)
             {
                 foreach (ElementNode childNode in this.ChildNodes)
@@ -511,6 +511,15 @@ namespace FhirKhit.SliceGen.R4
                         yield return childNode;
                 }
             }
+
+            if (String.IsNullOrEmpty(name) == false)
+            {
+                ElementNode commonChild = this.FindCommonChild(this.Path, name);
+                if (commonChild != null)
+                    yield return commonChild;
+            }
+            else
+                throw new NotImplementedException($"Did not implement child search with name == null");
         }
 
         private CompiledExpression getCompiledExpression(string expression)

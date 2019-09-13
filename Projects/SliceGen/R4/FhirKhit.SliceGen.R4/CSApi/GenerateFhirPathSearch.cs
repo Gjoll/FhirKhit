@@ -72,6 +72,7 @@ namespace FhirKhit.SliceGen.CSApi
             return childMethodName;
         }
 
+        //$$$ Delete
         /// <summary>
         /// Traverse children using simple fhir path query.
         /// Return selected elements, or null if not found.
