@@ -184,13 +184,33 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 FhirElementAttribute attribute = pi.GetCustomAttribute<FhirElementAttribute>();
                 if (attribute != null)
                 {
+                    String min;
+                    String max;
+                    if (pi.PropertyType.IsList())
+                    {
+                        min = "0";
+                        max = "*";
+                    }
+                    if (pi.PropertyType.IsNullable())
+                    {
+                        min = "0";
+                        max = "1";
+                    }
+                    else
+                    {
+                        min = "1";
+                        max = "1";
+
+                    }
                     String varName = $"{attribute.Name}Var";
                     methods
                         .AppendCode($"case \"{attribute.Name}\":")
                         .OpenBrace()
                         .AppendCode($"ElementDefinition e = new ElementDefinition")
                         .OpenBrace()
-                        .AppendCode($"Path = $\"{{parentPath}}.{attribute.Name}\"")
+                        .AppendCode($"Path = $\"{{parentPath}}.{attribute.Name}\",")
+                        .AppendCode($"Min = {min},")
+                        .AppendCode($"Max = \"{max}\"")
                         .CloseBrace(";")
                         .AppendCode($"retVal = new ElementNode(this, e, typeof({pi.PropertyType.FriendlyName()}), nameof({fhirCSType.FriendlyName()}.{pi.Name}));")
                         .AppendCode($"break;")
