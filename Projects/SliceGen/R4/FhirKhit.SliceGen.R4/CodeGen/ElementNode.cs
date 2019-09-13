@@ -280,7 +280,16 @@ namespace FhirKhit.SliceGen.R4
         /// <summary>
         /// Element name.
         /// </summary>
-        public String Name => this.Element.Path.LastPathPart();
+        public String Name
+        {
+            get
+            {
+                if (this.Element == null)
+                    return "";
+                String retVal = this.Element.Path.LastPathPart();
+                return retVal;
+            }
+        }
 
         /// <summary>
         /// c# class PropertyName.
@@ -293,7 +302,7 @@ namespace FhirKhit.SliceGen.R4
         /// <summary>
         /// Implementation of ITypedElement.InstanceType
         /// </summary>
-        public string InstanceType => this.Element.TypeName;
+        public string InstanceType => this.Name;
 
         /// <summary>
         /// Implementation of ITypedElement.Value
@@ -483,6 +492,15 @@ namespace FhirKhit.SliceGen.R4
                     yield return childNode;
             }
 
+            if (String.IsNullOrEmpty(name) == false)
+            {
+                ElementNode commonChild = this.FindCommonChild(name);
+                if (commonChild != null)
+                    yield return commonChild;
+            }
+            else
+                throw new NotImplementedException($"Did not implement child search with name == null");
+
             foreach (ElementNode slice in this.slices.Values)
             {
                 foreach (ElementNode childNode in this.ChildNodes)
@@ -504,10 +522,12 @@ namespace FhirKhit.SliceGen.R4
             return compiler.Compile(expression);
         }
 
-        public IEnumerable<ITypedElement> Select(string expression, EvaluationContext ctx = null)
+        public IEnumerable<ElementNode> Select(string expression, EvaluationContext ctx = null)
         {
-            var evaluator = getCompiledExpression(expression);
-            return evaluator(this, ctx ?? EvaluationContext.CreateDefault());
+            CompiledExpression evaluator = getCompiledExpression(expression);
+            IEnumerable<ITypedElement> items = evaluator(this, ctx ?? EvaluationContext.CreateDefault());
+            foreach (ITypedElement item in items)
+                yield return (ElementNode)item;
         }
 
     }

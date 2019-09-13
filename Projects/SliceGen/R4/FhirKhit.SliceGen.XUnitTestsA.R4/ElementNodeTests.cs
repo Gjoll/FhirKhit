@@ -46,6 +46,18 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             return s;
         }
 
+        [Fact(DisplayName = "ElementNode.Select")]
+        [Trait("Test", "test")]
+        public void Select()
+        {
+            StructureDefinition s = this.CreateBaseObservation();
+
+            SnapshotCreator.Create(s);
+            ElementNode head = ElementNode.Create(s);
+            ElementNode[] nodes = head.ChildNodes.First().Select("Observation.code.coding").ToArray();
+        }
+
+
         [Fact(DisplayName = "ElementNode.Slice")]
         [Trait("Test", "test")]
         public void Slice()
