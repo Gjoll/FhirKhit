@@ -34,7 +34,7 @@ namespace FhirKhit.SliceGen.R4
         /// <summary>
         /// Create slices on indocated node.
         /// </summary>
-        bool CreateSlice(ElementNode elementNode);
+        bool CreateSlice(ElementDefinitionNode elementNode);
 
         /// <summary>
         /// Return text of generated code.

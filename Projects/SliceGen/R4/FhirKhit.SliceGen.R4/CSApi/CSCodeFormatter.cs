@@ -11,7 +11,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using ElementNode = FhirKhit.SliceGen.R4.ElementNode;
+using ElementDefinitionNode = FhirKhit.SliceGen.R4.ElementDefinitionNode;
 
 namespace FhirKhit.SliceGen.CSApi
 {
@@ -134,17 +134,17 @@ namespace FhirKhit.SliceGen.CSApi
             return true;
         }
 
-        Element GetItem(ElementNode sliceNode, String path)
+        Element GetItem(ElementDefinitionNode sliceNode, String path)
         {
             const String fcn = nameof(GetItem);
 
             String[] pathParts = path.Split('.');
-            ElementNode node = sliceNode;
+            ElementDefinitionNode node = sliceNode;
             for (Int32 i = 0; i < pathParts.Length; i++)
             {
                 String pathPart = pathParts[i];
-                ElementNode next = null;
-                foreach (ElementNode n in node.ChildNodes)
+                ElementDefinitionNode next = null;
+                foreach (ElementDefinitionNode n in node.ChildNodes)
                 {
                     if (n.Name == pathPart)
                     {
@@ -167,7 +167,7 @@ namespace FhirKhit.SliceGen.CSApi
         /// </summary>
         /// <param name="elementNode">Element node containing discriminator</param>
         /// <returns></returns>
-        public bool CreateSlice(ElementNode elementNode)
+        public bool CreateSlice(ElementDefinitionNode elementNode)
         {
             CSSliceCreator c = new CSSliceCreator(this.className, this, this.subClassBlock, this.methodsBlock, elementNode, this.fhirBaseClassType);
             return c.CreateSlice();
@@ -179,7 +179,7 @@ namespace FhirKhit.SliceGen.CSApi
         /// Create method to set element at indicated path to passed value.
         /// </summary>
         public bool GenerateSetElements(CodeBlockNested block,
-            ElementNode node,
+            ElementDefinitionNode node,
             String baseName,
             String path,
             String leafNodeValue = null)
@@ -257,7 +257,7 @@ namespace FhirKhit.SliceGen.CSApi
                 }
                 else
                 {
-                    if (node.TryGetAnyChild(pathItem, out ElementNode next) == false)
+                    if (node.TryGetAnyChild(pathItem, out ElementDefinitionNode next) == false)
                     {
                         this.Gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
                         return false;

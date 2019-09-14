@@ -14,21 +14,21 @@ using System.Text;
 namespace FhirKhit.SliceGen.R4
 {
     [DebuggerDisplay("{Path} ")]
-    public partial class ElementNode : ITypedElement
+    public partial class ElementDefinitionNode : ITypedElement
     {
         class Loader
         {
             class TreeItem
             {
-                public ElementNode Element;
+                public ElementDefinitionNode Element;
                 public TreeItem Child;
             };
 
             TreeItem treeHead = new TreeItem();
 
-            public ElementNode Create(IEnumerable<ElementDefinition> items)
+            public ElementDefinitionNode Create(IEnumerable<ElementDefinition> items)
             {
-                ElementNode head = new ElementNode(null, null, null, String.Empty);
+                ElementDefinitionNode head = new ElementDefinitionNode(null, null, null, String.Empty);
                 foreach (ElementDefinition item in items)
                     this.Load(head, item);
                 return head;
@@ -88,10 +88,10 @@ namespace FhirKhit.SliceGen.R4
                 }
             }
 
-            public void Load(ElementNode head,
+            public void Load(ElementDefinitionNode head,
                 ElementDefinition loadItem)
             {
-                ElementNode nodeElement = head;
+                ElementDefinitionNode nodeElement = head;
 
                 String[] pathItems = loadItem.Path.Split('.');
                 Int32 index = 0;
@@ -122,36 +122,36 @@ namespace FhirKhit.SliceGen.R4
                     throw new Exception($"Invalid element tree {loadItem.Path}");
 
                 pathItem = pathItems[index];
-                ElementNode leafNode;
+                ElementDefinitionNode leafNode;
                 if (index == 0)
                 {
                     // This is the first element of the path (i.e. Observation...)
                     if (ModelInfo.FhirTypeToCsType.TryGetValue(pathItem, out Type fhirType) == false)
                         throw new Exception($"Unknown resource '{pathItem}'");
-                    leafNode = new ElementNode(nodeElement, loadItem, fhirType, String.Empty);
+                    leafNode = new ElementDefinitionNode(nodeElement, loadItem, fhirType, String.Empty);
                     nodeElement.childNodeDictionary.Add(pathItem, leafNode);
                 }
                 else if (String.IsNullOrEmpty(loadItem.SliceName))
                 {
                     NormalizePathItem(loadItem, ref pathItem, out Type actualType);
-                    if (nodeElement.TryGetDirectChild(pathItem, out ElementNode dummy) == true)
+                    if (nodeElement.TryGetDirectChild(pathItem, out ElementDefinitionNode dummy) == true)
                         throw new Exception($"Error element node {pathItem} already exists in {loadItem.Path}");
                     if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
                         throw new Exception($"Cant find '{loadItem.Path}' in {nodeElement.FhirItemType.FriendlyName()}");
-                    leafNode = new ElementNode(nodeElement, loadItem, fhirType, actualType, propertyName);
+                    leafNode = new ElementDefinitionNode(nodeElement, loadItem, fhirType, actualType, propertyName);
                     nodeElement.childNodeDictionary.Add(pathItem, leafNode);
                 }
                 else
                 {
                     //Debug.Assert(loadItem.SliceName != "breastrad-AbnormalityDensity");
                     NormalizePathItem(loadItem, ref pathItem, out Type actualType);
-                    if (nodeElement.TryGetAnyChild(pathItem, out ElementNode sliceNode) == false)
+                    if (nodeElement.TryGetAnyChild(pathItem, out ElementDefinitionNode sliceNode) == false)
                         throw new Exception($"Error element node {pathItem} not found {loadItem.Path}");
-                    if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementNode dummySlice) == true)
+                    if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementDefinitionNode dummySlice) == true)
                         throw new Exception($"Error element node slice {nodeElement.Element.SliceName} already exists in {loadItem.Path}");
                     if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
                         throw new Exception($"Cant find '{pathItem}' in {nodeElement.FhirItemType.FriendlyName()}");
-                    leafNode = new ElementNode(nodeElement, loadItem, fhirType, actualType, propertyName);
+                    leafNode = new ElementDefinitionNode(nodeElement, loadItem, fhirType, actualType, propertyName);
                     sliceNode.slices.Add(loadItem.SliceName, leafNode);
                 }
 
@@ -178,7 +178,7 @@ namespace FhirKhit.SliceGen.R4
         /// <summary>
         /// Node that this node is a child of.
         /// </summary>
-        public ElementNode Parent { get; set; }
+        public ElementDefinitionNode Parent { get; set; }
 
         /// <summary>
         /// Return true if element definition, or one or more of its children are have a fixed value.
@@ -200,7 +200,7 @@ namespace FhirKhit.SliceGen.R4
         {
             get
             {
-                foreach (ElementNode slice in this.Slices)
+                foreach (ElementDefinitionNode slice in this.Slices)
                 {
                     if ((slice.IsFixed) || (slice.HasFixedChild))
                         return true;
@@ -216,7 +216,7 @@ namespace FhirKhit.SliceGen.R4
         {
             get
             {
-                foreach (ElementNode child in this.ChildNodes)
+                foreach (ElementDefinitionNode child in this.ChildNodes)
                 {
                     if ((child.IsFixed) || (child.HasFixedChild) || (child.HasFixedSlice))
                         return true;
@@ -250,7 +250,7 @@ namespace FhirKhit.SliceGen.R4
             if (this.slicePath == null)
             {
                 List<String> path = new List<string>();
-                ElementNode node = this;
+                ElementDefinitionNode node = this;
                 while (node.Element != null)
                 {
                     if (node.Element.SliceName != null)
@@ -300,8 +300,8 @@ namespace FhirKhit.SliceGen.R4
         /// </summary>
         public String PropertyName { get; set; }
 
-        public IEnumerable<ElementNode> Slices => this.slices.Values;
-        public IEnumerable<ElementNode> ChildNodes => this.childNodeDictionary.Values;
+        public IEnumerable<ElementDefinitionNode> Slices => this.slices.Values;
+        public IEnumerable<ElementDefinitionNode> ChildNodes => this.childNodeDictionary.Values;
 
         /// <summary>
         /// Implementation of ITypedElement.InstanceType
@@ -323,14 +323,14 @@ namespace FhirKhit.SliceGen.R4
         /// </summary>
         public IElementDefinitionSummary Definition => this.Element.GetElementDefinitionSummary();
 
-        Dictionary<String, ElementNode> slices = new Dictionary<String, ElementNode>();
-        Dictionary<String, ElementNode> childNodeDictionary = new Dictionary<String, ElementNode>();
+        Dictionary<String, ElementDefinitionNode> slices = new Dictionary<String, ElementDefinitionNode>();
+        Dictionary<String, ElementDefinitionNode> childNodeDictionary = new Dictionary<String, ElementDefinitionNode>();
 
-        public ElementNode()
+        public ElementDefinitionNode()
         {
         }
 
-        public ElementNode(ElementNode parent,
+        public ElementDefinitionNode(ElementDefinitionNode parent,
             ElementDefinition element,
             Type fhirType,
             Type fhirItemType,
@@ -342,7 +342,7 @@ namespace FhirKhit.SliceGen.R4
             SetTypes(fhirType, fhirItemType);
         }
 
-        public ElementNode(ElementNode parent,
+        public ElementDefinitionNode(ElementDefinitionNode parent,
             ElementDefinition element,
             Type fhirType,
             String propertyName)
@@ -353,7 +353,7 @@ namespace FhirKhit.SliceGen.R4
             SetTypes(fhirType, null);
         }
 
-        public static ElementNode Create(StructureDefinition sDef)
+        public static ElementDefinitionNode Create(StructureDefinition sDef)
         {
             if (sDef is null)
                 throw new ArgumentNullException(nameof(sDef));
@@ -389,7 +389,7 @@ namespace FhirKhit.SliceGen.R4
             this.FhirItemType = fhirItemType;
         }
 
-        public bool TryGetAnyChild(String path, out ElementNode node)
+        public bool TryGetAnyChild(String path, out ElementDefinitionNode node)
         {
             if (path is null)
                 throw new ArgumentNullException(nameof(path));
@@ -398,7 +398,7 @@ namespace FhirKhit.SliceGen.R4
             String partialPath = "";
             foreach (String name in path.Split('.'))
             {
-                if (node.childNodeDictionary.TryGetValue(name, out ElementNode newNode) == false)
+                if (node.childNodeDictionary.TryGetValue(name, out ElementDefinitionNode newNode) == false)
                 {
                     newNode = node.FindCommonChild(partialPath, name);
                     if (newNode == null)
@@ -411,7 +411,7 @@ namespace FhirKhit.SliceGen.R4
         }
 
         //$$ delete
-        public bool TryGetDirectChild(String path, out ElementNode node)
+        public bool TryGetDirectChild(String path, out ElementDefinitionNode node)
         {
             if (path is null)
                 throw new ArgumentNullException(nameof(path));
@@ -425,20 +425,20 @@ namespace FhirKhit.SliceGen.R4
             return true;
         }
 
-        public bool TryGetCommonChild(String name, out ElementNode node)
+        public bool TryGetCommonChild(String name, out ElementDefinitionNode node)
         {
             node = this.FindCommonChild(this.Path, name);
             return (node != null);
         }
 
-        public bool TryGetSlice(String name, out ElementNode node)
+        public bool TryGetSlice(String name, out ElementDefinitionNode node)
         {
             return this.slices.TryGetValue(name, out node);
         }
 
         public String PropertyPath()
         {
-            ElementNode node = this;
+            ElementDefinitionNode node = this;
 
             List<String> propertyNames = new List<string>();
             while (String.IsNullOrEmpty(node.PropertyName) == false)
@@ -463,7 +463,7 @@ namespace FhirKhit.SliceGen.R4
         /// </summary>
         /// <param name=""></param>
         /// <returns></returns>
-        public bool TryGetElementNode(String id, out ElementNode currentItem)
+        public bool TryGetElementNode(String id, out ElementDefinitionNode currentItem)
         {
             if (id is null)
                 throw new ArgumentNullException(nameof(id));
@@ -497,15 +497,15 @@ namespace FhirKhit.SliceGen.R4
         /// </summary>
         public IEnumerable<ITypedElement> Children(string name)
         {
-            foreach (ElementNode childNode in this.ChildNodes)
+            foreach (ElementDefinitionNode childNode in this.ChildNodes)
             {
                 if ((name == null) || (childNode.Name == name))
                     yield return childNode;
             }
 
-            foreach (ElementNode slice in this.slices.Values)
+            foreach (ElementDefinitionNode slice in this.slices.Values)
             {
-                foreach (ElementNode childNode in this.ChildNodes)
+                foreach (ElementDefinitionNode childNode in this.ChildNodes)
                 {
                     if ((name == null) || (childNode.Name == name))
                         yield return childNode;
@@ -524,12 +524,12 @@ namespace FhirKhit.SliceGen.R4
             return compiler.Compile(expression);
         }
 
-        public IEnumerable<ElementNode> Select(string expression, EvaluationContext ctx = null)
+        public IEnumerable<ElementDefinitionNode> Select(string expression, EvaluationContext ctx = null)
         {
             CompiledExpression evaluator = getCompiledExpression(expression);
             IEnumerable<ITypedElement> items = evaluator(this, ctx ?? EvaluationContext.CreateDefault());
             foreach (ITypedElement item in items)
-                yield return (ElementNode)item;
+                yield return (ElementDefinitionNode)item;
         }
 
     }

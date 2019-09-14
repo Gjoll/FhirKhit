@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis" Version="3.3.1-beta3-final" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.4">
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.5-beta1.final">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -36,7 +36,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
     <ProjectReference Include="..\..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
-    <ProjectReference Include="..\FhirKhit.SliceGen.Lib.R4\FhirKhit.SliceGen.Lib.R4.csproj" />
     <ProjectReference Include="..\FhirKhit.SliceGen.R4\FhirKhit.SliceGen.R4.csproj" />
   </ItemGroup>
 

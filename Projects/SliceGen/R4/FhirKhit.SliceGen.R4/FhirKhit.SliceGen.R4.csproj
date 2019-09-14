@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis" Version="3.3.1-beta3-final" />
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.4">
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.5-beta1.final">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -44,6 +44,8 @@
       <HintPath>..\..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Specification\bin\Debug\netstandard2.0\Hl7.FhirPath.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <Import Project="..\..\Share\FhirKhit.SliceGen.SharedLib\FhirKhit.SliceGen.SharedLib.projitems" Label="Shared" />
 
   <Import Project="..\..\..\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems" Label="Share" />
 

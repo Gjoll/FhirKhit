@@ -53,14 +53,14 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             StructureDefinition s = this.CreateBaseObservation();
 
             SnapshotCreator.Create(s);
-            ElementNode head = ElementNode.Create(s);
+            ElementDefinitionNode head = ElementDefinitionNode.Create(s);
             {
-                ElementNode[] nodes = head.ChildNodes.First().Select("Observation.code.coding").ToArray();
+                ElementDefinitionNode[] nodes = head.ChildNodes.First().Select("Observation.code.coding").ToArray();
                 Assert.True(nodes.Length == 1);
                 Assert.True(nodes[0].Name == "coding");
             }
             {
-                ElementNode[] nodes = head.ChildNodes.First().Select("Observation.code.coding.code").ToArray();
+                ElementDefinitionNode[] nodes = head.ChildNodes.First().Select("Observation.code.coding.code").ToArray();
                 Assert.True(nodes.Length == 1);
                 Assert.True(nodes[0].Name == "code");
             }
@@ -135,11 +135,11 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             }
 
             SnapshotCreator.Create(s);
-            ElementNode head = ElementNode.Create(s);
+            ElementDefinitionNode head = ElementDefinitionNode.Create(s);
             Assert.True(head.Slices.Any() == false);
             Assert.True(head.ChildNodes.Count() == 1);
 
-            Assert.True(head.TryGetElementNode("Observation.code.coding", out ElementNode coding) == true);
+            Assert.True(head.TryGetElementNode("Observation.code.coding", out ElementDefinitionNode coding) == true);
             Assert.True(coding.Slices.Count() == 1);
 
             Assert.True(head.TryGetElementNode("Observation.code.coding:Slice.code", out coding) == true);
@@ -169,11 +169,11 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             s.Differential.Element.Add(e);
 
             SnapshotCreator.Create(s);
-            ElementNode head = ElementNode.Create(s);
+            ElementDefinitionNode head = ElementDefinitionNode.Create(s);
             Assert.True(head.Slices.Any() == false);
             Assert.True(head.ChildNodes.Count() == 1);
 
-            Assert.True(head.TryGetElementNode("Observation.component", out ElementNode observationComponent) == true);
+            Assert.True(head.TryGetElementNode("Observation.component", out ElementDefinitionNode observationComponent) == true);
             Assert.True(observationComponent.FullPath() == "Observation.component");
             Assert.True(observationComponent.Slices.Any() == false);
             Assert.True(observationComponent.Element.Slicing.ElementId == "5");
@@ -190,12 +190,12 @@ namespace FhirKhit.SliceGen.XUnitTestsA
         {
             StructureDefinition s = this.CreateBaseObservation();
             SnapshotCreator.Create(s);
-            ElementNode head = ElementNode.Create(s);
+            ElementDefinitionNode head = ElementDefinitionNode.Create(s);
             Assert.True(head.Slices.Any() == false);
             Assert.True(head.ChildNodes.Count() == 1);
 
             {
-                Assert.True(head.TryGetElementNode("Observation.id", out ElementNode idNode) == true);
+                Assert.True(head.TryGetElementNode("Observation.id", out ElementDefinitionNode idNode) == true);
                 Assert.True(idNode.Element.Min == 0);
                 Assert.True(idNode.Element.Max == "1");
                 Assert.True(idNode.Element.Base.Min == 0);
@@ -203,14 +203,14 @@ namespace FhirKhit.SliceGen.XUnitTestsA
             }
 
             {
-                Assert.True(head.TryGetElementNode("Observation.meta", out ElementNode metaNode) == true);
+                Assert.True(head.TryGetElementNode("Observation.meta", out ElementDefinitionNode metaNode) == true);
                 Assert.True(metaNode.Element.Min == 0);
                 Assert.True(metaNode.Element.Max == "1");
                 Assert.True(metaNode.Element.Base.Min == 0);
                 Assert.True(metaNode.Element.Base.Max == "1");
             }
             {
-                Assert.True(head.TryGetElementNode("Observation.status", out ElementNode statusNode) == true);
+                Assert.True(head.TryGetElementNode("Observation.status", out ElementDefinitionNode statusNode) == true);
                 Assert.True(statusNode.Element.Min == 1);
                 Assert.True(statusNode.Element.Max == "1");
                 Assert.True(statusNode.Element.Base.Min == 1);
@@ -234,7 +234,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                         {
                             String jsonText = streamReader.ReadToEndAsync().WaitResult();
                             StructureDefinition s = fjp.Parse<StructureDefinition>(jsonText);
-                            ElementNode head = ElementNode.Create(s);
+                            ElementDefinitionNode head = ElementDefinitionNode.Create(s);
                         }
                     }
                 }

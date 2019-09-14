@@ -8,24 +8,24 @@ namespace FhirKhit.SliceGen.SharedLib
 {
     public static class ElementNodeExtensions
     {
-        public static IEnumerable<Element> FixedValues(this IEnumerable<ElementNode> values)
+        public static IEnumerable<Element> FixedValues(this IEnumerable<ElementDefinitionNode> values)
         {
             if (values is null)
                 throw new ArgumentNullException(nameof(values));
 
-            foreach (ElementNode value in values)
+            foreach (ElementDefinitionNode value in values)
             {
                 if (value.Element?.Fixed != null)
                     yield return value.Element.Fixed;
             }
         }
 
-        public static IEnumerable<ElementNode> WithFixedValue(this IEnumerable<ElementNode> values)
+        public static IEnumerable<ElementDefinitionNode> WithFixedValue(this IEnumerable<ElementDefinitionNode> values)
         {
             if (values is null)
                 throw new ArgumentNullException(nameof(values));
 
-            foreach (ElementNode value in values)
+            foreach (ElementDefinitionNode value in values)
             {
                 if (value.Element?.Fixed != null)
                     yield return value;

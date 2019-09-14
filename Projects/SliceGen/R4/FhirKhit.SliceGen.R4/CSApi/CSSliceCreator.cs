@@ -19,7 +19,7 @@ namespace FhirKhit.SliceGen.CSApi
     public class CSSliceCreator
     {
         String className;
-        ElementNode elementNode;
+        ElementDefinitionNode elementNode;
         CodeBlockNested methodsBlock;
         CodeBlockNested subClassBlock;
 
@@ -44,7 +44,7 @@ namespace FhirKhit.SliceGen.CSApi
             CSCodeFormatter csCode,
             CodeBlockNested subClassBlock,
             CodeBlockNested methodsBlock,
-            ElementNode elementNode,
+            ElementDefinitionNode elementNode,
             Type fhirBaseClassType)
         {
             if (subClassBlock is null)
@@ -67,7 +67,7 @@ namespace FhirKhit.SliceGen.CSApi
 
         bool DefineSliceOnValueDiscriminator(Int32 index,
             CodeBlockNested sliceDiscriminators,
-            ElementNode sliceNode,
+            ElementDefinitionNode sliceNode,
             String varName,
             ElementDefinition.DiscriminatorComponent discriminator,
             String valueFilterMethod,
@@ -130,7 +130,7 @@ namespace FhirKhit.SliceGen.CSApi
 
         bool DefineDiscriminator(Int32 index,
             CodeBlockNested sliceDiscriminators,
-            ElementNode sliceNode,
+            ElementDefinitionNode sliceNode,
             String varName,
             ElementDefinition.DiscriminatorComponent discriminator)
         {
@@ -149,7 +149,7 @@ namespace FhirKhit.SliceGen.CSApi
             }
         }
 
-        void CreateSliceAccessor(ElementNode sliceNode, String sliceClassName, String sliceInterfaceName)
+        void CreateSliceAccessor(ElementDefinitionNode sliceNode, String sliceClassName, String sliceInterfaceName)
         {
             String sliceName = sliceNode.Element.SliceName.ToMachineName();
             String propertyPath = sliceNode.PropertyName;
@@ -190,7 +190,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;
         }
 
-        SliceAccessorTypes SliceAccessorType(ElementNode sliceNode)
+        SliceAccessorTypes SliceAccessorType(ElementDefinitionNode sliceNode)
         {
             const String fcn = nameof(SliceAccessorType);
 
@@ -233,7 +233,7 @@ namespace FhirKhit.SliceGen.CSApi
                 ;
         }
 
-        void CreateSliceAccessorClass(ElementNode sliceNode,
+        void CreateSliceAccessorClass(ElementDefinitionNode sliceNode,
             out String sliceClassName,
             out String sliceInterfaceName)
         {
@@ -355,11 +355,11 @@ namespace FhirKhit.SliceGen.CSApi
             // as well.
             // i.e. if a.b.c = fix(...)
             // than we need to create a and a.b as well as setting a.b.c.
-            void SetFixedValues(ElementNode setNode,
+            void SetFixedValues(ElementDefinitionNode setNode,
                 String propertyPath)
             {
                 Int32 varNum = 0;
-                foreach (ElementNode setNodeChild in setNode.ChildNodes)
+                foreach (ElementDefinitionNode setNodeChild in setNode.ChildNodes)
                 {
                     String childPropertyPath = $"{propertyPath}.{setNodeChild.PropertyName}";
 
@@ -446,7 +446,7 @@ namespace FhirKhit.SliceGen.CSApi
 
             discriminators = sliceComponent.Discriminator.ToArray();
             accessorType = elementNode.FhirItemType.FriendlyName();
-            foreach (ElementNode sliceNode in elementNode.Slices)
+            foreach (ElementDefinitionNode sliceNode in elementNode.Slices)
             {
                 CreateSliceAccessorClass(sliceNode, out String sliceClassName, out String sliceInterfaceName);
                 CreateSliceAccessor(sliceNode, sliceClassName, sliceInterfaceName);

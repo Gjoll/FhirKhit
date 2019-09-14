@@ -25,7 +25,7 @@ namespace FhirKhit.SliceGen.R4
         String nameSpace;
         String profileType;
         Type fhirType;
-        ElementNode profileElements;
+        ElementDefinitionNode profileElements;
         OutputLanguageType outputLanguage;
         SliceGenerator gen;
 
@@ -35,7 +35,7 @@ namespace FhirKhit.SliceGen.R4
             String profileType,
             Type fhirType,
             OutputLanguageType outputLanguage,
-            ElementNode profileElements)
+            ElementDefinitionNode profileElements)
         {
             this.gen = gen;
             this.nameSpace = nameSpace;
@@ -90,7 +90,7 @@ namespace FhirKhit.SliceGen.R4
         /// </summary>
         /// <param name="sd"></param>
         /// <returns></returns>
-        bool ProcessElementSlices(ElementNode node)
+        bool ProcessElementSlices(ElementDefinitionNode node)
         {
             //const String fcn = nameof(ProcessResourceConstraint);
 
@@ -119,7 +119,7 @@ namespace FhirKhit.SliceGen.R4
             return retVal;
         }
 
-        bool CreateSlice(ElementNode elementNode)
+        bool CreateSlice(ElementDefinitionNode elementNode)
         {
             const String fcn = nameof(ProcessResourceConstraint);
 

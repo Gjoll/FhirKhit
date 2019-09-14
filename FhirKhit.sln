@@ -41,8 +41,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Share", "Share", "{7C08EFCB
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.SliceGen.SharedLib", "Projects\SliceGen\Share\FhirKhit.SliceGen.SharedLib\FhirKhit.SliceGen.SharedLib.shproj", "{3D046D87-3BC6-42A7-86C7-381D3B8FA711}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.SliceGen.Lib.R4", "Projects\SliceGen\R4\FhirKhit.SliceGen.Lib.R4\FhirKhit.SliceGen.Lib.R4.csproj", "{E3A0FBCE-2B93-44D9-8D4A-2AA048C92206}"
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Projects\SliceGen\Share\FhirKhit.SliceGen.SharedLib\FhirKhit.SliceGen.SharedLib.projitems*{3d046d87-3bc6-42a7-86c7-381d3b8fa711}*SharedItemsImports = 13
@@ -145,14 +143,6 @@ Global
 		{2B04B3A4-0584-4ECB-B09E-AD3D4EF1892A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2B04B3A4-0584-4ECB-B09E-AD3D4EF1892A}.Release|x64.ActiveCfg = Release|Any CPU
 		{2B04B3A4-0584-4ECB-B09E-AD3D4EF1892A}.Release|x64.Build.0 = Release|Any CPU
-		{E3A0FBCE-2B93-44D9-8D4A-2AA048C92206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E3A0FBCE-2B93-44D9-8D4A-2AA048C92206}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E3A0FBCE-2B93-44D9-8D4A-2AA048C92206}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{E3A0FBCE-2B93-44D9-8D4A-2AA048C92206}.Debug|x64.Build.0 = Debug|Any CPU
-		{E3A0FBCE-2B93-44D9-8D4A-2AA048C92206}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E3A0FBCE-2B93-44D9-8D4A-2AA048C92206}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E3A0FBCE-2B93-44D9-8D4A-2AA048C92206}.Release|x64.ActiveCfg = Release|Any CPU
-		{E3A0FBCE-2B93-44D9-8D4A-2AA048C92206}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -174,7 +164,6 @@ Global
 		{2B04B3A4-0584-4ECB-B09E-AD3D4EF1892A} = {8DC2F9D8-3B45-4D83-81CB-870F80E814FC}
 		{7C08EFCB-870A-437D-867A-E441C3FF1C0E} = {AF118608-D6E7-4372-9DC3-9549A701804D}
 		{3D046D87-3BC6-42A7-86C7-381D3B8FA711} = {7C08EFCB-870A-437D-867A-E441C3FF1C0E}
-		{E3A0FBCE-2B93-44D9-8D4A-2AA048C92206} = {8DC2F9D8-3B45-4D83-81CB-870F80E814FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90499BD7-964F-4CE5-A761-BDF9EC6DCE28}

@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "FhirKhit.SliceGen": {
-      "commandName": "Project",
-      "commandLineArgs": "-d \"C:\\Development\\Modzilla\\Solutions\\FhirKhit\\Data\\US Core\" \"*.json\" -o \"c:\\Temp\\SliceGenerator\""
-    }
-  }
-}

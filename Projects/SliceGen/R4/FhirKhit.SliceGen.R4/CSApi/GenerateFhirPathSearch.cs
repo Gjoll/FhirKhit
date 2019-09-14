@@ -80,7 +80,7 @@ namespace FhirKhit.SliceGen.CSApi
         public bool Generate(CodeBlockNested block,
             String methodModifiers,
             String methodName,
-            ElementNode node,
+            ElementDefinitionNode node,
             String path,
             out Type leafType)
         {
@@ -142,7 +142,7 @@ namespace FhirKhit.SliceGen.CSApi
                 }
                 else
                 {
-                    if (node.TryGetAnyChild(pathItem, out ElementNode next) == false)
+                    if (node.TryGetAnyChild(pathItem, out ElementDefinitionNode next) == false)
                     {
                         this.gen.ConversionError(this.GetType().Name, fcn, $"Child {pathItem} not found");
                         return false;

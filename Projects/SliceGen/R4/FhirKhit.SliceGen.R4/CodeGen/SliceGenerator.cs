@@ -132,7 +132,7 @@ namespace FhirKhit.SliceGen.CodeGen
             {
                 if (profile.Snapshot == null)
                     SnapshotCreator.Create(profile);
-                ElementNode profileItems = ElementNode.Create(profile);
+                ElementDefinitionNode profileItems = ElementDefinitionNode.Create(profile);
 
                 String baseFhirResourceName = profile.Type;
                 Type fhirType = ModelInfo.GetTypeForFhirType(baseFhirResourceName);
