@@ -6,7 +6,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
     <ProjectReference Include="..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Hl7.Fhir.ElementModel">
+      <HintPath>..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Specification\bin\Debug\netstandard2.0\Hl7.Fhir.ElementModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.R4.Core">
+      <HintPath>..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Core\bin\Debug\netstandard2.0\Hl7.Fhir.R4.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.R4.Specification">
+      <HintPath>..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Specification\bin\Debug\netstandard2.0\Hl7.Fhir.R4.Specification.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Serialization">
+      <HintPath>..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Specification\bin\Debug\netstandard2.0\Hl7.Fhir.Serialization.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

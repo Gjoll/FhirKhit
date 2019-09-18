@@ -1,7 +1,10 @@
 ﻿using FhirKhit.Tools;
+using Hl7.Fhir.Model;
+using Hl7.Fhir.Specification.Source;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -11,91 +14,91 @@ namespace FhirKhit.CIMPL.DirectFhir
 {
     public class DirectFhirGenerator : ConverterBase, IDisposable
     {
-        ZipArchive archive;
+        public ZipSource Source
+        {
+            get
+            {
+                if (source == null)
+                    source = new ZipSource("specification.zip");
+                return source;
+            }
+        }
+        ZipSource source = null;
+
         CodeEditor entryEditor = new CodeEditor();
         CodeBlockNested entryBlock;
 
         CodeEditor mapEditor = new CodeEditor();
         CodeBlockNested mapBlock;
 
-        void LoadInputFile(String inputFile)
+        HashSet<String> baseDefinitions = new HashSet<string>();
+
+
+        //void ProcessSchemaItemComplexType(JObject schemaItem, JObject properties, String name)
+        //{
+        //    CodeBlockNested item = entryBlock.AppendBlock();
+        //    CodeBlockNested vars = entryBlock.AppendBlock();
+
+        //    String description = (String)schemaItem.GetValue("description");
+        //    item
+        //        .BlankLine()
+        //        .AppendLine($"// Fhir data element {name} definition")
+        //        .AppendLine($"// {description}")
+        //        .AppendCode($"Entry: {name}")
+        //        ;
+
+        //    foreach (JToken property in properties.Children())
+        //    {
+        //        String pName = "";
+        //        item
+        //            .AppendCode($"Property: {pName}")
+        //            ;
+
+        //    }
+        //}
+
+        void ProcessFhirElement(StructureDefinition sDef)
         {
-            const String fcn = "LoadInputFile";
-
-            if (File.Exists(inputFile) == false)
-                throw new ConvertErrorException(this.GetType().Name, fcn, "File {inputFile} doesn't exist");
-
-            this.archive = ZipFile.OpenRead(inputFile);
-        }
-
-        void ProcessSchemaItemSimpleType(JObject schemaItem, String type, String name)
-        {
-        }
-
-        void ProcessSchemaItemComplexType(JObject schemaItem, JObject properties, String name)
-        {
-            CodeBlockNested item = entryBlock.AppendBlock();
-            CodeBlockNested vars = entryBlock.AppendBlock();
-
-            String description = (String)  schemaItem.GetValue("description");
-            item
-                .BlankLine()
-                .AppendLine($"// Fhir data element {name} definition")
-                .AppendLine($"// {description}")
-                .AppendCode($"Entry: {name}")
-                ;
-
-            foreach (JToken property in properties.Children())
+            String baseDefinition = sDef.BaseDefinition;
+            if (this.baseDefinitions.Contains(baseDefinition) == false)
+                this.baseDefinitions.Add(baseDefinition);
+            switch (sDef.BaseDefinition)
             {
-                String pName = "";
-                item
-                    .AppendCode($"Property: {pName}")
-                    ;
-
+                case "http://hl7.org/fhir/StructureDefinition/Extension":
+                    break;
+                case "http://hl7.org/fhir/StructureDefinition/uri":
+                case "http://hl7.org/fhir/StructureDefinition/string":
+                case "http://hl7.org/fhir/StructureDefinition/integer":
+                case "http://hl7.org/fhir/StructureDefinition/quantity":
+                case "http://hl7.org/fhir/StructureDefinition/DomainResource":
+                    break;
             }
         }
 
-        void ProcessSchemaItem(String name, JObject schemaItem)
-        {
-            String type = (String) schemaItem["type"];
-            JObject properties = (JObject) schemaItem["properties"];
-            if ((type != null) && (properties == null))
-            {
-                ProcessSchemaItemSimpleType(schemaItem, type, name);
-            }
-            else if ((type == null) && (properties != null))
-            {
-                ProcessSchemaItemComplexType(schemaItem, properties, name);
-            }
-            else
-                throw new Exception($"Invalid schema item");
 
+        void ProcessFhirElement(String uri)
+        {
+            //const String fcn = "ProcessFhirElement";
+
+            switch (Source.ResolveByUri(uri))
+            {
+                case StructureDefinition sDef:
+                    ProcessFhirElement(sDef);
+                    break;
+            }
         }
 
-        void ProcessFhirSchema()
+        void ProcessFhirElements()
         {
-            const String fcn = "ProcessFhirSchema";
+            // const String fcn = "ProcessFhirElements";
 
-            ZipArchiveEntry schemaArchiveEntry = this.archive.GetEntry("fhir.schema.json.zip");
-            if (schemaArchiveEntry == null)
-                throw new ConvertErrorException(this.GetType().Name, fcn, "fhir.schema.json.zip not found in archive");
+            foreach (string uri in this.Source.ListResourceUris())
+                ProcessFhirElement(uri);
 
-            ZipArchive schemaArchive = new ZipArchive(schemaArchiveEntry.Open());
-            ZipArchiveEntry schemaEntry = schemaArchive.GetEntry("fhir.schema.json");
-            if (schemaEntry == null)
-                throw new ConvertErrorException(this.GetType().Name, fcn, "fhir.schema.json not found in archive");
-            StreamReader sr = new StreamReader(schemaEntry.Open());
-            dynamic schemaObject = JObject.Parse(sr.ReadToEnd());
-            dynamic definitions = schemaObject.definitions;
-            foreach (dynamic resourceOneOf in definitions.ResourceList.oneOf)
-            {
-                String itemPath = resourceOneOf["$ref"].Value;
-                String[] itemParts = itemPath.Split('/');
-                String item = itemParts[itemParts.Length - 1];
-                dynamic definition = definitions[item];
-                ProcessSchemaItem(item, (JObject)definition);
-            }
+            foreach (String baseDef in this.baseDefinitions)
+                Trace.WriteLine(baseDef);
         }
+
         void CreateEditors(String outputDir)
         {
             this.entryEditor = new CodeEditor();
@@ -126,13 +129,12 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.mapEditor.Save();
         }
 
-        public Int32 Execute(String inputFile, String outputDir)
+        public Int32 GenerateBaseClasses(String outputDir)
         {
             try
             {
-                LoadInputFile(inputFile);
                 CreateEditors(outputDir);
-                ProcessFhirSchema();
+                ProcessFhirElements();
                 SaveEditors();
             }
             catch (ConvertErrorException err)
@@ -149,8 +151,6 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         public void Dispose()
         {
-            this.archive?.Dispose();
-            this.archive = null;
         }
     }
 }

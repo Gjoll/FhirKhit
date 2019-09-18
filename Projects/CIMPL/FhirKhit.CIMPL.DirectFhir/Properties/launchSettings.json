@@ -2,7 +2,7 @@
   "profiles": {
     "FhirKhit.CIMPL.DirectFhir": {
       "commandName": "Project",
-      "commandLineArgs": "-i \"D:\\Temp\\definitions.json.zip\" -o \"\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\CIMPL\\Fhir\""
+      "commandLineArgs": "-o \"\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\CIMPL\\Fhir\""
     }
   }
 }
