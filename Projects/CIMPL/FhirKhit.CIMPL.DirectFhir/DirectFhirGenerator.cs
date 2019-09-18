@@ -34,28 +34,55 @@ namespace FhirKhit.CIMPL.DirectFhir
         HashSet<String> baseDefinitions = new HashSet<string>();
 
 
-        //void ProcessSchemaItemComplexType(JObject schemaItem, JObject properties, String name)
-        //{
-        //    CodeBlockNested item = entryBlock.AppendBlock();
-        //    CodeBlockNested vars = entryBlock.AppendBlock();
+        void ProcessSchemaItemSpecialiation(StructureDefinition sDef)
+        {
+            const string fcn = "ProcessSchemaItemSpecialiation";
 
-        //    String description = (String)schemaItem.GetValue("description");
-        //    item
-        //        .BlankLine()
-        //        .AppendLine($"// Fhir data element {name} definition")
-        //        .AppendLine($"// {description}")
-        //        .AppendCode($"Entry: {name}")
-        //        ;
+            CodeBlockNested item = entryBlock.AppendBlock();
+            CodeBlockNested vars = entryBlock.AppendBlock();
 
-        //    foreach (JToken property in properties.Children())
-        //    {
-        //        String pName = "";
-        //        item
-        //            .AppendCode($"Property: {pName}")
-        //            ;
+            String description = sDef.Description.ToString();
+            String name = sDef.Snapshot.Element[0].Path;
+            String parent = sDef.BaseDefinition.LastUriPart();
 
-        //    }
-        //}
+            // remove items that derive directly from primitives.
+            switch (parent)
+            {
+                case "boolean":
+                case "integer":
+                case "decimal":
+                case "uri":
+                case "string":
+                case "base64Binary":
+                case "instant":
+                case "dateTime":
+                case "time":
+                case "oid":
+                case "id":
+                case "markdown":
+                case "unsignedInt":
+                case "positiveInt":
+                case "xhtml":
+                    this.ConversionInfo(this.GetType().Name, fcn, $"Ignoring '{name}' because it dewrives from primitive '{parent}'");
+                    return;
+            }
+
+            item
+                .BlankLine()
+                .Comment(description)
+                .AppendCode($"Entry: {name}")
+                .AppendCode($"Parent: {parent}")
+                ;
+
+            //    foreach (JToken property in properties.Children())
+            //    {
+            //        String pName = "";
+            //        item
+            //            .AppendCode($"Property: {pName}")
+            //            ;
+
+            //    }
+        }
 
         void ProcessFhirElement(StructureDefinition sDef)
         {
@@ -64,13 +91,13 @@ namespace FhirKhit.CIMPL.DirectFhir
                 this.baseDefinitions.Add(baseDefinition);
             switch (sDef.BaseDefinition)
             {
+                case "http://hl7.org/fhir/StructureDefinition/Element":
                 case "http://hl7.org/fhir/StructureDefinition/Extension":
                     break;
-                case "http://hl7.org/fhir/StructureDefinition/uri":
-                case "http://hl7.org/fhir/StructureDefinition/string":
-                case "http://hl7.org/fhir/StructureDefinition/integer":
-                case "http://hl7.org/fhir/StructureDefinition/quantity":
-                case "http://hl7.org/fhir/StructureDefinition/DomainResource":
+
+                default:
+                    if (sDef.Derivation == StructureDefinition.TypeDerivationRule.Specialization)
+                        ProcessSchemaItemSpecialiation(sDef);
                     break;
             }
         }

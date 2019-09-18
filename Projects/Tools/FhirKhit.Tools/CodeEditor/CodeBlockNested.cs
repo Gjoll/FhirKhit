@@ -312,6 +312,49 @@ namespace FhirKhit.Tools
             return this;
         }
 
+        /// <summary>
+        /// Append comment lines. Split long lines. 
+        /// </summary>
+        public CodeBlockNested Comment(String line)
+        {
+            const Int32 maxLength = 60;
+
+            if (line == null)
+                return this;
+
+            while (line.Length > 0)
+            {
+                Int32 length = 0;
+                StringBuilder sb = new StringBuilder();
+
+                bool done = false;
+                while ((length < line.Length) && (done == false))
+                {
+                    Char c = line[length++];
+                    switch (c)
+                    {
+                        case '\r':
+                            break;
+                        case '\n':
+                            done = true;
+                            break;
+                        case ' ':
+                            if (length > maxLength)
+                                done = true;
+                            sb.Append(c);
+                            break;
+                        default:
+                            sb.Append(c);
+                            break;
+                    }
+                }
+                this.AppendLine($"// {line.Substring(0, length)}");
+                line = line.Substring(length);
+            }
+            return this;
+        }
+
+
         public CodeBlockNested SummaryOpen()
         {
             this.AppendLine("/// <summary>");
