@@ -1,5 +1,7 @@
 ﻿using FhirKhit.Tools;
+using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
+using Hl7.Fhir.Serialization;
 using Hl7.Fhir.Specification.Source;
 using Newtonsoft.Json.Linq;
 using System;
@@ -14,6 +16,9 @@ namespace FhirKhit.CIMPL.DirectFhir
 {
     public class DirectFhirGenerator : ConverterBase, IDisposable
     {
+        String outputDir;
+        Bundle fhirSDefsBundle;
+
         class SDefInfo
         {
             public enum TypeFlag
@@ -27,18 +32,34 @@ namespace FhirKhit.CIMPL.DirectFhir
             public StructureDefinition SDef;
         };
 
+        String FhirSDefsPath => Path.Combine(this.outputDir, "StructureDefinitions.json");
+        Bundle FhirSDefsBundle
+        {
+            get
+            {
+                if (this.fhirSDefsBundle == null)
+                {
+                    if (File.Exists(FhirSDefsPath) == false)
+                        return null;
+
+                    FhirJsonParser parser = new FhirJsonParser();
+                    this.fhirSDefsBundle = parser.Parse<Bundle>(File.ReadAllText(FhirSDefsPath));
+                }
+                return this.fhirSDefsBundle;
+            }
+        }
+
         Dictionary<String, SDefInfo> items;
-
         ZipSource source;
-
         CodeEditor entryEditor = new CodeEditor();
         CodeBlockNested entryBlock;
 
         CodeEditor mapEditor = new CodeEditor();
         CodeBlockNested mapBlock;
 
-        public DirectFhirGenerator()
+        public DirectFhirGenerator(String outputDir)
         {
+            this.outputDir = outputDir;
             source = new ZipSource("specification.zip");
             this.items = new Dictionary<string, SDefInfo>();
         }
@@ -133,34 +154,48 @@ namespace FhirKhit.CIMPL.DirectFhir
             }
         }
 
-        void LoadFhirElements()
+        /// <summary>
+        /// To save time, store all structure definitions in a fhir bundle file. This need only be run when we get a new 
+        /// FHIR version.
+        /// </summary>
+        void StoreFhirElements()
         {
             // const String fcn = "ProcessFhirElements";
 
+            this.fhirSDefsBundle = new Bundle();
             foreach (string uri in this.source.ListResourceUris())
             {
                 StructureDefinition sDef = source.ResolveByUri(uri) as StructureDefinition;
                 if (sDef != null)
+                    fhirSDefsBundle.AddResourceEntry(sDef, sDef.Url);
+            }
+            this.fhirSDefsBundle.SaveJson(FhirSDefsPath);
+        }
+
+        void LoadFhirElements()
+        {
+            // const String fcn = "ProcessFhirElements";
+
+            foreach (StructureDefinition sDef in this.FhirSDefsBundle.GetResources())
+            {
+                SDefInfo sDefInfo = new SDefInfo
                 {
-                    SDefInfo sDefInfo = new SDefInfo
-                    {
-                        SDef = sDef,
-                        TFlag = SDefInfo.TypeFlag.Unknown
-                    };
+                    SDef = sDef,
+                    TFlag = SDefInfo.TypeFlag.Unknown
+                };
 
-                    switch (uri)
-                    {
-                        case "http://hl7.org/fhir/StructureDefinition/Element":
-                            sDefInfo.TFlag = SDefInfo.TypeFlag.Group;
-                            break;
+                switch (sDef.Url)
+                {
+                    case "http://hl7.org/fhir/StructureDefinition/Element":
+                        sDefInfo.TFlag = SDefInfo.TypeFlag.Group;
+                        break;
 
-                        case "http://hl7.org/fhir/StructureDefinition/Resource":
-                            sDefInfo.TFlag = SDefInfo.TypeFlag.Entry;
-                            break;
-                    }
-
-                    this.items.Add(sDef.Url, sDefInfo);
+                    case "http://hl7.org/fhir/StructureDefinition/Resource":
+                        sDefInfo.TFlag = SDefInfo.TypeFlag.Entry;
+                        break;
                 }
+
+                this.items.Add(sDef.Url, sDefInfo);
             }
         }
 
@@ -195,6 +230,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         void CreateEditors(String outputDir)
         {
+            this.outputDir = outputDir;
             this.entryEditor = new CodeEditor();
             this.entryEditor.SavePath = Path.Combine(outputDir, "DirectFhir.txt");
 
@@ -223,10 +259,31 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.mapEditor.Save();
         }
 
-        public Int32 GenerateBaseClasses(String outputDir)
+        public Int32 CreateBundle()
         {
             try
             {
+                StoreFhirElements();
+            }
+            catch (ConvertErrorException err)
+            {
+                this.ConversionError(err.FileName, err.MethodName, err.Message);
+            }
+            catch (Exception err)
+            {
+                this.ConversionError(this.GetType().Name, "Execute", err.Message);
+            }
+
+            return this.Errors.Any() ? -1 : 0;
+        }
+
+        public Int32 GenerateBaseClasses()
+        {
+            try
+            {
+                if (File.Exists(FhirSDefsPath) == false)
+                    StoreFhirElements();
+
                 CreateEditors(outputDir);
                 LoadFhirElements();
                 ProcessFhirElements();

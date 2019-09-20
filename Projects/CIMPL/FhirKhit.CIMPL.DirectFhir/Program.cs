@@ -5,6 +5,7 @@ namespace FhirKhit.CIMPL.DirectFhir
     class Program
     {
         static string outputDir;
+        static bool createBundle;
 
         static String GetArgs(string[] args, ref Int32 i, String errorMsg)
         {
@@ -24,6 +25,9 @@ namespace FhirKhit.CIMPL.DirectFhir
                     case "-o":
                         outputDir = GetArgs(args, ref i, "Missing argument to -o parameter");
                         break;
+                    case "-b":
+                        createBundle = true;
+                        break;
                     default:
                         throw new Exception("Unknown command line argument {arg}");
                 }
@@ -37,8 +41,10 @@ namespace FhirKhit.CIMPL.DirectFhir
             try
             {
                 ParseArgs(args);
-                DirectFhirGenerator dfg = new DirectFhirGenerator();
-                return dfg.GenerateBaseClasses(outputDir);
+                DirectFhirGenerator dfg = new DirectFhirGenerator(outputDir);
+                if (createBundle == true)
+                    dfg.CreateBundle();
+                return dfg.GenerateBaseClasses();
             }
             catch(Exception err)
             {
