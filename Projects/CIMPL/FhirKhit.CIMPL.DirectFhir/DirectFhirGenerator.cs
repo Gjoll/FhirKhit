@@ -25,12 +25,15 @@ namespace FhirKhit.CIMPL.DirectFhir
             {
                 Unknown,
                 Group,
-                Element
+                Entry
             }
             public TypeFlag TFlag = TypeFlag.Unknown;
 
             public StructureDefinition SDef;
         };
+
+        String NSBase => "fhir.datatype";
+        String NSLocal(String name) => $"{NSBase}.{name.ToLower()}";
 
         String FhirSDefsPath => Path.Combine(this.outputDir, "StructureDefinitions.json");
         Bundle FhirSDefsBundle
@@ -52,7 +55,9 @@ namespace FhirKhit.CIMPL.DirectFhir
         Dictionary<String, SDefInfo> items;
         ZipSource source;
         CodeEditor entryEditor = new CodeEditor();
+        CodeEditor entryLocalEditor = new CodeEditor();
         CodeBlockNested entryBlock;
+        CodeBlockNested entryLocalBlock;
 
         CodeEditor mapEditor = new CodeEditor();
         CodeBlockNested mapBlock;
@@ -67,6 +72,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         void ProcessSchemaItemProperty(CodeBlockNested item,
             ElementDefinition[] elements,
+            String localNameSpace,
             ref Int32 elementIndex)
         {
             const string fcn = "ProcessSchemaItemSpecialiation";
@@ -91,14 +97,13 @@ namespace FhirKhit.CIMPL.DirectFhir
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Pattern in element {ed.Path}.");
 
             String propertyName = ed.Path.LastPathPart().ToMachineName();
+            if (propertyName == "Value")
+                propertyName = "ValueZ";
             item
-                .AppendCode($"Property: {propertyName} {ed.Min}..{ed.Max}")
+                .AppendCode($"Property: {localNameSpace}.{propertyName} {ed.Min}..{ed.Max}")
                 ;
 
-            if (propertyName == "Identifier")
-                return;
-
-            CodeBlockNested subItem = this.entryBlock.AppendBlock();
+            CodeBlockNested subItem = this.entryLocalBlock.AppendBlock();
             subItem
                 .BlankLine()
                 ;
@@ -117,7 +122,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                     ElementDefinition subElement = elements[elementIndex];
                     if (subElement.Path.StartsWith($"{ed.Path}.") == false)
                         break;
-                    this.ProcessSchemaItemProperty(subItem, elements, ref elementIndex);
+                    this.ProcessSchemaItemProperty(subItem, elements, localNameSpace, ref elementIndex);
                 }
             }
             else
@@ -140,11 +145,10 @@ namespace FhirKhit.CIMPL.DirectFhir
                                 foreach (string target in type.TargetProfile)
                                 {
                                     String targetEntryName = target.LastUriPart().ToMachineName();
-                                    sb.Append($"{or}{targetEntryName}");
+                                    sb.Append($"{or}{NSBase}.{targetEntryName}");
                                     or = " or ";
                                 }
                             }
-                            sb.Append($"{or}{type.Code}");
                             break;
 
                         default:
@@ -152,7 +156,44 @@ namespace FhirKhit.CIMPL.DirectFhir
                             //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
                             //if (type.TargetProfile.Any())
                             //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected targetProfile in type {ed.Path}:{type.Code}.");
-                            sb.Append(type.Code);
+                            switch (type.Code)
+                            {
+                                case null:
+                                    break;
+
+                                case "boolean":
+                                case "integer":
+                                case "decimal":
+                                case "uri":
+                                case "string":
+                                case "base64Binary":
+                                case "instant":
+                                case "date":
+                                case "dateTime":
+                                case "time":
+                                case "oid":
+                                case "id":
+                                case "markdown":
+                                case "unsignedInt":
+                                case "positiveInt":
+                                case "xhtml":
+                                    sb.Append($"{or}{type.Code}");
+                                    break;
+
+                                case "CodeableConcept":
+                                case "code":
+                                    sb.Append($"{or}concept");
+                                    break;
+
+                                case "url":
+                                case "canonical":
+                                    sb.Append($"{or}uri");
+                                    break;
+
+                                default:
+                                    sb.Append($"{or}{NSBase}.{type.Code.ToMachineName()}");
+                                    break;
+                            }
                             break;
                     }
                 }
@@ -160,7 +201,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                 subItem
                     .BlankLine()
                     .AppendLine($"// Entry definition of {ed.Path}")
-                    .AppendCode($"Entry: {propertyName}")
+                    .AppendCode($"Element: {propertyName}")
                     ;
 
                 if (sb.Length > 0)
@@ -180,7 +221,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
             String parent = sDef.BaseDefinition.LastUriPart();
             String description = sDef.Description.ToString();
-            String name = sDef.Snapshot.Element[0].Path;
+            String name = sDef.Snapshot.Element[0].Path.ToMachineName();
             // remove items that derive directly from primitives.
             switch (parent)
             {
@@ -210,8 +251,8 @@ namespace FhirKhit.CIMPL.DirectFhir
             String typeName;
             switch (sDefInfo.TFlag)
             {
-                case SDefInfo.TypeFlag.Element:
-                    typeName = "Element";
+                case SDefInfo.TypeFlag.Entry:
+                    typeName = "Entry";
                     break;
                 case SDefInfo.TypeFlag.Group:
                     typeName = "Group";
@@ -228,10 +269,11 @@ namespace FhirKhit.CIMPL.DirectFhir
                 .AppendCode($"Description: \"{description}\"")
                 ;
 
+            String nameSpace = $"{NSLocal(name)}";
             ElementDefinition[] elements = sDef.Differential.Element.ToArray();
             Int32 elementIndex = 1;
             while (elementIndex < elements.Length)
-                this.ProcessSchemaItemProperty(item, elements, ref elementIndex);
+                this.ProcessSchemaItemProperty(item, elements, nameSpace, ref elementIndex);
 
             this.SaveEditors();
         }
@@ -294,7 +336,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                         break;
 
                     case "http://hl7.org/fhir/StructureDefinition/Resource":
-                        sDefInfo.TFlag = SDefInfo.TypeFlag.Element;
+                        sDefInfo.TFlag = SDefInfo.TypeFlag.Entry;
                         break;
                 }
 
@@ -327,7 +369,6 @@ namespace FhirKhit.CIMPL.DirectFhir
             foreach (string path in this.items.Keys)
             {
                 SDefInfo sDef = this.GetTypedSDef(path);
-                Debug.Assert(sDef.SDef.Url.ToLower().Contains("money") == false);
                 this.ProcessFhirElement(sDef);
             }
         }
@@ -337,20 +378,30 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.entryEditor = new CodeEditor();
             this.entryEditor.SavePath = Path.Combine(this.outputDir, $"{baseName}.txt");
 
+            this.entryLocalEditor = new CodeEditor();
+            this.entryLocalEditor.SavePath = Path.Combine(this.outputDir, $"{baseName}.local.txt");
+
             this.mapEditor = new CodeEditor();
             this.mapEditor.SavePath = Path.Combine(this.outputDir, $"{baseName}_map_r4.txt");
 
             this.entryBlock = this.entryEditor.Blocks.AppendBlock();
             this.entryBlock
                 .AppendLine($"Grammar: DataElement 6.0")
-                .AppendLine($"Namespace: fhir.datatype")
-                .AppendLine($"Description: \"Base fhir element definitions. Autogenerated\"")
+                .AppendLine($"Namespace: {NSBase}")
+                .AppendLine($"Description: \"Fhir {baseName} definition. Autogenerated\"")
+                ;
+
+            this.entryLocalBlock = this.entryLocalEditor.Blocks.AppendBlock();
+            this.entryLocalBlock
+                .AppendLine($"Grammar: DataElement 6.0")
+                .AppendLine($"Namespace: {NSLocal(baseName)}")
+                .AppendLine($"Description: \"Fhir {baseName} local properties definition. Autogenerated\"")
                 ;
 
             this.mapBlock = this.mapEditor.Blocks.AppendBlock();
             this.mapBlock
                 .AppendLine($"Grammar: Map 5.1")
-                .AppendLine($"Namespace: fhir.datatype")
+                .AppendLine($"Namespace: {NSBase}")
                 .AppendLine($"Target: FHIR_R4")
                 ;
 
@@ -359,7 +410,12 @@ namespace FhirKhit.CIMPL.DirectFhir
         void SaveEditors()
         {
             this.entryEditor.Save();
+            this.entryLocalEditor.Save();
             this.mapEditor.Save();
+
+            this.entryEditor = null;
+            this.entryLocalEditor = null;
+            this.mapEditor = null;
         }
 
         public Int32 CreateBundle()
