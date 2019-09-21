@@ -16,10 +16,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 {
     public class DirectFhirGenerator : ConverterBase, IDisposable
     {
-        String outputDir;
-        Bundle fhirSDefsBundle;
-
-        class SDefInfo
+        public class SDefInfo
         {
             public enum TypeFlag
             {
@@ -32,8 +29,24 @@ namespace FhirKhit.CIMPL.DirectFhir
             public StructureDefinition SDef;
         };
 
-        String NSBase => "fhir.datatype";
-        String NSLocal(String name) => $"{NSBase}.{name.ToLower()}";
+
+        Bundle fhirSDefsBundle;
+
+        public String outputDir;
+        public Dictionary<String, CodeEditor> editorDict = new Dictionary<string, CodeEditor>();
+
+        public String NSBase => "fhir.datatype";
+
+        public String NameSpace(params String[] path)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"{NSBase}");
+            foreach (String pathItem in path)
+                sb.Append($".{pathItem.ToLower()}");
+
+            return sb.ToString();
+        }
+
 
         String FhirSDefsPath => Path.Combine(this.outputDir, "StructureDefinitions.json");
         Bundle FhirSDefsBundle
@@ -54,13 +67,6 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         Dictionary<String, SDefInfo> items;
         ZipSource source;
-        CodeEditor entryEditor = new CodeEditor();
-        CodeEditor entryLocalEditor = new CodeEditor();
-        CodeBlockNested entryBlock;
-        CodeBlockNested entryLocalBlock;
-
-        CodeEditor mapEditor = new CodeEditor();
-        CodeBlockNested mapBlock;
 
         public DirectFhirGenerator(String outputDir)
         {
@@ -70,148 +76,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         }
 
 
-        void ProcessSchemaItemProperty(CodeBlockNested item,
-            ElementDefinition[] elements,
-            String localNameSpace,
-            ref Int32 elementIndex)
-        {
-            const string fcn = "ProcessSchemaItemSpecialiation";
-
-            const String BackboneElement = "BackboneElement";
-
-            ElementDefinition ed = elements[elementIndex++];
-
-            // Note: Currently we do not handle extensions.
-            if (ed.Path.LastPathPart() == "extension")
-                return;
-            if (ed.Path.LastPathPart() == "modifierExtension")
-                return;
-
-            if (String.IsNullOrEmpty(ed.SliceName) == false)
-                throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected SliceName in element {ed.Path}.");
-            if (ed.Slicing != null)
-                throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Slice in element {ed.Path}.");
-            if (ed.Fixed != null)
-                throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Fixed in element {ed.Path}.");
-            if (ed.Pattern != null)
-                throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Pattern in element {ed.Path}.");
-
-            String propertyName = ed.Path.LastPathPart().ToMachineName();
-            if (propertyName == "Value")
-                propertyName = "ValueZ";
-            item
-                .AppendCode($"Property: {localNameSpace}.{propertyName} {ed.Min}..{ed.Max}")
-                ;
-
-            CodeBlockNested subItem = this.entryLocalBlock.AppendBlock();
-            subItem
-                .BlankLine()
-                ;
-
-            if ((ed.Type.Count == 1) && (ed.Type[0].Code == BackboneElement))
-            {
-                subItem
-                     .BlankLine()
-                     .AppendLine($"// Group definition of backbone element {ed.Path}")
-                     .AppendCode($"Group: {propertyName}")
-                     ;
-
-                while (elementIndex < elements.Length)
-                {
-
-                    ElementDefinition subElement = elements[elementIndex];
-                    if (subElement.Path.StartsWith($"{ed.Path}.") == false)
-                        break;
-                    this.ProcessSchemaItemProperty(subItem, elements, localNameSpace, ref elementIndex);
-                }
-            }
-            else
-            {
-                StringBuilder sb = new StringBuilder();
-                foreach (ElementDefinition.TypeRefComponent type in ed.Type)
-                {
-                    String or = (sb.Length > 0) ? " or " : "";
-                    switch (type.Code)
-                    {
-                        case "Reference":
-                            if (type.Profile.Any())
-                                throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
-                            if (type.TargetProfile.Count() == 0)
-                            {
-                                sb.Append($"{or}Resource");
-                            }
-                            else
-                            {
-                                foreach (string target in type.TargetProfile)
-                                {
-                                    String targetEntryName = target.LastUriPart().ToMachineName();
-                                    sb.Append($"{or}{NSBase}.{targetEntryName}");
-                                    or = " or ";
-                                }
-                            }
-                            break;
-
-                        default:
-                            //if (type.Profile.Any())
-                            //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
-                            //if (type.TargetProfile.Any())
-                            //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected targetProfile in type {ed.Path}:{type.Code}.");
-                            switch (type.Code)
-                            {
-                                case null:
-                                    break;
-
-                                case "boolean":
-                                case "integer":
-                                case "decimal":
-                                case "uri":
-                                case "string":
-                                case "base64Binary":
-                                case "instant":
-                                case "date":
-                                case "dateTime":
-                                case "time":
-                                case "oid":
-                                case "id":
-                                case "markdown":
-                                case "unsignedInt":
-                                case "positiveInt":
-                                case "xhtml":
-                                    sb.Append($"{or}{type.Code}");
-                                    break;
-
-                                case "CodeableConcept":
-                                case "code":
-                                    sb.Append($"{or}concept");
-                                    break;
-
-                                case "url":
-                                case "canonical":
-                                    sb.Append($"{or}uri");
-                                    break;
-
-                                default:
-                                    sb.Append($"{or}{NSBase}.{type.Code.ToMachineName()}");
-                                    break;
-                            }
-                            break;
-                    }
-                }
-
-                subItem
-                    .BlankLine()
-                    .AppendLine($"// Entry definition of {ed.Path}")
-                    .AppendCode($"Element: {propertyName}")
-                    ;
-
-                if (sb.Length > 0)
-                {
-                    subItem
-                        .AppendCode($"Value: {sb.ToString()}")
-                        ;
-                }
-            }
-        }
 
         /// <summary>
         /// Converrt string to a desciption string
@@ -227,15 +91,43 @@ namespace FhirKhit.CIMPL.DirectFhir
         }
 
 
-        void ProcessSchemaItemSpecialiation(SDefInfo sDefInfo)
+        /// <summary>
+        /// Create code editor for new entry and save it in save editor list.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public CodeBlockNested CreateEntryEditor(String path)
         {
-            const string fcn = "ProcessSchemaItemSpecialiation";
+            const String fcn = "CreateEntryEditor";
+
+            if (this.editorDict.ContainsKey(path) == true)
+                throw new ConvertErrorException(this.GetType().Name, fcn, $"Path {path} has already been processed.");
+
+            CodeEditor codeEditor = new CodeEditor();
+
+            codeEditor.SavePath = Path.Combine(this.outputDir, $"{path}.txt");
+
+            CodeBlockNested block = codeEditor.Blocks.AppendBlock();
+            block
+                .AppendLine($"Grammar: DataElement 6.0")
+                .AppendLine($"Namespace: {NSBase}")
+                .AppendLine($"Description: \"Fhir {path} definition. Autogenerated\"")
+                ;
+
+            this.editorDict.Add(path, codeEditor);
+            return block;
+        }
+
+
+        void ProcessSpecialiation(SDefInfo sDefInfo,
+            CodeBlockNested mainBlock)
+        {
+            const string fcn = "ProcessSpecialiation";
 
             StructureDefinition sDef = sDefInfo.SDef;
 
             String parent = sDef.BaseDefinition.LastUriPart();
             String description = this.ToDescription(sDef.Description);
-            String name = sDef.Snapshot.Element[0].Path.ToMachineName();
             // remove items that derive directly from primitives.
             switch (parent)
             {
@@ -254,48 +146,21 @@ namespace FhirKhit.CIMPL.DirectFhir
                 case "unsignedInt":
                 case "positiveInt":
                 case "xhtml":
-                    this.ConversionInfo(this.GetType().Name, fcn, $"Ignoring '{name}' because it derives from primitive '{parent}'");
+                    this.ConversionInfo(this.GetType().Name, fcn, $"Ignoring '{sDef.Url}' because it derives from primitive '{parent}'");
                     return;
             }
 
-            this.CreateEditors(name);
-
-            CodeBlockNested item = this.entryBlock.AppendBlock();
-            String[] json = sDef.ToFormatedJson().ToLines();
-            foreach (String s in json)
-                item.AppendLine($"// {s}");
-
-            String typeName;
-            switch (sDefInfo.TFlag)
-            {
-                case SDefInfo.TypeFlag.Entry:
-                    typeName = "Entry";
-                    break;
-                case SDefInfo.TypeFlag.Group:
-                    typeName = "Group";
-                    break;
-                default:
-                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Invalid TFlag value");
-            }
-
-            item
-                .BlankLine()
-                .Comment($"{sDef.Url}")
-                .AppendCode($"{typeName}: {name}")
-                .AppendCode($"Parent: {parent}")
-                .AppendCode($"Description: \"{description}\"")
-                ;
-
-            String nameSpace = $"{NSLocal(name)}";
-            ElementDefinition[] elements = sDef.Differential.Element.ToArray();
-            Int32 elementIndex = 1;
-            while (elementIndex < elements.Length)
-                this.ProcessSchemaItemProperty(item, elements, nameSpace, ref elementIndex);
-
-            this.SaveEditors();
+            ConvertFhirClass cfc = new ConvertFhirClass(this, sDefInfo, mainBlock);
+            cfc.Convert();
         }
 
-        void ProcessFhirElement(SDefInfo sDefInfo)
+        /// <summary>
+        /// Process one fhir element
+        /// </summary>
+        /// <param name="sDefInfo"></param>
+        /// <param name="mainBlock"></param>
+        void ProcessFhirElement(SDefInfo sDefInfo,
+                        CodeBlockNested mainBlock)
         {
             StructureDefinition sDef = sDefInfo.SDef;
 
@@ -307,7 +172,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
                 default:
                     if (sDef.Derivation == StructureDefinition.TypeDerivationRule.Specialization)
-                        this.ProcessSchemaItemSpecialiation(sDefInfo);
+                        this.ProcessSpecialiation(sDefInfo, mainBlock);
                     break;
             }
         }
@@ -318,7 +183,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// </summary>
         void StoreFhirElements()
         {
-            // const String fcn = "ProcessFhirElements";
+            // const String fcn = "StoreFhirElements";
 
             this.fhirSDefsBundle = new Bundle();
             foreach (string uri in this.source.ListResourceUris())
@@ -336,7 +201,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         void LoadFhirElements()
         {
-            // const String fcn = "ProcessFhirElements";
+            // const String fcn = "LoadFhirElements";
 
             foreach (StructureDefinition sDef in this.FhirSDefsBundle.GetResources())
             {
@@ -379,60 +244,24 @@ namespace FhirKhit.CIMPL.DirectFhir
             return sDef;
         }
 
+        /// <summary>
+        /// Process all fhir elements.
+        /// </summary>
         void ProcessFhirElements()
         {
             const String fcn = "ProcessFhirElements";
 
+            CodeBlockNested mainBlock = CreateEntryEditor("Main");
+
             foreach (string path in this.items.Keys)
             {
                 SDefInfo sDef = this.GetTypedSDef(path);
-                this.ProcessFhirElement(sDef);
+                this.ProcessFhirElement(sDef, mainBlock);
             }
-        }
 
-        void CreateEditors(String baseName)
-        {
-            this.entryEditor = new CodeEditor();
-            this.entryEditor.SavePath = Path.Combine(this.outputDir, $"{baseName}.txt");
-
-            this.entryLocalEditor = new CodeEditor();
-            this.entryLocalEditor.SavePath = Path.Combine(this.outputDir, $"{baseName}.local.txt");
-
-            this.mapEditor = new CodeEditor();
-            this.mapEditor.SavePath = Path.Combine(this.outputDir, $"{baseName}_map_r4.txt");
-
-            this.entryBlock = this.entryEditor.Blocks.AppendBlock();
-            this.entryBlock
-                .AppendLine($"Grammar: DataElement 6.0")
-                .AppendLine($"Namespace: {NSBase}")
-                .AppendLine($"Description: \"Fhir {baseName} definition. Autogenerated\"")
-                ;
-
-            this.entryLocalBlock = this.entryLocalEditor.Blocks.AppendBlock();
-            this.entryLocalBlock
-                .AppendLine($"Grammar: DataElement 6.0")
-                .AppendLine($"Namespace: {NSLocal(baseName)}")
-                .AppendLine($"Description: \"Fhir {baseName} local properties definition. Autogenerated\"")
-                ;
-
-            this.mapBlock = this.mapEditor.Blocks.AppendBlock();
-            this.mapBlock
-                .AppendLine($"Grammar: Map 5.1")
-                .AppendLine($"Namespace: {NSBase}")
-                .AppendLine($"Target: FHIR_R4")
-                ;
-
-        }
-
-        void SaveEditors()
-        {
-            this.entryEditor.Save();
-            this.entryLocalEditor.Save();
-            this.mapEditor.Save();
-
-            this.entryEditor = null;
-            this.entryLocalEditor = null;
-            this.mapEditor = null;
+            foreach (CodeEditor ce in this.editorDict.Values)
+                ce.Save();
+            this.editorDict.Clear();
         }
 
         public Int32 CreateBundle()
