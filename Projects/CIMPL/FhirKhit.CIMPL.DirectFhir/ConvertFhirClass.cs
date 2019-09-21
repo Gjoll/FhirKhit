@@ -3,6 +3,7 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -29,7 +30,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.sDef = this.sDefInfo.SDef;
             this.mainBlock = mainBlock;
             this.elements = sDef.Differential.Element.ToArray();
-            elementIndex = 0;
+            elementIndex = 1;
         }
 
         public void Convert()
@@ -46,6 +47,8 @@ namespace FhirKhit.CIMPL.DirectFhir
             //    .AppendLine($"Target: FHIR_R4")
             //    ;
 
+            Debug.Assert(sDefInfo.SDef.Snapshot.Element[0].Path.ToLower().Contains("backboneelement") == false);
+
             String typeName;
             switch (sDefInfo.TFlag)
             {
@@ -61,7 +64,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
             String parent = sDef.BaseDefinition.LastUriPart();
             String description = this.gen.ToDescription(sDef.Description);
-            String entryName = ProcessEntry(sDef.ToFormatedJson(), elements[0].Path, typeName, parent, description, sDef.Url);
+            String entryName = ProcessEntry(sDef.ToFormatedJson(), elements[0].Path, null, typeName, parent, description, sDef.Url);
 
             mainBlock
                 .BlankLine()
@@ -92,6 +95,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// <param name="elementIndex"></param>
         String ProcessEntry(String json,
             String path,
+            String suffix,
             String typeName,
             String parent,
             String description,
@@ -102,19 +106,24 @@ namespace FhirKhit.CIMPL.DirectFhir
             CodeBlockNested propertydefinitionsBlock = entryBlock.AppendBlock();
 
             String name = path.LastPathPart().ToMachineName();
-            if (json != null)
-            {
-                String[] jsonLines = json.ToLines();
-                foreach (String jsonLine in jsonLines)
-                    classBlock.AppendLine($"// {jsonLine}");
-
-            }
-
+            if (String.IsNullOrEmpty(suffix) == false)
+                name += suffix;
             classBlock
+                .AppendComment(json)
                 .BlankLine()
-                .Comment(comment)
+                .AppendComment(comment)
                 .AppendCode($"{typeName}: {name}")
-                .AppendCode($"Parent: {parent}")
+                ;
+            switch (parent)
+            {
+                case "Element":
+                    break;
+
+                default:
+                    classBlock.AppendCode($"Parent: {this.gen.NameSpace(parent)}.{parent}");
+                    break;
+            }
+            classBlock
                 .AppendCode($"Description: \"{description}\"")
                 ;
 
@@ -132,10 +141,9 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         void ProcessProperty(CodeBlockNested classBlock,
             CodeBlockNested propertiesBlock,
-            String localNameSpace)
+            String path)
         {
             const string fcn = "ProcessProperty";
-
             const String BackboneElement = "BackboneElement";
 
             ElementDefinition ed = elements[elementIndex++];
@@ -158,17 +166,16 @@ namespace FhirKhit.CIMPL.DirectFhir
             String propertyName = ed.Path.LastPathPart().ToMachineName();
             if (propertyName == "Value")
                 propertyName = "ValueZ";
-            classBlock
-                .AppendCode($"Property: {localNameSpace}.{propertyName} {ed.Min}..{ed.Max}")
-                ;
+
+            String fullPropertyName;
 
             if ((ed.Type.Count == 1) && (ed.Type[0].Code == BackboneElement))
             {
-                throw new NotImplementedException();
-                ProcessEntry(null, ed.Path, "Group", BackboneElement, "", null);
+                fullPropertyName = ProcessEntry(null, ed.Path, "Group", "Group", BackboneElement, $"Group definition of {ed.Path}", null);
             }
             else
             {
+                fullPropertyName = $"{this.gen.NameSpace(path)}.{propertyName}";
                 StringBuilder sb = new StringBuilder();
                 foreach (ElementDefinition.TypeRefComponent type in ed.Type)
                 {
@@ -180,14 +187,14 @@ namespace FhirKhit.CIMPL.DirectFhir
                                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
                             if (type.TargetProfile.Count() == 0)
                             {
-                                sb.Append($"{or}Resource");
+                                sb.Append($"{or}{this.gen.NameSpace("Resource")}Resource");
                             }
                             else
                             {
                                 foreach (string target in type.TargetProfile)
                                 {
                                     String targetEntryName = target.LastUriPart().ToMachineName();
-                                    sb.Append($"{or}{this.gen.NSBase}.{targetEntryName}");
+                                    sb.Append($"{or}{this.gen.NameSpace(targetEntryName)}.{targetEntryName}");
                                     or = " or ";
                                 }
                             }
@@ -233,7 +240,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                                     break;
 
                                 default:
-                                    sb.Append($"{or}{this.gen.NSBase}.{type.Code.ToMachineName()}");
+                                    sb.Append($"{or}{this.gen.NameSpace(type.Code)}.{type.Code.ToMachineName()}");
                                     break;
                             }
                             break;
@@ -253,6 +260,10 @@ namespace FhirKhit.CIMPL.DirectFhir
                         ;
                 }
             }
+
+            classBlock
+                .AppendCode($"Property: {fullPropertyName} {ed.Min}..{ed.Max}")
+                ;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace FhirKhit.Tools
         public IEnumerable<CodeBlockNested> AllNamedBlocks => this.NamedBlocks.Values;
 
         readonly Dictionary<String, CodeBlockNested> NamedBlocks = new Dictionary<String, CodeBlockNested>();
+        Int32 macroInhibit = 0;
 
         /// <summary>
         /// Clear all content.
@@ -308,20 +309,38 @@ namespace FhirKhit.Tools
         /// <param name="path"></param>
         public CodeBlockNested AppendLine(String line)
         {
-            this.AppendRaw(CodeBlockNested.ProcessLine($"{this.MarginString}{line}"));
+            this.AppendRaw(this.ProcessLine($"{this.MarginString}{line}"));
             return this;
         }
 
         /// <summary>
         /// Append comment lines. Split long lines. 
         /// </summary>
-        public CodeBlockNested Comment(String line)
+        public CodeBlockNested AppendComment(String[] lines)
+        {
+            if (lines == null)
+                return this;
+
+            this.macroInhibit += 1;
+            foreach (String line in lines)
+            {
+                this.AppendLine($"// {line}");
+            }
+            this.macroInhibit -= 1;
+            return this;
+        }
+
+        /// <summary>
+        /// Append comment lines. Split long lines. 
+        /// </summary>
+        public CodeBlockNested AppendComment(String line)
         {
             const Int32 maxLength = 60;
 
             if (line == null)
                 return this;
 
+            this.macroInhibit += 1;
             while (line.Length > 0)
             {
                 Int32 length = 0;
@@ -351,6 +370,8 @@ namespace FhirKhit.Tools
                 this.AppendLine($"// {line.Substring(0, length)}");
                 line = line.Substring(length);
             }
+
+            this.macroInhibit -= 1;
             return this;
         }
 
@@ -444,9 +465,9 @@ namespace FhirKhit.Tools
             String line;
             String fileName = Path.GetFileName(filePath);
             if (CodeEditor.DebugFlag)
-                line = CodeBlockNested.ProcessLine($"{this.MarginString}{codeLine}%col:{CommentCol}%// {fileName}:{lineNumber}");
+                line = this.ProcessLine($"{this.MarginString}{codeLine}%col:{CommentCol}%// {fileName}:{lineNumber}");
             else
-                line = CodeBlockNested.ProcessLine($"{this.MarginString}{codeLine}");
+                line = this.ProcessLine($"{this.MarginString}{codeLine}");
 
             this.AppendRaw(line);
             return this;
@@ -476,7 +497,7 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        static void ProcessMacro(StringBuilder sb,
+        void ProcessMacro(StringBuilder sb,
             String line,
             ref Int32 index)
         {
@@ -504,6 +525,7 @@ namespace FhirKhit.Tools
                                 while (sb.Length < col)
                                     sb.Append(" ");
                                 return;
+
                             default:
                                 throw new Exception($"Unknown $ macro name '{name}'");
                         }
@@ -534,7 +556,7 @@ namespace FhirKhit.Tools
             return line[index++];
         }
 
-        static String ProcessLine(String line)
+        String ProcessLine(String line)
         {
             StringBuilder sb = new StringBuilder();
             Int32 index = 0;
@@ -558,10 +580,10 @@ namespace FhirKhit.Tools
                         break;
 
                     case '%':
-                        if (quoteFlag == true)
+                        if ((this.macroInhibit > 0) || (quoteFlag == true))
                             sb.Append(c);
                         else
-                            CodeBlockNested.ProcessMacro(sb, line, ref index);
+                            this.ProcessMacro(sb, line, ref index);
                         break;
 
                     default:
