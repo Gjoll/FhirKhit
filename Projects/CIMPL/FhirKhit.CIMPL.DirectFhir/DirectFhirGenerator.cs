@@ -213,6 +213,20 @@ namespace FhirKhit.CIMPL.DirectFhir
             }
         }
 
+        /// <summary>
+        /// Converrt string to a desciption string
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public String ToDescription(Markdown description)
+        {
+            if (description is null)
+                throw new ArgumentNullException(nameof(description));
+
+            return description.ToString().Replace("\"", "'");
+        }
+
+
         void ProcessSchemaItemSpecialiation(SDefInfo sDefInfo)
         {
             const string fcn = "ProcessSchemaItemSpecialiation";
@@ -220,7 +234,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             StructureDefinition sDef = sDefInfo.SDef;
 
             String parent = sDef.BaseDefinition.LastUriPart();
-            String description = sDef.Description.ToString();
+            String description = this.ToDescription(sDef.Description);
             String name = sDef.Snapshot.Element[0].Path.ToMachineName();
             // remove items that derive directly from primitives.
             switch (parent)
@@ -247,6 +261,9 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.CreateEditors(name);
 
             CodeBlockNested item = this.entryBlock.AppendBlock();
+            String[] json = sDef.ToFormatedJson().ToLines();
+            foreach (String s in json)
+                item.AppendLine($"// {s}");
 
             String typeName;
             switch (sDefInfo.TFlag)
