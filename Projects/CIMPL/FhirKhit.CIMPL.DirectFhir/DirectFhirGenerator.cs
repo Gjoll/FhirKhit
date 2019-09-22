@@ -97,6 +97,27 @@ namespace FhirKhit.CIMPL.DirectFhir
             return description.ToString().Replace("\"", "'");
         }
 
+        public CodeBlockNested CreateMapEditor(String path)
+        {
+            const String fcn = "CreateMapEditor";
+
+            String mapName = $"{path}_map_r4";
+            if (this.editorDict.ContainsKey(mapName) == true)
+                throw new ConvertErrorException(this.GetType().Name, fcn, $"Path {path} has already been processed.");
+
+            CodeEditor mapEditor = new CodeEditor();
+            mapEditor.SavePath = Path.Combine(this.GeneratedPath, $"{mapName}.txt");
+
+            CodeBlockNested mapBlock = mapEditor.Blocks.AppendBlock();
+            mapBlock
+                .AppendLine($"Grammar: Map 5.1")
+                .AppendLine($"Namespace: {this.NameSpace(path)}")
+                .AppendLine($"Target: FHIR_R4")
+                ;
+
+            this.editorDict.Add(mapName, mapEditor);
+            return mapBlock;
+        }
 
         /// <summary>
         /// Create code editor for new entry and save it in save editor list.
@@ -111,9 +132,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Path {path} has already been processed.");
 
             CodeEditor codeEditor = new CodeEditor();
-
             codeEditor.SavePath = Path.Combine(this.GeneratedPath, $"{path}.txt");
-
             CodeBlockNested block = codeEditor.Blocks.AppendBlock();
             block
                 .AppendLine($"Grammar: DataElement 6.0")
@@ -126,8 +145,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         }
 
 
-        void DoProcessFhirElement(SDefInfo sDefInfo,
-            CodeBlockNested mainBlock)
+        void DoProcessFhirElement(SDefInfo sDefInfo)
         {
             const string fcn = "ProcessSpecialiation";
 
@@ -157,17 +175,14 @@ namespace FhirKhit.CIMPL.DirectFhir
                     return;
             }
 
-            ConvertFhirClass cfc = new ConvertFhirClass(this, sDefInfo, mainBlock);
+            ConvertFhirClass cfc = new ConvertFhirClass(this, sDefInfo);
             cfc.Convert();
         }
 
         /// <summary>
         /// Process one fhir element
         /// </summary>
-        /// <param name="sDefInfo"></param>
-        /// <param name="mainBlock"></param>
-        void ProcessFhirElement(SDefInfo sDefInfo,
-                        CodeBlockNested mainBlock)
+        void ProcessFhirElement(SDefInfo sDefInfo)
         {
             StructureDefinition sDef = sDefInfo.SDef;
 
@@ -182,7 +197,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                         (sDef.Derivation == StructureDefinition.TypeDerivationRule.Specialization) ||
                         (sDef.Url == "http://hl7.org/fhir/StructureDefinition/Resource")
                         )
-                        this.DoProcessFhirElement(sDefInfo, mainBlock);
+                        this.DoProcessFhirElement(sDefInfo);
                     break;
             }
         }
@@ -260,14 +275,12 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// </summary>
         void ProcessFhirElements()
         {
-            const String fcn = "ProcessFhirElements";
-
-            CodeBlockNested mainBlock = CreateEntryEditor("Main");
+            //const String fcn = "ProcessFhirElements";
 
             foreach (string path in this.items.Keys)
             {
                 SDefInfo sDef = this.GetTypedSDef(path);
-                this.ProcessFhirElement(sDef, mainBlock);
+                this.ProcessFhirElement(sDef);
             }
 
             foreach (CodeEditor ce in this.editorDict.Values)

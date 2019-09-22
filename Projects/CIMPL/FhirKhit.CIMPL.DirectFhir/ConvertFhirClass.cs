@@ -15,7 +15,6 @@ namespace FhirKhit.CIMPL.DirectFhir
     /// </summary>
     class ConvertFhirClass
     {
-        CodeBlockNested mainBlock;
         DirectFhirGenerator gen;
         DirectFhirGenerator.SDefInfo sDefInfo;
         StructureDefinition sDef;
@@ -23,13 +22,11 @@ namespace FhirKhit.CIMPL.DirectFhir
         ElementDefinition[] elements;
 
         public ConvertFhirClass(DirectFhirGenerator gen,
-            DirectFhirGenerator.SDefInfo sDefInfo,
-            CodeBlockNested mainBlock)
+            DirectFhirGenerator.SDefInfo sDefInfo)
         {
             this.sDefInfo = sDefInfo;
             this.gen = gen;
             this.sDef = this.sDefInfo.SDef;
-            this.mainBlock = mainBlock;
             this.elements = sDef.Differential.Element.ToArray();
             elementIndex = 1;
         }
@@ -37,17 +34,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         public void Convert()
         {
             const string fcn = "Convert";
-
-            //CodeEditor mapEditor = new CodeEditor();
-            //mapEditor.SavePath = Path.Combine(this.outputDir, $"{name}_map_r4.txt");
-
-            //CodeBlockNested mapBlock = mapEditor.Blocks.AppendBlock();
-            //mapBlock
-            //    .AppendLine($"Grammar: Map 5.1")
-            //    .AppendLine($"Namespace: {NSBase}")
-            //    .AppendLine($"Target: FHIR_R4")
-            //    ;
-
 
             String typeName;
             switch (sDefInfo.TFlag)
@@ -66,17 +52,8 @@ namespace FhirKhit.CIMPL.DirectFhir
             String description = this.gen.ToDescription(sDef.Description);
             String entryName = ProcessEntry(sDef.ToFormatedJson(), elements[0].Path, null, typeName, parent, description, sDef.Url);
 
-            mainBlock
-                .BlankLine()
-                .AppendCode($"{typeName}: {entryName.LastPathPart()}")
-                .AppendCode($"Parent: {entryName}")
-                .AppendCode($"Description: \"{description}\"")
-                ;
-
             if (elementIndex != elements.Length)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
-
-            //mapEditor.Save();
         }
 
 
@@ -84,15 +61,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// Create new file containing the definition for the new item.
         /// The new entry is created in its own namespace.
         /// </summary>
-        /// <param name="json"></param>
-        /// <param name="path"></param>
-        /// <param name="typeName"></param>
-        /// <param name="name"></param>
-        /// <param name="parent"></param>
-        /// <param name="description"></param>
-        /// <param name="comment"></param>
-        /// <param name="elements"></param>
-        /// <param name="elementIndex"></param>
         String ProcessEntry(String json,
             String path,
             String suffix,
@@ -101,19 +69,55 @@ namespace FhirKhit.CIMPL.DirectFhir
             String description,
             String comment)
         {
-            CodeBlockNested entryBlock = this.gen.CreateEntryEditor(path);
+            CodeBlockNested mapBlock = this.gen.CreateMapEditor(path);
+            return ProcessSubEntry(0, mapBlock, json, path, path, suffix, typeName, parent, description, comment);
+        }
+
+        String IndentStr(Int32 indent)
+        {
+            StringBuilder sb = new StringBuilder();
+            for (Int32 i = 0; i < indent; i++)
+                sb.Append("    ");
+            return sb.ToString();
+        }
+        /// <summary>
+        /// Create new file containing the definition for the new item.
+        /// The new entry is created in its own namespace.
+        /// </summary>
+        String ProcessSubEntry(Int32 indent,
+            CodeBlockNested mapBlock,
+            String json,
+            String elementPath,
+            String entryPath,
+            String suffix,
+            String typeName,
+            String parent,
+            String description,
+            String comment)
+        {
+            CodeBlockNested entryBlock = this.gen.CreateEntryEditor(elementPath);
             CodeBlockNested classBlock = entryBlock.AppendBlock();
             CodeBlockNested propertydefinitionsBlock = entryBlock.AppendBlock();
 
-            String entryName = path.LastPathPart().ToMachineName();
+            String entryName = elementPath.LastPathPart().ToMachineName();
             if (String.IsNullOrEmpty(suffix) == false)
+            {
                 entryName += suffix;
+                entryPath += suffix;
+            }
             classBlock
                 .AppendComment(json)
                 .BlankLine()
                 .AppendComment(comment)
                 .AppendCode($"{typeName}: {entryName}")
                 ;
+
+            String mapColon = (indent == 0) ? ":" : "";
+            mapBlock
+                .BlankLine()
+                .AppendCode($"{IndentStr(indent)}{entryPath} maps to {elementPath}{mapColon}")
+                ;
+
             switch (parent)
             {
                 case null:
@@ -132,12 +136,12 @@ namespace FhirKhit.CIMPL.DirectFhir
             while (elementIndex < elements.Length)
             {
                 ElementDefinition subElement = elements[elementIndex];
-                if (subElement.Path.StartsWith($"{path}.") == false)
+                if (subElement.Path.StartsWith($"{elementPath}.") == false)
                     break;
-                this.ProcessProperty(classBlock, propertydefinitionsBlock, path, entryName);
+                this.ProcessProperty(indent, classBlock, propertydefinitionsBlock, mapBlock, elementPath, entryPath, entryName);
             }
 
-            return $"{this.gen.NameSpace(path)}.{entryName}";
+            return $"{this.gen.NameSpace(elementPath)}.{entryName}";
         }
 
 
@@ -162,9 +166,12 @@ namespace FhirKhit.CIMPL.DirectFhir
             return false;
         }
 
-        void ProcessProperty(CodeBlockNested classBlock,
+        void ProcessProperty(Int32 indent,
+            CodeBlockNested classBlock,
             CodeBlockNested propertiesBlock,
-            String path,
+            CodeBlockNested mapBlock,
+            String elementPath,
+            String entryPath,
             String entryName)
         {
             const string fcn = "ProcessProperty";
@@ -202,6 +209,9 @@ namespace FhirKhit.CIMPL.DirectFhir
                 .AppendCode($"Element: {propertyName}")
                 ;
 
+            String propertyPath = $"{entryPath}.{propertyName}";
+            mapBlock.AppendLine($"{IndentStr(indent+1)}{propertyPath} maps to {ed.Path}");
+
             if (this.ContainsType(ed, BackboneElementStr))
             {
                 if (ed.Type.Count != 1)
@@ -209,7 +219,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                 if (this.HasChildren(ed) == false)
                     throw new ConvertErrorException(this.GetType().Name, fcn, $"Backbone element {ed.Path} has no children.");
 
-                fullPropertyName = ProcessEntry(null, ed.Path, "Group", "Group", BackboneElementStr, $"Group definition of {ed.Path}", null);
+                fullPropertyName = ProcessSubEntry(indent + 1, mapBlock, null, ed.Path, propertyPath, "Group", "Group", BackboneElementStr, $"Group definition of {ed.Path}", null);
             }
             else if (this.ContainsType(ed, ElementStr))
             {
@@ -218,7 +228,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                 if (this.HasChildren(ed) == false)
                     throw new ConvertErrorException(this.GetType().Name, fcn, $"Element {ed.Path} has no children.");
 
-                fullPropertyName = ProcessEntry(null, ed.Path, "Group", "Group", ElementStr, $"Group definition of {ed.Path}", null);
+                fullPropertyName = ProcessSubEntry(indent + 1, mapBlock, null, ed.Path, propertyPath, "Group", "Group", ElementStr, $"Group definition of {ed.Path}", null);
             }
             else
             {
@@ -236,7 +246,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                     firstFlag = false;
                 }
 
-                fullPropertyName = $"{this.gen.NameSpace(path)}.{propertyName}";
+                fullPropertyName = $"{this.gen.NameSpace(elementPath)}.{propertyName}";
                 foreach (ElementDefinition.TypeRefComponent type in ed.Type)
                 {
                     switch (type.Code)
