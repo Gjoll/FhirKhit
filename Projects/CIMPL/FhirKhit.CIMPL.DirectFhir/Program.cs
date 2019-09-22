@@ -42,6 +42,9 @@ namespace FhirKhit.CIMPL.DirectFhir
             {
                 ParseArgs(args);
                 DirectFhirGenerator dfg = new DirectFhirGenerator(outputDir);
+                dfg.StatusErrors += Dfg_StatusErrors;
+                dfg.StatusInfo += Dfg_StatusInfo;
+                dfg.StatusWarnings += Dfg_StatusWarnings;
                 if (createBundle == true)
                     dfg.CreateBundle();
                 return dfg.GenerateBaseClasses();
@@ -51,6 +54,28 @@ namespace FhirKhit.CIMPL.DirectFhir
                 Console.WriteLine(err.Message);
                 return -1;
             }
+        }
+
+        private static void Message(ConsoleColor color, string className, string method, string msg)
+        {
+            Console.ForegroundColor = color;  
+            Console.WriteLine($"{className}.{method}: {msg}");
+            Console.ForegroundColor = ConsoleColor.Black;  
+        }
+        private static bool Dfg_StatusWarnings(string className, string method, string msg)
+        {
+            Message(ConsoleColor.Yellow, className, method, msg); 
+            return true;
+        }
+        private static bool Dfg_StatusInfo(string className, string method, string msg)
+        {
+            Message(ConsoleColor.White, className, method, msg); 
+            return true;
+        }
+        private static bool Dfg_StatusErrors(string className, string method, string msg)
+        {
+            Message(ConsoleColor.Red, className, method, msg); 
+            return true;
         }
     }
 }

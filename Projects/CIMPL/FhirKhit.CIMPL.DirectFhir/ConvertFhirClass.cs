@@ -48,7 +48,6 @@ namespace FhirKhit.CIMPL.DirectFhir
             //    .AppendLine($"Target: FHIR_R4")
             //    ;
 
-            // Debug.Assert(sDefInfo.SDef.Snapshot.Element[0].Path.ToLower().Contains("backboneelement") == false);
 
             String typeName;
             switch (sDefInfo.TFlag)
@@ -106,14 +105,14 @@ namespace FhirKhit.CIMPL.DirectFhir
             CodeBlockNested classBlock = entryBlock.AppendBlock();
             CodeBlockNested propertydefinitionsBlock = entryBlock.AppendBlock();
 
-            String name = path.LastPathPart().ToMachineName();
+            String entryName = path.LastPathPart().ToMachineName();
             if (String.IsNullOrEmpty(suffix) == false)
-                name += suffix;
+                entryName += suffix;
             classBlock
                 .AppendComment(json)
                 .BlankLine()
                 .AppendComment(comment)
-                .AppendCode($"{typeName}: {name}")
+                .AppendCode($"{typeName}: {entryName}")
                 ;
             switch (parent)
             {
@@ -135,19 +134,42 @@ namespace FhirKhit.CIMPL.DirectFhir
                 ElementDefinition subElement = elements[elementIndex];
                 if (subElement.Path.StartsWith($"{path}.") == false)
                     break;
-                this.ProcessProperty(classBlock, propertydefinitionsBlock, path);
+                this.ProcessProperty(classBlock, propertydefinitionsBlock, path, entryName);
             }
 
-            return $"{this.gen.NameSpace(path)}.{name}";
+            return $"{this.gen.NameSpace(path)}.{entryName}";
         }
 
 
+        bool HasChildren(ElementDefinition ed)
+        {
+            if (this.elementIndex >= this.elements.Length)
+                return false;
+            if (this.elements[this.elementIndex].Path.StartsWith($"{ed.Path}.") == false)
+                return false;
+            return true;
+        }
+
+        bool ContainsType(ElementDefinition ed, String code)
+        {
+            if (ed.Type == null)
+                return false;
+            foreach (var type in ed.Type)
+            {
+                if (type.Code == code)
+                    return true;
+            }
+            return false;
+        }
+
         void ProcessProperty(CodeBlockNested classBlock,
             CodeBlockNested propertiesBlock,
-            String path)
+            String path,
+            String entryName)
         {
             const string fcn = "ProcessProperty";
-            const String BackboneElement = "BackboneElement";
+            const String BackboneElementStr = "BackboneElement";
+            const String ElementStr = "Element";
 
             ElementDefinition ed = elements[elementIndex++];
 
@@ -169,6 +191,8 @@ namespace FhirKhit.CIMPL.DirectFhir
             String propertyName = ed.Path.LastPathPart().ToMachineName();
             if (propertyName == "Value")
                 propertyName = "ValueZ";
+            if (propertyName == entryName)
+                propertyName = $"{propertyName}Value";
 
             String fullPropertyName;
 
@@ -178,9 +202,23 @@ namespace FhirKhit.CIMPL.DirectFhir
                 .AppendCode($"Element: {propertyName}")
                 ;
 
-            if ((ed.Type.Count == 1) && (ed.Type[0].Code == BackboneElement))
+            if (this.ContainsType(ed, BackboneElementStr))
             {
-                fullPropertyName = ProcessEntry(null, ed.Path, "Group", "Group", BackboneElement, $"Group definition of {ed.Path}", null);
+                if (ed.Type.Count != 1)
+                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Backbone element {ed.Path} has multiple types.");
+                if (this.HasChildren(ed) == false)
+                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Backbone element {ed.Path} has no children.");
+
+                fullPropertyName = ProcessEntry(null, ed.Path, "Group", "Group", BackboneElementStr, $"Group definition of {ed.Path}", null);
+            }
+            else if (this.ContainsType(ed, ElementStr))
+            {
+                if (ed.Type.Count != 1)
+                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Element {ed.Path} has multiple types.");
+                if (this.HasChildren(ed) == false)
+                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Element {ed.Path} has no children.");
+
+                fullPropertyName = ProcessEntry(null, ed.Path, "Group", "Group", ElementStr, $"Group definition of {ed.Path}", null);
             }
             else
             {
@@ -241,7 +279,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
                             if (type.TargetProfile.Count() == 0)
                             {
-                                OutputType($"{this.gen.NameSpace("Resource")}Resource");
+                                OutputType($"{this.gen.NameSpace("Resource")}.Resource");
                             }
                             else
                             {
