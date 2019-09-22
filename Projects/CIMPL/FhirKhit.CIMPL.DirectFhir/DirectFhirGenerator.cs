@@ -35,7 +35,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         public String outputDir;
         public Dictionary<String, CodeEditor> editorDict = new Dictionary<string, CodeEditor>();
 
-        public String NSBase => "fhir.datatype";
+        public String NSBase => "fhir";
 
         public String NameSpace(params String[] path)
         {
@@ -49,6 +49,8 @@ namespace FhirKhit.CIMPL.DirectFhir
 
 
         String FhirSDefsPath => Path.Combine(this.outputDir, "StructureDefinitions.json");
+        String GeneratedPath => Path.Combine(this.outputDir, "Generated");
+
         Bundle FhirSDefsBundle
         {
             get
@@ -71,6 +73,11 @@ namespace FhirKhit.CIMPL.DirectFhir
         public DirectFhirGenerator(String outputDir)
         {
             this.outputDir = outputDir;
+            if (Directory.Exists(this.GeneratedPath) == false)
+                Directory.CreateDirectory(this.GeneratedPath);
+            else
+                DirHelper.CleanDir(this.GeneratedPath);
+
             this.source = new ZipSource("specification.zip");
             this.items = new Dictionary<string, SDefInfo>();
         }
@@ -105,7 +112,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
             CodeEditor codeEditor = new CodeEditor();
 
-            codeEditor.SavePath = Path.Combine(this.outputDir, $"{path}.txt");
+            codeEditor.SavePath = Path.Combine(this.GeneratedPath, $"{path}.txt");
 
             CodeBlockNested block = codeEditor.Blocks.AppendBlock();
             block
@@ -119,14 +126,14 @@ namespace FhirKhit.CIMPL.DirectFhir
         }
 
 
-        void ProcessSpecialiation(SDefInfo sDefInfo,
+        void DoProcessFhirElement(SDefInfo sDefInfo,
             CodeBlockNested mainBlock)
         {
             const string fcn = "ProcessSpecialiation";
 
             StructureDefinition sDef = sDefInfo.SDef;
 
-            String parent = sDef.BaseDefinition.LastUriPart();
+            String parent = sDef.BaseDefinition?.LastUriPart();
             String description = this.ToDescription(sDef.Description);
             // remove items that derive directly from primitives.
             switch (parent)
@@ -165,14 +172,17 @@ namespace FhirKhit.CIMPL.DirectFhir
             StructureDefinition sDef = sDefInfo.SDef;
 
             String baseDefinition = sDef.BaseDefinition;
-            switch (sDef.BaseDefinition)
+            switch (baseDefinition)
             {
                 case "http://hl7.org/fhir/StructureDefinition/Extension":
                     break;
 
                 default:
-                    if (sDef.Derivation == StructureDefinition.TypeDerivationRule.Specialization)
-                        this.ProcessSpecialiation(sDefInfo, mainBlock);
+                    if (
+                        (sDef.Derivation == StructureDefinition.TypeDerivationRule.Specialization) ||
+                        (sDef.Url == "http://hl7.org/fhir/StructureDefinition/Resource")
+                        )
+                        this.DoProcessFhirElement(sDefInfo, mainBlock);
                     break;
             }
         }
@@ -238,8 +248,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             // If TFlag s unknown, use parents TFlag value.
             if (sDef.TFlag == SDefInfo.TypeFlag.Unknown)
             {
-                String baseDefinition = sDef.SDef.BaseDefinition;
-                SDefInfo parentInfo = this.GetTypedSDef(baseDefinition);
+                SDefInfo parentInfo = this.GetTypedSDef(sDef.SDef.BaseDefinition);
                 sDef.TFlag = parentInfo.TFlag;
             }
 
@@ -270,7 +279,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             try
             {
-                DirHelper.CreateCleanDir(this.outputDir);
                 this.StoreFhirElements();
             }
             catch (ConvertErrorException err)

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace FhirKhit.CIMPL.DirectFhir
@@ -47,7 +48,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             //    .AppendLine($"Target: FHIR_R4")
             //    ;
 
-            Debug.Assert(sDefInfo.SDef.Snapshot.Element[0].Path.ToLower().Contains("backboneelement") == false);
+            // Debug.Assert(sDefInfo.SDef.Snapshot.Element[0].Path.ToLower().Contains("backboneelement") == false);
 
             String typeName;
             switch (sDefInfo.TFlag)
@@ -62,7 +63,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                     throw new ConvertErrorException(this.GetType().Name, fcn, $"Invalid TFlag value");
             }
 
-            String parent = sDef.BaseDefinition.LastUriPart();
+            String parent = sDef.BaseDefinition?.LastUriPart();
             String description = this.gen.ToDescription(sDef.Description);
             String entryName = ProcessEntry(sDef.ToFormatedJson(), elements[0].Path, null, typeName, parent, description, sDef.Url);
 
@@ -116,6 +117,8 @@ namespace FhirKhit.CIMPL.DirectFhir
                 ;
             switch (parent)
             {
+                case null:
+                case "Resource":
                 case "Element":
                     break;
 
@@ -169,95 +172,91 @@ namespace FhirKhit.CIMPL.DirectFhir
 
             String fullPropertyName;
 
+            propertiesBlock
+                .BlankLine()
+                .AppendLine($"// Entry definition of {ed.Path}")
+                .AppendCode($"Element: {propertyName}")
+                ;
+
             if ((ed.Type.Count == 1) && (ed.Type[0].Code == BackboneElement))
             {
                 fullPropertyName = ProcessEntry(null, ed.Path, "Group", "Group", BackboneElement, $"Group definition of {ed.Path}", null);
             }
             else
             {
+                HashSet<String> outputTypes = new HashSet<string>();
+                bool firstFlag = true;
+                void OutputType(String pType)
+                {
+                    if (outputTypes.Contains(pType))
+                        return;
+                    outputTypes.Add(pType);
+                    if (firstFlag)
+                        propertiesBlock.AppendCode($"Value: {pType}");
+                    else
+                        propertiesBlock.AppendCode($"    or {pType}");
+                    firstFlag = false;
+                }
+
                 fullPropertyName = $"{this.gen.NameSpace(path)}.{propertyName}";
-                StringBuilder sb = new StringBuilder();
                 foreach (ElementDefinition.TypeRefComponent type in ed.Type)
                 {
-                    String or = (sb.Length > 0) ? " or " : "";
                     switch (type.Code)
                     {
+                        case null:
+                            break;
+
+                        case "boolean":
+                        case "integer":
+                        case "decimal":
+                        case "uri":
+                        case "string":
+                        case "base64Binary":
+                        case "instant":
+                        case "date":
+                        case "dateTime":
+                        case "time":
+                        case "oid":
+                        case "id":
+                        case "markdown":
+                        case "unsignedInt":
+                        case "positiveInt":
+                        case "xhtml":
+                            OutputType($"{type.Code}");
+                            break;
+
+                        case "CodeableConcept":
+                        case "code":
+                            OutputType($"concept");
+                            break;
+
+                        case "uuid":
+                        case "url":
+                        case "canonical":
+                            OutputType($"uri");
+                            break;
+
                         case "Reference":
                             if (type.Profile.Any())
                                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
                             if (type.TargetProfile.Count() == 0)
                             {
-                                sb.Append($"{or}{this.gen.NameSpace("Resource")}Resource");
+                                OutputType($"{this.gen.NameSpace("Resource")}Resource");
                             }
                             else
                             {
                                 foreach (string target in type.TargetProfile)
                                 {
                                     String targetEntryName = target.LastUriPart().ToMachineName();
-                                    sb.Append($"{or}{this.gen.NameSpace(targetEntryName)}.{targetEntryName}");
-                                    or = " or ";
+                                    OutputType($"{this.gen.NameSpace(targetEntryName)}.{targetEntryName}");
                                 }
                             }
                             break;
 
                         default:
-                            //if (type.Profile.Any())
-                            //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
-                            //if (type.TargetProfile.Any())
-                            //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected targetProfile in type {ed.Path}:{type.Code}.");
-                            switch (type.Code)
-                            {
-                                case null:
-                                    break;
-
-                                case "boolean":
-                                case "integer":
-                                case "decimal":
-                                case "uri":
-                                case "string":
-                                case "base64Binary":
-                                case "instant":
-                                case "date":
-                                case "dateTime":
-                                case "time":
-                                case "oid":
-                                case "id":
-                                case "markdown":
-                                case "unsignedInt":
-                                case "positiveInt":
-                                case "xhtml":
-                                    sb.Append($"{or}{type.Code}");
-                                    break;
-
-                                case "CodeableConcept":
-                                case "code":
-                                    sb.Append($"{or}concept");
-                                    break;
-
-                                case "url":
-                                case "canonical":
-                                    sb.Append($"{or}uri");
-                                    break;
-
-                                default:
-                                    sb.Append($"{or}{this.gen.NameSpace(type.Code)}.{type.Code.ToMachineName()}");
-                                    break;
-                            }
+                            OutputType($"{this.gen.NameSpace(type.Code)}.{type.Code.ToMachineName()}");
                             break;
                     }
-                }
-
-                propertiesBlock
-                    .BlankLine()
-                    .AppendLine($"// Entry definition of {ed.Path}")
-                    .AppendCode($"Element: {propertyName}")
-                    ;
-
-                if (sb.Length > 0)
-                {
-                    propertiesBlock
-                        .AppendCode($"Value: {sb.ToString()}")
-                        ;
                 }
             }
 
