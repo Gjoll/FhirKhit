@@ -4,6 +4,7 @@ using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -27,16 +28,34 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.sDefInfo = sDefInfo;
             this.gen = gen;
             this.sDef = this.sDefInfo.SDef;
-            this.elements = sDef.Differential.Element.ToArray();
-            elementIndex = 1;
         }
 
-        public void Convert()
+        public void Constrain()
         {
-            const string fcn = "Convert";
+            //const string fcn = "Constrain";
+
+            // Modify the path to start with the constrained class name, not the base class name as
+            // constraints do by default.
+            ElementDefinition[] elements = this.sDef.Differential.Element.ToArray();
+            this.elements = new ElementDefinition[elements.Length];
+            for (Int32 i = 0; i < elements.Length; i++)
+            {
+                ElementDefinition e = elements[i];
+                e.Path = $"{this.sDef.Id}.{e.Path.SkipFirstPathPart()}";
+                this.elements[i] = e;
+            }
+            Specialize();
+        }
+
+        public void Specialize()
+        {
+            const string fcn = "Specialize";
+
+            this.elements = this.sDef.Differential.Element.ToArray();
+            this.elementIndex = 1;
 
             String typeName;
-            switch (sDefInfo.TFlag)
+            switch (this.sDefInfo.TFlag)
             {
                 case DirectFhirGenerator.SDefInfo.TypeFlag.Entry:
                     typeName = "Entry";
@@ -48,12 +67,9 @@ namespace FhirKhit.CIMPL.DirectFhir
                     throw new ConvertErrorException(this.GetType().Name, fcn, $"Invalid TFlag value");
             }
 
-            String parent = sDef.BaseDefinition?.LastUriPart();
-            String description = this.gen.ToDescription(sDef.Description);
-            String entryName = ProcessEntry(sDef.ToFormatedJson(), elements[0].Path, null, typeName, parent, description, sDef.Url);
-
-            if (elementIndex != elements.Length)
-                throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
+            String parent = this.sDef.BaseDefinition?.LastUriPart();
+            String description = this.gen.ToDescription(this.sDef.Description);
+            this.ProcessEntry(this.sDef.Id, null, typeName, parent, description, this.sDef.Url);
         }
 
 
@@ -61,16 +77,48 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// Create new file containing the definition for the new item.
         /// The new entry is created in its own namespace.
         /// </summary>
-        String ProcessEntry(String json,
-            String path,
+        void ProcessEntry(String path,
             String suffix,
             String typeName,
             String parent,
             String description,
             String comment)
         {
-            CodeBlockNested mapBlock = this.gen.CreateMapEditor(path);
-            return ProcessSubEntry(0, mapBlock, json, path, path, suffix, typeName, parent, description, comment);
+            const string fcn = "ProcessEntry";
+
+            switch (path)
+            {
+                case "StructureDefinition":
+                case "ElementDefinition":
+                case "Bundle":
+                case "CodeableConcept":
+                case "Coding":
+
+                case "boolean":
+                case "integer":
+                case "decimal":
+                case "uri":
+                case "string":
+                case "base64Binary":
+                case "instant":
+                case "date":
+                case "dateTime":
+                case "time":
+                case "oid":
+                case "id":
+                case "markdown":
+                case "unsignedInt":
+                case "positiveInt":
+                case "xhtml":
+                    break;
+
+                default:
+                    CodeBlockNested mapBlock = this.gen.CreateMapEditor(path);
+                    this.ProcessSubEntry(0, mapBlock, path, path, suffix, typeName, parent, description, comment);
+                    if (this.elementIndex != this.elements.Length)
+                        throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
+                    break;
+            }
         }
 
         String IndentStr(Int32 indent)
@@ -86,7 +134,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// </summary>
         String ProcessSubEntry(Int32 indent,
             CodeBlockNested mapBlock,
-            String json,
             String elementPath,
             String entryPath,
             String suffix,
@@ -95,6 +142,8 @@ namespace FhirKhit.CIMPL.DirectFhir
             String description,
             String comment)
         {
+            Debug.Assert(entryPath.ToLower() != "base64binary");
+
             CodeBlockNested entryBlock = this.gen.CreateEntryEditor(elementPath);
             CodeBlockNested classBlock = entryBlock.AppendBlock();
             CodeBlockNested propertydefinitionsBlock = entryBlock.AppendBlock();
@@ -106,7 +155,6 @@ namespace FhirKhit.CIMPL.DirectFhir
                 entryPath += suffix;
             }
             classBlock
-                .AppendComment(json)
                 .BlankLine()
                 .AppendComment(comment)
                 .AppendCode($"{typeName}: {entryName}")
@@ -115,7 +163,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             String mapColon = (indent == 0) ? ":" : "";
             mapBlock
                 .BlankLine()
-                .AppendCode($"{IndentStr(indent)}{entryPath} maps to {elementPath}{mapColon}")
+            .AppendCode($"{this.IndentStr(indent)}{entryPath} maps to {elementPath}{mapColon}")
                 ;
 
             switch (parent)
@@ -133,9 +181,9 @@ namespace FhirKhit.CIMPL.DirectFhir
                 .AppendCode($"Description: \"{description}\"")
                 ;
 
-            while (elementIndex < elements.Length)
+            while (this.elementIndex < this.elements.Length)
             {
-                ElementDefinition subElement = elements[elementIndex];
+                ElementDefinition subElement = this.elements[this.elementIndex];
                 if (subElement.Path.StartsWith($"{elementPath}.") == false)
                     break;
                 this.ProcessProperty(indent, classBlock, propertydefinitionsBlock, mapBlock, elementPath, entryPath, entryName);
@@ -178,7 +226,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             const String BackboneElementStr = "BackboneElement";
             const String ElementStr = "Element";
 
-            ElementDefinition ed = elements[elementIndex++];
+            ElementDefinition ed = this.elements[this.elementIndex++];
 
             // Note: Currently we do not handle extensions.
             if (ed.Path.LastPathPart() == "extension")
@@ -187,13 +235,18 @@ namespace FhirKhit.CIMPL.DirectFhir
                 return;
 
             if (String.IsNullOrEmpty(ed.SliceName) == false)
-                throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected SliceName in element {ed.Path}.");
+            {
+                this.gen.ConversionWarn(this.GetType().Name, fcn, "Ignoring slice");
+            }
             if (ed.Slicing != null)
-                throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Slice in element {ed.Path}.");
-            if (ed.Fixed != null)
-                throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Fixed in element {ed.Path}.");
-            if (ed.Pattern != null)
-                throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Pattern in element {ed.Path}.");
+            {
+                this.gen.ConversionWarn(this.GetType().Name, fcn, "Ignoring slicing");
+            }
+
+            //if (ed.Fixed != null)
+            //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Fixed in element {ed.Path}.");
+            //if (ed.Pattern != null)
+            //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Pattern in element {ed.Path}.");
 
             String propertyName = ed.Path.LastPathPart().ToMachineName();
             if (propertyName == "Value")
@@ -202,15 +255,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                 propertyName = $"{propertyName}Value";
 
             String fullPropertyName;
-
-            propertiesBlock
-                .BlankLine()
-                .AppendLine($"// Entry definition of {ed.Path}")
-                .AppendCode($"Element: {propertyName}")
-                ;
-
             String propertyPath = $"{entryPath}.{propertyName}";
-            mapBlock.AppendLine($"{IndentStr(indent+1)}{propertyPath} maps to {ed.Path}");
 
             if (this.ContainsType(ed, BackboneElementStr))
             {
@@ -219,7 +264,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                 if (this.HasChildren(ed) == false)
                     throw new ConvertErrorException(this.GetType().Name, fcn, $"Backbone element {ed.Path} has no children.");
 
-                fullPropertyName = ProcessSubEntry(indent + 1, mapBlock, null, ed.Path, propertyPath, "Group", "Group", BackboneElementStr, $"Group definition of {ed.Path}", null);
+                fullPropertyName = this.ProcessSubEntry(indent + 1, mapBlock, ed.Path, propertyPath, "Group", "Group", BackboneElementStr, $"Group definition of {ed.Path}", null);
             }
             else if (this.ContainsType(ed, ElementStr))
             {
@@ -228,10 +273,16 @@ namespace FhirKhit.CIMPL.DirectFhir
                 if (this.HasChildren(ed) == false)
                     throw new ConvertErrorException(this.GetType().Name, fcn, $"Element {ed.Path} has no children.");
 
-                fullPropertyName = ProcessSubEntry(indent + 1, mapBlock, null, ed.Path, propertyPath, "Group", "Group", ElementStr, $"Group definition of {ed.Path}", null);
+                fullPropertyName = this.ProcessSubEntry(indent + 1, mapBlock, ed.Path, propertyPath, "Group", "Group", ElementStr, $"Group definition of {ed.Path}", null);
             }
             else
             {
+                propertiesBlock
+                    .BlankLine()
+                    .AppendLine($"// Entry definition of {ed.Path}")
+                    .AppendCode($"Element: {propertyName}")
+                    ;
+
                 HashSet<String> outputTypes = new HashSet<string>();
                 bool firstFlag = true;
                 void OutputType(String pType)
@@ -246,6 +297,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                     firstFlag = false;
                 }
 
+                mapBlock.AppendCode($"    {propertyPath.SkipFirstPathPart()} maps to {ed.Path.SkipFirstPathPart()}");
                 fullPropertyName = $"{this.gen.NameSpace(elementPath)}.{propertyName}";
                 foreach (ElementDefinition.TypeRefComponent type in ed.Type)
                 {
@@ -274,6 +326,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                             break;
 
                         case "CodeableConcept":
+                        case "Coding":
                         case "code":
                             OutputType($"concept");
                             break;

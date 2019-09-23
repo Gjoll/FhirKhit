@@ -54,6 +54,17 @@ namespace FhirKhit.Tools
         }
 
         /// <summary>
+        /// Return the path skipping everything up to and including the first '.'
+        /// </summary>
+        public static String SkipFirstPathPart(this String path)
+        {
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
+            Int32 index = path.IndexOf('.') + 1;
+            return path.Substring(index);
+        }
+
+        /// <summary>
         /// Return the last part of a path (i.e. a.bb.ccc == 'ccc')
         /// </summary>
         /// <param name="path"></param>

@@ -4,13 +4,14 @@ namespace FhirKhit.CIMPL.DirectFhir
 {
     class Program
     {
+        static DirectFhirGenerator dfg;
         static string outputDir;
         static bool createBundle;
 
         static String GetArgs(string[] args, ref Int32 i, String errorMsg)
         {
             if (i >= args.Length)
-                    throw new Exception(errorMsg);
+                throw new Exception(errorMsg);
             return args[i++];
         }
 
@@ -25,9 +26,16 @@ namespace FhirKhit.CIMPL.DirectFhir
                     case "-o":
                         outputDir = GetArgs(args, ref i, "Missing argument to -o parameter");
                         break;
+
                     case "-b":
                         createBundle = true;
                         break;
+
+                    case "-p":
+                    case "-path":
+                        dfg.AddPathToProcess(GetArgs(args, ref i, "Missing argument to -path parameter"));
+                        break;
+
                     default:
                         throw new Exception("Unknown command line argument {arg}");
                 }
@@ -40,16 +48,17 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             try
             {
-                ParseArgs(args);
-                DirectFhirGenerator dfg = new DirectFhirGenerator(outputDir);
+                dfg = new DirectFhirGenerator();
                 dfg.StatusErrors += Dfg_StatusErrors;
                 dfg.StatusInfo += Dfg_StatusInfo;
                 dfg.StatusWarnings += Dfg_StatusWarnings;
+
+                ParseArgs(args);
                 if (createBundle == true)
                     dfg.CreateBundle();
-                return dfg.GenerateBaseClasses();
+                return dfg.GenerateBaseClasses(outputDir);
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 Console.WriteLine(err.Message);
                 return -1;
@@ -58,23 +67,23 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         private static void Message(ConsoleColor color, string className, string method, string msg)
         {
-            Console.ForegroundColor = color;  
+            Console.ForegroundColor = color;
             Console.WriteLine($"{className}.{method}: {msg}");
-            Console.ForegroundColor = ConsoleColor.Black;  
+            Console.ForegroundColor = ConsoleColor.Black;
         }
         private static bool Dfg_StatusWarnings(string className, string method, string msg)
         {
-            Message(ConsoleColor.Yellow, className, method, msg); 
+            Message(ConsoleColor.Yellow, className, method, msg);
             return true;
         }
         private static bool Dfg_StatusInfo(string className, string method, string msg)
         {
-            Message(ConsoleColor.White, className, method, msg); 
+            Message(ConsoleColor.White, className, method, msg);
             return true;
         }
         private static bool Dfg_StatusErrors(string className, string method, string msg)
         {
-            Message(ConsoleColor.Red, className, method, msg); 
+            Message(ConsoleColor.Red, className, method, msg);
             return true;
         }
     }

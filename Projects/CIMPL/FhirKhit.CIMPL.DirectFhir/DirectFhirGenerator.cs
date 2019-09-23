@@ -31,7 +31,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
 
         Bundle fhirSDefsBundle;
-
+        HashSet<String> pathsToProcess = null;
         public String outputDir;
         public Dictionary<String, CodeEditor> editorDict = new Dictionary<string, CodeEditor>();
 
@@ -48,8 +48,19 @@ namespace FhirKhit.CIMPL.DirectFhir
         }
 
 
+        /// <summary>
+        /// Add path filter. if pathsToProcess has any members, then
+        /// only resource paths that start with this will be processed.
+        /// </summary>
+        public void AddPathToProcess(String path)
+        {
+            if (this.pathsToProcess == null)
+                this.pathsToProcess = new HashSet<string>();
+            this.pathsToProcess.Add(path);
+        }
+
         String FhirSDefsPath => Path.Combine(this.outputDir, "StructureDefinitions.json");
-        String GeneratedPath => Path.Combine(this.outputDir, "Generated");
+        public String GeneratedPath => Path.Combine(this.outputDir, "Generated");
 
         Bundle FhirSDefsBundle
         {
@@ -70,14 +81,8 @@ namespace FhirKhit.CIMPL.DirectFhir
         Dictionary<String, SDefInfo> items;
         ZipSource source;
 
-        public DirectFhirGenerator(String outputDir)
+        public DirectFhirGenerator()
         {
-            this.outputDir = outputDir;
-            if (Directory.Exists(this.GeneratedPath) == false)
-                Directory.CreateDirectory(this.GeneratedPath);
-            else
-                DirHelper.CleanDir(this.GeneratedPath);
-
             this.source = new ZipSource("specification.zip");
             this.items = new Dictionary<string, SDefInfo>();
         }
@@ -144,12 +149,50 @@ namespace FhirKhit.CIMPL.DirectFhir
             return block;
         }
 
+        /// <summary>
+        /// This creates a new class that is a constraint of the base class (no new elements except exceptions).
+        /// </summary>
+        /// <param name="sDefInfo"></param>
+        void DoProcessFhirElementConstraint(SDefInfo sDefInfo)
+        {
+            const string fcn = "DoProcessFhirElementConstraint";
 
-        void DoProcessFhirElement(SDefInfo sDefInfo)
+            StructureDefinition sDef = sDefInfo.SDef;
+            this.ConversionInfo(this.GetType().Name, fcn, $"Processing Constraint {sDef.Url}");
+
+            String parent = sDef.BaseDefinition?.LastUriPart();
+            String description = this.ToDescription(sDef.Description);
+            // remove items that derive directly from primitives.
+            switch (parent)
+            {
+                case "boolean":
+                case "integer":
+                case "decimal":
+                case "uri":
+                case "string":
+                case "base64Binary":
+                case "instant":
+                case "dateTime":
+                case "time":
+                case "oid":
+                case "id":
+                case "markdown":
+                case "unsignedInt":
+                case "positiveInt":
+                case "xhtml":
+                    this.ConversionInfo(this.GetType().Name, fcn, $"Ignoring '{sDef.Url}' because it derives from primitive '{parent}'");
+                    return;
+            }
+            ConvertFhirClass cfc = new ConvertFhirClass(this, sDefInfo);
+            cfc.Constrain();
+        }
+
+        void DoProcessFhirElementSpecialization(SDefInfo sDefInfo)
         {
             const string fcn = "ProcessSpecialiation";
 
             StructureDefinition sDef = sDefInfo.SDef;
+            this.ConversionInfo(this.GetType().Name, fcn, $"Processing Specialization {sDef.Url}");
 
             String parent = sDef.BaseDefinition?.LastUriPart();
             String description = this.ToDescription(sDef.Description);
@@ -176,7 +219,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             }
 
             ConvertFhirClass cfc = new ConvertFhirClass(this, sDefInfo);
-            cfc.Convert();
+            cfc.Specialize();
         }
 
         /// <summary>
@@ -184,6 +227,8 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// </summary>
         void ProcessFhirElement(SDefInfo sDefInfo)
         {
+            const string fcn = "ProcessFhirElement";
+
             StructureDefinition sDef = sDefInfo.SDef;
 
             String baseDefinition = sDef.BaseDefinition;
@@ -194,10 +239,29 @@ namespace FhirKhit.CIMPL.DirectFhir
 
                 default:
                     if (
-                        (sDef.Derivation == StructureDefinition.TypeDerivationRule.Specialization) ||
-                        (sDef.Url == "http://hl7.org/fhir/StructureDefinition/Resource")
+                        (this.pathsToProcess != null) &&
+                        (this.pathsToProcess.Contains(sDef.Snapshot.Element[0].Path) == false)
                         )
-                        this.DoProcessFhirElement(sDefInfo);
+                    {
+                        return;
+                    }
+
+                    switch (sDef.Derivation)
+                    {
+                        case null:
+                            return;
+
+                        case StructureDefinition.TypeDerivationRule.Specialization:
+                            this.DoProcessFhirElementSpecialization(sDefInfo);
+                            break;
+
+                        case StructureDefinition.TypeDerivationRule.Constraint:
+                            this.DoProcessFhirElementConstraint(sDefInfo);
+                            break;
+
+                        default:
+                            throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Unknown derivation {sDef.Derivation}");
+                    }
                     break;
             }
         }
@@ -226,8 +290,9 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         void LoadFhirElements()
         {
-            // const String fcn = "LoadFhirElements";
+            const String fcn = "LoadFhirElements";
 
+            this.ConversionInfo(this.GetType().Name, fcn, "Loading Fhir structure definitions");
             foreach (StructureDefinition sDef in this.FhirSDefsBundle.GetResources())
             {
                 SDefInfo sDefInfo = new SDefInfo
@@ -275,7 +340,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// </summary>
         void ProcessFhirElements()
         {
-            //const String fcn = "ProcessFhirElements";
+            const String fcn = "ProcessFhirElements";
 
             foreach (string path in this.items.Keys)
             {
@@ -283,6 +348,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                 this.ProcessFhirElement(sDef);
             }
 
+            this.ConversionInfo(this.GetType().Name, fcn, "Saving CIMPL classes");
             foreach (CodeEditor ce in this.editorDict.Values)
                 ce.Save();
             this.editorDict.Clear();
@@ -306,10 +372,19 @@ namespace FhirKhit.CIMPL.DirectFhir
             return this.Errors.Any() ? -1 : 0;
         }
 
-        public Int32 GenerateBaseClasses()
+        public Int32 GenerateBaseClasses(String outputDir)
         {
+            const String fcn = "GenerateBaseClasses";
+
             try
             {
+                this.ConversionInfo(this.GetType().Name, fcn, "Starting generation of CIMPL classes");
+                this.outputDir = outputDir;
+                if (Directory.Exists(this.GeneratedPath) == false)
+                    Directory.CreateDirectory(this.GeneratedPath);
+                else
+                    DirHelper.CleanDir(this.GeneratedPath);
+
                 if (File.Exists(this.FhirSDefsPath) == false)
                     this.StoreFhirElements();
 
@@ -325,6 +400,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                 this.ConversionError(this.GetType().Name, "Execute", err.Message);
             }
 
+            this.ConversionInfo(this.GetType().Name, fcn, "Completed generation of CIMPL classes");
             return this.Errors.Any() ? -1 : 0;
         }
 
