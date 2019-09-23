@@ -2,7 +2,7 @@
   "profiles": {
     "FhirKhit.CIMPL.DirectFhir": {
       "commandName": "Project",
-      "commandLineArgs": "-o \"\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\CIMPL\\Fhir\""
+      "commandLineArgs": "-o \"c:\\Temp\\Fhir\""
     }
   }
 }
