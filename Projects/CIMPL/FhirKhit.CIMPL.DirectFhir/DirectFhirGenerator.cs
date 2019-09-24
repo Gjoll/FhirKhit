@@ -56,7 +56,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// </summary>
         public void AddResourcePathToProcess(String path, bool abbrevFlag)
         {
-            Debug.Assert(path.Contains("hl7.") == true);
             if (processedResources.Contains(path) == true)
                 return;
             if (abbrevFlag == true)
@@ -67,8 +66,6 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         public void AddResourceToProcess(String name, bool abbrevFlag)
         {
-            Debug.Assert(name != "fhir.resource.Resource");
-            Debug.Assert(name.StartsWith("http:") == false);
             this.AddResourcePathToProcess($"http://hl7.org/fhir/StructureDefinition/{name}", abbrevFlag);
         }
 
@@ -119,7 +116,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             const String fcn = "CreateMapEditor";
 
-            Debug.Assert(path.StartsWith("heep:") == false);
             String mapName = $"{path}_map_r4";
             if (this.editorDict.ContainsKey(mapName) == true)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Path {path} has already been processed.");
@@ -147,7 +143,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             const String fcn = "CreateEntryEditor";
 
-            Debug.Assert(path.Contains("hl7.") == false);
             if (this.editorDict.ContainsKey(path) == true)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Path {path} has already been processed.");
 
@@ -281,6 +276,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             const string fcn = "ProcessFhirElement";
 
             StructureDefinition sDef = sDefInfo.SDef;
+            sDef.SaveJson(Path.Combine(this.GeneratedPath, $"{sDef.Id}.json"));
 
             String baseDefinition = sDef.BaseDefinition;
             switch (baseDefinition)

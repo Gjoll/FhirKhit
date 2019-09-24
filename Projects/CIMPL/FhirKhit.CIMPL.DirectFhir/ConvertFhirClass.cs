@@ -88,6 +88,19 @@ namespace FhirKhit.CIMPL.DirectFhir
 
             switch (path)
             {
+                // Hand code "Element" type. Element appears to have a non standard typeref
+                // which the c# library doesn't handle (_code = extension....)
+                case "Element":
+                    {
+                        ElementDefinition sole = this.elements[0];
+                        this.elements = new ElementDefinition[] {sole};
+                        CodeBlockNested mapBlock = this.gen.CreateMapEditor(path);
+                        this.ProcessSubEntry(0, mapBlock, path, path, suffix, typeName, parent, description, comment);
+                        if (this.elementIndex != this.elements.Length)
+                            throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
+                    }
+                    break;
+
                 case "StructureDefinition":
                 case "ElementDefinition":
                 case "Bundle":
@@ -113,10 +126,12 @@ namespace FhirKhit.CIMPL.DirectFhir
                     break;
 
                 default:
-                    CodeBlockNested mapBlock = this.gen.CreateMapEditor(path);
-                    this.ProcessSubEntry(0, mapBlock, path, path, suffix, typeName, parent, description, comment);
-                    if (this.elementIndex != this.elements.Length)
-                        throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
+                    {
+                        CodeBlockNested mapBlock = this.gen.CreateMapEditor(path);
+                        this.ProcessSubEntry(0, mapBlock, path, path, suffix, typeName, parent, description, comment);
+                        if (this.elementIndex != this.elements.Length)
+                            throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
+                    }
                     break;
             }
         }
