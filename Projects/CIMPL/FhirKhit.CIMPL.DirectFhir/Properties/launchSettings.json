@@ -2,7 +2,7 @@
   "profiles": {
     "FhirKhit.CIMPL.DirectFhir": {
       "commandName": "Project",
-      "commandLineArgs": "-o \"c:\\Temp\\Fhir\""
+      "commandLineArgs": "-r \"http://hl7.org/fhir/StructureDefinition/DiagnosticReport\" -r  \"http://hl7.org/fhir/StructureDefinition/Observation\" -o \"\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\CIMPL\\Fhir\""
     }
   }
 }

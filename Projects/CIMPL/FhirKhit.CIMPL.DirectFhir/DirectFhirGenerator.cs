@@ -31,7 +31,9 @@ namespace FhirKhit.CIMPL.DirectFhir
 
 
         Bundle fhirSDefsBundle;
-        HashSet<String> pathsToProcess = null;
+        HashSet<String> abbreviatedResourcesToProcess = new HashSet<string>();
+        HashSet<String> resourcesToProcess = new HashSet<string>();
+        HashSet<String> processedResources = new HashSet<string>();
         public String outputDir;
         public Dictionary<String, CodeEditor> editorDict = new Dictionary<string, CodeEditor>();
 
@@ -52,11 +54,22 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// Add path filter. if pathsToProcess has any members, then
         /// only resource paths that start with this will be processed.
         /// </summary>
-        public void AddPathToProcess(String path)
+        public void AddResourcePathToProcess(String path, bool abbrevFlag)
         {
-            if (this.pathsToProcess == null)
-                this.pathsToProcess = new HashSet<string>();
-            this.pathsToProcess.Add(path);
+            Debug.Assert(path.Contains("hl7.") == true);
+            if (processedResources.Contains(path) == true)
+                return;
+            if (abbrevFlag == true)
+                this.abbreviatedResourcesToProcess.Add(path);
+            else
+                this.resourcesToProcess.Add(path);
+        }
+
+        public void AddResourceToProcess(String name, bool abbrevFlag)
+        {
+            Debug.Assert(name != "fhir.resource.Resource");
+            Debug.Assert(name.StartsWith("http:") == false);
+            this.AddResourcePathToProcess($"http://hl7.org/fhir/StructureDefinition/{name}", abbrevFlag);
         }
 
         String FhirSDefsPath => Path.Combine(this.outputDir, "StructureDefinitions.json");
@@ -106,6 +119,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             const String fcn = "CreateMapEditor";
 
+            Debug.Assert(path.StartsWith("heep:") == false);
             String mapName = $"{path}_map_r4";
             if (this.editorDict.ContainsKey(mapName) == true)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Path {path} has already been processed.");
@@ -133,6 +147,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             const String fcn = "CreateEntryEditor";
 
+            Debug.Assert(path.Contains("hl7.") == false);
             if (this.editorDict.ContainsKey(path) == true)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Path {path} has already been processed.");
 
@@ -225,6 +240,42 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// <summary>
         /// Process one fhir element
         /// </summary>
+        void ProcessFhirElementAbbreviated(SDefInfo sDefInfo)
+        {
+            const string fcn = "ProcessFhirElementAbbreviated";
+
+            StructureDefinition sDef = sDefInfo.SDef;
+            {
+                CodeBlockNested entryBlock = this.CreateEntryEditor(sDef.Id);
+                String typeName;
+                switch (sDefInfo.TFlag)
+                {
+                    case DirectFhirGenerator.SDefInfo.TypeFlag.Entry:
+                        typeName = "Entry";
+                        break;
+                    case DirectFhirGenerator.SDefInfo.TypeFlag.Group:
+                        typeName = "Group";
+                        break;
+                    default:
+                        throw new ConvertErrorException(this.GetType().Name, fcn, $"Invalid TFlag value");
+                }
+                entryBlock
+                    .BlankLine()
+                    .AppendCode($"{typeName}: {sDef.Id}")
+                    ;
+            }
+            {
+                CodeBlockNested mapBlock = this.CreateMapEditor(sDef.Id);
+                mapBlock
+                    .BlankLine()
+                    .AppendCode($"{sDef.Id} maps to {sDef.Id}:")
+                    ;
+            }
+        }
+
+        /// <summary>
+        /// Process one fhir element
+        /// </summary>
         void ProcessFhirElement(SDefInfo sDefInfo)
         {
             const string fcn = "ProcessFhirElement";
@@ -234,18 +285,14 @@ namespace FhirKhit.CIMPL.DirectFhir
             String baseDefinition = sDef.BaseDefinition;
             switch (baseDefinition)
             {
+                case null:
+                    this.DoProcessFhirElementSpecialization(sDefInfo);
+                    break;
+
                 case "http://hl7.org/fhir/StructureDefinition/Extension":
                     break;
 
                 default:
-                    if (
-                        (this.pathsToProcess != null) &&
-                        (this.pathsToProcess.Contains(sDef.Snapshot.Element[0].Path) == false)
-                        )
-                    {
-                        return;
-                    }
-
                     switch (sDef.Derivation)
                     {
                         case null:
@@ -256,7 +303,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                             break;
 
                         case StructureDefinition.TypeDerivationRule.Constraint:
-                            this.DoProcessFhirElementConstraint(sDefInfo);
+                            //this.DoProcessFhirElementConstraint(sDefInfo);
                             break;
 
                         default:
@@ -322,6 +369,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             const String fcn = "GetTypedSDef";
 
+            this.AddResourcePathToProcess(path, false);
             if (this.items.TryGetValue(path, out SDefInfo sDef) == false)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Item {path} not in dictionary");
 
@@ -335,18 +383,56 @@ namespace FhirKhit.CIMPL.DirectFhir
             return sDef;
         }
 
+        void ProcessAllFhirElements()
+        {
+            foreach (string path in this.items.Keys)
+            {
+                SDefInfo sDef = this.GetTypedSDef(path);
+                this.ProcessFhirElement(sDef);
+            }
+        }
+
+        void ProcessRequestedFhirElements()
+        {
+            while (this.resourcesToProcess.Count > 0)
+            {
+                String key = this.resourcesToProcess.ElementAt(0);
+                this.resourcesToProcess.Remove(key);
+                if (processedResources.Contains(key) == false)
+                {
+                    processedResources.Add(key);
+                    SDefInfo sDef = this.GetTypedSDef(key);
+                    this.ProcessFhirElement(sDef);
+                }
+            }
+
+
+            // Output those resources that we just create an entry for (no properties).
+            // These will define entries that we can reference, w/o the overhead of defining
+            // the properties and such.
+            while (this.abbreviatedResourcesToProcess.Count > 0)
+            {
+                String key = this.abbreviatedResourcesToProcess.ElementAt(0);
+                this.abbreviatedResourcesToProcess.Remove(key);
+                if (processedResources.Contains(key) == false)
+                {
+                    processedResources.Add(key);
+                    SDefInfo sDef = this.GetTypedSDef(key);
+                    this.ProcessFhirElementAbbreviated(sDef);
+                }
+            }
+        }
+
         /// <summary>
         /// Process all fhir elements.
         /// </summary>
         void ProcessFhirElements()
         {
             const String fcn = "ProcessFhirElements";
-
-            foreach (string path in this.items.Keys)
-            {
-                SDefInfo sDef = this.GetTypedSDef(path);
-                this.ProcessFhirElement(sDef);
-            }
+            if (this.resourcesToProcess.Count > 0)
+                ProcessRequestedFhirElements();
+            else
+                ProcessAllFhirElements();
 
             this.ConversionInfo(this.GetType().Name, fcn, "Saving CIMPL classes");
             foreach (CodeEditor ce in this.editorDict.Values)

@@ -31,9 +31,9 @@ namespace FhirKhit.CIMPL.DirectFhir
                         createBundle = true;
                         break;
 
-                    case "-p":
-                    case "-path":
-                        dfg.AddPathToProcess(GetArgs(args, ref i, "Missing argument to -path parameter"));
+                    case "-r":
+                    case "-resource":
+                        dfg.AddResourcePathToProcess(GetArgs(args, ref i, "Missing argument to -resource parameter"), false);
                         break;
 
                     default:

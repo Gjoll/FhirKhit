@@ -121,13 +121,6 @@ namespace FhirKhit.CIMPL.DirectFhir
             }
         }
 
-        String IndentStr(Int32 indent)
-        {
-            StringBuilder sb = new StringBuilder();
-            for (Int32 i = 0; i < indent; i++)
-                sb.Append("    ");
-            return sb.ToString();
-        }
         /// <summary>
         /// Create new file containing the definition for the new item.
         /// The new entry is created in its own namespace.
@@ -142,8 +135,6 @@ namespace FhirKhit.CIMPL.DirectFhir
             String description,
             String comment)
         {
-            Debug.Assert(entryPath.ToLower() != "base64binary");
-
             CodeBlockNested entryBlock = this.gen.CreateEntryEditor(elementPath);
             CodeBlockNested classBlock = entryBlock.AppendBlock();
             CodeBlockNested propertydefinitionsBlock = entryBlock.AppendBlock();
@@ -160,11 +151,20 @@ namespace FhirKhit.CIMPL.DirectFhir
                 .AppendCode($"{typeName}: {entryName}")
                 ;
 
-            String mapColon = (indent == 0) ? ":" : "";
-            mapBlock
-                .BlankLine()
-            .AppendCode($"{this.IndentStr(indent)}{entryPath} maps to {elementPath}{mapColon}")
-                ;
+            if (indent == 0)
+            {
+                mapBlock
+                    .BlankLine()
+                    .AppendCode($"{entryPath} maps to {elementPath}:")
+                    ;
+            }
+            else
+            {
+                mapBlock
+                    .BlankLine()
+                    .AppendCode($"    {entryPath.SkipFirstPathPart()} maps to {elementPath.SkipFirstPathPart()}")
+                    ;
+            }
 
             switch (parent)
             {
@@ -174,6 +174,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                     break;
 
                 default:
+                    this.gen.AddResourceToProcess(parent, false);
                     classBlock.AppendCode($"Parent: {this.gen.NameSpace(parent)}.{parent}");
                     break;
             }
@@ -342,12 +343,14 @@ namespace FhirKhit.CIMPL.DirectFhir
                                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
                             if (type.TargetProfile.Count() == 0)
                             {
+                                this.gen.AddResourceToProcess("Resource", true);
                                 OutputType($"{this.gen.NameSpace("Resource")}.Resource");
                             }
                             else
                             {
                                 foreach (string target in type.TargetProfile)
                                 {
+                                    this.gen.AddResourcePathToProcess(target, true);
                                     String targetEntryName = target.LastUriPart().ToMachineName();
                                     OutputType($"{this.gen.NameSpace(targetEntryName)}.{targetEntryName}");
                                 }
@@ -355,7 +358,23 @@ namespace FhirKhit.CIMPL.DirectFhir
                             break;
 
                         default:
-                            OutputType($"{this.gen.NameSpace(type.Code)}.{type.Code.ToMachineName()}");
+
+                            if (type.Profile.Count() == 0)
+                            {
+                                this.gen.AddResourceToProcess(type.Code, true);
+                                OutputType($"{this.gen.NameSpace(type.Code)}.{type.Code.ToMachineName()}");
+                            }
+                            else
+                            {
+                                foreach (string profile in type.Profile)
+                                {
+                                    this.gen.AddResourcePathToProcess(profile, true);
+                                    String profileName = profile.LastUriPart().ToMachineName();
+                                    OutputType($"{this.gen.NameSpace(profileName)}.{profileName}");
+                                }
+                            }
+
+
                             break;
                     }
                 }
