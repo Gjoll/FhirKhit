@@ -31,12 +31,12 @@ namespace FhirKhit.CIMPL.DirectFhir
 
 
         Bundle fhirSDefsBundle;
-        HashSet<String> spliceFields = new HashSet<string>();
+        HashSet<String> sliceFields = new HashSet<string>();
         HashSet<String> abbreviatedResourcesToProcess = new HashSet<string>();
         HashSet<String> resourcesToProcess = new HashSet<string>();
         HashSet<String> processedResources = new HashSet<string>();
         
-        public bool IsSpliceField(String s) => this.spliceFields.Contains(s);
+        public bool IsSliceField(String s) => this.sliceFields.Contains(s);
 
         public String OutputDir
         {
@@ -58,7 +58,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         public void AddSpliceField(String path)
         {
-            this.spliceFields.Add(path);
+            this.sliceFields.Add(path);
         }
 
         public String NameSpace(params String[] path)

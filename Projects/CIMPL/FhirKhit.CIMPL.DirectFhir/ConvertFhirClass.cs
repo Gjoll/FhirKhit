@@ -330,15 +330,15 @@ namespace FhirKhit.CIMPL.DirectFhir
                 {
 
 
-                    if (this.gen.IsSpliceField(ed.Path))
+                    if (this.gen.IsSliceField(ed.Path))
                     {
                         propertiesBlock
                             .BlankLine()
                             .AppendLine($"// Entry definition of {ed.Path}")
-                            .AppendCode($"Group: {propertyName}Group")
-                            .AppendCode($"Property: {propertyName}Item 1..1")
+                            .AppendCode($"Group: {propertyName}Slice")
+                            .AppendCode($"Property: {propertyName} 1..1")
                             .BlankLine()
-                            .AppendCode($"Element: {propertyName}Item")
+                            .AppendCode($"Element: {propertyName}")
                             ;
                     }
                     else
@@ -367,9 +367,9 @@ namespace FhirKhit.CIMPL.DirectFhir
                     {
                         String basePropertyPath = propertyPath.SkipFirstPathPart();
                         String baseEdPath = ed.Path.SkipFirstPathPart();
-                        if (this.gen.IsSpliceField(ed.Path))
+                        if (this.gen.IsSliceField(ed.Path))
                         {
-                            mapBlock.AppendCode($"    {basePropertyPath}Group.{basePropertyPath}Item maps to {baseEdPath}");
+                            mapBlock.AppendCode($"    {basePropertyPath}Slice.{basePropertyPath} maps to {baseEdPath}");
                         }
                         else
                         {
@@ -455,18 +455,10 @@ namespace FhirKhit.CIMPL.DirectFhir
                 }
             }
 
-            if (this.gen.IsSpliceField(ed.Path))
-            {
-                classBlock
-                    .AppendCode($"Property: {fullPropertyName}Group {ed.Min}..{ed.Max}")
-                    ;
-            }
+            if (this.gen.IsSliceField(ed.Path))
+                classBlock.AppendCode($"Property: {fullPropertyName}Slice 0..1");
             else
-            {
-                classBlock
-                    .AppendCode($"Property: {fullPropertyName} {ed.Min}..{ed.Max}")
-                    ;
-            }
+                classBlock.AppendCode($"Property: {fullPropertyName} {ed.Min}..{ed.Max}");
         }
     }
 }
