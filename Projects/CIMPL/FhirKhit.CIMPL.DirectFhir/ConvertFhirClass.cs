@@ -242,7 +242,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                 ElementDefinition subElement = this.elements[this.elementIndex];
                 if (subElement.Path.StartsWith($"{elementPath}.") == false)
                     break;
-                this.ProcessProperty(indent, classBlock, propertydefinitionsBlock, mapBlock, elementPath, entryPath);
+                this.ProcessProperty(indent, classBlock, propertydefinitionsBlock, mapBlock, entryPath);
             }
 
             return entryName;
@@ -274,7 +274,6 @@ namespace FhirKhit.CIMPL.DirectFhir
             CodeBlockNested classBlock,
             CodeBlockNested propertiesBlock,
             CodeBlockNested mapBlock,
-            String elementPath,
             String entryPath)
         {
             const string fcn = "ProcessProperty";
@@ -329,11 +328,29 @@ namespace FhirKhit.CIMPL.DirectFhir
                 fullPropertyName = propertyName;
                 if (createFlag)
                 {
-                    propertiesBlock
-                        .BlankLine()
-                        .AppendLine($"// Entry definition of {ed.Path}")
-                        .AppendCode($"Element: {propertyName}")
-                        ;
+
+
+                    if (this.gen.IsSpliceField(ed.Path))
+                    {
+                        propertiesBlock
+                            .BlankLine()
+                            .AppendLine($"// Entry definition of {ed.Path}")
+                            .AppendCode($"Group: {propertyName}Group")
+                            .AppendCode($"Property: {propertyName}Item 1..1")
+                            .BlankLine()
+                            .AppendCode($"Element: {propertyName}Item")
+                            ;
+                    }
+                    else
+                    {
+                        propertiesBlock
+                            .BlankLine()
+                            .AppendLine($"// Entry definition of {ed.Path}")
+                            .AppendCode($"Element: {propertyName}")
+                            ;
+                    }
+
+
                     HashSet<String> outputTypes = new HashSet<string>();
                     bool firstFlag = true;
                     void OutputType(String pType)
@@ -347,8 +364,18 @@ namespace FhirKhit.CIMPL.DirectFhir
                             propertiesBlock.AppendCode($"    or {pType}");
                         firstFlag = false;
                     }
-
-                    mapBlock.AppendCode($"    {propertyPath.SkipFirstPathPart()} maps to {ed.Path.SkipFirstPathPart()}");
+                    {
+                        String basePropertyPath = propertyPath.SkipFirstPathPart();
+                        String baseEdPath = ed.Path.SkipFirstPathPart();
+                        if (this.gen.IsSpliceField(ed.Path))
+                        {
+                            mapBlock.AppendCode($"    {basePropertyPath}Group.{basePropertyPath}Item maps to {baseEdPath}");
+                        }
+                        else
+                        {
+                            mapBlock.AppendCode($"    {basePropertyPath} maps to {baseEdPath}");
+                        }
+                    }
                     foreach (ElementDefinition.TypeRefComponent type in ed.Type)
                     {
                         switch (type.Code)
@@ -428,9 +455,18 @@ namespace FhirKhit.CIMPL.DirectFhir
                 }
             }
 
-            classBlock
-                .AppendCode($"Property: {fullPropertyName} {ed.Min}..{ed.Max}")
-                ;
+            if (this.gen.IsSpliceField(ed.Path))
+            {
+                classBlock
+                    .AppendCode($"Property: {fullPropertyName}Group {ed.Min}..{ed.Max}")
+                    ;
+            }
+            else
+            {
+                classBlock
+                    .AppendCode($"Property: {fullPropertyName} {ed.Min}..{ed.Max}")
+                    ;
+            }
         }
     }
 }

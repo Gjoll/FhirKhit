@@ -5,8 +5,6 @@ namespace FhirKhit.CIMPL.DirectFhir
     class Program
     {
         static DirectFhirGenerator dfg;
-        static string outputDir;
-        static bool createBundle;
 
         static String GetArgs(string[] args, ref Int32 i, String errorMsg)
         {
@@ -24,11 +22,16 @@ namespace FhirKhit.CIMPL.DirectFhir
                 switch (arg.Trim().ToLower())
                 {
                     case "-o":
-                        outputDir = GetArgs(args, ref i, "Missing argument to -o parameter");
+                        dfg.OutputDir = GetArgs(args, ref i, "Missing argument to -o parameter");
                         break;
 
                     case "-b":
-                        createBundle = true;
+                        dfg.CreateBundle();
+                        break;
+
+                    case "-s":
+                    case "-spliceable":
+                        dfg.AddSpliceField(GetArgs(args, ref i, "Missing argument to -s parameter"));
                         break;
 
                     case "-r":
@@ -40,9 +43,6 @@ namespace FhirKhit.CIMPL.DirectFhir
                         throw new Exception("Unknown command line argument {arg}");
                 }
             }
-
-            if (String.IsNullOrEmpty(outputDir))
-                throw new Exception($"Missing required -o argument");
         }
         static Int32 Main(string[] args)
         {
@@ -54,9 +54,9 @@ namespace FhirKhit.CIMPL.DirectFhir
                 dfg.StatusWarnings += Dfg_StatusWarnings;
 
                 ParseArgs(args);
-                if (createBundle == true)
-                    dfg.CreateBundle();
-                return dfg.GenerateBaseClasses(outputDir);
+                if (String.IsNullOrEmpty(dfg.OutputDir))
+                    throw new Exception($"Missing required -o command line argument");
+                return dfg.GenerateBaseClasses();
             }
             catch (Exception err)
             {

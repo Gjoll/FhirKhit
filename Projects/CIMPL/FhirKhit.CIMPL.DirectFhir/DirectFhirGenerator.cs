@@ -31,13 +31,35 @@ namespace FhirKhit.CIMPL.DirectFhir
 
 
         Bundle fhirSDefsBundle;
+        HashSet<String> spliceFields = new HashSet<string>();
         HashSet<String> abbreviatedResourcesToProcess = new HashSet<string>();
         HashSet<String> resourcesToProcess = new HashSet<string>();
         HashSet<String> processedResources = new HashSet<string>();
-        public String outputDir;
+        
+        public bool IsSpliceField(String s) => this.spliceFields.Contains(s);
+
+        public String OutputDir
+        {
+            get { return this.outputDir; }
+            set
+            {
+                this.outputDir = value;
+                if (Directory.Exists(this.GeneratedPath) == false)
+                    Directory.CreateDirectory(this.GeneratedPath);
+                else
+                    DirHelper.CleanDir(this.GeneratedPath);
+            }
+        }
+        String outputDir;
+
         public Dictionary<String, CodeEditor> editorDict = new Dictionary<string, CodeEditor>();
 
         public String NSBase => "fhir";
+
+        public void AddSpliceField(String path)
+        {
+            this.spliceFields.Add(path);
+        }
 
         public String NameSpace(params String[] path)
         {
@@ -69,8 +91,8 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.AddResourcePathToProcess($"http://hl7.org/fhir/StructureDefinition/{name}", abbrevFlag);
         }
 
-        String FhirSDefsPath => Path.Combine(this.outputDir, "StructureDefinitions.json");
-        public String GeneratedPath => Path.Combine(this.outputDir, "Generated");
+        String FhirSDefsPath => Path.Combine(this.OutputDir, "StructureDefinitions.json");
+        public String GeneratedPath => Path.Combine(this.OutputDir, "Generated");
 
         Bundle FhirSDefsBundle
         {
@@ -96,8 +118,6 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.source = new ZipSource("specification.zip");
             this.items = new Dictionary<string, SDefInfo>();
         }
-
-
 
         /// <summary>
         /// Converrt string to a desciption string
@@ -458,18 +478,16 @@ namespace FhirKhit.CIMPL.DirectFhir
             return this.Errors.Any() ? -1 : 0;
         }
 
-        public Int32 GenerateBaseClasses(String outputDir)
+        public Int32 GenerateBaseClasses()
         {
             const String fcn = "GenerateBaseClasses";
 
             try
             {
+                if (String.IsNullOrEmpty(outputDir))
+                    throw new ConvertErrorException(this.GetType().Name, fcn, $"OutputDir not set");
+
                 this.ConversionInfo(this.GetType().Name, fcn, "Starting generation of CIMPL classes");
-                this.outputDir = outputDir;
-                if (Directory.Exists(this.GeneratedPath) == false)
-                    Directory.CreateDirectory(this.GeneratedPath);
-                else
-                    DirHelper.CleanDir(this.GeneratedPath);
 
                 if (File.Exists(this.FhirSDefsPath) == false)
                     this.StoreFhirElements();
