@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>bf3e3a97-3b43-44aa-838c-24e5e32be8c5</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FhirKhit.Tools.Shar</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ElementDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\BaseExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ElementDefinitionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ExtendableExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\StructureDefinitionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FhirKhitVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SnapshotCreator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\FhirValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ZipFhirSource.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Validation\org.hl7.fhir.validation.jar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

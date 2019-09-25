@@ -7,6 +7,12 @@ namespace FhirKhit.Tools
 {
     public abstract class ConverterBase : IConverter
     {
+        public delegate bool StatusDelegate(String className, String method, String msg);
+
+        public event StatusDelegate StatusErrors;
+        public event StatusDelegate StatusWarnings;
+        public event StatusDelegate StatusInfo;
+
         public IEnumerable<String> Errors => this.errors;
         List<String> errors = new List<String>();
         public bool HasErrors => this.errors.Count > 0;
@@ -48,6 +54,7 @@ namespace FhirKhit.Tools
                 return;
             Log.Error($"{className}.{method}", msg);
             this.errors.Add(msg);
+            StatusErrors(className, method, msg);
         }
 
         public void ConversionWarn(String className, String method, IEnumerable<String> msgs)
@@ -73,6 +80,7 @@ namespace FhirKhit.Tools
 
             Log.Warn($"{className}.{method}", msg);
             this.warnings.Add(msg);
+            StatusWarnings(className, method, msg);
         }
 
         public void ConversionInfo(String className, String method,IEnumerable<String> msgs)
@@ -96,6 +104,7 @@ namespace FhirKhit.Tools
 
             Log.Info($"{className}.{method}", msg);
             this.info.Add(msg);
+            StatusInfo(className, method, msg);
         }
 
         public bool FormatMessages(StringBuilder sb)

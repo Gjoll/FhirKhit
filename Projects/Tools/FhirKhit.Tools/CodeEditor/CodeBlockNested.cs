@@ -13,6 +13,7 @@ namespace FhirKhit.Tools
         public IEnumerable<CodeBlockNested> AllNamedBlocks => this.NamedBlocks.Values;
 
         readonly Dictionary<String, CodeBlockNested> NamedBlocks = new Dictionary<String, CodeBlockNested>();
+        Int32 macroInhibit = 0;
 
         /// <summary>
         /// Clear all content.
@@ -308,38 +309,121 @@ namespace FhirKhit.Tools
         /// <param name="path"></param>
         public CodeBlockNested AppendLine(String line)
         {
-            this.AppendRaw(CodeBlockNested.ProcessLine($"{this.MarginString}{line}"));
+            this.AppendRaw(this.ProcessLine($"{this.MarginString}{line}"));
             return this;
         }
 
-        public CodeBlockNested OpenSummary()
+        /// <summary>
+        /// Append comment lines. Split long lines. 
+        /// </summary>
+        public CodeBlockNested AppendComment(String[] lines)
         {
-            this
-                .BlankLine()
-                .AppendLine("/// <summary>")
-                ;
+            if (lines == null)
+                return this;
+
+            this.macroInhibit += 1;
+            foreach (String line in lines)
+            {
+                this.AppendLine($"// {line}");
+            }
+            this.macroInhibit -= 1;
             return this;
         }
 
-        public CodeBlockNested AppendSummary(String text)
+        /// <summary>
+        /// Append comment lines. Split long lines. 
+        /// </summary>
+        public CodeBlockNested AppendComment(String line)
         {
-            this.AppendRaw($"/// {text}");
+            const Int32 maxLength = 60;
+
+            if (line == null)
+                return this;
+
+            this.macroInhibit += 1;
+            while (line.Length > 0)
+            {
+                Int32 length = 0;
+                StringBuilder sb = new StringBuilder();
+
+                bool done = false;
+                while ((length < line.Length) && (done == false))
+                {
+                    Char c = line[length++];
+                    switch (c)
+                    {
+                        case '\r':
+                            break;
+                        case '\n':
+                            done = true;
+                            break;
+                        case ' ':
+                            if (length > maxLength)
+                                done = true;
+                            sb.Append(c);
+                            break;
+                        default:
+                            sb.Append(c);
+                            break;
+                    }
+                }
+                this.AppendLine($"// {line.Substring(0, length)}");
+                line = line.Substring(length);
+            }
+
+            this.macroInhibit -= 1;
             return this;
         }
 
-        public CodeBlockNested AppendSummary(IEnumerable<String> text)
+
+        public CodeBlockNested SummaryOpen()
+        {
+            this.AppendLine("/// <summary>");
+            return this;
+        }
+
+        public CodeBlockNested Summary(String line)
+        {
+            this.AppendLine($"/// {line}");
+            return this;
+        }
+
+        public CodeBlockNested Summary(IEnumerable<String> lines)
+        {
+            this.AppendLines("/// ", lines);
+            return this;
+        }
+
+        public CodeBlockNested SummaryClose()
+        {
+            this.AppendLine("/// </summary>");
+            return this;
+        }
+
+        public CodeBlockNested SummaryLines(String lines)
+        {
+            String[] lineArr = lines.ToLines();
+            foreach (String line in lineArr)
+                this.AppendLine($"/// {line}");
+            return this;
+        }
+
+        public CodeBlockNested AppendLines(String prefix, IEnumerable<String> lines)
+        {
+            foreach (String line in lines)
+                this.AppendLine($"{prefix}{line}");
+            return this;
+        }
+
+        public CodeBlockNested Example(params String[] text)
         {
             if (text is null)
                 throw new ArgumentNullException(nameof(text));
 
+            this.AppendLine("/// <example>");
             foreach (String line in text)
-                this.AppendSummary(line);
-            return this;
-        }
-
-        public CodeBlockNested CloseSummary()
-        {
-            this.AppendLine("/// </summary>");
+                this.AppendLine($"/// {line}");
+            this.AppendLine("/// </example>");
             return this;
         }
 
@@ -360,21 +444,17 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        /// <summary>
-        /// Append Summary start line. Muyst have a blank line immed. before it.
-        /// </summary>
-        /// <returns></returns>
-        public CodeBlockNested SummaryStart()
+
+        public CodeBlockNested DefineBlock(out CodeBlockNested block)
         {
-            this
-                .OpenSummary()
-                ;
+            block = this.AppendBlock();
             return this;
         }
 
-        public CodeBlockNested BlankLine()
+        public CodeBlockNested BlankLine([CallerFilePath] String filePath = "",
+            [CallerLineNumber] Int32 lineNumber = 0)
         {
-            this.AppendLine(string.Empty);
+            this.AppendCode(string.Empty, filePath, lineNumber);
             return this;
         }
 
@@ -385,9 +465,9 @@ namespace FhirKhit.Tools
             String line;
             String fileName = Path.GetFileName(filePath);
             if (CodeEditor.DebugFlag)
-                line = CodeBlockNested.ProcessLine($"{this.MarginString}{codeLine}%col:{CommentCol}%// {fileName}:{lineNumber}");
+                line = this.ProcessLine($"{this.MarginString}{codeLine}%col:{CommentCol}%// {fileName}:{lineNumber}");
             else
-                line = CodeBlockNested.ProcessLine($"{this.MarginString}{codeLine}");
+                line = this.ProcessLine($"{this.MarginString}{codeLine}");
 
             this.AppendRaw(line);
             return this;
@@ -417,7 +497,7 @@ namespace FhirKhit.Tools
             return this;
         }
 
-        static void ProcessMacro(StringBuilder sb,
+        void ProcessMacro(StringBuilder sb,
             String line,
             ref Int32 index)
         {
@@ -445,6 +525,7 @@ namespace FhirKhit.Tools
                                 while (sb.Length < col)
                                     sb.Append(" ");
                                 return;
+
                             default:
                                 throw new Exception($"Unknown $ macro name '{name}'");
                         }
@@ -475,7 +556,7 @@ namespace FhirKhit.Tools
             return line[index++];
         }
 
-        static String ProcessLine(String line)
+        String ProcessLine(String line)
         {
             StringBuilder sb = new StringBuilder();
             Int32 index = 0;
@@ -499,10 +580,10 @@ namespace FhirKhit.Tools
                         break;
 
                     case '%':
-                        if (quoteFlag == true)
+                        if ((this.macroInhibit > 0) || (quoteFlag == true))
                             sb.Append(c);
                         else
-                            CodeBlockNested.ProcessMacro(sb, line, ref index);
+                            this.ProcessMacro(sb, line, ref index);
                         break;
 
                     default:

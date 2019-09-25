@@ -1,0 +1,262 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;FHIR_R4</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TestFiles\breastrad-BreastAbnormality.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hl7.Fhir.ElementModel" Version="1.3.0" />
+    <PackageReference Include="Hl7.Fhir.R4" Version="1.3.0" />
+    <PackageReference Include="Hl7.Fhir.Serialization" Version="1.3.0" />
+    <PackageReference Include="Hl7.Fhir.Specification.R4" Version="1.3.0" />
+    <PackageReference Include="Hl7.Fhir.Support" Version="1.3.0" />
+    <PackageReference Include="Hl7.FhirPath" Version="1.3.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="3.3.1-beta3-final" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.5-beta1.final">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0-preview-20190828-03" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3-beta1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SliceGen\R4\FhirKhit.SliceGen.R4\FhirKhit.SliceGen.R4.csproj" />
+    <ProjectReference Include="..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
+    <ProjectReference Include="..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TestFiles\BreastRadiology.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-breastrad-BreastAbnormality.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-breastrad-BreastExamTechnique-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-breastrad-BreastRadiologyDocument.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-breastrad-BreastRadiologyReport.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-breastrad-ConsistentWith-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-breastrad-ResultComposition-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-breastrad-SummaryBiRadCode-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ActionPerformed.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ActionRequest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ActionStatement.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Annotation-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-BasedOn-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-CareContext-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ClinicalStatement.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Composition.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Condition-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Condition.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-AnatomicalOrientation-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-Category-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-Code-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-Identifier-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-LandmarkLocation-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-LandmarkToBodyLocationDirection-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-LandmarkToBodyLocationDistance-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-LandmarkType-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-Laterality-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-OccurrenceTimeOrPeriod-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-PriorityCode-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-PriorityRank-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-RelationToLandmark-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-TimePeriod-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-datatype-Type-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-DiagnosisCode-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-DiagnosticReport.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-DomainResource.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Dosage-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-EncounterDiagnosis-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-EncounterOrEpisode.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Entity.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-EntityOrRole.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ExpectedPerformanceTime-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ExpectedPerformer-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ExpectedPerformerType-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-InformationItem.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-MedicationAction.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-MedicationCodeOrReference-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-MedicationDispense.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-MedicationStatement.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Method-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Observation.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-OnBehalfOf-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Organization-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Participant-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Participation-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ParticipationPeriod-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ParticipationType-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-PartOf-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Procedure.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ReasonCode-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-ReasonReference-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Requester-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-RequestIntent-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Role.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-SituationStatement.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-StatementDateTime-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-Status-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-StatusHistory-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-SubjectOfRecord-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-TerminationReason-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestFiles\BreastRadiology\structuredefinition-obf-TreatmentIntent-extension.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

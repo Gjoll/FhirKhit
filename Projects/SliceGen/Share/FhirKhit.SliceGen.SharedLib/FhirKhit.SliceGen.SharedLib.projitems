@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>3d046d87-3bc6-42a7-86c7-381d3b8fa711</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FhirKhit.SliceGen.SharedLib</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\ISliceAccessorMultiple.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\ISliceAccessorSingle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\ISliceDiscriminator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\SliceBaseAccessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\SliceListAccessor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\SliceListAccessorMultiple.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\SliceListAccessorSingle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\SliceOnValueDiscriminator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\Slicer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Slicing\Slicing.cs" />
+  </ItemGroup>
+</Project>
