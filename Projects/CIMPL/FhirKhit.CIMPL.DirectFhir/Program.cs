@@ -34,9 +34,28 @@ namespace FhirKhit.CIMPL.DirectFhir
                         dfg.AddSpliceField(GetArgs(args, ref i, "Missing argument to -s parameter"));
                         break;
 
+                    case "-a":
+                    case "-abbreviated":
+                        {
+                            String abbreviatedResource= GetArgs(args, ref i, "Missing argument to -resource parameter");
+
+                            if (abbreviatedResource.StartsWith("http:") == true)
+                                dfg.AddResourcePathToProcess(abbreviatedResource, true);
+                            else
+                                dfg.AddResourceToProcess(abbreviatedResource, true);
+                        }
+                        break;
+
                     case "-r":
                     case "-resource":
-                        dfg.AddResourcePathToProcess(GetArgs(args, ref i, "Missing argument to -resource parameter"), false);
+                        {
+                            String resource = GetArgs(args, ref i, "Missing argument to -resource parameter");
+
+                            if (resource.StartsWith("http:") == true)
+                                dfg.AddResourcePathToProcess(resource, false);
+                            else
+                                dfg.AddResourceToProcess(resource, false);
+                        }
                         break;
 
                     default:

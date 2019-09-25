@@ -335,6 +335,9 @@ namespace FhirKhit.CIMPL.DirectFhir
                         propertiesBlock
                             .BlankLine()
                             .AppendLine($"// Entry definition of {ed.Path}")
+                            .AppendCode($"Group: {propertyName}Slices")
+                            .AppendCode($"Property: {propertyName}Slice 0..*")
+                            .BlankLine()
                             .AppendCode($"Group: {propertyName}Slice")
                             .AppendCode($"Property: {propertyName} 1..1")
                             .BlankLine()
@@ -368,13 +371,9 @@ namespace FhirKhit.CIMPL.DirectFhir
                         String basePropertyPath = propertyPath.SkipFirstPathPart();
                         String baseEdPath = ed.Path.SkipFirstPathPart();
                         if (this.gen.IsSliceField(ed.Path))
-                        {
-                            mapBlock.AppendCode($"    {basePropertyPath}Slice.{basePropertyPath} maps to {baseEdPath}");
-                        }
+                            mapBlock.AppendCode($"    {basePropertyPath}Slices.{basePropertyPath}Slice.{basePropertyPath} maps to {baseEdPath}");
                         else
-                        {
                             mapBlock.AppendCode($"    {basePropertyPath} maps to {baseEdPath}");
-                        }
                     }
                     foreach (ElementDefinition.TypeRefComponent type in ed.Type)
                     {
@@ -456,7 +455,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             }
 
             if (this.gen.IsSliceField(ed.Path))
-                classBlock.AppendCode($"Property: {fullPropertyName}Slice 0..1");
+                classBlock.AppendCode($"Property: {fullPropertyName}Slices 0..1");
             else
                 classBlock.AppendCode($"Property: {fullPropertyName} {ed.Min}..{ed.Max}");
         }
