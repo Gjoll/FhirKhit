@@ -29,13 +29,13 @@ namespace FhirKhit.CIMPL.DirectFhir
             public StructureDefinition SDef;
         };
 
-
         Bundle fhirSDefsBundle;
         HashSet<String> sliceFields = new HashSet<string>();
         HashSet<String> abbreviatedResourcesToProcess = new HashSet<string>();
         HashSet<String> resourcesToProcess = new HashSet<string>();
         HashSet<String> processedResources = new HashSet<string>();
-        
+        HashSet<String> resourcesToIgnore = new HashSet<string>();
+
         public bool IsSliceField(String s) => this.sliceFields.Contains(s);
 
         public String OutputDir
@@ -53,7 +53,19 @@ namespace FhirKhit.CIMPL.DirectFhir
         String outputDir;
 
         public Dictionary<String, CodeEditor> editorDict = new Dictionary<string, CodeEditor>();
+        Dictionary<String, String> fieldMaps = new Dictionary<string, string>();
 
+        public String GetFieldMap(string path)
+        {
+            if (fieldMaps.TryGetValue(path, out String retVal) == false)
+                retVal = path.LastPathPart();
+            return retVal.ToMachineName();
+        }
+
+        public void AddFieldMap(string path, String name)
+        {
+            fieldMaps.Add(path, name);
+        }
         public String NSBase => "fhir";
 
         public void AddSpliceField(String path)
@@ -71,6 +83,17 @@ namespace FhirKhit.CIMPL.DirectFhir
             return sb.ToString();
         }
 
+        public bool IgnoreResource(string path)
+        {
+            return this.resourcesToIgnore.Contains(path);
+        }
+
+        public void AddResourcePathToIgnore(String path)
+        {
+            if (path.StartsWith("http:") == false)
+                path = $"http://hl7.org/fhir/StructureDefinition/{path}";
+            this.resourcesToIgnore.Add(path);
+        }
 
         /// <summary>
         /// Add path filter. if pathsToProcess has any members, then
@@ -300,6 +323,9 @@ namespace FhirKhit.CIMPL.DirectFhir
             const string fcn = "ProcessFhirElement";
 
             StructureDefinition sDef = sDefInfo.SDef;
+            if (this.IgnoreResource(sDef.Url) == true)
+                return;
+
             sDef.SaveJson(Path.Combine(this.GeneratedPath, $"{sDef.Id}.json"));
 
             String baseDefinition = sDef.BaseDefinition;
@@ -376,6 +402,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                     case "http://hl7.org/fhir/StructureDefinition/Resource":
                         sDefInfo.TFlag = SDefInfo.TypeFlag.Entry;
                         break;
+
                     default:
                         sDefInfo.TFlag = SDefInfo.TypeFlag.Unknown;
                         break;
@@ -412,6 +439,18 @@ namespace FhirKhit.CIMPL.DirectFhir
             }
         }
 
+        void ProcessAbbreviatedResource(String key)
+        {
+            if (processedResources.Contains(key) == true)
+                return;
+            if (this.IgnoreResource(key) == true)
+                return;
+
+            processedResources.Add(key);
+            SDefInfo sDef = this.GetTypedSDef(key);
+            this.ProcessFhirElementAbbreviated(sDef);
+        }
+
         void ProcessRequestedFhirElements()
         {
             while (this.resourcesToProcess.Count > 0)
@@ -434,12 +473,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             {
                 String key = this.abbreviatedResourcesToProcess.ElementAt(0);
                 this.abbreviatedResourcesToProcess.Remove(key);
-                if (processedResources.Contains(key) == false)
-                {
-                    processedResources.Add(key);
-                    SDefInfo sDef = this.GetTypedSDef(key);
-                    this.ProcessFhirElementAbbreviated(sDef);
-                }
+                ProcessAbbreviatedResource(key);
             }
         }
 

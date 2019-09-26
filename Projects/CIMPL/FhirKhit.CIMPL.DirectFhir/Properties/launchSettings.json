@@ -2,7 +2,7 @@
   "profiles": {
     "FhirKhit.CIMPL.DirectFhir": {
       "commandName": "Project",
-      "commandLineArgs": "-r \"DiagnosticReport\" -r  \"Observation\" -r Quantity -o \"\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\CIMPL\\Fhir\" -s \"Observation.hasMember\" -a MedicationRequest -a ServiceRequest "
+      "commandLineArgs": "-r \"DiagnosticReport\" -r  \"Observation\" -r Quantity -o \"\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\CIMPL\\Fhir\" -s \"Observation.hasMember\" -a MedicationRequest -a ServiceRequest -m Quantity.code QuantityCode -i Quantity -i SimpleQuantity"
     }
   }
 }

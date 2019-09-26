@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FhirKhit.Tools;
+using System;
 
 namespace FhirKhit.CIMPL.DirectFhir
 {
@@ -15,6 +16,8 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         static void ParseArgs(string[] args)
         {
+            CodeEditor.DebugFlag = false;
+
             Int32 i = 0;
             while (i < args.Length)
             {
@@ -25,8 +28,28 @@ namespace FhirKhit.CIMPL.DirectFhir
                         dfg.OutputDir = GetArgs(args, ref i, "Missing argument to -o parameter");
                         break;
 
+                    case "-d":
+                        CodeEditor.DebugFlag = true;
+                        break;
+
                     case "-b":
                         dfg.CreateBundle();
+                        break;
+
+                    case "-i":
+                        {
+                            String ignorePath = GetArgs(args, ref i, "Missing argument to -i parameter");
+                            dfg.AddResourcePathToIgnore(ignorePath);
+                        }
+                        break;
+
+                    case "-m":
+                    case "-map":
+                        {
+                            String propertyPath = GetArgs(args, ref i, "Missing argument to -m parameter");
+                            String fieldMap = GetArgs(args, ref i, "Missing argument to -m parameter");
+                            dfg.AddFieldMap(propertyPath, fieldMap);
+                        }
                         break;
 
                     case "-s":
@@ -37,7 +60,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                     case "-a":
                     case "-abbreviated":
                         {
-                            String abbreviatedResource= GetArgs(args, ref i, "Missing argument to -resource parameter");
+                            String abbreviatedResource = GetArgs(args, ref i, "Missing argument to -resource parameter");
 
                             if (abbreviatedResource.StartsWith("http:") == true)
                                 dfg.AddResourcePathToProcess(abbreviatedResource, true);

@@ -101,7 +101,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
         String UniquePropertyName(ElementDefinition ed, out bool createFlag)
         {
-            String pName = ed.Path.LastPathPart().ToMachineName();
+            String pName = this.gen.GetFieldMap(ed.Path);
             return UniquePropertyName(pName, pName, 1, ed, out createFlag);
         }
 
@@ -193,7 +193,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             CodeBlockNested propertydefinitionsBlock = entryEditor.Blocks.AppendBlock();
             CodeBlockNested mapBlock = mapEditor.Blocks.AppendBlock();
 
-            String entryName = elementPath.LastPathPart().ToMachineName();
+            String entryName = this.gen.GetFieldMap(elementPath);
             if (String.IsNullOrEmpty(suffix) == false)
             {
                 entryName += suffix;
@@ -328,8 +328,6 @@ namespace FhirKhit.CIMPL.DirectFhir
                 fullPropertyName = propertyName;
                 if (createFlag)
                 {
-
-
                     if (this.gen.IsSliceField(ed.Path))
                     {
                         propertiesBlock
@@ -352,7 +350,6 @@ namespace FhirKhit.CIMPL.DirectFhir
                             .AppendCode($"Element: {propertyName}")
                             ;
                     }
-
 
                     HashSet<String> outputTypes = new HashSet<string>();
                     bool firstFlag = true;
