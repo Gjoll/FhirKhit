@@ -27,7 +27,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         ElementDefinition[] elements;
         CodeEditor entryEditor;
         CodeEditor mapEditor;
-        Dictionary<String, ElementDefinition> propertyNames = new Dictionary<String, ElementDefinition>();
 
         public ConvertFhirClass(DirectFhirGenerator gen,
             DirectFhirGenerator.SDefInfo sDefInfo)
@@ -79,32 +78,6 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.ProcessEntry(this.sDef.Id, null, typeName, parent, description, this.sDef.Url);
         }
 
-        String UniquePropertyName(String baseName, String pName, Int32 counter, ElementDefinition ed, out bool createFlag)
-        {
-            if (this.propertyNames.TryGetValue(pName, out ElementDefinition edOld) == false)
-            {
-                createFlag = true;
-                this.propertyNames.Add(pName, ed);
-                return pName;
-            }
-
-            // if old element and this one have same type, then use same definition.
-            if ((edOld != null) && (ed.Type.IsExactly(edOld.Type)))
-            {
-                createFlag = false;
-                return pName;
-            }
-
-            counter += 1;
-            return UniquePropertyName(baseName, $"{baseName}{counter}", counter, ed, out createFlag);
-        }
-
-        String UniquePropertyName(ElementDefinition ed, out bool createFlag)
-        {
-            String pName = this.gen.GetFieldMap(ed.Path);
-            return UniquePropertyName(pName, pName, 1, ed, out createFlag);
-        }
-
         /// <summary>
         /// Create new file containing the definition for the new item.
         /// The new entry is created in its own namespace.
@@ -118,7 +91,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             const string fcn = "ProcessEntry";
 
-            this.propertyNames.Add("Value", null);
             switch (path)
             {
                 // Hand code "Element" type. Element appears to have a non standard typeref
@@ -129,7 +101,6 @@ namespace FhirKhit.CIMPL.DirectFhir
                         this.mapEditor = this.gen.CreateMapEditor(path);
                         ElementDefinition sole = this.elements[0];
                         this.elements = new ElementDefinition[] { sole };
-                        this.propertyNames.Add(ElementStr, null);
                         this.ProcessSubEntry(0, path, path, suffix, typeName, parent, description, comment);
                         if (this.elementIndex != this.elements.Length)
                             throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
@@ -167,7 +138,6 @@ namespace FhirKhit.CIMPL.DirectFhir
 
                         CodeBlockNested mapBlock = mapEditor.Blocks.AppendBlock();
                         String entryName = path.LastPathPart().ToMachineName();
-                        this.propertyNames.Add(entryName, null);
                         this.ProcessSubEntry(0, path, path, suffix, typeName, parent, description, comment);
                         if (this.elementIndex != this.elements.Length)
                             throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
@@ -229,8 +199,8 @@ namespace FhirKhit.CIMPL.DirectFhir
                     break;
 
                 default:
-                    this.gen.AddResourceToProcess(parent, false);
-                    classBlock.AppendCode($"Parent: {this.gen.NameSpace(parent)}.{parent}");
+                    this.gen.AddResource(parent);
+                    classBlock.AppendCode($"Parent: {parent}");
                     break;
             }
             classBlock
@@ -300,7 +270,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             //if (ed.Pattern != null)
             //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Pattern in element {ed.Path}.");
 
-            String propertyName = UniquePropertyName(ed, out bool createFlag);
+            String propertyName = this.gen.UniquePropertyName(ed, out bool createFlag);
 
             String fullPropertyName;
             String propertyPath = $"{entryPath}.{propertyName}";
@@ -415,16 +385,16 @@ namespace FhirKhit.CIMPL.DirectFhir
                                     throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
                                 if (type.TargetProfile.Count() == 0)
                                 {
-                                    this.gen.AddResourceToProcess(ResourceStr, true);
-                                    OutputType($"{this.gen.NameSpace(ResourceStr)}.Resource");
+                                    this.gen.AddAbbreviatedResource(ResourceStr);
+                                    OutputType($"Resource");
                                 }
                                 else
                                 {
                                     foreach (string target in type.TargetProfile)
                                     {
-                                        this.gen.AddResourcePathToProcess(target, true);
+                                        this.gen.AddAbbreviatedResource(target);
                                         String targetEntryName = target.LastUriPart().ToMachineName();
-                                        OutputType($"{this.gen.NameSpace(targetEntryName)}.{targetEntryName}");
+                                        OutputType($"{targetEntryName}");
                                     }
                                 }
                                 break;
@@ -433,16 +403,16 @@ namespace FhirKhit.CIMPL.DirectFhir
 
                                 if (type.Profile.Count() == 0)
                                 {
-                                    this.gen.AddResourceToProcess(type.Code, true);
-                                    OutputType($"{this.gen.NameSpace(type.Code)}.{type.Code.ToMachineName()}");
+                                    this.gen.AddAbbreviatedResource(type.Code);
+                                    OutputType($"{type.Code.ToMachineName()}");
                                 }
                                 else
                                 {
                                     foreach (string profile in type.Profile)
                                     {
-                                        this.gen.AddResourcePathToProcess(profile, true);
+                                        this.gen.AddAbbreviatedResource(profile);
                                         String profileName = profile.LastUriPart().ToMachineName();
-                                        OutputType($"{this.gen.NameSpace(profileName)}.{profileName}");
+                                        OutputType($"{profileName}");
                                     }
                                 }
                                 break;
