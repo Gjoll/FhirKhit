@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
 using Xunit;
+using System.Reflection;
+using Hl7.Fhir.Introspection;
 
 namespace FhirKhit.Maker.XUnitTests
 {
@@ -13,16 +15,16 @@ namespace FhirKhit.Maker.XUnitTests
         void GenerateComplex(FHIRAllTypes fhirType,
             String genDir)
         {
-            Trace.WriteLine($"Generating fhir primitive '{fhirType}'");
+            String fhirTypeName = ModelInfo.FhirTypeToFhirTypeName(fhirType);
+            Type csType = ModelInfo.GetTypeForFhirType(fhirTypeName);
+            if (csType == null)
+                return;
 
+            Trace.WriteLine($"Generating fhir complex '{fhirType}'");
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            CodeEditor collectionEditor = new CodeEditor();
-            CodeBlockNested collectionBlock = collectionEditor.Blocks.AppendBlock();
-
-            String instanceName = $"{fhirType.ToString()}_Instance";
-            String collectionName = $"{fhirType.ToString()}_Collection";
+            String instanceName = $"{fhirType.ToString()}_Item";
 
             instanceBlock
                 .AppendLine("using System;")
@@ -33,36 +35,46 @@ namespace FhirKhit.Maker.XUnitTests
                 .BlankLine()
                 .AppendCode("namespace FhirKhit.Maker.Common")
                 .OpenBrace()
-                .AppendCode($"public class {instanceName} : Complex_Instance")
+                .AppendCode($"public class {instanceName} : Complex_Item")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested fields)
                 .CloseBrace()
                 .CloseBrace()
                 ;
 
-            String fhirTypeName = ModelInfo.FhirTypeToFhirTypeName(fhirType);
-            Type csType = ModelInfo.GetTypeForFhirType(fhirTypeName);
+            foreach (PropertyInfo pi in csType.GetProperties())
+            {
+                FhirElementAttribute attribute = pi.GetCustomAttribute<FhirElementAttribute>();
+                if (attribute != null)
+                {
+                    //String min;
+                    //String max;
+                    //Type csType;
+                    if (pi.PropertyType.IsList())
+                    {
+                        //min = "0";
+                        //max = "*";
+                        //csType = pi.PropertyType.GenericTypeArguments[0];
+                    }
+                    if (pi.PropertyType.IsNullable())
+                    {
+                        //min = "0";
+                        //max = "1";
+                        //csType = pi.PropertyType.GenericTypeArguments[0];
+                    }
+                    else
+                    {
+                        //csType = pi.PropertyType;
+                        //min = "1";
+                        //max = "1";
+                    }
 
+                };
+            }
             //fields
             //;
 
-            collectionBlock
-                .AppendLine("using System;")
-                .AppendLine("using System.Diagnostics;")
-                .AppendLine("using System.IO;")
-                .AppendLine("using System.Linq;")
-                .AppendLine("using Hl7.Fhir.Model;")
-                .BlankLine()
-                .AppendCode("namespace FhirKhit.Maker.Common")
-                .OpenBrace()
-                .AppendCode($"public class {collectionName} : Complex_List<{instanceName}>")
-                .OpenBrace()
-                .CloseBrace()
-                .CloseBrace()
-                ;
-
             instanceEditor.Save(Path.Combine(genDir, $"{instanceName}.cs"));
-            collectionEditor.Save(Path.Combine(genDir, $"{collectionName}.cs"));
         }
 
         void GeneratePrimitive(FHIRAllTypes fhirType,
@@ -73,11 +85,7 @@ namespace FhirKhit.Maker.XUnitTests
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            CodeEditor collectionEditor = new CodeEditor();
-            CodeBlockNested collectionBlock = collectionEditor.Blocks.AppendBlock();
-
-            String instanceName = $"{fhirType.ToString()}_Instance";
-            String collectionName = $"{fhirType.ToString()}_Collection";
+            String instanceName = $"{fhirType.ToString()}_Item";
 
             instanceBlock
                 .AppendLine("using System;")
@@ -88,29 +96,13 @@ namespace FhirKhit.Maker.XUnitTests
                 .BlankLine()
                 .AppendCode("namespace FhirKhit.Maker.Common")
                 .OpenBrace()
-                .AppendCode($"public class {instanceName} : Primitive_Instance")
-                .OpenBrace()
-                .CloseBrace()
-                .CloseBrace()
-                ;
-
-            collectionBlock
-                .AppendLine("using System;")
-                .AppendLine("using System.Diagnostics;")
-                .AppendLine("using System.IO;")
-                .AppendLine("using System.Linq;")
-                .AppendLine("using Hl7.Fhir.Model;")
-                .BlankLine()
-                .AppendCode("namespace FhirKhit.Maker.Common")
-                .OpenBrace()
-                .AppendCode($"public class {collectionName} : Primitive_List<{instanceName}>")
+                .AppendCode($"public class {instanceName} : Primitive_Item")
                 .OpenBrace()
                 .CloseBrace()
                 .CloseBrace()
                 ;
 
             instanceEditor.Save(Path.Combine(genDir, $"{instanceName}.cs"));
-            collectionEditor.Save(Path.Combine(genDir, $"{collectionName}.cs"));
         }
 
         [Fact(DisplayName = "MakerGen.CreateBaseClasses")]
