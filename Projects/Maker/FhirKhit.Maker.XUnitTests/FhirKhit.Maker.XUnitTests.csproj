@@ -17,6 +17,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
+    <ProjectReference Include="..\FhirKhit.Maker.Common\FhirKhit.Maker.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\KurtA\.nuget\packages\hl7.fhir.specification.r4\1.3.0\contentFiles\any\any\specification.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

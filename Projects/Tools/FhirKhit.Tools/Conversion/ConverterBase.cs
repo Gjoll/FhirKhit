@@ -54,7 +54,8 @@ namespace FhirKhit.Tools
                 return;
             Log.Error($"{className}.{method}", msg);
             this.errors.Add(msg);
-            StatusErrors(className, method, msg);
+            if (StatusWarnings != null)
+                StatusErrors(className, method, msg);
         }
 
         public void ConversionWarn(String className, String method, IEnumerable<String> msgs)
@@ -80,10 +81,11 @@ namespace FhirKhit.Tools
 
             Log.Warn($"{className}.{method}", msg);
             this.warnings.Add(msg);
-            StatusWarnings(className, method, msg);
+            if (StatusWarnings != null)
+                StatusWarnings(className, method, msg);
         }
 
-        public void ConversionInfo(String className, String method,IEnumerable<String> msgs)
+        public void ConversionInfo(String className, String method, IEnumerable<String> msgs)
         {
             if (msgs is null)
                 throw new ArgumentNullException(nameof(msgs));
@@ -93,7 +95,7 @@ namespace FhirKhit.Tools
                 ConversionInfo(className, method, msg);
         }
 
-        public void ConversionInfo(String className, String method,String msg)
+        public void ConversionInfo(String className, String method, String msg)
         {
             if (msg is null)
                 throw new ArgumentNullException(nameof(msg));
@@ -104,7 +106,8 @@ namespace FhirKhit.Tools
 
             Log.Info($"{className}.{method}", msg);
             this.info.Add(msg);
-            StatusInfo(className, method, msg);
+            if (StatusInfo != null)
+                StatusInfo(className, method, msg);
         }
 
         public bool FormatMessages(StringBuilder sb)

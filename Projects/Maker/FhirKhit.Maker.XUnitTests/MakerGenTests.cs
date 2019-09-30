@@ -7,10 +7,11 @@ using Hl7.Fhir.Model;
 using Xunit;
 using System.Reflection;
 using Hl7.Fhir.Introspection;
+using FhirKhit.Maker.Common;
 
 namespace FhirKhit.Maker.XUnitTests
 {
-    public class MakerGen
+    public class MakerGenTests
     {
         void GenerateComplex(FHIRAllTypes fhirType,
             String genDir)
@@ -109,21 +110,17 @@ namespace FhirKhit.Maker.XUnitTests
         [Trait("MakerGen", "MakerGen")]
         void CreateBaseClasses()
         {
-            String primGenDir = Path.Combine(DirHelper.FindParentDir("Maker"), "FhirKhit.Maker.Common", "MClasses", "PrimitiveGen");
-            DirHelper.CreateDirPath(primGenDir);
-            DirHelper.CleanDir(primGenDir);
+            String outputDir = Path.Combine(DirHelper.FindParentDir("Maker"), "FhirKhit.Maker.Common", "MClasses");
+            MakerGen gen = new MakerGen(outputDir);
+            gen.GenerateBaseClasses(outputDir);
 
-            String complexGenDir = Path.Combine(DirHelper.FindParentDir("Maker"), "FhirKhit.Maker.Common", "MClasses", "ComplexGen");
-            DirHelper.CreateDirPath(complexGenDir);
-            DirHelper.CleanDir(complexGenDir);
-
-            foreach (FHIRAllTypes fhirType in Enum.GetValues(typeof(FHIRAllTypes)).OfType<FHIRAllTypes>())
-            {
-                if (ModelInfo.IsPrimitive(fhirType))
-                    GeneratePrimitive(fhirType, primGenDir);
-                else
-                    GenerateComplex(fhirType, complexGenDir);
-            }
+            //foreach (FHIRAllTypes fhirType in Enum.GetValues(typeof(FHIRAllTypes)).OfType<FHIRAllTypes>())
+            //{
+            //    if (ModelInfo.IsPrimitive(fhirType))
+            //        GeneratePrimitive(fhirType, genDir);
+            //    else
+            //        GenerateComplex(fhirType, genDir);
+            //}
         }
     }
 }
