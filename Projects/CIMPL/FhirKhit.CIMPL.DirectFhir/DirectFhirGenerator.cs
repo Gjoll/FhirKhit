@@ -111,31 +111,17 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.abbreviatedResourcesToProcess.Add(path);
         }
 
-        String FhirSDefsPath => Path.Combine(this.OutputDir, "StructureDefinitions.json");
         public String GeneratedPath => Path.Combine(this.OutputDir, "Generated");
 
-        Bundle FhirSDefsBundle
-        {
-            get
-            {
-                if (this.fhirSDefsBundle == null)
-                {
-                    if (File.Exists(this.FhirSDefsPath) == false)
-                        return null;
-
-                    FhirJsonParser parser = new FhirJsonParser();
-                    this.fhirSDefsBundle = parser.Parse<Bundle>(File.ReadAllText(this.FhirSDefsPath));
-                }
-                return this.fhirSDefsBundle;
-            }
-        }
-
         Dictionary<String, SDefInfo> items;
-        ZipSource source;
+
+        FhirStructureDefinitions sDefs;
 
         public DirectFhirGenerator()
         {
-            this.source = new ZipSource("specification.zip");
+            String sDefsPath = Path.Combine(this.OutputDir, "StructureDefinitions.json");
+            String specPath = Path.GetFullPath("specification.zip");
+            sDefs = new FhirStructureDefinitions(sDefsPath, specPath);
             this.items = new Dictionary<string, SDefInfo>();
         }
 
@@ -356,28 +342,6 @@ namespace FhirKhit.CIMPL.DirectFhir
             }
         }
 
-        /// <summary>
-        /// To save time, store all structure definitions in a fhir bundle file. This need only be run when we get a new 
-        /// FHIR version.
-        /// </summary>
-        void StoreFhirElements()
-        {
-            // const String fcn = "StoreFhirElements";
-
-            this.fhirSDefsBundle = new Bundle();
-            foreach (string uri in this.source.ListResourceUris())
-            {
-                StructureDefinition sDef = this.source.ResolveByUri(uri) as StructureDefinition;
-                if (sDef != null)
-                {
-                    // This is to get rid of the http://....//de-... entries.
-                    if (sDef.Snapshot.Element[0].Path.Split('.').Length == 1)
-                        this.fhirSDefsBundle.AddResourceEntry(sDef, sDef.Url);
-                }
-            }
-            this.fhirSDefsBundle.SaveJson(this.FhirSDefsPath);
-        }
-
         void LoadFirEntryNames()
         {
 
@@ -388,7 +352,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             const String fcn = "LoadFhirElements";
 
             this.ConversionInfo(this.GetType().Name, fcn, "Loading Fhir structure definitions");
-            foreach (StructureDefinition sDef in this.FhirSDefsBundle.GetResources())
+            foreach (StructureDefinition sDef in this.sDefs.FhirSDefs.GetResources())
             {
                 SDefInfo sDefInfo = new SDefInfo
                 {
@@ -473,7 +437,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             try
             {
-                this.StoreFhirElements();
+                this.sDefs.StoreFhirElements();
             }
             catch (ConvertErrorException err)
             {
@@ -527,9 +491,6 @@ namespace FhirKhit.CIMPL.DirectFhir
                     throw new ConvertErrorException(this.GetType().Name, fcn, $"OutputDir not set");
 
                 this.ConversionInfo(this.GetType().Name, fcn, "Starting generation of CIMPL classes");
-
-                if (File.Exists(this.FhirSDefsPath) == false)
-                    this.StoreFhirElements();
 
                 this.LoadFhirElements();
 

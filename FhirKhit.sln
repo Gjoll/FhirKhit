@@ -49,9 +49,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.CIMPL.DirectFhir",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Maker", "Maker", "{9C2E9018-605A-4D21-A850-4147EA532A38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FhirKhit.Maker.XUnitTests", "Projects\Maker\FhirKhit.Maker.XUnitTests\FhirKhit.Maker.XUnitTests.csproj", "{18FDCEF2-9948-4647-95F1-F71BD2F0C075}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Maker.XUnitTests", "Projects\Maker\FhirKhit.Maker.XUnitTests\FhirKhit.Maker.XUnitTests.csproj", "{18FDCEF2-9948-4647-95F1-F71BD2F0C075}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FhirKhit.Maker.Common", "Projects\Maker\FhirKhit.Maker.Common\FhirKhit.Maker.Common.csproj", "{B4701E66-9CF2-4ADF-BFB2-C900043F6BF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Maker.Common", "Projects\Maker\FhirKhit.Maker.Common\FhirKhit.Maker.Common.csproj", "{B4701E66-9CF2-4ADF-BFB2-C900043F6BF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Maker", "Projects\Maker\FhirKhit.Maker\FhirKhit.Maker.csproj", "{467789AD-0ACE-416D-AC28-AE7AA5B4C395}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -187,6 +189,14 @@ Global
 		{B4701E66-9CF2-4ADF-BFB2-C900043F6BF9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B4701E66-9CF2-4ADF-BFB2-C900043F6BF9}.Release|x64.ActiveCfg = Release|Any CPU
 		{B4701E66-9CF2-4ADF-BFB2-C900043F6BF9}.Release|x64.Build.0 = Release|Any CPU
+		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Debug|x64.Build.0 = Debug|Any CPU
+		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Release|x64.ActiveCfg = Release|Any CPU
+		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -212,6 +222,7 @@ Global
 		{588A305B-A861-4537-9175-9778144F5640} = {6BC08005-3E1F-4F62-B047-FCC82F2BD2EB}
 		{18FDCEF2-9948-4647-95F1-F71BD2F0C075} = {9C2E9018-605A-4D21-A850-4147EA532A38}
 		{B4701E66-9CF2-4ADF-BFB2-C900043F6BF9} = {9C2E9018-605A-4D21-A850-4147EA532A38}
+		{467789AD-0ACE-416D-AC28-AE7AA5B4C395} = {9C2E9018-605A-4D21-A850-4147EA532A38}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90499BD7-964F-4CE5-A761-BDF9EC6DCE28}

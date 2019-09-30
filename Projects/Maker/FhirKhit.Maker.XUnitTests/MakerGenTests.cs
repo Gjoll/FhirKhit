@@ -110,9 +110,9 @@ namespace FhirKhit.Maker.XUnitTests
         [Trait("MakerGen", "MakerGen")]
         void CreateBaseClasses()
         {
-            String outputDir = Path.Combine(DirHelper.FindParentDir("Maker"), "FhirKhit.Maker.Common", "MClasses");
-            MakerGen gen = new MakerGen(outputDir);
-            gen.GenerateBaseClasses(outputDir);
+            //String outputDir = Path.Combine(DirHelper.FindParentDir("Maker"), "FhirKhit.Maker.Common", "MClasses");
+            //MakerGen gen = new MakerGen(outputDir);
+            //gen.GenerateBaseClasses(outputDir);
 
             //foreach (FHIRAllTypes fhirType in Enum.GetValues(typeof(FHIRAllTypes)).OfType<FHIRAllTypes>())
             //{

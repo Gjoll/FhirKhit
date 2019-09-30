@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StructureDefinitionExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FhirKhitVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FhirStructureDefinitions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SnapshotCreator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Validation\FhirValidator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ZipFhirSource.cs" />
