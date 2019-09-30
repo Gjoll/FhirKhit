@@ -7,6 +7,55 @@ namespace FhirKhit.Tools
 {
     public static class StringExtensions
     {
+        public static String RemovePrefix(this String s, string prefix)
+        {
+            if (s is null)
+                throw new ArgumentNullException(nameof(s));
+            if (prefix is null)
+                throw new ArgumentNullException(nameof(prefix));
+
+            if (s.StartsWith(prefix))
+                s = s.Substring(prefix.Length);
+            return s;
+        }
+
+        public static String RemoveSuffix(this String s, string suffix)
+        {
+            if (s is null)
+                throw new ArgumentNullException(nameof(s));
+            if (suffix is null)
+                throw new ArgumentNullException(nameof(suffix));
+
+            if (s.EndsWith(suffix))
+                s = s.Substring(0, s.Length - suffix.Length);
+            return s;
+        }
+
+        public static String UncapFirstLetter(this String s)
+        {
+            if (s is null)
+                throw new ArgumentNullException(nameof(s));
+            switch (s.Length)
+            {
+                case 0: return String.Empty;
+                case 1: return Char.ToLower(s[0]).ToString();
+                default: return Char.ToLower(s[0]) + s.Substring(1);
+            }
+        }
+
+        public static String CapFirstLetter(this String s)
+        {
+            if (s is null)
+                throw new ArgumentNullException(nameof(s));
+            switch (s.Length)
+            {
+                case 0: return String.Empty;
+                case 1: return Char.ToUpper(s[0]).ToString();
+                default: return Char.ToUpper(s[0]) + s.Substring(1);
+            }
+        }
+
+
         /// <summary>
         /// Return the last part of a path (i.e. a.bb.ccc == 'ccc')
         /// </summary>

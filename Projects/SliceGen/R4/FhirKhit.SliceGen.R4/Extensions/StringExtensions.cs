@@ -1,4 +1,5 @@
-﻿using Hl7.Fhir.Model;
+﻿using FhirKhit.Tools;
+using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,53 +15,6 @@ namespace FhirKhit.SliceGen.R4
             return $"\"{s}\"";
         }
 
-        public static String RemovePrefix(this String s, string prefix)
-        {
-            if (s is null)
-                throw new ArgumentNullException(nameof(s));
-            if (prefix is null)
-                throw new ArgumentNullException(nameof(prefix));
-
-            if (s.StartsWith(prefix))
-                s = s.Substring(prefix.Length);
-            return s;
-        }
-
-        public static String RemoveSuffix(this String s, string suffix)
-        {
-            if (s is null)
-                throw new ArgumentNullException(nameof(s));
-            if (suffix is null)
-                throw new ArgumentNullException(nameof(suffix));
-
-            if (s.EndsWith(suffix))
-                s = s.Substring(0, s.Length - suffix.Length);
-            return s;
-        }
-
-        public static String UncapFirstLetter(this String s)
-        {
-            if (s is null)
-                throw new ArgumentNullException(nameof(s));
-            switch (s.Length)
-            {
-                case 0: return String.Empty;
-                case 1: return Char.ToLower(s[0]).ToString();
-                default: return Char.ToLower(s[0]) + s.Substring(1);
-            }
-        }
-
-        public static String CapFirstLetter(this String s)
-        {
-            if (s is null)
-                throw new ArgumentNullException(nameof(s));
-            switch (s.Length)
-            {
-                case 0: return String.Empty;
-                case 1: return Char.ToUpper(s[0]).ToString();
-                default: return Char.ToUpper(s[0]) + s.Substring(1);
-            }
-        }
 
         /// <summary>
         /// Convert a uri to a value set to the enum name defined in the c# api.
