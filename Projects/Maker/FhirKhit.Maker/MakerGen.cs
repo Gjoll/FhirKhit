@@ -139,7 +139,7 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = $"{sDef.Name.ToMachineName()}_Item";
+            String instanceName = $"{sDef.Name.ToMachineName()}_Type";
 
             instanceBlock
                 .AppendLine("using System;")
@@ -154,7 +154,7 @@ namespace FhirKhit.Maker
                 .Summary($"Fhir primitive '{sDef.Name}'")
                 .SummaryLines(sDef.ToFormatedJson())
                 .SummaryClose()
-                .AppendCode($"public class {instanceName} : Primitive_Item")
+                .AppendCode($"public class {instanceName} : Primitive_Type")
                 .OpenBrace()
                 .CloseBrace()
                 .CloseBrace()
@@ -175,7 +175,7 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = $"{sDef.Name.ToMachineName()}_Item";
+            String instanceName = $"{sDef.Name.ToMachineName()}_Type";
 
             instanceBlock
                 .AppendLine("using System;")
@@ -190,7 +190,7 @@ namespace FhirKhit.Maker
                 .Summary($"Fhir primitive '{sDef.Name}'")
                 .SummaryLines(sDef.ToFormatedJson())
                 .SummaryClose()
-                .AppendCode($"public class {instanceName} : Complex_Item")
+                .AppendCode($"public class {instanceName} : Complex_Type")
                 .OpenBrace()
                 .CloseBrace()
                 .CloseBrace()
