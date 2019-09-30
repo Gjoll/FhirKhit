@@ -27,8 +27,7 @@ namespace FhirKhit.Tools.R2
                 if (this.fhirSDefsBundle == null)
                 {
                     if (File.Exists(this.bundlePath) == false)
-                        return null;
-
+                        StoreFhirElements();
                     FhirJsonParser parser = new FhirJsonParser();
                     this.fhirSDefsBundle = parser.Parse<Bundle>(File.ReadAllText(this.bundlePath));
                 }
@@ -58,9 +57,11 @@ namespace FhirKhit.Tools.R2
             b.SaveJson(this.bundlePath);
         }
 
-        public FhirStructureDefinitions(String bundlePath,
-            String specPath)
+        public FhirStructureDefinitions()
         {
+            String specPath = Path.GetFullPath("specification.zip");
+            String bundlePath = Path.GetFullPath("StructureDefinitions.json");
+
             this.bundlePath = bundlePath;
             if (File.Exists(specPath) == false)
                 throw new Exception($"Missing {specPath}");

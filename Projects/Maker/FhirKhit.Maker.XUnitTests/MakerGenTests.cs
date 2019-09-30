@@ -78,34 +78,6 @@ namespace FhirKhit.Maker.XUnitTests
             instanceEditor.Save(Path.Combine(genDir, $"{instanceName}.cs"));
         }
 
-        void GeneratePrimitive(FHIRAllTypes fhirType,
-            String genDir)
-        {
-            Trace.WriteLine($"Generating fhir primitive '{fhirType}'");
-
-            CodeEditor instanceEditor = new CodeEditor();
-            CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
-
-            String instanceName = $"{fhirType.ToString()}_Item";
-
-            instanceBlock
-                .AppendLine("using System;")
-                .AppendLine("using System.Diagnostics;")
-                .AppendLine("using System.IO;")
-                .AppendLine("using System.Linq;")
-                .AppendLine("using Hl7.Fhir.Model;")
-                .BlankLine()
-                .AppendCode("namespace FhirKhit.Maker.Common")
-                .OpenBrace()
-                .AppendCode($"public class {instanceName} : Primitive_Item")
-                .OpenBrace()
-                .CloseBrace()
-                .CloseBrace()
-                ;
-
-            instanceEditor.Save(Path.Combine(genDir, $"{instanceName}.cs"));
-        }
-
         [Fact(DisplayName = "MakerGen.CreateBaseClasses")]
         [Trait("MakerGen", "MakerGen")]
         void CreateBaseClasses()

@@ -121,7 +121,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             String sDefsPath = Path.Combine(this.OutputDir, "StructureDefinitions.json");
             String specPath = Path.GetFullPath("specification.zip");
-            sDefs = new FhirStructureDefinitions(sDefsPath, specPath);
+            sDefs = new FhirStructureDefinitions();
             this.items = new Dictionary<string, SDefInfo>();
         }
 
