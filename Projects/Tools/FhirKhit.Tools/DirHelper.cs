@@ -24,6 +24,14 @@ namespace FhirKhit.Tools
             CleanDir(path);
         }
 
+        public static void CreateDirPath(String path)
+        {
+            if (Directory.Exists(path) == true)
+                return;
+            CreateDirPath(Path.GetDirectoryName(path));
+            Directory.CreateDirectory(path);
+        }
+
         public static void CleanDir(String path)
         {
             foreach (String file in Directory.GetFiles(path))
