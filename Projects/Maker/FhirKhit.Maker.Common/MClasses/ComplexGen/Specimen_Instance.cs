@@ -6,7 +6,7 @@ using Hl7.Fhir.Model;
                                                                                                                                             // MakerGen.cs:33
 namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:34
 {                                                                                                                                           // MakerGen.cs:35
-    public class Specimen_Instance : Primitive_Instance                                                                                     // MakerGen.cs:36
+    public class Specimen_Instance : Complex_Instance                                                                                       // MakerGen.cs:36
     {                                                                                                                                       // MakerGen.cs:37
     }                                                                                                                                       // MakerGen.cs:38
 }                                                                                                                                           // MakerGen.cs:39
