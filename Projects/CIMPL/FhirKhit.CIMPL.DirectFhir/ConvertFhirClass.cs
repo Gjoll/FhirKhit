@@ -16,11 +16,17 @@ namespace FhirKhit.CIMPL.DirectFhir
     /// </summary>
     class ConvertFhirClass
     {
+        const String BackboneElementStr = "BackboneElement";
+        const String ElementStr = "Element";
+        const String ResourceStr = "Resource";
+
         DirectFhirGenerator gen;
         DirectFhirGenerator.SDefInfo sDefInfo;
         StructureDefinition sDef;
         Int32 elementIndex;
         ElementDefinition[] elements;
+        CodeEditor entryEditor;
+        CodeEditor mapEditor;
 
         public ConvertFhirClass(DirectFhirGenerator gen,
             DirectFhirGenerator.SDefInfo sDefInfo)
@@ -72,7 +78,6 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.ProcessEntry(this.sDef.Id, null, typeName, parent, description, this.sDef.Url);
         }
 
-
         /// <summary>
         /// Create new file containing the definition for the new item.
         /// The new entry is created in its own namespace.
@@ -90,12 +95,13 @@ namespace FhirKhit.CIMPL.DirectFhir
             {
                 // Hand code "Element" type. Element appears to have a non standard typeref
                 // which the c# library doesn't handle (_code = extension....)
-                case "Element":
+                case ElementStr:
                     {
+                        this.entryEditor = this.gen.CreateEntryEditor(path);
+                        this.mapEditor = this.gen.CreateMapEditor(path);
                         ElementDefinition sole = this.elements[0];
-                        this.elements = new ElementDefinition[] {sole};
-                        CodeBlockNested mapBlock = this.gen.CreateMapEditor(path);
-                        this.ProcessSubEntry(0, mapBlock, path, path, suffix, typeName, parent, description, comment);
+                        this.elements = new ElementDefinition[] { sole };
+                        this.ProcessSubEntry(0, path, path, suffix, typeName, parent, description, comment);
                         if (this.elementIndex != this.elements.Length)
                             throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
                     }
@@ -127,8 +133,12 @@ namespace FhirKhit.CIMPL.DirectFhir
 
                 default:
                     {
-                        CodeBlockNested mapBlock = this.gen.CreateMapEditor(path);
-                        this.ProcessSubEntry(0, mapBlock, path, path, suffix, typeName, parent, description, comment);
+                        this.entryEditor = this.gen.CreateEntryEditor(path);
+                        this.mapEditor = this.gen.CreateMapEditor(path);
+
+                        CodeBlockNested mapBlock = mapEditor.Blocks.AppendBlock();
+                        String entryName = path.LastPathPart().ToMachineName();
+                        this.ProcessSubEntry(0, path, path, suffix, typeName, parent, description, comment);
                         if (this.elementIndex != this.elements.Length)
                             throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
                     }
@@ -141,7 +151,6 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// The new entry is created in its own namespace.
         /// </summary>
         String ProcessSubEntry(Int32 indent,
-            CodeBlockNested mapBlock,
             String elementPath,
             String entryPath,
             String suffix,
@@ -150,11 +159,11 @@ namespace FhirKhit.CIMPL.DirectFhir
             String description,
             String comment)
         {
-            CodeBlockNested entryBlock = this.gen.CreateEntryEditor(elementPath);
-            CodeBlockNested classBlock = entryBlock.AppendBlock();
-            CodeBlockNested propertydefinitionsBlock = entryBlock.AppendBlock();
+            CodeBlockNested classBlock = entryEditor.Blocks.AppendBlock();
+            CodeBlockNested propertydefinitionsBlock = entryEditor.Blocks.AppendBlock();
+            CodeBlockNested mapBlock = mapEditor.Blocks.AppendBlock();
 
-            String entryName = elementPath.LastPathPart().ToMachineName();
+            String entryName = this.gen.GetFieldMap(elementPath);
             if (String.IsNullOrEmpty(suffix) == false)
             {
                 entryName += suffix;
@@ -184,13 +193,14 @@ namespace FhirKhit.CIMPL.DirectFhir
             switch (parent)
             {
                 case null:
-                case "Resource":
-                case "Element":
+                case ResourceStr:
+                case BackboneElementStr:
+                case ElementStr:
                     break;
 
                 default:
-                    this.gen.AddResourceToProcess(parent, false);
-                    classBlock.AppendCode($"Parent: {this.gen.NameSpace(parent)}.{parent}");
+                    this.gen.AddResource(parent);
+                    classBlock.AppendCode($"Parent: {parent}");
                     break;
             }
             classBlock
@@ -202,10 +212,10 @@ namespace FhirKhit.CIMPL.DirectFhir
                 ElementDefinition subElement = this.elements[this.elementIndex];
                 if (subElement.Path.StartsWith($"{elementPath}.") == false)
                     break;
-                this.ProcessProperty(indent, classBlock, propertydefinitionsBlock, mapBlock, elementPath, entryPath, entryName);
+                this.ProcessProperty(indent, classBlock, propertydefinitionsBlock, mapBlock, entryPath);
             }
 
-            return $"{this.gen.NameSpace(elementPath)}.{entryName}";
+            return entryName;
         }
 
 
@@ -234,13 +244,9 @@ namespace FhirKhit.CIMPL.DirectFhir
             CodeBlockNested classBlock,
             CodeBlockNested propertiesBlock,
             CodeBlockNested mapBlock,
-            String elementPath,
-            String entryPath,
-            String entryName)
+            String entryPath)
         {
             const string fcn = "ProcessProperty";
-            const String BackboneElementStr = "BackboneElement";
-            const String ElementStr = "Element";
 
             ElementDefinition ed = this.elements[this.elementIndex++];
 
@@ -264,11 +270,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             //if (ed.Pattern != null)
             //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Pattern in element {ed.Path}.");
 
-            String propertyName = ed.Path.LastPathPart().ToMachineName();
-            if (propertyName == "Value")
-                propertyName = "ValueZ";
-            if (propertyName == entryName)
-                propertyName = $"{propertyName}Value";
+            String propertyName = this.gen.UniquePropertyName(ed, out bool createFlag);
 
             String fullPropertyName;
             String propertyPath = $"{entryPath}.{propertyName}";
@@ -280,7 +282,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                 if (this.HasChildren(ed) == false)
                     throw new ConvertErrorException(this.GetType().Name, fcn, $"Backbone element {ed.Path} has no children.");
 
-                fullPropertyName = this.ProcessSubEntry(indent + 1, mapBlock, ed.Path, propertyPath, "Group", "Group", BackboneElementStr, $"Group definition of {ed.Path}", null);
+                fullPropertyName = this.ProcessSubEntry(indent + 1, ed.Path, propertyPath, "Group", "Group", BackboneElementStr, $"Group definition of {ed.Path}", null);
             }
             else if (this.ContainsType(ed, ElementStr))
             {
@@ -289,115 +291,140 @@ namespace FhirKhit.CIMPL.DirectFhir
                 if (this.HasChildren(ed) == false)
                     throw new ConvertErrorException(this.GetType().Name, fcn, $"Element {ed.Path} has no children.");
 
-                fullPropertyName = this.ProcessSubEntry(indent + 1, mapBlock, ed.Path, propertyPath, "Group", "Group", ElementStr, $"Group definition of {ed.Path}", null);
+                fullPropertyName = this.ProcessSubEntry(indent + 1, ed.Path, propertyPath, "Group", "Group", ElementStr, $"Group definition of {ed.Path}", null);
             }
             else
             {
-                propertiesBlock
-                    .BlankLine()
-                    .AppendLine($"// Entry definition of {ed.Path}")
-                    .AppendCode($"Element: {propertyName}")
-                    ;
-
-                HashSet<String> outputTypes = new HashSet<string>();
-                bool firstFlag = true;
-                void OutputType(String pType)
+                fullPropertyName = propertyName;
+                if (createFlag)
                 {
-                    if (outputTypes.Contains(pType))
-                        return;
-                    outputTypes.Add(pType);
-                    if (firstFlag)
-                        propertiesBlock.AppendCode($"Value: {pType}");
-                    else
-                        propertiesBlock.AppendCode($"    or {pType}");
-                    firstFlag = false;
-                }
-
-                mapBlock.AppendCode($"    {propertyPath.SkipFirstPathPart()} maps to {ed.Path.SkipFirstPathPart()}");
-                fullPropertyName = $"{this.gen.NameSpace(elementPath)}.{propertyName}";
-                foreach (ElementDefinition.TypeRefComponent type in ed.Type)
-                {
-                    switch (type.Code)
+                    if (this.gen.IsSliceField(ed.Path))
                     {
-                        case null:
-                            break;
+                        propertiesBlock
+                            .BlankLine()
+                            .AppendLine($"// Entry definition of {ed.Path}")
+                            .AppendCode($"Group: {propertyName}Slices")
+                            .AppendCode($"Property: {propertyName}Slice 0..*")
+                            .BlankLine()
+                            .AppendCode($"Group: {propertyName}Slice")
+                            .AppendCode($"Property: {propertyName} 1..1")
+                            .BlankLine()
+                            .AppendCode($"Element: {propertyName}")
+                            ;
+                    }
+                    else
+                    {
+                        propertiesBlock
+                            .BlankLine()
+                            .AppendLine($"// Entry definition of {ed.Path}")
+                            .AppendCode($"Element: {propertyName}")
+                            ;
+                    }
 
-                        case "boolean":
-                        case "integer":
-                        case "decimal":
-                        case "uri":
-                        case "string":
-                        case "base64Binary":
-                        case "instant":
-                        case "date":
-                        case "dateTime":
-                        case "time":
-                        case "oid":
-                        case "id":
-                        case "markdown":
-                        case "unsignedInt":
-                        case "positiveInt":
-                        case "xhtml":
-                            OutputType($"{type.Code}");
-                            break;
+                    HashSet<String> outputTypes = new HashSet<string>();
+                    bool firstFlag = true;
+                    void OutputType(String pType)
+                    {
+                        if (outputTypes.Contains(pType))
+                            return;
+                        outputTypes.Add(pType);
+                        if (firstFlag)
+                            propertiesBlock.AppendCode($"Value: {pType}");
+                        else
+                            propertiesBlock.AppendCode($"    or {pType}");
+                        firstFlag = false;
+                    }
+                    {
+                        String basePropertyPath = propertyPath.SkipFirstPathPart();
+                        String baseEdPath = ed.Path.SkipFirstPathPart();
+                        if (this.gen.IsSliceField(ed.Path))
+                            mapBlock.AppendCode($"    {basePropertyPath}Slices.{basePropertyPath}Slice.{basePropertyPath} maps to {baseEdPath}");
+                        else
+                            mapBlock.AppendCode($"    {basePropertyPath} maps to {baseEdPath}");
+                    }
+                    foreach (ElementDefinition.TypeRefComponent type in ed.Type)
+                    {
+                        switch (type.Code)
+                        {
+                            case null:
+                                break;
 
-                        case "CodeableConcept":
-                        case "Coding":
-                        case "code":
-                            OutputType($"concept");
-                            break;
+                            case "boolean":
+                            case "integer":
+                            case "decimal":
+                            case "uri":
+                            case "string":
+                            case "base64Binary":
+                            case "instant":
+                            case "date":
+                            case "dateTime":
+                            case "time":
+                            case "oid":
+                            case "id":
+                            case "markdown":
+                            case "unsignedInt":
+                            case "positiveInt":
+                            case "xhtml":
+                                OutputType($"{type.Code}");
+                                break;
 
-                        case "uuid":
-                        case "url":
-                        case "canonical":
-                            OutputType($"uri");
-                            break;
+                            case "CodeableConcept":
+                            case "Coding":
+                            case "code":
+                                OutputType($"concept");
+                                break;
 
-                        case "Reference":
-                            if (type.Profile.Any())
-                                throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
-                            if (type.TargetProfile.Count() == 0)
-                            {
-                                this.gen.AddResourceToProcess("Resource", true);
-                                OutputType($"{this.gen.NameSpace("Resource")}.Resource");
-                            }
-                            else
-                            {
-                                foreach (string target in type.TargetProfile)
+                            case "uuid":
+                            case "url":
+                            case "canonical":
+                                OutputType($"uri");
+                                break;
+
+                            case "Reference":
+                                if (type.Profile.Any())
+                                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
+                                if (type.TargetProfile.Count() == 0)
                                 {
-                                    this.gen.AddResourcePathToProcess(target, true);
-                                    String targetEntryName = target.LastUriPart().ToMachineName();
-                                    OutputType($"{this.gen.NameSpace(targetEntryName)}.{targetEntryName}");
+                                    this.gen.AddAbbreviatedResource(ResourceStr);
+                                    OutputType($"Resource");
                                 }
-                            }
-                            break;
-
-                        default:
-
-                            if (type.Profile.Count() == 0)
-                            {
-                                this.gen.AddResourceToProcess(type.Code, true);
-                                OutputType($"{this.gen.NameSpace(type.Code)}.{type.Code.ToMachineName()}");
-                            }
-                            else
-                            {
-                                foreach (string profile in type.Profile)
+                                else
                                 {
-                                    this.gen.AddResourcePathToProcess(profile, true);
-                                    String profileName = profile.LastUriPart().ToMachineName();
-                                    OutputType($"{this.gen.NameSpace(profileName)}.{profileName}");
+                                    foreach (string target in type.TargetProfile)
+                                    {
+                                        this.gen.AddAbbreviatedResource(target);
+                                        String targetEntryName = target.LastUriPart().ToMachineName();
+                                        OutputType($"{targetEntryName}");
+                                    }
                                 }
-                            }
+                                break;
 
+                            default:
 
-                            break;
+                                if (type.Profile.Count() == 0)
+                                {
+                                    this.gen.AddAbbreviatedResource(type.Code);
+                                    OutputType($"{type.Code.ToMachineName()}");
+                                }
+                                else
+                                {
+                                    foreach (string profile in type.Profile)
+                                    {
+                                        this.gen.AddAbbreviatedResource(profile);
+                                        String profileName = profile.LastUriPart().ToMachineName();
+                                        OutputType($"{profileName}");
+                                    }
+                                }
+                                break;
+                        }
                     }
                 }
             }
 
-            classBlock
-                .AppendCode($"Property: {fullPropertyName} {ed.Min}..{ed.Max}")
-                ;
+            if (this.gen.IsSliceField(ed.Path))
+                classBlock.AppendCode($"Property: {fullPropertyName}Slices 0..1");
+            else
+                classBlock.AppendCode($"Property: {fullPropertyName} {ed.Min}..{ed.Max}");
         }
     }
 }

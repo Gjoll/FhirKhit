@@ -1,0 +1,38 @@
+﻿-d
+-r "DiagnosticReport"
+-r  "Observation"
+-r Quantity
+-s "Observation.hasMember"
+-a MedicationRequest
+-a ServiceRequest
+-i Quantity
+-i SimpleQuantity
+
+-m Quantity.code QuantityCode
+-m Resource.id Ident
+-m Resource.meta MetaRef
+
+-m DiagnosticReport.code DiagnosticReportCode
+-m DiagnosticReport.effective[x] DiagnosticReportEffective
+-m DiagnosticReport.performer DiagnosticReportPerformer
+-m DiagnosticReport.basedOn DiagnosticReportBasedOn
+-m DiagnosticReport.encounter EncounterRef
+-m DiagnosticReport.imagingStudy ImagingStudyRef
+-m DiagnosticReport.media MediaRef
+-m DiagnosticReport.specimen SpecimenRef
+-m DiagnosticReport.identifier IdentifierRef
+
+-m Observation.code ObservationCode
+-m Observation.component.code ComponentCode
+-m Observation.referenceRange ObservationReferenceRange
+-m Observation.referenceRange.text ReferenceRangeText
+-m Observation.referenceRange.age AgeRef
+-m Observation.performer ObservationPerformer
+-m Observation.effective[x] ObservationEffective
+-m Observation.basedOn ObservationBasedOn
+-m Observation.device DeviceRef
+-m Observation.encounter EncounterRef
+-m Observation.specimen SpecimenRef
+-m Observation.identifier IdentifierRef
+
+-o "\Development\MITRE\cimpl\Fhir-BreastRadiologyReport\CIMPL\Fhir"

@@ -1,49 +1,95 @@
-﻿using System;
+﻿using FhirKhit.Tools;
+using System;
+using System.IO;
 
 namespace FhirKhit.CIMPL.DirectFhir
 {
     class Program
     {
         static DirectFhirGenerator dfg;
-        static string outputDir;
-        static bool createBundle;
 
-        static String GetArgs(string[] args, ref Int32 i, String errorMsg)
+        static void ParseArgs(string args)
         {
-            if (i >= args.Length)
-                throw new Exception(errorMsg);
-            return args[i++];
-        }
-
-        static void ParseArgs(string[] args)
-        {
-            Int32 i = 0;
-            while (i < args.Length)
+            String GetArg(String s)
             {
-                String arg = args[i++];
-                switch (arg.Trim().ToLower())
+                s = s.Trim();
+                if (s.StartsWith("\""))
+                    s = s.Substring(1);
+                if (s.EndsWith("\""))
+                    s = s.Substring(0, s.Length - 1);
+                return s;
+            }
+ 
+            while (args.Contains("  "))
+                args = args.Replace("  ", " ");
+
+            CodeEditor.DebugFlag = false;
+
+            String[] argLines = args.ToLines();
+
+            foreach (String line in argLines)
+            {
+                if (String.IsNullOrWhiteSpace(line) == false)
                 {
-                    case "-o":
-                        outputDir = GetArgs(args, ref i, "Missing argument to -o parameter");
-                        break;
+                    String[] lineParts = line.Split(' ');
+                    switch (lineParts[0].ToLower())
+                    {
+                        case "-o":
+                            if (lineParts.Length != 2)
+                                throw new Exception($"Invalid arg '{line}'");
+                            dfg.OutputDir = GetArg(lineParts[1]);
+                            break;
 
-                    case "-b":
-                        createBundle = true;
-                        break;
+                        case "-d":
+                            CodeEditor.DebugFlag = true;
+                            break;
 
-                    case "-r":
-                    case "-resource":
-                        dfg.AddResourcePathToProcess(GetArgs(args, ref i, "Missing argument to -resource parameter"), false);
-                        break;
+                        case "-b":
+                            dfg.CreateBundle();
+                            break;
 
-                    default:
-                        throw new Exception("Unknown command line argument {arg}");
+                        case "-i":
+                            if (lineParts.Length != 2)
+                                throw new Exception($"Invalid arg '{line}'");
+                            dfg.AddResourcePathToIgnore(GetArg(lineParts[1]));
+                            break;
+
+                        case "-m":
+                        case "-map":
+                            if (lineParts.Length != 3)
+                                throw new Exception($"Invalid arg '{line}'");
+                            dfg.AddFieldMap(GetArg(lineParts[1]), GetArg(lineParts[2]));
+                            break;
+
+                        case "-s":
+                        case "-spliceable":
+                            if (lineParts.Length != 2)
+                                throw new Exception($"Invalid arg '{line}'");
+                            dfg.AddSpliceField(GetArg(lineParts[1]));
+                            break;
+
+                        case "-a":
+                        case "-abbreviated":
+                            if (lineParts.Length != 2)
+                                throw new Exception($"Invalid arg '{line}'");
+                            dfg.AddAbbreviatedResource(GetArg(lineParts[1]));
+                            break;
+
+                        case "-r":
+                        case "-resource":
+                            if (lineParts.Length != 2)
+                                throw new Exception($"Invalid arg '{line}'");
+                            dfg.AddResource(GetArg(lineParts[1]));
+                            break;
+
+                        default:
+                            throw new Exception("Unknown command line argument {arg}");
+                    }
                 }
             }
-
-            if (String.IsNullOrEmpty(outputDir))
-                throw new Exception($"Missing required -o argument");
         }
+
+
         static Int32 Main(string[] args)
         {
             try
@@ -53,10 +99,13 @@ namespace FhirKhit.CIMPL.DirectFhir
                 dfg.StatusInfo += Dfg_StatusInfo;
                 dfg.StatusWarnings += Dfg_StatusWarnings;
 
-                ParseArgs(args);
-                if (createBundle == true)
-                    dfg.CreateBundle();
-                return dfg.GenerateBaseClasses(outputDir);
+                if (args.Length != 1)
+                    throw new Exception($"Expected single command line arg");
+                ParseArgs(File.ReadAllText(args[0]));
+                if (String.IsNullOrEmpty(dfg.OutputDir))
+                    throw new Exception($"Missing required -o command line argument");
+                Int32 retVal = dfg.GenerateBaseClasses();
+                return retVal;
             }
             catch (Exception err)
             {

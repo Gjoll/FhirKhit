@@ -29,48 +29,90 @@ namespace FhirKhit.CIMPL.DirectFhir
             public StructureDefinition SDef;
         };
 
-
         Bundle fhirSDefsBundle;
-        HashSet<String> abbreviatedResourcesToProcess = new HashSet<string>();
-        HashSet<String> resourcesToProcess = new HashSet<string>();
+        HashSet<String> sliceFields = new HashSet<string>();
+        List<String> abbreviatedResourcesToProcess = new List<string>();
+        List<String> resourcesToProcess = new List<string>();
         HashSet<String> processedResources = new HashSet<string>();
-        public String outputDir;
-        public Dictionary<String, CodeEditor> editorDict = new Dictionary<string, CodeEditor>();
+        HashSet<String> resourcesToIgnore = new HashSet<string>();
 
-        public String NSBase => "fhir";
+        public bool IsSliceField(String s) => this.sliceFields.Contains(s);
 
-        public String NameSpace(params String[] path)
+        public String OutputDir
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append($"{NSBase}");
-            foreach (String pathItem in path)
-                sb.Append($".{pathItem.ToLower()}");
+            get { return this.outputDir; }
+            set
+            {
+                this.outputDir = value;
+                if (Directory.Exists(this.GeneratedPath) == false)
+                    Directory.CreateDirectory(this.GeneratedPath);
+                else
+                    DirHelper.CleanDir(this.GeneratedPath);
+            }
+        }
+        String outputDir;
 
-            return sb.ToString();
+        public Dictionary<String, CodeEditor> editorDict = new Dictionary<string, CodeEditor>();
+        Dictionary<String, String> fieldMaps = new Dictionary<string, string>();
+
+        public String GetFieldMap(string path)
+        {
+            if (fieldMaps.TryGetValue(path, out String retVal) == false)
+                retVal = path.LastPathPart();
+            return retVal.ToMachineName();
         }
 
+        public void AddFieldMap(string path, String name)
+        {
+            fieldMaps.Add(path, name);
+        }
+        public String NSBase => "fhir";
+
+        public void AddSpliceField(String path)
+        {
+            this.sliceFields.Add(path);
+        }
+
+        public bool IgnoreResource(string path)
+        {
+            return this.resourcesToIgnore.Contains(path);
+        }
+
+        public void AddResourcePathToIgnore(String path)
+        {
+            if (path.StartsWith("http:") == false)
+                path = $"http://hl7.org/fhir/StructureDefinition/{path}";
+            this.resourcesToIgnore.Add(path);
+        }
 
         /// <summary>
         /// Add path filter. if pathsToProcess has any members, then
         /// only resource paths that start with this will be processed.
         /// </summary>
-        public void AddResourcePathToProcess(String path, bool abbrevFlag)
+        public void AddResource(String path)
         {
             if (processedResources.Contains(path) == true)
                 return;
-            if (abbrevFlag == true)
-                this.abbreviatedResourcesToProcess.Add(path);
-            else
-                this.resourcesToProcess.Add(path);
+            if (path.StartsWith("http:") == false)
+                path = $"http://hl7.org/fhir/StructureDefinition/{path}";
+            this.resourcesToProcess.Add(path);
         }
 
-        public void AddResourceToProcess(String name, bool abbrevFlag)
+        /// <summary>
+        /// Add path filter. if pathsToProcess has any members, then
+        /// only resource paths that start with this will be processed.
+        /// </summary>
+        public void AddAbbreviatedResource(String path)
         {
-            this.AddResourcePathToProcess($"http://hl7.org/fhir/StructureDefinition/{name}", abbrevFlag);
+            if (processedResources.Contains(path) == true)
+                return;
+            if (path.StartsWith("http:") == false)
+                path = $"http://hl7.org/fhir/StructureDefinition/{path}";
+            this.abbreviatedResourcesToProcess.Add(path);
         }
 
-        String FhirSDefsPath => Path.Combine(this.outputDir, "StructureDefinitions.json");
-        public String GeneratedPath => Path.Combine(this.outputDir, "Generated");
+        String FhirSDefsPath => Path.Combine(this.OutputDir, "StructureDefinitions.json");
+        public String GeneratedPath => Path.Combine(this.OutputDir, "Generated");
 
         Bundle FhirSDefsBundle
         {
@@ -97,8 +139,6 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.items = new Dictionary<string, SDefInfo>();
         }
 
-
-
         /// <summary>
         /// Converrt string to a desciption string
         /// </summary>
@@ -112,7 +152,7 @@ namespace FhirKhit.CIMPL.DirectFhir
             return description.ToString().Replace("\"", "'");
         }
 
-        public CodeBlockNested CreateMapEditor(String path)
+        public CodeEditor CreateMapEditor(String path)
         {
             const String fcn = "CreateMapEditor";
 
@@ -126,12 +166,13 @@ namespace FhirKhit.CIMPL.DirectFhir
             CodeBlockNested mapBlock = mapEditor.Blocks.AppendBlock();
             mapBlock
                 .AppendLine($"Grammar: Map 5.1")
-                .AppendLine($"Namespace: {this.NameSpace(path)}")
+                .AppendLine($"Namespace: fhir")
                 .AppendLine($"Target: FHIR_R4")
+                .BlankLine()
                 ;
 
             this.editorDict.Add(mapName, mapEditor);
-            return mapBlock;
+            return mapEditor;
         }
 
         /// <summary>
@@ -139,7 +180,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public CodeBlockNested CreateEntryEditor(String path)
+        public CodeEditor CreateEntryEditor(String path)
         {
             const String fcn = "CreateEntryEditor";
 
@@ -151,12 +192,13 @@ namespace FhirKhit.CIMPL.DirectFhir
             CodeBlockNested block = codeEditor.Blocks.AppendBlock();
             block
                 .AppendLine($"Grammar: DataElement 6.0")
-                .AppendLine($"Namespace: {this.NameSpace(path)}")
+                .AppendLine($"Namespace: fhir")
                 .AppendLine($"Description: \"Fhir {path} definition. Autogenerated\"")
+                .BlankLine()
                 ;
 
             this.editorDict.Add(path, codeEditor);
-            return block;
+            return codeEditor;
         }
 
         /// <summary>
@@ -241,7 +283,8 @@ namespace FhirKhit.CIMPL.DirectFhir
 
             StructureDefinition sDef = sDefInfo.SDef;
             {
-                CodeBlockNested entryBlock = this.CreateEntryEditor(sDef.Id);
+                CodeEditor entryEditor = this.CreateEntryEditor(sDef.Id);
+                CodeBlockNested entryBlock = entryEditor.Blocks.AppendBlock();
                 String typeName;
                 switch (sDefInfo.TFlag)
                 {
@@ -260,7 +303,8 @@ namespace FhirKhit.CIMPL.DirectFhir
                     ;
             }
             {
-                CodeBlockNested mapBlock = this.CreateMapEditor(sDef.Id);
+                CodeEditor mapEditor = this.CreateMapEditor(sDef.Id);
+                CodeBlockNested mapBlock = mapEditor.Blocks.AppendBlock();
                 mapBlock
                     .BlankLine()
                     .AppendCode($"{sDef.Id} maps to {sDef.Id}:")
@@ -276,6 +320,9 @@ namespace FhirKhit.CIMPL.DirectFhir
             const string fcn = "ProcessFhirElement";
 
             StructureDefinition sDef = sDefInfo.SDef;
+            if (this.IgnoreResource(sDef.Url) == true)
+                return;
+
             sDef.SaveJson(Path.Combine(this.GeneratedPath, $"{sDef.Id}.json"));
 
             String baseDefinition = sDef.BaseDefinition;
@@ -331,6 +378,11 @@ namespace FhirKhit.CIMPL.DirectFhir
             this.fhirSDefsBundle.SaveJson(this.FhirSDefsPath);
         }
 
+        void LoadFirEntryNames()
+        {
+
+        }
+
         void LoadFhirElements()
         {
             const String fcn = "LoadFhirElements";
@@ -352,6 +404,7 @@ namespace FhirKhit.CIMPL.DirectFhir
                     case "http://hl7.org/fhir/StructureDefinition/Resource":
                         sDefInfo.TFlag = SDefInfo.TypeFlag.Entry;
                         break;
+
                     default:
                         sDefInfo.TFlag = SDefInfo.TypeFlag.Unknown;
                         break;
@@ -365,7 +418,7 @@ namespace FhirKhit.CIMPL.DirectFhir
         {
             const String fcn = "GetTypedSDef";
 
-            this.AddResourcePathToProcess(path, false);
+            this.AddResource(path);
             if (this.items.TryGetValue(path, out SDefInfo sDef) == false)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Item {path} not in dictionary");
 
@@ -379,21 +432,24 @@ namespace FhirKhit.CIMPL.DirectFhir
             return sDef;
         }
 
-        void ProcessAllFhirElements()
+        void ProcessAbbreviatedResource(String key)
         {
-            foreach (string path in this.items.Keys)
-            {
-                SDefInfo sDef = this.GetTypedSDef(path);
-                this.ProcessFhirElement(sDef);
-            }
+            if (processedResources.Contains(key) == true)
+                return;
+            if (this.IgnoreResource(key) == true)
+                return;
+
+            processedResources.Add(key);
+            SDefInfo sDef = this.GetTypedSDef(key);
+            this.ProcessFhirElementAbbreviated(sDef);
         }
 
         void ProcessRequestedFhirElements()
         {
-            while (this.resourcesToProcess.Count > 0)
+            Int32 index = 0;
+            while (index < this.resourcesToProcess.Count)
             {
-                String key = this.resourcesToProcess.ElementAt(0);
-                this.resourcesToProcess.Remove(key);
+                String key = this.resourcesToProcess.ElementAt(index++);
                 if (processedResources.Contains(key) == false)
                 {
                     processedResources.Add(key);
@@ -402,38 +458,15 @@ namespace FhirKhit.CIMPL.DirectFhir
                 }
             }
 
-
             // Output those resources that we just create an entry for (no properties).
             // These will define entries that we can reference, w/o the overhead of defining
             // the properties and such.
-            while (this.abbreviatedResourcesToProcess.Count > 0)
+            index = 0;
+            while (index < this.abbreviatedResourcesToProcess.Count)
             {
-                String key = this.abbreviatedResourcesToProcess.ElementAt(0);
-                this.abbreviatedResourcesToProcess.Remove(key);
-                if (processedResources.Contains(key) == false)
-                {
-                    processedResources.Add(key);
-                    SDefInfo sDef = this.GetTypedSDef(key);
-                    this.ProcessFhirElementAbbreviated(sDef);
-                }
+                String key = this.abbreviatedResourcesToProcess.ElementAt(index++);
+                ProcessAbbreviatedResource(key);
             }
-        }
-
-        /// <summary>
-        /// Process all fhir elements.
-        /// </summary>
-        void ProcessFhirElements()
-        {
-            const String fcn = "ProcessFhirElements";
-            if (this.resourcesToProcess.Count > 0)
-                ProcessRequestedFhirElements();
-            else
-                ProcessAllFhirElements();
-
-            this.ConversionInfo(this.GetType().Name, fcn, "Saving CIMPL classes");
-            foreach (CodeEditor ce in this.editorDict.Values)
-                ce.Save();
-            this.editorDict.Clear();
         }
 
         public Int32 CreateBundle()
@@ -454,24 +487,72 @@ namespace FhirKhit.CIMPL.DirectFhir
             return this.Errors.Any() ? -1 : 0;
         }
 
-        public Int32 GenerateBaseClasses(String outputDir)
+        void CheckNameCollisions()
+        {
+            foreach (String key in propertyNames.Keys)
+            {
+                propertyNames.TryGetValue(key, out List<TypePathTuple> collisions);
+                if (collisions.Count != 1)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine("-");
+                    sb.AppendLine($"Name collision: {key}");
+                    foreach (TypePathTuple collision in collisions)
+                    {
+                        foreach (ElementDefinition.TypeRefComponent type in collision.types)
+                        {
+                            sb.AppendLine($"    Type: '{type.Code}'");
+                            foreach (String profile in type.Profile)
+                                sb.AppendLine($"        Profile={profile}");
+                            foreach (String profile in type.TargetProfile)
+                                sb.AppendLine($"        TargetProfile={profile}");
+                        }
+                        sb.AppendLine($"");
+                        foreach (String path in collision.paths)
+                            sb.AppendLine($"    Path: '{path}'");
+                        sb.AppendLine($"-");
+                    }
+                    this.ConversionError(this.GetType().Name, "", sb.ToString());
+                }
+            }
+        }
+
+        public Int32 GenerateBaseClasses()
         {
             const String fcn = "GenerateBaseClasses";
 
             try
             {
+                if (String.IsNullOrEmpty(outputDir))
+                    throw new ConvertErrorException(this.GetType().Name, fcn, $"OutputDir not set");
+
                 this.ConversionInfo(this.GetType().Name, fcn, "Starting generation of CIMPL classes");
-                this.outputDir = outputDir;
-                if (Directory.Exists(this.GeneratedPath) == false)
-                    Directory.CreateDirectory(this.GeneratedPath);
-                else
-                    DirHelper.CleanDir(this.GeneratedPath);
 
                 if (File.Exists(this.FhirSDefsPath) == false)
                     this.StoreFhirElements();
 
                 this.LoadFhirElements();
-                this.ProcessFhirElements();
+
+                // if no elements to process defined, do them all.
+                if (this.resourcesToProcess.Count == 0)
+                {
+                    foreach (string path in this.items.Keys)
+                        this.resourcesToProcess.Add(path);
+                }
+
+                // Add each fhir property name as a unique name so no
+                // properties are named the same.
+                foreach (SDefInfo sDefInfo in this.items.Values)
+                    this.UniquePropertyName(sDefInfo.SDef.Snapshot.Element[0], out bool dummy);
+
+                this.ProcessRequestedFhirElements();
+
+                this.ConversionInfo(this.GetType().Name, fcn, "Saving CIMPL classes");
+                foreach (CodeEditor ce in this.editorDict.Values)
+                    ce.Save();
+                this.editorDict.Clear();
+                this.ConversionInfo(this.GetType().Name, fcn, "Completed generation of CIMPL classes");
+                CheckNameCollisions();
             }
             catch (ConvertErrorException err)
             {
@@ -482,12 +563,67 @@ namespace FhirKhit.CIMPL.DirectFhir
                 this.ConversionError(this.GetType().Name, "Execute", err.Message);
             }
 
-            this.ConversionInfo(this.GetType().Name, fcn, "Completed generation of CIMPL classes");
             return this.Errors.Any() ? -1 : 0;
         }
 
         public void Dispose()
         {
+        }
+
+        // Keep track of property names assigned to items of a specific type, 
+        // defined by the Fhir TypeRef{} array
+        public class TypePathTuple
+        {
+            public List<ElementDefinition.TypeRefComponent> types;
+            public List<String> paths = new List<string>();
+
+            public TypePathTuple(ElementDefinition ed)
+            {
+                this.types = ed.Type;
+                paths.Add(ed.Path);
+            }
+
+            public TypePathTuple(List<ElementDefinition.TypeRefComponent> types, string path)
+            {
+                this.types = types;
+                paths.Add(path);
+            }
+        }
+
+        Dictionary<String, List<TypePathTuple>> propertyNames = new Dictionary<String, List<TypePathTuple>>();
+
+        String UniquePropertyName(String pName, ElementDefinition ed, out bool createFlag)
+        {
+            if (this.propertyNames.TryGetValue(pName, out List<TypePathTuple> nameTypes) == false)
+            {
+                createFlag = true;
+                List<TypePathTuple> tupleList = new List<TypePathTuple>();
+                tupleList.Add(new TypePathTuple(ed));
+                this.propertyNames.Add(pName, tupleList);
+                return pName;
+            }
+
+            foreach (TypePathTuple tuple in nameTypes)
+            {
+                // if old element and this one have same type, then use same definition.
+                if (ed.Type.IsExactly(tuple.types))
+                {
+                    createFlag = false;
+                    tuple.paths.Add(ed.Path);
+                    return pName;
+                }
+            }
+
+            nameTypes.Add(new TypePathTuple(ed));
+            createFlag = true;
+            return pName;
+        }
+
+        public String UniquePropertyName(ElementDefinition ed, out bool createFlag)
+        {
+            String pName = this.GetFieldMap(ed.Path);
+            String retVal = UniquePropertyName(pName, ed, out createFlag);
+            return retVal;
         }
     }
 }
