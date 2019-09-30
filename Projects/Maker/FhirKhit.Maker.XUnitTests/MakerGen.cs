@@ -35,9 +35,16 @@ namespace FhirKhit.Maker.XUnitTests
                 .OpenBrace()
                 .AppendCode($"public class {instanceName} : Complex_Instance")
                 .OpenBrace()
+                .DefineBlock(out CodeBlockNested fields)
                 .CloseBrace()
                 .CloseBrace()
                 ;
+
+            String fhirTypeName = ModelInfo.FhirTypeToFhirTypeName(fhirType);
+            Type csType = ModelInfo.GetTypeForFhirType(fhirTypeName);
+
+            //fields
+            //;
 
             collectionBlock
                 .AppendLine("using System;")
