@@ -15,10 +15,10 @@ namespace FhirKhit.Maker.BreastRadiology
         const String DiagSvcSects = "http://terminology.hl7.org/CodeSystem/v2-0074";
         void CreateBreastRadiologyReport()
         {
-            Common.Resource.DiagnosticReport r = new Common.Resource.DiagnosticReport
+            Common.Resource.Resource_DiagnosticReport r = new Common.Resource.Resource_DiagnosticReport
             {
                 Name = "BreastRadiologyReport",
-                Parent = new Common.Resource.DiagnosticReport(),
+                Parent = new Common.Resource.Resource_DiagnosticReport(),
                 Uri = "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/breastrad-BreastAbnormality",
                 Description =
                     "Breast Radiology Diagnostic Report." +
@@ -30,11 +30,11 @@ namespace FhirKhit.Maker.BreastRadiology
                     "Breast Radiology Observation linked to by the 'result' field."
             };
 
-            r.Elements.Code.Pattern(new CodeableConcept(Loinc, "10193-1"));
-            r.Elements.Category.Pattern(new CodeableConcept(DiagSvcSects, "RAD"));
-            r.Elements.Specimen.Unused();
-            r.Elements.Conclusion.Card(1, 1);
-            r.Elements.ConclusionCode.Card(1, 1);
+            r.Elements.Element_Code.Pattern(new CodeableConcept(Loinc, "10193-1"));
+            r.Elements.Element_Category.Pattern(new CodeableConcept(DiagSvcSects, "RAD"));
+            r.Elements.Element_Specimen.Unused();
+            r.Elements.Element_Conclusion.Card(1, 1);
+            r.Elements.Element_ConclusionCode.Card(1, 1);
             r.Write(Path.Combine(outputDir, $"StructureDefinition.BreastRadiologyReport.json"));
         }
         public void CreateProfiles()

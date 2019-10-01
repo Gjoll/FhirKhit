@@ -54,7 +54,7 @@ namespace FhirKhit.Maker
 
         String ResourceName(String s) => $"Resource_{CleanName(s)}";
         String TypeName(String s) => $"Type_{CleanName(s)}";
-        String ElementName(String s) => $"{CleanName(s)}";
+        String ElementName(String s) => $"Element_{CleanName(s)}";
 
         public MakerGen(String outputDir)
         {
@@ -307,7 +307,7 @@ namespace FhirKhit.Maker
                                 {
                                     String sep1 = "";
                                     typesBlock
-                                        .AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}")
+                                        .AppendCode($"new {ComplexNameSpace}.{TypeName(type.Code)}")
                                         .OpenBrace()
                                         .AppendProfiles(type.Profile, ref sep1)
                                         .AppendTargetProfiles(type.TargetProfile, ref sep1)
@@ -317,14 +317,11 @@ namespace FhirKhit.Maker
                                 sep = ", ";
                                 break;
 
-                            case "Extension":
-                                break;
-
                             case "Resource":
                                 {
                                     String sep1 = "";
                                     typesBlock
-                                        .AppendCode($"new {ResourceNameSpace}.{CleanName(type.Code)}")
+                                        .AppendCode($"new {ResourceNameSpace}.{ResourceName(type.Code)}")
                                         .OpenBrace()
                                         .AppendProfiles(type.Profile, ref sep1)
                                         .AppendTargetProfiles(type.TargetProfile, ref sep1)
@@ -338,7 +335,7 @@ namespace FhirKhit.Maker
                                 {
                                     String sep1 = "";
                                     typesBlock
-                                        .AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}")
+                                        .AppendCode($"new {ComplexNameSpace}.{TypeName(type.Code)}")
                                         .OpenBrace()
                                         .AppendProfiles(type.Profile, ref sep1)
                                         .AppendTargetProfiles(type.TargetProfile, ref sep1)
@@ -350,7 +347,7 @@ namespace FhirKhit.Maker
 
                             default:
                                 typesBlock
-                                    .AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}")
+                                    .AppendCode($"new {ComplexNameSpace}.{TypeName(type.Code)}")
                                     .OpenBrace()
                                     .CloseBrace(sep)
                                     ;
@@ -452,7 +449,7 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = CleanName(sDef.Differential.Element[0].Path.LastPathPart());
+            String instanceName = ResourceName(sDef.Differential.Element[0].Path.LastPathPart());
             instanceBlock
                 .AppendCode("using System;")
                 .AppendCode("using System.Diagnostics;")
@@ -506,7 +503,7 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = CleanName(sDef.Differential.Element[0].Path.LastPathPart());
+            String instanceName = TypeName(sDef.Differential.Element[0].Path.LastPathPart());
             instanceBlock
                 .AppendCode("using System;")
                 .AppendCode("using System.Diagnostics;")
