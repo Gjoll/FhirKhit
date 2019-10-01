@@ -261,7 +261,7 @@ namespace FhirKhit.Maker
                         .CloseBrace()
                         ;
 
-                    DefineClass(subClassBlock, elements, ref index, ed.Path, subClassName, ComplexBase);
+                    DefineClass(subClassBlock, elements, ref index, ed.Path, subClassName, ComplexBase, out CodeBlockNested dummy);
                 }
                 else
                 {
@@ -373,7 +373,8 @@ namespace FhirKhit.Maker
             ref Int32 index,
             String basePath,
             String className,
-            String parentMakerClassName)
+            String parentMakerClassName,
+            out CodeBlockNested constructorBlock)
         {
             basePath += '.';
 
@@ -384,52 +385,64 @@ namespace FhirKhit.Maker
                 .OpenBrace()
                 .AppendCode($"public class {elementClassName} : {ResourceNameSpace}.ElementsBase")
                 .OpenBrace()
-                .DefineBlock(out CodeBlockNested subClassBlock)
-                .DefineBlock(out CodeBlockNested fieldsBlock)
-                .DefineBlock(out CodeBlockNested constructorBlock)
-                .DefineBlock(out CodeBlockNested writeBlock)
-                .CloseBrace()
-                .AppendCode($"public {elementClassName} Elements {{ get; }}")
-                .BlankLine()
-                .AppendCode($"public {className}()")
-                .OpenBrace()
-                .AppendCode($"this.Elements = new {elementClassName}();")
-                .CloseBrace()
-                .BlankLine()
-                .AppendCode($"public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)")
-                .OpenBrace()
-                .AppendCode($"this.Elements.Write(sDef);")
-                .CloseBrace()
-                .CloseBrace()
-                ;
+                .DefineBlock(out CodeBlockNested elementSubClassBlock)
+                .DefineBlock(out CodeBlockNested elementFieldsBlock)
 
-            constructorBlock
+                .BlankLine()
                 .AppendCode($"public {elementClassName}()")
                 .OpenBrace()
-                ;
+                .DefineBlock(out CodeBlockNested elementConstructorBlock)
+                .CloseBrace()
 
-            writeBlock
+                .BlankLine()
                 .AppendCode($"public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)")
                 .OpenBrace()
                 .AppendCode($"base.Write(sDef);")
+                .DefineBlock(out CodeBlockNested elementWriteBlock)
+                .CloseBrace()
+
+                .CloseBrace()
+
+                .AppendCode($"public {elementClassName} Elements")
+                .OpenBrace()
+                .AppendCode($"get")
+                .OpenBrace()
+                .AppendCode($"if (this.elements == null)")
+                .AppendCode($"    this.elements = new {elementClassName}();")
+                .AppendCode($"return this.elements;")
+                .CloseBrace()
+                .CloseBrace()
+                .AppendCode($"{elementClassName} elements;")
+
+                .BlankLine()
+                .AppendCode($"public {className}()")
+                .OpenBrace()
+                .DefineBlock(out constructorBlock)
+                .CloseBrace()
+
+                .BlankLine()
+                .AppendCode($"public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)")
+                .OpenBrace()
+                .AppendCode($"sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition")
+                .OpenBrace()
+                .AppendCode($"Path = \"{elements[index].Path}\",")
+                .AppendCode($"ElementId = \"{elements[index].ElementId}\"")
+                .CloseBrace(");")
+                .AppendCode($"if (this.elements != null)")
+                .AppendCode($"    this.elements.Write(sDef);")
+                .CloseBrace()
+                .CloseBrace()
                 ;
+
             index += 1;
-            DefineClassFields(subClassBlock,
-                fieldsBlock,
-                constructorBlock,
-                writeBlock,
+            DefineClassFields(elementSubClassBlock,
+                elementFieldsBlock,
+                elementConstructorBlock,
+                elementWriteBlock,
                 elements,
                 basePath,
                 className,
                 ref index);
-
-            constructorBlock
-                .CloseBrace()
-                ;
-
-            writeBlock
-                .CloseBrace()
-                ;
         }
 
         void ProcessFhirResource(SDefInfo sDefInfo)
@@ -472,7 +485,13 @@ namespace FhirKhit.Maker
                 ref i,
                 sDef.Differential.Element[0].Path,
                 instanceName,
-                ResourceBase);
+                ResourceBase,
+                out CodeBlockNested constructorBlock);
+
+            constructorBlock
+                .AppendCode($"this.Name = \"{sDef.Name}\";")
+                .AppendCode($"this.Uri = \"{sDef.Url}\";")
+                ;
 
             if (i != sDef.Differential.Element.Count)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Invalid element index");
@@ -520,7 +539,9 @@ namespace FhirKhit.Maker
                 ref i,
                 sDef.Differential.Element[0].Path,
                 instanceName,
-                ComplexBase);
+                ComplexBase,
+                out CodeBlockNested dummy);
+
             if (i != sDef.Differential.Element.Count)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Invalid element index");
 

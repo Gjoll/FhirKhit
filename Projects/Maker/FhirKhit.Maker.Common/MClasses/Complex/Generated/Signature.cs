@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:497
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:498
-using System.IO;                                                                                                                            // MakerGen.cs:499
-using System.Linq;                                                                                                                          // MakerGen.cs:500
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:501
-                                                                                                                                            // MakerGen.cs:502
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:503
-{                                                                                                                                           // MakerGen.cs:504
-    #region Json                                                                                                                            // MakerGen.cs:505
+using System;                                                                                                                               // MakerGen.cs:516
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:517
+using System.IO;                                                                                                                            // MakerGen.cs:518
+using System.Linq;                                                                                                                          // MakerGen.cs:519
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:520
+                                                                                                                                            // MakerGen.cs:521
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:522
+{                                                                                                                                           // MakerGen.cs:523
+    #region Json                                                                                                                            // MakerGen.cs:524
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -198,15 +198,15 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:509
+    #endregion                                                                                                                              // MakerGen.cs:528
     /// <summary>
     /// Fhir complex 'Signature'
     /// </summary>
     // 0. Signature
-    public class Signature : FhirKhit.Maker.Common.Complex.ComplexBase                                                                      // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
-        public class Signature_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                       // MakerGen.cs:385
-        {                                                                                                                                   // MakerGen.cs:386
+    public class Signature : FhirKhit.Maker.Common.Complex.ComplexBase                                                                      // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
+        public class Signature_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                       // MakerGen.cs:386
+        {                                                                                                                                   // MakerGen.cs:387
             // 1. Signature.type
             public ElementDefinitionInfo Type;                                                                                              // MakerGen.cs:216
             // 2. Signature.when
@@ -221,8 +221,9 @@ namespace FhirKhit.Maker.Common.Complex                                         
             public ElementDefinitionInfo SigFormat;                                                                                         // MakerGen.cs:216
             // 7. Signature.data
             public ElementDefinitionInfo Data;                                                                                              // MakerGen.cs:216
-            public Signature_Elements()                                                                                                     // MakerGen.cs:407
-            {                                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+            public Signature_Elements()                                                                                                     // MakerGen.cs:392
+            {                                                                                                                               // MakerGen.cs:393
                 {                                                                                                                           // MakerGen.cs:231
                     // 1. Signature.type
                     this.Type = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
@@ -360,10 +361,11 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:243
                     };                                                                                                                      // MakerGen.cs:244
                 }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:427
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
-            {                                                                                                                               // MakerGen.cs:413
-                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+            }                                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
+            {                                                                                                                               // MakerGen.cs:399
+                base.Write(sDef);                                                                                                           // MakerGen.cs:400
                 Type.Write(sDef);                                                                                                           // MakerGen.cs:220
                 When.Write(sDef);                                                                                                           // MakerGen.cs:220
                 Who.Write(sDef);                                                                                                            // MakerGen.cs:220
@@ -371,18 +373,32 @@ namespace FhirKhit.Maker.Common.Complex                                         
                 TargetFormat.Write(sDef);                                                                                                   // MakerGen.cs:220
                 SigFormat.Write(sDef);                                                                                                      // MakerGen.cs:220
                 Data.Write(sDef);                                                                                                           // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:431
-        }                                                                                                                                   // MakerGen.cs:391
-        public Signature_Elements Elements { get; }                                                                                         // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-        public Signature()                                                                                                                  // MakerGen.cs:394
-        {                                                                                                                                   // MakerGen.cs:395
-            this.Elements = new Signature_Elements();                                                                                       // MakerGen.cs:396
-        }                                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
-        {                                                                                                                                   // MakerGen.cs:400
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
-        }                                                                                                                                   // MakerGen.cs:402
-    }                                                                                                                                       // MakerGen.cs:403
-}                                                                                                                                           // MakerGen.cs:514
+            }                                                                                                                               // MakerGen.cs:402
+        }                                                                                                                                   // MakerGen.cs:404
+        public Signature_Elements Elements                                                                                                  // MakerGen.cs:406
+        {                                                                                                                                   // MakerGen.cs:407
+            get                                                                                                                             // MakerGen.cs:408
+            {                                                                                                                               // MakerGen.cs:409
+                if (this.elements == null)                                                                                                  // MakerGen.cs:410
+                    this.elements = new Signature_Elements();                                                                               // MakerGen.cs:411
+                return this.elements;                                                                                                       // MakerGen.cs:412
+            }                                                                                                                               // MakerGen.cs:413
+        }                                                                                                                                   // MakerGen.cs:414
+        Signature_Elements elements;                                                                                                        // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+        public Signature()                                                                                                                  // MakerGen.cs:418
+        {                                                                                                                                   // MakerGen.cs:419
+        }                                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
+        {                                                                                                                                   // MakerGen.cs:425
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
+            {                                                                                                                               // MakerGen.cs:427
+                Path = "Signature",                                                                                                         // MakerGen.cs:428
+                ElementId = "Signature"                                                                                                     // MakerGen.cs:429
+            });                                                                                                                             // MakerGen.cs:430
+            if (this.elements != null)                                                                                                      // MakerGen.cs:431
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
+        }                                                                                                                                   // MakerGen.cs:433
+    }                                                                                                                                       // MakerGen.cs:434
+}                                                                                                                                           // MakerGen.cs:533

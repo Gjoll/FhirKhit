@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:449
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
-using System.IO;                                                                                                                            // MakerGen.cs:451
-using System.Linq;                                                                                                                          // MakerGen.cs:452
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
-                                                                                                                                            // MakerGen.cs:454
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
-{                                                                                                                                           // MakerGen.cs:456
-    #region Json                                                                                                                            // MakerGen.cs:457
-    #if NEVER                                                                                                                               // MakerGen.cs:458
+using System;                                                                                                                               // MakerGen.cs:462
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
+using System.IO;                                                                                                                            // MakerGen.cs:464
+using System.Linq;                                                                                                                          // MakerGen.cs:465
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
+                                                                                                                                            // MakerGen.cs:467
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
+{                                                                                                                                           // MakerGen.cs:469
+    #region Json                                                                                                                            // MakerGen.cs:470
+    #if NEVER                                                                                                                               // MakerGen.cs:471
     {
       "resourceType": "StructureDefinition",
       "id": "NutritionOrder",
@@ -853,31 +853,32 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:461
+    #endregion                                                                                                                              // MakerGen.cs:474
     /// <summary>
     /// Fhir resource 'NutritionOrder'
     /// </summary>
     // 0. NutritionOrder
-    public class NutritionOrder : FhirKhit.Maker.Common.Resource.ResourceBase                                                               // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
-        public class NutritionOrder_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                  // MakerGen.cs:385
-        {                                                                                                                                   // MakerGen.cs:386
+    public class NutritionOrder : FhirKhit.Maker.Common.Resource.ResourceBase                                                               // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
+        public class NutritionOrder_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                  // MakerGen.cs:386
+        {                                                                                                                                   // MakerGen.cs:387
             // 14. NutritionOrder.oralDiet
-            public class Type_OralDiet : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_OralDiet_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_OralDiet : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_OralDiet_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 17. NutritionOrder.oralDiet.nutrient
-                    public class Type_Nutrient : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        public class Type_Nutrient_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                   // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:386
+                    public class Type_Nutrient : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:384
+                    {                                                                                                                       // MakerGen.cs:385
+                        public class Type_Nutrient_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                   // MakerGen.cs:386
+                        {                                                                                                                   // MakerGen.cs:387
                             // 18. NutritionOrder.oralDiet.nutrient.modifier
                             public ElementDefinitionInfo Modifier;                                                                          // MakerGen.cs:216
                             // 19. NutritionOrder.oralDiet.nutrient.amount
                             public ElementDefinitionInfo Amount;                                                                            // MakerGen.cs:216
-                            public Type_Nutrient_Elements()                                                                                 // MakerGen.cs:407
-                            {                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                            public Type_Nutrient_Elements()                                                                                 // MakerGen.cs:392
+                            {                                                                                                               // MakerGen.cs:393
                                 {                                                                                                           // MakerGen.cs:231
                                     // 18. NutritionOrder.oralDiet.nutrient.modifier
                                     this.Modifier = new ElementDefinitionInfo                                                               // MakerGen.cs:233
@@ -912,37 +913,53 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                         }                                                                                                   // MakerGen.cs:243
                                     };                                                                                                      // MakerGen.cs:244
                                 }                                                                                                           // MakerGen.cs:245
-                            }                                                                                                               // MakerGen.cs:427
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:412
-                            {                                                                                                               // MakerGen.cs:413
-                                base.Write(sDef);                                                                                           // MakerGen.cs:414
+                            }                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:398
+                            {                                                                                                               // MakerGen.cs:399
+                                base.Write(sDef);                                                                                           // MakerGen.cs:400
                                 Modifier.Write(sDef);                                                                                       // MakerGen.cs:220
                                 Amount.Write(sDef);                                                                                         // MakerGen.cs:220
-                            }                                                                                                               // MakerGen.cs:431
-                        }                                                                                                                   // MakerGen.cs:391
-                        public Type_Nutrient_Elements Elements { get; }                                                                     // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                        public Type_Nutrient()                                                                                              // MakerGen.cs:394
-                        {                                                                                                                   // MakerGen.cs:395
-                            this.Elements = new Type_Nutrient_Elements();                                                                   // MakerGen.cs:396
-                        }                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:399
-                        {                                                                                                                   // MakerGen.cs:400
-                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:401
-                        }                                                                                                                   // MakerGen.cs:402
-                    }                                                                                                                       // MakerGen.cs:403
+                            }                                                                                                               // MakerGen.cs:402
+                        }                                                                                                                   // MakerGen.cs:404
+                        public Type_Nutrient_Elements Elements                                                                              // MakerGen.cs:406
+                        {                                                                                                                   // MakerGen.cs:407
+                            get                                                                                                             // MakerGen.cs:408
+                            {                                                                                                               // MakerGen.cs:409
+                                if (this.elements == null)                                                                                  // MakerGen.cs:410
+                                    this.elements = new Type_Nutrient_Elements();                                                           // MakerGen.cs:411
+                                return this.elements;                                                                                       // MakerGen.cs:412
+                            }                                                                                                               // MakerGen.cs:413
+                        }                                                                                                                   // MakerGen.cs:414
+                        Type_Nutrient_Elements elements;                                                                                    // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                        public Type_Nutrient()                                                                                              // MakerGen.cs:418
+                        {                                                                                                                   // MakerGen.cs:419
+                        }                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:424
+                        {                                                                                                                   // MakerGen.cs:425
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:426
+                            {                                                                                                               // MakerGen.cs:427
+                                Path = "NutritionOrder.oralDiet.nutrient",                                                                  // MakerGen.cs:428
+                                ElementId = "NutritionOrder.oralDiet.nutrient"                                                              // MakerGen.cs:429
+                            });                                                                                                             // MakerGen.cs:430
+                            if (this.elements != null)                                                                                      // MakerGen.cs:431
+                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:432
+                        }                                                                                                                   // MakerGen.cs:433
+                    }                                                                                                                       // MakerGen.cs:434
                     // 20. NutritionOrder.oralDiet.texture
-                    public class Type_Texture : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        public class Type_Texture_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                    // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:386
+                    public class Type_Texture : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:384
+                    {                                                                                                                       // MakerGen.cs:385
+                        public class Type_Texture_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                    // MakerGen.cs:386
+                        {                                                                                                                   // MakerGen.cs:387
                             // 21. NutritionOrder.oralDiet.texture.modifier
                             public ElementDefinitionInfo Modifier;                                                                          // MakerGen.cs:216
                             // 22. NutritionOrder.oralDiet.texture.foodType
                             public ElementDefinitionInfo FoodType;                                                                          // MakerGen.cs:216
-                            public Type_Texture_Elements()                                                                                  // MakerGen.cs:407
-                            {                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                            public Type_Texture_Elements()                                                                                  // MakerGen.cs:392
+                            {                                                                                                               // MakerGen.cs:393
                                 {                                                                                                           // MakerGen.cs:231
                                     // 21. NutritionOrder.oralDiet.texture.modifier
                                     this.Modifier = new ElementDefinitionInfo                                                               // MakerGen.cs:233
@@ -977,26 +994,41 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                         }                                                                                                   // MakerGen.cs:243
                                     };                                                                                                      // MakerGen.cs:244
                                 }                                                                                                           // MakerGen.cs:245
-                            }                                                                                                               // MakerGen.cs:427
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:412
-                            {                                                                                                               // MakerGen.cs:413
-                                base.Write(sDef);                                                                                           // MakerGen.cs:414
+                            }                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:398
+                            {                                                                                                               // MakerGen.cs:399
+                                base.Write(sDef);                                                                                           // MakerGen.cs:400
                                 Modifier.Write(sDef);                                                                                       // MakerGen.cs:220
                                 FoodType.Write(sDef);                                                                                       // MakerGen.cs:220
-                            }                                                                                                               // MakerGen.cs:431
-                        }                                                                                                                   // MakerGen.cs:391
-                        public Type_Texture_Elements Elements { get; }                                                                      // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                        public Type_Texture()                                                                                               // MakerGen.cs:394
-                        {                                                                                                                   // MakerGen.cs:395
-                            this.Elements = new Type_Texture_Elements();                                                                    // MakerGen.cs:396
-                        }                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:399
-                        {                                                                                                                   // MakerGen.cs:400
-                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:401
-                        }                                                                                                                   // MakerGen.cs:402
-                    }                                                                                                                       // MakerGen.cs:403
+                            }                                                                                                               // MakerGen.cs:402
+                        }                                                                                                                   // MakerGen.cs:404
+                        public Type_Texture_Elements Elements                                                                               // MakerGen.cs:406
+                        {                                                                                                                   // MakerGen.cs:407
+                            get                                                                                                             // MakerGen.cs:408
+                            {                                                                                                               // MakerGen.cs:409
+                                if (this.elements == null)                                                                                  // MakerGen.cs:410
+                                    this.elements = new Type_Texture_Elements();                                                            // MakerGen.cs:411
+                                return this.elements;                                                                                       // MakerGen.cs:412
+                            }                                                                                                               // MakerGen.cs:413
+                        }                                                                                                                   // MakerGen.cs:414
+                        Type_Texture_Elements elements;                                                                                     // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                        public Type_Texture()                                                                                               // MakerGen.cs:418
+                        {                                                                                                                   // MakerGen.cs:419
+                        }                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:424
+                        {                                                                                                                   // MakerGen.cs:425
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:426
+                            {                                                                                                               // MakerGen.cs:427
+                                Path = "NutritionOrder.oralDiet.texture",                                                                   // MakerGen.cs:428
+                                ElementId = "NutritionOrder.oralDiet.texture"                                                               // MakerGen.cs:429
+                            });                                                                                                             // MakerGen.cs:430
+                            if (this.elements != null)                                                                                      // MakerGen.cs:431
+                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:432
+                        }                                                                                                                   // MakerGen.cs:433
+                    }                                                                                                                       // MakerGen.cs:434
                     // 15. NutritionOrder.oralDiet.type
                     public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
                     // 16. NutritionOrder.oralDiet.schedule
@@ -1009,8 +1041,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public ElementDefinitionInfo FluidConsistencyType;                                                                      // MakerGen.cs:216
                     // 24. NutritionOrder.oralDiet.instruction
                     public ElementDefinitionInfo Instruction;                                                                               // MakerGen.cs:216
-                    public Type_OralDiet_Elements()                                                                                         // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_OralDiet_Elements()                                                                                         // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 15. NutritionOrder.oralDiet.type
                             this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
@@ -1113,35 +1146,50 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Type.Write(sDef);                                                                                                   // MakerGen.cs:220
                         Schedule.Write(sDef);                                                                                               // MakerGen.cs:220
                         Nutrient.Write(sDef);                                                                                               // MakerGen.cs:220
                         Texture.Write(sDef);                                                                                                // MakerGen.cs:220
                         FluidConsistencyType.Write(sDef);                                                                                   // MakerGen.cs:220
                         Instruction.Write(sDef);                                                                                            // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_OralDiet_Elements Elements { get; }                                                                             // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_OralDiet()                                                                                                      // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_OralDiet_Elements();                                                                           // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_OralDiet_Elements Elements                                                                                      // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_OralDiet_Elements();                                                                   // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_OralDiet_Elements elements;                                                                                            // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_OralDiet()                                                                                                      // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "NutritionOrder.oralDiet",                                                                                   // MakerGen.cs:428
+                        ElementId = "NutritionOrder.oralDiet"                                                                               // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 25. NutritionOrder.supplement
-            public class Type_Supplement : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_Supplement_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_Supplement : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_Supplement_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 26. NutritionOrder.supplement.type
                     public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
                     // 27. NutritionOrder.supplement.productName
@@ -1152,8 +1200,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public ElementDefinitionInfo Quantity;                                                                                  // MakerGen.cs:216
                     // 30. NutritionOrder.supplement.instruction
                     public ElementDefinitionInfo Instruction;                                                                               // MakerGen.cs:216
-                    public Type_Supplement_Elements()                                                                                       // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_Supplement_Elements()                                                                                       // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 26. NutritionOrder.supplement.type
                             this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
@@ -1239,47 +1288,63 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Type.Write(sDef);                                                                                                   // MakerGen.cs:220
                         ProductName.Write(sDef);                                                                                            // MakerGen.cs:220
                         Schedule.Write(sDef);                                                                                               // MakerGen.cs:220
                         Quantity.Write(sDef);                                                                                               // MakerGen.cs:220
                         Instruction.Write(sDef);                                                                                            // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_Supplement_Elements Elements { get; }                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_Supplement()                                                                                                    // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_Supplement_Elements();                                                                         // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_Supplement_Elements Elements                                                                                    // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_Supplement_Elements();                                                                 // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_Supplement_Elements elements;                                                                                          // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_Supplement()                                                                                                    // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "NutritionOrder.supplement",                                                                                 // MakerGen.cs:428
+                        ElementId = "NutritionOrder.supplement"                                                                             // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 31. NutritionOrder.enteralFormula
-            public class Type_EnteralFormula : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_EnteralFormula_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_EnteralFormula : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_EnteralFormula_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 38. NutritionOrder.enteralFormula.administration
-                    public class Type_Administration : FhirKhit.Maker.Common.Complex.ComplexBase                                            // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        public class Type_Administration_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                             // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:386
+                    public class Type_Administration : FhirKhit.Maker.Common.Complex.ComplexBase                                            // MakerGen.cs:384
+                    {                                                                                                                       // MakerGen.cs:385
+                        public class Type_Administration_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                             // MakerGen.cs:386
+                        {                                                                                                                   // MakerGen.cs:387
                             // 39. NutritionOrder.enteralFormula.administration.schedule
                             public ElementDefinitionInfo Schedule;                                                                          // MakerGen.cs:216
                             // 40. NutritionOrder.enteralFormula.administration.quantity
                             public ElementDefinitionInfo Quantity;                                                                          // MakerGen.cs:216
                             // 41. NutritionOrder.enteralFormula.administration.rate[x]
                             public ElementDefinitionInfo Rate;                                                                              // MakerGen.cs:216
-                            public Type_Administration_Elements()                                                                           // MakerGen.cs:407
-                            {                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                            public Type_Administration_Elements()                                                                           // MakerGen.cs:392
+                            {                                                                                                               // MakerGen.cs:393
                                 {                                                                                                           // MakerGen.cs:231
                                     // 39. NutritionOrder.enteralFormula.administration.schedule
                                     this.Schedule = new ElementDefinitionInfo                                                               // MakerGen.cs:233
@@ -1334,27 +1399,42 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                         }                                                                                                   // MakerGen.cs:243
                                     };                                                                                                      // MakerGen.cs:244
                                 }                                                                                                           // MakerGen.cs:245
-                            }                                                                                                               // MakerGen.cs:427
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:412
-                            {                                                                                                               // MakerGen.cs:413
-                                base.Write(sDef);                                                                                           // MakerGen.cs:414
+                            }                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:398
+                            {                                                                                                               // MakerGen.cs:399
+                                base.Write(sDef);                                                                                           // MakerGen.cs:400
                                 Schedule.Write(sDef);                                                                                       // MakerGen.cs:220
                                 Quantity.Write(sDef);                                                                                       // MakerGen.cs:220
                                 Rate.Write(sDef);                                                                                           // MakerGen.cs:220
-                            }                                                                                                               // MakerGen.cs:431
-                        }                                                                                                                   // MakerGen.cs:391
-                        public Type_Administration_Elements Elements { get; }                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                        public Type_Administration()                                                                                        // MakerGen.cs:394
-                        {                                                                                                                   // MakerGen.cs:395
-                            this.Elements = new Type_Administration_Elements();                                                             // MakerGen.cs:396
-                        }                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:399
-                        {                                                                                                                   // MakerGen.cs:400
-                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:401
-                        }                                                                                                                   // MakerGen.cs:402
-                    }                                                                                                                       // MakerGen.cs:403
+                            }                                                                                                               // MakerGen.cs:402
+                        }                                                                                                                   // MakerGen.cs:404
+                        public Type_Administration_Elements Elements                                                                        // MakerGen.cs:406
+                        {                                                                                                                   // MakerGen.cs:407
+                            get                                                                                                             // MakerGen.cs:408
+                            {                                                                                                               // MakerGen.cs:409
+                                if (this.elements == null)                                                                                  // MakerGen.cs:410
+                                    this.elements = new Type_Administration_Elements();                                                     // MakerGen.cs:411
+                                return this.elements;                                                                                       // MakerGen.cs:412
+                            }                                                                                                               // MakerGen.cs:413
+                        }                                                                                                                   // MakerGen.cs:414
+                        Type_Administration_Elements elements;                                                                              // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                        public Type_Administration()                                                                                        // MakerGen.cs:418
+                        {                                                                                                                   // MakerGen.cs:419
+                        }                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:424
+                        {                                                                                                                   // MakerGen.cs:425
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:426
+                            {                                                                                                               // MakerGen.cs:427
+                                Path = "NutritionOrder.enteralFormula.administration",                                                      // MakerGen.cs:428
+                                ElementId = "NutritionOrder.enteralFormula.administration"                                                  // MakerGen.cs:429
+                            });                                                                                                             // MakerGen.cs:430
+                            if (this.elements != null)                                                                                      // MakerGen.cs:431
+                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:432
+                        }                                                                                                                   // MakerGen.cs:433
+                    }                                                                                                                       // MakerGen.cs:434
                     // 32. NutritionOrder.enteralFormula.baseFormulaType
                     public ElementDefinitionInfo BaseFormulaType;                                                                           // MakerGen.cs:216
                     // 33. NutritionOrder.enteralFormula.baseFormulaProductName
@@ -1373,8 +1453,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public ElementDefinitionInfo MaxVolumeToDeliver;                                                                        // MakerGen.cs:216
                     // 43. NutritionOrder.enteralFormula.administrationInstruction
                     public ElementDefinitionInfo AdministrationInstruction;                                                                 // MakerGen.cs:216
-                    public Type_EnteralFormula_Elements()                                                                                   // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_EnteralFormula_Elements()                                                                                   // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 32. NutritionOrder.enteralFormula.baseFormulaType
                             this.BaseFormulaType = new ElementDefinitionInfo                                                                // MakerGen.cs:233
@@ -1528,10 +1609,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         BaseFormulaType.Write(sDef);                                                                                        // MakerGen.cs:220
                         BaseFormulaProductName.Write(sDef);                                                                                 // MakerGen.cs:220
                         AdditiveType.Write(sDef);                                                                                           // MakerGen.cs:220
@@ -1541,20 +1623,34 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Administration.Write(sDef);                                                                                         // MakerGen.cs:220
                         MaxVolumeToDeliver.Write(sDef);                                                                                     // MakerGen.cs:220
                         AdministrationInstruction.Write(sDef);                                                                              // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_EnteralFormula_Elements Elements { get; }                                                                       // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_EnteralFormula()                                                                                                // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_EnteralFormula_Elements();                                                                     // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_EnteralFormula_Elements Elements                                                                                // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_EnteralFormula_Elements();                                                             // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_EnteralFormula_Elements elements;                                                                                      // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_EnteralFormula()                                                                                                // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "NutritionOrder.enteralFormula",                                                                             // MakerGen.cs:428
+                        ElementId = "NutritionOrder.enteralFormula"                                                                         // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 1. NutritionOrder.identifier
             public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
             // 2. NutritionOrder.instantiatesCanonical
@@ -1589,8 +1685,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public ElementDefinitionInfo EnteralFormula;                                                                                    // MakerGen.cs:216
             // 44. NutritionOrder.note
             public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:216
-            public NutritionOrder_Elements()                                                                                                // MakerGen.cs:407
-            {                                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+            public NutritionOrder_Elements()                                                                                                // MakerGen.cs:392
+            {                                                                                                                               // MakerGen.cs:393
                 {                                                                                                                           // MakerGen.cs:231
                     // 1. NutritionOrder.identifier
                     this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
@@ -1902,10 +1999,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:243
                     };                                                                                                                      // MakerGen.cs:244
                 }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:427
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
-            {                                                                                                                               // MakerGen.cs:413
-                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+            }                                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
+            {                                                                                                                               // MakerGen.cs:399
+                base.Write(sDef);                                                                                                           // MakerGen.cs:400
                 Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
                 InstantiatesCanonical.Write(sDef);                                                                                          // MakerGen.cs:220
                 InstantiatesUri.Write(sDef);                                                                                                // MakerGen.cs:220
@@ -1923,18 +2021,34 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 Supplement.Write(sDef);                                                                                                     // MakerGen.cs:220
                 EnteralFormula.Write(sDef);                                                                                                 // MakerGen.cs:220
                 Note.Write(sDef);                                                                                                           // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:431
-        }                                                                                                                                   // MakerGen.cs:391
-        public NutritionOrder_Elements Elements { get; }                                                                                    // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-        public NutritionOrder()                                                                                                             // MakerGen.cs:394
-        {                                                                                                                                   // MakerGen.cs:395
-            this.Elements = new NutritionOrder_Elements();                                                                                  // MakerGen.cs:396
-        }                                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
-        {                                                                                                                                   // MakerGen.cs:400
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
-        }                                                                                                                                   // MakerGen.cs:402
-    }                                                                                                                                       // MakerGen.cs:403
-}                                                                                                                                           // MakerGen.cs:466
+            }                                                                                                                               // MakerGen.cs:402
+        }                                                                                                                                   // MakerGen.cs:404
+        public NutritionOrder_Elements Elements                                                                                             // MakerGen.cs:406
+        {                                                                                                                                   // MakerGen.cs:407
+            get                                                                                                                             // MakerGen.cs:408
+            {                                                                                                                               // MakerGen.cs:409
+                if (this.elements == null)                                                                                                  // MakerGen.cs:410
+                    this.elements = new NutritionOrder_Elements();                                                                          // MakerGen.cs:411
+                return this.elements;                                                                                                       // MakerGen.cs:412
+            }                                                                                                                               // MakerGen.cs:413
+        }                                                                                                                                   // MakerGen.cs:414
+        NutritionOrder_Elements elements;                                                                                                   // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+        public NutritionOrder()                                                                                                             // MakerGen.cs:418
+        {                                                                                                                                   // MakerGen.cs:419
+            this.Name = "NutritionOrder";                                                                                                   // MakerGen.cs:492
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/NutritionOrder";                                                            // MakerGen.cs:493
+        }                                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
+        {                                                                                                                                   // MakerGen.cs:425
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
+            {                                                                                                                               // MakerGen.cs:427
+                Path = "NutritionOrder",                                                                                                    // MakerGen.cs:428
+                ElementId = "NutritionOrder"                                                                                                // MakerGen.cs:429
+            });                                                                                                                             // MakerGen.cs:430
+            if (this.elements != null)                                                                                                      // MakerGen.cs:431
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
+        }                                                                                                                                   // MakerGen.cs:433
+    }                                                                                                                                       // MakerGen.cs:434
+}                                                                                                                                           // MakerGen.cs:479

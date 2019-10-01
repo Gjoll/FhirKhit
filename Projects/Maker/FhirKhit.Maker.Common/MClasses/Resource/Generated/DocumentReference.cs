@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:449
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
-using System.IO;                                                                                                                            // MakerGen.cs:451
-using System.Linq;                                                                                                                          // MakerGen.cs:452
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
-                                                                                                                                            // MakerGen.cs:454
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
-{                                                                                                                                           // MakerGen.cs:456
-    #region Json                                                                                                                            // MakerGen.cs:457
-    #if NEVER                                                                                                                               // MakerGen.cs:458
+using System;                                                                                                                               // MakerGen.cs:462
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
+using System.IO;                                                                                                                            // MakerGen.cs:464
+using System.Linq;                                                                                                                          // MakerGen.cs:465
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
+                                                                                                                                            // MakerGen.cs:467
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
+{                                                                                                                                           // MakerGen.cs:469
+    #region Json                                                                                                                            // MakerGen.cs:470
+    #if NEVER                                                                                                                               // MakerGen.cs:471
     {
       "resourceType": "StructureDefinition",
       "id": "DocumentReference",
@@ -591,26 +591,27 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:461
+    #endregion                                                                                                                              // MakerGen.cs:474
     /// <summary>
     /// Fhir resource 'DocumentReference'
     /// </summary>
     // 0. DocumentReference
-    public class DocumentReference : FhirKhit.Maker.Common.Resource.ResourceBase                                                            // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
-        public class DocumentReference_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                               // MakerGen.cs:385
-        {                                                                                                                                   // MakerGen.cs:386
+    public class DocumentReference : FhirKhit.Maker.Common.Resource.ResourceBase                                                            // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
+        public class DocumentReference_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                               // MakerGen.cs:386
+        {                                                                                                                                   // MakerGen.cs:387
             // 12. DocumentReference.relatesTo
-            public class Type_RelatesTo : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_RelatesTo_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_RelatesTo : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_RelatesTo_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 13. DocumentReference.relatesTo.code
                     public ElementDefinitionInfo Code;                                                                                      // MakerGen.cs:216
                     // 14. DocumentReference.relatesTo.target
                     public ElementDefinitionInfo Target;                                                                                    // MakerGen.cs:216
-                    public Type_RelatesTo_Elements()                                                                                        // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_RelatesTo_Elements()                                                                                        // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 13. DocumentReference.relatesTo.code
                             this.Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
@@ -649,37 +650,53 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Code.Write(sDef);                                                                                                   // MakerGen.cs:220
                         Target.Write(sDef);                                                                                                 // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_RelatesTo_Elements Elements { get; }                                                                            // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_RelatesTo()                                                                                                     // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_RelatesTo_Elements();                                                                          // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_RelatesTo_Elements Elements                                                                                     // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_RelatesTo_Elements();                                                                  // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_RelatesTo_Elements elements;                                                                                           // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_RelatesTo()                                                                                                     // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "DocumentReference.relatesTo",                                                                               // MakerGen.cs:428
+                        ElementId = "DocumentReference.relatesTo"                                                                           // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 17. DocumentReference.content
-            public class Type_Content : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_Content_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                            // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_Content : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_Content_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                            // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 18. DocumentReference.content.attachment
                     public ElementDefinitionInfo Attachment;                                                                                // MakerGen.cs:216
                     // 19. DocumentReference.content.format
                     public ElementDefinitionInfo Format;                                                                                    // MakerGen.cs:216
-                    public Type_Content_Elements()                                                                                          // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_Content_Elements()                                                                                          // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 18. DocumentReference.content.attachment
                             this.Attachment = new ElementDefinitionInfo                                                                     // MakerGen.cs:233
@@ -714,31 +731,46 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Attachment.Write(sDef);                                                                                             // MakerGen.cs:220
                         Format.Write(sDef);                                                                                                 // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_Content_Elements Elements { get; }                                                                              // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_Content()                                                                                                       // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_Content_Elements();                                                                            // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_Content_Elements Elements                                                                                       // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_Content_Elements();                                                                    // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_Content_Elements elements;                                                                                             // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_Content()                                                                                                       // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "DocumentReference.content",                                                                                 // MakerGen.cs:428
+                        ElementId = "DocumentReference.content"                                                                             // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 20. DocumentReference.context
-            public class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_Context_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                            // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_Context_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                            // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 21. DocumentReference.context.encounter
                     public ElementDefinitionInfo Encounter;                                                                                 // MakerGen.cs:216
                     // 22. DocumentReference.context.event
@@ -753,8 +785,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public ElementDefinitionInfo SourcePatientInfo;                                                                         // MakerGen.cs:216
                     // 27. DocumentReference.context.related
                     public ElementDefinitionInfo Related;                                                                                   // MakerGen.cs:216
-                    public Type_Context_Elements()                                                                                          // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_Context_Elements()                                                                                          // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 21. DocumentReference.context.encounter
                             this.Encounter = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
@@ -887,10 +920,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Encounter.Write(sDef);                                                                                              // MakerGen.cs:220
                         Event.Write(sDef);                                                                                                  // MakerGen.cs:220
                         Period.Write(sDef);                                                                                                 // MakerGen.cs:220
@@ -898,20 +932,34 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         PracticeSetting.Write(sDef);                                                                                        // MakerGen.cs:220
                         SourcePatientInfo.Write(sDef);                                                                                      // MakerGen.cs:220
                         Related.Write(sDef);                                                                                                // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_Context_Elements Elements { get; }                                                                              // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_Context()                                                                                                       // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_Context_Elements();                                                                            // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_Context_Elements Elements                                                                                       // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_Context_Elements();                                                                    // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_Context_Elements elements;                                                                                             // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_Context()                                                                                                       // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "DocumentReference.context",                                                                                 // MakerGen.cs:428
+                        ElementId = "DocumentReference.context"                                                                             // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 1. DocumentReference.masterIdentifier
             public ElementDefinitionInfo MasterIdentifier;                                                                                  // MakerGen.cs:216
             // 2. DocumentReference.identifier
@@ -944,8 +992,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public ElementDefinitionInfo Content;                                                                                           // MakerGen.cs:216
             // 20. DocumentReference.context
             public ElementDefinitionInfo Context;                                                                                           // MakerGen.cs:216
-            public DocumentReference_Elements()                                                                                             // MakerGen.cs:407
-            {                                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+            public DocumentReference_Elements()                                                                                             // MakerGen.cs:392
+            {                                                                                                                               // MakerGen.cs:393
                 {                                                                                                                           // MakerGen.cs:231
                     // 1. DocumentReference.masterIdentifier
                     this.MasterIdentifier = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
@@ -1244,10 +1293,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:243
                     };                                                                                                                      // MakerGen.cs:244
                 }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:427
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
-            {                                                                                                                               // MakerGen.cs:413
-                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+            }                                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
+            {                                                                                                                               // MakerGen.cs:399
+                base.Write(sDef);                                                                                                           // MakerGen.cs:400
                 MasterIdentifier.Write(sDef);                                                                                               // MakerGen.cs:220
                 Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
                 Status.Write(sDef);                                                                                                         // MakerGen.cs:220
@@ -1264,18 +1314,34 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 SecurityLabel.Write(sDef);                                                                                                  // MakerGen.cs:220
                 Content.Write(sDef);                                                                                                        // MakerGen.cs:220
                 Context.Write(sDef);                                                                                                        // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:431
-        }                                                                                                                                   // MakerGen.cs:391
-        public DocumentReference_Elements Elements { get; }                                                                                 // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-        public DocumentReference()                                                                                                          // MakerGen.cs:394
-        {                                                                                                                                   // MakerGen.cs:395
-            this.Elements = new DocumentReference_Elements();                                                                               // MakerGen.cs:396
-        }                                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
-        {                                                                                                                                   // MakerGen.cs:400
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
-        }                                                                                                                                   // MakerGen.cs:402
-    }                                                                                                                                       // MakerGen.cs:403
-}                                                                                                                                           // MakerGen.cs:466
+            }                                                                                                                               // MakerGen.cs:402
+        }                                                                                                                                   // MakerGen.cs:404
+        public DocumentReference_Elements Elements                                                                                          // MakerGen.cs:406
+        {                                                                                                                                   // MakerGen.cs:407
+            get                                                                                                                             // MakerGen.cs:408
+            {                                                                                                                               // MakerGen.cs:409
+                if (this.elements == null)                                                                                                  // MakerGen.cs:410
+                    this.elements = new DocumentReference_Elements();                                                                       // MakerGen.cs:411
+                return this.elements;                                                                                                       // MakerGen.cs:412
+            }                                                                                                                               // MakerGen.cs:413
+        }                                                                                                                                   // MakerGen.cs:414
+        DocumentReference_Elements elements;                                                                                                // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+        public DocumentReference()                                                                                                          // MakerGen.cs:418
+        {                                                                                                                                   // MakerGen.cs:419
+            this.Name = "DocumentReference";                                                                                                // MakerGen.cs:492
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/DocumentReference";                                                         // MakerGen.cs:493
+        }                                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
+        {                                                                                                                                   // MakerGen.cs:425
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
+            {                                                                                                                               // MakerGen.cs:427
+                Path = "DocumentReference",                                                                                                 // MakerGen.cs:428
+                ElementId = "DocumentReference"                                                                                             // MakerGen.cs:429
+            });                                                                                                                             // MakerGen.cs:430
+            if (this.elements != null)                                                                                                      // MakerGen.cs:431
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
+        }                                                                                                                                   // MakerGen.cs:433
+    }                                                                                                                                       // MakerGen.cs:434
+}                                                                                                                                           // MakerGen.cs:479

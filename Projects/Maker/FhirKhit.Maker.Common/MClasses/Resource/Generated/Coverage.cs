@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:449
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
-using System.IO;                                                                                                                            // MakerGen.cs:451
-using System.Linq;                                                                                                                          // MakerGen.cs:452
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
-                                                                                                                                            // MakerGen.cs:454
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
-{                                                                                                                                           // MakerGen.cs:456
-    #region Json                                                                                                                            // MakerGen.cs:457
-    #if NEVER                                                                                                                               // MakerGen.cs:458
+using System;                                                                                                                               // MakerGen.cs:462
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
+using System.IO;                                                                                                                            // MakerGen.cs:464
+using System.Linq;                                                                                                                          // MakerGen.cs:465
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
+                                                                                                                                            // MakerGen.cs:467
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
+{                                                                                                                                           // MakerGen.cs:469
+    #region Json                                                                                                                            // MakerGen.cs:470
+    #if NEVER                                                                                                                               // MakerGen.cs:471
     {
       "resourceType": "StructureDefinition",
       "id": "Coverage",
@@ -520,28 +520,29 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:461
+    #endregion                                                                                                                              // MakerGen.cs:474
     /// <summary>
     /// Fhir resource 'Coverage'
     /// </summary>
     // 0. Coverage
-    public class Coverage : FhirKhit.Maker.Common.Resource.ResourceBase                                                                     // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
-        public class Coverage_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                        // MakerGen.cs:385
-        {                                                                                                                                   // MakerGen.cs:386
+    public class Coverage : FhirKhit.Maker.Common.Resource.ResourceBase                                                                     // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
+        public class Coverage_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                        // MakerGen.cs:386
+        {                                                                                                                                   // MakerGen.cs:387
             // 12. Coverage.class
-            public class Type_Class : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_Class_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_Class : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_Class_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 13. Coverage.class.type
                     public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
                     // 14. Coverage.class.value
                     public ElementDefinitionInfo Value;                                                                                     // MakerGen.cs:216
                     // 15. Coverage.class.name
                     public ElementDefinitionInfo Name;                                                                                      // MakerGen.cs:216
-                    public Type_Class_Elements()                                                                                            // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_Class_Elements()                                                                                            // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 13. Coverage.class.type
                             this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
@@ -593,43 +594,59 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Type.Write(sDef);                                                                                                   // MakerGen.cs:220
                         Value.Write(sDef);                                                                                                  // MakerGen.cs:220
                         Name.Write(sDef);                                                                                                   // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_Class_Elements Elements { get; }                                                                                // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_Class()                                                                                                         // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_Class_Elements();                                                                              // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_Class_Elements Elements                                                                                         // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_Class_Elements();                                                                      // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_Class_Elements elements;                                                                                               // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_Class()                                                                                                         // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "Coverage.class",                                                                                            // MakerGen.cs:428
+                        ElementId = "Coverage.class"                                                                                        // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 18. Coverage.costToBeneficiary
-            public class Type_CostToBeneficiary : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_CostToBeneficiary_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                  // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_CostToBeneficiary : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_CostToBeneficiary_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                  // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 21. Coverage.costToBeneficiary.exception
-                    public class Type_Exception : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        public class Type_Exception_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                  // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:386
+                    public class Type_Exception : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:384
+                    {                                                                                                                       // MakerGen.cs:385
+                        public class Type_Exception_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                  // MakerGen.cs:386
+                        {                                                                                                                   // MakerGen.cs:387
                             // 22. Coverage.costToBeneficiary.exception.type
                             public ElementDefinitionInfo Type;                                                                              // MakerGen.cs:216
                             // 23. Coverage.costToBeneficiary.exception.period
                             public ElementDefinitionInfo Period;                                                                            // MakerGen.cs:216
-                            public Type_Exception_Elements()                                                                                // MakerGen.cs:407
-                            {                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                            public Type_Exception_Elements()                                                                                // MakerGen.cs:392
+                            {                                                                                                               // MakerGen.cs:393
                                 {                                                                                                           // MakerGen.cs:231
                                     // 22. Coverage.costToBeneficiary.exception.type
                                     this.Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:233
@@ -664,34 +681,50 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                         }                                                                                                   // MakerGen.cs:243
                                     };                                                                                                      // MakerGen.cs:244
                                 }                                                                                                           // MakerGen.cs:245
-                            }                                                                                                               // MakerGen.cs:427
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:412
-                            {                                                                                                               // MakerGen.cs:413
-                                base.Write(sDef);                                                                                           // MakerGen.cs:414
+                            }                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:398
+                            {                                                                                                               // MakerGen.cs:399
+                                base.Write(sDef);                                                                                           // MakerGen.cs:400
                                 Type.Write(sDef);                                                                                           // MakerGen.cs:220
                                 Period.Write(sDef);                                                                                         // MakerGen.cs:220
-                            }                                                                                                               // MakerGen.cs:431
-                        }                                                                                                                   // MakerGen.cs:391
-                        public Type_Exception_Elements Elements { get; }                                                                    // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                        public Type_Exception()                                                                                             // MakerGen.cs:394
-                        {                                                                                                                   // MakerGen.cs:395
-                            this.Elements = new Type_Exception_Elements();                                                                  // MakerGen.cs:396
-                        }                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:399
-                        {                                                                                                                   // MakerGen.cs:400
-                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:401
-                        }                                                                                                                   // MakerGen.cs:402
-                    }                                                                                                                       // MakerGen.cs:403
+                            }                                                                                                               // MakerGen.cs:402
+                        }                                                                                                                   // MakerGen.cs:404
+                        public Type_Exception_Elements Elements                                                                             // MakerGen.cs:406
+                        {                                                                                                                   // MakerGen.cs:407
+                            get                                                                                                             // MakerGen.cs:408
+                            {                                                                                                               // MakerGen.cs:409
+                                if (this.elements == null)                                                                                  // MakerGen.cs:410
+                                    this.elements = new Type_Exception_Elements();                                                          // MakerGen.cs:411
+                                return this.elements;                                                                                       // MakerGen.cs:412
+                            }                                                                                                               // MakerGen.cs:413
+                        }                                                                                                                   // MakerGen.cs:414
+                        Type_Exception_Elements elements;                                                                                   // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                        public Type_Exception()                                                                                             // MakerGen.cs:418
+                        {                                                                                                                   // MakerGen.cs:419
+                        }                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:424
+                        {                                                                                                                   // MakerGen.cs:425
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:426
+                            {                                                                                                               // MakerGen.cs:427
+                                Path = "Coverage.costToBeneficiary.exception",                                                              // MakerGen.cs:428
+                                ElementId = "Coverage.costToBeneficiary.exception"                                                          // MakerGen.cs:429
+                            });                                                                                                             // MakerGen.cs:430
+                            if (this.elements != null)                                                                                      // MakerGen.cs:431
+                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:432
+                        }                                                                                                                   // MakerGen.cs:433
+                    }                                                                                                                       // MakerGen.cs:434
                     // 19. Coverage.costToBeneficiary.type
                     public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
                     // 20. Coverage.costToBeneficiary.value[x]
                     public ElementDefinitionInfo Value;                                                                                     // MakerGen.cs:216
                     // 21. Coverage.costToBeneficiary.exception
                     public ElementDefinitionInfo Exception;                                                                                 // MakerGen.cs:216
-                    public Type_CostToBeneficiary_Elements()                                                                                // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_CostToBeneficiary_Elements()                                                                                // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 19. Coverage.costToBeneficiary.type
                             this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
@@ -746,27 +779,42 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Type.Write(sDef);                                                                                                   // MakerGen.cs:220
                         Value.Write(sDef);                                                                                                  // MakerGen.cs:220
                         Exception.Write(sDef);                                                                                              // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_CostToBeneficiary_Elements Elements { get; }                                                                    // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_CostToBeneficiary()                                                                                             // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_CostToBeneficiary_Elements();                                                                  // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_CostToBeneficiary_Elements Elements                                                                             // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_CostToBeneficiary_Elements();                                                          // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_CostToBeneficiary_Elements elements;                                                                                   // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_CostToBeneficiary()                                                                                             // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "Coverage.costToBeneficiary",                                                                                // MakerGen.cs:428
+                        ElementId = "Coverage.costToBeneficiary"                                                                            // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 1. Coverage.identifier
             public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
             // 2. Coverage.status
@@ -801,8 +849,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public ElementDefinitionInfo Subrogation;                                                                                       // MakerGen.cs:216
             // 25. Coverage.contract
             public ElementDefinitionInfo Contract;                                                                                          // MakerGen.cs:216
-            public Coverage_Elements()                                                                                                      // MakerGen.cs:407
-            {                                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+            public Coverage_Elements()                                                                                                      // MakerGen.cs:392
+            {                                                                                                                               // MakerGen.cs:393
                 {                                                                                                                           // MakerGen.cs:231
                     // 1. Coverage.identifier
                     this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
@@ -1117,10 +1166,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:243
                     };                                                                                                                      // MakerGen.cs:244
                 }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:427
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
-            {                                                                                                                               // MakerGen.cs:413
-                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+            }                                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
+            {                                                                                                                               // MakerGen.cs:399
+                base.Write(sDef);                                                                                                           // MakerGen.cs:400
                 Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
                 Status.Write(sDef);                                                                                                         // MakerGen.cs:220
                 Type.Write(sDef);                                                                                                           // MakerGen.cs:220
@@ -1138,18 +1188,34 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 CostToBeneficiary.Write(sDef);                                                                                              // MakerGen.cs:220
                 Subrogation.Write(sDef);                                                                                                    // MakerGen.cs:220
                 Contract.Write(sDef);                                                                                                       // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:431
-        }                                                                                                                                   // MakerGen.cs:391
-        public Coverage_Elements Elements { get; }                                                                                          // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-        public Coverage()                                                                                                                   // MakerGen.cs:394
-        {                                                                                                                                   // MakerGen.cs:395
-            this.Elements = new Coverage_Elements();                                                                                        // MakerGen.cs:396
-        }                                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
-        {                                                                                                                                   // MakerGen.cs:400
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
-        }                                                                                                                                   // MakerGen.cs:402
-    }                                                                                                                                       // MakerGen.cs:403
-}                                                                                                                                           // MakerGen.cs:466
+            }                                                                                                                               // MakerGen.cs:402
+        }                                                                                                                                   // MakerGen.cs:404
+        public Coverage_Elements Elements                                                                                                   // MakerGen.cs:406
+        {                                                                                                                                   // MakerGen.cs:407
+            get                                                                                                                             // MakerGen.cs:408
+            {                                                                                                                               // MakerGen.cs:409
+                if (this.elements == null)                                                                                                  // MakerGen.cs:410
+                    this.elements = new Coverage_Elements();                                                                                // MakerGen.cs:411
+                return this.elements;                                                                                                       // MakerGen.cs:412
+            }                                                                                                                               // MakerGen.cs:413
+        }                                                                                                                                   // MakerGen.cs:414
+        Coverage_Elements elements;                                                                                                         // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+        public Coverage()                                                                                                                   // MakerGen.cs:418
+        {                                                                                                                                   // MakerGen.cs:419
+            this.Name = "Coverage";                                                                                                         // MakerGen.cs:492
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Coverage";                                                                  // MakerGen.cs:493
+        }                                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
+        {                                                                                                                                   // MakerGen.cs:425
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
+            {                                                                                                                               // MakerGen.cs:427
+                Path = "Coverage",                                                                                                          // MakerGen.cs:428
+                ElementId = "Coverage"                                                                                                      // MakerGen.cs:429
+            });                                                                                                                             // MakerGen.cs:430
+            if (this.elements != null)                                                                                                      // MakerGen.cs:431
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
+        }                                                                                                                                   // MakerGen.cs:433
+    }                                                                                                                                       // MakerGen.cs:434
+}                                                                                                                                           // MakerGen.cs:479

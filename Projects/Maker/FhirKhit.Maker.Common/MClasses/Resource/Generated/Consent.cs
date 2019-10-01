@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:449
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
-using System.IO;                                                                                                                            // MakerGen.cs:451
-using System.Linq;                                                                                                                          // MakerGen.cs:452
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
-                                                                                                                                            // MakerGen.cs:454
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
-{                                                                                                                                           // MakerGen.cs:456
-    #region Json                                                                                                                            // MakerGen.cs:457
-    #if NEVER                                                                                                                               // MakerGen.cs:458
+using System;                                                                                                                               // MakerGen.cs:462
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
+using System.IO;                                                                                                                            // MakerGen.cs:464
+using System.Linq;                                                                                                                          // MakerGen.cs:465
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
+                                                                                                                                            // MakerGen.cs:467
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
+{                                                                                                                                           // MakerGen.cs:469
+    #region Json                                                                                                                            // MakerGen.cs:470
+    #if NEVER                                                                                                                               // MakerGen.cs:471
     {
       "resourceType": "StructureDefinition",
       "id": "Consent",
@@ -709,26 +709,27 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:461
+    #endregion                                                                                                                              // MakerGen.cs:474
     /// <summary>
     /// Fhir resource 'Consent'
     /// </summary>
     // 0. Consent
-    public class Consent : FhirKhit.Maker.Common.Resource.ResourceBase                                                                      // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
-        public class Consent_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                         // MakerGen.cs:385
-        {                                                                                                                                   // MakerGen.cs:386
+    public class Consent : FhirKhit.Maker.Common.Resource.ResourceBase                                                                      // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
+        public class Consent_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                         // MakerGen.cs:386
+        {                                                                                                                                   // MakerGen.cs:387
             // 10. Consent.policy
-            public class Type_Policy : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_Policy_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_Policy : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_Policy_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 11. Consent.policy.authority
                     public ElementDefinitionInfo Authority;                                                                                 // MakerGen.cs:216
                     // 12. Consent.policy.uri
                     public ElementDefinitionInfo Uri;                                                                                       // MakerGen.cs:216
-                    public Type_Policy_Elements()                                                                                           // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_Policy_Elements()                                                                                           // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 11. Consent.policy.authority
                             this.Authority = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
@@ -763,39 +764,55 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Authority.Write(sDef);                                                                                              // MakerGen.cs:220
                         Uri.Write(sDef);                                                                                                    // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_Policy_Elements Elements { get; }                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_Policy()                                                                                                        // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_Policy_Elements();                                                                             // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_Policy_Elements Elements                                                                                        // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_Policy_Elements();                                                                     // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_Policy_Elements elements;                                                                                              // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_Policy()                                                                                                        // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "Consent.policy",                                                                                            // MakerGen.cs:428
+                        ElementId = "Consent.policy"                                                                                        // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 14. Consent.verification
-            public class Type_Verification : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_Verification_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                       // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_Verification : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_Verification_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                       // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 15. Consent.verification.verified
                     public ElementDefinitionInfo Verified;                                                                                  // MakerGen.cs:216
                     // 16. Consent.verification.verifiedWith
                     public ElementDefinitionInfo VerifiedWith;                                                                              // MakerGen.cs:216
                     // 17. Consent.verification.verificationDate
                     public ElementDefinitionInfo VerificationDate;                                                                          // MakerGen.cs:216
-                    public Type_Verification_Elements()                                                                                     // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_Verification_Elements()                                                                                     // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 15. Consent.verification.verified
                             this.Verified = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
@@ -852,43 +869,59 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Verified.Write(sDef);                                                                                               // MakerGen.cs:220
                         VerifiedWith.Write(sDef);                                                                                           // MakerGen.cs:220
                         VerificationDate.Write(sDef);                                                                                       // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_Verification_Elements Elements { get; }                                                                         // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_Verification()                                                                                                  // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_Verification_Elements();                                                                       // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_Verification_Elements Elements                                                                                  // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_Verification_Elements();                                                               // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_Verification_Elements elements;                                                                                        // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_Verification()                                                                                                  // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "Consent.verification",                                                                                      // MakerGen.cs:428
+                        ElementId = "Consent.verification"                                                                                  // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 18. Consent.provision
-            public class Type_Provision : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_Provision_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_Provision : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_Provision_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 21. Consent.provision.actor
-                    public class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        public class Type_Actor_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                      // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:386
+                    public class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
+                    {                                                                                                                       // MakerGen.cs:385
+                        public class Type_Actor_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                      // MakerGen.cs:386
+                        {                                                                                                                   // MakerGen.cs:387
                             // 22. Consent.provision.actor.role
                             public ElementDefinitionInfo Role;                                                                              // MakerGen.cs:216
                             // 23. Consent.provision.actor.reference
                             public ElementDefinitionInfo Reference;                                                                         // MakerGen.cs:216
-                            public Type_Actor_Elements()                                                                                    // MakerGen.cs:407
-                            {                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                            public Type_Actor_Elements()                                                                                    // MakerGen.cs:392
+                            {                                                                                                               // MakerGen.cs:393
                                 {                                                                                                           // MakerGen.cs:231
                                     // 22. Consent.provision.actor.role
                                     this.Role = new ElementDefinitionInfo                                                                   // MakerGen.cs:233
@@ -934,37 +967,53 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                         }                                                                                                   // MakerGen.cs:243
                                     };                                                                                                      // MakerGen.cs:244
                                 }                                                                                                           // MakerGen.cs:245
-                            }                                                                                                               // MakerGen.cs:427
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:412
-                            {                                                                                                               // MakerGen.cs:413
-                                base.Write(sDef);                                                                                           // MakerGen.cs:414
+                            }                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:398
+                            {                                                                                                               // MakerGen.cs:399
+                                base.Write(sDef);                                                                                           // MakerGen.cs:400
                                 Role.Write(sDef);                                                                                           // MakerGen.cs:220
                                 Reference.Write(sDef);                                                                                      // MakerGen.cs:220
-                            }                                                                                                               // MakerGen.cs:431
-                        }                                                                                                                   // MakerGen.cs:391
-                        public Type_Actor_Elements Elements { get; }                                                                        // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                        public Type_Actor()                                                                                                 // MakerGen.cs:394
-                        {                                                                                                                   // MakerGen.cs:395
-                            this.Elements = new Type_Actor_Elements();                                                                      // MakerGen.cs:396
-                        }                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:399
-                        {                                                                                                                   // MakerGen.cs:400
-                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:401
-                        }                                                                                                                   // MakerGen.cs:402
-                    }                                                                                                                       // MakerGen.cs:403
+                            }                                                                                                               // MakerGen.cs:402
+                        }                                                                                                                   // MakerGen.cs:404
+                        public Type_Actor_Elements Elements                                                                                 // MakerGen.cs:406
+                        {                                                                                                                   // MakerGen.cs:407
+                            get                                                                                                             // MakerGen.cs:408
+                            {                                                                                                               // MakerGen.cs:409
+                                if (this.elements == null)                                                                                  // MakerGen.cs:410
+                                    this.elements = new Type_Actor_Elements();                                                              // MakerGen.cs:411
+                                return this.elements;                                                                                       // MakerGen.cs:412
+                            }                                                                                                               // MakerGen.cs:413
+                        }                                                                                                                   // MakerGen.cs:414
+                        Type_Actor_Elements elements;                                                                                       // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                        public Type_Actor()                                                                                                 // MakerGen.cs:418
+                        {                                                                                                                   // MakerGen.cs:419
+                        }                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:424
+                        {                                                                                                                   // MakerGen.cs:425
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:426
+                            {                                                                                                               // MakerGen.cs:427
+                                Path = "Consent.provision.actor",                                                                           // MakerGen.cs:428
+                                ElementId = "Consent.provision.actor"                                                                       // MakerGen.cs:429
+                            });                                                                                                             // MakerGen.cs:430
+                            if (this.elements != null)                                                                                      // MakerGen.cs:431
+                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:432
+                        }                                                                                                                   // MakerGen.cs:433
+                    }                                                                                                                       // MakerGen.cs:434
                     // 30. Consent.provision.data
-                    public class Type_Data : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        public class Type_Data_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:386
+                    public class Type_Data : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:384
+                    {                                                                                                                       // MakerGen.cs:385
+                        public class Type_Data_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                       // MakerGen.cs:386
+                        {                                                                                                                   // MakerGen.cs:387
                             // 31. Consent.provision.data.meaning
                             public ElementDefinitionInfo Meaning;                                                                           // MakerGen.cs:216
                             // 32. Consent.provision.data.reference
                             public ElementDefinitionInfo Reference;                                                                         // MakerGen.cs:216
-                            public Type_Data_Elements()                                                                                     // MakerGen.cs:407
-                            {                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                            public Type_Data_Elements()                                                                                     // MakerGen.cs:392
+                            {                                                                                                               // MakerGen.cs:393
                                 {                                                                                                           // MakerGen.cs:231
                                     // 31. Consent.provision.data.meaning
                                     this.Meaning = new ElementDefinitionInfo                                                                // MakerGen.cs:233
@@ -1003,26 +1052,41 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                         }                                                                                                   // MakerGen.cs:243
                                     };                                                                                                      // MakerGen.cs:244
                                 }                                                                                                           // MakerGen.cs:245
-                            }                                                                                                               // MakerGen.cs:427
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:412
-                            {                                                                                                               // MakerGen.cs:413
-                                base.Write(sDef);                                                                                           // MakerGen.cs:414
+                            }                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:398
+                            {                                                                                                               // MakerGen.cs:399
+                                base.Write(sDef);                                                                                           // MakerGen.cs:400
                                 Meaning.Write(sDef);                                                                                        // MakerGen.cs:220
                                 Reference.Write(sDef);                                                                                      // MakerGen.cs:220
-                            }                                                                                                               // MakerGen.cs:431
-                        }                                                                                                                   // MakerGen.cs:391
-                        public Type_Data_Elements Elements { get; }                                                                         // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                        public Type_Data()                                                                                                  // MakerGen.cs:394
-                        {                                                                                                                   // MakerGen.cs:395
-                            this.Elements = new Type_Data_Elements();                                                                       // MakerGen.cs:396
-                        }                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:399
-                        {                                                                                                                   // MakerGen.cs:400
-                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:401
-                        }                                                                                                                   // MakerGen.cs:402
-                    }                                                                                                                       // MakerGen.cs:403
+                            }                                                                                                               // MakerGen.cs:402
+                        }                                                                                                                   // MakerGen.cs:404
+                        public Type_Data_Elements Elements                                                                                  // MakerGen.cs:406
+                        {                                                                                                                   // MakerGen.cs:407
+                            get                                                                                                             // MakerGen.cs:408
+                            {                                                                                                               // MakerGen.cs:409
+                                if (this.elements == null)                                                                                  // MakerGen.cs:410
+                                    this.elements = new Type_Data_Elements();                                                               // MakerGen.cs:411
+                                return this.elements;                                                                                       // MakerGen.cs:412
+                            }                                                                                                               // MakerGen.cs:413
+                        }                                                                                                                   // MakerGen.cs:414
+                        Type_Data_Elements elements;                                                                                        // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                        public Type_Data()                                                                                                  // MakerGen.cs:418
+                        {                                                                                                                   // MakerGen.cs:419
+                        }                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:424
+                        {                                                                                                                   // MakerGen.cs:425
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:426
+                            {                                                                                                               // MakerGen.cs:427
+                                Path = "Consent.provision.data",                                                                            // MakerGen.cs:428
+                                ElementId = "Consent.provision.data"                                                                        // MakerGen.cs:429
+                            });                                                                                                             // MakerGen.cs:430
+                            if (this.elements != null)                                                                                      // MakerGen.cs:431
+                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:432
+                        }                                                                                                                   // MakerGen.cs:433
+                    }                                                                                                                       // MakerGen.cs:434
                     // 19. Consent.provision.type
                     public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
                     // 20. Consent.provision.period
@@ -1045,8 +1109,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public ElementDefinitionInfo Data;                                                                                      // MakerGen.cs:216
                     // 33. Consent.provision.provision
                     public ElementDefinitionInfo Provision;                                                                                 // MakerGen.cs:216
-                    public Type_Provision_Elements()                                                                                        // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_Provision_Elements()                                                                                        // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 19. Consent.provision.type
                             this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
@@ -1231,10 +1296,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Type.Write(sDef);                                                                                                   // MakerGen.cs:220
                         Period.Write(sDef);                                                                                                 // MakerGen.cs:220
                         Actor.Write(sDef);                                                                                                  // MakerGen.cs:220
@@ -1246,20 +1312,34 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         DataPeriod.Write(sDef);                                                                                             // MakerGen.cs:220
                         Data.Write(sDef);                                                                                                   // MakerGen.cs:220
                         Provision.Write(sDef);                                                                                              // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_Provision_Elements Elements { get; }                                                                            // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_Provision()                                                                                                     // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_Provision_Elements();                                                                          // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_Provision_Elements Elements                                                                                     // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_Provision_Elements();                                                                  // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_Provision_Elements elements;                                                                                           // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_Provision()                                                                                                     // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "Consent.provision",                                                                                         // MakerGen.cs:428
+                        ElementId = "Consent.provision"                                                                                     // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 1. Consent.identifier
             public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
             // 2. Consent.status
@@ -1286,8 +1366,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public ElementDefinitionInfo Verification;                                                                                      // MakerGen.cs:216
             // 18. Consent.provision
             public ElementDefinitionInfo Provision;                                                                                         // MakerGen.cs:216
-            public Consent_Elements()                                                                                                       // MakerGen.cs:407
-            {                                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+            public Consent_Elements()                                                                                                       // MakerGen.cs:392
+            {                                                                                                                               // MakerGen.cs:393
                 {                                                                                                                           // MakerGen.cs:231
                     // 1. Consent.identifier
                     this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
@@ -1535,10 +1616,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:243
                     };                                                                                                                      // MakerGen.cs:244
                 }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:427
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
-            {                                                                                                                               // MakerGen.cs:413
-                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+            }                                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
+            {                                                                                                                               // MakerGen.cs:399
+                base.Write(sDef);                                                                                                           // MakerGen.cs:400
                 Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
                 Status.Write(sDef);                                                                                                         // MakerGen.cs:220
                 Scope.Write(sDef);                                                                                                          // MakerGen.cs:220
@@ -1552,18 +1634,34 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 PolicyRule.Write(sDef);                                                                                                     // MakerGen.cs:220
                 Verification.Write(sDef);                                                                                                   // MakerGen.cs:220
                 Provision.Write(sDef);                                                                                                      // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:431
-        }                                                                                                                                   // MakerGen.cs:391
-        public Consent_Elements Elements { get; }                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-        public Consent()                                                                                                                    // MakerGen.cs:394
-        {                                                                                                                                   // MakerGen.cs:395
-            this.Elements = new Consent_Elements();                                                                                         // MakerGen.cs:396
-        }                                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
-        {                                                                                                                                   // MakerGen.cs:400
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
-        }                                                                                                                                   // MakerGen.cs:402
-    }                                                                                                                                       // MakerGen.cs:403
-}                                                                                                                                           // MakerGen.cs:466
+            }                                                                                                                               // MakerGen.cs:402
+        }                                                                                                                                   // MakerGen.cs:404
+        public Consent_Elements Elements                                                                                                    // MakerGen.cs:406
+        {                                                                                                                                   // MakerGen.cs:407
+            get                                                                                                                             // MakerGen.cs:408
+            {                                                                                                                               // MakerGen.cs:409
+                if (this.elements == null)                                                                                                  // MakerGen.cs:410
+                    this.elements = new Consent_Elements();                                                                                 // MakerGen.cs:411
+                return this.elements;                                                                                                       // MakerGen.cs:412
+            }                                                                                                                               // MakerGen.cs:413
+        }                                                                                                                                   // MakerGen.cs:414
+        Consent_Elements elements;                                                                                                          // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+        public Consent()                                                                                                                    // MakerGen.cs:418
+        {                                                                                                                                   // MakerGen.cs:419
+            this.Name = "Consent";                                                                                                          // MakerGen.cs:492
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Consent";                                                                   // MakerGen.cs:493
+        }                                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
+        {                                                                                                                                   // MakerGen.cs:425
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
+            {                                                                                                                               // MakerGen.cs:427
+                Path = "Consent",                                                                                                           // MakerGen.cs:428
+                ElementId = "Consent"                                                                                                       // MakerGen.cs:429
+            });                                                                                                                             // MakerGen.cs:430
+            if (this.elements != null)                                                                                                      // MakerGen.cs:431
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
+        }                                                                                                                                   // MakerGen.cs:433
+    }                                                                                                                                       // MakerGen.cs:434
+}                                                                                                                                           // MakerGen.cs:479

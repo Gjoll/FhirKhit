@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:449
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
-using System.IO;                                                                                                                            // MakerGen.cs:451
-using System.Linq;                                                                                                                          // MakerGen.cs:452
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
-                                                                                                                                            // MakerGen.cs:454
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
-{                                                                                                                                           // MakerGen.cs:456
-    #region Json                                                                                                                            // MakerGen.cs:457
-    #if NEVER                                                                                                                               // MakerGen.cs:458
+using System;                                                                                                                               // MakerGen.cs:462
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
+using System.IO;                                                                                                                            // MakerGen.cs:464
+using System.Linq;                                                                                                                          // MakerGen.cs:465
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
+                                                                                                                                            // MakerGen.cs:467
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
+{                                                                                                                                           // MakerGen.cs:469
+    #region Json                                                                                                                            // MakerGen.cs:470
+    #if NEVER                                                                                                                               // MakerGen.cs:471
     {
       "resourceType": "StructureDefinition",
       "id": "VisionPrescription",
@@ -444,31 +444,32 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:461
+    #endregion                                                                                                                              // MakerGen.cs:474
     /// <summary>
     /// Fhir resource 'VisionPrescription'
     /// </summary>
     // 0. VisionPrescription
-    public class VisionPrescription : FhirKhit.Maker.Common.Resource.ResourceBase                                                           // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
-        public class VisionPrescription_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:385
-        {                                                                                                                                   // MakerGen.cs:386
+    public class VisionPrescription : FhirKhit.Maker.Common.Resource.ResourceBase                                                           // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
+        public class VisionPrescription_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:386
+        {                                                                                                                                   // MakerGen.cs:387
             // 8. VisionPrescription.lensSpecification
-            public class Type_LensSpecification : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                public class Type_LensSpecification_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                  // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:386
+            public class Type_LensSpecification : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
+                public class Type_LensSpecification_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                  // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
                     // 14. VisionPrescription.lensSpecification.prism
-                    public class Type_Prism : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        public class Type_Prism_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                      // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:386
+                    public class Type_Prism : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
+                    {                                                                                                                       // MakerGen.cs:385
+                        public class Type_Prism_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                      // MakerGen.cs:386
+                        {                                                                                                                   // MakerGen.cs:387
                             // 15. VisionPrescription.lensSpecification.prism.amount
                             public ElementDefinitionInfo Amount;                                                                            // MakerGen.cs:216
                             // 16. VisionPrescription.lensSpecification.prism.base
                             public ElementDefinitionInfo Base;                                                                              // MakerGen.cs:216
-                            public Type_Prism_Elements()                                                                                    // MakerGen.cs:407
-                            {                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                            public Type_Prism_Elements()                                                                                    // MakerGen.cs:392
+                            {                                                                                                               // MakerGen.cs:393
                                 {                                                                                                           // MakerGen.cs:231
                                     // 15. VisionPrescription.lensSpecification.prism.amount
                                     this.Amount = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
@@ -503,26 +504,41 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                         }                                                                                                   // MakerGen.cs:243
                                     };                                                                                                      // MakerGen.cs:244
                                 }                                                                                                           // MakerGen.cs:245
-                            }                                                                                                               // MakerGen.cs:427
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:412
-                            {                                                                                                               // MakerGen.cs:413
-                                base.Write(sDef);                                                                                           // MakerGen.cs:414
+                            }                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:398
+                            {                                                                                                               // MakerGen.cs:399
+                                base.Write(sDef);                                                                                           // MakerGen.cs:400
                                 Amount.Write(sDef);                                                                                         // MakerGen.cs:220
                                 Base.Write(sDef);                                                                                           // MakerGen.cs:220
-                            }                                                                                                               // MakerGen.cs:431
-                        }                                                                                                                   // MakerGen.cs:391
-                        public Type_Prism_Elements Elements { get; }                                                                        // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                        public Type_Prism()                                                                                                 // MakerGen.cs:394
-                        {                                                                                                                   // MakerGen.cs:395
-                            this.Elements = new Type_Prism_Elements();                                                                      // MakerGen.cs:396
-                        }                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:399
-                        {                                                                                                                   // MakerGen.cs:400
-                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:401
-                        }                                                                                                                   // MakerGen.cs:402
-                    }                                                                                                                       // MakerGen.cs:403
+                            }                                                                                                               // MakerGen.cs:402
+                        }                                                                                                                   // MakerGen.cs:404
+                        public Type_Prism_Elements Elements                                                                                 // MakerGen.cs:406
+                        {                                                                                                                   // MakerGen.cs:407
+                            get                                                                                                             // MakerGen.cs:408
+                            {                                                                                                               // MakerGen.cs:409
+                                if (this.elements == null)                                                                                  // MakerGen.cs:410
+                                    this.elements = new Type_Prism_Elements();                                                              // MakerGen.cs:411
+                                return this.elements;                                                                                       // MakerGen.cs:412
+                            }                                                                                                               // MakerGen.cs:413
+                        }                                                                                                                   // MakerGen.cs:414
+                        Type_Prism_Elements elements;                                                                                       // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                        public Type_Prism()                                                                                                 // MakerGen.cs:418
+                        {                                                                                                                   // MakerGen.cs:419
+                        }                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:424
+                        {                                                                                                                   // MakerGen.cs:425
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:426
+                            {                                                                                                               // MakerGen.cs:427
+                                Path = "VisionPrescription.lensSpecification.prism",                                                        // MakerGen.cs:428
+                                ElementId = "VisionPrescription.lensSpecification.prism"                                                    // MakerGen.cs:429
+                            });                                                                                                             // MakerGen.cs:430
+                            if (this.elements != null)                                                                                      // MakerGen.cs:431
+                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:432
+                        }                                                                                                                   // MakerGen.cs:433
+                    }                                                                                                                       // MakerGen.cs:434
                     // 9. VisionPrescription.lensSpecification.product
                     public ElementDefinitionInfo Product;                                                                                   // MakerGen.cs:216
                     // 10. VisionPrescription.lensSpecification.eye
@@ -551,8 +567,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public ElementDefinitionInfo Brand;                                                                                     // MakerGen.cs:216
                     // 24. VisionPrescription.lensSpecification.note
                     public ElementDefinitionInfo Note;                                                                                      // MakerGen.cs:216
-                    public Type_LensSpecification_Elements()                                                                                // MakerGen.cs:407
-                    {                                                                                                                       // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+                    public Type_LensSpecification_Elements()                                                                                // MakerGen.cs:392
+                    {                                                                                                                       // MakerGen.cs:393
                         {                                                                                                                   // MakerGen.cs:231
                             // 9. VisionPrescription.lensSpecification.product
                             this.Product = new ElementDefinitionInfo                                                                        // MakerGen.cs:233
@@ -791,10 +808,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:243
                             };                                                                                                              // MakerGen.cs:244
                         }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:427
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
-                    {                                                                                                                       // MakerGen.cs:413
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                    }                                                                                                                       // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
+                    {                                                                                                                       // MakerGen.cs:399
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
                         Product.Write(sDef);                                                                                                // MakerGen.cs:220
                         Eye.Write(sDef);                                                                                                    // MakerGen.cs:220
                         Sphere.Write(sDef);                                                                                                 // MakerGen.cs:220
@@ -809,20 +827,34 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Color.Write(sDef);                                                                                                  // MakerGen.cs:220
                         Brand.Write(sDef);                                                                                                  // MakerGen.cs:220
                         Note.Write(sDef);                                                                                                   // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:431
-                }                                                                                                                           // MakerGen.cs:391
-                public Type_LensSpecification_Elements Elements { get; }                                                                    // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-                public Type_LensSpecification()                                                                                             // MakerGen.cs:394
-                {                                                                                                                           // MakerGen.cs:395
-                    this.Elements = new Type_LensSpecification_Elements();                                                                  // MakerGen.cs:396
-                }                                                                                                                           // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
-                {                                                                                                                           // MakerGen.cs:400
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
-                }                                                                                                                           // MakerGen.cs:402
-            }                                                                                                                               // MakerGen.cs:403
+                    }                                                                                                                       // MakerGen.cs:402
+                }                                                                                                                           // MakerGen.cs:404
+                public Type_LensSpecification_Elements Elements                                                                             // MakerGen.cs:406
+                {                                                                                                                           // MakerGen.cs:407
+                    get                                                                                                                     // MakerGen.cs:408
+                    {                                                                                                                       // MakerGen.cs:409
+                        if (this.elements == null)                                                                                          // MakerGen.cs:410
+                            this.elements = new Type_LensSpecification_Elements();                                                          // MakerGen.cs:411
+                        return this.elements;                                                                                               // MakerGen.cs:412
+                    }                                                                                                                       // MakerGen.cs:413
+                }                                                                                                                           // MakerGen.cs:414
+                Type_LensSpecification_Elements elements;                                                                                   // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+                public Type_LensSpecification()                                                                                             // MakerGen.cs:418
+                {                                                                                                                           // MakerGen.cs:419
+                }                                                                                                                           // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
+                {                                                                                                                           // MakerGen.cs:425
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
+                    {                                                                                                                       // MakerGen.cs:427
+                        Path = "VisionPrescription.lensSpecification",                                                                      // MakerGen.cs:428
+                        ElementId = "VisionPrescription.lensSpecification"                                                                  // MakerGen.cs:429
+                    });                                                                                                                     // MakerGen.cs:430
+                    if (this.elements != null)                                                                                              // MakerGen.cs:431
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
+                }                                                                                                                           // MakerGen.cs:433
+            }                                                                                                                               // MakerGen.cs:434
             // 1. VisionPrescription.identifier
             public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
             // 2. VisionPrescription.status
@@ -839,8 +871,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public ElementDefinitionInfo Prescriber;                                                                                        // MakerGen.cs:216
             // 8. VisionPrescription.lensSpecification
             public ElementDefinitionInfo LensSpecification;                                                                                 // MakerGen.cs:216
-            public VisionPrescription_Elements()                                                                                            // MakerGen.cs:407
-            {                                                                                                                               // MakerGen.cs:408
+                                                                                                                                            // MakerGen.cs:391
+            public VisionPrescription_Elements()                                                                                            // MakerGen.cs:392
+            {                                                                                                                               // MakerGen.cs:393
                 {                                                                                                                           // MakerGen.cs:231
                     // 1. VisionPrescription.identifier
                     this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
@@ -990,10 +1023,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:243
                     };                                                                                                                      // MakerGen.cs:244
                 }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:427
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
-            {                                                                                                                               // MakerGen.cs:413
-                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+            }                                                                                                                               // MakerGen.cs:395
+                                                                                                                                            // MakerGen.cs:397
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
+            {                                                                                                                               // MakerGen.cs:399
+                base.Write(sDef);                                                                                                           // MakerGen.cs:400
                 Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
                 Status.Write(sDef);                                                                                                         // MakerGen.cs:220
                 Created.Write(sDef);                                                                                                        // MakerGen.cs:220
@@ -1002,18 +1036,34 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 DateWritten.Write(sDef);                                                                                                    // MakerGen.cs:220
                 Prescriber.Write(sDef);                                                                                                     // MakerGen.cs:220
                 LensSpecification.Write(sDef);                                                                                              // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:431
-        }                                                                                                                                   // MakerGen.cs:391
-        public VisionPrescription_Elements Elements { get; }                                                                                // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:393
-        public VisionPrescription()                                                                                                         // MakerGen.cs:394
-        {                                                                                                                                   // MakerGen.cs:395
-            this.Elements = new VisionPrescription_Elements();                                                                              // MakerGen.cs:396
-        }                                                                                                                                   // MakerGen.cs:397
-                                                                                                                                            // MakerGen.cs:398
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
-        {                                                                                                                                   // MakerGen.cs:400
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
-        }                                                                                                                                   // MakerGen.cs:402
-    }                                                                                                                                       // MakerGen.cs:403
-}                                                                                                                                           // MakerGen.cs:466
+            }                                                                                                                               // MakerGen.cs:402
+        }                                                                                                                                   // MakerGen.cs:404
+        public VisionPrescription_Elements Elements                                                                                         // MakerGen.cs:406
+        {                                                                                                                                   // MakerGen.cs:407
+            get                                                                                                                             // MakerGen.cs:408
+            {                                                                                                                               // MakerGen.cs:409
+                if (this.elements == null)                                                                                                  // MakerGen.cs:410
+                    this.elements = new VisionPrescription_Elements();                                                                      // MakerGen.cs:411
+                return this.elements;                                                                                                       // MakerGen.cs:412
+            }                                                                                                                               // MakerGen.cs:413
+        }                                                                                                                                   // MakerGen.cs:414
+        VisionPrescription_Elements elements;                                                                                               // MakerGen.cs:415
+                                                                                                                                            // MakerGen.cs:417
+        public VisionPrescription()                                                                                                         // MakerGen.cs:418
+        {                                                                                                                                   // MakerGen.cs:419
+            this.Name = "VisionPrescription";                                                                                               // MakerGen.cs:492
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/VisionPrescription";                                                        // MakerGen.cs:493
+        }                                                                                                                                   // MakerGen.cs:421
+                                                                                                                                            // MakerGen.cs:423
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
+        {                                                                                                                                   // MakerGen.cs:425
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
+            {                                                                                                                               // MakerGen.cs:427
+                Path = "VisionPrescription",                                                                                                // MakerGen.cs:428
+                ElementId = "VisionPrescription"                                                                                            // MakerGen.cs:429
+            });                                                                                                                             // MakerGen.cs:430
+            if (this.elements != null)                                                                                                      // MakerGen.cs:431
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
+        }                                                                                                                                   // MakerGen.cs:433
+    }                                                                                                                                       // MakerGen.cs:434
+}                                                                                                                                           // MakerGen.cs:479

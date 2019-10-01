@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using FhirKhit.Maker.Common.Resource;
 using Hl7.Fhir.Model;
@@ -8,12 +9,17 @@ namespace FhirKhit.Maker.BreastRadiology
 {
     public class ProfileMaker
     {
+        const String outputDir = @"\Temp";
+
         const String Loinc = "http://loinc.org";
         const String DiagSvcSects = "http://terminology.hl7.org/CodeSystem/v2-0074";
         void CreateBreastRadiologyReport()
         {
             Common.Resource.DiagnosticReport r = new Common.Resource.DiagnosticReport
             {
+                Name = "BreastRadiologyReport",
+                Parent = new Common.Resource.DiagnosticReport(),
+                Uri = "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/breastrad-BreastAbnormality",
                 Description =
                     "Breast Radiology Diagnostic Report." +
                     "<br>" +
@@ -29,9 +35,11 @@ namespace FhirKhit.Maker.BreastRadiology
             r.Elements.Specimen.Unused();
             r.Elements.Conclusion.Card(1, 1);
             r.Elements.ConclusionCode.Card(1, 1);
+            r.Write(Path.Combine(outputDir, $"StructureDefinition.BreastRadiologyReport.json"));
         }
         public void CreateProfiles()
         {
+            CreateBreastRadiologyReport();
         }
     }
 }
