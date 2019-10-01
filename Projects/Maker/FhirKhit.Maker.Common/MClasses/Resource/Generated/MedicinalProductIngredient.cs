@@ -411,7 +411,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Name = "Element_Substance",                                                                                 // MakerGen.cs:247
                                 Min = 0,                                                                                                    // MakerGen.cs:248
                                 Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBase_Type[]                                                                                // MakerGen.cs:250
+                                Types = new MakerBaseType[]                                                                                // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
                                     new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                     // MakerGen.cs:292
                                 }                                                                                                           // MakerGen.cs:253
@@ -424,7 +424,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Name = "Element_Strength",                                                                                  // MakerGen.cs:247
                                 Min = 1,                                                                                                    // MakerGen.cs:248
                                 Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBase_Type[]                                                                                // MakerGen.cs:250
+                                Types = new MakerBaseType[]                                                                                // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
@@ -436,7 +436,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Name = "Element_StrengthLowLimit",                                                                          // MakerGen.cs:247
                                 Min = 0,                                                                                                    // MakerGen.cs:248
                                 Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBase_Type[]                                                                                // MakerGen.cs:250
+                                Types = new MakerBaseType[]                                                                                // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
@@ -448,7 +448,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Name = "Element_MeasurementPoint",                                                                          // MakerGen.cs:247
                                 Min = 0,                                                                                                    // MakerGen.cs:248
                                 Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBase_Type[]                                                                                // MakerGen.cs:250
+                                Types = new MakerBaseType[]                                                                                // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
                                     new FhirKhit.Maker.Common.Primitive.String()                                                            // MakerGen.cs:286
                                 }                                                                                                           // MakerGen.cs:253
@@ -461,7 +461,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Name = "Element_Country",                                                                                   // MakerGen.cs:247
                                 Min = 0,                                                                                                    // MakerGen.cs:248
                                 Max = -1,                                                                                                   // MakerGen.cs:249
-                                Types = new MakerBase_Type[]                                                                                // MakerGen.cs:250
+                                Types = new MakerBaseType[]                                                                                // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
                                     new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                     // MakerGen.cs:292
                                 }                                                                                                           // MakerGen.cs:253
@@ -490,7 +490,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_Presentation",                                                                                  // MakerGen.cs:247
                             Min = 1,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBase_Type[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
@@ -502,7 +502,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_PresentationLowLimit",                                                                          // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBase_Type[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
@@ -514,7 +514,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_Concentration",                                                                                 // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBase_Type[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
@@ -526,7 +526,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_ConcentrationLowLimit",                                                                         // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBase_Type[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
@@ -538,7 +538,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_MeasurementPoint",                                                                              // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBase_Type[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
                                 new FhirKhit.Maker.Common.Primitive.String()                                                                // MakerGen.cs:286
                             }                                                                                                               // MakerGen.cs:253
@@ -551,7 +551,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_Country",                                                                                       // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = -1,                                                                                                       // MakerGen.cs:249
-                            Types = new MakerBase_Type[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
                                 new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                         // MakerGen.cs:292
                             }                                                                                                               // MakerGen.cs:253
@@ -574,7 +574,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Code",                                                                                              // MakerGen.cs:247
                         Min = 1,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
                             new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                             // MakerGen.cs:292
                         }                                                                                                                   // MakerGen.cs:253
@@ -587,7 +587,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Group",                                                                                             // MakerGen.cs:247
                         Min = 1,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
                             new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                             // MakerGen.cs:292
                         }                                                                                                                   // MakerGen.cs:253
@@ -600,7 +600,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Confidentiality",                                                                                   // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
                             new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                             // MakerGen.cs:292
                         }                                                                                                                   // MakerGen.cs:253
@@ -624,7 +624,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Code",                                                                                              // MakerGen.cs:247
                         Min = 1,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
                             new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                             // MakerGen.cs:292
                         }                                                                                                                   // MakerGen.cs:253
@@ -637,7 +637,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Strength",                                                                                          // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = -1,                                                                                                           // MakerGen.cs:249
-                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
@@ -661,7 +661,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Identifier",                                                                                            // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
@@ -673,7 +673,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Role",                                                                                                  // MakerGen.cs:247
                     Min = 1,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
                         new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                                 // MakerGen.cs:292
                     }                                                                                                                       // MakerGen.cs:253
@@ -686,7 +686,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_AllergenicIndicator",                                                                                   // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
                         new FhirKhit.Maker.Common.Primitive.Boolean()                                                                       // MakerGen.cs:286
                     }                                                                                                                       // MakerGen.cs:253
@@ -699,7 +699,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Manufacturer",                                                                                          // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254

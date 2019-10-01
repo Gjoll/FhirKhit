@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FhirKhit.Maker.Common
 {
-    public class MakerBase_Type
+    public class MakerBaseType
     {
     }
 }

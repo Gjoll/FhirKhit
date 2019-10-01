@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FhirKhit.Maker.Common.Complex
 {
-    public class ComplexBase : MakerBase_Type
+    public class ComplexBase : MakerBaseType
     {
     }
 }
