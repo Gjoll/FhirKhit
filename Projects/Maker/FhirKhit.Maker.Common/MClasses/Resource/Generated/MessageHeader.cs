@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:391
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:392
-using System.IO;                                                                                                                            // MakerGen.cs:393
-using System.Linq;                                                                                                                          // MakerGen.cs:394
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:396
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:397
-{                                                                                                                                           // MakerGen.cs:398
-    #region Json                                                                                                                            // MakerGen.cs:399
-    #if NEVER                                                                                                                               // MakerGen.cs:400
+using System;                                                                                                                               // MakerGen.cs:399
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
+using System.IO;                                                                                                                            // MakerGen.cs:401
+using System.Linq;                                                                                                                          // MakerGen.cs:402
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
+                                                                                                                                            // MakerGen.cs:404
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
+{                                                                                                                                           // MakerGen.cs:406
+    #region Json                                                                                                                            // MakerGen.cs:407
+    #if NEVER                                                                                                                               // MakerGen.cs:408
     {
       "resourceType": "StructureDefinition",
       "id": "MessageHeader",
@@ -468,16 +468,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:403
+    #endregion                                                                                                                              // MakerGen.cs:411
     /// <summary>
     /// Fhir resource 'MessageHeader'
     /// </summary>
     // 0. MessageHeader
-    public class MessageHeader : FhirKhit.Maker.Common.Resource.ResourceBase                                                                // MakerGen.cs:352
-    {                                                                                                                                       // MakerGen.cs:353
+    public class MessageHeader : FhirKhit.Maker.Common.Resource.ResourceBase                                                                // MakerGen.cs:360
+    {                                                                                                                                       // MakerGen.cs:361
         // 2. MessageHeader.destination
-        public class Type_Destination : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:352
-        {                                                                                                                                   // MakerGen.cs:353
+        public class Type_Destination : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:360
+        {                                                                                                                                   // MakerGen.cs:361
             // 3. MessageHeader.destination.name
             public MakerElementInstance Element_Name;                                                                                       // MakerGen.cs:232
             // 4. MessageHeader.destination.target
@@ -486,8 +486,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Endpoint;                                                                                   // MakerGen.cs:232
             // 6. MessageHeader.destination.receiver
             public MakerElementInstance Element_Receiver;                                                                                   // MakerGen.cs:232
-            public Type_Destination()                                                                                                       // MakerGen.cs:361
-            {                                                                                                                               // MakerGen.cs:362
+            public Type_Destination()                                                                                                       // MakerGen.cs:369
+            {                                                                                                                               // MakerGen.cs:370
                 {                                                                                                                           // MakerGen.cs:243
                     // 3. MessageHeader.destination.name
                     this.Element_Name = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -495,12 +495,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Name",                                                                                              // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String()                                                                    // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 4. MessageHeader.destination.target
                     this.Element_Target = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -508,11 +510,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Target",                                                                                            // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 5. MessageHeader.destination.endpoint
                     this.Element_Endpoint = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -520,12 +522,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Endpoint",                                                                                          // MakerGen.cs:247
                         Min = 1,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Url()                                                                       // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.Url                                                                         // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 6. MessageHeader.destination.receiver
                     this.Element_Receiver = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -533,16 +537,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Receiver",                                                                                          // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
-            }                                                                                                                               // MakerGen.cs:373
-        }                                                                                                                                   // MakerGen.cs:357
+                }                                                                                                                           // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:381
+        }                                                                                                                                   // MakerGen.cs:365
         // 10. MessageHeader.source
-        public class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:352
-        {                                                                                                                                   // MakerGen.cs:353
+        public class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:360
+        {                                                                                                                                   // MakerGen.cs:361
             // 11. MessageHeader.source.name
             public MakerElementInstance Element_Name;                                                                                       // MakerGen.cs:232
             // 12. MessageHeader.source.software
@@ -553,8 +557,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Contact;                                                                                    // MakerGen.cs:232
             // 15. MessageHeader.source.endpoint
             public MakerElementInstance Element_Endpoint;                                                                                   // MakerGen.cs:232
-            public Type_Source()                                                                                                            // MakerGen.cs:361
-            {                                                                                                                               // MakerGen.cs:362
+            public Type_Source()                                                                                                            // MakerGen.cs:369
+            {                                                                                                                               // MakerGen.cs:370
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. MessageHeader.source.name
                     this.Element_Name = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -562,12 +566,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Name",                                                                                              // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String()                                                                    // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. MessageHeader.source.software
                     this.Element_Software = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -575,12 +581,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Software",                                                                                          // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String()                                                                    // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 13. MessageHeader.source.version
                     this.Element_Version = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -588,12 +596,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Version",                                                                                           // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String()                                                                    // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 14. MessageHeader.source.contact
                     this.Element_Contact = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -601,11 +611,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Contact",                                                                                           // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 15. MessageHeader.source.endpoint
                     this.Element_Endpoint = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -613,25 +623,27 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Endpoint",                                                                                          // MakerGen.cs:247
                         Min = 1,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Url()                                                                       // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.Url                                                                         // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
-            }                                                                                                                               // MakerGen.cs:373
-        }                                                                                                                                   // MakerGen.cs:357
+                }                                                                                                                           // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:381
+        }                                                                                                                                   // MakerGen.cs:365
         // 18. MessageHeader.response
-        public class Type_Response : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:352
-        {                                                                                                                                   // MakerGen.cs:353
+        public class Type_Response : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
+        {                                                                                                                                   // MakerGen.cs:361
             // 19. MessageHeader.response.identifier
             public MakerElementInstance Element_Identifier;                                                                                 // MakerGen.cs:232
             // 20. MessageHeader.response.code
             public MakerElementInstance Element_Code;                                                                                       // MakerGen.cs:232
             // 21. MessageHeader.response.details
             public MakerElementInstance Element_Details;                                                                                    // MakerGen.cs:232
-            public Type_Response()                                                                                                          // MakerGen.cs:361
-            {                                                                                                                               // MakerGen.cs:362
+            public Type_Response()                                                                                                          // MakerGen.cs:369
+            {                                                                                                                               // MakerGen.cs:370
                 {                                                                                                                           // MakerGen.cs:243
                     // 19. MessageHeader.response.identifier
                     this.Element_Identifier = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -639,12 +651,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Identifier",                                                                                        // MakerGen.cs:247
                         Min = 1,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Id()                                                                        // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.Id                                                                          // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 20. MessageHeader.response.code
                     this.Element_Code = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -652,12 +666,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Code",                                                                                              // MakerGen.cs:247
                         Min = 1,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Code()                                                                      // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 21. MessageHeader.response.details
                     this.Element_Details = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -665,13 +681,13 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Details",                                                                                           // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
-            }                                                                                                                               // MakerGen.cs:373
-        }                                                                                                                                   // MakerGen.cs:357
+                }                                                                                                                           // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:381
+        }                                                                                                                                   // MakerGen.cs:365
         // 1. MessageHeader.event[x]
         public MakerElementInstance Element_Event;                                                                                          // MakerGen.cs:232
         // 7. MessageHeader.sender
@@ -688,8 +704,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Focus;                                                                                          // MakerGen.cs:232
         // 23. MessageHeader.definition
         public MakerElementInstance Element_Definition;                                                                                     // MakerGen.cs:232
-        public MessageHeader()                                                                                                              // MakerGen.cs:361
-        {                                                                                                                                   // MakerGen.cs:362
+        public MessageHeader()                                                                                                              // MakerGen.cs:369
+        {                                                                                                                                   // MakerGen.cs:370
             {                                                                                                                               // MakerGen.cs:243
                 // 1. MessageHeader.event[x]
                 this.Element_Event = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -697,13 +713,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Event",                                                                                                 // MakerGen.cs:247
                     Min = 1,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Coding(),                                                                         // MakerGen.cs:292
-                        new FhirKhit.Maker.Common.Primitive.Uri()                                                                           // MakerGen.cs:286
+                        new FhirKhit.Maker.Common.Complex.Coding                                                                            // MakerGen.cs:297
+                        {                                                                                                                   // MakerGen.cs:298
+                        },                                                                                                                  // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Primitive.Uri                                                                             // MakerGen.cs:287
+                        {                                                                                                                   // MakerGen.cs:288
+                        }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 7. MessageHeader.sender
                 this.Element_Sender = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -711,11 +731,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Sender",                                                                                                // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 8. MessageHeader.enterer
                 this.Element_Enterer = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -723,11 +743,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Enterer",                                                                                               // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 9. MessageHeader.author
                 this.Element_Author = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -735,11 +755,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Author",                                                                                                // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 16. MessageHeader.responsible
                 this.Element_Responsible = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -747,11 +767,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Responsible",                                                                                           // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 17. MessageHeader.reason
                 this.Element_Reason = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -759,12 +779,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Reason",                                                                                                // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                                 // MakerGen.cs:292
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
+                        {                                                                                                                   // MakerGen.cs:298
+                        }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 22. MessageHeader.focus
                 this.Element_Focus = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -772,11 +794,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Focus",                                                                                                 // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 23. MessageHeader.definition
                 this.Element_Definition = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -784,12 +806,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_Definition",                                                                                            // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Canonical()                                                                     // MakerGen.cs:286
+                        new FhirKhit.Maker.Common.Primitive.Canonical                                                                       // MakerGen.cs:287
+                        {                                                                                                                   // MakerGen.cs:288
+                        }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
-        }                                                                                                                                   // MakerGen.cs:373
-    }                                                                                                                                       // MakerGen.cs:357
-}                                                                                                                                           // MakerGen.cs:408
+            }                                                                                                                               // MakerGen.cs:342
+        }                                                                                                                                   // MakerGen.cs:381
+    }                                                                                                                                       // MakerGen.cs:365
+}                                                                                                                                           // MakerGen.cs:416

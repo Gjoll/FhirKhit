@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:391
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:392
-using System.IO;                                                                                                                            // MakerGen.cs:393
-using System.Linq;                                                                                                                          // MakerGen.cs:394
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:396
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:397
-{                                                                                                                                           // MakerGen.cs:398
-    #region Json                                                                                                                            // MakerGen.cs:399
-    #if NEVER                                                                                                                               // MakerGen.cs:400
+using System;                                                                                                                               // MakerGen.cs:399
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
+using System.IO;                                                                                                                            // MakerGen.cs:401
+using System.Linq;                                                                                                                          // MakerGen.cs:402
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
+                                                                                                                                            // MakerGen.cs:404
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
+{                                                                                                                                           // MakerGen.cs:406
+    #region Json                                                                                                                            // MakerGen.cs:407
+    #if NEVER                                                                                                                               // MakerGen.cs:408
     {
       "resourceType": "StructureDefinition",
       "id": "SubstanceNucleicAcid",
@@ -317,19 +317,19 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:403
+    #endregion                                                                                                                              // MakerGen.cs:411
     /// <summary>
     /// Fhir resource 'SubstanceNucleicAcid'
     /// </summary>
     // 0. SubstanceNucleicAcid
-    public class SubstanceNucleicAcid : FhirKhit.Maker.Common.Resource.ResourceBase                                                         // MakerGen.cs:352
-    {                                                                                                                                       // MakerGen.cs:353
+    public class SubstanceNucleicAcid : FhirKhit.Maker.Common.Resource.ResourceBase                                                         // MakerGen.cs:360
+    {                                                                                                                                       // MakerGen.cs:361
         // 5. SubstanceNucleicAcid.subunit
-        public class Type_Subunit : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:352
-        {                                                                                                                                   // MakerGen.cs:353
+        public class Type_Subunit : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:360
+        {                                                                                                                                   // MakerGen.cs:361
             // 12. SubstanceNucleicAcid.subunit.linkage
-            public class Type_Linkage : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:352
-            {                                                                                                                               // MakerGen.cs:353
+            public class Type_Linkage : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:360
+            {                                                                                                                               // MakerGen.cs:361
                 // 13. SubstanceNucleicAcid.subunit.linkage.connectivity
                 public MakerElementInstance Element_Connectivity;                                                                           // MakerGen.cs:232
                 // 14. SubstanceNucleicAcid.subunit.linkage.identifier
@@ -338,8 +338,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_Name;                                                                                   // MakerGen.cs:232
                 // 16. SubstanceNucleicAcid.subunit.linkage.residueSite
                 public MakerElementInstance Element_ResidueSite;                                                                            // MakerGen.cs:232
-                public Type_Linkage()                                                                                                       // MakerGen.cs:361
-                {                                                                                                                           // MakerGen.cs:362
+                public Type_Linkage()                                                                                                       // MakerGen.cs:369
+                {                                                                                                                           // MakerGen.cs:370
                     {                                                                                                                       // MakerGen.cs:243
                         // 13. SubstanceNucleicAcid.subunit.linkage.connectivity
                         this.Element_Connectivity = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -347,12 +347,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_Connectivity",                                                                                  // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String()                                                                // MakerGen.cs:286
+                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:287
+                                {                                                                                                           // MakerGen.cs:288
+                                }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:334
+                    }                                                                                                                       // MakerGen.cs:342
                     {                                                                                                                       // MakerGen.cs:243
                         // 14. SubstanceNucleicAcid.subunit.linkage.identifier
                         this.Element_Identifier = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -360,11 +362,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_Identifier",                                                                                    // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:334
+                    }                                                                                                                       // MakerGen.cs:342
                     {                                                                                                                       // MakerGen.cs:243
                         // 15. SubstanceNucleicAcid.subunit.linkage.name
                         this.Element_Name = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -372,12 +374,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_Name",                                                                                          // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String()                                                                // MakerGen.cs:286
+                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:287
+                                {                                                                                                           // MakerGen.cs:288
+                                }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:334
+                    }                                                                                                                       // MakerGen.cs:342
                     {                                                                                                                       // MakerGen.cs:243
                         // 16. SubstanceNucleicAcid.subunit.linkage.residueSite
                         this.Element_ResidueSite = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -385,25 +389,27 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_ResidueSite",                                                                                   // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String()                                                                // MakerGen.cs:286
+                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:287
+                                {                                                                                                           // MakerGen.cs:288
+                                }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:334
-                }                                                                                                                           // MakerGen.cs:373
-            }                                                                                                                               // MakerGen.cs:357
+                    }                                                                                                                       // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:381
+            }                                                                                                                               // MakerGen.cs:365
             // 17. SubstanceNucleicAcid.subunit.sugar
-            public class Type_Sugar : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:352
-            {                                                                                                                               // MakerGen.cs:353
+            public class Type_Sugar : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
+            {                                                                                                                               // MakerGen.cs:361
                 // 18. SubstanceNucleicAcid.subunit.sugar.identifier
                 public MakerElementInstance Element_Identifier;                                                                             // MakerGen.cs:232
                 // 19. SubstanceNucleicAcid.subunit.sugar.name
                 public MakerElementInstance Element_Name;                                                                                   // MakerGen.cs:232
                 // 20. SubstanceNucleicAcid.subunit.sugar.residueSite
                 public MakerElementInstance Element_ResidueSite;                                                                            // MakerGen.cs:232
-                public Type_Sugar()                                                                                                         // MakerGen.cs:361
-                {                                                                                                                           // MakerGen.cs:362
+                public Type_Sugar()                                                                                                         // MakerGen.cs:369
+                {                                                                                                                           // MakerGen.cs:370
                     {                                                                                                                       // MakerGen.cs:243
                         // 18. SubstanceNucleicAcid.subunit.sugar.identifier
                         this.Element_Identifier = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -411,11 +417,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_Identifier",                                                                                    // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:334
+                    }                                                                                                                       // MakerGen.cs:342
                     {                                                                                                                       // MakerGen.cs:243
                         // 19. SubstanceNucleicAcid.subunit.sugar.name
                         this.Element_Name = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -423,12 +429,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_Name",                                                                                          // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String()                                                                // MakerGen.cs:286
+                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:287
+                                {                                                                                                           // MakerGen.cs:288
+                                }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:334
+                    }                                                                                                                       // MakerGen.cs:342
                     {                                                                                                                       // MakerGen.cs:243
                         // 20. SubstanceNucleicAcid.subunit.sugar.residueSite
                         this.Element_ResidueSite = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -436,14 +444,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Name = "Element_ResidueSite",                                                                                   // MakerGen.cs:247
                             Min = 0,                                                                                                        // MakerGen.cs:248
                             Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                    // MakerGen.cs:250
+                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String()                                                                // MakerGen.cs:286
+                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:287
+                                {                                                                                                           // MakerGen.cs:288
+                                }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:334
-                }                                                                                                                           // MakerGen.cs:373
-            }                                                                                                                               // MakerGen.cs:357
+                    }                                                                                                                       // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:381
+            }                                                                                                                               // MakerGen.cs:365
             // 6. SubstanceNucleicAcid.subunit.subunit
             public MakerElementInstance Element_Subunit;                                                                                    // MakerGen.cs:232
             // 7. SubstanceNucleicAcid.subunit.sequence
@@ -456,8 +466,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_FivePrime;                                                                                  // MakerGen.cs:232
             // 11. SubstanceNucleicAcid.subunit.threePrime
             public MakerElementInstance Element_ThreePrime;                                                                                 // MakerGen.cs:232
-            public Type_Subunit()                                                                                                           // MakerGen.cs:361
-            {                                                                                                                               // MakerGen.cs:362
+            public Type_Subunit()                                                                                                           // MakerGen.cs:369
+            {                                                                                                                               // MakerGen.cs:370
                 {                                                                                                                           // MakerGen.cs:243
                     // 6. SubstanceNucleicAcid.subunit.subunit
                     this.Element_Subunit = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -465,12 +475,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Subunit",                                                                                           // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Integer()                                                                   // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.Integer                                                                     // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 7. SubstanceNucleicAcid.subunit.sequence
                     this.Element_Sequence = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -478,12 +490,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Sequence",                                                                                          // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String()                                                                    // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 8. SubstanceNucleicAcid.subunit.length
                     this.Element_Length = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -491,12 +505,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_Length",                                                                                            // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Integer()                                                                   // MakerGen.cs:286
+                            new FhirKhit.Maker.Common.Primitive.Integer                                                                     // MakerGen.cs:287
+                            {                                                                                                               // MakerGen.cs:288
+                            }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 9. SubstanceNucleicAcid.subunit.sequenceAttachment
                     this.Element_SequenceAttachment = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -504,11 +520,11 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_SequenceAttachment",                                                                                // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 10. SubstanceNucleicAcid.subunit.fivePrime
                     this.Element_FivePrime = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -516,12 +532,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_FivePrime",                                                                                         // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                             // MakerGen.cs:292
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
+                            {                                                                                                               // MakerGen.cs:298
+                            }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
+                }                                                                                                                           // MakerGen.cs:342
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. SubstanceNucleicAcid.subunit.threePrime
                     this.Element_ThreePrime = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -529,14 +547,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Name = "Element_ThreePrime",                                                                                        // MakerGen.cs:247
                         Min = 0,                                                                                                            // MakerGen.cs:248
                         Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                        // MakerGen.cs:250
+                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                             // MakerGen.cs:292
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
+                            {                                                                                                               // MakerGen.cs:298
+                            }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:334
-            }                                                                                                                               // MakerGen.cs:373
-        }                                                                                                                                   // MakerGen.cs:357
+                }                                                                                                                           // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:381
+        }                                                                                                                                   // MakerGen.cs:365
         // 1. SubstanceNucleicAcid.sequenceType
         public MakerElementInstance Element_SequenceType;                                                                                   // MakerGen.cs:232
         // 2. SubstanceNucleicAcid.numberOfSubunits
@@ -545,8 +565,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_AreaOfHybridisation;                                                                            // MakerGen.cs:232
         // 4. SubstanceNucleicAcid.oligoNucleotideType
         public MakerElementInstance Element_OligoNucleotideType;                                                                            // MakerGen.cs:232
-        public SubstanceNucleicAcid()                                                                                                       // MakerGen.cs:361
-        {                                                                                                                                   // MakerGen.cs:362
+        public SubstanceNucleicAcid()                                                                                                       // MakerGen.cs:369
+        {                                                                                                                                   // MakerGen.cs:370
             {                                                                                                                               // MakerGen.cs:243
                 // 1. SubstanceNucleicAcid.sequenceType
                 this.Element_SequenceType = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -554,12 +574,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_SequenceType",                                                                                          // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                                 // MakerGen.cs:292
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
+                        {                                                                                                                   // MakerGen.cs:298
+                        }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 2. SubstanceNucleicAcid.numberOfSubunits
                 this.Element_NumberOfSubunits = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -567,12 +589,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_NumberOfSubunits",                                                                                      // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Integer()                                                                       // MakerGen.cs:286
+                        new FhirKhit.Maker.Common.Primitive.Integer                                                                         // MakerGen.cs:287
+                        {                                                                                                                   // MakerGen.cs:288
+                        }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 3. SubstanceNucleicAcid.areaOfHybridisation
                 this.Element_AreaOfHybridisation = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -580,12 +604,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_AreaOfHybridisation",                                                                                   // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String()                                                                        // MakerGen.cs:286
+                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:287
+                        {                                                                                                                   // MakerGen.cs:288
+                        }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 4. SubstanceNucleicAcid.oligoNucleotideType
                 this.Element_OligoNucleotideType = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -593,12 +619,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Name = "Element_OligoNucleotideType",                                                                                   // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                                 // MakerGen.cs:292
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
+                        {                                                                                                                   // MakerGen.cs:298
+                        }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
-        }                                                                                                                                   // MakerGen.cs:373
-    }                                                                                                                                       // MakerGen.cs:357
-}                                                                                                                                           // MakerGen.cs:408
+            }                                                                                                                               // MakerGen.cs:342
+        }                                                                                                                                   // MakerGen.cs:381
+    }                                                                                                                                       // MakerGen.cs:365
+}                                                                                                                                           // MakerGen.cs:416

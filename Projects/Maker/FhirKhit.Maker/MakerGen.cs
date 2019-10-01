@@ -247,7 +247,7 @@ namespace FhirKhit.Maker
                         .AppendCode($"Name = \"{elementName}\",")
                         .AppendCode($"Min = {min},")
                         .AppendCode($"Max = {max},")
-                        .AppendCode($"Types = new MakerBase_Type[]")
+                        .AppendCode($"Types = new MakerBaseType[]")
                         .OpenBrace()
                         .DefineBlock(out CodeBlockNested typesBlock)
                         .CloseBrace("")
@@ -283,13 +283,21 @@ namespace FhirKhit.Maker
                             case "uuid":
                             case "url":
                             case "canonical":
-                                typesBlock.AppendCode($"new {PrimitiveNameSpace}.{CleanName(type.Code)}(){sep}");
+                                typesBlock
+                                    .AppendCode($"new {PrimitiveNameSpace}.{CleanName(type.Code)}")
+                                    .OpenBrace()
+                                    .CloseBrace(sep)
+                                    ;
                                 sep = ", ";
                                 break;
 
                             case "CodeableConcept":
                             case "Coding":
-                                typesBlock.AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}(){sep}");
+                                typesBlock
+                                    .AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}")
+                                    .OpenBrace()
+                                    .CloseBrace(sep)
+                                    ;
                                 sep = ", ";
                                 break;
 

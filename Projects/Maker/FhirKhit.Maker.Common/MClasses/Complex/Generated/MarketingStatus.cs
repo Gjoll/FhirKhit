@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:439
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:440
-using System.IO;                                                                                                                            // MakerGen.cs:441
-using System.Linq;                                                                                                                          // MakerGen.cs:442
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:443
-                                                                                                                                            // MakerGen.cs:444
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:445
-{                                                                                                                                           // MakerGen.cs:446
-    #region Json                                                                                                                            // MakerGen.cs:447
+using System;                                                                                                                               // MakerGen.cs:447
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:448
+using System.IO;                                                                                                                            // MakerGen.cs:449
+using System.Linq;                                                                                                                          // MakerGen.cs:450
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:451
+                                                                                                                                            // MakerGen.cs:452
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:453
+{                                                                                                                                           // MakerGen.cs:454
+    #region Json                                                                                                                            // MakerGen.cs:455
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -107,13 +107,13 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:451
+    #endregion                                                                                                                              // MakerGen.cs:459
     /// <summary>
     /// Fhir complex 'MarketingStatus'
     /// </summary>
     // 0. MarketingStatus
-    public class MarketingStatus : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:352
-    {                                                                                                                                       // MakerGen.cs:353
+    public class MarketingStatus : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:360
+    {                                                                                                                                       // MakerGen.cs:361
         // 1. MarketingStatus.country
         public MakerElementInstance Element_Country;                                                                                        // MakerGen.cs:232
         // 2. MarketingStatus.jurisdiction
@@ -124,8 +124,8 @@ namespace FhirKhit.Maker.Common.Complex                                         
         public MakerElementInstance Element_DateRange;                                                                                      // MakerGen.cs:232
         // 5. MarketingStatus.restoreDate
         public MakerElementInstance Element_RestoreDate;                                                                                    // MakerGen.cs:232
-        public MarketingStatus()                                                                                                            // MakerGen.cs:361
-        {                                                                                                                                   // MakerGen.cs:362
+        public MarketingStatus()                                                                                                            // MakerGen.cs:369
+        {                                                                                                                                   // MakerGen.cs:370
             {                                                                                                                               // MakerGen.cs:243
                 // 1. MarketingStatus.country
                 this.Element_Country = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -133,12 +133,14 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Name = "Element_Country",                                                                                               // MakerGen.cs:247
                     Min = 1,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                                 // MakerGen.cs:292
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
+                        {                                                                                                                   // MakerGen.cs:298
+                        }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 2. MarketingStatus.jurisdiction
                 this.Element_Jurisdiction = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -146,12 +148,14 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                                 // MakerGen.cs:292
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
+                        {                                                                                                                   // MakerGen.cs:298
+                        }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 3. MarketingStatus.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -159,12 +163,14 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Name = "Element_Status",                                                                                                // MakerGen.cs:247
                     Min = 1,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept()                                                                 // MakerGen.cs:292
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
+                        {                                                                                                                   // MakerGen.cs:298
+                        }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 4. MarketingStatus.dateRange
                 this.Element_DateRange = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -172,11 +178,11 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Name = "Element_DateRange",                                                                                             // MakerGen.cs:247
                     Min = 1,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
+            }                                                                                                                               // MakerGen.cs:342
             {                                                                                                                               // MakerGen.cs:243
                 // 5. MarketingStatus.restoreDate
                 this.Element_RestoreDate = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -184,12 +190,14 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Name = "Element_RestoreDate",                                                                                           // MakerGen.cs:247
                     Min = 0,                                                                                                                // MakerGen.cs:248
                     Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                            // MakerGen.cs:250
+                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.DateTime()                                                                      // MakerGen.cs:286
+                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:287
+                        {                                                                                                                   // MakerGen.cs:288
+                        }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:334
-        }                                                                                                                                   // MakerGen.cs:373
-    }                                                                                                                                       // MakerGen.cs:357
-}                                                                                                                                           // MakerGen.cs:456
+            }                                                                                                                               // MakerGen.cs:342
+        }                                                                                                                                   // MakerGen.cs:381
+    }                                                                                                                                       // MakerGen.cs:365
+}                                                                                                                                           // MakerGen.cs:464
