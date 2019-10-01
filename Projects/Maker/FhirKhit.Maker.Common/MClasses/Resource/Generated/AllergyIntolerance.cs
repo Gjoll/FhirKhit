@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:462
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
-using System.IO;                                                                                                                            // MakerGen.cs:464
-using System.Linq;                                                                                                                          // MakerGen.cs:465
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
-                                                                                                                                            // MakerGen.cs:467
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
-{                                                                                                                                           // MakerGen.cs:469
-    #region Json                                                                                                                            // MakerGen.cs:470
-    #if NEVER                                                                                                                               // MakerGen.cs:471
+using System;                                                                                                                               // MakerGen.cs:457
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:458
+using System.IO;                                                                                                                            // MakerGen.cs:459
+using System.Linq;                                                                                                                          // MakerGen.cs:460
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:461
+                                                                                                                                            // MakerGen.cs:462
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:463
+{                                                                                                                                           // MakerGen.cs:464
+    #region Json                                                                                                                            // MakerGen.cs:465
+    #if NEVER                                                                                                                               // MakerGen.cs:466
     {
       "resourceType": "StructureDefinition",
       "id": "AllergyIntolerance",
@@ -558,586 +558,586 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:474
+    #endregion                                                                                                                              // MakerGen.cs:469
     /// <summary>
     /// Fhir resource 'AllergyIntolerance'
     /// </summary>
     // 0. AllergyIntolerance
-    public class AllergyIntolerance : FhirKhit.Maker.Common.Resource.ResourceBase                                                           // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
-        public class AllergyIntolerance_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:386
-        {                                                                                                                                   // MakerGen.cs:387
+    public class AllergyIntolerance : FhirKhit.Maker.Common.Resource.ResourceBase                                                           // MakerGen.cs:379
+    {                                                                                                                                       // MakerGen.cs:380
+        public class AllergyIntolerance_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 16. AllergyIntolerance.reaction
-            public class Type_Reaction : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Reaction_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Reaction : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Reaction_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 17. AllergyIntolerance.reaction.substance
-                    public ElementDefinitionInfo Substance;                                                                                 // MakerGen.cs:216
+                    public ElementDefinitionInfo Substance;                                                                                 // MakerGen.cs:211
                     // 18. AllergyIntolerance.reaction.manifestation
-                    public ElementDefinitionInfo Manifestation;                                                                             // MakerGen.cs:216
+                    public ElementDefinitionInfo Manifestation;                                                                             // MakerGen.cs:211
                     // 19. AllergyIntolerance.reaction.description
-                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:216
+                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:211
                     // 20. AllergyIntolerance.reaction.onset
-                    public ElementDefinitionInfo Onset;                                                                                     // MakerGen.cs:216
+                    public ElementDefinitionInfo Onset;                                                                                     // MakerGen.cs:211
                     // 21. AllergyIntolerance.reaction.severity
-                    public ElementDefinitionInfo Severity;                                                                                  // MakerGen.cs:216
+                    public ElementDefinitionInfo Severity;                                                                                  // MakerGen.cs:211
                     // 22. AllergyIntolerance.reaction.exposureRoute
-                    public ElementDefinitionInfo ExposureRoute;                                                                             // MakerGen.cs:216
+                    public ElementDefinitionInfo ExposureRoute;                                                                             // MakerGen.cs:211
                     // 23. AllergyIntolerance.reaction.note
-                    public ElementDefinitionInfo Note;                                                                                      // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Reaction_Elements()                                                                                         // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo Note;                                                                                      // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Reaction_Elements()                                                                                         // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 17. AllergyIntolerance.reaction.substance
-                            this.Substance = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Substance",                                                                                         // MakerGen.cs:235
-                                Path= "AllergyIntolerance.reaction.substance",                                                              // MakerGen.cs:236
-                                Id = "AllergyIntolerance.reaction.substance",                                                               // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Substance = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Substance",                                                                                         // MakerGen.cs:230
+                                Path= "AllergyIntolerance.reaction.substance",                                                              // MakerGen.cs:231
+                                Id = "AllergyIntolerance.reaction.substance",                                                               // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 18. AllergyIntolerance.reaction.manifestation
-                            this.Manifestation = new ElementDefinitionInfo                                                                  // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Manifestation",                                                                                     // MakerGen.cs:235
-                                Path= "AllergyIntolerance.reaction.manifestation",                                                          // MakerGen.cs:236
-                                Id = "AllergyIntolerance.reaction.manifestation",                                                           // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Manifestation = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Manifestation",                                                                                     // MakerGen.cs:230
+                                Path= "AllergyIntolerance.reaction.manifestation",                                                          // MakerGen.cs:231
+                                Id = "AllergyIntolerance.reaction.manifestation",                                                           // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 19. AllergyIntolerance.reaction.description
-                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Description",                                                                                       // MakerGen.cs:235
-                                Path= "AllergyIntolerance.reaction.description",                                                            // MakerGen.cs:236
-                                Id = "AllergyIntolerance.reaction.description",                                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Description",                                                                                       // MakerGen.cs:230
+                                Path= "AllergyIntolerance.reaction.description",                                                            // MakerGen.cs:231
+                                Id = "AllergyIntolerance.reaction.description",                                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 20. AllergyIntolerance.reaction.onset
-                            this.Onset = new ElementDefinitionInfo                                                                          // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Onset",                                                                                             // MakerGen.cs:235
-                                Path= "AllergyIntolerance.reaction.onset",                                                                  // MakerGen.cs:236
-                                Id = "AllergyIntolerance.reaction.onset",                                                                   // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Onset = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Onset",                                                                                             // MakerGen.cs:230
+                                Path= "AllergyIntolerance.reaction.onset",                                                                  // MakerGen.cs:231
+                                Id = "AllergyIntolerance.reaction.onset",                                                                   // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 21. AllergyIntolerance.reaction.severity
-                            this.Severity = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Severity",                                                                                          // MakerGen.cs:235
-                                Path= "AllergyIntolerance.reaction.severity",                                                               // MakerGen.cs:236
-                                Id = "AllergyIntolerance.reaction.severity",                                                                // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Severity = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Severity",                                                                                          // MakerGen.cs:230
+                                Path= "AllergyIntolerance.reaction.severity",                                                               // MakerGen.cs:231
+                                Id = "AllergyIntolerance.reaction.severity",                                                                // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 22. AllergyIntolerance.reaction.exposureRoute
-                            this.ExposureRoute = new ElementDefinitionInfo                                                                  // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "ExposureRoute",                                                                                     // MakerGen.cs:235
-                                Path= "AllergyIntolerance.reaction.exposureRoute",                                                          // MakerGen.cs:236
-                                Id = "AllergyIntolerance.reaction.exposureRoute",                                                           // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.ExposureRoute = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "ExposureRoute",                                                                                     // MakerGen.cs:230
+                                Path= "AllergyIntolerance.reaction.exposureRoute",                                                          // MakerGen.cs:231
+                                Id = "AllergyIntolerance.reaction.exposureRoute",                                                           // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 23. AllergyIntolerance.reaction.note
-                            this.Note = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Note",                                                                                              // MakerGen.cs:235
-                                Path= "AllergyIntolerance.reaction.note",                                                                   // MakerGen.cs:236
-                                Id = "AllergyIntolerance.reaction.note",                                                                    // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Annotation                                                            // MakerGen.cs:358
-                                    {                                                                                                       // MakerGen.cs:359
-                                    }                                                                                                       // MakerGen.cs:360
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Substance.Write(sDef);                                                                                              // MakerGen.cs:220
-                        Manifestation.Write(sDef);                                                                                          // MakerGen.cs:220
-                        Description.Write(sDef);                                                                                            // MakerGen.cs:220
-                        Onset.Write(sDef);                                                                                                  // MakerGen.cs:220
-                        Severity.Write(sDef);                                                                                               // MakerGen.cs:220
-                        ExposureRoute.Write(sDef);                                                                                          // MakerGen.cs:220
-                        Note.Write(sDef);                                                                                                   // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Reaction_Elements Elements                                                                                      // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Reaction_Elements();                                                                   // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Reaction_Elements elements;                                                                                            // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Reaction()                                                                                                      // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "AllergyIntolerance.reaction",                                                                               // MakerGen.cs:428
-                        ElementId = "AllergyIntolerance.reaction"                                                                           // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.Note = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Note",                                                                                              // MakerGen.cs:230
+                                Path= "AllergyIntolerance.reaction.note",                                                                   // MakerGen.cs:231
+                                Id = "AllergyIntolerance.reaction.note",                                                                    // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Annotation                                                            // MakerGen.cs:353
+                                    {                                                                                                       // MakerGen.cs:354
+                                    }                                                                                                       // MakerGen.cs:355
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Substance.Write(sDef);                                                                                              // MakerGen.cs:215
+                        Manifestation.Write(sDef);                                                                                          // MakerGen.cs:215
+                        Description.Write(sDef);                                                                                            // MakerGen.cs:215
+                        Onset.Write(sDef);                                                                                                  // MakerGen.cs:215
+                        Severity.Write(sDef);                                                                                               // MakerGen.cs:215
+                        ExposureRoute.Write(sDef);                                                                                          // MakerGen.cs:215
+                        Note.Write(sDef);                                                                                                   // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Reaction_Elements Elements                                                                                      // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Reaction_Elements();                                                                   // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Reaction_Elements elements;                                                                                            // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Reaction()                                                                                                      // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "AllergyIntolerance.reaction",                                                                               // MakerGen.cs:423
+                        ElementId = "AllergyIntolerance.reaction"                                                                           // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 1. AllergyIntolerance.identifier
-            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:211
             // 2. AllergyIntolerance.clinicalStatus
-            public ElementDefinitionInfo ClinicalStatus;                                                                                    // MakerGen.cs:216
+            public ElementDefinitionInfo ClinicalStatus;                                                                                    // MakerGen.cs:211
             // 3. AllergyIntolerance.verificationStatus
-            public ElementDefinitionInfo VerificationStatus;                                                                                // MakerGen.cs:216
+            public ElementDefinitionInfo VerificationStatus;                                                                                // MakerGen.cs:211
             // 4. AllergyIntolerance.type
-            public ElementDefinitionInfo Type;                                                                                              // MakerGen.cs:216
+            public ElementDefinitionInfo Type;                                                                                              // MakerGen.cs:211
             // 5. AllergyIntolerance.category
-            public ElementDefinitionInfo Category;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Category;                                                                                          // MakerGen.cs:211
             // 6. AllergyIntolerance.criticality
-            public ElementDefinitionInfo Criticality;                                                                                       // MakerGen.cs:216
+            public ElementDefinitionInfo Criticality;                                                                                       // MakerGen.cs:211
             // 7. AllergyIntolerance.code
-            public ElementDefinitionInfo Code;                                                                                              // MakerGen.cs:216
+            public ElementDefinitionInfo Code;                                                                                              // MakerGen.cs:211
             // 8. AllergyIntolerance.patient
-            public ElementDefinitionInfo Patient;                                                                                           // MakerGen.cs:216
+            public ElementDefinitionInfo Patient;                                                                                           // MakerGen.cs:211
             // 9. AllergyIntolerance.encounter
-            public ElementDefinitionInfo Encounter;                                                                                         // MakerGen.cs:216
+            public ElementDefinitionInfo Encounter;                                                                                         // MakerGen.cs:211
             // 10. AllergyIntolerance.onset[x]
-            public ElementDefinitionInfo Onset;                                                                                             // MakerGen.cs:216
+            public ElementDefinitionInfo Onset;                                                                                             // MakerGen.cs:211
             // 11. AllergyIntolerance.recordedDate
-            public ElementDefinitionInfo RecordedDate;                                                                                      // MakerGen.cs:216
+            public ElementDefinitionInfo RecordedDate;                                                                                      // MakerGen.cs:211
             // 12. AllergyIntolerance.recorder
-            public ElementDefinitionInfo Recorder;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Recorder;                                                                                          // MakerGen.cs:211
             // 13. AllergyIntolerance.asserter
-            public ElementDefinitionInfo Asserter;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Asserter;                                                                                          // MakerGen.cs:211
             // 14. AllergyIntolerance.lastOccurrence
-            public ElementDefinitionInfo LastOccurrence;                                                                                    // MakerGen.cs:216
+            public ElementDefinitionInfo LastOccurrence;                                                                                    // MakerGen.cs:211
             // 15. AllergyIntolerance.note
-            public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:216
+            public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:211
             // 16. AllergyIntolerance.reaction
-            public ElementDefinitionInfo Reaction;                                                                                          // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-            public AllergyIntolerance_Elements()                                                                                            // MakerGen.cs:392
-            {                                                                                                                               // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:231
+            public ElementDefinitionInfo Reaction;                                                                                          // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+            public AllergyIntolerance_Elements()                                                                                            // MakerGen.cs:387
+            {                                                                                                                               // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:226
                     // 1. AllergyIntolerance.identifier
-                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Identifier",                                                                                                // MakerGen.cs:235
-                        Path= "AllergyIntolerance.identifier",                                                                              // MakerGen.cs:236
-                        Id = "AllergyIntolerance.identifier",                                                                               // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Identifier",                                                                                                // MakerGen.cs:230
+                        Path= "AllergyIntolerance.identifier",                                                                              // MakerGen.cs:231
+                        Id = "AllergyIntolerance.identifier",                                                                               // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 2. AllergyIntolerance.clinicalStatus
-                    this.ClinicalStatus = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "ClinicalStatus",                                                                                            // MakerGen.cs:235
-                        Path= "AllergyIntolerance.clinicalStatus",                                                                          // MakerGen.cs:236
-                        Id = "AllergyIntolerance.clinicalStatus",                                                                           // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.ClinicalStatus = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "ClinicalStatus",                                                                                            // MakerGen.cs:230
+                        Path= "AllergyIntolerance.clinicalStatus",                                                                          // MakerGen.cs:231
+                        Id = "AllergyIntolerance.clinicalStatus",                                                                           // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 3. AllergyIntolerance.verificationStatus
-                    this.VerificationStatus = new ElementDefinitionInfo                                                                     // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "VerificationStatus",                                                                                        // MakerGen.cs:235
-                        Path= "AllergyIntolerance.verificationStatus",                                                                      // MakerGen.cs:236
-                        Id = "AllergyIntolerance.verificationStatus",                                                                       // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.VerificationStatus = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "VerificationStatus",                                                                                        // MakerGen.cs:230
+                        Path= "AllergyIntolerance.verificationStatus",                                                                      // MakerGen.cs:231
+                        Id = "AllergyIntolerance.verificationStatus",                                                                       // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 4. AllergyIntolerance.type
-                    this.Type = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Type",                                                                                                      // MakerGen.cs:235
-                        Path= "AllergyIntolerance.type",                                                                                    // MakerGen.cs:236
-                        Id = "AllergyIntolerance.type",                                                                                     // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Type = new ElementDefinitionInfo                                                                                   // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Type",                                                                                                      // MakerGen.cs:230
+                        Path= "AllergyIntolerance.type",                                                                                    // MakerGen.cs:231
+                        Id = "AllergyIntolerance.type",                                                                                     // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 5. AllergyIntolerance.category
-                    this.Category = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Category",                                                                                                  // MakerGen.cs:235
-                        Path= "AllergyIntolerance.category",                                                                                // MakerGen.cs:236
-                        Id = "AllergyIntolerance.category",                                                                                 // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Category = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Category",                                                                                                  // MakerGen.cs:230
+                        Path= "AllergyIntolerance.category",                                                                                // MakerGen.cs:231
+                        Id = "AllergyIntolerance.category",                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 6. AllergyIntolerance.criticality
-                    this.Criticality = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Criticality",                                                                                               // MakerGen.cs:235
-                        Path= "AllergyIntolerance.criticality",                                                                             // MakerGen.cs:236
-                        Id = "AllergyIntolerance.criticality",                                                                              // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Criticality = new ElementDefinitionInfo                                                                            // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Criticality",                                                                                               // MakerGen.cs:230
+                        Path= "AllergyIntolerance.criticality",                                                                             // MakerGen.cs:231
+                        Id = "AllergyIntolerance.criticality",                                                                              // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 7. AllergyIntolerance.code
-                    this.Code = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Code",                                                                                                      // MakerGen.cs:235
-                        Path= "AllergyIntolerance.code",                                                                                    // MakerGen.cs:236
-                        Id = "AllergyIntolerance.code",                                                                                     // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Code = new ElementDefinitionInfo                                                                                   // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Code",                                                                                                      // MakerGen.cs:230
+                        Path= "AllergyIntolerance.code",                                                                                    // MakerGen.cs:231
+                        Id = "AllergyIntolerance.code",                                                                                     // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 8. AllergyIntolerance.patient
-                    this.Patient = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Patient",                                                                                                   // MakerGen.cs:235
-                        Path= "AllergyIntolerance.patient",                                                                                 // MakerGen.cs:236
-                        Id = "AllergyIntolerance.patient",                                                                                  // MakerGen.cs:237
-                        Min = 1,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Patient = new ElementDefinitionInfo                                                                                // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Patient",                                                                                                   // MakerGen.cs:230
+                        Path= "AllergyIntolerance.patient",                                                                                 // MakerGen.cs:231
+                        Id = "AllergyIntolerance.patient",                                                                                  // MakerGen.cs:232
+                        Min = 1,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Patient"                                                       // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Patient"                                                       // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 9. AllergyIntolerance.encounter
-                    this.Encounter = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Encounter",                                                                                                 // MakerGen.cs:235
-                        Path= "AllergyIntolerance.encounter",                                                                               // MakerGen.cs:236
-                        Id = "AllergyIntolerance.encounter",                                                                                // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Encounter = new ElementDefinitionInfo                                                                              // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Encounter",                                                                                                 // MakerGen.cs:230
+                        Path= "AllergyIntolerance.encounter",                                                                               // MakerGen.cs:231
+                        Id = "AllergyIntolerance.encounter",                                                                                // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Encounter"                                                     // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Encounter"                                                     // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 10. AllergyIntolerance.onset[x]
-                    this.Onset = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Onset",                                                                                                     // MakerGen.cs:235
-                        Path= "AllergyIntolerance.onset[x]",                                                                                // MakerGen.cs:236
-                        Id = "AllergyIntolerance.onset[x]",                                                                                 // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            },                                                                                                              // MakerGen.cs:304
-                            new FhirKhit.Maker.Common.Complex.Age                                                                           // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            },                                                                                                              // MakerGen.cs:360
-                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            },                                                                                                              // MakerGen.cs:360
-                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            },                                                                                                              // MakerGen.cs:360
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Onset = new ElementDefinitionInfo                                                                                  // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Onset",                                                                                                     // MakerGen.cs:230
+                        Path= "AllergyIntolerance.onset[x]",                                                                                // MakerGen.cs:231
+                        Id = "AllergyIntolerance.onset[x]",                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            },                                                                                                              // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.Age                                                                           // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            },                                                                                                              // MakerGen.cs:355
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            },                                                                                                              // MakerGen.cs:355
+                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            },                                                                                                              // MakerGen.cs:355
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 11. AllergyIntolerance.recordedDate
-                    this.RecordedDate = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "RecordedDate",                                                                                              // MakerGen.cs:235
-                        Path= "AllergyIntolerance.recordedDate",                                                                            // MakerGen.cs:236
-                        Id = "AllergyIntolerance.recordedDate",                                                                             // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.RecordedDate = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "RecordedDate",                                                                                              // MakerGen.cs:230
+                        Path= "AllergyIntolerance.recordedDate",                                                                            // MakerGen.cs:231
+                        Id = "AllergyIntolerance.recordedDate",                                                                             // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 12. AllergyIntolerance.recorder
-                    this.Recorder = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Recorder",                                                                                                  // MakerGen.cs:235
-                        Path= "AllergyIntolerance.recorder",                                                                                // MakerGen.cs:236
-                        Id = "AllergyIntolerance.recorder",                                                                                 // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Recorder = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Recorder",                                                                                                  // MakerGen.cs:230
+                        Path= "AllergyIntolerance.recorder",                                                                                // MakerGen.cs:231
+                        Id = "AllergyIntolerance.recorder",                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 13. AllergyIntolerance.asserter
-                    this.Asserter = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Asserter",                                                                                                  // MakerGen.cs:235
-                        Path= "AllergyIntolerance.asserter",                                                                                // MakerGen.cs:236
-                        Id = "AllergyIntolerance.asserter",                                                                                 // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Asserter = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Asserter",                                                                                                  // MakerGen.cs:230
+                        Path= "AllergyIntolerance.asserter",                                                                                // MakerGen.cs:231
+                        Id = "AllergyIntolerance.asserter",                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                              // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                              // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 14. AllergyIntolerance.lastOccurrence
-                    this.LastOccurrence = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "LastOccurrence",                                                                                            // MakerGen.cs:235
-                        Path= "AllergyIntolerance.lastOccurrence",                                                                          // MakerGen.cs:236
-                        Id = "AllergyIntolerance.lastOccurrence",                                                                           // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.LastOccurrence = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "LastOccurrence",                                                                                            // MakerGen.cs:230
+                        Path= "AllergyIntolerance.lastOccurrence",                                                                          // MakerGen.cs:231
+                        Id = "AllergyIntolerance.lastOccurrence",                                                                           // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 15. AllergyIntolerance.note
-                    this.Note = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Note",                                                                                                      // MakerGen.cs:235
-                        Path= "AllergyIntolerance.note",                                                                                    // MakerGen.cs:236
-                        Id = "AllergyIntolerance.note",                                                                                     // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Note = new ElementDefinitionInfo                                                                                   // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Note",                                                                                                      // MakerGen.cs:230
+                        Path= "AllergyIntolerance.note",                                                                                    // MakerGen.cs:231
+                        Id = "AllergyIntolerance.note",                                                                                     // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 16. AllergyIntolerance.reaction
-                    this.Reaction = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Reaction",                                                                                                  // MakerGen.cs:235
-                        Path= "AllergyIntolerance.reaction",                                                                                // MakerGen.cs:236
-                        Id = "AllergyIntolerance.reaction",                                                                                 // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Reaction                                                                                               // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
-            {                                                                                                                               // MakerGen.cs:399
-                base.Write(sDef);                                                                                                           // MakerGen.cs:400
-                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
-                ClinicalStatus.Write(sDef);                                                                                                 // MakerGen.cs:220
-                VerificationStatus.Write(sDef);                                                                                             // MakerGen.cs:220
-                Type.Write(sDef);                                                                                                           // MakerGen.cs:220
-                Category.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Criticality.Write(sDef);                                                                                                    // MakerGen.cs:220
-                Code.Write(sDef);                                                                                                           // MakerGen.cs:220
-                Patient.Write(sDef);                                                                                                        // MakerGen.cs:220
-                Encounter.Write(sDef);                                                                                                      // MakerGen.cs:220
-                Onset.Write(sDef);                                                                                                          // MakerGen.cs:220
-                RecordedDate.Write(sDef);                                                                                                   // MakerGen.cs:220
-                Recorder.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Asserter.Write(sDef);                                                                                                       // MakerGen.cs:220
-                LastOccurrence.Write(sDef);                                                                                                 // MakerGen.cs:220
-                Note.Write(sDef);                                                                                                           // MakerGen.cs:220
-                Reaction.Write(sDef);                                                                                                       // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:402
-        }                                                                                                                                   // MakerGen.cs:404
-        public AllergyIntolerance_Elements Elements                                                                                         // MakerGen.cs:406
-        {                                                                                                                                   // MakerGen.cs:407
-            get                                                                                                                             // MakerGen.cs:408
-            {                                                                                                                               // MakerGen.cs:409
-                if (this.elements == null)                                                                                                  // MakerGen.cs:410
-                    this.elements = new AllergyIntolerance_Elements();                                                                      // MakerGen.cs:411
-                return this.elements;                                                                                                       // MakerGen.cs:412
-            }                                                                                                                               // MakerGen.cs:413
-        }                                                                                                                                   // MakerGen.cs:414
-        AllergyIntolerance_Elements elements;                                                                                               // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-        public AllergyIntolerance()                                                                                                         // MakerGen.cs:418
-        {                                                                                                                                   // MakerGen.cs:419
-            this.Name = "AllergyIntolerance";                                                                                               // MakerGen.cs:492
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance";                                                        // MakerGen.cs:493
-        }                                                                                                                                   // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
-        {                                                                                                                                   // MakerGen.cs:425
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
-            {                                                                                                                               // MakerGen.cs:427
-                Path = "AllergyIntolerance",                                                                                                // MakerGen.cs:428
-                ElementId = "AllergyIntolerance"                                                                                            // MakerGen.cs:429
-            });                                                                                                                             // MakerGen.cs:430
-            if (this.elements != null)                                                                                                      // MakerGen.cs:431
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
-        }                                                                                                                                   // MakerGen.cs:433
-    }                                                                                                                                       // MakerGen.cs:434
-}                                                                                                                                           // MakerGen.cs:479
+                    this.Reaction = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Reaction",                                                                                                  // MakerGen.cs:230
+                        Path= "AllergyIntolerance.reaction",                                                                                // MakerGen.cs:231
+                        Id = "AllergyIntolerance.reaction",                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Reaction                                                                                               // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                base.Write(sDef);                                                                                                           // MakerGen.cs:395
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:215
+                ClinicalStatus.Write(sDef);                                                                                                 // MakerGen.cs:215
+                VerificationStatus.Write(sDef);                                                                                             // MakerGen.cs:215
+                Type.Write(sDef);                                                                                                           // MakerGen.cs:215
+                Category.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Criticality.Write(sDef);                                                                                                    // MakerGen.cs:215
+                Code.Write(sDef);                                                                                                           // MakerGen.cs:215
+                Patient.Write(sDef);                                                                                                        // MakerGen.cs:215
+                Encounter.Write(sDef);                                                                                                      // MakerGen.cs:215
+                Onset.Write(sDef);                                                                                                          // MakerGen.cs:215
+                RecordedDate.Write(sDef);                                                                                                   // MakerGen.cs:215
+                Recorder.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Asserter.Write(sDef);                                                                                                       // MakerGen.cs:215
+                LastOccurrence.Write(sDef);                                                                                                 // MakerGen.cs:215
+                Note.Write(sDef);                                                                                                           // MakerGen.cs:215
+                Reaction.Write(sDef);                                                                                                       // MakerGen.cs:215
+            }                                                                                                                               // MakerGen.cs:397
+        }                                                                                                                                   // MakerGen.cs:399
+        public AllergyIntolerance_Elements Elements                                                                                         // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            get                                                                                                                             // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:404
+                if (this.elements == null)                                                                                                  // MakerGen.cs:405
+                    this.elements = new AllergyIntolerance_Elements();                                                                      // MakerGen.cs:406
+                return this.elements;                                                                                                       // MakerGen.cs:407
+            }                                                                                                                               // MakerGen.cs:408
+        }                                                                                                                                   // MakerGen.cs:409
+        AllergyIntolerance_Elements elements;                                                                                               // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+        public AllergyIntolerance()                                                                                                         // MakerGen.cs:413
+        {                                                                                                                                   // MakerGen.cs:414
+            this.Name = "AllergyIntolerance";                                                                                               // MakerGen.cs:487
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance";                                                        // MakerGen.cs:488
+        }                                                                                                                                   // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:419
+        {                                                                                                                                   // MakerGen.cs:420
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:421
+            {                                                                                                                               // MakerGen.cs:422
+                Path = "AllergyIntolerance",                                                                                                // MakerGen.cs:423
+                ElementId = "AllergyIntolerance"                                                                                            // MakerGen.cs:424
+            });                                                                                                                             // MakerGen.cs:425
+            if (this.elements != null)                                                                                                      // MakerGen.cs:426
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:427
+        }                                                                                                                                   // MakerGen.cs:428
+    }                                                                                                                                       // MakerGen.cs:429
+}                                                                                                                                           // MakerGen.cs:474

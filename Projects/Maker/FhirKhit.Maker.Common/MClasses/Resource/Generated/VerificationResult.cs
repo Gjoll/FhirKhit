@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:462
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
-using System.IO;                                                                                                                            // MakerGen.cs:464
-using System.Linq;                                                                                                                          // MakerGen.cs:465
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
-                                                                                                                                            // MakerGen.cs:467
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
-{                                                                                                                                           // MakerGen.cs:469
-    #region Json                                                                                                                            // MakerGen.cs:470
-    #if NEVER                                                                                                                               // MakerGen.cs:471
+using System;                                                                                                                               // MakerGen.cs:457
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:458
+using System.IO;                                                                                                                            // MakerGen.cs:459
+using System.Linq;                                                                                                                          // MakerGen.cs:460
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:461
+                                                                                                                                            // MakerGen.cs:462
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:463
+{                                                                                                                                           // MakerGen.cs:464
+    #region Json                                                                                                                            // MakerGen.cs:465
+    #if NEVER                                                                                                                               // MakerGen.cs:466
     {
       "resourceType": "StructureDefinition",
       "id": "VerificationResult",
@@ -610,840 +610,840 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:474
+    #endregion                                                                                                                              // MakerGen.cs:469
     /// <summary>
     /// Fhir resource 'VerificationResult'
     /// </summary>
     // 0. VerificationResult
-    public class VerificationResult : FhirKhit.Maker.Common.Resource.ResourceBase                                                           // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
-        public class VerificationResult_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:386
-        {                                                                                                                                   // MakerGen.cs:387
+    public class VerificationResult : FhirKhit.Maker.Common.Resource.ResourceBase                                                           // MakerGen.cs:379
+    {                                                                                                                                       // MakerGen.cs:380
+        public class VerificationResult_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 12. VerificationResult.primarySource
-            public class Type_PrimarySource : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_PrimarySource_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                      // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_PrimarySource : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_PrimarySource_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                      // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 13. VerificationResult.primarySource.who
-                    public ElementDefinitionInfo Who;                                                                                       // MakerGen.cs:216
+                    public ElementDefinitionInfo Who;                                                                                       // MakerGen.cs:211
                     // 14. VerificationResult.primarySource.type
-                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:211
                     // 15. VerificationResult.primarySource.communicationMethod
-                    public ElementDefinitionInfo CommunicationMethod;                                                                       // MakerGen.cs:216
+                    public ElementDefinitionInfo CommunicationMethod;                                                                       // MakerGen.cs:211
                     // 16. VerificationResult.primarySource.validationStatus
-                    public ElementDefinitionInfo ValidationStatus;                                                                          // MakerGen.cs:216
+                    public ElementDefinitionInfo ValidationStatus;                                                                          // MakerGen.cs:211
                     // 17. VerificationResult.primarySource.validationDate
-                    public ElementDefinitionInfo ValidationDate;                                                                            // MakerGen.cs:216
+                    public ElementDefinitionInfo ValidationDate;                                                                            // MakerGen.cs:211
                     // 18. VerificationResult.primarySource.canPushUpdates
-                    public ElementDefinitionInfo CanPushUpdates;                                                                            // MakerGen.cs:216
+                    public ElementDefinitionInfo CanPushUpdates;                                                                            // MakerGen.cs:211
                     // 19. VerificationResult.primarySource.pushTypeAvailable
-                    public ElementDefinitionInfo PushTypeAvailable;                                                                         // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_PrimarySource_Elements()                                                                                    // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo PushTypeAvailable;                                                                         // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_PrimarySource_Elements()                                                                                    // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 13. VerificationResult.primarySource.who
-                            this.Who = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Who",                                                                                               // MakerGen.cs:235
-                                Path= "VerificationResult.primarySource.who",                                                               // MakerGen.cs:236
-                                Id = "VerificationResult.primarySource.who",                                                                // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
-                                    {                                                                                                       // MakerGen.cs:347
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
+                            this.Who = new ElementDefinitionInfo                                                                            // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Who",                                                                                               // MakerGen.cs:230
+                                Path= "VerificationResult.primarySource.who",                                                               // MakerGen.cs:231
+                                Id = "VerificationResult.primarySource.who",                                                                // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:341
+                                    {                                                                                                       // MakerGen.cs:342
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:344
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Organization",                                         // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                      // MakerGen.cs:349
+                                            "http://hl7.org/fhir/StructureDefinition/Organization",                                         // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                      // MakerGen.cs:344
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:350
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                                    }                                                                                                       // MakerGen.cs:345
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 14. VerificationResult.primarySource.type
-                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Type",                                                                                              // MakerGen.cs:235
-                                Path= "VerificationResult.primarySource.type",                                                              // MakerGen.cs:236
-                                Id = "VerificationResult.primarySource.type",                                                               // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Type",                                                                                              // MakerGen.cs:230
+                                Path= "VerificationResult.primarySource.type",                                                              // MakerGen.cs:231
+                                Id = "VerificationResult.primarySource.type",                                                               // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 15. VerificationResult.primarySource.communicationMethod
-                            this.CommunicationMethod = new ElementDefinitionInfo                                                            // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "CommunicationMethod",                                                                               // MakerGen.cs:235
-                                Path= "VerificationResult.primarySource.communicationMethod",                                               // MakerGen.cs:236
-                                Id = "VerificationResult.primarySource.communicationMethod",                                                // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.CommunicationMethod = new ElementDefinitionInfo                                                            // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "CommunicationMethod",                                                                               // MakerGen.cs:230
+                                Path= "VerificationResult.primarySource.communicationMethod",                                               // MakerGen.cs:231
+                                Id = "VerificationResult.primarySource.communicationMethod",                                                // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 16. VerificationResult.primarySource.validationStatus
-                            this.ValidationStatus = new ElementDefinitionInfo                                                               // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "ValidationStatus",                                                                                  // MakerGen.cs:235
-                                Path= "VerificationResult.primarySource.validationStatus",                                                  // MakerGen.cs:236
-                                Id = "VerificationResult.primarySource.validationStatus",                                                   // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.ValidationStatus = new ElementDefinitionInfo                                                               // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "ValidationStatus",                                                                                  // MakerGen.cs:230
+                                Path= "VerificationResult.primarySource.validationStatus",                                                  // MakerGen.cs:231
+                                Id = "VerificationResult.primarySource.validationStatus",                                                   // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 17. VerificationResult.primarySource.validationDate
-                            this.ValidationDate = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "ValidationDate",                                                                                    // MakerGen.cs:235
-                                Path= "VerificationResult.primarySource.validationDate",                                                    // MakerGen.cs:236
-                                Id = "VerificationResult.primarySource.validationDate",                                                     // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.ValidationDate = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "ValidationDate",                                                                                    // MakerGen.cs:230
+                                Path= "VerificationResult.primarySource.validationDate",                                                    // MakerGen.cs:231
+                                Id = "VerificationResult.primarySource.validationDate",                                                     // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 18. VerificationResult.primarySource.canPushUpdates
-                            this.CanPushUpdates = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "CanPushUpdates",                                                                                    // MakerGen.cs:235
-                                Path= "VerificationResult.primarySource.canPushUpdates",                                                    // MakerGen.cs:236
-                                Id = "VerificationResult.primarySource.canPushUpdates",                                                     // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.CanPushUpdates = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "CanPushUpdates",                                                                                    // MakerGen.cs:230
+                                Path= "VerificationResult.primarySource.canPushUpdates",                                                    // MakerGen.cs:231
+                                Id = "VerificationResult.primarySource.canPushUpdates",                                                     // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 19. VerificationResult.primarySource.pushTypeAvailable
-                            this.PushTypeAvailable = new ElementDefinitionInfo                                                              // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "PushTypeAvailable",                                                                                 // MakerGen.cs:235
-                                Path= "VerificationResult.primarySource.pushTypeAvailable",                                                 // MakerGen.cs:236
-                                Id = "VerificationResult.primarySource.pushTypeAvailable",                                                  // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Who.Write(sDef);                                                                                                    // MakerGen.cs:220
-                        Type.Write(sDef);                                                                                                   // MakerGen.cs:220
-                        CommunicationMethod.Write(sDef);                                                                                    // MakerGen.cs:220
-                        ValidationStatus.Write(sDef);                                                                                       // MakerGen.cs:220
-                        ValidationDate.Write(sDef);                                                                                         // MakerGen.cs:220
-                        CanPushUpdates.Write(sDef);                                                                                         // MakerGen.cs:220
-                        PushTypeAvailable.Write(sDef);                                                                                      // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_PrimarySource_Elements Elements                                                                                 // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_PrimarySource_Elements();                                                              // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_PrimarySource_Elements elements;                                                                                       // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_PrimarySource()                                                                                                 // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "VerificationResult.primarySource",                                                                          // MakerGen.cs:428
-                        ElementId = "VerificationResult.primarySource"                                                                      // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.PushTypeAvailable = new ElementDefinitionInfo                                                              // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "PushTypeAvailable",                                                                                 // MakerGen.cs:230
+                                Path= "VerificationResult.primarySource.pushTypeAvailable",                                                 // MakerGen.cs:231
+                                Id = "VerificationResult.primarySource.pushTypeAvailable",                                                  // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Who.Write(sDef);                                                                                                    // MakerGen.cs:215
+                        Type.Write(sDef);                                                                                                   // MakerGen.cs:215
+                        CommunicationMethod.Write(sDef);                                                                                    // MakerGen.cs:215
+                        ValidationStatus.Write(sDef);                                                                                       // MakerGen.cs:215
+                        ValidationDate.Write(sDef);                                                                                         // MakerGen.cs:215
+                        CanPushUpdates.Write(sDef);                                                                                         // MakerGen.cs:215
+                        PushTypeAvailable.Write(sDef);                                                                                      // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_PrimarySource_Elements Elements                                                                                 // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_PrimarySource_Elements();                                                              // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_PrimarySource_Elements elements;                                                                                       // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_PrimarySource()                                                                                                 // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "VerificationResult.primarySource",                                                                          // MakerGen.cs:423
+                        ElementId = "VerificationResult.primarySource"                                                                      // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 20. VerificationResult.attestation
-            public class Type_Attestation : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Attestation_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                        // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Attestation : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Attestation_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                        // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 21. VerificationResult.attestation.who
-                    public ElementDefinitionInfo Who;                                                                                       // MakerGen.cs:216
+                    public ElementDefinitionInfo Who;                                                                                       // MakerGen.cs:211
                     // 22. VerificationResult.attestation.onBehalfOf
-                    public ElementDefinitionInfo OnBehalfOf;                                                                                // MakerGen.cs:216
+                    public ElementDefinitionInfo OnBehalfOf;                                                                                // MakerGen.cs:211
                     // 23. VerificationResult.attestation.communicationMethod
-                    public ElementDefinitionInfo CommunicationMethod;                                                                       // MakerGen.cs:216
+                    public ElementDefinitionInfo CommunicationMethod;                                                                       // MakerGen.cs:211
                     // 24. VerificationResult.attestation.date
-                    public ElementDefinitionInfo Date;                                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo Date;                                                                                      // MakerGen.cs:211
                     // 25. VerificationResult.attestation.sourceIdentityCertificate
-                    public ElementDefinitionInfo SourceIdentityCertificate;                                                                 // MakerGen.cs:216
+                    public ElementDefinitionInfo SourceIdentityCertificate;                                                                 // MakerGen.cs:211
                     // 26. VerificationResult.attestation.proxyIdentityCertificate
-                    public ElementDefinitionInfo ProxyIdentityCertificate;                                                                  // MakerGen.cs:216
+                    public ElementDefinitionInfo ProxyIdentityCertificate;                                                                  // MakerGen.cs:211
                     // 27. VerificationResult.attestation.proxySignature
-                    public ElementDefinitionInfo ProxySignature;                                                                            // MakerGen.cs:216
+                    public ElementDefinitionInfo ProxySignature;                                                                            // MakerGen.cs:211
                     // 28. VerificationResult.attestation.sourceSignature
-                    public ElementDefinitionInfo SourceSignature;                                                                           // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Attestation_Elements()                                                                                      // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo SourceSignature;                                                                           // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Attestation_Elements()                                                                                      // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 21. VerificationResult.attestation.who
-                            this.Who = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Who",                                                                                               // MakerGen.cs:235
-                                Path= "VerificationResult.attestation.who",                                                                 // MakerGen.cs:236
-                                Id = "VerificationResult.attestation.who",                                                                  // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
-                                    {                                                                                                       // MakerGen.cs:347
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
+                            this.Who = new ElementDefinitionInfo                                                                            // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Who",                                                                                               // MakerGen.cs:230
+                                Path= "VerificationResult.attestation.who",                                                                 // MakerGen.cs:231
+                                Id = "VerificationResult.attestation.who",                                                                  // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:341
+                                    {                                                                                                       // MakerGen.cs:342
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:344
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:349
+                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:344
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:350
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                                    }                                                                                                       // MakerGen.cs:345
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 22. VerificationResult.attestation.onBehalfOf
-                            this.OnBehalfOf = new ElementDefinitionInfo                                                                     // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "OnBehalfOf",                                                                                        // MakerGen.cs:235
-                                Path= "VerificationResult.attestation.onBehalfOf",                                                          // MakerGen.cs:236
-                                Id = "VerificationResult.attestation.onBehalfOf",                                                           // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
-                                    {                                                                                                       // MakerGen.cs:347
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
+                            this.OnBehalfOf = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "OnBehalfOf",                                                                                        // MakerGen.cs:230
+                                Path= "VerificationResult.attestation.onBehalfOf",                                                          // MakerGen.cs:231
+                                Id = "VerificationResult.attestation.onBehalfOf",                                                           // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:341
+                                    {                                                                                                       // MakerGen.cs:342
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:344
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Organization",                                         // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                      // MakerGen.cs:349
+                                            "http://hl7.org/fhir/StructureDefinition/Organization",                                         // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                      // MakerGen.cs:344
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:350
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                                    }                                                                                                       // MakerGen.cs:345
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 23. VerificationResult.attestation.communicationMethod
-                            this.CommunicationMethod = new ElementDefinitionInfo                                                            // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "CommunicationMethod",                                                                               // MakerGen.cs:235
-                                Path= "VerificationResult.attestation.communicationMethod",                                                 // MakerGen.cs:236
-                                Id = "VerificationResult.attestation.communicationMethod",                                                  // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.CommunicationMethod = new ElementDefinitionInfo                                                            // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "CommunicationMethod",                                                                               // MakerGen.cs:230
+                                Path= "VerificationResult.attestation.communicationMethod",                                                 // MakerGen.cs:231
+                                Id = "VerificationResult.attestation.communicationMethod",                                                  // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 24. VerificationResult.attestation.date
-                            this.Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Date",                                                                                              // MakerGen.cs:235
-                                Path= "VerificationResult.attestation.date",                                                                // MakerGen.cs:236
-                                Id = "VerificationResult.attestation.date",                                                                 // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Date                                                                // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Date",                                                                                              // MakerGen.cs:230
+                                Path= "VerificationResult.attestation.date",                                                                // MakerGen.cs:231
+                                Id = "VerificationResult.attestation.date",                                                                 // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Date                                                                // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 25. VerificationResult.attestation.sourceIdentityCertificate
-                            this.SourceIdentityCertificate = new ElementDefinitionInfo                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "SourceIdentityCertificate",                                                                         // MakerGen.cs:235
-                                Path= "VerificationResult.attestation.sourceIdentityCertificate",                                           // MakerGen.cs:236
-                                Id = "VerificationResult.attestation.sourceIdentityCertificate",                                            // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.SourceIdentityCertificate = new ElementDefinitionInfo                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "SourceIdentityCertificate",                                                                         // MakerGen.cs:230
+                                Path= "VerificationResult.attestation.sourceIdentityCertificate",                                           // MakerGen.cs:231
+                                Id = "VerificationResult.attestation.sourceIdentityCertificate",                                            // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 26. VerificationResult.attestation.proxyIdentityCertificate
-                            this.ProxyIdentityCertificate = new ElementDefinitionInfo                                                       // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "ProxyIdentityCertificate",                                                                          // MakerGen.cs:235
-                                Path= "VerificationResult.attestation.proxyIdentityCertificate",                                            // MakerGen.cs:236
-                                Id = "VerificationResult.attestation.proxyIdentityCertificate",                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.ProxyIdentityCertificate = new ElementDefinitionInfo                                                       // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "ProxyIdentityCertificate",                                                                          // MakerGen.cs:230
+                                Path= "VerificationResult.attestation.proxyIdentityCertificate",                                            // MakerGen.cs:231
+                                Id = "VerificationResult.attestation.proxyIdentityCertificate",                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 27. VerificationResult.attestation.proxySignature
-                            this.ProxySignature = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "ProxySignature",                                                                                    // MakerGen.cs:235
-                                Path= "VerificationResult.attestation.proxySignature",                                                      // MakerGen.cs:236
-                                Id = "VerificationResult.attestation.proxySignature",                                                       // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Signature                                                             // MakerGen.cs:358
-                                    {                                                                                                       // MakerGen.cs:359
-                                    }                                                                                                       // MakerGen.cs:360
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.ProxySignature = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "ProxySignature",                                                                                    // MakerGen.cs:230
+                                Path= "VerificationResult.attestation.proxySignature",                                                      // MakerGen.cs:231
+                                Id = "VerificationResult.attestation.proxySignature",                                                       // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Signature                                                             // MakerGen.cs:353
+                                    {                                                                                                       // MakerGen.cs:354
+                                    }                                                                                                       // MakerGen.cs:355
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 28. VerificationResult.attestation.sourceSignature
-                            this.SourceSignature = new ElementDefinitionInfo                                                                // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "SourceSignature",                                                                                   // MakerGen.cs:235
-                                Path= "VerificationResult.attestation.sourceSignature",                                                     // MakerGen.cs:236
-                                Id = "VerificationResult.attestation.sourceSignature",                                                      // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Signature                                                             // MakerGen.cs:358
-                                    {                                                                                                       // MakerGen.cs:359
-                                    }                                                                                                       // MakerGen.cs:360
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Who.Write(sDef);                                                                                                    // MakerGen.cs:220
-                        OnBehalfOf.Write(sDef);                                                                                             // MakerGen.cs:220
-                        CommunicationMethod.Write(sDef);                                                                                    // MakerGen.cs:220
-                        Date.Write(sDef);                                                                                                   // MakerGen.cs:220
-                        SourceIdentityCertificate.Write(sDef);                                                                              // MakerGen.cs:220
-                        ProxyIdentityCertificate.Write(sDef);                                                                               // MakerGen.cs:220
-                        ProxySignature.Write(sDef);                                                                                         // MakerGen.cs:220
-                        SourceSignature.Write(sDef);                                                                                        // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Attestation_Elements Elements                                                                                   // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Attestation_Elements();                                                                // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Attestation_Elements elements;                                                                                         // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Attestation()                                                                                                   // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "VerificationResult.attestation",                                                                            // MakerGen.cs:428
-                        ElementId = "VerificationResult.attestation"                                                                        // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.SourceSignature = new ElementDefinitionInfo                                                                // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "SourceSignature",                                                                                   // MakerGen.cs:230
+                                Path= "VerificationResult.attestation.sourceSignature",                                                     // MakerGen.cs:231
+                                Id = "VerificationResult.attestation.sourceSignature",                                                      // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Signature                                                             // MakerGen.cs:353
+                                    {                                                                                                       // MakerGen.cs:354
+                                    }                                                                                                       // MakerGen.cs:355
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Who.Write(sDef);                                                                                                    // MakerGen.cs:215
+                        OnBehalfOf.Write(sDef);                                                                                             // MakerGen.cs:215
+                        CommunicationMethod.Write(sDef);                                                                                    // MakerGen.cs:215
+                        Date.Write(sDef);                                                                                                   // MakerGen.cs:215
+                        SourceIdentityCertificate.Write(sDef);                                                                              // MakerGen.cs:215
+                        ProxyIdentityCertificate.Write(sDef);                                                                               // MakerGen.cs:215
+                        ProxySignature.Write(sDef);                                                                                         // MakerGen.cs:215
+                        SourceSignature.Write(sDef);                                                                                        // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Attestation_Elements Elements                                                                                   // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Attestation_Elements();                                                                // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Attestation_Elements elements;                                                                                         // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Attestation()                                                                                                   // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "VerificationResult.attestation",                                                                            // MakerGen.cs:423
+                        ElementId = "VerificationResult.attestation"                                                                        // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 29. VerificationResult.validator
-            public class Type_Validator : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Validator_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Validator : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Validator_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 30. VerificationResult.validator.organization
-                    public ElementDefinitionInfo Organization;                                                                              // MakerGen.cs:216
+                    public ElementDefinitionInfo Organization;                                                                              // MakerGen.cs:211
                     // 31. VerificationResult.validator.identityCertificate
-                    public ElementDefinitionInfo IdentityCertificate;                                                                       // MakerGen.cs:216
+                    public ElementDefinitionInfo IdentityCertificate;                                                                       // MakerGen.cs:211
                     // 32. VerificationResult.validator.attestationSignature
-                    public ElementDefinitionInfo AttestationSignature;                                                                      // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Validator_Elements()                                                                                        // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo AttestationSignature;                                                                      // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Validator_Elements()                                                                                        // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 30. VerificationResult.validator.organization
-                            this.Organization = new ElementDefinitionInfo                                                                   // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Organization",                                                                                      // MakerGen.cs:235
-                                Path= "VerificationResult.validator.organization",                                                          // MakerGen.cs:236
-                                Id = "VerificationResult.validator.organization",                                                           // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
-                                    {                                                                                                       // MakerGen.cs:347
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
+                            this.Organization = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Organization",                                                                                      // MakerGen.cs:230
+                                Path= "VerificationResult.validator.organization",                                                          // MakerGen.cs:231
+                                Id = "VerificationResult.validator.organization",                                                           // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:341
+                                    {                                                                                                       // MakerGen.cs:342
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:344
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:349
+                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:344
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:350
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                                    }                                                                                                       // MakerGen.cs:345
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 31. VerificationResult.validator.identityCertificate
-                            this.IdentityCertificate = new ElementDefinitionInfo                                                            // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "IdentityCertificate",                                                                               // MakerGen.cs:235
-                                Path= "VerificationResult.validator.identityCertificate",                                                   // MakerGen.cs:236
-                                Id = "VerificationResult.validator.identityCertificate",                                                    // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.IdentityCertificate = new ElementDefinitionInfo                                                            // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "IdentityCertificate",                                                                               // MakerGen.cs:230
+                                Path= "VerificationResult.validator.identityCertificate",                                                   // MakerGen.cs:231
+                                Id = "VerificationResult.validator.identityCertificate",                                                    // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 32. VerificationResult.validator.attestationSignature
-                            this.AttestationSignature = new ElementDefinitionInfo                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "AttestationSignature",                                                                              // MakerGen.cs:235
-                                Path= "VerificationResult.validator.attestationSignature",                                                  // MakerGen.cs:236
-                                Id = "VerificationResult.validator.attestationSignature",                                                   // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Signature                                                             // MakerGen.cs:358
-                                    {                                                                                                       // MakerGen.cs:359
-                                    }                                                                                                       // MakerGen.cs:360
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Organization.Write(sDef);                                                                                           // MakerGen.cs:220
-                        IdentityCertificate.Write(sDef);                                                                                    // MakerGen.cs:220
-                        AttestationSignature.Write(sDef);                                                                                   // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Validator_Elements Elements                                                                                     // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Validator_Elements();                                                                  // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Validator_Elements elements;                                                                                           // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Validator()                                                                                                     // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "VerificationResult.validator",                                                                              // MakerGen.cs:428
-                        ElementId = "VerificationResult.validator"                                                                          // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.AttestationSignature = new ElementDefinitionInfo                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "AttestationSignature",                                                                              // MakerGen.cs:230
+                                Path= "VerificationResult.validator.attestationSignature",                                                  // MakerGen.cs:231
+                                Id = "VerificationResult.validator.attestationSignature",                                                   // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Signature                                                             // MakerGen.cs:353
+                                    {                                                                                                       // MakerGen.cs:354
+                                    }                                                                                                       // MakerGen.cs:355
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Organization.Write(sDef);                                                                                           // MakerGen.cs:215
+                        IdentityCertificate.Write(sDef);                                                                                    // MakerGen.cs:215
+                        AttestationSignature.Write(sDef);                                                                                   // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Validator_Elements Elements                                                                                     // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Validator_Elements();                                                                  // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Validator_Elements elements;                                                                                           // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Validator()                                                                                                     // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "VerificationResult.validator",                                                                              // MakerGen.cs:423
+                        ElementId = "VerificationResult.validator"                                                                          // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 1. VerificationResult.target
-            public ElementDefinitionInfo Target;                                                                                            // MakerGen.cs:216
+            public ElementDefinitionInfo Target;                                                                                            // MakerGen.cs:211
             // 2. VerificationResult.targetLocation
-            public ElementDefinitionInfo TargetLocation;                                                                                    // MakerGen.cs:216
+            public ElementDefinitionInfo TargetLocation;                                                                                    // MakerGen.cs:211
             // 3. VerificationResult.need
-            public ElementDefinitionInfo Need;                                                                                              // MakerGen.cs:216
+            public ElementDefinitionInfo Need;                                                                                              // MakerGen.cs:211
             // 4. VerificationResult.status
-            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:216
+            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:211
             // 5. VerificationResult.statusDate
-            public ElementDefinitionInfo StatusDate;                                                                                        // MakerGen.cs:216
+            public ElementDefinitionInfo StatusDate;                                                                                        // MakerGen.cs:211
             // 6. VerificationResult.validationType
-            public ElementDefinitionInfo ValidationType;                                                                                    // MakerGen.cs:216
+            public ElementDefinitionInfo ValidationType;                                                                                    // MakerGen.cs:211
             // 7. VerificationResult.validationProcess
-            public ElementDefinitionInfo ValidationProcess;                                                                                 // MakerGen.cs:216
+            public ElementDefinitionInfo ValidationProcess;                                                                                 // MakerGen.cs:211
             // 8. VerificationResult.frequency
-            public ElementDefinitionInfo Frequency;                                                                                         // MakerGen.cs:216
+            public ElementDefinitionInfo Frequency;                                                                                         // MakerGen.cs:211
             // 9. VerificationResult.lastPerformed
-            public ElementDefinitionInfo LastPerformed;                                                                                     // MakerGen.cs:216
+            public ElementDefinitionInfo LastPerformed;                                                                                     // MakerGen.cs:211
             // 10. VerificationResult.nextScheduled
-            public ElementDefinitionInfo NextScheduled;                                                                                     // MakerGen.cs:216
+            public ElementDefinitionInfo NextScheduled;                                                                                     // MakerGen.cs:211
             // 11. VerificationResult.failureAction
-            public ElementDefinitionInfo FailureAction;                                                                                     // MakerGen.cs:216
+            public ElementDefinitionInfo FailureAction;                                                                                     // MakerGen.cs:211
             // 12. VerificationResult.primarySource
-            public ElementDefinitionInfo PrimarySource;                                                                                     // MakerGen.cs:216
+            public ElementDefinitionInfo PrimarySource;                                                                                     // MakerGen.cs:211
             // 20. VerificationResult.attestation
-            public ElementDefinitionInfo Attestation;                                                                                       // MakerGen.cs:216
+            public ElementDefinitionInfo Attestation;                                                                                       // MakerGen.cs:211
             // 29. VerificationResult.validator
-            public ElementDefinitionInfo Validator;                                                                                         // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-            public VerificationResult_Elements()                                                                                            // MakerGen.cs:392
-            {                                                                                                                               // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:231
+            public ElementDefinitionInfo Validator;                                                                                         // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+            public VerificationResult_Elements()                                                                                            // MakerGen.cs:387
+            {                                                                                                                               // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:226
                     // 1. VerificationResult.target
-                    this.Target = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Target",                                                                                                    // MakerGen.cs:235
-                        Path= "VerificationResult.target",                                                                                  // MakerGen.cs:236
-                        Id = "VerificationResult.target",                                                                                   // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Target = new ElementDefinitionInfo                                                                                 // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Target",                                                                                                    // MakerGen.cs:230
+                        Path= "VerificationResult.target",                                                                                  // MakerGen.cs:231
+                        Id = "VerificationResult.target",                                                                                   // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 2. VerificationResult.targetLocation
-                    this.TargetLocation = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "TargetLocation",                                                                                            // MakerGen.cs:235
-                        Path= "VerificationResult.targetLocation",                                                                          // MakerGen.cs:236
-                        Id = "VerificationResult.targetLocation",                                                                           // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.TargetLocation = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "TargetLocation",                                                                                            // MakerGen.cs:230
+                        Path= "VerificationResult.targetLocation",                                                                          // MakerGen.cs:231
+                        Id = "VerificationResult.targetLocation",                                                                           // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 3. VerificationResult.need
-                    this.Need = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Need",                                                                                                      // MakerGen.cs:235
-                        Path= "VerificationResult.need",                                                                                    // MakerGen.cs:236
-                        Id = "VerificationResult.need",                                                                                     // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Need = new ElementDefinitionInfo                                                                                   // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Need",                                                                                                      // MakerGen.cs:230
+                        Path= "VerificationResult.need",                                                                                    // MakerGen.cs:231
+                        Id = "VerificationResult.need",                                                                                     // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 4. VerificationResult.status
-                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Status",                                                                                                    // MakerGen.cs:235
-                        Path= "VerificationResult.status",                                                                                  // MakerGen.cs:236
-                        Id = "VerificationResult.status",                                                                                   // MakerGen.cs:237
-                        Min = 1,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Status",                                                                                                    // MakerGen.cs:230
+                        Path= "VerificationResult.status",                                                                                  // MakerGen.cs:231
+                        Id = "VerificationResult.status",                                                                                   // MakerGen.cs:232
+                        Min = 1,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 5. VerificationResult.statusDate
-                    this.StatusDate = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "StatusDate",                                                                                                // MakerGen.cs:235
-                        Path= "VerificationResult.statusDate",                                                                              // MakerGen.cs:236
-                        Id = "VerificationResult.statusDate",                                                                               // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.StatusDate = new ElementDefinitionInfo                                                                             // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "StatusDate",                                                                                                // MakerGen.cs:230
+                        Path= "VerificationResult.statusDate",                                                                              // MakerGen.cs:231
+                        Id = "VerificationResult.statusDate",                                                                               // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 6. VerificationResult.validationType
-                    this.ValidationType = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "ValidationType",                                                                                            // MakerGen.cs:235
-                        Path= "VerificationResult.validationType",                                                                          // MakerGen.cs:236
-                        Id = "VerificationResult.validationType",                                                                           // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.ValidationType = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "ValidationType",                                                                                            // MakerGen.cs:230
+                        Path= "VerificationResult.validationType",                                                                          // MakerGen.cs:231
+                        Id = "VerificationResult.validationType",                                                                           // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 7. VerificationResult.validationProcess
-                    this.ValidationProcess = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "ValidationProcess",                                                                                         // MakerGen.cs:235
-                        Path= "VerificationResult.validationProcess",                                                                       // MakerGen.cs:236
-                        Id = "VerificationResult.validationProcess",                                                                        // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.ValidationProcess = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "ValidationProcess",                                                                                         // MakerGen.cs:230
+                        Path= "VerificationResult.validationProcess",                                                                       // MakerGen.cs:231
+                        Id = "VerificationResult.validationProcess",                                                                        // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 8. VerificationResult.frequency
-                    this.Frequency = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Frequency",                                                                                                 // MakerGen.cs:235
-                        Path= "VerificationResult.frequency",                                                                               // MakerGen.cs:236
-                        Id = "VerificationResult.frequency",                                                                                // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Timing                                                                        // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Frequency = new ElementDefinitionInfo                                                                              // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Frequency",                                                                                                 // MakerGen.cs:230
+                        Path= "VerificationResult.frequency",                                                                               // MakerGen.cs:231
+                        Id = "VerificationResult.frequency",                                                                                // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Timing                                                                        // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 9. VerificationResult.lastPerformed
-                    this.LastPerformed = new ElementDefinitionInfo                                                                          // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "LastPerformed",                                                                                             // MakerGen.cs:235
-                        Path= "VerificationResult.lastPerformed",                                                                           // MakerGen.cs:236
-                        Id = "VerificationResult.lastPerformed",                                                                            // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.LastPerformed = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "LastPerformed",                                                                                             // MakerGen.cs:230
+                        Path= "VerificationResult.lastPerformed",                                                                           // MakerGen.cs:231
+                        Id = "VerificationResult.lastPerformed",                                                                            // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 10. VerificationResult.nextScheduled
-                    this.NextScheduled = new ElementDefinitionInfo                                                                          // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "NextScheduled",                                                                                             // MakerGen.cs:235
-                        Path= "VerificationResult.nextScheduled",                                                                           // MakerGen.cs:236
-                        Id = "VerificationResult.nextScheduled",                                                                            // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.NextScheduled = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "NextScheduled",                                                                                             // MakerGen.cs:230
+                        Path= "VerificationResult.nextScheduled",                                                                           // MakerGen.cs:231
+                        Id = "VerificationResult.nextScheduled",                                                                            // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 11. VerificationResult.failureAction
-                    this.FailureAction = new ElementDefinitionInfo                                                                          // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "FailureAction",                                                                                             // MakerGen.cs:235
-                        Path= "VerificationResult.failureAction",                                                                           // MakerGen.cs:236
-                        Id = "VerificationResult.failureAction",                                                                            // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.FailureAction = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "FailureAction",                                                                                             // MakerGen.cs:230
+                        Path= "VerificationResult.failureAction",                                                                           // MakerGen.cs:231
+                        Id = "VerificationResult.failureAction",                                                                            // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 12. VerificationResult.primarySource
-                    this.PrimarySource = new ElementDefinitionInfo                                                                          // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "PrimarySource",                                                                                             // MakerGen.cs:235
-                        Path= "VerificationResult.primarySource",                                                                           // MakerGen.cs:236
-                        Id = "VerificationResult.primarySource",                                                                            // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_PrimarySource                                                                                          // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.PrimarySource = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "PrimarySource",                                                                                             // MakerGen.cs:230
+                        Path= "VerificationResult.primarySource",                                                                           // MakerGen.cs:231
+                        Id = "VerificationResult.primarySource",                                                                            // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_PrimarySource                                                                                          // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 20. VerificationResult.attestation
-                    this.Attestation = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Attestation",                                                                                               // MakerGen.cs:235
-                        Path= "VerificationResult.attestation",                                                                             // MakerGen.cs:236
-                        Id = "VerificationResult.attestation",                                                                              // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Attestation                                                                                            // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Attestation = new ElementDefinitionInfo                                                                            // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Attestation",                                                                                               // MakerGen.cs:230
+                        Path= "VerificationResult.attestation",                                                                             // MakerGen.cs:231
+                        Id = "VerificationResult.attestation",                                                                              // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Attestation                                                                                            // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 29. VerificationResult.validator
-                    this.Validator = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Validator",                                                                                                 // MakerGen.cs:235
-                        Path= "VerificationResult.validator",                                                                               // MakerGen.cs:236
-                        Id = "VerificationResult.validator",                                                                                // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Validator                                                                                              // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
-            {                                                                                                                               // MakerGen.cs:399
-                base.Write(sDef);                                                                                                           // MakerGen.cs:400
-                Target.Write(sDef);                                                                                                         // MakerGen.cs:220
-                TargetLocation.Write(sDef);                                                                                                 // MakerGen.cs:220
-                Need.Write(sDef);                                                                                                           // MakerGen.cs:220
-                Status.Write(sDef);                                                                                                         // MakerGen.cs:220
-                StatusDate.Write(sDef);                                                                                                     // MakerGen.cs:220
-                ValidationType.Write(sDef);                                                                                                 // MakerGen.cs:220
-                ValidationProcess.Write(sDef);                                                                                              // MakerGen.cs:220
-                Frequency.Write(sDef);                                                                                                      // MakerGen.cs:220
-                LastPerformed.Write(sDef);                                                                                                  // MakerGen.cs:220
-                NextScheduled.Write(sDef);                                                                                                  // MakerGen.cs:220
-                FailureAction.Write(sDef);                                                                                                  // MakerGen.cs:220
-                PrimarySource.Write(sDef);                                                                                                  // MakerGen.cs:220
-                Attestation.Write(sDef);                                                                                                    // MakerGen.cs:220
-                Validator.Write(sDef);                                                                                                      // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:402
-        }                                                                                                                                   // MakerGen.cs:404
-        public VerificationResult_Elements Elements                                                                                         // MakerGen.cs:406
-        {                                                                                                                                   // MakerGen.cs:407
-            get                                                                                                                             // MakerGen.cs:408
-            {                                                                                                                               // MakerGen.cs:409
-                if (this.elements == null)                                                                                                  // MakerGen.cs:410
-                    this.elements = new VerificationResult_Elements();                                                                      // MakerGen.cs:411
-                return this.elements;                                                                                                       // MakerGen.cs:412
-            }                                                                                                                               // MakerGen.cs:413
-        }                                                                                                                                   // MakerGen.cs:414
-        VerificationResult_Elements elements;                                                                                               // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-        public VerificationResult()                                                                                                         // MakerGen.cs:418
-        {                                                                                                                                   // MakerGen.cs:419
-            this.Name = "VerificationResult";                                                                                               // MakerGen.cs:492
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/VerificationResult";                                                        // MakerGen.cs:493
-        }                                                                                                                                   // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
-        {                                                                                                                                   // MakerGen.cs:425
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
-            {                                                                                                                               // MakerGen.cs:427
-                Path = "VerificationResult",                                                                                                // MakerGen.cs:428
-                ElementId = "VerificationResult"                                                                                            // MakerGen.cs:429
-            });                                                                                                                             // MakerGen.cs:430
-            if (this.elements != null)                                                                                                      // MakerGen.cs:431
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
-        }                                                                                                                                   // MakerGen.cs:433
-    }                                                                                                                                       // MakerGen.cs:434
-}                                                                                                                                           // MakerGen.cs:479
+                    this.Validator = new ElementDefinitionInfo                                                                              // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Validator",                                                                                                 // MakerGen.cs:230
+                        Path= "VerificationResult.validator",                                                                               // MakerGen.cs:231
+                        Id = "VerificationResult.validator",                                                                                // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Validator                                                                                              // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                base.Write(sDef);                                                                                                           // MakerGen.cs:395
+                Target.Write(sDef);                                                                                                         // MakerGen.cs:215
+                TargetLocation.Write(sDef);                                                                                                 // MakerGen.cs:215
+                Need.Write(sDef);                                                                                                           // MakerGen.cs:215
+                Status.Write(sDef);                                                                                                         // MakerGen.cs:215
+                StatusDate.Write(sDef);                                                                                                     // MakerGen.cs:215
+                ValidationType.Write(sDef);                                                                                                 // MakerGen.cs:215
+                ValidationProcess.Write(sDef);                                                                                              // MakerGen.cs:215
+                Frequency.Write(sDef);                                                                                                      // MakerGen.cs:215
+                LastPerformed.Write(sDef);                                                                                                  // MakerGen.cs:215
+                NextScheduled.Write(sDef);                                                                                                  // MakerGen.cs:215
+                FailureAction.Write(sDef);                                                                                                  // MakerGen.cs:215
+                PrimarySource.Write(sDef);                                                                                                  // MakerGen.cs:215
+                Attestation.Write(sDef);                                                                                                    // MakerGen.cs:215
+                Validator.Write(sDef);                                                                                                      // MakerGen.cs:215
+            }                                                                                                                               // MakerGen.cs:397
+        }                                                                                                                                   // MakerGen.cs:399
+        public VerificationResult_Elements Elements                                                                                         // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            get                                                                                                                             // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:404
+                if (this.elements == null)                                                                                                  // MakerGen.cs:405
+                    this.elements = new VerificationResult_Elements();                                                                      // MakerGen.cs:406
+                return this.elements;                                                                                                       // MakerGen.cs:407
+            }                                                                                                                               // MakerGen.cs:408
+        }                                                                                                                                   // MakerGen.cs:409
+        VerificationResult_Elements elements;                                                                                               // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+        public VerificationResult()                                                                                                         // MakerGen.cs:413
+        {                                                                                                                                   // MakerGen.cs:414
+            this.Name = "VerificationResult";                                                                                               // MakerGen.cs:487
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/VerificationResult";                                                        // MakerGen.cs:488
+        }                                                                                                                                   // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:419
+        {                                                                                                                                   // MakerGen.cs:420
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:421
+            {                                                                                                                               // MakerGen.cs:422
+                Path = "VerificationResult",                                                                                                // MakerGen.cs:423
+                ElementId = "VerificationResult"                                                                                            // MakerGen.cs:424
+            });                                                                                                                             // MakerGen.cs:425
+            if (this.elements != null)                                                                                                      // MakerGen.cs:426
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:427
+        }                                                                                                                                   // MakerGen.cs:428
+    }                                                                                                                                       // MakerGen.cs:429
+}                                                                                                                                           // MakerGen.cs:474

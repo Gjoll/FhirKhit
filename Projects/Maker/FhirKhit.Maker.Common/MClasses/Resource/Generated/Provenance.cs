@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:462
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
-using System.IO;                                                                                                                            // MakerGen.cs:464
-using System.Linq;                                                                                                                          // MakerGen.cs:465
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
-                                                                                                                                            // MakerGen.cs:467
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
-{                                                                                                                                           // MakerGen.cs:469
-    #region Json                                                                                                                            // MakerGen.cs:470
-    #if NEVER                                                                                                                               // MakerGen.cs:471
+using System;                                                                                                                               // MakerGen.cs:457
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:458
+using System.IO;                                                                                                                            // MakerGen.cs:459
+using System.Linq;                                                                                                                          // MakerGen.cs:460
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:461
+                                                                                                                                            // MakerGen.cs:462
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:463
+{                                                                                                                                           // MakerGen.cs:464
+    #region Json                                                                                                                            // MakerGen.cs:465
+    #if NEVER                                                                                                                               // MakerGen.cs:466
     {
       "resourceType": "StructureDefinition",
       "id": "Provenance",
@@ -361,503 +361,503 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:474
+    #endregion                                                                                                                              // MakerGen.cs:469
     /// <summary>
     /// Fhir resource 'Provenance'
     /// </summary>
     // 0. Provenance
-    public class Provenance : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
-        public class Provenance_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                      // MakerGen.cs:386
-        {                                                                                                                                   // MakerGen.cs:387
+    public class Provenance : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:379
+    {                                                                                                                                       // MakerGen.cs:380
+        public class Provenance_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                      // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 8. Provenance.agent
-            public class Type_Agent : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Agent_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Agent : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Agent_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 9. Provenance.agent.type
-                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:211
                     // 10. Provenance.agent.role
-                    public ElementDefinitionInfo Role;                                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo Role;                                                                                      // MakerGen.cs:211
                     // 11. Provenance.agent.who
-                    public ElementDefinitionInfo Who;                                                                                       // MakerGen.cs:216
+                    public ElementDefinitionInfo Who;                                                                                       // MakerGen.cs:211
                     // 12. Provenance.agent.onBehalfOf
-                    public ElementDefinitionInfo OnBehalfOf;                                                                                // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Agent_Elements()                                                                                            // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo OnBehalfOf;                                                                                // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Agent_Elements()                                                                                            // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 9. Provenance.agent.type
-                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Type",                                                                                              // MakerGen.cs:235
-                                Path= "Provenance.agent.type",                                                                              // MakerGen.cs:236
-                                Id = "Provenance.agent.type",                                                                               // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Type",                                                                                              // MakerGen.cs:230
+                                Path= "Provenance.agent.type",                                                                              // MakerGen.cs:231
+                                Id = "Provenance.agent.type",                                                                               // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 10. Provenance.agent.role
-                            this.Role = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Role",                                                                                              // MakerGen.cs:235
-                                Path= "Provenance.agent.role",                                                                              // MakerGen.cs:236
-                                Id = "Provenance.agent.role",                                                                               // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Role = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Role",                                                                                              // MakerGen.cs:230
+                                Path= "Provenance.agent.role",                                                                              // MakerGen.cs:231
+                                Id = "Provenance.agent.role",                                                                               // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 11. Provenance.agent.who
-                            this.Who = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Who",                                                                                               // MakerGen.cs:235
-                                Path= "Provenance.agent.who",                                                                               // MakerGen.cs:236
-                                Id = "Provenance.agent.who",                                                                                // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
-                                    {                                                                                                       // MakerGen.cs:347
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
+                            this.Who = new ElementDefinitionInfo                                                                            // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Who",                                                                                               // MakerGen.cs:230
+                                Path= "Provenance.agent.who",                                                                               // MakerGen.cs:231
+                                Id = "Provenance.agent.who",                                                                                // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:341
+                                    {                                                                                                       // MakerGen.cs:342
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:344
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                        // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Patient",                                              // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Device",                                               // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:349
+                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                        // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Patient",                                              // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Device",                                               // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:344
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:350
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                                    }                                                                                                       // MakerGen.cs:345
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 12. Provenance.agent.onBehalfOf
-                            this.OnBehalfOf = new ElementDefinitionInfo                                                                     // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "OnBehalfOf",                                                                                        // MakerGen.cs:235
-                                Path= "Provenance.agent.onBehalfOf",                                                                        // MakerGen.cs:236
-                                Id = "Provenance.agent.onBehalfOf",                                                                         // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
-                                    {                                                                                                       // MakerGen.cs:347
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
+                            this.OnBehalfOf = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "OnBehalfOf",                                                                                        // MakerGen.cs:230
+                                Path= "Provenance.agent.onBehalfOf",                                                                        // MakerGen.cs:231
+                                Id = "Provenance.agent.onBehalfOf",                                                                         // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:341
+                                    {                                                                                                       // MakerGen.cs:342
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:344
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                        // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Patient",                                              // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Device",                                               // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:349
+                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                        // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Patient",                                              // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Device",                                               // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:344
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:350
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Type.Write(sDef);                                                                                                   // MakerGen.cs:220
-                        Role.Write(sDef);                                                                                                   // MakerGen.cs:220
-                        Who.Write(sDef);                                                                                                    // MakerGen.cs:220
-                        OnBehalfOf.Write(sDef);                                                                                             // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Agent_Elements Elements                                                                                         // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Agent_Elements();                                                                      // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Agent_Elements elements;                                                                                               // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Agent()                                                                                                         // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "Provenance.agent",                                                                                          // MakerGen.cs:428
-                        ElementId = "Provenance.agent"                                                                                      // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                                    }                                                                                                       // MakerGen.cs:345
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Type.Write(sDef);                                                                                                   // MakerGen.cs:215
+                        Role.Write(sDef);                                                                                                   // MakerGen.cs:215
+                        Who.Write(sDef);                                                                                                    // MakerGen.cs:215
+                        OnBehalfOf.Write(sDef);                                                                                             // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Agent_Elements Elements                                                                                         // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Agent_Elements();                                                                      // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Agent_Elements elements;                                                                                               // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Agent()                                                                                                         // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "Provenance.agent",                                                                                          // MakerGen.cs:423
+                        ElementId = "Provenance.agent"                                                                                      // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 13. Provenance.entity
-            public class Type_Entity : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Entity_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Entity : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Entity_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 14. Provenance.entity.role
-                    public ElementDefinitionInfo Role;                                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo Role;                                                                                      // MakerGen.cs:211
                     // 15. Provenance.entity.what
-                    public ElementDefinitionInfo What;                                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo What;                                                                                      // MakerGen.cs:211
                     // 16. Provenance.entity.agent
-                    public ElementDefinitionInfo Agent;                                                                                     // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Entity_Elements()                                                                                           // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo Agent;                                                                                     // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Entity_Elements()                                                                                           // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 14. Provenance.entity.role
-                            this.Role = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Role",                                                                                              // MakerGen.cs:235
-                                Path= "Provenance.entity.role",                                                                             // MakerGen.cs:236
-                                Id = "Provenance.entity.role",                                                                              // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Role = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Role",                                                                                              // MakerGen.cs:230
+                                Path= "Provenance.entity.role",                                                                             // MakerGen.cs:231
+                                Id = "Provenance.entity.role",                                                                              // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 15. Provenance.entity.what
-                            this.What = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "What",                                                                                              // MakerGen.cs:235
-                                Path= "Provenance.entity.what",                                                                             // MakerGen.cs:236
-                                Id = "Provenance.entity.what",                                                                              // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
-                                    {                                                                                                       // MakerGen.cs:347
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
+                            this.What = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "What",                                                                                              // MakerGen.cs:230
+                                Path= "Provenance.entity.what",                                                                             // MakerGen.cs:231
+                                Id = "Provenance.entity.what",                                                                              // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:341
+                                    {                                                                                                       // MakerGen.cs:342
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:344
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Resource"                                              // MakerGen.cs:349
+                                            "http://hl7.org/fhir/StructureDefinition/Resource"                                              // MakerGen.cs:344
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:350
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                                    }                                                                                                       // MakerGen.cs:345
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 16. Provenance.entity.agent
-                            this.Agent = new ElementDefinitionInfo                                                                          // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Agent",                                                                                             // MakerGen.cs:235
-                                Path= "Provenance.entity.agent",                                                                            // MakerGen.cs:236
-                                Id = "Provenance.entity.agent",                                                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Role.Write(sDef);                                                                                                   // MakerGen.cs:220
-                        What.Write(sDef);                                                                                                   // MakerGen.cs:220
-                        Agent.Write(sDef);                                                                                                  // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Entity_Elements Elements                                                                                        // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Entity_Elements();                                                                     // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Entity_Elements elements;                                                                                              // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Entity()                                                                                                        // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "Provenance.entity",                                                                                         // MakerGen.cs:428
-                        ElementId = "Provenance.entity"                                                                                     // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.Agent = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Agent",                                                                                             // MakerGen.cs:230
+                                Path= "Provenance.entity.agent",                                                                            // MakerGen.cs:231
+                                Id = "Provenance.entity.agent",                                                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Role.Write(sDef);                                                                                                   // MakerGen.cs:215
+                        What.Write(sDef);                                                                                                   // MakerGen.cs:215
+                        Agent.Write(sDef);                                                                                                  // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Entity_Elements Elements                                                                                        // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Entity_Elements();                                                                     // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Entity_Elements elements;                                                                                              // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Entity()                                                                                                        // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "Provenance.entity",                                                                                         // MakerGen.cs:423
+                        ElementId = "Provenance.entity"                                                                                     // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 1. Provenance.target
-            public ElementDefinitionInfo Target;                                                                                            // MakerGen.cs:216
+            public ElementDefinitionInfo Target;                                                                                            // MakerGen.cs:211
             // 2. Provenance.occurred[x]
-            public ElementDefinitionInfo Occurred;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Occurred;                                                                                          // MakerGen.cs:211
             // 3. Provenance.recorded
-            public ElementDefinitionInfo Recorded;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Recorded;                                                                                          // MakerGen.cs:211
             // 4. Provenance.policy
-            public ElementDefinitionInfo Policy;                                                                                            // MakerGen.cs:216
+            public ElementDefinitionInfo Policy;                                                                                            // MakerGen.cs:211
             // 5. Provenance.location
-            public ElementDefinitionInfo Location;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Location;                                                                                          // MakerGen.cs:211
             // 6. Provenance.reason
-            public ElementDefinitionInfo Reason;                                                                                            // MakerGen.cs:216
+            public ElementDefinitionInfo Reason;                                                                                            // MakerGen.cs:211
             // 7. Provenance.activity
-            public ElementDefinitionInfo Activity;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Activity;                                                                                          // MakerGen.cs:211
             // 8. Provenance.agent
-            public ElementDefinitionInfo Agent;                                                                                             // MakerGen.cs:216
+            public ElementDefinitionInfo Agent;                                                                                             // MakerGen.cs:211
             // 13. Provenance.entity
-            public ElementDefinitionInfo Entity;                                                                                            // MakerGen.cs:216
+            public ElementDefinitionInfo Entity;                                                                                            // MakerGen.cs:211
             // 17. Provenance.signature
-            public ElementDefinitionInfo Signature;                                                                                         // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-            public Provenance_Elements()                                                                                                    // MakerGen.cs:392
-            {                                                                                                                               // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:231
+            public ElementDefinitionInfo Signature;                                                                                         // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+            public Provenance_Elements()                                                                                                    // MakerGen.cs:387
+            {                                                                                                                               // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:226
                     // 1. Provenance.target
-                    this.Target = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Target",                                                                                                    // MakerGen.cs:235
-                        Path= "Provenance.target",                                                                                          // MakerGen.cs:236
-                        Id = "Provenance.target",                                                                                           // MakerGen.cs:237
-                        Min = 1,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Target = new ElementDefinitionInfo                                                                                 // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Target",                                                                                                    // MakerGen.cs:230
+                        Path= "Provenance.target",                                                                                          // MakerGen.cs:231
+                        Id = "Provenance.target",                                                                                           // MakerGen.cs:232
+                        Min = 1,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 2. Provenance.occurred[x]
-                    this.Occurred = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Occurred",                                                                                                  // MakerGen.cs:235
-                        Path= "Provenance.occurred[x]",                                                                                     // MakerGen.cs:236
-                        Id = "Provenance.occurred[x]",                                                                                      // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            },                                                                                                              // MakerGen.cs:360
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Occurred = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Occurred",                                                                                                  // MakerGen.cs:230
+                        Path= "Provenance.occurred[x]",                                                                                     // MakerGen.cs:231
+                        Id = "Provenance.occurred[x]",                                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            },                                                                                                              // MakerGen.cs:355
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 3. Provenance.recorded
-                    this.Recorded = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Recorded",                                                                                                  // MakerGen.cs:235
-                        Path= "Provenance.recorded",                                                                                        // MakerGen.cs:236
-                        Id = "Provenance.recorded",                                                                                         // MakerGen.cs:237
-                        Min = 1,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.Instant                                                                     // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Recorded = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Recorded",                                                                                                  // MakerGen.cs:230
+                        Path= "Provenance.recorded",                                                                                        // MakerGen.cs:231
+                        Id = "Provenance.recorded",                                                                                         // MakerGen.cs:232
+                        Min = 1,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.Instant                                                                     // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 4. Provenance.policy
-                    this.Policy = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Policy",                                                                                                    // MakerGen.cs:235
-                        Path= "Provenance.policy",                                                                                          // MakerGen.cs:236
-                        Id = "Provenance.policy",                                                                                           // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Policy = new ElementDefinitionInfo                                                                                 // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Policy",                                                                                                    // MakerGen.cs:230
+                        Path= "Provenance.policy",                                                                                          // MakerGen.cs:231
+                        Id = "Provenance.policy",                                                                                           // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 5. Provenance.location
-                    this.Location = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Location",                                                                                                  // MakerGen.cs:235
-                        Path= "Provenance.location",                                                                                        // MakerGen.cs:236
-                        Id = "Provenance.location",                                                                                         // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Location = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Location",                                                                                                  // MakerGen.cs:230
+                        Path= "Provenance.location",                                                                                        // MakerGen.cs:231
+                        Id = "Provenance.location",                                                                                         // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 6. Provenance.reason
-                    this.Reason = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Reason",                                                                                                    // MakerGen.cs:235
-                        Path= "Provenance.reason",                                                                                          // MakerGen.cs:236
-                        Id = "Provenance.reason",                                                                                           // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Reason = new ElementDefinitionInfo                                                                                 // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Reason",                                                                                                    // MakerGen.cs:230
+                        Path= "Provenance.reason",                                                                                          // MakerGen.cs:231
+                        Id = "Provenance.reason",                                                                                           // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 7. Provenance.activity
-                    this.Activity = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Activity",                                                                                                  // MakerGen.cs:235
-                        Path= "Provenance.activity",                                                                                        // MakerGen.cs:236
-                        Id = "Provenance.activity",                                                                                         // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Activity = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Activity",                                                                                                  // MakerGen.cs:230
+                        Path= "Provenance.activity",                                                                                        // MakerGen.cs:231
+                        Id = "Provenance.activity",                                                                                         // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 8. Provenance.agent
-                    this.Agent = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Agent",                                                                                                     // MakerGen.cs:235
-                        Path= "Provenance.agent",                                                                                           // MakerGen.cs:236
-                        Id = "Provenance.agent",                                                                                            // MakerGen.cs:237
-                        Min = 1,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Agent                                                                                                  // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Agent = new ElementDefinitionInfo                                                                                  // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Agent",                                                                                                     // MakerGen.cs:230
+                        Path= "Provenance.agent",                                                                                           // MakerGen.cs:231
+                        Id = "Provenance.agent",                                                                                            // MakerGen.cs:232
+                        Min = 1,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Agent                                                                                                  // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 13. Provenance.entity
-                    this.Entity = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Entity",                                                                                                    // MakerGen.cs:235
-                        Path= "Provenance.entity",                                                                                          // MakerGen.cs:236
-                        Id = "Provenance.entity",                                                                                           // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Entity                                                                                                 // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Entity = new ElementDefinitionInfo                                                                                 // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Entity",                                                                                                    // MakerGen.cs:230
+                        Path= "Provenance.entity",                                                                                          // MakerGen.cs:231
+                        Id = "Provenance.entity",                                                                                           // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Entity                                                                                                 // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 17. Provenance.signature
-                    this.Signature = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Signature",                                                                                                 // MakerGen.cs:235
-                        Path= "Provenance.signature",                                                                                       // MakerGen.cs:236
-                        Id = "Provenance.signature",                                                                                        // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Signature                                                                     // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
-            {                                                                                                                               // MakerGen.cs:399
-                base.Write(sDef);                                                                                                           // MakerGen.cs:400
-                Target.Write(sDef);                                                                                                         // MakerGen.cs:220
-                Occurred.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Recorded.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Policy.Write(sDef);                                                                                                         // MakerGen.cs:220
-                Location.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Reason.Write(sDef);                                                                                                         // MakerGen.cs:220
-                Activity.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Agent.Write(sDef);                                                                                                          // MakerGen.cs:220
-                Entity.Write(sDef);                                                                                                         // MakerGen.cs:220
-                Signature.Write(sDef);                                                                                                      // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:402
-        }                                                                                                                                   // MakerGen.cs:404
-        public Provenance_Elements Elements                                                                                                 // MakerGen.cs:406
-        {                                                                                                                                   // MakerGen.cs:407
-            get                                                                                                                             // MakerGen.cs:408
-            {                                                                                                                               // MakerGen.cs:409
-                if (this.elements == null)                                                                                                  // MakerGen.cs:410
-                    this.elements = new Provenance_Elements();                                                                              // MakerGen.cs:411
-                return this.elements;                                                                                                       // MakerGen.cs:412
-            }                                                                                                                               // MakerGen.cs:413
-        }                                                                                                                                   // MakerGen.cs:414
-        Provenance_Elements elements;                                                                                                       // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-        public Provenance()                                                                                                                 // MakerGen.cs:418
-        {                                                                                                                                   // MakerGen.cs:419
-            this.Name = "Provenance";                                                                                                       // MakerGen.cs:492
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Provenance";                                                                // MakerGen.cs:493
-        }                                                                                                                                   // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
-        {                                                                                                                                   // MakerGen.cs:425
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
-            {                                                                                                                               // MakerGen.cs:427
-                Path = "Provenance",                                                                                                        // MakerGen.cs:428
-                ElementId = "Provenance"                                                                                                    // MakerGen.cs:429
-            });                                                                                                                             // MakerGen.cs:430
-            if (this.elements != null)                                                                                                      // MakerGen.cs:431
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
-        }                                                                                                                                   // MakerGen.cs:433
-    }                                                                                                                                       // MakerGen.cs:434
-}                                                                                                                                           // MakerGen.cs:479
+                    this.Signature = new ElementDefinitionInfo                                                                              // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Signature",                                                                                                 // MakerGen.cs:230
+                        Path= "Provenance.signature",                                                                                       // MakerGen.cs:231
+                        Id = "Provenance.signature",                                                                                        // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Signature                                                                     // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                base.Write(sDef);                                                                                                           // MakerGen.cs:395
+                Target.Write(sDef);                                                                                                         // MakerGen.cs:215
+                Occurred.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Recorded.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Policy.Write(sDef);                                                                                                         // MakerGen.cs:215
+                Location.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Reason.Write(sDef);                                                                                                         // MakerGen.cs:215
+                Activity.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Agent.Write(sDef);                                                                                                          // MakerGen.cs:215
+                Entity.Write(sDef);                                                                                                         // MakerGen.cs:215
+                Signature.Write(sDef);                                                                                                      // MakerGen.cs:215
+            }                                                                                                                               // MakerGen.cs:397
+        }                                                                                                                                   // MakerGen.cs:399
+        public Provenance_Elements Elements                                                                                                 // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            get                                                                                                                             // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:404
+                if (this.elements == null)                                                                                                  // MakerGen.cs:405
+                    this.elements = new Provenance_Elements();                                                                              // MakerGen.cs:406
+                return this.elements;                                                                                                       // MakerGen.cs:407
+            }                                                                                                                               // MakerGen.cs:408
+        }                                                                                                                                   // MakerGen.cs:409
+        Provenance_Elements elements;                                                                                                       // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+        public Provenance()                                                                                                                 // MakerGen.cs:413
+        {                                                                                                                                   // MakerGen.cs:414
+            this.Name = "Provenance";                                                                                                       // MakerGen.cs:487
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Provenance";                                                                // MakerGen.cs:488
+        }                                                                                                                                   // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:419
+        {                                                                                                                                   // MakerGen.cs:420
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:421
+            {                                                                                                                               // MakerGen.cs:422
+                Path = "Provenance",                                                                                                        // MakerGen.cs:423
+                ElementId = "Provenance"                                                                                                    // MakerGen.cs:424
+            });                                                                                                                             // MakerGen.cs:425
+            if (this.elements != null)                                                                                                      // MakerGen.cs:426
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:427
+        }                                                                                                                                   // MakerGen.cs:428
+    }                                                                                                                                       // MakerGen.cs:429
+}                                                                                                                                           // MakerGen.cs:474

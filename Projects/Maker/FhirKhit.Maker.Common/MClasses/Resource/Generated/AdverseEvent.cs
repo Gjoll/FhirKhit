@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:462
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
-using System.IO;                                                                                                                            // MakerGen.cs:464
-using System.Linq;                                                                                                                          // MakerGen.cs:465
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
-                                                                                                                                            // MakerGen.cs:467
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
-{                                                                                                                                           // MakerGen.cs:469
-    #region Json                                                                                                                            // MakerGen.cs:470
-    #if NEVER                                                                                                                               // MakerGen.cs:471
+using System;                                                                                                                               // MakerGen.cs:457
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:458
+using System.IO;                                                                                                                            // MakerGen.cs:459
+using System.Linq;                                                                                                                          // MakerGen.cs:460
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:461
+                                                                                                                                            // MakerGen.cs:462
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:463
+{                                                                                                                                           // MakerGen.cs:464
+    #region Json                                                                                                                            // MakerGen.cs:465
+    #if NEVER                                                                                                                               // MakerGen.cs:466
     {
       "resourceType": "StructureDefinition",
       "id": "AdverseEvent",
@@ -561,719 +561,719 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:474
+    #endregion                                                                                                                              // MakerGen.cs:469
     /// <summary>
     /// Fhir resource 'AdverseEvent'
     /// </summary>
     // 0. AdverseEvent
-    public class AdverseEvent : FhirKhit.Maker.Common.Resource.ResourceBase                                                                 // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
-        public class AdverseEvent_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                    // MakerGen.cs:386
-        {                                                                                                                                   // MakerGen.cs:387
+    public class AdverseEvent : FhirKhit.Maker.Common.Resource.ResourceBase                                                                 // MakerGen.cs:379
+    {                                                                                                                                       // MakerGen.cs:380
+        public class AdverseEvent_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                    // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 17. AdverseEvent.suspectEntity
-            public class Type_SuspectEntity : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_SuspectEntity_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                      // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_SuspectEntity : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_SuspectEntity_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                      // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 19. AdverseEvent.suspectEntity.causality
-                    public class Type_Causality : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        public class Type_Causality_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                  // MakerGen.cs:386
-                        {                                                                                                                   // MakerGen.cs:387
+                    public class Type_Causality : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:379
+                    {                                                                                                                       // MakerGen.cs:380
+                        public class Type_Causality_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                  // MakerGen.cs:381
+                        {                                                                                                                   // MakerGen.cs:382
                             // 20. AdverseEvent.suspectEntity.causality.assessment
-                            public ElementDefinitionInfo Assessment;                                                                        // MakerGen.cs:216
+                            public ElementDefinitionInfo Assessment;                                                                        // MakerGen.cs:211
                             // 21. AdverseEvent.suspectEntity.causality.productRelatedness
-                            public ElementDefinitionInfo ProductRelatedness;                                                                // MakerGen.cs:216
+                            public ElementDefinitionInfo ProductRelatedness;                                                                // MakerGen.cs:211
                             // 22. AdverseEvent.suspectEntity.causality.author
-                            public ElementDefinitionInfo Author;                                                                            // MakerGen.cs:216
+                            public ElementDefinitionInfo Author;                                                                            // MakerGen.cs:211
                             // 23. AdverseEvent.suspectEntity.causality.method
-                            public ElementDefinitionInfo Method;                                                                            // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                            public Type_Causality_Elements()                                                                                // MakerGen.cs:392
-                            {                                                                                                               // MakerGen.cs:393
-                                {                                                                                                           // MakerGen.cs:231
+                            public ElementDefinitionInfo Method;                                                                            // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                            public Type_Causality_Elements()                                                                                // MakerGen.cs:387
+                            {                                                                                                               // MakerGen.cs:388
+                                {                                                                                                           // MakerGen.cs:226
                                     // 20. AdverseEvent.suspectEntity.causality.assessment
-                                    this.Assessment = new ElementDefinitionInfo                                                             // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "Assessment",                                                                                // MakerGen.cs:235
-                                        Path= "AdverseEvent.suspectEntity.causality.assessment",                                            // MakerGen.cs:236
-                                        Id = "AdverseEvent.suspectEntity.causality.assessment",                                             // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:315
-                                            {                                                                                               // MakerGen.cs:316
-                                            }                                                                                               // MakerGen.cs:319
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:231
+                                    this.Assessment = new ElementDefinitionInfo                                                             // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "Assessment",                                                                                // MakerGen.cs:230
+                                        Path= "AdverseEvent.suspectEntity.causality.assessment",                                            // MakerGen.cs:231
+                                        Id = "AdverseEvent.suspectEntity.causality.assessment",                                             // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:310
+                                            {                                                                                               // MakerGen.cs:311
+                                            }                                                                                               // MakerGen.cs:314
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:226
                                     // 21. AdverseEvent.suspectEntity.causality.productRelatedness
-                                    this.ProductRelatedness = new ElementDefinitionInfo                                                     // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "ProductRelatedness",                                                                        // MakerGen.cs:235
-                                        Path= "AdverseEvent.suspectEntity.causality.productRelatedness",                                    // MakerGen.cs:236
-                                        Id = "AdverseEvent.suspectEntity.causality.productRelatedness",                                     // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:300
-                                            {                                                                                               // MakerGen.cs:301
-                                            }                                                                                               // MakerGen.cs:304
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:231
+                                    this.ProductRelatedness = new ElementDefinitionInfo                                                     // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "ProductRelatedness",                                                                        // MakerGen.cs:230
+                                        Path= "AdverseEvent.suspectEntity.causality.productRelatedness",                                    // MakerGen.cs:231
+                                        Id = "AdverseEvent.suspectEntity.causality.productRelatedness",                                     // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:295
+                                            {                                                                                               // MakerGen.cs:296
+                                            }                                                                                               // MakerGen.cs:299
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:226
                                     // 22. AdverseEvent.suspectEntity.causality.author
-                                    this.Author = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "Author",                                                                                    // MakerGen.cs:235
-                                        Path= "AdverseEvent.suspectEntity.causality.author",                                                // MakerGen.cs:236
-                                        Id = "AdverseEvent.suspectEntity.causality.author",                                                 // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Complex.Reference                                                     // MakerGen.cs:346
-                                            {                                                                                               // MakerGen.cs:347
-                                                TargetProfile = new String[]                                                                // MakerGen.cs:349
+                                    this.Author = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "Author",                                                                                    // MakerGen.cs:230
+                                        Path= "AdverseEvent.suspectEntity.causality.author",                                                // MakerGen.cs:231
+                                        Id = "AdverseEvent.suspectEntity.causality.author",                                                 // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Complex.Reference                                                     // MakerGen.cs:341
+                                            {                                                                                               // MakerGen.cs:342
+                                                TargetProfile = new String[]                                                                // MakerGen.cs:344
                                                 {                                                                                           // CodeEditorExtensions.cs:28
-                                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                 // MakerGen.cs:349
-                                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                              // MakerGen.cs:349
+                                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                 // MakerGen.cs:344
+                                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                              // MakerGen.cs:344
                                                 }                                                                                           // CodeEditorExtensions.cs:34
-                                            }                                                                                               // MakerGen.cs:350
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:231
+                                            }                                                                                               // MakerGen.cs:345
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:226
                                     // 23. AdverseEvent.suspectEntity.causality.method
-                                    this.Method = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "Method",                                                                                    // MakerGen.cs:235
-                                        Path= "AdverseEvent.suspectEntity.causality.method",                                                // MakerGen.cs:236
-                                        Id = "AdverseEvent.suspectEntity.causality.method",                                                 // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:315
-                                            {                                                                                               // MakerGen.cs:316
-                                            }                                                                                               // MakerGen.cs:319
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                            }                                                                                                               // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:398
-                            {                                                                                                               // MakerGen.cs:399
-                                base.Write(sDef);                                                                                           // MakerGen.cs:400
-                                Assessment.Write(sDef);                                                                                     // MakerGen.cs:220
-                                ProductRelatedness.Write(sDef);                                                                             // MakerGen.cs:220
-                                Author.Write(sDef);                                                                                         // MakerGen.cs:220
-                                Method.Write(sDef);                                                                                         // MakerGen.cs:220
-                            }                                                                                                               // MakerGen.cs:402
-                        }                                                                                                                   // MakerGen.cs:404
-                        public Type_Causality_Elements Elements                                                                             // MakerGen.cs:406
-                        {                                                                                                                   // MakerGen.cs:407
-                            get                                                                                                             // MakerGen.cs:408
-                            {                                                                                                               // MakerGen.cs:409
-                                if (this.elements == null)                                                                                  // MakerGen.cs:410
-                                    this.elements = new Type_Causality_Elements();                                                          // MakerGen.cs:411
-                                return this.elements;                                                                                       // MakerGen.cs:412
-                            }                                                                                                               // MakerGen.cs:413
-                        }                                                                                                                   // MakerGen.cs:414
-                        Type_Causality_Elements elements;                                                                                   // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                        public Type_Causality()                                                                                             // MakerGen.cs:418
-                        {                                                                                                                   // MakerGen.cs:419
-                        }                                                                                                                   // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:424
-                        {                                                                                                                   // MakerGen.cs:425
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:426
-                            {                                                                                                               // MakerGen.cs:427
-                                Path = "AdverseEvent.suspectEntity.causality",                                                              // MakerGen.cs:428
-                                ElementId = "AdverseEvent.suspectEntity.causality"                                                          // MakerGen.cs:429
-                            });                                                                                                             // MakerGen.cs:430
-                            if (this.elements != null)                                                                                      // MakerGen.cs:431
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:432
-                        }                                                                                                                   // MakerGen.cs:433
-                    }                                                                                                                       // MakerGen.cs:434
+                                    this.Method = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "Method",                                                                                    // MakerGen.cs:230
+                                        Path= "AdverseEvent.suspectEntity.causality.method",                                                // MakerGen.cs:231
+                                        Id = "AdverseEvent.suspectEntity.causality.method",                                                 // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:310
+                                            {                                                                                               // MakerGen.cs:311
+                                            }                                                                                               // MakerGen.cs:314
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:393
+                            {                                                                                                               // MakerGen.cs:394
+                                base.Write(sDef);                                                                                           // MakerGen.cs:395
+                                Assessment.Write(sDef);                                                                                     // MakerGen.cs:215
+                                ProductRelatedness.Write(sDef);                                                                             // MakerGen.cs:215
+                                Author.Write(sDef);                                                                                         // MakerGen.cs:215
+                                Method.Write(sDef);                                                                                         // MakerGen.cs:215
+                            }                                                                                                               // MakerGen.cs:397
+                        }                                                                                                                   // MakerGen.cs:399
+                        public Type_Causality_Elements Elements                                                                             // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:402
+                            get                                                                                                             // MakerGen.cs:403
+                            {                                                                                                               // MakerGen.cs:404
+                                if (this.elements == null)                                                                                  // MakerGen.cs:405
+                                    this.elements = new Type_Causality_Elements();                                                          // MakerGen.cs:406
+                                return this.elements;                                                                                       // MakerGen.cs:407
+                            }                                                                                                               // MakerGen.cs:408
+                        }                                                                                                                   // MakerGen.cs:409
+                        Type_Causality_Elements elements;                                                                                   // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                        public Type_Causality()                                                                                             // MakerGen.cs:413
+                        {                                                                                                                   // MakerGen.cs:414
+                        }                                                                                                                   // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:419
+                        {                                                                                                                   // MakerGen.cs:420
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:421
+                            {                                                                                                               // MakerGen.cs:422
+                                Path = "AdverseEvent.suspectEntity.causality",                                                              // MakerGen.cs:423
+                                ElementId = "AdverseEvent.suspectEntity.causality"                                                          // MakerGen.cs:424
+                            });                                                                                                             // MakerGen.cs:425
+                            if (this.elements != null)                                                                                      // MakerGen.cs:426
+                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:427
+                        }                                                                                                                   // MakerGen.cs:428
+                    }                                                                                                                       // MakerGen.cs:429
                     // 18. AdverseEvent.suspectEntity.instance
-                    public ElementDefinitionInfo Instance;                                                                                  // MakerGen.cs:216
+                    public ElementDefinitionInfo Instance;                                                                                  // MakerGen.cs:211
                     // 19. AdverseEvent.suspectEntity.causality
-                    public ElementDefinitionInfo Causality;                                                                                 // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_SuspectEntity_Elements()                                                                                    // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo Causality;                                                                                 // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_SuspectEntity_Elements()                                                                                    // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 18. AdverseEvent.suspectEntity.instance
-                            this.Instance = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Instance",                                                                                          // MakerGen.cs:235
-                                Path= "AdverseEvent.suspectEntity.instance",                                                                // MakerGen.cs:236
-                                Id = "AdverseEvent.suspectEntity.instance",                                                                 // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
-                                    {                                                                                                       // MakerGen.cs:347
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
+                            this.Instance = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Instance",                                                                                          // MakerGen.cs:230
+                                Path= "AdverseEvent.suspectEntity.instance",                                                                // MakerGen.cs:231
+                                Id = "AdverseEvent.suspectEntity.instance",                                                                 // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:341
+                                    {                                                                                                       // MakerGen.cs:342
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:344
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Immunization",                                         // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Procedure",                                            // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Substance",                                            // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Medication",                                           // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",                             // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/MedicationStatement",                                  // MakerGen.cs:349
-                                            "http://hl7.org/fhir/StructureDefinition/Device"                                                // MakerGen.cs:349
+                                            "http://hl7.org/fhir/StructureDefinition/Immunization",                                         // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Procedure",                                            // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Substance",                                            // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Medication",                                           // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",                             // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/MedicationStatement",                                  // MakerGen.cs:344
+                                            "http://hl7.org/fhir/StructureDefinition/Device"                                                // MakerGen.cs:344
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:350
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                                    }                                                                                                       // MakerGen.cs:345
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 19. AdverseEvent.suspectEntity.causality
-                            this.Causality = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Causality",                                                                                         // MakerGen.cs:235
-                                Path= "AdverseEvent.suspectEntity.causality",                                                               // MakerGen.cs:236
-                                Id = "AdverseEvent.suspectEntity.causality",                                                                // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new Type_Causality                                                                                      // MakerGen.cs:259
-                                    {                                                                                                       // MakerGen.cs:260
-                                    }                                                                                                       // MakerGen.cs:261
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Instance.Write(sDef);                                                                                               // MakerGen.cs:220
-                        Causality.Write(sDef);                                                                                              // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_SuspectEntity_Elements Elements                                                                                 // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_SuspectEntity_Elements();                                                              // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_SuspectEntity_Elements elements;                                                                                       // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_SuspectEntity()                                                                                                 // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "AdverseEvent.suspectEntity",                                                                                // MakerGen.cs:428
-                        ElementId = "AdverseEvent.suspectEntity"                                                                            // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.Causality = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Causality",                                                                                         // MakerGen.cs:230
+                                Path= "AdverseEvent.suspectEntity.causality",                                                               // MakerGen.cs:231
+                                Id = "AdverseEvent.suspectEntity.causality",                                                                // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new Type_Causality                                                                                      // MakerGen.cs:254
+                                    {                                                                                                       // MakerGen.cs:255
+                                    }                                                                                                       // MakerGen.cs:256
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Instance.Write(sDef);                                                                                               // MakerGen.cs:215
+                        Causality.Write(sDef);                                                                                              // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_SuspectEntity_Elements Elements                                                                                 // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_SuspectEntity_Elements();                                                              // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_SuspectEntity_Elements elements;                                                                                       // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_SuspectEntity()                                                                                                 // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "AdverseEvent.suspectEntity",                                                                                // MakerGen.cs:423
+                        ElementId = "AdverseEvent.suspectEntity"                                                                            // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 1. AdverseEvent.identifier
-            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:211
             // 2. AdverseEvent.actuality
-            public ElementDefinitionInfo Actuality;                                                                                         // MakerGen.cs:216
+            public ElementDefinitionInfo Actuality;                                                                                         // MakerGen.cs:211
             // 3. AdverseEvent.category
-            public ElementDefinitionInfo Category;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Category;                                                                                          // MakerGen.cs:211
             // 4. AdverseEvent.event
-            public ElementDefinitionInfo Event;                                                                                             // MakerGen.cs:216
+            public ElementDefinitionInfo Event;                                                                                             // MakerGen.cs:211
             // 5. AdverseEvent.subject
-            public ElementDefinitionInfo Subject;                                                                                           // MakerGen.cs:216
+            public ElementDefinitionInfo Subject;                                                                                           // MakerGen.cs:211
             // 6. AdverseEvent.encounter
-            public ElementDefinitionInfo Encounter;                                                                                         // MakerGen.cs:216
+            public ElementDefinitionInfo Encounter;                                                                                         // MakerGen.cs:211
             // 7. AdverseEvent.date
-            public ElementDefinitionInfo Date;                                                                                              // MakerGen.cs:216
+            public ElementDefinitionInfo Date;                                                                                              // MakerGen.cs:211
             // 8. AdverseEvent.detected
-            public ElementDefinitionInfo Detected;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Detected;                                                                                          // MakerGen.cs:211
             // 9. AdverseEvent.recordedDate
-            public ElementDefinitionInfo RecordedDate;                                                                                      // MakerGen.cs:216
+            public ElementDefinitionInfo RecordedDate;                                                                                      // MakerGen.cs:211
             // 10. AdverseEvent.resultingCondition
-            public ElementDefinitionInfo ResultingCondition;                                                                                // MakerGen.cs:216
+            public ElementDefinitionInfo ResultingCondition;                                                                                // MakerGen.cs:211
             // 11. AdverseEvent.location
-            public ElementDefinitionInfo Location;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Location;                                                                                          // MakerGen.cs:211
             // 12. AdverseEvent.seriousness
-            public ElementDefinitionInfo Seriousness;                                                                                       // MakerGen.cs:216
+            public ElementDefinitionInfo Seriousness;                                                                                       // MakerGen.cs:211
             // 13. AdverseEvent.severity
-            public ElementDefinitionInfo Severity;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Severity;                                                                                          // MakerGen.cs:211
             // 14. AdverseEvent.outcome
-            public ElementDefinitionInfo Outcome;                                                                                           // MakerGen.cs:216
+            public ElementDefinitionInfo Outcome;                                                                                           // MakerGen.cs:211
             // 15. AdverseEvent.recorder
-            public ElementDefinitionInfo Recorder;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Recorder;                                                                                          // MakerGen.cs:211
             // 16. AdverseEvent.contributor
-            public ElementDefinitionInfo Contributor;                                                                                       // MakerGen.cs:216
+            public ElementDefinitionInfo Contributor;                                                                                       // MakerGen.cs:211
             // 17. AdverseEvent.suspectEntity
-            public ElementDefinitionInfo SuspectEntity;                                                                                     // MakerGen.cs:216
+            public ElementDefinitionInfo SuspectEntity;                                                                                     // MakerGen.cs:211
             // 24. AdverseEvent.subjectMedicalHistory
-            public ElementDefinitionInfo SubjectMedicalHistory;                                                                             // MakerGen.cs:216
+            public ElementDefinitionInfo SubjectMedicalHistory;                                                                             // MakerGen.cs:211
             // 25. AdverseEvent.referenceDocument
-            public ElementDefinitionInfo ReferenceDocument;                                                                                 // MakerGen.cs:216
+            public ElementDefinitionInfo ReferenceDocument;                                                                                 // MakerGen.cs:211
             // 26. AdverseEvent.study
-            public ElementDefinitionInfo Study;                                                                                             // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-            public AdverseEvent_Elements()                                                                                                  // MakerGen.cs:392
-            {                                                                                                                               // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:231
+            public ElementDefinitionInfo Study;                                                                                             // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+            public AdverseEvent_Elements()                                                                                                  // MakerGen.cs:387
+            {                                                                                                                               // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:226
                     // 1. AdverseEvent.identifier
-                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Identifier",                                                                                                // MakerGen.cs:235
-                        Path= "AdverseEvent.identifier",                                                                                    // MakerGen.cs:236
-                        Id = "AdverseEvent.identifier",                                                                                     // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Identifier",                                                                                                // MakerGen.cs:230
+                        Path= "AdverseEvent.identifier",                                                                                    // MakerGen.cs:231
+                        Id = "AdverseEvent.identifier",                                                                                     // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 2. AdverseEvent.actuality
-                    this.Actuality = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Actuality",                                                                                                 // MakerGen.cs:235
-                        Path= "AdverseEvent.actuality",                                                                                     // MakerGen.cs:236
-                        Id = "AdverseEvent.actuality",                                                                                      // MakerGen.cs:237
-                        Min = 1,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Actuality = new ElementDefinitionInfo                                                                              // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Actuality",                                                                                                 // MakerGen.cs:230
+                        Path= "AdverseEvent.actuality",                                                                                     // MakerGen.cs:231
+                        Id = "AdverseEvent.actuality",                                                                                      // MakerGen.cs:232
+                        Min = 1,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 3. AdverseEvent.category
-                    this.Category = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Category",                                                                                                  // MakerGen.cs:235
-                        Path= "AdverseEvent.category",                                                                                      // MakerGen.cs:236
-                        Id = "AdverseEvent.category",                                                                                       // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Category = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Category",                                                                                                  // MakerGen.cs:230
+                        Path= "AdverseEvent.category",                                                                                      // MakerGen.cs:231
+                        Id = "AdverseEvent.category",                                                                                       // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 4. AdverseEvent.event
-                    this.Event = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Event",                                                                                                     // MakerGen.cs:235
-                        Path= "AdverseEvent.event",                                                                                         // MakerGen.cs:236
-                        Id = "AdverseEvent.event",                                                                                          // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Event = new ElementDefinitionInfo                                                                                  // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Event",                                                                                                     // MakerGen.cs:230
+                        Path= "AdverseEvent.event",                                                                                         // MakerGen.cs:231
+                        Id = "AdverseEvent.event",                                                                                          // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 5. AdverseEvent.subject
-                    this.Subject = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Subject",                                                                                                   // MakerGen.cs:235
-                        Path= "AdverseEvent.subject",                                                                                       // MakerGen.cs:236
-                        Id = "AdverseEvent.subject",                                                                                        // MakerGen.cs:237
-                        Min = 1,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Subject = new ElementDefinitionInfo                                                                                // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Subject",                                                                                                   // MakerGen.cs:230
+                        Path= "AdverseEvent.subject",                                                                                       // MakerGen.cs:231
+                        Id = "AdverseEvent.subject",                                                                                        // MakerGen.cs:232
+                        Min = 1,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Group",                                                        // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/Group",                                                        // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 6. AdverseEvent.encounter
-                    this.Encounter = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Encounter",                                                                                                 // MakerGen.cs:235
-                        Path= "AdverseEvent.encounter",                                                                                     // MakerGen.cs:236
-                        Id = "AdverseEvent.encounter",                                                                                      // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Encounter = new ElementDefinitionInfo                                                                              // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Encounter",                                                                                                 // MakerGen.cs:230
+                        Path= "AdverseEvent.encounter",                                                                                     // MakerGen.cs:231
+                        Id = "AdverseEvent.encounter",                                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Encounter"                                                     // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Encounter"                                                     // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 7. AdverseEvent.date
-                    this.Date = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Date",                                                                                                      // MakerGen.cs:235
-                        Path= "AdverseEvent.date",                                                                                          // MakerGen.cs:236
-                        Id = "AdverseEvent.date",                                                                                           // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Date = new ElementDefinitionInfo                                                                                   // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Date",                                                                                                      // MakerGen.cs:230
+                        Path= "AdverseEvent.date",                                                                                          // MakerGen.cs:231
+                        Id = "AdverseEvent.date",                                                                                           // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 8. AdverseEvent.detected
-                    this.Detected = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Detected",                                                                                                  // MakerGen.cs:235
-                        Path= "AdverseEvent.detected",                                                                                      // MakerGen.cs:236
-                        Id = "AdverseEvent.detected",                                                                                       // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Detected = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Detected",                                                                                                  // MakerGen.cs:230
+                        Path= "AdverseEvent.detected",                                                                                      // MakerGen.cs:231
+                        Id = "AdverseEvent.detected",                                                                                       // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 9. AdverseEvent.recordedDate
-                    this.RecordedDate = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "RecordedDate",                                                                                              // MakerGen.cs:235
-                        Path= "AdverseEvent.recordedDate",                                                                                  // MakerGen.cs:236
-                        Id = "AdverseEvent.recordedDate",                                                                                   // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.RecordedDate = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "RecordedDate",                                                                                              // MakerGen.cs:230
+                        Path= "AdverseEvent.recordedDate",                                                                                  // MakerGen.cs:231
+                        Id = "AdverseEvent.recordedDate",                                                                                   // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 10. AdverseEvent.resultingCondition
-                    this.ResultingCondition = new ElementDefinitionInfo                                                                     // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "ResultingCondition",                                                                                        // MakerGen.cs:235
-                        Path= "AdverseEvent.resultingCondition",                                                                            // MakerGen.cs:236
-                        Id = "AdverseEvent.resultingCondition",                                                                             // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.ResultingCondition = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "ResultingCondition",                                                                                        // MakerGen.cs:230
+                        Path= "AdverseEvent.resultingCondition",                                                                            // MakerGen.cs:231
+                        Id = "AdverseEvent.resultingCondition",                                                                             // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Condition"                                                     // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Condition"                                                     // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 11. AdverseEvent.location
-                    this.Location = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Location",                                                                                                  // MakerGen.cs:235
-                        Path= "AdverseEvent.location",                                                                                      // MakerGen.cs:236
-                        Id = "AdverseEvent.location",                                                                                       // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Location = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Location",                                                                                                  // MakerGen.cs:230
+                        Path= "AdverseEvent.location",                                                                                      // MakerGen.cs:231
+                        Id = "AdverseEvent.location",                                                                                       // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 12. AdverseEvent.seriousness
-                    this.Seriousness = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Seriousness",                                                                                               // MakerGen.cs:235
-                        Path= "AdverseEvent.seriousness",                                                                                   // MakerGen.cs:236
-                        Id = "AdverseEvent.seriousness",                                                                                    // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Seriousness = new ElementDefinitionInfo                                                                            // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Seriousness",                                                                                               // MakerGen.cs:230
+                        Path= "AdverseEvent.seriousness",                                                                                   // MakerGen.cs:231
+                        Id = "AdverseEvent.seriousness",                                                                                    // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 13. AdverseEvent.severity
-                    this.Severity = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Severity",                                                                                                  // MakerGen.cs:235
-                        Path= "AdverseEvent.severity",                                                                                      // MakerGen.cs:236
-                        Id = "AdverseEvent.severity",                                                                                       // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Severity = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Severity",                                                                                                  // MakerGen.cs:230
+                        Path= "AdverseEvent.severity",                                                                                      // MakerGen.cs:231
+                        Id = "AdverseEvent.severity",                                                                                       // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 14. AdverseEvent.outcome
-                    this.Outcome = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Outcome",                                                                                                   // MakerGen.cs:235
-                        Path= "AdverseEvent.outcome",                                                                                       // MakerGen.cs:236
-                        Id = "AdverseEvent.outcome",                                                                                        // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Outcome = new ElementDefinitionInfo                                                                                // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Outcome",                                                                                                   // MakerGen.cs:230
+                        Path= "AdverseEvent.outcome",                                                                                       // MakerGen.cs:231
+                        Id = "AdverseEvent.outcome",                                                                                        // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 15. AdverseEvent.recorder
-                    this.Recorder = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Recorder",                                                                                                  // MakerGen.cs:235
-                        Path= "AdverseEvent.recorder",                                                                                      // MakerGen.cs:236
-                        Id = "AdverseEvent.recorder",                                                                                       // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Recorder = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Recorder",                                                                                                  // MakerGen.cs:230
+                        Path= "AdverseEvent.recorder",                                                                                      // MakerGen.cs:231
+                        Id = "AdverseEvent.recorder",                                                                                       // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 16. AdverseEvent.contributor
-                    this.Contributor = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Contributor",                                                                                               // MakerGen.cs:235
-                        Path= "AdverseEvent.contributor",                                                                                   // MakerGen.cs:236
-                        Id = "AdverseEvent.contributor",                                                                                    // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Contributor = new ElementDefinitionInfo                                                                            // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Contributor",                                                                                               // MakerGen.cs:230
+                        Path= "AdverseEvent.contributor",                                                                                   // MakerGen.cs:231
+                        Id = "AdverseEvent.contributor",                                                                                    // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Device"                                                        // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/Device"                                                        // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 17. AdverseEvent.suspectEntity
-                    this.SuspectEntity = new ElementDefinitionInfo                                                                          // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "SuspectEntity",                                                                                             // MakerGen.cs:235
-                        Path= "AdverseEvent.suspectEntity",                                                                                 // MakerGen.cs:236
-                        Id = "AdverseEvent.suspectEntity",                                                                                  // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_SuspectEntity                                                                                          // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.SuspectEntity = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "SuspectEntity",                                                                                             // MakerGen.cs:230
+                        Path= "AdverseEvent.suspectEntity",                                                                                 // MakerGen.cs:231
+                        Id = "AdverseEvent.suspectEntity",                                                                                  // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_SuspectEntity                                                                                          // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 24. AdverseEvent.subjectMedicalHistory
-                    this.SubjectMedicalHistory = new ElementDefinitionInfo                                                                  // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "SubjectMedicalHistory",                                                                                     // MakerGen.cs:235
-                        Path= "AdverseEvent.subjectMedicalHistory",                                                                         // MakerGen.cs:236
-                        Id = "AdverseEvent.subjectMedicalHistory",                                                                          // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.SubjectMedicalHistory = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "SubjectMedicalHistory",                                                                                     // MakerGen.cs:230
+                        Path= "AdverseEvent.subjectMedicalHistory",                                                                         // MakerGen.cs:231
+                        Id = "AdverseEvent.subjectMedicalHistory",                                                                          // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Condition",                                                    // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Observation",                                                  // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",                                           // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",                                          // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Immunization",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Procedure",                                                    // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Media",                                                        // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Condition",                                                    // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/Observation",                                                  // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",                                           // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",                                          // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/Immunization",                                                 // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/Procedure",                                                    // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/Media",                                                        // MakerGen.cs:344
+                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 25. AdverseEvent.referenceDocument
-                    this.ReferenceDocument = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "ReferenceDocument",                                                                                         // MakerGen.cs:235
-                        Path= "AdverseEvent.referenceDocument",                                                                             // MakerGen.cs:236
-                        Id = "AdverseEvent.referenceDocument",                                                                              // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.ReferenceDocument = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "ReferenceDocument",                                                                                         // MakerGen.cs:230
+                        Path= "AdverseEvent.referenceDocument",                                                                             // MakerGen.cs:231
+                        Id = "AdverseEvent.referenceDocument",                                                                              // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 26. AdverseEvent.study
-                    this.Study = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Study",                                                                                                     // MakerGen.cs:235
-                        Path= "AdverseEvent.study",                                                                                         // MakerGen.cs:236
-                        Id = "AdverseEvent.study",                                                                                          // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Study = new ElementDefinitionInfo                                                                                  // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Study",                                                                                                     // MakerGen.cs:230
+                        Path= "AdverseEvent.study",                                                                                         // MakerGen.cs:231
+                        Id = "AdverseEvent.study",                                                                                          // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/ResearchStudy"                                                 // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/ResearchStudy"                                                 // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
-            {                                                                                                                               // MakerGen.cs:399
-                base.Write(sDef);                                                                                                           // MakerGen.cs:400
-                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
-                Actuality.Write(sDef);                                                                                                      // MakerGen.cs:220
-                Category.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Event.Write(sDef);                                                                                                          // MakerGen.cs:220
-                Subject.Write(sDef);                                                                                                        // MakerGen.cs:220
-                Encounter.Write(sDef);                                                                                                      // MakerGen.cs:220
-                Date.Write(sDef);                                                                                                           // MakerGen.cs:220
-                Detected.Write(sDef);                                                                                                       // MakerGen.cs:220
-                RecordedDate.Write(sDef);                                                                                                   // MakerGen.cs:220
-                ResultingCondition.Write(sDef);                                                                                             // MakerGen.cs:220
-                Location.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Seriousness.Write(sDef);                                                                                                    // MakerGen.cs:220
-                Severity.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Outcome.Write(sDef);                                                                                                        // MakerGen.cs:220
-                Recorder.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Contributor.Write(sDef);                                                                                                    // MakerGen.cs:220
-                SuspectEntity.Write(sDef);                                                                                                  // MakerGen.cs:220
-                SubjectMedicalHistory.Write(sDef);                                                                                          // MakerGen.cs:220
-                ReferenceDocument.Write(sDef);                                                                                              // MakerGen.cs:220
-                Study.Write(sDef);                                                                                                          // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:402
-        }                                                                                                                                   // MakerGen.cs:404
-        public AdverseEvent_Elements Elements                                                                                               // MakerGen.cs:406
-        {                                                                                                                                   // MakerGen.cs:407
-            get                                                                                                                             // MakerGen.cs:408
-            {                                                                                                                               // MakerGen.cs:409
-                if (this.elements == null)                                                                                                  // MakerGen.cs:410
-                    this.elements = new AdverseEvent_Elements();                                                                            // MakerGen.cs:411
-                return this.elements;                                                                                                       // MakerGen.cs:412
-            }                                                                                                                               // MakerGen.cs:413
-        }                                                                                                                                   // MakerGen.cs:414
-        AdverseEvent_Elements elements;                                                                                                     // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-        public AdverseEvent()                                                                                                               // MakerGen.cs:418
-        {                                                                                                                                   // MakerGen.cs:419
-            this.Name = "AdverseEvent";                                                                                                     // MakerGen.cs:492
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/AdverseEvent";                                                              // MakerGen.cs:493
-        }                                                                                                                                   // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
-        {                                                                                                                                   // MakerGen.cs:425
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
-            {                                                                                                                               // MakerGen.cs:427
-                Path = "AdverseEvent",                                                                                                      // MakerGen.cs:428
-                ElementId = "AdverseEvent"                                                                                                  // MakerGen.cs:429
-            });                                                                                                                             // MakerGen.cs:430
-            if (this.elements != null)                                                                                                      // MakerGen.cs:431
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
-        }                                                                                                                                   // MakerGen.cs:433
-    }                                                                                                                                       // MakerGen.cs:434
-}                                                                                                                                           // MakerGen.cs:479
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                base.Write(sDef);                                                                                                           // MakerGen.cs:395
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:215
+                Actuality.Write(sDef);                                                                                                      // MakerGen.cs:215
+                Category.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Event.Write(sDef);                                                                                                          // MakerGen.cs:215
+                Subject.Write(sDef);                                                                                                        // MakerGen.cs:215
+                Encounter.Write(sDef);                                                                                                      // MakerGen.cs:215
+                Date.Write(sDef);                                                                                                           // MakerGen.cs:215
+                Detected.Write(sDef);                                                                                                       // MakerGen.cs:215
+                RecordedDate.Write(sDef);                                                                                                   // MakerGen.cs:215
+                ResultingCondition.Write(sDef);                                                                                             // MakerGen.cs:215
+                Location.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Seriousness.Write(sDef);                                                                                                    // MakerGen.cs:215
+                Severity.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Outcome.Write(sDef);                                                                                                        // MakerGen.cs:215
+                Recorder.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Contributor.Write(sDef);                                                                                                    // MakerGen.cs:215
+                SuspectEntity.Write(sDef);                                                                                                  // MakerGen.cs:215
+                SubjectMedicalHistory.Write(sDef);                                                                                          // MakerGen.cs:215
+                ReferenceDocument.Write(sDef);                                                                                              // MakerGen.cs:215
+                Study.Write(sDef);                                                                                                          // MakerGen.cs:215
+            }                                                                                                                               // MakerGen.cs:397
+        }                                                                                                                                   // MakerGen.cs:399
+        public AdverseEvent_Elements Elements                                                                                               // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            get                                                                                                                             // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:404
+                if (this.elements == null)                                                                                                  // MakerGen.cs:405
+                    this.elements = new AdverseEvent_Elements();                                                                            // MakerGen.cs:406
+                return this.elements;                                                                                                       // MakerGen.cs:407
+            }                                                                                                                               // MakerGen.cs:408
+        }                                                                                                                                   // MakerGen.cs:409
+        AdverseEvent_Elements elements;                                                                                                     // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+        public AdverseEvent()                                                                                                               // MakerGen.cs:413
+        {                                                                                                                                   // MakerGen.cs:414
+            this.Name = "AdverseEvent";                                                                                                     // MakerGen.cs:487
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/AdverseEvent";                                                              // MakerGen.cs:488
+        }                                                                                                                                   // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:419
+        {                                                                                                                                   // MakerGen.cs:420
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:421
+            {                                                                                                                               // MakerGen.cs:422
+                Path = "AdverseEvent",                                                                                                      // MakerGen.cs:423
+                ElementId = "AdverseEvent"                                                                                                  // MakerGen.cs:424
+            });                                                                                                                             // MakerGen.cs:425
+            if (this.elements != null)                                                                                                      // MakerGen.cs:426
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:427
+        }                                                                                                                                   // MakerGen.cs:428
+    }                                                                                                                                       // MakerGen.cs:429
+}                                                                                                                                           // MakerGen.cs:474

@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:462
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
-using System.IO;                                                                                                                            // MakerGen.cs:464
-using System.Linq;                                                                                                                          // MakerGen.cs:465
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
-                                                                                                                                            // MakerGen.cs:467
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
-{                                                                                                                                           // MakerGen.cs:469
-    #region Json                                                                                                                            // MakerGen.cs:470
-    #if NEVER                                                                                                                               // MakerGen.cs:471
+using System;                                                                                                                               // MakerGen.cs:457
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:458
+using System.IO;                                                                                                                            // MakerGen.cs:459
+using System.Linq;                                                                                                                          // MakerGen.cs:460
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:461
+                                                                                                                                            // MakerGen.cs:462
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:463
+{                                                                                                                                           // MakerGen.cs:464
+    #region Json                                                                                                                            // MakerGen.cs:465
+    #if NEVER                                                                                                                               // MakerGen.cs:466
     {
       "resourceType": "StructureDefinition",
       "id": "DeviceDefinition",
@@ -573,1052 +573,1052 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:474
+    #endregion                                                                                                                              // MakerGen.cs:469
     /// <summary>
     /// Fhir resource 'DeviceDefinition'
     /// </summary>
     // 0. DeviceDefinition
-    public class DeviceDefinition : FhirKhit.Maker.Common.Resource.ResourceBase                                                             // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
-        public class DeviceDefinition_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                // MakerGen.cs:386
-        {                                                                                                                                   // MakerGen.cs:387
+    public class DeviceDefinition : FhirKhit.Maker.Common.Resource.ResourceBase                                                             // MakerGen.cs:379
+    {                                                                                                                                       // MakerGen.cs:380
+        public class DeviceDefinition_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 2. DeviceDefinition.udiDeviceIdentifier
-            public class Type_UdiDeviceIdentifier : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_UdiDeviceIdentifier_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_UdiDeviceIdentifier : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_UdiDeviceIdentifier_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 3. DeviceDefinition.udiDeviceIdentifier.deviceIdentifier
-                    public ElementDefinitionInfo DeviceIdentifier;                                                                          // MakerGen.cs:216
+                    public ElementDefinitionInfo DeviceIdentifier;                                                                          // MakerGen.cs:211
                     // 4. DeviceDefinition.udiDeviceIdentifier.issuer
-                    public ElementDefinitionInfo Issuer;                                                                                    // MakerGen.cs:216
+                    public ElementDefinitionInfo Issuer;                                                                                    // MakerGen.cs:211
                     // 5. DeviceDefinition.udiDeviceIdentifier.jurisdiction
-                    public ElementDefinitionInfo Jurisdiction;                                                                              // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_UdiDeviceIdentifier_Elements()                                                                              // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo Jurisdiction;                                                                              // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_UdiDeviceIdentifier_Elements()                                                                              // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 3. DeviceDefinition.udiDeviceIdentifier.deviceIdentifier
-                            this.DeviceIdentifier = new ElementDefinitionInfo                                                               // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "DeviceIdentifier",                                                                                  // MakerGen.cs:235
-                                Path= "DeviceDefinition.udiDeviceIdentifier.deviceIdentifier",                                              // MakerGen.cs:236
-                                Id = "DeviceDefinition.udiDeviceIdentifier.deviceIdentifier",                                               // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.DeviceIdentifier = new ElementDefinitionInfo                                                               // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "DeviceIdentifier",                                                                                  // MakerGen.cs:230
+                                Path= "DeviceDefinition.udiDeviceIdentifier.deviceIdentifier",                                              // MakerGen.cs:231
+                                Id = "DeviceDefinition.udiDeviceIdentifier.deviceIdentifier",                                               // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 4. DeviceDefinition.udiDeviceIdentifier.issuer
-                            this.Issuer = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Issuer",                                                                                            // MakerGen.cs:235
-                                Path= "DeviceDefinition.udiDeviceIdentifier.issuer",                                                        // MakerGen.cs:236
-                                Id = "DeviceDefinition.udiDeviceIdentifier.issuer",                                                         // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Issuer = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Issuer",                                                                                            // MakerGen.cs:230
+                                Path= "DeviceDefinition.udiDeviceIdentifier.issuer",                                                        // MakerGen.cs:231
+                                Id = "DeviceDefinition.udiDeviceIdentifier.issuer",                                                         // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 5. DeviceDefinition.udiDeviceIdentifier.jurisdiction
-                            this.Jurisdiction = new ElementDefinitionInfo                                                                   // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Jurisdiction",                                                                                      // MakerGen.cs:235
-                                Path= "DeviceDefinition.udiDeviceIdentifier.jurisdiction",                                                  // MakerGen.cs:236
-                                Id = "DeviceDefinition.udiDeviceIdentifier.jurisdiction",                                                   // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        DeviceIdentifier.Write(sDef);                                                                                       // MakerGen.cs:220
-                        Issuer.Write(sDef);                                                                                                 // MakerGen.cs:220
-                        Jurisdiction.Write(sDef);                                                                                           // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_UdiDeviceIdentifier_Elements Elements                                                                           // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_UdiDeviceIdentifier_Elements();                                                        // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_UdiDeviceIdentifier_Elements elements;                                                                                 // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_UdiDeviceIdentifier()                                                                                           // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "DeviceDefinition.udiDeviceIdentifier",                                                                      // MakerGen.cs:428
-                        ElementId = "DeviceDefinition.udiDeviceIdentifier"                                                                  // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.Jurisdiction = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Jurisdiction",                                                                                      // MakerGen.cs:230
+                                Path= "DeviceDefinition.udiDeviceIdentifier.jurisdiction",                                                  // MakerGen.cs:231
+                                Id = "DeviceDefinition.udiDeviceIdentifier.jurisdiction",                                                   // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        DeviceIdentifier.Write(sDef);                                                                                       // MakerGen.cs:215
+                        Issuer.Write(sDef);                                                                                                 // MakerGen.cs:215
+                        Jurisdiction.Write(sDef);                                                                                           // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_UdiDeviceIdentifier_Elements Elements                                                                           // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_UdiDeviceIdentifier_Elements();                                                        // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_UdiDeviceIdentifier_Elements elements;                                                                                 // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_UdiDeviceIdentifier()                                                                                           // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "DeviceDefinition.udiDeviceIdentifier",                                                                      // MakerGen.cs:423
+                        ElementId = "DeviceDefinition.udiDeviceIdentifier"                                                                  // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 7. DeviceDefinition.deviceName
-            public class Type_DeviceName : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_DeviceName_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_DeviceName : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_DeviceName_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 8. DeviceDefinition.deviceName.name
-                    public ElementDefinitionInfo Name;                                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo Name;                                                                                      // MakerGen.cs:211
                     // 9. DeviceDefinition.deviceName.type
-                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_DeviceName_Elements()                                                                                       // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_DeviceName_Elements()                                                                                       // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 8. DeviceDefinition.deviceName.name
-                            this.Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Name",                                                                                              // MakerGen.cs:235
-                                Path= "DeviceDefinition.deviceName.name",                                                                   // MakerGen.cs:236
-                                Id = "DeviceDefinition.deviceName.name",                                                                    // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Name",                                                                                              // MakerGen.cs:230
+                                Path= "DeviceDefinition.deviceName.name",                                                                   // MakerGen.cs:231
+                                Id = "DeviceDefinition.deviceName.name",                                                                    // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 9. DeviceDefinition.deviceName.type
-                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Type",                                                                                              // MakerGen.cs:235
-                                Path= "DeviceDefinition.deviceName.type",                                                                   // MakerGen.cs:236
-                                Id = "DeviceDefinition.deviceName.type",                                                                    // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Name.Write(sDef);                                                                                                   // MakerGen.cs:220
-                        Type.Write(sDef);                                                                                                   // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_DeviceName_Elements Elements                                                                                    // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_DeviceName_Elements();                                                                 // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_DeviceName_Elements elements;                                                                                          // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_DeviceName()                                                                                                    // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "DeviceDefinition.deviceName",                                                                               // MakerGen.cs:428
-                        ElementId = "DeviceDefinition.deviceName"                                                                           // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Type",                                                                                              // MakerGen.cs:230
+                                Path= "DeviceDefinition.deviceName.type",                                                                   // MakerGen.cs:231
+                                Id = "DeviceDefinition.deviceName.type",                                                                    // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Name.Write(sDef);                                                                                                   // MakerGen.cs:215
+                        Type.Write(sDef);                                                                                                   // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_DeviceName_Elements Elements                                                                                    // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_DeviceName_Elements();                                                                 // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_DeviceName_Elements elements;                                                                                          // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_DeviceName()                                                                                                    // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "DeviceDefinition.deviceName",                                                                               // MakerGen.cs:423
+                        ElementId = "DeviceDefinition.deviceName"                                                                           // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 12. DeviceDefinition.specialization
-            public class Type_Specialization : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Specialization_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Specialization : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Specialization_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 13. DeviceDefinition.specialization.systemType
-                    public ElementDefinitionInfo SystemType;                                                                                // MakerGen.cs:216
+                    public ElementDefinitionInfo SystemType;                                                                                // MakerGen.cs:211
                     // 14. DeviceDefinition.specialization.version
-                    public ElementDefinitionInfo Version;                                                                                   // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Specialization_Elements()                                                                                   // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo Version;                                                                                   // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Specialization_Elements()                                                                                   // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 13. DeviceDefinition.specialization.systemType
-                            this.SystemType = new ElementDefinitionInfo                                                                     // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "SystemType",                                                                                        // MakerGen.cs:235
-                                Path= "DeviceDefinition.specialization.systemType",                                                         // MakerGen.cs:236
-                                Id = "DeviceDefinition.specialization.systemType",                                                          // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.SystemType = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "SystemType",                                                                                        // MakerGen.cs:230
+                                Path= "DeviceDefinition.specialization.systemType",                                                         // MakerGen.cs:231
+                                Id = "DeviceDefinition.specialization.systemType",                                                          // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 14. DeviceDefinition.specialization.version
-                            this.Version = new ElementDefinitionInfo                                                                        // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Version",                                                                                           // MakerGen.cs:235
-                                Path= "DeviceDefinition.specialization.version",                                                            // MakerGen.cs:236
-                                Id = "DeviceDefinition.specialization.version",                                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        SystemType.Write(sDef);                                                                                             // MakerGen.cs:220
-                        Version.Write(sDef);                                                                                                // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Specialization_Elements Elements                                                                                // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Specialization_Elements();                                                             // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Specialization_Elements elements;                                                                                      // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Specialization()                                                                                                // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "DeviceDefinition.specialization",                                                                           // MakerGen.cs:428
-                        ElementId = "DeviceDefinition.specialization"                                                                       // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.Version = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Version",                                                                                           // MakerGen.cs:230
+                                Path= "DeviceDefinition.specialization.version",                                                            // MakerGen.cs:231
+                                Id = "DeviceDefinition.specialization.version",                                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        SystemType.Write(sDef);                                                                                             // MakerGen.cs:215
+                        Version.Write(sDef);                                                                                                // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Specialization_Elements Elements                                                                                // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Specialization_Elements();                                                             // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Specialization_Elements elements;                                                                                      // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Specialization()                                                                                                // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "DeviceDefinition.specialization",                                                                           // MakerGen.cs:423
+                        ElementId = "DeviceDefinition.specialization"                                                                       // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 20. DeviceDefinition.capability
-            public class Type_Capability : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Capability_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Capability : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Capability_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 21. DeviceDefinition.capability.type
-                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:211
                     // 22. DeviceDefinition.capability.description
-                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Capability_Elements()                                                                                       // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Capability_Elements()                                                                                       // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 21. DeviceDefinition.capability.type
-                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Type",                                                                                              // MakerGen.cs:235
-                                Path= "DeviceDefinition.capability.type",                                                                   // MakerGen.cs:236
-                                Id = "DeviceDefinition.capability.type",                                                                    // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Type",                                                                                              // MakerGen.cs:230
+                                Path= "DeviceDefinition.capability.type",                                                                   // MakerGen.cs:231
+                                Id = "DeviceDefinition.capability.type",                                                                    // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 22. DeviceDefinition.capability.description
-                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Description",                                                                                       // MakerGen.cs:235
-                                Path= "DeviceDefinition.capability.description",                                                            // MakerGen.cs:236
-                                Id = "DeviceDefinition.capability.description",                                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Type.Write(sDef);                                                                                                   // MakerGen.cs:220
-                        Description.Write(sDef);                                                                                            // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Capability_Elements Elements                                                                                    // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Capability_Elements();                                                                 // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Capability_Elements elements;                                                                                          // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Capability()                                                                                                    // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "DeviceDefinition.capability",                                                                               // MakerGen.cs:428
-                        ElementId = "DeviceDefinition.capability"                                                                           // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Description",                                                                                       // MakerGen.cs:230
+                                Path= "DeviceDefinition.capability.description",                                                            // MakerGen.cs:231
+                                Id = "DeviceDefinition.capability.description",                                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Type.Write(sDef);                                                                                                   // MakerGen.cs:215
+                        Description.Write(sDef);                                                                                            // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Capability_Elements Elements                                                                                    // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Capability_Elements();                                                                 // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Capability_Elements elements;                                                                                          // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Capability()                                                                                                    // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "DeviceDefinition.capability",                                                                               // MakerGen.cs:423
+                        ElementId = "DeviceDefinition.capability"                                                                           // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 23. DeviceDefinition.property
-            public class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Property_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Property_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 24. DeviceDefinition.property.type
-                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:211
                     // 25. DeviceDefinition.property.valueQuantity
-                    public ElementDefinitionInfo ValueQuantity;                                                                             // MakerGen.cs:216
+                    public ElementDefinitionInfo ValueQuantity;                                                                             // MakerGen.cs:211
                     // 26. DeviceDefinition.property.valueCode
-                    public ElementDefinitionInfo ValueCode;                                                                                 // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Property_Elements()                                                                                         // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo ValueCode;                                                                                 // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Property_Elements()                                                                                         // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 24. DeviceDefinition.property.type
-                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Type",                                                                                              // MakerGen.cs:235
-                                Path= "DeviceDefinition.property.type",                                                                     // MakerGen.cs:236
-                                Id = "DeviceDefinition.property.type",                                                                      // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Type",                                                                                              // MakerGen.cs:230
+                                Path= "DeviceDefinition.property.type",                                                                     // MakerGen.cs:231
+                                Id = "DeviceDefinition.property.type",                                                                      // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 25. DeviceDefinition.property.valueQuantity
-                            this.ValueQuantity = new ElementDefinitionInfo                                                                  // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "ValueQuantity",                                                                                     // MakerGen.cs:235
-                                Path= "DeviceDefinition.property.valueQuantity",                                                            // MakerGen.cs:236
-                                Id = "DeviceDefinition.property.valueQuantity",                                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:358
-                                    {                                                                                                       // MakerGen.cs:359
-                                    }                                                                                                       // MakerGen.cs:360
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.ValueQuantity = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "ValueQuantity",                                                                                     // MakerGen.cs:230
+                                Path= "DeviceDefinition.property.valueQuantity",                                                            // MakerGen.cs:231
+                                Id = "DeviceDefinition.property.valueQuantity",                                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:353
+                                    {                                                                                                       // MakerGen.cs:354
+                                    }                                                                                                       // MakerGen.cs:355
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 26. DeviceDefinition.property.valueCode
-                            this.ValueCode = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "ValueCode",                                                                                         // MakerGen.cs:235
-                                Path= "DeviceDefinition.property.valueCode",                                                                // MakerGen.cs:236
-                                Id = "DeviceDefinition.property.valueCode",                                                                 // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Type.Write(sDef);                                                                                                   // MakerGen.cs:220
-                        ValueQuantity.Write(sDef);                                                                                          // MakerGen.cs:220
-                        ValueCode.Write(sDef);                                                                                              // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Property_Elements Elements                                                                                      // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Property_Elements();                                                                   // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Property_Elements elements;                                                                                            // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Property()                                                                                                      // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "DeviceDefinition.property",                                                                                 // MakerGen.cs:428
-                        ElementId = "DeviceDefinition.property"                                                                             // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.ValueCode = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "ValueCode",                                                                                         // MakerGen.cs:230
+                                Path= "DeviceDefinition.property.valueCode",                                                                // MakerGen.cs:231
+                                Id = "DeviceDefinition.property.valueCode",                                                                 // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Type.Write(sDef);                                                                                                   // MakerGen.cs:215
+                        ValueQuantity.Write(sDef);                                                                                          // MakerGen.cs:215
+                        ValueCode.Write(sDef);                                                                                              // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Property_Elements Elements                                                                                      // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Property_Elements();                                                                   // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Property_Elements elements;                                                                                            // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Property()                                                                                                      // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "DeviceDefinition.property",                                                                                 // MakerGen.cs:423
+                        ElementId = "DeviceDefinition.property"                                                                             // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 34. DeviceDefinition.material
-            public class Type_Material : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Material_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Material : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Material_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 35. DeviceDefinition.material.substance
-                    public ElementDefinitionInfo Substance;                                                                                 // MakerGen.cs:216
+                    public ElementDefinitionInfo Substance;                                                                                 // MakerGen.cs:211
                     // 36. DeviceDefinition.material.alternate
-                    public ElementDefinitionInfo Alternate;                                                                                 // MakerGen.cs:216
+                    public ElementDefinitionInfo Alternate;                                                                                 // MakerGen.cs:211
                     // 37. DeviceDefinition.material.allergenicIndicator
-                    public ElementDefinitionInfo AllergenicIndicator;                                                                       // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Material_Elements()                                                                                         // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo AllergenicIndicator;                                                                       // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Material_Elements()                                                                                         // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 35. DeviceDefinition.material.substance
-                            this.Substance = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Substance",                                                                                         // MakerGen.cs:235
-                                Path= "DeviceDefinition.material.substance",                                                                // MakerGen.cs:236
-                                Id = "DeviceDefinition.material.substance",                                                                 // MakerGen.cs:237
-                                Min = 1,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Substance = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Substance",                                                                                         // MakerGen.cs:230
+                                Path= "DeviceDefinition.material.substance",                                                                // MakerGen.cs:231
+                                Id = "DeviceDefinition.material.substance",                                                                 // MakerGen.cs:232
+                                Min = 1,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 36. DeviceDefinition.material.alternate
-                            this.Alternate = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Alternate",                                                                                         // MakerGen.cs:235
-                                Path= "DeviceDefinition.material.alternate",                                                                // MakerGen.cs:236
-                                Id = "DeviceDefinition.material.alternate",                                                                 // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Alternate = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Alternate",                                                                                         // MakerGen.cs:230
+                                Path= "DeviceDefinition.material.alternate",                                                                // MakerGen.cs:231
+                                Id = "DeviceDefinition.material.alternate",                                                                 // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 37. DeviceDefinition.material.allergenicIndicator
-                            this.AllergenicIndicator = new ElementDefinitionInfo                                                            // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "AllergenicIndicator",                                                                               // MakerGen.cs:235
-                                Path= "DeviceDefinition.material.allergenicIndicator",                                                      // MakerGen.cs:236
-                                Id = "DeviceDefinition.material.allergenicIndicator",                                                       // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Substance.Write(sDef);                                                                                              // MakerGen.cs:220
-                        Alternate.Write(sDef);                                                                                              // MakerGen.cs:220
-                        AllergenicIndicator.Write(sDef);                                                                                    // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Material_Elements Elements                                                                                      // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Material_Elements();                                                                   // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Material_Elements elements;                                                                                            // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Material()                                                                                                      // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "DeviceDefinition.material",                                                                                 // MakerGen.cs:428
-                        ElementId = "DeviceDefinition.material"                                                                             // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.AllergenicIndicator = new ElementDefinitionInfo                                                            // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "AllergenicIndicator",                                                                               // MakerGen.cs:230
+                                Path= "DeviceDefinition.material.allergenicIndicator",                                                      // MakerGen.cs:231
+                                Id = "DeviceDefinition.material.allergenicIndicator",                                                       // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Substance.Write(sDef);                                                                                              // MakerGen.cs:215
+                        Alternate.Write(sDef);                                                                                              // MakerGen.cs:215
+                        AllergenicIndicator.Write(sDef);                                                                                    // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Material_Elements Elements                                                                                      // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Material_Elements();                                                                   // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Material_Elements elements;                                                                                            // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Material()                                                                                                      // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "DeviceDefinition.material",                                                                                 // MakerGen.cs:423
+                        ElementId = "DeviceDefinition.material"                                                                             // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 1. DeviceDefinition.identifier
-            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:211
             // 2. DeviceDefinition.udiDeviceIdentifier
-            public ElementDefinitionInfo UdiDeviceIdentifier;                                                                               // MakerGen.cs:216
+            public ElementDefinitionInfo UdiDeviceIdentifier;                                                                               // MakerGen.cs:211
             // 6. DeviceDefinition.manufacturer[x]
-            public ElementDefinitionInfo Manufacturer;                                                                                      // MakerGen.cs:216
+            public ElementDefinitionInfo Manufacturer;                                                                                      // MakerGen.cs:211
             // 7. DeviceDefinition.deviceName
-            public ElementDefinitionInfo DeviceName;                                                                                        // MakerGen.cs:216
+            public ElementDefinitionInfo DeviceName;                                                                                        // MakerGen.cs:211
             // 10. DeviceDefinition.modelNumber
-            public ElementDefinitionInfo ModelNumber;                                                                                       // MakerGen.cs:216
+            public ElementDefinitionInfo ModelNumber;                                                                                       // MakerGen.cs:211
             // 11. DeviceDefinition.type
-            public ElementDefinitionInfo Type;                                                                                              // MakerGen.cs:216
+            public ElementDefinitionInfo Type;                                                                                              // MakerGen.cs:211
             // 12. DeviceDefinition.specialization
-            public ElementDefinitionInfo Specialization;                                                                                    // MakerGen.cs:216
+            public ElementDefinitionInfo Specialization;                                                                                    // MakerGen.cs:211
             // 15. DeviceDefinition.version
-            public ElementDefinitionInfo Version;                                                                                           // MakerGen.cs:216
+            public ElementDefinitionInfo Version;                                                                                           // MakerGen.cs:211
             // 16. DeviceDefinition.safety
-            public ElementDefinitionInfo Safety;                                                                                            // MakerGen.cs:216
+            public ElementDefinitionInfo Safety;                                                                                            // MakerGen.cs:211
             // 17. DeviceDefinition.shelfLifeStorage
-            public ElementDefinitionInfo ShelfLifeStorage;                                                                                  // MakerGen.cs:216
+            public ElementDefinitionInfo ShelfLifeStorage;                                                                                  // MakerGen.cs:211
             // 18. DeviceDefinition.physicalCharacteristics
-            public ElementDefinitionInfo PhysicalCharacteristics;                                                                           // MakerGen.cs:216
+            public ElementDefinitionInfo PhysicalCharacteristics;                                                                           // MakerGen.cs:211
             // 19. DeviceDefinition.languageCode
-            public ElementDefinitionInfo LanguageCode;                                                                                      // MakerGen.cs:216
+            public ElementDefinitionInfo LanguageCode;                                                                                      // MakerGen.cs:211
             // 20. DeviceDefinition.capability
-            public ElementDefinitionInfo Capability;                                                                                        // MakerGen.cs:216
+            public ElementDefinitionInfo Capability;                                                                                        // MakerGen.cs:211
             // 23. DeviceDefinition.property
-            public ElementDefinitionInfo Property;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Property;                                                                                          // MakerGen.cs:211
             // 27. DeviceDefinition.owner
-            public ElementDefinitionInfo Owner;                                                                                             // MakerGen.cs:216
+            public ElementDefinitionInfo Owner;                                                                                             // MakerGen.cs:211
             // 28. DeviceDefinition.contact
-            public ElementDefinitionInfo Contact;                                                                                           // MakerGen.cs:216
+            public ElementDefinitionInfo Contact;                                                                                           // MakerGen.cs:211
             // 29. DeviceDefinition.url
-            public ElementDefinitionInfo Url;                                                                                               // MakerGen.cs:216
+            public ElementDefinitionInfo Url;                                                                                               // MakerGen.cs:211
             // 30. DeviceDefinition.onlineInformation
-            public ElementDefinitionInfo OnlineInformation;                                                                                 // MakerGen.cs:216
+            public ElementDefinitionInfo OnlineInformation;                                                                                 // MakerGen.cs:211
             // 31. DeviceDefinition.note
-            public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:216
+            public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:211
             // 32. DeviceDefinition.quantity
-            public ElementDefinitionInfo Quantity;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Quantity;                                                                                          // MakerGen.cs:211
             // 33. DeviceDefinition.parentDevice
-            public ElementDefinitionInfo ParentDevice;                                                                                      // MakerGen.cs:216
+            public ElementDefinitionInfo ParentDevice;                                                                                      // MakerGen.cs:211
             // 34. DeviceDefinition.material
-            public ElementDefinitionInfo Material;                                                                                          // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-            public DeviceDefinition_Elements()                                                                                              // MakerGen.cs:392
-            {                                                                                                                               // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:231
+            public ElementDefinitionInfo Material;                                                                                          // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+            public DeviceDefinition_Elements()                                                                                              // MakerGen.cs:387
+            {                                                                                                                               // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:226
                     // 1. DeviceDefinition.identifier
-                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Identifier",                                                                                                // MakerGen.cs:235
-                        Path= "DeviceDefinition.identifier",                                                                                // MakerGen.cs:236
-                        Id = "DeviceDefinition.identifier",                                                                                 // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Identifier",                                                                                                // MakerGen.cs:230
+                        Path= "DeviceDefinition.identifier",                                                                                // MakerGen.cs:231
+                        Id = "DeviceDefinition.identifier",                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 2. DeviceDefinition.udiDeviceIdentifier
-                    this.UdiDeviceIdentifier = new ElementDefinitionInfo                                                                    // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "UdiDeviceIdentifier",                                                                                       // MakerGen.cs:235
-                        Path= "DeviceDefinition.udiDeviceIdentifier",                                                                       // MakerGen.cs:236
-                        Id = "DeviceDefinition.udiDeviceIdentifier",                                                                        // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_UdiDeviceIdentifier                                                                                    // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.UdiDeviceIdentifier = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "UdiDeviceIdentifier",                                                                                       // MakerGen.cs:230
+                        Path= "DeviceDefinition.udiDeviceIdentifier",                                                                       // MakerGen.cs:231
+                        Id = "DeviceDefinition.udiDeviceIdentifier",                                                                        // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_UdiDeviceIdentifier                                                                                    // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 6. DeviceDefinition.manufacturer[x]
-                    this.Manufacturer = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Manufacturer",                                                                                              // MakerGen.cs:235
-                        Path= "DeviceDefinition.manufacturer[x]",                                                                           // MakerGen.cs:236
-                        Id = "DeviceDefinition.manufacturer[x]",                                                                            // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            },                                                                                                              // MakerGen.cs:304
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Manufacturer = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Manufacturer",                                                                                              // MakerGen.cs:230
+                        Path= "DeviceDefinition.manufacturer[x]",                                                                           // MakerGen.cs:231
+                        Id = "DeviceDefinition.manufacturer[x]",                                                                            // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            },                                                                                                              // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 7. DeviceDefinition.deviceName
-                    this.DeviceName = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "DeviceName",                                                                                                // MakerGen.cs:235
-                        Path= "DeviceDefinition.deviceName",                                                                                // MakerGen.cs:236
-                        Id = "DeviceDefinition.deviceName",                                                                                 // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_DeviceName                                                                                             // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.DeviceName = new ElementDefinitionInfo                                                                             // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "DeviceName",                                                                                                // MakerGen.cs:230
+                        Path= "DeviceDefinition.deviceName",                                                                                // MakerGen.cs:231
+                        Id = "DeviceDefinition.deviceName",                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_DeviceName                                                                                             // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 10. DeviceDefinition.modelNumber
-                    this.ModelNumber = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "ModelNumber",                                                                                               // MakerGen.cs:235
-                        Path= "DeviceDefinition.modelNumber",                                                                               // MakerGen.cs:236
-                        Id = "DeviceDefinition.modelNumber",                                                                                // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.ModelNumber = new ElementDefinitionInfo                                                                            // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "ModelNumber",                                                                                               // MakerGen.cs:230
+                        Path= "DeviceDefinition.modelNumber",                                                                               // MakerGen.cs:231
+                        Id = "DeviceDefinition.modelNumber",                                                                                // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 11. DeviceDefinition.type
-                    this.Type = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Type",                                                                                                      // MakerGen.cs:235
-                        Path= "DeviceDefinition.type",                                                                                      // MakerGen.cs:236
-                        Id = "DeviceDefinition.type",                                                                                       // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Type = new ElementDefinitionInfo                                                                                   // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Type",                                                                                                      // MakerGen.cs:230
+                        Path= "DeviceDefinition.type",                                                                                      // MakerGen.cs:231
+                        Id = "DeviceDefinition.type",                                                                                       // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 12. DeviceDefinition.specialization
-                    this.Specialization = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Specialization",                                                                                            // MakerGen.cs:235
-                        Path= "DeviceDefinition.specialization",                                                                            // MakerGen.cs:236
-                        Id = "DeviceDefinition.specialization",                                                                             // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Specialization                                                                                         // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Specialization = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Specialization",                                                                                            // MakerGen.cs:230
+                        Path= "DeviceDefinition.specialization",                                                                            // MakerGen.cs:231
+                        Id = "DeviceDefinition.specialization",                                                                             // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Specialization                                                                                         // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 15. DeviceDefinition.version
-                    this.Version = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Version",                                                                                                   // MakerGen.cs:235
-                        Path= "DeviceDefinition.version",                                                                                   // MakerGen.cs:236
-                        Id = "DeviceDefinition.version",                                                                                    // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Version = new ElementDefinitionInfo                                                                                // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Version",                                                                                                   // MakerGen.cs:230
+                        Path= "DeviceDefinition.version",                                                                                   // MakerGen.cs:231
+                        Id = "DeviceDefinition.version",                                                                                    // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 16. DeviceDefinition.safety
-                    this.Safety = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Safety",                                                                                                    // MakerGen.cs:235
-                        Path= "DeviceDefinition.safety",                                                                                    // MakerGen.cs:236
-                        Id = "DeviceDefinition.safety",                                                                                     // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Safety = new ElementDefinitionInfo                                                                                 // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Safety",                                                                                                    // MakerGen.cs:230
+                        Path= "DeviceDefinition.safety",                                                                                    // MakerGen.cs:231
+                        Id = "DeviceDefinition.safety",                                                                                     // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 17. DeviceDefinition.shelfLifeStorage
-                    this.ShelfLifeStorage = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "ShelfLifeStorage",                                                                                          // MakerGen.cs:235
-                        Path= "DeviceDefinition.shelfLifeStorage",                                                                          // MakerGen.cs:236
-                        Id = "DeviceDefinition.shelfLifeStorage",                                                                           // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.ProductShelfLife                                                              // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.ShelfLifeStorage = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "ShelfLifeStorage",                                                                                          // MakerGen.cs:230
+                        Path= "DeviceDefinition.shelfLifeStorage",                                                                          // MakerGen.cs:231
+                        Id = "DeviceDefinition.shelfLifeStorage",                                                                           // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.ProductShelfLife                                                              // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 18. DeviceDefinition.physicalCharacteristics
-                    this.PhysicalCharacteristics = new ElementDefinitionInfo                                                                // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "PhysicalCharacteristics",                                                                                   // MakerGen.cs:235
-                        Path= "DeviceDefinition.physicalCharacteristics",                                                                   // MakerGen.cs:236
-                        Id = "DeviceDefinition.physicalCharacteristics",                                                                    // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.ProdCharacteristic                                                            // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.PhysicalCharacteristics = new ElementDefinitionInfo                                                                // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "PhysicalCharacteristics",                                                                                   // MakerGen.cs:230
+                        Path= "DeviceDefinition.physicalCharacteristics",                                                                   // MakerGen.cs:231
+                        Id = "DeviceDefinition.physicalCharacteristics",                                                                    // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.ProdCharacteristic                                                            // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 19. DeviceDefinition.languageCode
-                    this.LanguageCode = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "LanguageCode",                                                                                              // MakerGen.cs:235
-                        Path= "DeviceDefinition.languageCode",                                                                              // MakerGen.cs:236
-                        Id = "DeviceDefinition.languageCode",                                                                               // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.LanguageCode = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "LanguageCode",                                                                                              // MakerGen.cs:230
+                        Path= "DeviceDefinition.languageCode",                                                                              // MakerGen.cs:231
+                        Id = "DeviceDefinition.languageCode",                                                                               // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 20. DeviceDefinition.capability
-                    this.Capability = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Capability",                                                                                                // MakerGen.cs:235
-                        Path= "DeviceDefinition.capability",                                                                                // MakerGen.cs:236
-                        Id = "DeviceDefinition.capability",                                                                                 // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Capability                                                                                             // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Capability = new ElementDefinitionInfo                                                                             // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Capability",                                                                                                // MakerGen.cs:230
+                        Path= "DeviceDefinition.capability",                                                                                // MakerGen.cs:231
+                        Id = "DeviceDefinition.capability",                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Capability                                                                                             // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 23. DeviceDefinition.property
-                    this.Property = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Property",                                                                                                  // MakerGen.cs:235
-                        Path= "DeviceDefinition.property",                                                                                  // MakerGen.cs:236
-                        Id = "DeviceDefinition.property",                                                                                   // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Property                                                                                               // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Property = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Property",                                                                                                  // MakerGen.cs:230
+                        Path= "DeviceDefinition.property",                                                                                  // MakerGen.cs:231
+                        Id = "DeviceDefinition.property",                                                                                   // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Property                                                                                               // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 27. DeviceDefinition.owner
-                    this.Owner = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Owner",                                                                                                     // MakerGen.cs:235
-                        Path= "DeviceDefinition.owner",                                                                                     // MakerGen.cs:236
-                        Id = "DeviceDefinition.owner",                                                                                      // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.Owner = new ElementDefinitionInfo                                                                                  // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Owner",                                                                                                     // MakerGen.cs:230
+                        Path= "DeviceDefinition.owner",                                                                                     // MakerGen.cs:231
+                        Id = "DeviceDefinition.owner",                                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 28. DeviceDefinition.contact
-                    this.Contact = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Contact",                                                                                                   // MakerGen.cs:235
-                        Path= "DeviceDefinition.contact",                                                                                   // MakerGen.cs:236
-                        Id = "DeviceDefinition.contact",                                                                                    // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.ContactPoint                                                                  // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Contact = new ElementDefinitionInfo                                                                                // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Contact",                                                                                                   // MakerGen.cs:230
+                        Path= "DeviceDefinition.contact",                                                                                   // MakerGen.cs:231
+                        Id = "DeviceDefinition.contact",                                                                                    // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.ContactPoint                                                                  // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 29. DeviceDefinition.url
-                    this.Url = new ElementDefinitionInfo                                                                                    // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Url",                                                                                                       // MakerGen.cs:235
-                        Path= "DeviceDefinition.url",                                                                                       // MakerGen.cs:236
-                        Id = "DeviceDefinition.url",                                                                                        // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Url = new ElementDefinitionInfo                                                                                    // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Url",                                                                                                       // MakerGen.cs:230
+                        Path= "DeviceDefinition.url",                                                                                       // MakerGen.cs:231
+                        Id = "DeviceDefinition.url",                                                                                        // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 30. DeviceDefinition.onlineInformation
-                    this.OnlineInformation = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "OnlineInformation",                                                                                         // MakerGen.cs:235
-                        Path= "DeviceDefinition.onlineInformation",                                                                         // MakerGen.cs:236
-                        Id = "DeviceDefinition.onlineInformation",                                                                          // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.OnlineInformation = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "OnlineInformation",                                                                                         // MakerGen.cs:230
+                        Path= "DeviceDefinition.onlineInformation",                                                                         // MakerGen.cs:231
+                        Id = "DeviceDefinition.onlineInformation",                                                                          // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 31. DeviceDefinition.note
-                    this.Note = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Note",                                                                                                      // MakerGen.cs:235
-                        Path= "DeviceDefinition.note",                                                                                      // MakerGen.cs:236
-                        Id = "DeviceDefinition.note",                                                                                       // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Note = new ElementDefinitionInfo                                                                                   // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Note",                                                                                                      // MakerGen.cs:230
+                        Path= "DeviceDefinition.note",                                                                                      // MakerGen.cs:231
+                        Id = "DeviceDefinition.note",                                                                                       // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 32. DeviceDefinition.quantity
-                    this.Quantity = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Quantity",                                                                                                  // MakerGen.cs:235
-                        Path= "DeviceDefinition.quantity",                                                                                  // MakerGen.cs:236
-                        Id = "DeviceDefinition.quantity",                                                                                   // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Quantity                                                                      // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Quantity = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Quantity",                                                                                                  // MakerGen.cs:230
+                        Path= "DeviceDefinition.quantity",                                                                                  // MakerGen.cs:231
+                        Id = "DeviceDefinition.quantity",                                                                                   // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Quantity                                                                      // MakerGen.cs:353
+                            {                                                                                                               // MakerGen.cs:354
+                            }                                                                                                               // MakerGen.cs:355
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 33. DeviceDefinition.parentDevice
-                    this.ParentDevice = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "ParentDevice",                                                                                              // MakerGen.cs:235
-                        Path= "DeviceDefinition.parentDevice",                                                                              // MakerGen.cs:236
-                        Id = "DeviceDefinition.parentDevice",                                                                               // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                    this.ParentDevice = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "ParentDevice",                                                                                              // MakerGen.cs:230
+                        Path= "DeviceDefinition.parentDevice",                                                                              // MakerGen.cs:231
+                        Id = "DeviceDefinition.parentDevice",                                                                               // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:341
+                            {                                                                                                               // MakerGen.cs:342
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:344
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/DeviceDefinition"                                              // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/DeviceDefinition"                                              // MakerGen.cs:344
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                            }                                                                                                               // MakerGen.cs:345
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 34. DeviceDefinition.material
-                    this.Material = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Material",                                                                                                  // MakerGen.cs:235
-                        Path= "DeviceDefinition.material",                                                                                  // MakerGen.cs:236
-                        Id = "DeviceDefinition.material",                                                                                   // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Material                                                                                               // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
-            {                                                                                                                               // MakerGen.cs:399
-                base.Write(sDef);                                                                                                           // MakerGen.cs:400
-                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
-                UdiDeviceIdentifier.Write(sDef);                                                                                            // MakerGen.cs:220
-                Manufacturer.Write(sDef);                                                                                                   // MakerGen.cs:220
-                DeviceName.Write(sDef);                                                                                                     // MakerGen.cs:220
-                ModelNumber.Write(sDef);                                                                                                    // MakerGen.cs:220
-                Type.Write(sDef);                                                                                                           // MakerGen.cs:220
-                Specialization.Write(sDef);                                                                                                 // MakerGen.cs:220
-                Version.Write(sDef);                                                                                                        // MakerGen.cs:220
-                Safety.Write(sDef);                                                                                                         // MakerGen.cs:220
-                ShelfLifeStorage.Write(sDef);                                                                                               // MakerGen.cs:220
-                PhysicalCharacteristics.Write(sDef);                                                                                        // MakerGen.cs:220
-                LanguageCode.Write(sDef);                                                                                                   // MakerGen.cs:220
-                Capability.Write(sDef);                                                                                                     // MakerGen.cs:220
-                Property.Write(sDef);                                                                                                       // MakerGen.cs:220
-                Owner.Write(sDef);                                                                                                          // MakerGen.cs:220
-                Contact.Write(sDef);                                                                                                        // MakerGen.cs:220
-                Url.Write(sDef);                                                                                                            // MakerGen.cs:220
-                OnlineInformation.Write(sDef);                                                                                              // MakerGen.cs:220
-                Note.Write(sDef);                                                                                                           // MakerGen.cs:220
-                Quantity.Write(sDef);                                                                                                       // MakerGen.cs:220
-                ParentDevice.Write(sDef);                                                                                                   // MakerGen.cs:220
-                Material.Write(sDef);                                                                                                       // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:402
-        }                                                                                                                                   // MakerGen.cs:404
-        public DeviceDefinition_Elements Elements                                                                                           // MakerGen.cs:406
-        {                                                                                                                                   // MakerGen.cs:407
-            get                                                                                                                             // MakerGen.cs:408
-            {                                                                                                                               // MakerGen.cs:409
-                if (this.elements == null)                                                                                                  // MakerGen.cs:410
-                    this.elements = new DeviceDefinition_Elements();                                                                        // MakerGen.cs:411
-                return this.elements;                                                                                                       // MakerGen.cs:412
-            }                                                                                                                               // MakerGen.cs:413
-        }                                                                                                                                   // MakerGen.cs:414
-        DeviceDefinition_Elements elements;                                                                                                 // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-        public DeviceDefinition()                                                                                                           // MakerGen.cs:418
-        {                                                                                                                                   // MakerGen.cs:419
-            this.Name = "DeviceDefinition";                                                                                                 // MakerGen.cs:492
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/DeviceDefinition";                                                          // MakerGen.cs:493
-        }                                                                                                                                   // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
-        {                                                                                                                                   // MakerGen.cs:425
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
-            {                                                                                                                               // MakerGen.cs:427
-                Path = "DeviceDefinition",                                                                                                  // MakerGen.cs:428
-                ElementId = "DeviceDefinition"                                                                                              // MakerGen.cs:429
-            });                                                                                                                             // MakerGen.cs:430
-            if (this.elements != null)                                                                                                      // MakerGen.cs:431
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
-        }                                                                                                                                   // MakerGen.cs:433
-    }                                                                                                                                       // MakerGen.cs:434
-}                                                                                                                                           // MakerGen.cs:479
+                    this.Material = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Material",                                                                                                  // MakerGen.cs:230
+                        Path= "DeviceDefinition.material",                                                                                  // MakerGen.cs:231
+                        Id = "DeviceDefinition.material",                                                                                   // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Material                                                                                               // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                base.Write(sDef);                                                                                                           // MakerGen.cs:395
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:215
+                UdiDeviceIdentifier.Write(sDef);                                                                                            // MakerGen.cs:215
+                Manufacturer.Write(sDef);                                                                                                   // MakerGen.cs:215
+                DeviceName.Write(sDef);                                                                                                     // MakerGen.cs:215
+                ModelNumber.Write(sDef);                                                                                                    // MakerGen.cs:215
+                Type.Write(sDef);                                                                                                           // MakerGen.cs:215
+                Specialization.Write(sDef);                                                                                                 // MakerGen.cs:215
+                Version.Write(sDef);                                                                                                        // MakerGen.cs:215
+                Safety.Write(sDef);                                                                                                         // MakerGen.cs:215
+                ShelfLifeStorage.Write(sDef);                                                                                               // MakerGen.cs:215
+                PhysicalCharacteristics.Write(sDef);                                                                                        // MakerGen.cs:215
+                LanguageCode.Write(sDef);                                                                                                   // MakerGen.cs:215
+                Capability.Write(sDef);                                                                                                     // MakerGen.cs:215
+                Property.Write(sDef);                                                                                                       // MakerGen.cs:215
+                Owner.Write(sDef);                                                                                                          // MakerGen.cs:215
+                Contact.Write(sDef);                                                                                                        // MakerGen.cs:215
+                Url.Write(sDef);                                                                                                            // MakerGen.cs:215
+                OnlineInformation.Write(sDef);                                                                                              // MakerGen.cs:215
+                Note.Write(sDef);                                                                                                           // MakerGen.cs:215
+                Quantity.Write(sDef);                                                                                                       // MakerGen.cs:215
+                ParentDevice.Write(sDef);                                                                                                   // MakerGen.cs:215
+                Material.Write(sDef);                                                                                                       // MakerGen.cs:215
+            }                                                                                                                               // MakerGen.cs:397
+        }                                                                                                                                   // MakerGen.cs:399
+        public DeviceDefinition_Elements Elements                                                                                           // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            get                                                                                                                             // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:404
+                if (this.elements == null)                                                                                                  // MakerGen.cs:405
+                    this.elements = new DeviceDefinition_Elements();                                                                        // MakerGen.cs:406
+                return this.elements;                                                                                                       // MakerGen.cs:407
+            }                                                                                                                               // MakerGen.cs:408
+        }                                                                                                                                   // MakerGen.cs:409
+        DeviceDefinition_Elements elements;                                                                                                 // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+        public DeviceDefinition()                                                                                                           // MakerGen.cs:413
+        {                                                                                                                                   // MakerGen.cs:414
+            this.Name = "DeviceDefinition";                                                                                                 // MakerGen.cs:487
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/DeviceDefinition";                                                          // MakerGen.cs:488
+        }                                                                                                                                   // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:419
+        {                                                                                                                                   // MakerGen.cs:420
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:421
+            {                                                                                                                               // MakerGen.cs:422
+                Path = "DeviceDefinition",                                                                                                  // MakerGen.cs:423
+                ElementId = "DeviceDefinition"                                                                                              // MakerGen.cs:424
+            });                                                                                                                             // MakerGen.cs:425
+            if (this.elements != null)                                                                                                      // MakerGen.cs:426
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:427
+        }                                                                                                                                   // MakerGen.cs:428
+    }                                                                                                                                       // MakerGen.cs:429
+}                                                                                                                                           // MakerGen.cs:474

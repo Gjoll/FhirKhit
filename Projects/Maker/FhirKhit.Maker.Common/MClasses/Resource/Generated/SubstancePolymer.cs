@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:462
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:463
-using System.IO;                                                                                                                            // MakerGen.cs:464
-using System.Linq;                                                                                                                          // MakerGen.cs:465
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:466
-                                                                                                                                            // MakerGen.cs:467
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:468
-{                                                                                                                                           // MakerGen.cs:469
-    #region Json                                                                                                                            // MakerGen.cs:470
-    #if NEVER                                                                                                                               // MakerGen.cs:471
+using System;                                                                                                                               // MakerGen.cs:457
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:458
+using System.IO;                                                                                                                            // MakerGen.cs:459
+using System.Linq;                                                                                                                          // MakerGen.cs:460
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:461
+                                                                                                                                            // MakerGen.cs:462
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:463
+{                                                                                                                                           // MakerGen.cs:464
+    #region Json                                                                                                                            // MakerGen.cs:465
+    #if NEVER                                                                                                                               // MakerGen.cs:466
     {
       "resourceType": "StructureDefinition",
       "id": "SubstancePolymer",
@@ -401,817 +401,817 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:474
+    #endregion                                                                                                                              // MakerGen.cs:469
     /// <summary>
     /// Fhir resource 'SubstancePolymer'
     /// </summary>
     // 0. SubstancePolymer
-    public class SubstancePolymer : FhirKhit.Maker.Common.Resource.ResourceBase                                                             // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
-        public class SubstancePolymer_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                // MakerGen.cs:386
-        {                                                                                                                                   // MakerGen.cs:387
+    public class SubstancePolymer : FhirKhit.Maker.Common.Resource.ResourceBase                                                             // MakerGen.cs:379
+    {                                                                                                                                       // MakerGen.cs:380
+        public class SubstancePolymer_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 5. SubstancePolymer.monomerSet
-            public class Type_MonomerSet : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_MonomerSet_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_MonomerSet : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_MonomerSet_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 7. SubstancePolymer.monomerSet.startingMaterial
-                    public class Type_StartingMaterial : FhirKhit.Maker.Common.Complex.ComplexBase                                          // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        public class Type_StartingMaterial_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                           // MakerGen.cs:386
-                        {                                                                                                                   // MakerGen.cs:387
+                    public class Type_StartingMaterial : FhirKhit.Maker.Common.Complex.ComplexBase                                          // MakerGen.cs:379
+                    {                                                                                                                       // MakerGen.cs:380
+                        public class Type_StartingMaterial_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                           // MakerGen.cs:381
+                        {                                                                                                                   // MakerGen.cs:382
                             // 8. SubstancePolymer.monomerSet.startingMaterial.material
-                            public ElementDefinitionInfo Material;                                                                          // MakerGen.cs:216
+                            public ElementDefinitionInfo Material;                                                                          // MakerGen.cs:211
                             // 9. SubstancePolymer.monomerSet.startingMaterial.type
-                            public ElementDefinitionInfo Type;                                                                              // MakerGen.cs:216
+                            public ElementDefinitionInfo Type;                                                                              // MakerGen.cs:211
                             // 10. SubstancePolymer.monomerSet.startingMaterial.isDefining
-                            public ElementDefinitionInfo IsDefining;                                                                        // MakerGen.cs:216
+                            public ElementDefinitionInfo IsDefining;                                                                        // MakerGen.cs:211
                             // 11. SubstancePolymer.monomerSet.startingMaterial.amount
-                            public ElementDefinitionInfo Amount;                                                                            // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                            public Type_StartingMaterial_Elements()                                                                         // MakerGen.cs:392
-                            {                                                                                                               // MakerGen.cs:393
-                                {                                                                                                           // MakerGen.cs:231
+                            public ElementDefinitionInfo Amount;                                                                            // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                            public Type_StartingMaterial_Elements()                                                                         // MakerGen.cs:387
+                            {                                                                                                               // MakerGen.cs:388
+                                {                                                                                                           // MakerGen.cs:226
                                     // 8. SubstancePolymer.monomerSet.startingMaterial.material
-                                    this.Material = new ElementDefinitionInfo                                                               // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "Material",                                                                                  // MakerGen.cs:235
-                                        Path= "SubstancePolymer.monomerSet.startingMaterial.material",                                      // MakerGen.cs:236
-                                        Id = "SubstancePolymer.monomerSet.startingMaterial.material",                                       // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:315
-                                            {                                                                                               // MakerGen.cs:316
-                                            }                                                                                               // MakerGen.cs:319
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:231
+                                    this.Material = new ElementDefinitionInfo                                                               // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "Material",                                                                                  // MakerGen.cs:230
+                                        Path= "SubstancePolymer.monomerSet.startingMaterial.material",                                      // MakerGen.cs:231
+                                        Id = "SubstancePolymer.monomerSet.startingMaterial.material",                                       // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:310
+                                            {                                                                                               // MakerGen.cs:311
+                                            }                                                                                               // MakerGen.cs:314
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:226
                                     // 9. SubstancePolymer.monomerSet.startingMaterial.type
-                                    this.Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "Type",                                                                                      // MakerGen.cs:235
-                                        Path= "SubstancePolymer.monomerSet.startingMaterial.type",                                          // MakerGen.cs:236
-                                        Id = "SubstancePolymer.monomerSet.startingMaterial.type",                                           // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:315
-                                            {                                                                                               // MakerGen.cs:316
-                                            }                                                                                               // MakerGen.cs:319
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:231
+                                    this.Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "Type",                                                                                      // MakerGen.cs:230
+                                        Path= "SubstancePolymer.monomerSet.startingMaterial.type",                                          // MakerGen.cs:231
+                                        Id = "SubstancePolymer.monomerSet.startingMaterial.type",                                           // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:310
+                                            {                                                                                               // MakerGen.cs:311
+                                            }                                                                                               // MakerGen.cs:314
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:226
                                     // 10. SubstancePolymer.monomerSet.startingMaterial.isDefining
-                                    this.IsDefining = new ElementDefinitionInfo                                                             // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "IsDefining",                                                                                // MakerGen.cs:235
-                                        Path= "SubstancePolymer.monomerSet.startingMaterial.isDefining",                                    // MakerGen.cs:236
-                                        Id = "SubstancePolymer.monomerSet.startingMaterial.isDefining",                                     // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Primitive.Boolean                                                     // MakerGen.cs:300
-                                            {                                                                                               // MakerGen.cs:301
-                                            }                                                                                               // MakerGen.cs:304
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:231
+                                    this.IsDefining = new ElementDefinitionInfo                                                             // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "IsDefining",                                                                                // MakerGen.cs:230
+                                        Path= "SubstancePolymer.monomerSet.startingMaterial.isDefining",                                    // MakerGen.cs:231
+                                        Id = "SubstancePolymer.monomerSet.startingMaterial.isDefining",                                     // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Primitive.Boolean                                                     // MakerGen.cs:295
+                                            {                                                                                               // MakerGen.cs:296
+                                            }                                                                                               // MakerGen.cs:299
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:226
                                     // 11. SubstancePolymer.monomerSet.startingMaterial.amount
-                                    this.Amount = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "Amount",                                                                                    // MakerGen.cs:235
-                                        Path= "SubstancePolymer.monomerSet.startingMaterial.amount",                                        // MakerGen.cs:236
-                                        Id = "SubstancePolymer.monomerSet.startingMaterial.amount",                                         // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Complex.SubstanceAmount                                               // MakerGen.cs:358
-                                            {                                                                                               // MakerGen.cs:359
-                                            }                                                                                               // MakerGen.cs:360
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                            }                                                                                                               // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:398
-                            {                                                                                                               // MakerGen.cs:399
-                                base.Write(sDef);                                                                                           // MakerGen.cs:400
-                                Material.Write(sDef);                                                                                       // MakerGen.cs:220
-                                Type.Write(sDef);                                                                                           // MakerGen.cs:220
-                                IsDefining.Write(sDef);                                                                                     // MakerGen.cs:220
-                                Amount.Write(sDef);                                                                                         // MakerGen.cs:220
-                            }                                                                                                               // MakerGen.cs:402
-                        }                                                                                                                   // MakerGen.cs:404
-                        public Type_StartingMaterial_Elements Elements                                                                      // MakerGen.cs:406
-                        {                                                                                                                   // MakerGen.cs:407
-                            get                                                                                                             // MakerGen.cs:408
-                            {                                                                                                               // MakerGen.cs:409
-                                if (this.elements == null)                                                                                  // MakerGen.cs:410
-                                    this.elements = new Type_StartingMaterial_Elements();                                                   // MakerGen.cs:411
-                                return this.elements;                                                                                       // MakerGen.cs:412
-                            }                                                                                                               // MakerGen.cs:413
-                        }                                                                                                                   // MakerGen.cs:414
-                        Type_StartingMaterial_Elements elements;                                                                            // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                        public Type_StartingMaterial()                                                                                      // MakerGen.cs:418
-                        {                                                                                                                   // MakerGen.cs:419
-                        }                                                                                                                   // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:424
-                        {                                                                                                                   // MakerGen.cs:425
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:426
-                            {                                                                                                               // MakerGen.cs:427
-                                Path = "SubstancePolymer.monomerSet.startingMaterial",                                                      // MakerGen.cs:428
-                                ElementId = "SubstancePolymer.monomerSet.startingMaterial"                                                  // MakerGen.cs:429
-                            });                                                                                                             // MakerGen.cs:430
-                            if (this.elements != null)                                                                                      // MakerGen.cs:431
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:432
-                        }                                                                                                                   // MakerGen.cs:433
-                    }                                                                                                                       // MakerGen.cs:434
+                                    this.Amount = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "Amount",                                                                                    // MakerGen.cs:230
+                                        Path= "SubstancePolymer.monomerSet.startingMaterial.amount",                                        // MakerGen.cs:231
+                                        Id = "SubstancePolymer.monomerSet.startingMaterial.amount",                                         // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Complex.SubstanceAmount                                               // MakerGen.cs:353
+                                            {                                                                                               // MakerGen.cs:354
+                                            }                                                                                               // MakerGen.cs:355
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:393
+                            {                                                                                                               // MakerGen.cs:394
+                                base.Write(sDef);                                                                                           // MakerGen.cs:395
+                                Material.Write(sDef);                                                                                       // MakerGen.cs:215
+                                Type.Write(sDef);                                                                                           // MakerGen.cs:215
+                                IsDefining.Write(sDef);                                                                                     // MakerGen.cs:215
+                                Amount.Write(sDef);                                                                                         // MakerGen.cs:215
+                            }                                                                                                               // MakerGen.cs:397
+                        }                                                                                                                   // MakerGen.cs:399
+                        public Type_StartingMaterial_Elements Elements                                                                      // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:402
+                            get                                                                                                             // MakerGen.cs:403
+                            {                                                                                                               // MakerGen.cs:404
+                                if (this.elements == null)                                                                                  // MakerGen.cs:405
+                                    this.elements = new Type_StartingMaterial_Elements();                                                   // MakerGen.cs:406
+                                return this.elements;                                                                                       // MakerGen.cs:407
+                            }                                                                                                               // MakerGen.cs:408
+                        }                                                                                                                   // MakerGen.cs:409
+                        Type_StartingMaterial_Elements elements;                                                                            // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                        public Type_StartingMaterial()                                                                                      // MakerGen.cs:413
+                        {                                                                                                                   // MakerGen.cs:414
+                        }                                                                                                                   // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:419
+                        {                                                                                                                   // MakerGen.cs:420
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:421
+                            {                                                                                                               // MakerGen.cs:422
+                                Path = "SubstancePolymer.monomerSet.startingMaterial",                                                      // MakerGen.cs:423
+                                ElementId = "SubstancePolymer.monomerSet.startingMaterial"                                                  // MakerGen.cs:424
+                            });                                                                                                             // MakerGen.cs:425
+                            if (this.elements != null)                                                                                      // MakerGen.cs:426
+                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:427
+                        }                                                                                                                   // MakerGen.cs:428
+                    }                                                                                                                       // MakerGen.cs:429
                     // 6. SubstancePolymer.monomerSet.ratioType
-                    public ElementDefinitionInfo RatioType;                                                                                 // MakerGen.cs:216
+                    public ElementDefinitionInfo RatioType;                                                                                 // MakerGen.cs:211
                     // 7. SubstancePolymer.monomerSet.startingMaterial
-                    public ElementDefinitionInfo StartingMaterial;                                                                          // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_MonomerSet_Elements()                                                                                       // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo StartingMaterial;                                                                          // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_MonomerSet_Elements()                                                                                       // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 6. SubstancePolymer.monomerSet.ratioType
-                            this.RatioType = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "RatioType",                                                                                         // MakerGen.cs:235
-                                Path= "SubstancePolymer.monomerSet.ratioType",                                                              // MakerGen.cs:236
-                                Id = "SubstancePolymer.monomerSet.ratioType",                                                               // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.RatioType = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "RatioType",                                                                                         // MakerGen.cs:230
+                                Path= "SubstancePolymer.monomerSet.ratioType",                                                              // MakerGen.cs:231
+                                Id = "SubstancePolymer.monomerSet.ratioType",                                                               // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 7. SubstancePolymer.monomerSet.startingMaterial
-                            this.StartingMaterial = new ElementDefinitionInfo                                                               // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "StartingMaterial",                                                                                  // MakerGen.cs:235
-                                Path= "SubstancePolymer.monomerSet.startingMaterial",                                                       // MakerGen.cs:236
-                                Id = "SubstancePolymer.monomerSet.startingMaterial",                                                        // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new Type_StartingMaterial                                                                               // MakerGen.cs:259
-                                    {                                                                                                       // MakerGen.cs:260
-                                    }                                                                                                       // MakerGen.cs:261
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        RatioType.Write(sDef);                                                                                              // MakerGen.cs:220
-                        StartingMaterial.Write(sDef);                                                                                       // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_MonomerSet_Elements Elements                                                                                    // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_MonomerSet_Elements();                                                                 // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_MonomerSet_Elements elements;                                                                                          // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_MonomerSet()                                                                                                    // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "SubstancePolymer.monomerSet",                                                                               // MakerGen.cs:428
-                        ElementId = "SubstancePolymer.monomerSet"                                                                           // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.StartingMaterial = new ElementDefinitionInfo                                                               // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "StartingMaterial",                                                                                  // MakerGen.cs:230
+                                Path= "SubstancePolymer.monomerSet.startingMaterial",                                                       // MakerGen.cs:231
+                                Id = "SubstancePolymer.monomerSet.startingMaterial",                                                        // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new Type_StartingMaterial                                                                               // MakerGen.cs:254
+                                    {                                                                                                       // MakerGen.cs:255
+                                    }                                                                                                       // MakerGen.cs:256
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        RatioType.Write(sDef);                                                                                              // MakerGen.cs:215
+                        StartingMaterial.Write(sDef);                                                                                       // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_MonomerSet_Elements Elements                                                                                    // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_MonomerSet_Elements();                                                                 // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_MonomerSet_Elements elements;                                                                                          // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_MonomerSet()                                                                                                    // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "SubstancePolymer.monomerSet",                                                                               // MakerGen.cs:423
+                        ElementId = "SubstancePolymer.monomerSet"                                                                           // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 12. SubstancePolymer.repeat
-            public class Type_Repeat : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Repeat_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Repeat : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Repeat_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 16. SubstancePolymer.repeat.repeatUnit
-                    public class Type_RepeatUnit : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        public class Type_RepeatUnit_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                 // MakerGen.cs:386
-                        {                                                                                                                   // MakerGen.cs:387
+                    public class Type_RepeatUnit : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:379
+                    {                                                                                                                       // MakerGen.cs:380
+                        public class Type_RepeatUnit_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                 // MakerGen.cs:381
+                        {                                                                                                                   // MakerGen.cs:382
                             // 20. SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation
-                            public class Type_DegreeOfPolymerisation : FhirKhit.Maker.Common.Complex.ComplexBase                            // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                public class Type_DegreeOfPolymerisation_Elements : FhirKhit.Maker.Common.Resource.ElementsBase             // MakerGen.cs:386
-                                {                                                                                                           // MakerGen.cs:387
+                            public class Type_DegreeOfPolymerisation : FhirKhit.Maker.Common.Complex.ComplexBase                            // MakerGen.cs:379
+                            {                                                                                                               // MakerGen.cs:380
+                                public class Type_DegreeOfPolymerisation_Elements : FhirKhit.Maker.Common.Resource.ElementsBase             // MakerGen.cs:381
+                                {                                                                                                           // MakerGen.cs:382
                                     // 21. SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree
-                                    public ElementDefinitionInfo Degree;                                                                    // MakerGen.cs:216
+                                    public ElementDefinitionInfo Degree;                                                                    // MakerGen.cs:211
                                     // 22. SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.amount
-                                    public ElementDefinitionInfo Amount;                                                                    // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                                    public Type_DegreeOfPolymerisation_Elements()                                                           // MakerGen.cs:392
-                                    {                                                                                                       // MakerGen.cs:393
-                                        {                                                                                                   // MakerGen.cs:231
+                                    public ElementDefinitionInfo Amount;                                                                    // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                                    public Type_DegreeOfPolymerisation_Elements()                                                           // MakerGen.cs:387
+                                    {                                                                                                       // MakerGen.cs:388
+                                        {                                                                                                   // MakerGen.cs:226
                                             // 21. SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree
-                                            this.Degree = new ElementDefinitionInfo                                                         // MakerGen.cs:233
-                                            {                                                                                               // MakerGen.cs:234
-                                                Name = "Degree",                                                                            // MakerGen.cs:235
-                                                Path= "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree",                   // MakerGen.cs:236
-                                                Id = "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree",                    // MakerGen.cs:237
-                                                Min = 0,                                                                                    // MakerGen.cs:238
-                                                Max = 1,                                                                                    // MakerGen.cs:239
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:241
-                                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                       // MakerGen.cs:315
-                                                    {                                                                                       // MakerGen.cs:316
-                                                    }                                                                                       // MakerGen.cs:319
-                                                }                                                                                           // MakerGen.cs:243
-                                            };                                                                                              // MakerGen.cs:244
-                                        }                                                                                                   // MakerGen.cs:245
-                                        {                                                                                                   // MakerGen.cs:231
+                                            this.Degree = new ElementDefinitionInfo                                                         // MakerGen.cs:228
+                                            {                                                                                               // MakerGen.cs:229
+                                                Name = "Degree",                                                                            // MakerGen.cs:230
+                                                Path= "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree",                   // MakerGen.cs:231
+                                                Id = "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree",                    // MakerGen.cs:232
+                                                Min = 0,                                                                                    // MakerGen.cs:233
+                                                Max = 1,                                                                                    // MakerGen.cs:234
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
+                                                {                                                                                           // MakerGen.cs:236
+                                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                       // MakerGen.cs:310
+                                                    {                                                                                       // MakerGen.cs:311
+                                                    }                                                                                       // MakerGen.cs:314
+                                                }                                                                                           // MakerGen.cs:238
+                                            };                                                                                              // MakerGen.cs:239
+                                        }                                                                                                   // MakerGen.cs:240
+                                        {                                                                                                   // MakerGen.cs:226
                                             // 22. SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.amount
-                                            this.Amount = new ElementDefinitionInfo                                                         // MakerGen.cs:233
-                                            {                                                                                               // MakerGen.cs:234
-                                                Name = "Amount",                                                                            // MakerGen.cs:235
-                                                Path= "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.amount",                   // MakerGen.cs:236
-                                                Id = "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.amount",                    // MakerGen.cs:237
-                                                Min = 0,                                                                                    // MakerGen.cs:238
-                                                Max = 1,                                                                                    // MakerGen.cs:239
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:241
-                                                    new FhirKhit.Maker.Common.Complex.SubstanceAmount                                       // MakerGen.cs:358
-                                                    {                                                                                       // MakerGen.cs:359
-                                                    }                                                                                       // MakerGen.cs:360
-                                                }                                                                                           // MakerGen.cs:243
-                                            };                                                                                              // MakerGen.cs:244
-                                        }                                                                                                   // MakerGen.cs:245
-                                    }                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:398
-                                    {                                                                                                       // MakerGen.cs:399
-                                        base.Write(sDef);                                                                                   // MakerGen.cs:400
-                                        Degree.Write(sDef);                                                                                 // MakerGen.cs:220
-                                        Amount.Write(sDef);                                                                                 // MakerGen.cs:220
-                                    }                                                                                                       // MakerGen.cs:402
-                                }                                                                                                           // MakerGen.cs:404
-                                public Type_DegreeOfPolymerisation_Elements Elements                                                        // MakerGen.cs:406
-                                {                                                                                                           // MakerGen.cs:407
-                                    get                                                                                                     // MakerGen.cs:408
-                                    {                                                                                                       // MakerGen.cs:409
-                                        if (this.elements == null)                                                                          // MakerGen.cs:410
-                                            this.elements = new Type_DegreeOfPolymerisation_Elements();                                     // MakerGen.cs:411
-                                        return this.elements;                                                                               // MakerGen.cs:412
-                                    }                                                                                                       // MakerGen.cs:413
-                                }                                                                                                           // MakerGen.cs:414
-                                Type_DegreeOfPolymerisation_Elements elements;                                                              // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                                public Type_DegreeOfPolymerisation()                                                                        // MakerGen.cs:418
-                                {                                                                                                           // MakerGen.cs:419
-                                }                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:424
-                                {                                                                                                           // MakerGen.cs:425
-                                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                      // MakerGen.cs:426
-                                    {                                                                                                       // MakerGen.cs:427
-                                        Path = "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation",                                 // MakerGen.cs:428
-                                        ElementId = "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation"                             // MakerGen.cs:429
-                                    });                                                                                                     // MakerGen.cs:430
-                                    if (this.elements != null)                                                                              // MakerGen.cs:431
-                                        this.elements.Write(sDef);                                                                          // MakerGen.cs:432
-                                }                                                                                                           // MakerGen.cs:433
-                            }                                                                                                               // MakerGen.cs:434
+                                            this.Amount = new ElementDefinitionInfo                                                         // MakerGen.cs:228
+                                            {                                                                                               // MakerGen.cs:229
+                                                Name = "Amount",                                                                            // MakerGen.cs:230
+                                                Path= "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.amount",                   // MakerGen.cs:231
+                                                Id = "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.amount",                    // MakerGen.cs:232
+                                                Min = 0,                                                                                    // MakerGen.cs:233
+                                                Max = 1,                                                                                    // MakerGen.cs:234
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
+                                                {                                                                                           // MakerGen.cs:236
+                                                    new FhirKhit.Maker.Common.Complex.SubstanceAmount                                       // MakerGen.cs:353
+                                                    {                                                                                       // MakerGen.cs:354
+                                                    }                                                                                       // MakerGen.cs:355
+                                                }                                                                                           // MakerGen.cs:238
+                                            };                                                                                              // MakerGen.cs:239
+                                        }                                                                                                   // MakerGen.cs:240
+                                    }                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:393
+                                    {                                                                                                       // MakerGen.cs:394
+                                        base.Write(sDef);                                                                                   // MakerGen.cs:395
+                                        Degree.Write(sDef);                                                                                 // MakerGen.cs:215
+                                        Amount.Write(sDef);                                                                                 // MakerGen.cs:215
+                                    }                                                                                                       // MakerGen.cs:397
+                                }                                                                                                           // MakerGen.cs:399
+                                public Type_DegreeOfPolymerisation_Elements Elements                                                        // MakerGen.cs:401
+                                {                                                                                                           // MakerGen.cs:402
+                                    get                                                                                                     // MakerGen.cs:403
+                                    {                                                                                                       // MakerGen.cs:404
+                                        if (this.elements == null)                                                                          // MakerGen.cs:405
+                                            this.elements = new Type_DegreeOfPolymerisation_Elements();                                     // MakerGen.cs:406
+                                        return this.elements;                                                                               // MakerGen.cs:407
+                                    }                                                                                                       // MakerGen.cs:408
+                                }                                                                                                           // MakerGen.cs:409
+                                Type_DegreeOfPolymerisation_Elements elements;                                                              // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                                public Type_DegreeOfPolymerisation()                                                                        // MakerGen.cs:413
+                                {                                                                                                           // MakerGen.cs:414
+                                }                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:419
+                                {                                                                                                           // MakerGen.cs:420
+                                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                      // MakerGen.cs:421
+                                    {                                                                                                       // MakerGen.cs:422
+                                        Path = "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation",                                 // MakerGen.cs:423
+                                        ElementId = "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation"                             // MakerGen.cs:424
+                                    });                                                                                                     // MakerGen.cs:425
+                                    if (this.elements != null)                                                                              // MakerGen.cs:426
+                                        this.elements.Write(sDef);                                                                          // MakerGen.cs:427
+                                }                                                                                                           // MakerGen.cs:428
+                            }                                                                                                               // MakerGen.cs:429
                             // 23. SubstancePolymer.repeat.repeatUnit.structuralRepresentation
-                            public class Type_StructuralRepresentation : FhirKhit.Maker.Common.Complex.ComplexBase                          // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                public class Type_StructuralRepresentation_Elements : FhirKhit.Maker.Common.Resource.ElementsBase           // MakerGen.cs:386
-                                {                                                                                                           // MakerGen.cs:387
+                            public class Type_StructuralRepresentation : FhirKhit.Maker.Common.Complex.ComplexBase                          // MakerGen.cs:379
+                            {                                                                                                               // MakerGen.cs:380
+                                public class Type_StructuralRepresentation_Elements : FhirKhit.Maker.Common.Resource.ElementsBase           // MakerGen.cs:381
+                                {                                                                                                           // MakerGen.cs:382
                                     // 24. SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type
-                                    public ElementDefinitionInfo Type;                                                                      // MakerGen.cs:216
+                                    public ElementDefinitionInfo Type;                                                                      // MakerGen.cs:211
                                     // 25. SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation
-                                    public ElementDefinitionInfo Representation;                                                            // MakerGen.cs:216
+                                    public ElementDefinitionInfo Representation;                                                            // MakerGen.cs:211
                                     // 26. SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment
-                                    public ElementDefinitionInfo Attachment;                                                                // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                                    public Type_StructuralRepresentation_Elements()                                                         // MakerGen.cs:392
-                                    {                                                                                                       // MakerGen.cs:393
-                                        {                                                                                                   // MakerGen.cs:231
+                                    public ElementDefinitionInfo Attachment;                                                                // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                                    public Type_StructuralRepresentation_Elements()                                                         // MakerGen.cs:387
+                                    {                                                                                                       // MakerGen.cs:388
+                                        {                                                                                                   // MakerGen.cs:226
                                             // 24. SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type
-                                            this.Type = new ElementDefinitionInfo                                                           // MakerGen.cs:233
-                                            {                                                                                               // MakerGen.cs:234
-                                                Name = "Type",                                                                              // MakerGen.cs:235
-                                                Path= "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type",                   // MakerGen.cs:236
-                                                Id = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type",                    // MakerGen.cs:237
-                                                Min = 0,                                                                                    // MakerGen.cs:238
-                                                Max = 1,                                                                                    // MakerGen.cs:239
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:241
-                                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                       // MakerGen.cs:315
-                                                    {                                                                                       // MakerGen.cs:316
-                                                    }                                                                                       // MakerGen.cs:319
-                                                }                                                                                           // MakerGen.cs:243
-                                            };                                                                                              // MakerGen.cs:244
-                                        }                                                                                                   // MakerGen.cs:245
-                                        {                                                                                                   // MakerGen.cs:231
+                                            this.Type = new ElementDefinitionInfo                                                           // MakerGen.cs:228
+                                            {                                                                                               // MakerGen.cs:229
+                                                Name = "Type",                                                                              // MakerGen.cs:230
+                                                Path= "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type",                   // MakerGen.cs:231
+                                                Id = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type",                    // MakerGen.cs:232
+                                                Min = 0,                                                                                    // MakerGen.cs:233
+                                                Max = 1,                                                                                    // MakerGen.cs:234
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
+                                                {                                                                                           // MakerGen.cs:236
+                                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                       // MakerGen.cs:310
+                                                    {                                                                                       // MakerGen.cs:311
+                                                    }                                                                                       // MakerGen.cs:314
+                                                }                                                                                           // MakerGen.cs:238
+                                            };                                                                                              // MakerGen.cs:239
+                                        }                                                                                                   // MakerGen.cs:240
+                                        {                                                                                                   // MakerGen.cs:226
                                             // 25. SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation
-                                            this.Representation = new ElementDefinitionInfo                                                 // MakerGen.cs:233
-                                            {                                                                                               // MakerGen.cs:234
-                                                Name = "Representation",                                                                    // MakerGen.cs:235
-                                                Path= "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation",         // MakerGen.cs:236
-                                                Id = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation",          // MakerGen.cs:237
-                                                Min = 0,                                                                                    // MakerGen.cs:238
-                                                Max = 1,                                                                                    // MakerGen.cs:239
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:241
-                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:300
-                                                    {                                                                                       // MakerGen.cs:301
-                                                    }                                                                                       // MakerGen.cs:304
-                                                }                                                                                           // MakerGen.cs:243
-                                            };                                                                                              // MakerGen.cs:244
-                                        }                                                                                                   // MakerGen.cs:245
-                                        {                                                                                                   // MakerGen.cs:231
+                                            this.Representation = new ElementDefinitionInfo                                                 // MakerGen.cs:228
+                                            {                                                                                               // MakerGen.cs:229
+                                                Name = "Representation",                                                                    // MakerGen.cs:230
+                                                Path= "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation",         // MakerGen.cs:231
+                                                Id = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation",          // MakerGen.cs:232
+                                                Min = 0,                                                                                    // MakerGen.cs:233
+                                                Max = 1,                                                                                    // MakerGen.cs:234
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
+                                                {                                                                                           // MakerGen.cs:236
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:295
+                                                    {                                                                                       // MakerGen.cs:296
+                                                    }                                                                                       // MakerGen.cs:299
+                                                }                                                                                           // MakerGen.cs:238
+                                            };                                                                                              // MakerGen.cs:239
+                                        }                                                                                                   // MakerGen.cs:240
+                                        {                                                                                                   // MakerGen.cs:226
                                             // 26. SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment
-                                            this.Attachment = new ElementDefinitionInfo                                                     // MakerGen.cs:233
-                                            {                                                                                               // MakerGen.cs:234
-                                                Name = "Attachment",                                                                        // MakerGen.cs:235
-                                                Path= "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment",             // MakerGen.cs:236
-                                                Id = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment",              // MakerGen.cs:237
-                                                Min = 0,                                                                                    // MakerGen.cs:238
-                                                Max = 1,                                                                                    // MakerGen.cs:239
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:241
-                                                    new FhirKhit.Maker.Common.Complex.Attachment                                            // MakerGen.cs:358
-                                                    {                                                                                       // MakerGen.cs:359
-                                                    }                                                                                       // MakerGen.cs:360
-                                                }                                                                                           // MakerGen.cs:243
-                                            };                                                                                              // MakerGen.cs:244
-                                        }                                                                                                   // MakerGen.cs:245
-                                    }                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:398
-                                    {                                                                                                       // MakerGen.cs:399
-                                        base.Write(sDef);                                                                                   // MakerGen.cs:400
-                                        Type.Write(sDef);                                                                                   // MakerGen.cs:220
-                                        Representation.Write(sDef);                                                                         // MakerGen.cs:220
-                                        Attachment.Write(sDef);                                                                             // MakerGen.cs:220
-                                    }                                                                                                       // MakerGen.cs:402
-                                }                                                                                                           // MakerGen.cs:404
-                                public Type_StructuralRepresentation_Elements Elements                                                      // MakerGen.cs:406
-                                {                                                                                                           // MakerGen.cs:407
-                                    get                                                                                                     // MakerGen.cs:408
-                                    {                                                                                                       // MakerGen.cs:409
-                                        if (this.elements == null)                                                                          // MakerGen.cs:410
-                                            this.elements = new Type_StructuralRepresentation_Elements();                                   // MakerGen.cs:411
-                                        return this.elements;                                                                               // MakerGen.cs:412
-                                    }                                                                                                       // MakerGen.cs:413
-                                }                                                                                                           // MakerGen.cs:414
-                                Type_StructuralRepresentation_Elements elements;                                                            // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                                public Type_StructuralRepresentation()                                                                      // MakerGen.cs:418
-                                {                                                                                                           // MakerGen.cs:419
-                                }                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:424
-                                {                                                                                                           // MakerGen.cs:425
-                                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                      // MakerGen.cs:426
-                                    {                                                                                                       // MakerGen.cs:427
-                                        Path = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation",                               // MakerGen.cs:428
-                                        ElementId = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation"                           // MakerGen.cs:429
-                                    });                                                                                                     // MakerGen.cs:430
-                                    if (this.elements != null)                                                                              // MakerGen.cs:431
-                                        this.elements.Write(sDef);                                                                          // MakerGen.cs:432
-                                }                                                                                                           // MakerGen.cs:433
-                            }                                                                                                               // MakerGen.cs:434
+                                            this.Attachment = new ElementDefinitionInfo                                                     // MakerGen.cs:228
+                                            {                                                                                               // MakerGen.cs:229
+                                                Name = "Attachment",                                                                        // MakerGen.cs:230
+                                                Path= "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment",             // MakerGen.cs:231
+                                                Id = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment",              // MakerGen.cs:232
+                                                Min = 0,                                                                                    // MakerGen.cs:233
+                                                Max = 1,                                                                                    // MakerGen.cs:234
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
+                                                {                                                                                           // MakerGen.cs:236
+                                                    new FhirKhit.Maker.Common.Complex.Attachment                                            // MakerGen.cs:353
+                                                    {                                                                                       // MakerGen.cs:354
+                                                    }                                                                                       // MakerGen.cs:355
+                                                }                                                                                           // MakerGen.cs:238
+                                            };                                                                                              // MakerGen.cs:239
+                                        }                                                                                                   // MakerGen.cs:240
+                                    }                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:393
+                                    {                                                                                                       // MakerGen.cs:394
+                                        base.Write(sDef);                                                                                   // MakerGen.cs:395
+                                        Type.Write(sDef);                                                                                   // MakerGen.cs:215
+                                        Representation.Write(sDef);                                                                         // MakerGen.cs:215
+                                        Attachment.Write(sDef);                                                                             // MakerGen.cs:215
+                                    }                                                                                                       // MakerGen.cs:397
+                                }                                                                                                           // MakerGen.cs:399
+                                public Type_StructuralRepresentation_Elements Elements                                                      // MakerGen.cs:401
+                                {                                                                                                           // MakerGen.cs:402
+                                    get                                                                                                     // MakerGen.cs:403
+                                    {                                                                                                       // MakerGen.cs:404
+                                        if (this.elements == null)                                                                          // MakerGen.cs:405
+                                            this.elements = new Type_StructuralRepresentation_Elements();                                   // MakerGen.cs:406
+                                        return this.elements;                                                                               // MakerGen.cs:407
+                                    }                                                                                                       // MakerGen.cs:408
+                                }                                                                                                           // MakerGen.cs:409
+                                Type_StructuralRepresentation_Elements elements;                                                            // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                                public Type_StructuralRepresentation()                                                                      // MakerGen.cs:413
+                                {                                                                                                           // MakerGen.cs:414
+                                }                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:419
+                                {                                                                                                           // MakerGen.cs:420
+                                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                      // MakerGen.cs:421
+                                    {                                                                                                       // MakerGen.cs:422
+                                        Path = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation",                               // MakerGen.cs:423
+                                        ElementId = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation"                           // MakerGen.cs:424
+                                    });                                                                                                     // MakerGen.cs:425
+                                    if (this.elements != null)                                                                              // MakerGen.cs:426
+                                        this.elements.Write(sDef);                                                                          // MakerGen.cs:427
+                                }                                                                                                           // MakerGen.cs:428
+                            }                                                                                                               // MakerGen.cs:429
                             // 17. SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation
-                            public ElementDefinitionInfo OrientationOfPolymerisation;                                                       // MakerGen.cs:216
+                            public ElementDefinitionInfo OrientationOfPolymerisation;                                                       // MakerGen.cs:211
                             // 18. SubstancePolymer.repeat.repeatUnit.repeatUnit
-                            public ElementDefinitionInfo RepeatUnit;                                                                        // MakerGen.cs:216
+                            public ElementDefinitionInfo RepeatUnit;                                                                        // MakerGen.cs:211
                             // 19. SubstancePolymer.repeat.repeatUnit.amount
-                            public ElementDefinitionInfo Amount;                                                                            // MakerGen.cs:216
+                            public ElementDefinitionInfo Amount;                                                                            // MakerGen.cs:211
                             // 20. SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation
-                            public ElementDefinitionInfo DegreeOfPolymerisation;                                                            // MakerGen.cs:216
+                            public ElementDefinitionInfo DegreeOfPolymerisation;                                                            // MakerGen.cs:211
                             // 23. SubstancePolymer.repeat.repeatUnit.structuralRepresentation
-                            public ElementDefinitionInfo StructuralRepresentation;                                                          // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                            public Type_RepeatUnit_Elements()                                                                               // MakerGen.cs:392
-                            {                                                                                                               // MakerGen.cs:393
-                                {                                                                                                           // MakerGen.cs:231
+                            public ElementDefinitionInfo StructuralRepresentation;                                                          // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                            public Type_RepeatUnit_Elements()                                                                               // MakerGen.cs:387
+                            {                                                                                                               // MakerGen.cs:388
+                                {                                                                                                           // MakerGen.cs:226
                                     // 17. SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation
-                                    this.OrientationOfPolymerisation = new ElementDefinitionInfo                                            // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "OrientationOfPolymerisation",                                                               // MakerGen.cs:235
-                                        Path= "SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation",                             // MakerGen.cs:236
-                                        Id = "SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation",                              // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:315
-                                            {                                                                                               // MakerGen.cs:316
-                                            }                                                                                               // MakerGen.cs:319
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:231
+                                    this.OrientationOfPolymerisation = new ElementDefinitionInfo                                            // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "OrientationOfPolymerisation",                                                               // MakerGen.cs:230
+                                        Path= "SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation",                             // MakerGen.cs:231
+                                        Id = "SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation",                              // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:310
+                                            {                                                                                               // MakerGen.cs:311
+                                            }                                                                                               // MakerGen.cs:314
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:226
                                     // 18. SubstancePolymer.repeat.repeatUnit.repeatUnit
-                                    this.RepeatUnit = new ElementDefinitionInfo                                                             // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "RepeatUnit",                                                                                // MakerGen.cs:235
-                                        Path= "SubstancePolymer.repeat.repeatUnit.repeatUnit",                                              // MakerGen.cs:236
-                                        Id = "SubstancePolymer.repeat.repeatUnit.repeatUnit",                                               // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:300
-                                            {                                                                                               // MakerGen.cs:301
-                                            }                                                                                               // MakerGen.cs:304
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:231
+                                    this.RepeatUnit = new ElementDefinitionInfo                                                             // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "RepeatUnit",                                                                                // MakerGen.cs:230
+                                        Path= "SubstancePolymer.repeat.repeatUnit.repeatUnit",                                              // MakerGen.cs:231
+                                        Id = "SubstancePolymer.repeat.repeatUnit.repeatUnit",                                               // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:295
+                                            {                                                                                               // MakerGen.cs:296
+                                            }                                                                                               // MakerGen.cs:299
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:226
                                     // 19. SubstancePolymer.repeat.repeatUnit.amount
-                                    this.Amount = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "Amount",                                                                                    // MakerGen.cs:235
-                                        Path= "SubstancePolymer.repeat.repeatUnit.amount",                                                  // MakerGen.cs:236
-                                        Id = "SubstancePolymer.repeat.repeatUnit.amount",                                                   // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = 1,                                                                                            // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new FhirKhit.Maker.Common.Complex.SubstanceAmount                                               // MakerGen.cs:358
-                                            {                                                                                               // MakerGen.cs:359
-                                            }                                                                                               // MakerGen.cs:360
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:231
+                                    this.Amount = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "Amount",                                                                                    // MakerGen.cs:230
+                                        Path= "SubstancePolymer.repeat.repeatUnit.amount",                                                  // MakerGen.cs:231
+                                        Id = "SubstancePolymer.repeat.repeatUnit.amount",                                                   // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = 1,                                                                                            // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new FhirKhit.Maker.Common.Complex.SubstanceAmount                                               // MakerGen.cs:353
+                                            {                                                                                               // MakerGen.cs:354
+                                            }                                                                                               // MakerGen.cs:355
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:226
                                     // 20. SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation
-                                    this.DegreeOfPolymerisation = new ElementDefinitionInfo                                                 // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "DegreeOfPolymerisation",                                                                    // MakerGen.cs:235
-                                        Path= "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation",                                  // MakerGen.cs:236
-                                        Id = "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation",                                   // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = -1,                                                                                           // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new Type_DegreeOfPolymerisation                                                                 // MakerGen.cs:259
-                                            {                                                                                               // MakerGen.cs:260
-                                            }                                                                                               // MakerGen.cs:261
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:231
+                                    this.DegreeOfPolymerisation = new ElementDefinitionInfo                                                 // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "DegreeOfPolymerisation",                                                                    // MakerGen.cs:230
+                                        Path= "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation",                                  // MakerGen.cs:231
+                                        Id = "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation",                                   // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = -1,                                                                                           // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new Type_DegreeOfPolymerisation                                                                 // MakerGen.cs:254
+                                            {                                                                                               // MakerGen.cs:255
+                                            }                                                                                               // MakerGen.cs:256
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:226
                                     // 23. SubstancePolymer.repeat.repeatUnit.structuralRepresentation
-                                    this.StructuralRepresentation = new ElementDefinitionInfo                                               // MakerGen.cs:233
-                                    {                                                                                                       // MakerGen.cs:234
-                                        Name = "StructuralRepresentation",                                                                  // MakerGen.cs:235
-                                        Path= "SubstancePolymer.repeat.repeatUnit.structuralRepresentation",                                // MakerGen.cs:236
-                                        Id = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation",                                 // MakerGen.cs:237
-                                        Min = 0,                                                                                            // MakerGen.cs:238
-                                        Max = -1,                                                                                           // MakerGen.cs:239
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:241
-                                            new Type_StructuralRepresentation                                                               // MakerGen.cs:259
-                                            {                                                                                               // MakerGen.cs:260
-                                            }                                                                                               // MakerGen.cs:261
-                                        }                                                                                                   // MakerGen.cs:243
-                                    };                                                                                                      // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:245
-                            }                                                                                                               // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:398
-                            {                                                                                                               // MakerGen.cs:399
-                                base.Write(sDef);                                                                                           // MakerGen.cs:400
-                                OrientationOfPolymerisation.Write(sDef);                                                                    // MakerGen.cs:220
-                                RepeatUnit.Write(sDef);                                                                                     // MakerGen.cs:220
-                                Amount.Write(sDef);                                                                                         // MakerGen.cs:220
-                                DegreeOfPolymerisation.Write(sDef);                                                                         // MakerGen.cs:220
-                                StructuralRepresentation.Write(sDef);                                                                       // MakerGen.cs:220
-                            }                                                                                                               // MakerGen.cs:402
-                        }                                                                                                                   // MakerGen.cs:404
-                        public Type_RepeatUnit_Elements Elements                                                                            // MakerGen.cs:406
-                        {                                                                                                                   // MakerGen.cs:407
-                            get                                                                                                             // MakerGen.cs:408
-                            {                                                                                                               // MakerGen.cs:409
-                                if (this.elements == null)                                                                                  // MakerGen.cs:410
-                                    this.elements = new Type_RepeatUnit_Elements();                                                         // MakerGen.cs:411
-                                return this.elements;                                                                                       // MakerGen.cs:412
-                            }                                                                                                               // MakerGen.cs:413
-                        }                                                                                                                   // MakerGen.cs:414
-                        Type_RepeatUnit_Elements elements;                                                                                  // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                        public Type_RepeatUnit()                                                                                            // MakerGen.cs:418
-                        {                                                                                                                   // MakerGen.cs:419
-                        }                                                                                                                   // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:424
-                        {                                                                                                                   // MakerGen.cs:425
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:426
-                            {                                                                                                               // MakerGen.cs:427
-                                Path = "SubstancePolymer.repeat.repeatUnit",                                                                // MakerGen.cs:428
-                                ElementId = "SubstancePolymer.repeat.repeatUnit"                                                            // MakerGen.cs:429
-                            });                                                                                                             // MakerGen.cs:430
-                            if (this.elements != null)                                                                                      // MakerGen.cs:431
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:432
-                        }                                                                                                                   // MakerGen.cs:433
-                    }                                                                                                                       // MakerGen.cs:434
+                                    this.StructuralRepresentation = new ElementDefinitionInfo                                               // MakerGen.cs:228
+                                    {                                                                                                       // MakerGen.cs:229
+                                        Name = "StructuralRepresentation",                                                                  // MakerGen.cs:230
+                                        Path= "SubstancePolymer.repeat.repeatUnit.structuralRepresentation",                                // MakerGen.cs:231
+                                        Id = "SubstancePolymer.repeat.repeatUnit.structuralRepresentation",                                 // MakerGen.cs:232
+                                        Min = 0,                                                                                            // MakerGen.cs:233
+                                        Max = -1,                                                                                           // MakerGen.cs:234
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
+                                        {                                                                                                   // MakerGen.cs:236
+                                            new Type_StructuralRepresentation                                                               // MakerGen.cs:254
+                                            {                                                                                               // MakerGen.cs:255
+                                            }                                                                                               // MakerGen.cs:256
+                                        }                                                                                                   // MakerGen.cs:238
+                                    };                                                                                                      // MakerGen.cs:239
+                                }                                                                                                           // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:393
+                            {                                                                                                               // MakerGen.cs:394
+                                base.Write(sDef);                                                                                           // MakerGen.cs:395
+                                OrientationOfPolymerisation.Write(sDef);                                                                    // MakerGen.cs:215
+                                RepeatUnit.Write(sDef);                                                                                     // MakerGen.cs:215
+                                Amount.Write(sDef);                                                                                         // MakerGen.cs:215
+                                DegreeOfPolymerisation.Write(sDef);                                                                         // MakerGen.cs:215
+                                StructuralRepresentation.Write(sDef);                                                                       // MakerGen.cs:215
+                            }                                                                                                               // MakerGen.cs:397
+                        }                                                                                                                   // MakerGen.cs:399
+                        public Type_RepeatUnit_Elements Elements                                                                            // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:402
+                            get                                                                                                             // MakerGen.cs:403
+                            {                                                                                                               // MakerGen.cs:404
+                                if (this.elements == null)                                                                                  // MakerGen.cs:405
+                                    this.elements = new Type_RepeatUnit_Elements();                                                         // MakerGen.cs:406
+                                return this.elements;                                                                                       // MakerGen.cs:407
+                            }                                                                                                               // MakerGen.cs:408
+                        }                                                                                                                   // MakerGen.cs:409
+                        Type_RepeatUnit_Elements elements;                                                                                  // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                        public Type_RepeatUnit()                                                                                            // MakerGen.cs:413
+                        {                                                                                                                   // MakerGen.cs:414
+                        }                                                                                                                   // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:419
+                        {                                                                                                                   // MakerGen.cs:420
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:421
+                            {                                                                                                               // MakerGen.cs:422
+                                Path = "SubstancePolymer.repeat.repeatUnit",                                                                // MakerGen.cs:423
+                                ElementId = "SubstancePolymer.repeat.repeatUnit"                                                            // MakerGen.cs:424
+                            });                                                                                                             // MakerGen.cs:425
+                            if (this.elements != null)                                                                                      // MakerGen.cs:426
+                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:427
+                        }                                                                                                                   // MakerGen.cs:428
+                    }                                                                                                                       // MakerGen.cs:429
                     // 13. SubstancePolymer.repeat.numberOfUnits
-                    public ElementDefinitionInfo NumberOfUnits;                                                                             // MakerGen.cs:216
+                    public ElementDefinitionInfo NumberOfUnits;                                                                             // MakerGen.cs:211
                     // 14. SubstancePolymer.repeat.averageMolecularFormula
-                    public ElementDefinitionInfo AverageMolecularFormula;                                                                   // MakerGen.cs:216
+                    public ElementDefinitionInfo AverageMolecularFormula;                                                                   // MakerGen.cs:211
                     // 15. SubstancePolymer.repeat.repeatUnitAmountType
-                    public ElementDefinitionInfo RepeatUnitAmountType;                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo RepeatUnitAmountType;                                                                      // MakerGen.cs:211
                     // 16. SubstancePolymer.repeat.repeatUnit
-                    public ElementDefinitionInfo RepeatUnit;                                                                                // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Repeat_Elements()                                                                                           // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo RepeatUnit;                                                                                // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Repeat_Elements()                                                                                           // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 13. SubstancePolymer.repeat.numberOfUnits
-                            this.NumberOfUnits = new ElementDefinitionInfo                                                                  // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "NumberOfUnits",                                                                                     // MakerGen.cs:235
-                                Path= "SubstancePolymer.repeat.numberOfUnits",                                                              // MakerGen.cs:236
-                                Id = "SubstancePolymer.repeat.numberOfUnits",                                                               // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Integer                                                             // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.NumberOfUnits = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "NumberOfUnits",                                                                                     // MakerGen.cs:230
+                                Path= "SubstancePolymer.repeat.numberOfUnits",                                                              // MakerGen.cs:231
+                                Id = "SubstancePolymer.repeat.numberOfUnits",                                                               // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Integer                                                             // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 14. SubstancePolymer.repeat.averageMolecularFormula
-                            this.AverageMolecularFormula = new ElementDefinitionInfo                                                        // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "AverageMolecularFormula",                                                                           // MakerGen.cs:235
-                                Path= "SubstancePolymer.repeat.averageMolecularFormula",                                                    // MakerGen.cs:236
-                                Id = "SubstancePolymer.repeat.averageMolecularFormula",                                                     // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.AverageMolecularFormula = new ElementDefinitionInfo                                                        // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "AverageMolecularFormula",                                                                           // MakerGen.cs:230
+                                Path= "SubstancePolymer.repeat.averageMolecularFormula",                                                    // MakerGen.cs:231
+                                Id = "SubstancePolymer.repeat.averageMolecularFormula",                                                     // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 15. SubstancePolymer.repeat.repeatUnitAmountType
-                            this.RepeatUnitAmountType = new ElementDefinitionInfo                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "RepeatUnitAmountType",                                                                              // MakerGen.cs:235
-                                Path= "SubstancePolymer.repeat.repeatUnitAmountType",                                                       // MakerGen.cs:236
-                                Id = "SubstancePolymer.repeat.repeatUnitAmountType",                                                        // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
-                                    {                                                                                                       // MakerGen.cs:316
-                                    }                                                                                                       // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.RepeatUnitAmountType = new ElementDefinitionInfo                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "RepeatUnitAmountType",                                                                              // MakerGen.cs:230
+                                Path= "SubstancePolymer.repeat.repeatUnitAmountType",                                                       // MakerGen.cs:231
+                                Id = "SubstancePolymer.repeat.repeatUnitAmountType",                                                        // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:310
+                                    {                                                                                                       // MakerGen.cs:311
+                                    }                                                                                                       // MakerGen.cs:314
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 16. SubstancePolymer.repeat.repeatUnit
-                            this.RepeatUnit = new ElementDefinitionInfo                                                                     // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "RepeatUnit",                                                                                        // MakerGen.cs:235
-                                Path= "SubstancePolymer.repeat.repeatUnit",                                                                 // MakerGen.cs:236
-                                Id = "SubstancePolymer.repeat.repeatUnit",                                                                  // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new Type_RepeatUnit                                                                                     // MakerGen.cs:259
-                                    {                                                                                                       // MakerGen.cs:260
-                                    }                                                                                                       // MakerGen.cs:261
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        NumberOfUnits.Write(sDef);                                                                                          // MakerGen.cs:220
-                        AverageMolecularFormula.Write(sDef);                                                                                // MakerGen.cs:220
-                        RepeatUnitAmountType.Write(sDef);                                                                                   // MakerGen.cs:220
-                        RepeatUnit.Write(sDef);                                                                                             // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Repeat_Elements Elements                                                                                        // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Repeat_Elements();                                                                     // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Repeat_Elements elements;                                                                                              // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Repeat()                                                                                                        // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "SubstancePolymer.repeat",                                                                                   // MakerGen.cs:428
-                        ElementId = "SubstancePolymer.repeat"                                                                               // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.RepeatUnit = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "RepeatUnit",                                                                                        // MakerGen.cs:230
+                                Path= "SubstancePolymer.repeat.repeatUnit",                                                                 // MakerGen.cs:231
+                                Id = "SubstancePolymer.repeat.repeatUnit",                                                                  // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new Type_RepeatUnit                                                                                     // MakerGen.cs:254
+                                    {                                                                                                       // MakerGen.cs:255
+                                    }                                                                                                       // MakerGen.cs:256
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        NumberOfUnits.Write(sDef);                                                                                          // MakerGen.cs:215
+                        AverageMolecularFormula.Write(sDef);                                                                                // MakerGen.cs:215
+                        RepeatUnitAmountType.Write(sDef);                                                                                   // MakerGen.cs:215
+                        RepeatUnit.Write(sDef);                                                                                             // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Repeat_Elements Elements                                                                                        // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Repeat_Elements();                                                                     // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Repeat_Elements elements;                                                                                              // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Repeat()                                                                                                        // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "SubstancePolymer.repeat",                                                                                   // MakerGen.cs:423
+                        ElementId = "SubstancePolymer.repeat"                                                                               // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 1. SubstancePolymer.class
-            public ElementDefinitionInfo Class;                                                                                             // MakerGen.cs:216
+            public ElementDefinitionInfo Class;                                                                                             // MakerGen.cs:211
             // 2. SubstancePolymer.geometry
-            public ElementDefinitionInfo Geometry;                                                                                          // MakerGen.cs:216
+            public ElementDefinitionInfo Geometry;                                                                                          // MakerGen.cs:211
             // 3. SubstancePolymer.copolymerConnectivity
-            public ElementDefinitionInfo CopolymerConnectivity;                                                                             // MakerGen.cs:216
+            public ElementDefinitionInfo CopolymerConnectivity;                                                                             // MakerGen.cs:211
             // 4. SubstancePolymer.modification
-            public ElementDefinitionInfo Modification;                                                                                      // MakerGen.cs:216
+            public ElementDefinitionInfo Modification;                                                                                      // MakerGen.cs:211
             // 5. SubstancePolymer.monomerSet
-            public ElementDefinitionInfo MonomerSet;                                                                                        // MakerGen.cs:216
+            public ElementDefinitionInfo MonomerSet;                                                                                        // MakerGen.cs:211
             // 12. SubstancePolymer.repeat
-            public ElementDefinitionInfo Repeat;                                                                                            // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-            public SubstancePolymer_Elements()                                                                                              // MakerGen.cs:392
-            {                                                                                                                               // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:231
+            public ElementDefinitionInfo Repeat;                                                                                            // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+            public SubstancePolymer_Elements()                                                                                              // MakerGen.cs:387
+            {                                                                                                                               // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:226
                     // 1. SubstancePolymer.class
-                    this.Class = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Class",                                                                                                     // MakerGen.cs:235
-                        Path= "SubstancePolymer.class",                                                                                     // MakerGen.cs:236
-                        Id = "SubstancePolymer.class",                                                                                      // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Class = new ElementDefinitionInfo                                                                                  // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Class",                                                                                                     // MakerGen.cs:230
+                        Path= "SubstancePolymer.class",                                                                                     // MakerGen.cs:231
+                        Id = "SubstancePolymer.class",                                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 2. SubstancePolymer.geometry
-                    this.Geometry = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Geometry",                                                                                                  // MakerGen.cs:235
-                        Path= "SubstancePolymer.geometry",                                                                                  // MakerGen.cs:236
-                        Id = "SubstancePolymer.geometry",                                                                                   // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Geometry = new ElementDefinitionInfo                                                                               // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Geometry",                                                                                                  // MakerGen.cs:230
+                        Path= "SubstancePolymer.geometry",                                                                                  // MakerGen.cs:231
+                        Id = "SubstancePolymer.geometry",                                                                                   // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 3. SubstancePolymer.copolymerConnectivity
-                    this.CopolymerConnectivity = new ElementDefinitionInfo                                                                  // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "CopolymerConnectivity",                                                                                     // MakerGen.cs:235
-                        Path= "SubstancePolymer.copolymerConnectivity",                                                                     // MakerGen.cs:236
-                        Id = "SubstancePolymer.copolymerConnectivity",                                                                      // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.CopolymerConnectivity = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "CopolymerConnectivity",                                                                                     // MakerGen.cs:230
+                        Path= "SubstancePolymer.copolymerConnectivity",                                                                     // MakerGen.cs:231
+                        Id = "SubstancePolymer.copolymerConnectivity",                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 4. SubstancePolymer.modification
-                    this.Modification = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Modification",                                                                                              // MakerGen.cs:235
-                        Path= "SubstancePolymer.modification",                                                                              // MakerGen.cs:236
-                        Id = "SubstancePolymer.modification",                                                                               // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Modification = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Modification",                                                                                              // MakerGen.cs:230
+                        Path= "SubstancePolymer.modification",                                                                              // MakerGen.cs:231
+                        Id = "SubstancePolymer.modification",                                                                               // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 5. SubstancePolymer.monomerSet
-                    this.MonomerSet = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "MonomerSet",                                                                                                // MakerGen.cs:235
-                        Path= "SubstancePolymer.monomerSet",                                                                                // MakerGen.cs:236
-                        Id = "SubstancePolymer.monomerSet",                                                                                 // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_MonomerSet                                                                                             // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.MonomerSet = new ElementDefinitionInfo                                                                             // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "MonomerSet",                                                                                                // MakerGen.cs:230
+                        Path= "SubstancePolymer.monomerSet",                                                                                // MakerGen.cs:231
+                        Id = "SubstancePolymer.monomerSet",                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_MonomerSet                                                                                             // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 12. SubstancePolymer.repeat
-                    this.Repeat = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Repeat",                                                                                                    // MakerGen.cs:235
-                        Path= "SubstancePolymer.repeat",                                                                                    // MakerGen.cs:236
-                        Id = "SubstancePolymer.repeat",                                                                                     // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Repeat                                                                                                 // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
-            {                                                                                                                               // MakerGen.cs:399
-                base.Write(sDef);                                                                                                           // MakerGen.cs:400
-                Class.Write(sDef);                                                                                                          // MakerGen.cs:220
-                Geometry.Write(sDef);                                                                                                       // MakerGen.cs:220
-                CopolymerConnectivity.Write(sDef);                                                                                          // MakerGen.cs:220
-                Modification.Write(sDef);                                                                                                   // MakerGen.cs:220
-                MonomerSet.Write(sDef);                                                                                                     // MakerGen.cs:220
-                Repeat.Write(sDef);                                                                                                         // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:402
-        }                                                                                                                                   // MakerGen.cs:404
-        public SubstancePolymer_Elements Elements                                                                                           // MakerGen.cs:406
-        {                                                                                                                                   // MakerGen.cs:407
-            get                                                                                                                             // MakerGen.cs:408
-            {                                                                                                                               // MakerGen.cs:409
-                if (this.elements == null)                                                                                                  // MakerGen.cs:410
-                    this.elements = new SubstancePolymer_Elements();                                                                        // MakerGen.cs:411
-                return this.elements;                                                                                                       // MakerGen.cs:412
-            }                                                                                                                               // MakerGen.cs:413
-        }                                                                                                                                   // MakerGen.cs:414
-        SubstancePolymer_Elements elements;                                                                                                 // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-        public SubstancePolymer()                                                                                                           // MakerGen.cs:418
-        {                                                                                                                                   // MakerGen.cs:419
-            this.Name = "SubstancePolymer";                                                                                                 // MakerGen.cs:492
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/SubstancePolymer";                                                          // MakerGen.cs:493
-        }                                                                                                                                   // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
-        {                                                                                                                                   // MakerGen.cs:425
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
-            {                                                                                                                               // MakerGen.cs:427
-                Path = "SubstancePolymer",                                                                                                  // MakerGen.cs:428
-                ElementId = "SubstancePolymer"                                                                                              // MakerGen.cs:429
-            });                                                                                                                             // MakerGen.cs:430
-            if (this.elements != null)                                                                                                      // MakerGen.cs:431
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
-        }                                                                                                                                   // MakerGen.cs:433
-    }                                                                                                                                       // MakerGen.cs:434
-}                                                                                                                                           // MakerGen.cs:479
+                    this.Repeat = new ElementDefinitionInfo                                                                                 // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Repeat",                                                                                                    // MakerGen.cs:230
+                        Path= "SubstancePolymer.repeat",                                                                                    // MakerGen.cs:231
+                        Id = "SubstancePolymer.repeat",                                                                                     // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Repeat                                                                                                 // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                base.Write(sDef);                                                                                                           // MakerGen.cs:395
+                Class.Write(sDef);                                                                                                          // MakerGen.cs:215
+                Geometry.Write(sDef);                                                                                                       // MakerGen.cs:215
+                CopolymerConnectivity.Write(sDef);                                                                                          // MakerGen.cs:215
+                Modification.Write(sDef);                                                                                                   // MakerGen.cs:215
+                MonomerSet.Write(sDef);                                                                                                     // MakerGen.cs:215
+                Repeat.Write(sDef);                                                                                                         // MakerGen.cs:215
+            }                                                                                                                               // MakerGen.cs:397
+        }                                                                                                                                   // MakerGen.cs:399
+        public SubstancePolymer_Elements Elements                                                                                           // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            get                                                                                                                             // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:404
+                if (this.elements == null)                                                                                                  // MakerGen.cs:405
+                    this.elements = new SubstancePolymer_Elements();                                                                        // MakerGen.cs:406
+                return this.elements;                                                                                                       // MakerGen.cs:407
+            }                                                                                                                               // MakerGen.cs:408
+        }                                                                                                                                   // MakerGen.cs:409
+        SubstancePolymer_Elements elements;                                                                                                 // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+        public SubstancePolymer()                                                                                                           // MakerGen.cs:413
+        {                                                                                                                                   // MakerGen.cs:414
+            this.Name = "SubstancePolymer";                                                                                                 // MakerGen.cs:487
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/SubstancePolymer";                                                          // MakerGen.cs:488
+        }                                                                                                                                   // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:419
+        {                                                                                                                                   // MakerGen.cs:420
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:421
+            {                                                                                                                               // MakerGen.cs:422
+                Path = "SubstancePolymer",                                                                                                  // MakerGen.cs:423
+                ElementId = "SubstancePolymer"                                                                                              // MakerGen.cs:424
+            });                                                                                                                             // MakerGen.cs:425
+            if (this.elements != null)                                                                                                      // MakerGen.cs:426
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:427
+        }                                                                                                                                   // MakerGen.cs:428
+    }                                                                                                                                       // MakerGen.cs:429
+}                                                                                                                                           // MakerGen.cs:474

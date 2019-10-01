@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:516
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:517
-using System.IO;                                                                                                                            // MakerGen.cs:518
-using System.Linq;                                                                                                                          // MakerGen.cs:519
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:520
-                                                                                                                                            // MakerGen.cs:521
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:522
-{                                                                                                                                           // MakerGen.cs:523
-    #region Json                                                                                                                            // MakerGen.cs:524
+using System;                                                                                                                               // MakerGen.cs:511
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:512
+using System.IO;                                                                                                                            // MakerGen.cs:513
+using System.Linq;                                                                                                                          // MakerGen.cs:514
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:515
+                                                                                                                                            // MakerGen.cs:516
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:517
+{                                                                                                                                           // MakerGen.cs:518
+    #region Json                                                                                                                            // MakerGen.cs:519
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -365,456 +365,456 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:528
+    #endregion                                                                                                                              // MakerGen.cs:523
     /// <summary>
     /// Fhir complex 'Timing'
     /// </summary>
     // 0. Timing
-    public class Timing : FhirKhit.Maker.Common.Complex.ComplexBase                                                                         // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
-        public class Timing_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                          // MakerGen.cs:386
-        {                                                                                                                                   // MakerGen.cs:387
+    public class Timing : FhirKhit.Maker.Common.Complex.ComplexBase                                                                         // MakerGen.cs:379
+    {                                                                                                                                       // MakerGen.cs:380
+        public class Timing_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                          // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 2. Timing.repeat
-            public class Type_Repeat : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                public class Type_Repeat_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
+            public class Type_Repeat : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:379
+            {                                                                                                                               // MakerGen.cs:380
+                public class Type_Repeat_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 3. Timing.repeat.bounds[x]
-                    public ElementDefinitionInfo Bounds;                                                                                    // MakerGen.cs:216
+                    public ElementDefinitionInfo Bounds;                                                                                    // MakerGen.cs:211
                     // 4. Timing.repeat.count
-                    public ElementDefinitionInfo Count;                                                                                     // MakerGen.cs:216
+                    public ElementDefinitionInfo Count;                                                                                     // MakerGen.cs:211
                     // 5. Timing.repeat.countMax
-                    public ElementDefinitionInfo CountMax;                                                                                  // MakerGen.cs:216
+                    public ElementDefinitionInfo CountMax;                                                                                  // MakerGen.cs:211
                     // 6. Timing.repeat.duration
-                    public ElementDefinitionInfo Duration;                                                                                  // MakerGen.cs:216
+                    public ElementDefinitionInfo Duration;                                                                                  // MakerGen.cs:211
                     // 7. Timing.repeat.durationMax
-                    public ElementDefinitionInfo DurationMax;                                                                               // MakerGen.cs:216
+                    public ElementDefinitionInfo DurationMax;                                                                               // MakerGen.cs:211
                     // 8. Timing.repeat.durationUnit
-                    public ElementDefinitionInfo DurationUnit;                                                                              // MakerGen.cs:216
+                    public ElementDefinitionInfo DurationUnit;                                                                              // MakerGen.cs:211
                     // 9. Timing.repeat.frequency
-                    public ElementDefinitionInfo Frequency;                                                                                 // MakerGen.cs:216
+                    public ElementDefinitionInfo Frequency;                                                                                 // MakerGen.cs:211
                     // 10. Timing.repeat.frequencyMax
-                    public ElementDefinitionInfo FrequencyMax;                                                                              // MakerGen.cs:216
+                    public ElementDefinitionInfo FrequencyMax;                                                                              // MakerGen.cs:211
                     // 11. Timing.repeat.period
-                    public ElementDefinitionInfo Period;                                                                                    // MakerGen.cs:216
+                    public ElementDefinitionInfo Period;                                                                                    // MakerGen.cs:211
                     // 12. Timing.repeat.periodMax
-                    public ElementDefinitionInfo PeriodMax;                                                                                 // MakerGen.cs:216
+                    public ElementDefinitionInfo PeriodMax;                                                                                 // MakerGen.cs:211
                     // 13. Timing.repeat.periodUnit
-                    public ElementDefinitionInfo PeriodUnit;                                                                                // MakerGen.cs:216
+                    public ElementDefinitionInfo PeriodUnit;                                                                                // MakerGen.cs:211
                     // 14. Timing.repeat.dayOfWeek
-                    public ElementDefinitionInfo DayOfWeek;                                                                                 // MakerGen.cs:216
+                    public ElementDefinitionInfo DayOfWeek;                                                                                 // MakerGen.cs:211
                     // 15. Timing.repeat.timeOfDay
-                    public ElementDefinitionInfo TimeOfDay;                                                                                 // MakerGen.cs:216
+                    public ElementDefinitionInfo TimeOfDay;                                                                                 // MakerGen.cs:211
                     // 16. Timing.repeat.when
-                    public ElementDefinitionInfo When;                                                                                      // MakerGen.cs:216
+                    public ElementDefinitionInfo When;                                                                                      // MakerGen.cs:211
                     // 17. Timing.repeat.offset
-                    public ElementDefinitionInfo Offset;                                                                                    // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-                    public Type_Repeat_Elements()                                                                                           // MakerGen.cs:392
-                    {                                                                                                                       // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:231
+                    public ElementDefinitionInfo Offset;                                                                                    // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+                    public Type_Repeat_Elements()                                                                                           // MakerGen.cs:387
+                    {                                                                                                                       // MakerGen.cs:388
+                        {                                                                                                                   // MakerGen.cs:226
                             // 3. Timing.repeat.bounds[x]
-                            this.Bounds = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Bounds",                                                                                            // MakerGen.cs:235
-                                Path= "Timing.repeat.bounds[x]",                                                                            // MakerGen.cs:236
-                                Id = "Timing.repeat.bounds[x]",                                                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:358
-                                    {                                                                                                       // MakerGen.cs:359
-                                    },                                                                                                      // MakerGen.cs:360
-                                    new FhirKhit.Maker.Common.Complex.Range                                                                 // MakerGen.cs:358
-                                    {                                                                                                       // MakerGen.cs:359
-                                    },                                                                                                      // MakerGen.cs:360
-                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:358
-                                    {                                                                                                       // MakerGen.cs:359
-                                    }                                                                                                       // MakerGen.cs:360
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Bounds = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Bounds",                                                                                            // MakerGen.cs:230
+                                Path= "Timing.repeat.bounds[x]",                                                                            // MakerGen.cs:231
+                                Id = "Timing.repeat.bounds[x]",                                                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:353
+                                    {                                                                                                       // MakerGen.cs:354
+                                    },                                                                                                      // MakerGen.cs:355
+                                    new FhirKhit.Maker.Common.Complex.Range                                                                 // MakerGen.cs:353
+                                    {                                                                                                       // MakerGen.cs:354
+                                    },                                                                                                      // MakerGen.cs:355
+                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:353
+                                    {                                                                                                       // MakerGen.cs:354
+                                    }                                                                                                       // MakerGen.cs:355
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 4. Timing.repeat.count
-                            this.Count = new ElementDefinitionInfo                                                                          // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Count",                                                                                             // MakerGen.cs:235
-                                Path= "Timing.repeat.count",                                                                                // MakerGen.cs:236
-                                Id = "Timing.repeat.count",                                                                                 // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Count = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Count",                                                                                             // MakerGen.cs:230
+                                Path= "Timing.repeat.count",                                                                                // MakerGen.cs:231
+                                Id = "Timing.repeat.count",                                                                                 // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 5. Timing.repeat.countMax
-                            this.CountMax = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "CountMax",                                                                                          // MakerGen.cs:235
-                                Path= "Timing.repeat.countMax",                                                                             // MakerGen.cs:236
-                                Id = "Timing.repeat.countMax",                                                                              // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.CountMax = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "CountMax",                                                                                          // MakerGen.cs:230
+                                Path= "Timing.repeat.countMax",                                                                             // MakerGen.cs:231
+                                Id = "Timing.repeat.countMax",                                                                              // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 6. Timing.repeat.duration
-                            this.Duration = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Duration",                                                                                          // MakerGen.cs:235
-                                Path= "Timing.repeat.duration",                                                                             // MakerGen.cs:236
-                                Id = "Timing.repeat.duration",                                                                              // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Duration = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Duration",                                                                                          // MakerGen.cs:230
+                                Path= "Timing.repeat.duration",                                                                             // MakerGen.cs:231
+                                Id = "Timing.repeat.duration",                                                                              // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 7. Timing.repeat.durationMax
-                            this.DurationMax = new ElementDefinitionInfo                                                                    // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "DurationMax",                                                                                       // MakerGen.cs:235
-                                Path= "Timing.repeat.durationMax",                                                                          // MakerGen.cs:236
-                                Id = "Timing.repeat.durationMax",                                                                           // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.DurationMax = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "DurationMax",                                                                                       // MakerGen.cs:230
+                                Path= "Timing.repeat.durationMax",                                                                          // MakerGen.cs:231
+                                Id = "Timing.repeat.durationMax",                                                                           // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 8. Timing.repeat.durationUnit
-                            this.DurationUnit = new ElementDefinitionInfo                                                                   // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "DurationUnit",                                                                                      // MakerGen.cs:235
-                                Path= "Timing.repeat.durationUnit",                                                                         // MakerGen.cs:236
-                                Id = "Timing.repeat.durationUnit",                                                                          // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.DurationUnit = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "DurationUnit",                                                                                      // MakerGen.cs:230
+                                Path= "Timing.repeat.durationUnit",                                                                         // MakerGen.cs:231
+                                Id = "Timing.repeat.durationUnit",                                                                          // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 9. Timing.repeat.frequency
-                            this.Frequency = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Frequency",                                                                                         // MakerGen.cs:235
-                                Path= "Timing.repeat.frequency",                                                                            // MakerGen.cs:236
-                                Id = "Timing.repeat.frequency",                                                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Frequency = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Frequency",                                                                                         // MakerGen.cs:230
+                                Path= "Timing.repeat.frequency",                                                                            // MakerGen.cs:231
+                                Id = "Timing.repeat.frequency",                                                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 10. Timing.repeat.frequencyMax
-                            this.FrequencyMax = new ElementDefinitionInfo                                                                   // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "FrequencyMax",                                                                                      // MakerGen.cs:235
-                                Path= "Timing.repeat.frequencyMax",                                                                         // MakerGen.cs:236
-                                Id = "Timing.repeat.frequencyMax",                                                                          // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.FrequencyMax = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "FrequencyMax",                                                                                      // MakerGen.cs:230
+                                Path= "Timing.repeat.frequencyMax",                                                                         // MakerGen.cs:231
+                                Id = "Timing.repeat.frequencyMax",                                                                          // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 11. Timing.repeat.period
-                            this.Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Period",                                                                                            // MakerGen.cs:235
-                                Path= "Timing.repeat.period",                                                                               // MakerGen.cs:236
-                                Id = "Timing.repeat.period",                                                                                // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Period",                                                                                            // MakerGen.cs:230
+                                Path= "Timing.repeat.period",                                                                               // MakerGen.cs:231
+                                Id = "Timing.repeat.period",                                                                                // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 12. Timing.repeat.periodMax
-                            this.PeriodMax = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "PeriodMax",                                                                                         // MakerGen.cs:235
-                                Path= "Timing.repeat.periodMax",                                                                            // MakerGen.cs:236
-                                Id = "Timing.repeat.periodMax",                                                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.PeriodMax = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "PeriodMax",                                                                                         // MakerGen.cs:230
+                                Path= "Timing.repeat.periodMax",                                                                            // MakerGen.cs:231
+                                Id = "Timing.repeat.periodMax",                                                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 13. Timing.repeat.periodUnit
-                            this.PeriodUnit = new ElementDefinitionInfo                                                                     // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "PeriodUnit",                                                                                        // MakerGen.cs:235
-                                Path= "Timing.repeat.periodUnit",                                                                           // MakerGen.cs:236
-                                Id = "Timing.repeat.periodUnit",                                                                            // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.PeriodUnit = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "PeriodUnit",                                                                                        // MakerGen.cs:230
+                                Path= "Timing.repeat.periodUnit",                                                                           // MakerGen.cs:231
+                                Id = "Timing.repeat.periodUnit",                                                                            // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 14. Timing.repeat.dayOfWeek
-                            this.DayOfWeek = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "DayOfWeek",                                                                                         // MakerGen.cs:235
-                                Path= "Timing.repeat.dayOfWeek",                                                                            // MakerGen.cs:236
-                                Id = "Timing.repeat.dayOfWeek",                                                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.DayOfWeek = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "DayOfWeek",                                                                                         // MakerGen.cs:230
+                                Path= "Timing.repeat.dayOfWeek",                                                                            // MakerGen.cs:231
+                                Id = "Timing.repeat.dayOfWeek",                                                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 15. Timing.repeat.timeOfDay
-                            this.TimeOfDay = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "TimeOfDay",                                                                                         // MakerGen.cs:235
-                                Path= "Timing.repeat.timeOfDay",                                                                            // MakerGen.cs:236
-                                Id = "Timing.repeat.timeOfDay",                                                                             // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Time                                                                // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.TimeOfDay = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "TimeOfDay",                                                                                         // MakerGen.cs:230
+                                Path= "Timing.repeat.timeOfDay",                                                                            // MakerGen.cs:231
+                                Id = "Timing.repeat.timeOfDay",                                                                             // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Time                                                                // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 16. Timing.repeat.when
-                            this.When = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "When",                                                                                              // MakerGen.cs:235
-                                Path= "Timing.repeat.when",                                                                                 // MakerGen.cs:236
-                                Id = "Timing.repeat.when",                                                                                  // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = -1,                                                                                                   // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:231
+                            this.When = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "When",                                                                                              // MakerGen.cs:230
+                                Path= "Timing.repeat.when",                                                                                 // MakerGen.cs:231
+                                Id = "Timing.repeat.when",                                                                                  // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = -1,                                                                                                   // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:226
                             // 17. Timing.repeat.offset
-                            this.Offset = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
-                            {                                                                                                               // MakerGen.cs:234
-                                Name = "Offset",                                                                                            // MakerGen.cs:235
-                                Path= "Timing.repeat.offset",                                                                               // MakerGen.cs:236
-                                Id = "Timing.repeat.offset",                                                                                // MakerGen.cs:237
-                                Min = 0,                                                                                                    // MakerGen.cs:238
-                                Max = 1,                                                                                                    // MakerGen.cs:239
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:241
-                                    new FhirKhit.Maker.Common.Primitive.UnsignedInt                                                         // MakerGen.cs:300
-                                    {                                                                                                       // MakerGen.cs:301
-                                    }                                                                                                       // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:243
-                            };                                                                                                              // MakerGen.cs:244
-                        }                                                                                                                   // MakerGen.cs:245
-                    }                                                                                                                       // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:398
-                    {                                                                                                                       // MakerGen.cs:399
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:400
-                        Bounds.Write(sDef);                                                                                                 // MakerGen.cs:220
-                        Count.Write(sDef);                                                                                                  // MakerGen.cs:220
-                        CountMax.Write(sDef);                                                                                               // MakerGen.cs:220
-                        Duration.Write(sDef);                                                                                               // MakerGen.cs:220
-                        DurationMax.Write(sDef);                                                                                            // MakerGen.cs:220
-                        DurationUnit.Write(sDef);                                                                                           // MakerGen.cs:220
-                        Frequency.Write(sDef);                                                                                              // MakerGen.cs:220
-                        FrequencyMax.Write(sDef);                                                                                           // MakerGen.cs:220
-                        Period.Write(sDef);                                                                                                 // MakerGen.cs:220
-                        PeriodMax.Write(sDef);                                                                                              // MakerGen.cs:220
-                        PeriodUnit.Write(sDef);                                                                                             // MakerGen.cs:220
-                        DayOfWeek.Write(sDef);                                                                                              // MakerGen.cs:220
-                        TimeOfDay.Write(sDef);                                                                                              // MakerGen.cs:220
-                        When.Write(sDef);                                                                                                   // MakerGen.cs:220
-                        Offset.Write(sDef);                                                                                                 // MakerGen.cs:220
-                    }                                                                                                                       // MakerGen.cs:402
-                }                                                                                                                           // MakerGen.cs:404
-                public Type_Repeat_Elements Elements                                                                                        // MakerGen.cs:406
-                {                                                                                                                           // MakerGen.cs:407
-                    get                                                                                                                     // MakerGen.cs:408
-                    {                                                                                                                       // MakerGen.cs:409
-                        if (this.elements == null)                                                                                          // MakerGen.cs:410
-                            this.elements = new Type_Repeat_Elements();                                                                     // MakerGen.cs:411
-                        return this.elements;                                                                                               // MakerGen.cs:412
-                    }                                                                                                                       // MakerGen.cs:413
-                }                                                                                                                           // MakerGen.cs:414
-                Type_Repeat_Elements elements;                                                                                              // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-                public Type_Repeat()                                                                                                        // MakerGen.cs:418
-                {                                                                                                                           // MakerGen.cs:419
-                }                                                                                                                           // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:424
-                {                                                                                                                           // MakerGen.cs:425
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:426
-                    {                                                                                                                       // MakerGen.cs:427
-                        Path = "Timing.repeat",                                                                                             // MakerGen.cs:428
-                        ElementId = "Timing.repeat"                                                                                         // MakerGen.cs:429
-                    });                                                                                                                     // MakerGen.cs:430
-                    if (this.elements != null)                                                                                              // MakerGen.cs:431
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:432
-                }                                                                                                                           // MakerGen.cs:433
-            }                                                                                                                               // MakerGen.cs:434
+                            this.Offset = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
+                            {                                                                                                               // MakerGen.cs:229
+                                Name = "Offset",                                                                                            // MakerGen.cs:230
+                                Path= "Timing.repeat.offset",                                                                               // MakerGen.cs:231
+                                Id = "Timing.repeat.offset",                                                                                // MakerGen.cs:232
+                                Min = 0,                                                                                                    // MakerGen.cs:233
+                                Max = 1,                                                                                                    // MakerGen.cs:234
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
+                                {                                                                                                           // MakerGen.cs:236
+                                    new FhirKhit.Maker.Common.Primitive.UnsignedInt                                                         // MakerGen.cs:295
+                                    {                                                                                                       // MakerGen.cs:296
+                                    }                                                                                                       // MakerGen.cs:299
+                                }                                                                                                           // MakerGen.cs:238
+                            };                                                                                                              // MakerGen.cs:239
+                        }                                                                                                                   // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:395
+                        Bounds.Write(sDef);                                                                                                 // MakerGen.cs:215
+                        Count.Write(sDef);                                                                                                  // MakerGen.cs:215
+                        CountMax.Write(sDef);                                                                                               // MakerGen.cs:215
+                        Duration.Write(sDef);                                                                                               // MakerGen.cs:215
+                        DurationMax.Write(sDef);                                                                                            // MakerGen.cs:215
+                        DurationUnit.Write(sDef);                                                                                           // MakerGen.cs:215
+                        Frequency.Write(sDef);                                                                                              // MakerGen.cs:215
+                        FrequencyMax.Write(sDef);                                                                                           // MakerGen.cs:215
+                        Period.Write(sDef);                                                                                                 // MakerGen.cs:215
+                        PeriodMax.Write(sDef);                                                                                              // MakerGen.cs:215
+                        PeriodUnit.Write(sDef);                                                                                             // MakerGen.cs:215
+                        DayOfWeek.Write(sDef);                                                                                              // MakerGen.cs:215
+                        TimeOfDay.Write(sDef);                                                                                              // MakerGen.cs:215
+                        When.Write(sDef);                                                                                                   // MakerGen.cs:215
+                        Offset.Write(sDef);                                                                                                 // MakerGen.cs:215
+                    }                                                                                                                       // MakerGen.cs:397
+                }                                                                                                                           // MakerGen.cs:399
+                public Type_Repeat_Elements Elements                                                                                        // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    get                                                                                                                     // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:404
+                        if (this.elements == null)                                                                                          // MakerGen.cs:405
+                            this.elements = new Type_Repeat_Elements();                                                                     // MakerGen.cs:406
+                        return this.elements;                                                                                               // MakerGen.cs:407
+                    }                                                                                                                       // MakerGen.cs:408
+                }                                                                                                                           // MakerGen.cs:409
+                Type_Repeat_Elements elements;                                                                                              // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+                public Type_Repeat()                                                                                                        // MakerGen.cs:413
+                {                                                                                                                           // MakerGen.cs:414
+                }                                                                                                                           // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:419
+                {                                                                                                                           // MakerGen.cs:420
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:421
+                    {                                                                                                                       // MakerGen.cs:422
+                        Path = "Timing.repeat",                                                                                             // MakerGen.cs:423
+                        ElementId = "Timing.repeat"                                                                                         // MakerGen.cs:424
+                    });                                                                                                                     // MakerGen.cs:425
+                    if (this.elements != null)                                                                                              // MakerGen.cs:426
+                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:427
+                }                                                                                                                           // MakerGen.cs:428
+            }                                                                                                                               // MakerGen.cs:429
             // 1. Timing.event
-            public ElementDefinitionInfo Event;                                                                                             // MakerGen.cs:216
+            public ElementDefinitionInfo Event;                                                                                             // MakerGen.cs:211
             // 2. Timing.repeat
-            public ElementDefinitionInfo Repeat;                                                                                            // MakerGen.cs:216
+            public ElementDefinitionInfo Repeat;                                                                                            // MakerGen.cs:211
             // 18. Timing.code
-            public ElementDefinitionInfo Code;                                                                                              // MakerGen.cs:216
-                                                                                                                                            // MakerGen.cs:391
-            public Timing_Elements()                                                                                                        // MakerGen.cs:392
-            {                                                                                                                               // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:231
+            public ElementDefinitionInfo Code;                                                                                              // MakerGen.cs:211
+                                                                                                                                            // MakerGen.cs:386
+            public Timing_Elements()                                                                                                        // MakerGen.cs:387
+            {                                                                                                                               // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:226
                     // 1. Timing.event
-                    this.Event = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Event",                                                                                                     // MakerGen.cs:235
-                        Path= "Timing.event",                                                                                               // MakerGen.cs:236
-                        Id = "Timing.event",                                                                                                // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = -1,                                                                                                           // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
-                            {                                                                                                               // MakerGen.cs:301
-                            }                                                                                                               // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Event = new ElementDefinitionInfo                                                                                  // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Event",                                                                                                     // MakerGen.cs:230
+                        Path= "Timing.event",                                                                                               // MakerGen.cs:231
+                        Id = "Timing.event",                                                                                                // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
+                            {                                                                                                               // MakerGen.cs:296
+                            }                                                                                                               // MakerGen.cs:299
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 2. Timing.repeat
-                    this.Repeat = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Repeat",                                                                                                    // MakerGen.cs:235
-                        Path= "Timing.repeat",                                                                                              // MakerGen.cs:236
-                        Id = "Timing.repeat",                                                                                               // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new Type_Repeat                                                                                                 // MakerGen.cs:259
-                            {                                                                                                               // MakerGen.cs:260
-                            }                                                                                                               // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:231
+                    this.Repeat = new ElementDefinitionInfo                                                                                 // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Repeat",                                                                                                    // MakerGen.cs:230
+                        Path= "Timing.repeat",                                                                                              // MakerGen.cs:231
+                        Id = "Timing.repeat",                                                                                               // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Type_Repeat                                                                                                 // MakerGen.cs:254
+                            {                                                                                                               // MakerGen.cs:255
+                            }                                                                                                               // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+                {                                                                                                                           // MakerGen.cs:226
                     // 18. Timing.code
-                    this.Code = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
-                    {                                                                                                                       // MakerGen.cs:234
-                        Name = "Code",                                                                                                      // MakerGen.cs:235
-                        Path= "Timing.code",                                                                                                // MakerGen.cs:236
-                        Id = "Timing.code",                                                                                                 // MakerGen.cs:237
-                        Min = 0,                                                                                                            // MakerGen.cs:238
-                        Max = 1,                                                                                                            // MakerGen.cs:239
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:241
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
-                            {                                                                                                               // MakerGen.cs:316
-                            }                                                                                                               // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:243
-                    };                                                                                                                      // MakerGen.cs:244
-                }                                                                                                                           // MakerGen.cs:245
-            }                                                                                                                               // MakerGen.cs:395
-                                                                                                                                            // MakerGen.cs:397
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:398
-            {                                                                                                                               // MakerGen.cs:399
-                base.Write(sDef);                                                                                                           // MakerGen.cs:400
-                Event.Write(sDef);                                                                                                          // MakerGen.cs:220
-                Repeat.Write(sDef);                                                                                                         // MakerGen.cs:220
-                Code.Write(sDef);                                                                                                           // MakerGen.cs:220
-            }                                                                                                                               // MakerGen.cs:402
-        }                                                                                                                                   // MakerGen.cs:404
-        public Timing_Elements Elements                                                                                                     // MakerGen.cs:406
-        {                                                                                                                                   // MakerGen.cs:407
-            get                                                                                                                             // MakerGen.cs:408
-            {                                                                                                                               // MakerGen.cs:409
-                if (this.elements == null)                                                                                                  // MakerGen.cs:410
-                    this.elements = new Timing_Elements();                                                                                  // MakerGen.cs:411
-                return this.elements;                                                                                                       // MakerGen.cs:412
-            }                                                                                                                               // MakerGen.cs:413
-        }                                                                                                                                   // MakerGen.cs:414
-        Timing_Elements elements;                                                                                                           // MakerGen.cs:415
-                                                                                                                                            // MakerGen.cs:417
-        public Timing()                                                                                                                     // MakerGen.cs:418
-        {                                                                                                                                   // MakerGen.cs:419
-        }                                                                                                                                   // MakerGen.cs:421
-                                                                                                                                            // MakerGen.cs:423
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:424
-        {                                                                                                                                   // MakerGen.cs:425
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:426
-            {                                                                                                                               // MakerGen.cs:427
-                Path = "Timing",                                                                                                            // MakerGen.cs:428
-                ElementId = "Timing"                                                                                                        // MakerGen.cs:429
-            });                                                                                                                             // MakerGen.cs:430
-            if (this.elements != null)                                                                                                      // MakerGen.cs:431
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:432
-        }                                                                                                                                   // MakerGen.cs:433
-    }                                                                                                                                       // MakerGen.cs:434
-}                                                                                                                                           // MakerGen.cs:533
+                    this.Code = new ElementDefinitionInfo                                                                                   // MakerGen.cs:228
+                    {                                                                                                                       // MakerGen.cs:229
+                        Name = "Code",                                                                                                      // MakerGen.cs:230
+                        Path= "Timing.code",                                                                                                // MakerGen.cs:231
+                        Id = "Timing.code",                                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:310
+                            {                                                                                                               // MakerGen.cs:311
+                            }                                                                                                               // MakerGen.cs:314
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:390
+                                                                                                                                            // MakerGen.cs:392
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                base.Write(sDef);                                                                                                           // MakerGen.cs:395
+                Event.Write(sDef);                                                                                                          // MakerGen.cs:215
+                Repeat.Write(sDef);                                                                                                         // MakerGen.cs:215
+                Code.Write(sDef);                                                                                                           // MakerGen.cs:215
+            }                                                                                                                               // MakerGen.cs:397
+        }                                                                                                                                   // MakerGen.cs:399
+        public Timing_Elements Elements                                                                                                     // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            get                                                                                                                             // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:404
+                if (this.elements == null)                                                                                                  // MakerGen.cs:405
+                    this.elements = new Timing_Elements();                                                                                  // MakerGen.cs:406
+                return this.elements;                                                                                                       // MakerGen.cs:407
+            }                                                                                                                               // MakerGen.cs:408
+        }                                                                                                                                   // MakerGen.cs:409
+        Timing_Elements elements;                                                                                                           // MakerGen.cs:410
+                                                                                                                                            // MakerGen.cs:412
+        public Timing()                                                                                                                     // MakerGen.cs:413
+        {                                                                                                                                   // MakerGen.cs:414
+        }                                                                                                                                   // MakerGen.cs:416
+                                                                                                                                            // MakerGen.cs:418
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:419
+        {                                                                                                                                   // MakerGen.cs:420
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:421
+            {                                                                                                                               // MakerGen.cs:422
+                Path = "Timing",                                                                                                            // MakerGen.cs:423
+                ElementId = "Timing"                                                                                                        // MakerGen.cs:424
+            });                                                                                                                             // MakerGen.cs:425
+            if (this.elements != null)                                                                                                      // MakerGen.cs:426
+                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:427
+        }                                                                                                                                   // MakerGen.cs:428
+    }                                                                                                                                       // MakerGen.cs:429
+}                                                                                                                                           // MakerGen.cs:528

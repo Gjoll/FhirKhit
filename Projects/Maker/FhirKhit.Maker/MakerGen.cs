@@ -22,8 +22,7 @@ namespace FhirKhit.Maker
             {
                 Unknown,
                 Resource,
-                Element,
-                Extension
+                Element
             }
             public TypeFlag TFlag = TypeFlag.Unknown;
 
@@ -114,10 +113,6 @@ namespace FhirKhit.Maker
                 {
                     case "http://hl7.org/fhir/StructureDefinition/Element":
                         sDefInfo.TFlag = SDefInfo.TypeFlag.Element;
-                        break;
-
-                    case "http://hl7.org/fhir/StructureDefinition/Extension":
-                        sDefInfo.TFlag = SDefInfo.TypeFlag.Extension;
                         break;
 
                     case "http://hl7.org/fhir/StructureDefinition/Resource":
@@ -570,9 +565,6 @@ namespace FhirKhit.Maker
                         {
                             case SDefInfo.TypeFlag.Element:
                                 ProcessFhirComplex(sDefInfo);
-                                break;
-
-                            case SDefInfo.TypeFlag.Extension:
                                 break;
 
                             default:
