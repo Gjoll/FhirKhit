@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:451
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
-using System.IO;                                                                                                                            // MakerGen.cs:453
-using System.Linq;                                                                                                                          // MakerGen.cs:454
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
-                                                                                                                                            // MakerGen.cs:456
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
-{                                                                                                                                           // MakerGen.cs:458
-    #region Json                                                                                                                            // MakerGen.cs:459
-    #if NEVER                                                                                                                               // MakerGen.cs:460
+using System;                                                                                                                               // MakerGen.cs:449
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
+using System.IO;                                                                                                                            // MakerGen.cs:451
+using System.Linq;                                                                                                                          // MakerGen.cs:452
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
+                                                                                                                                            // MakerGen.cs:454
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
+{                                                                                                                                           // MakerGen.cs:456
+    #region Json                                                                                                                            // MakerGen.cs:457
+    #if NEVER                                                                                                                               // MakerGen.cs:458
     {
       "resourceType": "StructureDefinition",
       "id": "Medication",
@@ -263,315 +263,355 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:463
+    #endregion                                                                                                                              // MakerGen.cs:461
     /// <summary>
     /// Fhir resource 'Medication'
     /// </summary>
     // 0. Medication
-    public class Medication : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:385
-    {                                                                                                                                       // MakerGen.cs:386
-        public class Medication_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                      // MakerGen.cs:387
-        {                                                                                                                                   // MakerGen.cs:388
+    public class Medication : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
+        public class Medication_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                      // MakerGen.cs:385
+        {                                                                                                                                   // MakerGen.cs:386
             // 7. Medication.ingredient
-            public class Type_Ingredient : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Ingredient_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Ingredient : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Ingredient_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 8. Medication.ingredient.item[x]
-                    public ElementDefinitionInfo Item;                                                                                      // MakerGen.cs:236
+                    public ElementDefinitionInfo Item;                                                                                      // MakerGen.cs:216
                     // 9. Medication.ingredient.isActive
-                    public ElementDefinitionInfo IsActive;                                                                                  // MakerGen.cs:236
+                    public ElementDefinitionInfo IsActive;                                                                                  // MakerGen.cs:216
                     // 10. Medication.ingredient.strength
-                    public ElementDefinitionInfo Strength;                                                                                  // MakerGen.cs:236
-                    public Type_Ingredient_Elements()                                                                                       // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:251
+                    public ElementDefinitionInfo Strength;                                                                                  // MakerGen.cs:216
+                    public Type_Ingredient_Elements()                                                                                       // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
                             // 8. Medication.ingredient.item[x]
-                            this.Item = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Item",                                                                                              // MakerGen.cs:255
-                                Path= "Medication.ingredient.item[x]",                                                                      // MakerGen.cs:256
-                                Id = "Medication.ingredient.item[x]",                                                                       // MakerGen.cs:257
-                                Min = 1,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
-                                    {                                                                                                       // MakerGen.cs:315
-                                    },                                                                                                      // MakerGen.cs:318
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:345
-                                    {                                                                                                       // MakerGen.cs:346
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:348
+                            this.Item = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Item",                                                                                              // MakerGen.cs:235
+                                Path= "Medication.ingredient.item[x]",                                                                      // MakerGen.cs:236
+                                Id = "Medication.ingredient.item[x]",                                                                       // MakerGen.cs:237
+                                Min = 1,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
+                                    {                                                                                                       // MakerGen.cs:316
+                                    },                                                                                                      // MakerGen.cs:319
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
+                                    {                                                                                                       // MakerGen.cs:347
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Substance",                                            // MakerGen.cs:348
-                                            "http://hl7.org/fhir/StructureDefinition/Medication"                                            // MakerGen.cs:348
+                                            "http://hl7.org/fhir/StructureDefinition/Substance",                                            // MakerGen.cs:349
+                                            "http://hl7.org/fhir/StructureDefinition/Medication"                                            // MakerGen.cs:349
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:349
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                                    }                                                                                                       // MakerGen.cs:350
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 9. Medication.ingredient.isActive
-                            this.IsActive = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "IsActive",                                                                                          // MakerGen.cs:255
-                                Path= "Medication.ingredient.isActive",                                                                     // MakerGen.cs:256
-                                Id = "Medication.ingredient.isActive",                                                                      // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.IsActive = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "IsActive",                                                                                          // MakerGen.cs:235
+                                Path= "Medication.ingredient.isActive",                                                                     // MakerGen.cs:236
+                                Id = "Medication.ingredient.isActive",                                                                      // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 10. Medication.ingredient.strength
-                            this.Strength = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Strength",                                                                                          // MakerGen.cs:255
-                                Path= "Medication.ingredient.strength",                                                                     // MakerGen.cs:256
-                                Id = "Medication.ingredient.strength",                                                                      // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Ratio                                                                 // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                        Item.Write(sDef);                                                                                                   // MakerGen.cs:240
-                        IsActive.Write(sDef);                                                                                               // MakerGen.cs:240
-                        Strength.Write(sDef);                                                                                               // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Ingredient_Elements Elements { get; }                                                                           // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Ingredient()                                                                                                    // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Ingredient_Elements();                                                                         // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                            this.Strength = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Strength",                                                                                          // MakerGen.cs:235
+                                Path= "Medication.ingredient.strength",                                                                     // MakerGen.cs:236
+                                Id = "Medication.ingredient.strength",                                                                      // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Ratio                                                                 // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        Item.Write(sDef);                                                                                                   // MakerGen.cs:220
+                        IsActive.Write(sDef);                                                                                               // MakerGen.cs:220
+                        Strength.Write(sDef);                                                                                               // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Ingredient_Elements Elements { get; }                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Ingredient()                                                                                                    // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Ingredient_Elements();                                                                         // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 11. Medication.batch
-            public class Type_Batch : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Batch_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Batch : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Batch_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 12. Medication.batch.lotNumber
-                    public ElementDefinitionInfo LotNumber;                                                                                 // MakerGen.cs:236
+                    public ElementDefinitionInfo LotNumber;                                                                                 // MakerGen.cs:216
                     // 13. Medication.batch.expirationDate
-                    public ElementDefinitionInfo ExpirationDate;                                                                            // MakerGen.cs:236
-                    public Type_Batch_Elements()                                                                                            // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:251
+                    public ElementDefinitionInfo ExpirationDate;                                                                            // MakerGen.cs:216
+                    public Type_Batch_Elements()                                                                                            // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
                             // 12. Medication.batch.lotNumber
-                            this.LotNumber = new ElementDefinitionInfo                                                                      // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "LotNumber",                                                                                         // MakerGen.cs:255
-                                Path= "Medication.batch.lotNumber",                                                                         // MakerGen.cs:256
-                                Id = "Medication.batch.lotNumber",                                                                          // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.LotNumber = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "LotNumber",                                                                                         // MakerGen.cs:235
+                                Path= "Medication.batch.lotNumber",                                                                         // MakerGen.cs:236
+                                Id = "Medication.batch.lotNumber",                                                                          // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 13. Medication.batch.expirationDate
-                            this.ExpirationDate = new ElementDefinitionInfo                                                                 // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "ExpirationDate",                                                                                    // MakerGen.cs:255
-                                Path= "Medication.batch.expirationDate",                                                                    // MakerGen.cs:256
-                                Id = "Medication.batch.expirationDate",                                                                     // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                        LotNumber.Write(sDef);                                                                                              // MakerGen.cs:240
-                        ExpirationDate.Write(sDef);                                                                                         // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Batch_Elements Elements { get; }                                                                                // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Batch()                                                                                                         // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Batch_Elements();                                                                              // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                            this.ExpirationDate = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "ExpirationDate",                                                                                    // MakerGen.cs:235
+                                Path= "Medication.batch.expirationDate",                                                                    // MakerGen.cs:236
+                                Id = "Medication.batch.expirationDate",                                                                     // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        LotNumber.Write(sDef);                                                                                              // MakerGen.cs:220
+                        ExpirationDate.Write(sDef);                                                                                         // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Batch_Elements Elements { get; }                                                                                // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Batch()                                                                                                         // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Batch_Elements();                                                                              // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 1. Medication.identifier
-            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:236
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
             // 2. Medication.code
-            public ElementDefinitionInfo Code;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Code;                                                                                              // MakerGen.cs:216
             // 3. Medication.status
-            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:216
             // 4. Medication.manufacturer
-            public ElementDefinitionInfo Manufacturer;                                                                                      // MakerGen.cs:236
+            public ElementDefinitionInfo Manufacturer;                                                                                      // MakerGen.cs:216
             // 5. Medication.form
-            public ElementDefinitionInfo Form;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Form;                                                                                              // MakerGen.cs:216
             // 6. Medication.amount
-            public ElementDefinitionInfo Amount;                                                                                            // MakerGen.cs:236
-            public Medication_Elements()                                                                                                    // MakerGen.cs:409
-            {                                                                                                                               // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:251
+            public ElementDefinitionInfo Amount;                                                                                            // MakerGen.cs:216
+            // 7. Medication.ingredient
+            public ElementDefinitionInfo Ingredient;                                                                                        // MakerGen.cs:216
+            // 11. Medication.batch
+            public ElementDefinitionInfo Batch;                                                                                             // MakerGen.cs:216
+            public Medication_Elements()                                                                                                    // MakerGen.cs:407
+            {                                                                                                                               // MakerGen.cs:408
+                {                                                                                                                           // MakerGen.cs:231
                     // 1. Medication.identifier
-                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Identifier",                                                                                                // MakerGen.cs:255
-                        Path= "Medication.identifier",                                                                                      // MakerGen.cs:256
-                        Id = "Medication.identifier",                                                                                       // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Identifier",                                                                                                // MakerGen.cs:235
+                        Path= "Medication.identifier",                                                                                      // MakerGen.cs:236
+                        Id = "Medication.identifier",                                                                                       // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 2. Medication.code
-                    this.Code = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Code",                                                                                                      // MakerGen.cs:255
-                        Path= "Medication.code",                                                                                            // MakerGen.cs:256
-                        Id = "Medication.code",                                                                                             // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Code = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Code",                                                                                                      // MakerGen.cs:235
+                        Path= "Medication.code",                                                                                            // MakerGen.cs:236
+                        Id = "Medication.code",                                                                                             // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 3. Medication.status
-                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Status",                                                                                                    // MakerGen.cs:255
-                        Path= "Medication.status",                                                                                          // MakerGen.cs:256
-                        Id = "Medication.status",                                                                                           // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Status",                                                                                                    // MakerGen.cs:235
+                        Path= "Medication.status",                                                                                          // MakerGen.cs:236
+                        Id = "Medication.status",                                                                                           // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 4. Medication.manufacturer
-                    this.Manufacturer = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Manufacturer",                                                                                              // MakerGen.cs:255
-                        Path= "Medication.manufacturer",                                                                                    // MakerGen.cs:256
-                        Id = "Medication.manufacturer",                                                                                     // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
-                            {                                                                                                               // MakerGen.cs:346
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                    this.Manufacturer = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Manufacturer",                                                                                              // MakerGen.cs:235
+                        Path= "Medication.manufacturer",                                                                                    // MakerGen.cs:236
+                        Id = "Medication.manufacturer",                                                                                     // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:349
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:349
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 5. Medication.form
-                    this.Form = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Form",                                                                                                      // MakerGen.cs:255
-                        Path= "Medication.form",                                                                                            // MakerGen.cs:256
-                        Id = "Medication.form",                                                                                             // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Form = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Form",                                                                                                      // MakerGen.cs:235
+                        Path= "Medication.form",                                                                                            // MakerGen.cs:236
+                        Id = "Medication.form",                                                                                             // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 6. Medication.amount
-                    this.Amount = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Amount",                                                                                                    // MakerGen.cs:255
-                        Path= "Medication.amount",                                                                                          // MakerGen.cs:256
-                        Id = "Medication.amount",                                                                                           // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Ratio                                                                         // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:429
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
-            {                                                                                                                               // MakerGen.cs:415
-                base.Write(sDef);                                                                                                           // MakerGen.cs:416
-                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:240
-                Code.Write(sDef);                                                                                                           // MakerGen.cs:240
-                Status.Write(sDef);                                                                                                         // MakerGen.cs:240
-                Manufacturer.Write(sDef);                                                                                                   // MakerGen.cs:240
-                Form.Write(sDef);                                                                                                           // MakerGen.cs:240
-                Amount.Write(sDef);                                                                                                         // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:433
-        }                                                                                                                                   // MakerGen.cs:393
-        public Medication_Elements Elements { get; }                                                                                        // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-        public Medication()                                                                                                                 // MakerGen.cs:396
-        {                                                                                                                                   // MakerGen.cs:397
-            this.Elements = new Medication_Elements();                                                                                      // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
-        {                                                                                                                                   // MakerGen.cs:402
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
-        }                                                                                                                                   // MakerGen.cs:404
-    }                                                                                                                                       // MakerGen.cs:405
-}                                                                                                                                           // MakerGen.cs:468
+                    this.Amount = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Amount",                                                                                                    // MakerGen.cs:235
+                        Path= "Medication.amount",                                                                                          // MakerGen.cs:236
+                        Id = "Medication.amount",                                                                                           // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Ratio                                                                         // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 7. Medication.ingredient
+                    this.Ingredient = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Ingredient",                                                                                                // MakerGen.cs:235
+                        Path= "Medication.ingredient",                                                                                      // MakerGen.cs:236
+                        Id = "Medication.ingredient",                                                                                       // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Ingredient                                                                                             // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 11. Medication.batch
+                    this.Batch = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Batch",                                                                                                     // MakerGen.cs:235
+                        Path= "Medication.batch",                                                                                           // MakerGen.cs:236
+                        Id = "Medication.batch",                                                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Batch                                                                                                  // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:427
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
+            {                                                                                                                               // MakerGen.cs:413
+                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
+                Code.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Status.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Manufacturer.Write(sDef);                                                                                                   // MakerGen.cs:220
+                Form.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Amount.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Ingredient.Write(sDef);                                                                                                     // MakerGen.cs:220
+                Batch.Write(sDef);                                                                                                          // MakerGen.cs:220
+            }                                                                                                                               // MakerGen.cs:431
+        }                                                                                                                                   // MakerGen.cs:391
+        public Medication_Elements Elements { get; }                                                                                        // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+        public Medication()                                                                                                                 // MakerGen.cs:394
+        {                                                                                                                                   // MakerGen.cs:395
+            this.Elements = new Medication_Elements();                                                                                      // MakerGen.cs:396
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
+        {                                                                                                                                   // MakerGen.cs:400
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
+        }                                                                                                                                   // MakerGen.cs:402
+    }                                                                                                                                       // MakerGen.cs:403
+}                                                                                                                                           // MakerGen.cs:466

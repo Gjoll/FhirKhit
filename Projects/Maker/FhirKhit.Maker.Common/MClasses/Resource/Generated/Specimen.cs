@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:451
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
-using System.IO;                                                                                                                            // MakerGen.cs:453
-using System.Linq;                                                                                                                          // MakerGen.cs:454
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
-                                                                                                                                            // MakerGen.cs:456
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
-{                                                                                                                                           // MakerGen.cs:458
-    #region Json                                                                                                                            // MakerGen.cs:459
-    #if NEVER                                                                                                                               // MakerGen.cs:460
+using System;                                                                                                                               // MakerGen.cs:449
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
+using System.IO;                                                                                                                            // MakerGen.cs:451
+using System.Linq;                                                                                                                          // MakerGen.cs:452
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
+                                                                                                                                            // MakerGen.cs:454
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
+{                                                                                                                                           // MakerGen.cs:456
+    #region Json                                                                                                                            // MakerGen.cs:457
+    #if NEVER                                                                                                                               // MakerGen.cs:458
     {
       "resourceType": "StructureDefinition",
       "id": "Specimen",
@@ -594,689 +594,749 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:463
+    #endregion                                                                                                                              // MakerGen.cs:461
     /// <summary>
     /// Fhir resource 'Specimen'
     /// </summary>
     // 0. Specimen
-    public class Specimen : FhirKhit.Maker.Common.Resource.ResourceBase                                                                     // MakerGen.cs:385
-    {                                                                                                                                       // MakerGen.cs:386
-        public class Specimen_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                        // MakerGen.cs:387
-        {                                                                                                                                   // MakerGen.cs:388
+    public class Specimen : FhirKhit.Maker.Common.Resource.ResourceBase                                                                     // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
+        public class Specimen_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                        // MakerGen.cs:385
+        {                                                                                                                                   // MakerGen.cs:386
             // 9. Specimen.collection
-            public class Type_Collection : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Collection_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Collection : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Collection_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 10. Specimen.collection.collector
-                    public ElementDefinitionInfo Collector;                                                                                 // MakerGen.cs:236
+                    public ElementDefinitionInfo Collector;                                                                                 // MakerGen.cs:216
                     // 11. Specimen.collection.collected[x]
-                    public ElementDefinitionInfo Collected;                                                                                 // MakerGen.cs:236
+                    public ElementDefinitionInfo Collected;                                                                                 // MakerGen.cs:216
                     // 12. Specimen.collection.duration
-                    public ElementDefinitionInfo Duration;                                                                                  // MakerGen.cs:236
+                    public ElementDefinitionInfo Duration;                                                                                  // MakerGen.cs:216
                     // 13. Specimen.collection.quantity
-                    public ElementDefinitionInfo Quantity;                                                                                  // MakerGen.cs:236
+                    public ElementDefinitionInfo Quantity;                                                                                  // MakerGen.cs:216
                     // 14. Specimen.collection.method
-                    public ElementDefinitionInfo Method;                                                                                    // MakerGen.cs:236
+                    public ElementDefinitionInfo Method;                                                                                    // MakerGen.cs:216
                     // 15. Specimen.collection.bodySite
-                    public ElementDefinitionInfo BodySite;                                                                                  // MakerGen.cs:236
+                    public ElementDefinitionInfo BodySite;                                                                                  // MakerGen.cs:216
                     // 16. Specimen.collection.fastingStatus[x]
-                    public ElementDefinitionInfo FastingStatus;                                                                             // MakerGen.cs:236
-                    public Type_Collection_Elements()                                                                                       // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:251
+                    public ElementDefinitionInfo FastingStatus;                                                                             // MakerGen.cs:216
+                    public Type_Collection_Elements()                                                                                       // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
                             // 10. Specimen.collection.collector
-                            this.Collector = new ElementDefinitionInfo                                                                      // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Collector",                                                                                         // MakerGen.cs:255
-                                Path= "Specimen.collection.collector",                                                                      // MakerGen.cs:256
-                                Id = "Specimen.collection.collector",                                                                       // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:345
-                                    {                                                                                                       // MakerGen.cs:346
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:348
+                            this.Collector = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Collector",                                                                                         // MakerGen.cs:235
+                                Path= "Specimen.collection.collector",                                                                      // MakerGen.cs:236
+                                Id = "Specimen.collection.collector",                                                                       // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
+                                    {                                                                                                       // MakerGen.cs:347
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:348
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                      // MakerGen.cs:348
+                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:349
+                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                      // MakerGen.cs:349
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:349
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                                    }                                                                                                       // MakerGen.cs:350
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 11. Specimen.collection.collected[x]
-                            this.Collected = new ElementDefinitionInfo                                                                      // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Collected",                                                                                         // MakerGen.cs:255
-                                Path= "Specimen.collection.collected[x]",                                                                   // MakerGen.cs:256
-                                Id = "Specimen.collection.collected[x]",                                                                    // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    },                                                                                                      // MakerGen.cs:303
-                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Collected = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Collected",                                                                                         // MakerGen.cs:235
+                                Path= "Specimen.collection.collected[x]",                                                                   // MakerGen.cs:236
+                                Id = "Specimen.collection.collected[x]",                                                                    // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    },                                                                                                      // MakerGen.cs:304
+                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 12. Specimen.collection.duration
-                            this.Duration = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Duration",                                                                                          // MakerGen.cs:255
-                                Path= "Specimen.collection.duration",                                                                       // MakerGen.cs:256
-                                Id = "Specimen.collection.duration",                                                                        // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Duration = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Duration",                                                                                          // MakerGen.cs:235
+                                Path= "Specimen.collection.duration",                                                                       // MakerGen.cs:236
+                                Id = "Specimen.collection.duration",                                                                        // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 13. Specimen.collection.quantity
-                            this.Quantity = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Quantity",                                                                                          // MakerGen.cs:255
-                                Path= "Specimen.collection.quantity",                                                                       // MakerGen.cs:256
-                                Id = "Specimen.collection.quantity",                                                                        // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Quantity = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Quantity",                                                                                          // MakerGen.cs:235
+                                Path= "Specimen.collection.quantity",                                                                       // MakerGen.cs:236
+                                Id = "Specimen.collection.quantity",                                                                        // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 14. Specimen.collection.method
-                            this.Method = new ElementDefinitionInfo                                                                         // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Method",                                                                                            // MakerGen.cs:255
-                                Path= "Specimen.collection.method",                                                                         // MakerGen.cs:256
-                                Id = "Specimen.collection.method",                                                                          // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
-                                    {                                                                                                       // MakerGen.cs:315
-                                    }                                                                                                       // MakerGen.cs:318
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Method = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Method",                                                                                            // MakerGen.cs:235
+                                Path= "Specimen.collection.method",                                                                         // MakerGen.cs:236
+                                Id = "Specimen.collection.method",                                                                          // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
+                                    {                                                                                                       // MakerGen.cs:316
+                                    }                                                                                                       // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 15. Specimen.collection.bodySite
-                            this.BodySite = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "BodySite",                                                                                          // MakerGen.cs:255
-                                Path= "Specimen.collection.bodySite",                                                                       // MakerGen.cs:256
-                                Id = "Specimen.collection.bodySite",                                                                        // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
-                                    {                                                                                                       // MakerGen.cs:315
-                                    }                                                                                                       // MakerGen.cs:318
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.BodySite = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "BodySite",                                                                                          // MakerGen.cs:235
+                                Path= "Specimen.collection.bodySite",                                                                       // MakerGen.cs:236
+                                Id = "Specimen.collection.bodySite",                                                                        // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
+                                    {                                                                                                       // MakerGen.cs:316
+                                    }                                                                                                       // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 16. Specimen.collection.fastingStatus[x]
-                            this.FastingStatus = new ElementDefinitionInfo                                                                  // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "FastingStatus",                                                                                     // MakerGen.cs:255
-                                Path= "Specimen.collection.fastingStatus[x]",                                                               // MakerGen.cs:256
-                                Id = "Specimen.collection.fastingStatus[x]",                                                                // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
-                                    {                                                                                                       // MakerGen.cs:315
-                                    },                                                                                                      // MakerGen.cs:318
-                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                        Collector.Write(sDef);                                                                                              // MakerGen.cs:240
-                        Collected.Write(sDef);                                                                                              // MakerGen.cs:240
-                        Duration.Write(sDef);                                                                                               // MakerGen.cs:240
-                        Quantity.Write(sDef);                                                                                               // MakerGen.cs:240
-                        Method.Write(sDef);                                                                                                 // MakerGen.cs:240
-                        BodySite.Write(sDef);                                                                                               // MakerGen.cs:240
-                        FastingStatus.Write(sDef);                                                                                          // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Collection_Elements Elements { get; }                                                                           // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Collection()                                                                                                    // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Collection_Elements();                                                                         // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                            this.FastingStatus = new ElementDefinitionInfo                                                                  // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "FastingStatus",                                                                                     // MakerGen.cs:235
+                                Path= "Specimen.collection.fastingStatus[x]",                                                               // MakerGen.cs:236
+                                Id = "Specimen.collection.fastingStatus[x]",                                                                // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
+                                    {                                                                                                       // MakerGen.cs:316
+                                    },                                                                                                      // MakerGen.cs:319
+                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        Collector.Write(sDef);                                                                                              // MakerGen.cs:220
+                        Collected.Write(sDef);                                                                                              // MakerGen.cs:220
+                        Duration.Write(sDef);                                                                                               // MakerGen.cs:220
+                        Quantity.Write(sDef);                                                                                               // MakerGen.cs:220
+                        Method.Write(sDef);                                                                                                 // MakerGen.cs:220
+                        BodySite.Write(sDef);                                                                                               // MakerGen.cs:220
+                        FastingStatus.Write(sDef);                                                                                          // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Collection_Elements Elements { get; }                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Collection()                                                                                                    // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Collection_Elements();                                                                         // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 17. Specimen.processing
-            public class Type_Processing : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Processing_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Processing : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Processing_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 18. Specimen.processing.description
-                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:236
+                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:216
                     // 19. Specimen.processing.procedure
-                    public ElementDefinitionInfo Procedure;                                                                                 // MakerGen.cs:236
+                    public ElementDefinitionInfo Procedure;                                                                                 // MakerGen.cs:216
                     // 20. Specimen.processing.additive
-                    public ElementDefinitionInfo Additive;                                                                                  // MakerGen.cs:236
+                    public ElementDefinitionInfo Additive;                                                                                  // MakerGen.cs:216
                     // 21. Specimen.processing.time[x]
-                    public ElementDefinitionInfo Time;                                                                                      // MakerGen.cs:236
-                    public Type_Processing_Elements()                                                                                       // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:251
+                    public ElementDefinitionInfo Time;                                                                                      // MakerGen.cs:216
+                    public Type_Processing_Elements()                                                                                       // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
                             // 18. Specimen.processing.description
-                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Description",                                                                                       // MakerGen.cs:255
-                                Path= "Specimen.processing.description",                                                                    // MakerGen.cs:256
-                                Id = "Specimen.processing.description",                                                                     // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Description",                                                                                       // MakerGen.cs:235
+                                Path= "Specimen.processing.description",                                                                    // MakerGen.cs:236
+                                Id = "Specimen.processing.description",                                                                     // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 19. Specimen.processing.procedure
-                            this.Procedure = new ElementDefinitionInfo                                                                      // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Procedure",                                                                                         // MakerGen.cs:255
-                                Path= "Specimen.processing.procedure",                                                                      // MakerGen.cs:256
-                                Id = "Specimen.processing.procedure",                                                                       // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
-                                    {                                                                                                       // MakerGen.cs:315
-                                    }                                                                                                       // MakerGen.cs:318
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Procedure = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Procedure",                                                                                         // MakerGen.cs:235
+                                Path= "Specimen.processing.procedure",                                                                      // MakerGen.cs:236
+                                Id = "Specimen.processing.procedure",                                                                       // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
+                                    {                                                                                                       // MakerGen.cs:316
+                                    }                                                                                                       // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 20. Specimen.processing.additive
-                            this.Additive = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Additive",                                                                                          // MakerGen.cs:255
-                                Path= "Specimen.processing.additive",                                                                       // MakerGen.cs:256
-                                Id = "Specimen.processing.additive",                                                                        // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = -1,                                                                                                   // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:345
-                                    {                                                                                                       // MakerGen.cs:346
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:348
+                            this.Additive = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Additive",                                                                                          // MakerGen.cs:235
+                                Path= "Specimen.processing.additive",                                                                       // MakerGen.cs:236
+                                Id = "Specimen.processing.additive",                                                                        // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = -1,                                                                                                   // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
+                                    {                                                                                                       // MakerGen.cs:347
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Substance"                                             // MakerGen.cs:348
+                                            "http://hl7.org/fhir/StructureDefinition/Substance"                                             // MakerGen.cs:349
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:349
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                                    }                                                                                                       // MakerGen.cs:350
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 21. Specimen.processing.time[x]
-                            this.Time = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Time",                                                                                              // MakerGen.cs:255
-                                Path= "Specimen.processing.time[x]",                                                                        // MakerGen.cs:256
-                                Id = "Specimen.processing.time[x]",                                                                         // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    },                                                                                                      // MakerGen.cs:303
-                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                        Description.Write(sDef);                                                                                            // MakerGen.cs:240
-                        Procedure.Write(sDef);                                                                                              // MakerGen.cs:240
-                        Additive.Write(sDef);                                                                                               // MakerGen.cs:240
-                        Time.Write(sDef);                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Processing_Elements Elements { get; }                                                                           // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Processing()                                                                                                    // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Processing_Elements();                                                                         // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                            this.Time = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Time",                                                                                              // MakerGen.cs:235
+                                Path= "Specimen.processing.time[x]",                                                                        // MakerGen.cs:236
+                                Id = "Specimen.processing.time[x]",                                                                         // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    },                                                                                                      // MakerGen.cs:304
+                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        Description.Write(sDef);                                                                                            // MakerGen.cs:220
+                        Procedure.Write(sDef);                                                                                              // MakerGen.cs:220
+                        Additive.Write(sDef);                                                                                               // MakerGen.cs:220
+                        Time.Write(sDef);                                                                                                   // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Processing_Elements Elements { get; }                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Processing()                                                                                                    // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Processing_Elements();                                                                         // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 22. Specimen.container
-            public class Type_Container : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Container_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Container : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Container_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 23. Specimen.container.identifier
-                    public ElementDefinitionInfo Identifier;                                                                                // MakerGen.cs:236
+                    public ElementDefinitionInfo Identifier;                                                                                // MakerGen.cs:216
                     // 24. Specimen.container.description
-                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:236
+                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:216
                     // 25. Specimen.container.type
-                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:236
+                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
                     // 26. Specimen.container.capacity
-                    public ElementDefinitionInfo Capacity;                                                                                  // MakerGen.cs:236
+                    public ElementDefinitionInfo Capacity;                                                                                  // MakerGen.cs:216
                     // 27. Specimen.container.specimenQuantity
-                    public ElementDefinitionInfo SpecimenQuantity;                                                                          // MakerGen.cs:236
+                    public ElementDefinitionInfo SpecimenQuantity;                                                                          // MakerGen.cs:216
                     // 28. Specimen.container.additive[x]
-                    public ElementDefinitionInfo Additive;                                                                                  // MakerGen.cs:236
-                    public Type_Container_Elements()                                                                                        // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:251
+                    public ElementDefinitionInfo Additive;                                                                                  // MakerGen.cs:216
+                    public Type_Container_Elements()                                                                                        // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
                             // 23. Specimen.container.identifier
-                            this.Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Identifier",                                                                                        // MakerGen.cs:255
-                                Path= "Specimen.container.identifier",                                                                      // MakerGen.cs:256
-                                Id = "Specimen.container.identifier",                                                                       // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = -1,                                                                                                   // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Identifier                                                            // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Identifier",                                                                                        // MakerGen.cs:235
+                                Path= "Specimen.container.identifier",                                                                      // MakerGen.cs:236
+                                Id = "Specimen.container.identifier",                                                                       // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = -1,                                                                                                   // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Identifier                                                            // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 24. Specimen.container.description
-                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Description",                                                                                       // MakerGen.cs:255
-                                Path= "Specimen.container.description",                                                                     // MakerGen.cs:256
-                                Id = "Specimen.container.description",                                                                      // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Description",                                                                                       // MakerGen.cs:235
+                                Path= "Specimen.container.description",                                                                     // MakerGen.cs:236
+                                Id = "Specimen.container.description",                                                                      // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 25. Specimen.container.type
-                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Type",                                                                                              // MakerGen.cs:255
-                                Path= "Specimen.container.type",                                                                            // MakerGen.cs:256
-                                Id = "Specimen.container.type",                                                                             // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
-                                    {                                                                                                       // MakerGen.cs:315
-                                    }                                                                                                       // MakerGen.cs:318
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Type",                                                                                              // MakerGen.cs:235
+                                Path= "Specimen.container.type",                                                                            // MakerGen.cs:236
+                                Id = "Specimen.container.type",                                                                             // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
+                                    {                                                                                                       // MakerGen.cs:316
+                                    }                                                                                                       // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 26. Specimen.container.capacity
-                            this.Capacity = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Capacity",                                                                                          // MakerGen.cs:255
-                                Path= "Specimen.container.capacity",                                                                        // MakerGen.cs:256
-                                Id = "Specimen.container.capacity",                                                                         // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Capacity = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Capacity",                                                                                          // MakerGen.cs:235
+                                Path= "Specimen.container.capacity",                                                                        // MakerGen.cs:236
+                                Id = "Specimen.container.capacity",                                                                         // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 27. Specimen.container.specimenQuantity
-                            this.SpecimenQuantity = new ElementDefinitionInfo                                                               // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "SpecimenQuantity",                                                                                  // MakerGen.cs:255
-                                Path= "Specimen.container.specimenQuantity",                                                                // MakerGen.cs:256
-                                Id = "Specimen.container.specimenQuantity",                                                                 // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.SpecimenQuantity = new ElementDefinitionInfo                                                               // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "SpecimenQuantity",                                                                                  // MakerGen.cs:235
+                                Path= "Specimen.container.specimenQuantity",                                                                // MakerGen.cs:236
+                                Id = "Specimen.container.specimenQuantity",                                                                 // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 28. Specimen.container.additive[x]
-                            this.Additive = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Additive",                                                                                          // MakerGen.cs:255
-                                Path= "Specimen.container.additive[x]",                                                                     // MakerGen.cs:256
-                                Id = "Specimen.container.additive[x]",                                                                      // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
-                                    {                                                                                                       // MakerGen.cs:315
-                                    },                                                                                                      // MakerGen.cs:318
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:345
-                                    {                                                                                                       // MakerGen.cs:346
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:348
+                            this.Additive = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Additive",                                                                                          // MakerGen.cs:235
+                                Path= "Specimen.container.additive[x]",                                                                     // MakerGen.cs:236
+                                Id = "Specimen.container.additive[x]",                                                                      // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
+                                    {                                                                                                       // MakerGen.cs:316
+                                    },                                                                                                      // MakerGen.cs:319
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
+                                    {                                                                                                       // MakerGen.cs:347
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Substance"                                             // MakerGen.cs:348
+                                            "http://hl7.org/fhir/StructureDefinition/Substance"                                             // MakerGen.cs:349
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:349
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                        Identifier.Write(sDef);                                                                                             // MakerGen.cs:240
-                        Description.Write(sDef);                                                                                            // MakerGen.cs:240
-                        Type.Write(sDef);                                                                                                   // MakerGen.cs:240
-                        Capacity.Write(sDef);                                                                                               // MakerGen.cs:240
-                        SpecimenQuantity.Write(sDef);                                                                                       // MakerGen.cs:240
-                        Additive.Write(sDef);                                                                                               // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Container_Elements Elements { get; }                                                                            // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Container()                                                                                                     // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Container_Elements();                                                                          // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                                    }                                                                                                       // MakerGen.cs:350
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        Identifier.Write(sDef);                                                                                             // MakerGen.cs:220
+                        Description.Write(sDef);                                                                                            // MakerGen.cs:220
+                        Type.Write(sDef);                                                                                                   // MakerGen.cs:220
+                        Capacity.Write(sDef);                                                                                               // MakerGen.cs:220
+                        SpecimenQuantity.Write(sDef);                                                                                       // MakerGen.cs:220
+                        Additive.Write(sDef);                                                                                               // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Container_Elements Elements { get; }                                                                            // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Container()                                                                                                     // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Container_Elements();                                                                          // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 1. Specimen.identifier
-            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:236
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
             // 2. Specimen.accessionIdentifier
-            public ElementDefinitionInfo AccessionIdentifier;                                                                               // MakerGen.cs:236
+            public ElementDefinitionInfo AccessionIdentifier;                                                                               // MakerGen.cs:216
             // 3. Specimen.status
-            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:216
             // 4. Specimen.type
-            public ElementDefinitionInfo Type;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Type;                                                                                              // MakerGen.cs:216
             // 5. Specimen.subject
-            public ElementDefinitionInfo Subject;                                                                                           // MakerGen.cs:236
+            public ElementDefinitionInfo Subject;                                                                                           // MakerGen.cs:216
             // 6. Specimen.receivedTime
-            public ElementDefinitionInfo ReceivedTime;                                                                                      // MakerGen.cs:236
+            public ElementDefinitionInfo ReceivedTime;                                                                                      // MakerGen.cs:216
             // 7. Specimen.parent
-            public ElementDefinitionInfo Parent;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Parent;                                                                                            // MakerGen.cs:216
             // 8. Specimen.request
-            public ElementDefinitionInfo Request;                                                                                           // MakerGen.cs:236
+            public ElementDefinitionInfo Request;                                                                                           // MakerGen.cs:216
+            // 9. Specimen.collection
+            public ElementDefinitionInfo Collection;                                                                                        // MakerGen.cs:216
+            // 17. Specimen.processing
+            public ElementDefinitionInfo Processing;                                                                                        // MakerGen.cs:216
+            // 22. Specimen.container
+            public ElementDefinitionInfo Container;                                                                                         // MakerGen.cs:216
             // 29. Specimen.condition
-            public ElementDefinitionInfo Condition;                                                                                         // MakerGen.cs:236
+            public ElementDefinitionInfo Condition;                                                                                         // MakerGen.cs:216
             // 30. Specimen.note
-            public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:236
-            public Specimen_Elements()                                                                                                      // MakerGen.cs:409
-            {                                                                                                                               // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:251
+            public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:216
+            public Specimen_Elements()                                                                                                      // MakerGen.cs:407
+            {                                                                                                                               // MakerGen.cs:408
+                {                                                                                                                           // MakerGen.cs:231
                     // 1. Specimen.identifier
-                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Identifier",                                                                                                // MakerGen.cs:255
-                        Path= "Specimen.identifier",                                                                                        // MakerGen.cs:256
-                        Id = "Specimen.identifier",                                                                                         // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Identifier",                                                                                                // MakerGen.cs:235
+                        Path= "Specimen.identifier",                                                                                        // MakerGen.cs:236
+                        Id = "Specimen.identifier",                                                                                         // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 2. Specimen.accessionIdentifier
-                    this.AccessionIdentifier = new ElementDefinitionInfo                                                                    // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "AccessionIdentifier",                                                                                       // MakerGen.cs:255
-                        Path= "Specimen.accessionIdentifier",                                                                               // MakerGen.cs:256
-                        Id = "Specimen.accessionIdentifier",                                                                                // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.AccessionIdentifier = new ElementDefinitionInfo                                                                    // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "AccessionIdentifier",                                                                                       // MakerGen.cs:235
+                        Path= "Specimen.accessionIdentifier",                                                                               // MakerGen.cs:236
+                        Id = "Specimen.accessionIdentifier",                                                                                // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 3. Specimen.status
-                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Status",                                                                                                    // MakerGen.cs:255
-                        Path= "Specimen.status",                                                                                            // MakerGen.cs:256
-                        Id = "Specimen.status",                                                                                             // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Status",                                                                                                    // MakerGen.cs:235
+                        Path= "Specimen.status",                                                                                            // MakerGen.cs:236
+                        Id = "Specimen.status",                                                                                             // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 4. Specimen.type
-                    this.Type = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Type",                                                                                                      // MakerGen.cs:255
-                        Path= "Specimen.type",                                                                                              // MakerGen.cs:256
-                        Id = "Specimen.type",                                                                                               // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Type = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Type",                                                                                                      // MakerGen.cs:235
+                        Path= "Specimen.type",                                                                                              // MakerGen.cs:236
+                        Id = "Specimen.type",                                                                                               // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 5. Specimen.subject
-                    this.Subject = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Subject",                                                                                                   // MakerGen.cs:255
-                        Path= "Specimen.subject",                                                                                           // MakerGen.cs:256
-                        Id = "Specimen.subject",                                                                                            // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
-                            {                                                                                                               // MakerGen.cs:346
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                    this.Subject = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Subject",                                                                                                   // MakerGen.cs:235
+                        Path= "Specimen.subject",                                                                                           // MakerGen.cs:236
+                        Id = "Specimen.subject",                                                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:348
-                                    "http://hl7.org/fhir/StructureDefinition/Group",                                                        // MakerGen.cs:348
-                                    "http://hl7.org/fhir/StructureDefinition/Device",                                                       // MakerGen.cs:348
-                                    "http://hl7.org/fhir/StructureDefinition/Substance",                                                    // MakerGen.cs:348
-                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Group",                                                        // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Device",                                                       // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Substance",                                                    // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:349
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:349
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 6. Specimen.receivedTime
-                    this.ReceivedTime = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "ReceivedTime",                                                                                              // MakerGen.cs:255
-                        Path= "Specimen.receivedTime",                                                                                      // MakerGen.cs:256
-                        Id = "Specimen.receivedTime",                                                                                       // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.ReceivedTime = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "ReceivedTime",                                                                                              // MakerGen.cs:235
+                        Path= "Specimen.receivedTime",                                                                                      // MakerGen.cs:236
+                        Id = "Specimen.receivedTime",                                                                                       // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 7. Specimen.parent
-                    this.Parent = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Parent",                                                                                                    // MakerGen.cs:255
-                        Path= "Specimen.parent",                                                                                            // MakerGen.cs:256
-                        Id = "Specimen.parent",                                                                                             // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
-                            {                                                                                                               // MakerGen.cs:346
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                    this.Parent = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Parent",                                                                                                    // MakerGen.cs:235
+                        Path= "Specimen.parent",                                                                                            // MakerGen.cs:236
+                        Id = "Specimen.parent",                                                                                             // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Specimen"                                                      // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/Specimen"                                                      // MakerGen.cs:349
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:349
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 8. Specimen.request
-                    this.Request = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Request",                                                                                                   // MakerGen.cs:255
-                        Path= "Specimen.request",                                                                                           // MakerGen.cs:256
-                        Id = "Specimen.request",                                                                                            // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
-                            {                                                                                                               // MakerGen.cs:346
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                    this.Request = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Request",                                                                                                   // MakerGen.cs:235
+                        Path= "Specimen.request",                                                                                           // MakerGen.cs:236
+                        Id = "Specimen.request",                                                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                // MakerGen.cs:349
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:349
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 9. Specimen.collection
+                    this.Collection = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Collection",                                                                                                // MakerGen.cs:235
+                        Path= "Specimen.collection",                                                                                        // MakerGen.cs:236
+                        Id = "Specimen.collection",                                                                                         // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Collection                                                                                             // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 17. Specimen.processing
+                    this.Processing = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Processing",                                                                                                // MakerGen.cs:235
+                        Path= "Specimen.processing",                                                                                        // MakerGen.cs:236
+                        Id = "Specimen.processing",                                                                                         // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Processing                                                                                             // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 22. Specimen.container
+                    this.Container = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Container",                                                                                                 // MakerGen.cs:235
+                        Path= "Specimen.container",                                                                                         // MakerGen.cs:236
+                        Id = "Specimen.container",                                                                                          // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Container                                                                                              // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 29. Specimen.condition
-                    this.Condition = new ElementDefinitionInfo                                                                              // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Condition",                                                                                                 // MakerGen.cs:255
-                        Path= "Specimen.condition",                                                                                         // MakerGen.cs:256
-                        Id = "Specimen.condition",                                                                                          // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Condition = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Condition",                                                                                                 // MakerGen.cs:235
+                        Path= "Specimen.condition",                                                                                         // MakerGen.cs:236
+                        Id = "Specimen.condition",                                                                                          // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 30. Specimen.note
-                    this.Note = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Note",                                                                                                      // MakerGen.cs:255
-                        Path= "Specimen.note",                                                                                              // MakerGen.cs:256
-                        Id = "Specimen.note",                                                                                               // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:429
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
-            {                                                                                                                               // MakerGen.cs:415
-                base.Write(sDef);                                                                                                           // MakerGen.cs:416
-                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:240
-                AccessionIdentifier.Write(sDef);                                                                                            // MakerGen.cs:240
-                Status.Write(sDef);                                                                                                         // MakerGen.cs:240
-                Type.Write(sDef);                                                                                                           // MakerGen.cs:240
-                Subject.Write(sDef);                                                                                                        // MakerGen.cs:240
-                ReceivedTime.Write(sDef);                                                                                                   // MakerGen.cs:240
-                Parent.Write(sDef);                                                                                                         // MakerGen.cs:240
-                Request.Write(sDef);                                                                                                        // MakerGen.cs:240
-                Condition.Write(sDef);                                                                                                      // MakerGen.cs:240
-                Note.Write(sDef);                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:433
-        }                                                                                                                                   // MakerGen.cs:393
-        public Specimen_Elements Elements { get; }                                                                                          // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-        public Specimen()                                                                                                                   // MakerGen.cs:396
-        {                                                                                                                                   // MakerGen.cs:397
-            this.Elements = new Specimen_Elements();                                                                                        // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
-        {                                                                                                                                   // MakerGen.cs:402
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
-        }                                                                                                                                   // MakerGen.cs:404
-    }                                                                                                                                       // MakerGen.cs:405
-}                                                                                                                                           // MakerGen.cs:468
+                    this.Note = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Note",                                                                                                      // MakerGen.cs:235
+                        Path= "Specimen.note",                                                                                              // MakerGen.cs:236
+                        Id = "Specimen.note",                                                                                               // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:427
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
+            {                                                                                                                               // MakerGen.cs:413
+                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
+                AccessionIdentifier.Write(sDef);                                                                                            // MakerGen.cs:220
+                Status.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Type.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Subject.Write(sDef);                                                                                                        // MakerGen.cs:220
+                ReceivedTime.Write(sDef);                                                                                                   // MakerGen.cs:220
+                Parent.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Request.Write(sDef);                                                                                                        // MakerGen.cs:220
+                Collection.Write(sDef);                                                                                                     // MakerGen.cs:220
+                Processing.Write(sDef);                                                                                                     // MakerGen.cs:220
+                Container.Write(sDef);                                                                                                      // MakerGen.cs:220
+                Condition.Write(sDef);                                                                                                      // MakerGen.cs:220
+                Note.Write(sDef);                                                                                                           // MakerGen.cs:220
+            }                                                                                                                               // MakerGen.cs:431
+        }                                                                                                                                   // MakerGen.cs:391
+        public Specimen_Elements Elements { get; }                                                                                          // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+        public Specimen()                                                                                                                   // MakerGen.cs:394
+        {                                                                                                                                   // MakerGen.cs:395
+            this.Elements = new Specimen_Elements();                                                                                        // MakerGen.cs:396
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
+        {                                                                                                                                   // MakerGen.cs:400
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
+        }                                                                                                                                   // MakerGen.cs:402
+    }                                                                                                                                       // MakerGen.cs:403
+}                                                                                                                                           // MakerGen.cs:466

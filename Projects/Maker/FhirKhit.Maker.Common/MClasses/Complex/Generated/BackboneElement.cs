@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:499
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:500
-using System.IO;                                                                                                                            // MakerGen.cs:501
-using System.Linq;                                                                                                                          // MakerGen.cs:502
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:503
-                                                                                                                                            // MakerGen.cs:504
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:505
-{                                                                                                                                           // MakerGen.cs:506
-    #region Json                                                                                                                            // MakerGen.cs:507
+using System;                                                                                                                               // MakerGen.cs:497
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:498
+using System.IO;                                                                                                                            // MakerGen.cs:499
+using System.Linq;                                                                                                                          // MakerGen.cs:500
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:501
+                                                                                                                                            // MakerGen.cs:502
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:503
+{                                                                                                                                           // MakerGen.cs:504
+    #region Json                                                                                                                            // MakerGen.cs:505
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -60,50 +60,50 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:511
+    #endregion                                                                                                                              // MakerGen.cs:509
     /// <summary>
     /// Fhir complex 'BackboneElement'
     /// </summary>
     // 0. BackboneElement
-    public class BackboneElement : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:385
-    {                                                                                                                                       // MakerGen.cs:386
-        public class BackboneElement_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                 // MakerGen.cs:387
-        {                                                                                                                                   // MakerGen.cs:388
+    public class BackboneElement : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
+        public class BackboneElement_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                 // MakerGen.cs:385
+        {                                                                                                                                   // MakerGen.cs:386
             // 1. BackboneElement.modifierExtension
-            public ElementDefinitionInfo ModifierExtension;                                                                                 // MakerGen.cs:236
-            public BackboneElement_Elements()                                                                                               // MakerGen.cs:409
-            {                                                                                                                               // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:251
+            public ElementDefinitionInfo ModifierExtension;                                                                                 // MakerGen.cs:216
+            public BackboneElement_Elements()                                                                                               // MakerGen.cs:407
+            {                                                                                                                               // MakerGen.cs:408
+                {                                                                                                                           // MakerGen.cs:231
                     // 1. BackboneElement.modifierExtension
-                    this.ModifierExtension = new ElementDefinitionInfo                                                                      // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "ModifierExtension",                                                                                         // MakerGen.cs:255
-                        Path= "BackboneElement.modifierExtension",                                                                          // MakerGen.cs:256
-                        Id = "BackboneElement.modifierExtension",                                                                           // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:429
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
-            {                                                                                                                               // MakerGen.cs:415
-                base.Write(sDef);                                                                                                           // MakerGen.cs:416
-                ModifierExtension.Write(sDef);                                                                                              // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:433
-        }                                                                                                                                   // MakerGen.cs:393
-        public BackboneElement_Elements Elements { get; }                                                                                   // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-        public BackboneElement()                                                                                                            // MakerGen.cs:396
-        {                                                                                                                                   // MakerGen.cs:397
-            this.Elements = new BackboneElement_Elements();                                                                                 // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
-        {                                                                                                                                   // MakerGen.cs:402
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
-        }                                                                                                                                   // MakerGen.cs:404
-    }                                                                                                                                       // MakerGen.cs:405
-}                                                                                                                                           // MakerGen.cs:516
+                    this.ModifierExtension = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "ModifierExtension",                                                                                         // MakerGen.cs:235
+                        Path= "BackboneElement.modifierExtension",                                                                          // MakerGen.cs:236
+                        Id = "BackboneElement.modifierExtension",                                                                           // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:427
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
+            {                                                                                                                               // MakerGen.cs:413
+                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+                ModifierExtension.Write(sDef);                                                                                              // MakerGen.cs:220
+            }                                                                                                                               // MakerGen.cs:431
+        }                                                                                                                                   // MakerGen.cs:391
+        public BackboneElement_Elements Elements { get; }                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+        public BackboneElement()                                                                                                            // MakerGen.cs:394
+        {                                                                                                                                   // MakerGen.cs:395
+            this.Elements = new BackboneElement_Elements();                                                                                 // MakerGen.cs:396
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
+        {                                                                                                                                   // MakerGen.cs:400
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
+        }                                                                                                                                   // MakerGen.cs:402
+    }                                                                                                                                       // MakerGen.cs:403
+}                                                                                                                                           // MakerGen.cs:514

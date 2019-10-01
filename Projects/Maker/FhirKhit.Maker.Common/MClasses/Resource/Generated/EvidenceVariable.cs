@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:451
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
-using System.IO;                                                                                                                            // MakerGen.cs:453
-using System.Linq;                                                                                                                          // MakerGen.cs:454
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
-                                                                                                                                            // MakerGen.cs:456
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
-{                                                                                                                                           // MakerGen.cs:458
-    #region Json                                                                                                                            // MakerGen.cs:459
-    #if NEVER                                                                                                                               // MakerGen.cs:460
+using System;                                                                                                                               // MakerGen.cs:449
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
+using System.IO;                                                                                                                            // MakerGen.cs:451
+using System.Linq;                                                                                                                          // MakerGen.cs:452
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
+                                                                                                                                            // MakerGen.cs:454
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
+{                                                                                                                                           // MakerGen.cs:456
+    #region Json                                                                                                                            // MakerGen.cs:457
+    #if NEVER                                                                                                                               // MakerGen.cs:458
     {
       "resourceType": "StructureDefinition",
       "id": "EvidenceVariable",
@@ -643,750 +643,770 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:463
+    #endregion                                                                                                                              // MakerGen.cs:461
     /// <summary>
     /// Fhir resource 'EvidenceVariable'
     /// </summary>
     // 0. EvidenceVariable
-    public class EvidenceVariable : FhirKhit.Maker.Common.Resource.ResourceBase                                                             // MakerGen.cs:385
-    {                                                                                                                                       // MakerGen.cs:386
-        public class EvidenceVariable_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                // MakerGen.cs:387
-        {                                                                                                                                   // MakerGen.cs:388
+    public class EvidenceVariable : FhirKhit.Maker.Common.Resource.ResourceBase                                                             // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
+        public class EvidenceVariable_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                // MakerGen.cs:385
+        {                                                                                                                                   // MakerGen.cs:386
             // 27. EvidenceVariable.characteristic
-            public class Type_Characteristic : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Characteristic_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Characteristic : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Characteristic_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 28. EvidenceVariable.characteristic.description
-                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:236
+                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:216
                     // 29. EvidenceVariable.characteristic.definition[x]
-                    public ElementDefinitionInfo Definition;                                                                                // MakerGen.cs:236
+                    public ElementDefinitionInfo Definition;                                                                                // MakerGen.cs:216
                     // 30. EvidenceVariable.characteristic.usageContext
-                    public ElementDefinitionInfo UsageContext;                                                                              // MakerGen.cs:236
+                    public ElementDefinitionInfo UsageContext;                                                                              // MakerGen.cs:216
                     // 31. EvidenceVariable.characteristic.exclude
-                    public ElementDefinitionInfo Exclude;                                                                                   // MakerGen.cs:236
+                    public ElementDefinitionInfo Exclude;                                                                                   // MakerGen.cs:216
                     // 32. EvidenceVariable.characteristic.participantEffective[x]
-                    public ElementDefinitionInfo ParticipantEffective;                                                                      // MakerGen.cs:236
+                    public ElementDefinitionInfo ParticipantEffective;                                                                      // MakerGen.cs:216
                     // 33. EvidenceVariable.characteristic.timeFromStart
-                    public ElementDefinitionInfo TimeFromStart;                                                                             // MakerGen.cs:236
+                    public ElementDefinitionInfo TimeFromStart;                                                                             // MakerGen.cs:216
                     // 34. EvidenceVariable.characteristic.groupMeasure
-                    public ElementDefinitionInfo GroupMeasure;                                                                              // MakerGen.cs:236
-                    public Type_Characteristic_Elements()                                                                                   // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:251
+                    public ElementDefinitionInfo GroupMeasure;                                                                              // MakerGen.cs:216
+                    public Type_Characteristic_Elements()                                                                                   // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
                             // 28. EvidenceVariable.characteristic.description
-                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Description",                                                                                       // MakerGen.cs:255
-                                Path= "EvidenceVariable.characteristic.description",                                                        // MakerGen.cs:256
-                                Id = "EvidenceVariable.characteristic.description",                                                         // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Description",                                                                                       // MakerGen.cs:235
+                                Path= "EvidenceVariable.characteristic.description",                                                        // MakerGen.cs:236
+                                Id = "EvidenceVariable.characteristic.description",                                                         // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 29. EvidenceVariable.characteristic.definition[x]
-                            this.Definition = new ElementDefinitionInfo                                                                     // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Definition",                                                                                        // MakerGen.cs:255
-                                Path= "EvidenceVariable.characteristic.definition[x]",                                                      // MakerGen.cs:256
-                                Id = "EvidenceVariable.characteristic.definition[x]",                                                       // MakerGen.cs:257
-                                Min = 1,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:345
-                                    {                                                                                                       // MakerGen.cs:346
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:348
+                            this.Definition = new ElementDefinitionInfo                                                                     // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Definition",                                                                                        // MakerGen.cs:235
+                                Path= "EvidenceVariable.characteristic.definition[x]",                                                      // MakerGen.cs:236
+                                Id = "EvidenceVariable.characteristic.definition[x]",                                                       // MakerGen.cs:237
+                                Min = 1,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:346
+                                    {                                                                                                       // MakerGen.cs:347
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:349
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Group"                                                 // MakerGen.cs:348
+                                            "http://hl7.org/fhir/StructureDefinition/Group"                                                 // MakerGen.cs:349
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Primitive.Canonical                                                           // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:302
+                                    },                                                                                                      // MakerGen.cs:350
+                                    new FhirKhit.Maker.Common.Primitive.Canonical                                                           // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:303
                                         {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/ActivityDefinition"                                    // MakerGen.cs:302
+                                            "http://hl7.org/fhir/StructureDefinition/ActivityDefinition"                                    // MakerGen.cs:303
                                         }                                                                                                   // CodeEditorExtensions.cs:34
-                                    },                                                                                                      // MakerGen.cs:303
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
-                                    {                                                                                                       // MakerGen.cs:315
-                                    },                                                                                                      // MakerGen.cs:318
-                                    new FhirKhit.Maker.Common.Complex.Expression                                                            // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    },                                                                                                      // MakerGen.cs:359
-                                    new FhirKhit.Maker.Common.Complex.DataRequirement                                                       // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    },                                                                                                      // MakerGen.cs:359
-                                    new FhirKhit.Maker.Common.Complex.TriggerDefinition                                                     // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                                    },                                                                                                      // MakerGen.cs:304
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
+                                    {                                                                                                       // MakerGen.cs:316
+                                    },                                                                                                      // MakerGen.cs:319
+                                    new FhirKhit.Maker.Common.Complex.Expression                                                            // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    },                                                                                                      // MakerGen.cs:360
+                                    new FhirKhit.Maker.Common.Complex.DataRequirement                                                       // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    },                                                                                                      // MakerGen.cs:360
+                                    new FhirKhit.Maker.Common.Complex.TriggerDefinition                                                     // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 30. EvidenceVariable.characteristic.usageContext
-                            this.UsageContext = new ElementDefinitionInfo                                                                   // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "UsageContext",                                                                                      // MakerGen.cs:255
-                                Path= "EvidenceVariable.characteristic.usageContext",                                                       // MakerGen.cs:256
-                                Id = "EvidenceVariable.characteristic.usageContext",                                                        // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = -1,                                                                                                   // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.UsageContext                                                          // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.UsageContext = new ElementDefinitionInfo                                                                   // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "UsageContext",                                                                                      // MakerGen.cs:235
+                                Path= "EvidenceVariable.characteristic.usageContext",                                                       // MakerGen.cs:236
+                                Id = "EvidenceVariable.characteristic.usageContext",                                                        // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = -1,                                                                                                   // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.UsageContext                                                          // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 31. EvidenceVariable.characteristic.exclude
-                            this.Exclude = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Exclude",                                                                                           // MakerGen.cs:255
-                                Path= "EvidenceVariable.characteristic.exclude",                                                            // MakerGen.cs:256
-                                Id = "EvidenceVariable.characteristic.exclude",                                                             // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Exclude = new ElementDefinitionInfo                                                                        // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Exclude",                                                                                           // MakerGen.cs:235
+                                Path= "EvidenceVariable.characteristic.exclude",                                                            // MakerGen.cs:236
+                                Id = "EvidenceVariable.characteristic.exclude",                                                             // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 32. EvidenceVariable.characteristic.participantEffective[x]
-                            this.ParticipantEffective = new ElementDefinitionInfo                                                           // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "ParticipantEffective",                                                                              // MakerGen.cs:255
-                                Path= "EvidenceVariable.characteristic.participantEffective[x]",                                            // MakerGen.cs:256
-                                Id = "EvidenceVariable.characteristic.participantEffective[x]",                                             // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    },                                                                                                      // MakerGen.cs:303
-                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    },                                                                                                      // MakerGen.cs:359
-                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    },                                                                                                      // MakerGen.cs:359
-                                    new FhirKhit.Maker.Common.Complex.Timing                                                                // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.ParticipantEffective = new ElementDefinitionInfo                                                           // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "ParticipantEffective",                                                                              // MakerGen.cs:235
+                                Path= "EvidenceVariable.characteristic.participantEffective[x]",                                            // MakerGen.cs:236
+                                Id = "EvidenceVariable.characteristic.participantEffective[x]",                                             // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    },                                                                                                      // MakerGen.cs:304
+                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    },                                                                                                      // MakerGen.cs:360
+                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    },                                                                                                      // MakerGen.cs:360
+                                    new FhirKhit.Maker.Common.Complex.Timing                                                                // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 33. EvidenceVariable.characteristic.timeFromStart
-                            this.TimeFromStart = new ElementDefinitionInfo                                                                  // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "TimeFromStart",                                                                                     // MakerGen.cs:255
-                                Path= "EvidenceVariable.characteristic.timeFromStart",                                                      // MakerGen.cs:256
-                                Id = "EvidenceVariable.characteristic.timeFromStart",                                                       // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.TimeFromStart = new ElementDefinitionInfo                                                                  // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "TimeFromStart",                                                                                     // MakerGen.cs:235
+                                Path= "EvidenceVariable.characteristic.timeFromStart",                                                      // MakerGen.cs:236
+                                Id = "EvidenceVariable.characteristic.timeFromStart",                                                       // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 34. EvidenceVariable.characteristic.groupMeasure
-                            this.GroupMeasure = new ElementDefinitionInfo                                                                   // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "GroupMeasure",                                                                                      // MakerGen.cs:255
-                                Path= "EvidenceVariable.characteristic.groupMeasure",                                                       // MakerGen.cs:256
-                                Id = "EvidenceVariable.characteristic.groupMeasure",                                                        // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                        Description.Write(sDef);                                                                                            // MakerGen.cs:240
-                        Definition.Write(sDef);                                                                                             // MakerGen.cs:240
-                        UsageContext.Write(sDef);                                                                                           // MakerGen.cs:240
-                        Exclude.Write(sDef);                                                                                                // MakerGen.cs:240
-                        ParticipantEffective.Write(sDef);                                                                                   // MakerGen.cs:240
-                        TimeFromStart.Write(sDef);                                                                                          // MakerGen.cs:240
-                        GroupMeasure.Write(sDef);                                                                                           // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Characteristic_Elements Elements { get; }                                                                       // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Characteristic()                                                                                                // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Characteristic_Elements();                                                                     // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                            this.GroupMeasure = new ElementDefinitionInfo                                                                   // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "GroupMeasure",                                                                                      // MakerGen.cs:235
+                                Path= "EvidenceVariable.characteristic.groupMeasure",                                                       // MakerGen.cs:236
+                                Id = "EvidenceVariable.characteristic.groupMeasure",                                                        // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        Description.Write(sDef);                                                                                            // MakerGen.cs:220
+                        Definition.Write(sDef);                                                                                             // MakerGen.cs:220
+                        UsageContext.Write(sDef);                                                                                           // MakerGen.cs:220
+                        Exclude.Write(sDef);                                                                                                // MakerGen.cs:220
+                        ParticipantEffective.Write(sDef);                                                                                   // MakerGen.cs:220
+                        TimeFromStart.Write(sDef);                                                                                          // MakerGen.cs:220
+                        GroupMeasure.Write(sDef);                                                                                           // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Characteristic_Elements Elements { get; }                                                                       // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Characteristic()                                                                                                // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Characteristic_Elements();                                                                     // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 1. EvidenceVariable.url
-            public ElementDefinitionInfo Url;                                                                                               // MakerGen.cs:236
+            public ElementDefinitionInfo Url;                                                                                               // MakerGen.cs:216
             // 2. EvidenceVariable.identifier
-            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:236
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
             // 3. EvidenceVariable.version
-            public ElementDefinitionInfo Version;                                                                                           // MakerGen.cs:236
+            public ElementDefinitionInfo Version;                                                                                           // MakerGen.cs:216
             // 4. EvidenceVariable.name
-            public ElementDefinitionInfo Name;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Name;                                                                                              // MakerGen.cs:216
             // 5. EvidenceVariable.title
-            public ElementDefinitionInfo Title;                                                                                             // MakerGen.cs:236
+            public ElementDefinitionInfo Title;                                                                                             // MakerGen.cs:216
             // 6. EvidenceVariable.shortTitle
-            public ElementDefinitionInfo ShortTitle;                                                                                        // MakerGen.cs:236
+            public ElementDefinitionInfo ShortTitle;                                                                                        // MakerGen.cs:216
             // 7. EvidenceVariable.subtitle
-            public ElementDefinitionInfo Subtitle;                                                                                          // MakerGen.cs:236
+            public ElementDefinitionInfo Subtitle;                                                                                          // MakerGen.cs:216
             // 8. EvidenceVariable.status
-            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:216
             // 9. EvidenceVariable.date
-            public ElementDefinitionInfo Date;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Date;                                                                                              // MakerGen.cs:216
             // 10. EvidenceVariable.publisher
-            public ElementDefinitionInfo Publisher;                                                                                         // MakerGen.cs:236
+            public ElementDefinitionInfo Publisher;                                                                                         // MakerGen.cs:216
             // 11. EvidenceVariable.contact
-            public ElementDefinitionInfo Contact;                                                                                           // MakerGen.cs:236
+            public ElementDefinitionInfo Contact;                                                                                           // MakerGen.cs:216
             // 12. EvidenceVariable.description
-            public ElementDefinitionInfo Description;                                                                                       // MakerGen.cs:236
+            public ElementDefinitionInfo Description;                                                                                       // MakerGen.cs:216
             // 13. EvidenceVariable.note
-            public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:216
             // 14. EvidenceVariable.useContext
-            public ElementDefinitionInfo UseContext;                                                                                        // MakerGen.cs:236
+            public ElementDefinitionInfo UseContext;                                                                                        // MakerGen.cs:216
             // 15. EvidenceVariable.jurisdiction
-            public ElementDefinitionInfo Jurisdiction;                                                                                      // MakerGen.cs:236
+            public ElementDefinitionInfo Jurisdiction;                                                                                      // MakerGen.cs:216
             // 16. EvidenceVariable.copyright
-            public ElementDefinitionInfo Copyright;                                                                                         // MakerGen.cs:236
+            public ElementDefinitionInfo Copyright;                                                                                         // MakerGen.cs:216
             // 17. EvidenceVariable.approvalDate
-            public ElementDefinitionInfo ApprovalDate;                                                                                      // MakerGen.cs:236
+            public ElementDefinitionInfo ApprovalDate;                                                                                      // MakerGen.cs:216
             // 18. EvidenceVariable.lastReviewDate
-            public ElementDefinitionInfo LastReviewDate;                                                                                    // MakerGen.cs:236
+            public ElementDefinitionInfo LastReviewDate;                                                                                    // MakerGen.cs:216
             // 19. EvidenceVariable.effectivePeriod
-            public ElementDefinitionInfo EffectivePeriod;                                                                                   // MakerGen.cs:236
+            public ElementDefinitionInfo EffectivePeriod;                                                                                   // MakerGen.cs:216
             // 20. EvidenceVariable.topic
-            public ElementDefinitionInfo Topic;                                                                                             // MakerGen.cs:236
+            public ElementDefinitionInfo Topic;                                                                                             // MakerGen.cs:216
             // 21. EvidenceVariable.author
-            public ElementDefinitionInfo Author;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Author;                                                                                            // MakerGen.cs:216
             // 22. EvidenceVariable.editor
-            public ElementDefinitionInfo Editor;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Editor;                                                                                            // MakerGen.cs:216
             // 23. EvidenceVariable.reviewer
-            public ElementDefinitionInfo Reviewer;                                                                                          // MakerGen.cs:236
+            public ElementDefinitionInfo Reviewer;                                                                                          // MakerGen.cs:216
             // 24. EvidenceVariable.endorser
-            public ElementDefinitionInfo Endorser;                                                                                          // MakerGen.cs:236
+            public ElementDefinitionInfo Endorser;                                                                                          // MakerGen.cs:216
             // 25. EvidenceVariable.relatedArtifact
-            public ElementDefinitionInfo RelatedArtifact;                                                                                   // MakerGen.cs:236
+            public ElementDefinitionInfo RelatedArtifact;                                                                                   // MakerGen.cs:216
             // 26. EvidenceVariable.type
-            public ElementDefinitionInfo Type;                                                                                              // MakerGen.cs:236
-            public EvidenceVariable_Elements()                                                                                              // MakerGen.cs:409
-            {                                                                                                                               // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:251
+            public ElementDefinitionInfo Type;                                                                                              // MakerGen.cs:216
+            // 27. EvidenceVariable.characteristic
+            public ElementDefinitionInfo Characteristic;                                                                                    // MakerGen.cs:216
+            public EvidenceVariable_Elements()                                                                                              // MakerGen.cs:407
+            {                                                                                                                               // MakerGen.cs:408
+                {                                                                                                                           // MakerGen.cs:231
                     // 1. EvidenceVariable.url
-                    this.Url = new ElementDefinitionInfo                                                                                    // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Url",                                                                                                       // MakerGen.cs:255
-                        Path= "EvidenceVariable.url",                                                                                       // MakerGen.cs:256
-                        Id = "EvidenceVariable.url",                                                                                        // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Url = new ElementDefinitionInfo                                                                                    // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Url",                                                                                                       // MakerGen.cs:235
+                        Path= "EvidenceVariable.url",                                                                                       // MakerGen.cs:236
+                        Id = "EvidenceVariable.url",                                                                                        // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 2. EvidenceVariable.identifier
-                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Identifier",                                                                                                // MakerGen.cs:255
-                        Path= "EvidenceVariable.identifier",                                                                                // MakerGen.cs:256
-                        Id = "EvidenceVariable.identifier",                                                                                 // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Identifier",                                                                                                // MakerGen.cs:235
+                        Path= "EvidenceVariable.identifier",                                                                                // MakerGen.cs:236
+                        Id = "EvidenceVariable.identifier",                                                                                 // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 3. EvidenceVariable.version
-                    this.Version = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Version",                                                                                                   // MakerGen.cs:255
-                        Path= "EvidenceVariable.version",                                                                                   // MakerGen.cs:256
-                        Id = "EvidenceVariable.version",                                                                                    // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Version = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Version",                                                                                                   // MakerGen.cs:235
+                        Path= "EvidenceVariable.version",                                                                                   // MakerGen.cs:236
+                        Id = "EvidenceVariable.version",                                                                                    // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 4. EvidenceVariable.name
-                    this.Name = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Name",                                                                                                      // MakerGen.cs:255
-                        Path= "EvidenceVariable.name",                                                                                      // MakerGen.cs:256
-                        Id = "EvidenceVariable.name",                                                                                       // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Name = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Name",                                                                                                      // MakerGen.cs:235
+                        Path= "EvidenceVariable.name",                                                                                      // MakerGen.cs:236
+                        Id = "EvidenceVariable.name",                                                                                       // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 5. EvidenceVariable.title
-                    this.Title = new ElementDefinitionInfo                                                                                  // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Title",                                                                                                     // MakerGen.cs:255
-                        Path= "EvidenceVariable.title",                                                                                     // MakerGen.cs:256
-                        Id = "EvidenceVariable.title",                                                                                      // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Title = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Title",                                                                                                     // MakerGen.cs:235
+                        Path= "EvidenceVariable.title",                                                                                     // MakerGen.cs:236
+                        Id = "EvidenceVariable.title",                                                                                      // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 6. EvidenceVariable.shortTitle
-                    this.ShortTitle = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "ShortTitle",                                                                                                // MakerGen.cs:255
-                        Path= "EvidenceVariable.shortTitle",                                                                                // MakerGen.cs:256
-                        Id = "EvidenceVariable.shortTitle",                                                                                 // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.ShortTitle = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "ShortTitle",                                                                                                // MakerGen.cs:235
+                        Path= "EvidenceVariable.shortTitle",                                                                                // MakerGen.cs:236
+                        Id = "EvidenceVariable.shortTitle",                                                                                 // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 7. EvidenceVariable.subtitle
-                    this.Subtitle = new ElementDefinitionInfo                                                                               // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Subtitle",                                                                                                  // MakerGen.cs:255
-                        Path= "EvidenceVariable.subtitle",                                                                                  // MakerGen.cs:256
-                        Id = "EvidenceVariable.subtitle",                                                                                   // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Subtitle = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Subtitle",                                                                                                  // MakerGen.cs:235
+                        Path= "EvidenceVariable.subtitle",                                                                                  // MakerGen.cs:236
+                        Id = "EvidenceVariable.subtitle",                                                                                   // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 8. EvidenceVariable.status
-                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Status",                                                                                                    // MakerGen.cs:255
-                        Path= "EvidenceVariable.status",                                                                                    // MakerGen.cs:256
-                        Id = "EvidenceVariable.status",                                                                                     // MakerGen.cs:257
-                        Min = 1,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Status",                                                                                                    // MakerGen.cs:235
+                        Path= "EvidenceVariable.status",                                                                                    // MakerGen.cs:236
+                        Id = "EvidenceVariable.status",                                                                                     // MakerGen.cs:237
+                        Min = 1,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 9. EvidenceVariable.date
-                    this.Date = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Date",                                                                                                      // MakerGen.cs:255
-                        Path= "EvidenceVariable.date",                                                                                      // MakerGen.cs:256
-                        Id = "EvidenceVariable.date",                                                                                       // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Date = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Date",                                                                                                      // MakerGen.cs:235
+                        Path= "EvidenceVariable.date",                                                                                      // MakerGen.cs:236
+                        Id = "EvidenceVariable.date",                                                                                       // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 10. EvidenceVariable.publisher
-                    this.Publisher = new ElementDefinitionInfo                                                                              // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Publisher",                                                                                                 // MakerGen.cs:255
-                        Path= "EvidenceVariable.publisher",                                                                                 // MakerGen.cs:256
-                        Id = "EvidenceVariable.publisher",                                                                                  // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Publisher = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Publisher",                                                                                                 // MakerGen.cs:235
+                        Path= "EvidenceVariable.publisher",                                                                                 // MakerGen.cs:236
+                        Id = "EvidenceVariable.publisher",                                                                                  // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 11. EvidenceVariable.contact
-                    this.Contact = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Contact",                                                                                                   // MakerGen.cs:255
-                        Path= "EvidenceVariable.contact",                                                                                   // MakerGen.cs:256
-                        Id = "EvidenceVariable.contact",                                                                                    // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Contact = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Contact",                                                                                                   // MakerGen.cs:235
+                        Path= "EvidenceVariable.contact",                                                                                   // MakerGen.cs:236
+                        Id = "EvidenceVariable.contact",                                                                                    // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 12. EvidenceVariable.description
-                    this.Description = new ElementDefinitionInfo                                                                            // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Description",                                                                                               // MakerGen.cs:255
-                        Path= "EvidenceVariable.description",                                                                               // MakerGen.cs:256
-                        Id = "EvidenceVariable.description",                                                                                // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Description = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Description",                                                                                               // MakerGen.cs:235
+                        Path= "EvidenceVariable.description",                                                                               // MakerGen.cs:236
+                        Id = "EvidenceVariable.description",                                                                                // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 13. EvidenceVariable.note
-                    this.Note = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Note",                                                                                                      // MakerGen.cs:255
-                        Path= "EvidenceVariable.note",                                                                                      // MakerGen.cs:256
-                        Id = "EvidenceVariable.note",                                                                                       // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Note = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Note",                                                                                                      // MakerGen.cs:235
+                        Path= "EvidenceVariable.note",                                                                                      // MakerGen.cs:236
+                        Id = "EvidenceVariable.note",                                                                                       // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 14. EvidenceVariable.useContext
-                    this.UseContext = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "UseContext",                                                                                                // MakerGen.cs:255
-                        Path= "EvidenceVariable.useContext",                                                                                // MakerGen.cs:256
-                        Id = "EvidenceVariable.useContext",                                                                                 // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.UsageContext                                                                  // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.UseContext = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "UseContext",                                                                                                // MakerGen.cs:235
+                        Path= "EvidenceVariable.useContext",                                                                                // MakerGen.cs:236
+                        Id = "EvidenceVariable.useContext",                                                                                 // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.UsageContext                                                                  // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 15. EvidenceVariable.jurisdiction
-                    this.Jurisdiction = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Jurisdiction",                                                                                              // MakerGen.cs:255
-                        Path= "EvidenceVariable.jurisdiction",                                                                              // MakerGen.cs:256
-                        Id = "EvidenceVariable.jurisdiction",                                                                               // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Jurisdiction = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Jurisdiction",                                                                                              // MakerGen.cs:235
+                        Path= "EvidenceVariable.jurisdiction",                                                                              // MakerGen.cs:236
+                        Id = "EvidenceVariable.jurisdiction",                                                                               // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 16. EvidenceVariable.copyright
-                    this.Copyright = new ElementDefinitionInfo                                                                              // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Copyright",                                                                                                 // MakerGen.cs:255
-                        Path= "EvidenceVariable.copyright",                                                                                 // MakerGen.cs:256
-                        Id = "EvidenceVariable.copyright",                                                                                  // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Copyright = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Copyright",                                                                                                 // MakerGen.cs:235
+                        Path= "EvidenceVariable.copyright",                                                                                 // MakerGen.cs:236
+                        Id = "EvidenceVariable.copyright",                                                                                  // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 17. EvidenceVariable.approvalDate
-                    this.ApprovalDate = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "ApprovalDate",                                                                                              // MakerGen.cs:255
-                        Path= "EvidenceVariable.approvalDate",                                                                              // MakerGen.cs:256
-                        Id = "EvidenceVariable.approvalDate",                                                                               // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.ApprovalDate = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "ApprovalDate",                                                                                              // MakerGen.cs:235
+                        Path= "EvidenceVariable.approvalDate",                                                                              // MakerGen.cs:236
+                        Id = "EvidenceVariable.approvalDate",                                                                               // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 18. EvidenceVariable.lastReviewDate
-                    this.LastReviewDate = new ElementDefinitionInfo                                                                         // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "LastReviewDate",                                                                                            // MakerGen.cs:255
-                        Path= "EvidenceVariable.lastReviewDate",                                                                            // MakerGen.cs:256
-                        Id = "EvidenceVariable.lastReviewDate",                                                                             // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.LastReviewDate = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "LastReviewDate",                                                                                            // MakerGen.cs:235
+                        Path= "EvidenceVariable.lastReviewDate",                                                                            // MakerGen.cs:236
+                        Id = "EvidenceVariable.lastReviewDate",                                                                             // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 19. EvidenceVariable.effectivePeriod
-                    this.EffectivePeriod = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "EffectivePeriod",                                                                                           // MakerGen.cs:255
-                        Path= "EvidenceVariable.effectivePeriod",                                                                           // MakerGen.cs:256
-                        Id = "EvidenceVariable.effectivePeriod",                                                                            // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.EffectivePeriod = new ElementDefinitionInfo                                                                        // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "EffectivePeriod",                                                                                           // MakerGen.cs:235
+                        Path= "EvidenceVariable.effectivePeriod",                                                                           // MakerGen.cs:236
+                        Id = "EvidenceVariable.effectivePeriod",                                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 20. EvidenceVariable.topic
-                    this.Topic = new ElementDefinitionInfo                                                                                  // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Topic",                                                                                                     // MakerGen.cs:255
-                        Path= "EvidenceVariable.topic",                                                                                     // MakerGen.cs:256
-                        Id = "EvidenceVariable.topic",                                                                                      // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Topic = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Topic",                                                                                                     // MakerGen.cs:235
+                        Path= "EvidenceVariable.topic",                                                                                     // MakerGen.cs:236
+                        Id = "EvidenceVariable.topic",                                                                                      // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 21. EvidenceVariable.author
-                    this.Author = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Author",                                                                                                    // MakerGen.cs:255
-                        Path= "EvidenceVariable.author",                                                                                    // MakerGen.cs:256
-                        Id = "EvidenceVariable.author",                                                                                     // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Author = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Author",                                                                                                    // MakerGen.cs:235
+                        Path= "EvidenceVariable.author",                                                                                    // MakerGen.cs:236
+                        Id = "EvidenceVariable.author",                                                                                     // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 22. EvidenceVariable.editor
-                    this.Editor = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Editor",                                                                                                    // MakerGen.cs:255
-                        Path= "EvidenceVariable.editor",                                                                                    // MakerGen.cs:256
-                        Id = "EvidenceVariable.editor",                                                                                     // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Editor = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Editor",                                                                                                    // MakerGen.cs:235
+                        Path= "EvidenceVariable.editor",                                                                                    // MakerGen.cs:236
+                        Id = "EvidenceVariable.editor",                                                                                     // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 23. EvidenceVariable.reviewer
-                    this.Reviewer = new ElementDefinitionInfo                                                                               // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Reviewer",                                                                                                  // MakerGen.cs:255
-                        Path= "EvidenceVariable.reviewer",                                                                                  // MakerGen.cs:256
-                        Id = "EvidenceVariable.reviewer",                                                                                   // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Reviewer = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Reviewer",                                                                                                  // MakerGen.cs:235
+                        Path= "EvidenceVariable.reviewer",                                                                                  // MakerGen.cs:236
+                        Id = "EvidenceVariable.reviewer",                                                                                   // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 24. EvidenceVariable.endorser
-                    this.Endorser = new ElementDefinitionInfo                                                                               // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Endorser",                                                                                                  // MakerGen.cs:255
-                        Path= "EvidenceVariable.endorser",                                                                                  // MakerGen.cs:256
-                        Id = "EvidenceVariable.endorser",                                                                                   // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Endorser = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Endorser",                                                                                                  // MakerGen.cs:235
+                        Path= "EvidenceVariable.endorser",                                                                                  // MakerGen.cs:236
+                        Id = "EvidenceVariable.endorser",                                                                                   // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 25. EvidenceVariable.relatedArtifact
-                    this.RelatedArtifact = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "RelatedArtifact",                                                                                           // MakerGen.cs:255
-                        Path= "EvidenceVariable.relatedArtifact",                                                                           // MakerGen.cs:256
-                        Id = "EvidenceVariable.relatedArtifact",                                                                            // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.RelatedArtifact                                                               // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.RelatedArtifact = new ElementDefinitionInfo                                                                        // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "RelatedArtifact",                                                                                           // MakerGen.cs:235
+                        Path= "EvidenceVariable.relatedArtifact",                                                                           // MakerGen.cs:236
+                        Id = "EvidenceVariable.relatedArtifact",                                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.RelatedArtifact                                                               // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 26. EvidenceVariable.type
-                    this.Type = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Type",                                                                                                      // MakerGen.cs:255
-                        Path= "EvidenceVariable.type",                                                                                      // MakerGen.cs:256
-                        Id = "EvidenceVariable.type",                                                                                       // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:429
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
-            {                                                                                                                               // MakerGen.cs:415
-                base.Write(sDef);                                                                                                           // MakerGen.cs:416
-                Url.Write(sDef);                                                                                                            // MakerGen.cs:240
-                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:240
-                Version.Write(sDef);                                                                                                        // MakerGen.cs:240
-                Name.Write(sDef);                                                                                                           // MakerGen.cs:240
-                Title.Write(sDef);                                                                                                          // MakerGen.cs:240
-                ShortTitle.Write(sDef);                                                                                                     // MakerGen.cs:240
-                Subtitle.Write(sDef);                                                                                                       // MakerGen.cs:240
-                Status.Write(sDef);                                                                                                         // MakerGen.cs:240
-                Date.Write(sDef);                                                                                                           // MakerGen.cs:240
-                Publisher.Write(sDef);                                                                                                      // MakerGen.cs:240
-                Contact.Write(sDef);                                                                                                        // MakerGen.cs:240
-                Description.Write(sDef);                                                                                                    // MakerGen.cs:240
-                Note.Write(sDef);                                                                                                           // MakerGen.cs:240
-                UseContext.Write(sDef);                                                                                                     // MakerGen.cs:240
-                Jurisdiction.Write(sDef);                                                                                                   // MakerGen.cs:240
-                Copyright.Write(sDef);                                                                                                      // MakerGen.cs:240
-                ApprovalDate.Write(sDef);                                                                                                   // MakerGen.cs:240
-                LastReviewDate.Write(sDef);                                                                                                 // MakerGen.cs:240
-                EffectivePeriod.Write(sDef);                                                                                                // MakerGen.cs:240
-                Topic.Write(sDef);                                                                                                          // MakerGen.cs:240
-                Author.Write(sDef);                                                                                                         // MakerGen.cs:240
-                Editor.Write(sDef);                                                                                                         // MakerGen.cs:240
-                Reviewer.Write(sDef);                                                                                                       // MakerGen.cs:240
-                Endorser.Write(sDef);                                                                                                       // MakerGen.cs:240
-                RelatedArtifact.Write(sDef);                                                                                                // MakerGen.cs:240
-                Type.Write(sDef);                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:433
-        }                                                                                                                                   // MakerGen.cs:393
-        public EvidenceVariable_Elements Elements { get; }                                                                                  // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-        public EvidenceVariable()                                                                                                           // MakerGen.cs:396
-        {                                                                                                                                   // MakerGen.cs:397
-            this.Elements = new EvidenceVariable_Elements();                                                                                // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
-        {                                                                                                                                   // MakerGen.cs:402
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
-        }                                                                                                                                   // MakerGen.cs:404
-    }                                                                                                                                       // MakerGen.cs:405
-}                                                                                                                                           // MakerGen.cs:468
+                    this.Type = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Type",                                                                                                      // MakerGen.cs:235
+                        Path= "EvidenceVariable.type",                                                                                      // MakerGen.cs:236
+                        Id = "EvidenceVariable.type",                                                                                       // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 27. EvidenceVariable.characteristic
+                    this.Characteristic = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Characteristic",                                                                                            // MakerGen.cs:235
+                        Path= "EvidenceVariable.characteristic",                                                                            // MakerGen.cs:236
+                        Id = "EvidenceVariable.characteristic",                                                                             // MakerGen.cs:237
+                        Min = 1,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Characteristic                                                                                         // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:427
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
+            {                                                                                                                               // MakerGen.cs:413
+                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+                Url.Write(sDef);                                                                                                            // MakerGen.cs:220
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
+                Version.Write(sDef);                                                                                                        // MakerGen.cs:220
+                Name.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Title.Write(sDef);                                                                                                          // MakerGen.cs:220
+                ShortTitle.Write(sDef);                                                                                                     // MakerGen.cs:220
+                Subtitle.Write(sDef);                                                                                                       // MakerGen.cs:220
+                Status.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Date.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Publisher.Write(sDef);                                                                                                      // MakerGen.cs:220
+                Contact.Write(sDef);                                                                                                        // MakerGen.cs:220
+                Description.Write(sDef);                                                                                                    // MakerGen.cs:220
+                Note.Write(sDef);                                                                                                           // MakerGen.cs:220
+                UseContext.Write(sDef);                                                                                                     // MakerGen.cs:220
+                Jurisdiction.Write(sDef);                                                                                                   // MakerGen.cs:220
+                Copyright.Write(sDef);                                                                                                      // MakerGen.cs:220
+                ApprovalDate.Write(sDef);                                                                                                   // MakerGen.cs:220
+                LastReviewDate.Write(sDef);                                                                                                 // MakerGen.cs:220
+                EffectivePeriod.Write(sDef);                                                                                                // MakerGen.cs:220
+                Topic.Write(sDef);                                                                                                          // MakerGen.cs:220
+                Author.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Editor.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Reviewer.Write(sDef);                                                                                                       // MakerGen.cs:220
+                Endorser.Write(sDef);                                                                                                       // MakerGen.cs:220
+                RelatedArtifact.Write(sDef);                                                                                                // MakerGen.cs:220
+                Type.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Characteristic.Write(sDef);                                                                                                 // MakerGen.cs:220
+            }                                                                                                                               // MakerGen.cs:431
+        }                                                                                                                                   // MakerGen.cs:391
+        public EvidenceVariable_Elements Elements { get; }                                                                                  // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+        public EvidenceVariable()                                                                                                           // MakerGen.cs:394
+        {                                                                                                                                   // MakerGen.cs:395
+            this.Elements = new EvidenceVariable_Elements();                                                                                // MakerGen.cs:396
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
+        {                                                                                                                                   // MakerGen.cs:400
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
+        }                                                                                                                                   // MakerGen.cs:402
+    }                                                                                                                                       // MakerGen.cs:403
+}                                                                                                                                           // MakerGen.cs:466

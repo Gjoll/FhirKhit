@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:451
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
-using System.IO;                                                                                                                            // MakerGen.cs:453
-using System.Linq;                                                                                                                          // MakerGen.cs:454
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
-                                                                                                                                            // MakerGen.cs:456
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
-{                                                                                                                                           // MakerGen.cs:458
-    #region Json                                                                                                                            // MakerGen.cs:459
-    #if NEVER                                                                                                                               // MakerGen.cs:460
+using System;                                                                                                                               // MakerGen.cs:449
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
+using System.IO;                                                                                                                            // MakerGen.cs:451
+using System.Linq;                                                                                                                          // MakerGen.cs:452
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
+                                                                                                                                            // MakerGen.cs:454
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
+{                                                                                                                                           // MakerGen.cs:456
+    #region Json                                                                                                                            // MakerGen.cs:457
+    #if NEVER                                                                                                                               // MakerGen.cs:458
     {
       "resourceType": "StructureDefinition",
       "id": "TestReport",
@@ -505,693 +505,873 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:463
+    #endregion                                                                                                                              // MakerGen.cs:461
     /// <summary>
     /// Fhir resource 'TestReport'
     /// </summary>
     // 0. TestReport
-    public class TestReport : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:385
-    {                                                                                                                                       // MakerGen.cs:386
-        public class TestReport_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                      // MakerGen.cs:387
-        {                                                                                                                                   // MakerGen.cs:388
+    public class TestReport : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
+        public class TestReport_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                      // MakerGen.cs:385
+        {                                                                                                                                   // MakerGen.cs:386
             // 9. TestReport.participant
-            public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Participant_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                        // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Participant_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                        // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 10. TestReport.participant.type
-                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:236
+                    public ElementDefinitionInfo Type;                                                                                      // MakerGen.cs:216
                     // 11. TestReport.participant.uri
-                    public ElementDefinitionInfo Uri;                                                                                       // MakerGen.cs:236
+                    public ElementDefinitionInfo Uri;                                                                                       // MakerGen.cs:216
                     // 12. TestReport.participant.display
-                    public ElementDefinitionInfo Display;                                                                                   // MakerGen.cs:236
-                    public Type_Participant_Elements()                                                                                      // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:251
+                    public ElementDefinitionInfo Display;                                                                                   // MakerGen.cs:216
+                    public Type_Participant_Elements()                                                                                      // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
                             // 10. TestReport.participant.type
-                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Type",                                                                                              // MakerGen.cs:255
-                                Path= "TestReport.participant.type",                                                                        // MakerGen.cs:256
-                                Id = "TestReport.participant.type",                                                                         // MakerGen.cs:257
-                                Min = 1,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Type",                                                                                              // MakerGen.cs:235
+                                Path= "TestReport.participant.type",                                                                        // MakerGen.cs:236
+                                Id = "TestReport.participant.type",                                                                         // MakerGen.cs:237
+                                Min = 1,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 11. TestReport.participant.uri
-                            this.Uri = new ElementDefinitionInfo                                                                            // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Uri",                                                                                               // MakerGen.cs:255
-                                Path= "TestReport.participant.uri",                                                                         // MakerGen.cs:256
-                                Id = "TestReport.participant.uri",                                                                          // MakerGen.cs:257
-                                Min = 1,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Uri = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Uri",                                                                                               // MakerGen.cs:235
+                                Path= "TestReport.participant.uri",                                                                         // MakerGen.cs:236
+                                Id = "TestReport.participant.uri",                                                                          // MakerGen.cs:237
+                                Min = 1,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 12. TestReport.participant.display
-                            this.Display = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Display",                                                                                           // MakerGen.cs:255
-                                Path= "TestReport.participant.display",                                                                     // MakerGen.cs:256
-                                Id = "TestReport.participant.display",                                                                      // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                        Type.Write(sDef);                                                                                                   // MakerGen.cs:240
-                        Uri.Write(sDef);                                                                                                    // MakerGen.cs:240
-                        Display.Write(sDef);                                                                                                // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Participant_Elements Elements { get; }                                                                          // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Participant()                                                                                                   // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Participant_Elements();                                                                        // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                            this.Display = new ElementDefinitionInfo                                                                        // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Display",                                                                                           // MakerGen.cs:235
+                                Path= "TestReport.participant.display",                                                                     // MakerGen.cs:236
+                                Id = "TestReport.participant.display",                                                                      // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        Type.Write(sDef);                                                                                                   // MakerGen.cs:220
+                        Uri.Write(sDef);                                                                                                    // MakerGen.cs:220
+                        Display.Write(sDef);                                                                                                // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Participant_Elements Elements { get; }                                                                          // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Participant()                                                                                                   // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Participant_Elements();                                                                        // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 13. TestReport.setup
-            public class Type_Setup : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Setup_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Setup : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Setup_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 14. TestReport.setup.action
-                    public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:385
-                    {                                                                                                                       // MakerGen.cs:386
-                        public class Type_Action_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:387
-                        {                                                                                                                   // MakerGen.cs:388
+                    public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
+                        public class Type_Action_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:385
+                        {                                                                                                                   // MakerGen.cs:386
                             // 15. TestReport.setup.action.operation
-                            public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                         // MakerGen.cs:385
-                            {                                                                                                               // MakerGen.cs:386
-                                public class Type_Operation_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                          // MakerGen.cs:387
-                                {                                                                                                           // MakerGen.cs:388
+                            public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                         // MakerGen.cs:383
+                            {                                                                                                               // MakerGen.cs:384
+                                public class Type_Operation_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                          // MakerGen.cs:385
+                                {                                                                                                           // MakerGen.cs:386
                                     // 16. TestReport.setup.action.operation.result
-                                    public ElementDefinitionInfo Result;                                                                    // MakerGen.cs:236
+                                    public ElementDefinitionInfo Result;                                                                    // MakerGen.cs:216
                                     // 17. TestReport.setup.action.operation.message
-                                    public ElementDefinitionInfo Message;                                                                   // MakerGen.cs:236
+                                    public ElementDefinitionInfo Message;                                                                   // MakerGen.cs:216
                                     // 18. TestReport.setup.action.operation.detail
-                                    public ElementDefinitionInfo Detail;                                                                    // MakerGen.cs:236
-                                    public Type_Operation_Elements()                                                                        // MakerGen.cs:409
-                                    {                                                                                                       // MakerGen.cs:410
-                                        {                                                                                                   // MakerGen.cs:251
+                                    public ElementDefinitionInfo Detail;                                                                    // MakerGen.cs:216
+                                    public Type_Operation_Elements()                                                                        // MakerGen.cs:407
+                                    {                                                                                                       // MakerGen.cs:408
+                                        {                                                                                                   // MakerGen.cs:231
                                             // 16. TestReport.setup.action.operation.result
-                                            this.Result = new ElementDefinitionInfo                                                         // MakerGen.cs:253
-                                            {                                                                                               // MakerGen.cs:254
-                                                Name = "Result",                                                                            // MakerGen.cs:255
-                                                Path= "TestReport.setup.action.operation.result",                                           // MakerGen.cs:256
-                                                Id = "TestReport.setup.action.operation.result",                                            // MakerGen.cs:257
-                                                Min = 1,                                                                                    // MakerGen.cs:258
-                                                Max = 1,                                                                                    // MakerGen.cs:259
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
-                                                {                                                                                           // MakerGen.cs:261
-                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:299
-                                                    {                                                                                       // MakerGen.cs:300
-                                                    }                                                                                       // MakerGen.cs:303
-                                                }                                                                                           // MakerGen.cs:263
-                                            };                                                                                              // MakerGen.cs:264
-                                        }                                                                                                   // MakerGen.cs:366
-                                        {                                                                                                   // MakerGen.cs:251
+                                            this.Result = new ElementDefinitionInfo                                                         // MakerGen.cs:233
+                                            {                                                                                               // MakerGen.cs:234
+                                                Name = "Result",                                                                            // MakerGen.cs:235
+                                                Path= "TestReport.setup.action.operation.result",                                           // MakerGen.cs:236
+                                                Id = "TestReport.setup.action.operation.result",                                            // MakerGen.cs:237
+                                                Min = 1,                                                                                    // MakerGen.cs:238
+                                                Max = 1,                                                                                    // MakerGen.cs:239
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
+                                                {                                                                                           // MakerGen.cs:241
+                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:300
+                                                    {                                                                                       // MakerGen.cs:301
+                                                    }                                                                                       // MakerGen.cs:304
+                                                }                                                                                           // MakerGen.cs:243
+                                            };                                                                                              // MakerGen.cs:244
+                                        }                                                                                                   // MakerGen.cs:245
+                                        {                                                                                                   // MakerGen.cs:231
                                             // 17. TestReport.setup.action.operation.message
-                                            this.Message = new ElementDefinitionInfo                                                        // MakerGen.cs:253
-                                            {                                                                                               // MakerGen.cs:254
-                                                Name = "Message",                                                                           // MakerGen.cs:255
-                                                Path= "TestReport.setup.action.operation.message",                                          // MakerGen.cs:256
-                                                Id = "TestReport.setup.action.operation.message",                                           // MakerGen.cs:257
-                                                Min = 0,                                                                                    // MakerGen.cs:258
-                                                Max = 1,                                                                                    // MakerGen.cs:259
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
-                                                {                                                                                           // MakerGen.cs:261
-                                                    new FhirKhit.Maker.Common.Primitive.Markdown                                            // MakerGen.cs:299
-                                                    {                                                                                       // MakerGen.cs:300
-                                                    }                                                                                       // MakerGen.cs:303
-                                                }                                                                                           // MakerGen.cs:263
-                                            };                                                                                              // MakerGen.cs:264
-                                        }                                                                                                   // MakerGen.cs:366
-                                        {                                                                                                   // MakerGen.cs:251
+                                            this.Message = new ElementDefinitionInfo                                                        // MakerGen.cs:233
+                                            {                                                                                               // MakerGen.cs:234
+                                                Name = "Message",                                                                           // MakerGen.cs:235
+                                                Path= "TestReport.setup.action.operation.message",                                          // MakerGen.cs:236
+                                                Id = "TestReport.setup.action.operation.message",                                           // MakerGen.cs:237
+                                                Min = 0,                                                                                    // MakerGen.cs:238
+                                                Max = 1,                                                                                    // MakerGen.cs:239
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
+                                                {                                                                                           // MakerGen.cs:241
+                                                    new FhirKhit.Maker.Common.Primitive.Markdown                                            // MakerGen.cs:300
+                                                    {                                                                                       // MakerGen.cs:301
+                                                    }                                                                                       // MakerGen.cs:304
+                                                }                                                                                           // MakerGen.cs:243
+                                            };                                                                                              // MakerGen.cs:244
+                                        }                                                                                                   // MakerGen.cs:245
+                                        {                                                                                                   // MakerGen.cs:231
                                             // 18. TestReport.setup.action.operation.detail
-                                            this.Detail = new ElementDefinitionInfo                                                         // MakerGen.cs:253
-                                            {                                                                                               // MakerGen.cs:254
-                                                Name = "Detail",                                                                            // MakerGen.cs:255
-                                                Path= "TestReport.setup.action.operation.detail",                                           // MakerGen.cs:256
-                                                Id = "TestReport.setup.action.operation.detail",                                            // MakerGen.cs:257
-                                                Min = 0,                                                                                    // MakerGen.cs:258
-                                                Max = 1,                                                                                    // MakerGen.cs:259
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
-                                                {                                                                                           // MakerGen.cs:261
-                                                    new FhirKhit.Maker.Common.Primitive.Uri                                                 // MakerGen.cs:299
-                                                    {                                                                                       // MakerGen.cs:300
-                                                    }                                                                                       // MakerGen.cs:303
-                                                }                                                                                           // MakerGen.cs:263
-                                            };                                                                                              // MakerGen.cs:264
-                                        }                                                                                                   // MakerGen.cs:366
-                                    }                                                                                                       // MakerGen.cs:429
-                                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:414
-                                    {                                                                                                       // MakerGen.cs:415
-                                        base.Write(sDef);                                                                                   // MakerGen.cs:416
-                                        Result.Write(sDef);                                                                                 // MakerGen.cs:240
-                                        Message.Write(sDef);                                                                                // MakerGen.cs:240
-                                        Detail.Write(sDef);                                                                                 // MakerGen.cs:240
-                                    }                                                                                                       // MakerGen.cs:433
-                                }                                                                                                           // MakerGen.cs:393
-                                public Type_Operation_Elements Elements { get; }                                                            // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                                public Type_Operation()                                                                                     // MakerGen.cs:396
-                                {                                                                                                           // MakerGen.cs:397
-                                    this.Elements = new Type_Operation_Elements();                                                          // MakerGen.cs:398
-                                }                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:401
-                                {                                                                                                           // MakerGen.cs:402
-                                    this.Elements.Write(sDef);                                                                              // MakerGen.cs:403
-                                }                                                                                                           // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
+                                            this.Detail = new ElementDefinitionInfo                                                         // MakerGen.cs:233
+                                            {                                                                                               // MakerGen.cs:234
+                                                Name = "Detail",                                                                            // MakerGen.cs:235
+                                                Path= "TestReport.setup.action.operation.detail",                                           // MakerGen.cs:236
+                                                Id = "TestReport.setup.action.operation.detail",                                            // MakerGen.cs:237
+                                                Min = 0,                                                                                    // MakerGen.cs:238
+                                                Max = 1,                                                                                    // MakerGen.cs:239
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
+                                                {                                                                                           // MakerGen.cs:241
+                                                    new FhirKhit.Maker.Common.Primitive.Uri                                                 // MakerGen.cs:300
+                                                    {                                                                                       // MakerGen.cs:301
+                                                    }                                                                                       // MakerGen.cs:304
+                                                }                                                                                           // MakerGen.cs:243
+                                            };                                                                                              // MakerGen.cs:244
+                                        }                                                                                                   // MakerGen.cs:245
+                                    }                                                                                                       // MakerGen.cs:427
+                                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:412
+                                    {                                                                                                       // MakerGen.cs:413
+                                        base.Write(sDef);                                                                                   // MakerGen.cs:414
+                                        Result.Write(sDef);                                                                                 // MakerGen.cs:220
+                                        Message.Write(sDef);                                                                                // MakerGen.cs:220
+                                        Detail.Write(sDef);                                                                                 // MakerGen.cs:220
+                                    }                                                                                                       // MakerGen.cs:431
+                                }                                                                                                           // MakerGen.cs:391
+                                public Type_Operation_Elements Elements { get; }                                                            // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                                public Type_Operation()                                                                                     // MakerGen.cs:394
+                                {                                                                                                           // MakerGen.cs:395
+                                    this.Elements = new Type_Operation_Elements();                                                          // MakerGen.cs:396
+                                }                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:399
+                                {                                                                                                           // MakerGen.cs:400
+                                    this.Elements.Write(sDef);                                                                              // MakerGen.cs:401
+                                }                                                                                                           // MakerGen.cs:402
+                            }                                                                                                               // MakerGen.cs:403
                             // 19. TestReport.setup.action.assert
-                            public class Type_Assert : FhirKhit.Maker.Common.Complex.ComplexBase                                            // MakerGen.cs:385
-                            {                                                                                                               // MakerGen.cs:386
-                                public class Type_Assert_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                             // MakerGen.cs:387
-                                {                                                                                                           // MakerGen.cs:388
+                            public class Type_Assert : FhirKhit.Maker.Common.Complex.ComplexBase                                            // MakerGen.cs:383
+                            {                                                                                                               // MakerGen.cs:384
+                                public class Type_Assert_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                             // MakerGen.cs:385
+                                {                                                                                                           // MakerGen.cs:386
                                     // 20. TestReport.setup.action.assert.result
-                                    public ElementDefinitionInfo Result;                                                                    // MakerGen.cs:236
+                                    public ElementDefinitionInfo Result;                                                                    // MakerGen.cs:216
                                     // 21. TestReport.setup.action.assert.message
-                                    public ElementDefinitionInfo Message;                                                                   // MakerGen.cs:236
+                                    public ElementDefinitionInfo Message;                                                                   // MakerGen.cs:216
                                     // 22. TestReport.setup.action.assert.detail
-                                    public ElementDefinitionInfo Detail;                                                                    // MakerGen.cs:236
-                                    public Type_Assert_Elements()                                                                           // MakerGen.cs:409
-                                    {                                                                                                       // MakerGen.cs:410
-                                        {                                                                                                   // MakerGen.cs:251
+                                    public ElementDefinitionInfo Detail;                                                                    // MakerGen.cs:216
+                                    public Type_Assert_Elements()                                                                           // MakerGen.cs:407
+                                    {                                                                                                       // MakerGen.cs:408
+                                        {                                                                                                   // MakerGen.cs:231
                                             // 20. TestReport.setup.action.assert.result
-                                            this.Result = new ElementDefinitionInfo                                                         // MakerGen.cs:253
-                                            {                                                                                               // MakerGen.cs:254
-                                                Name = "Result",                                                                            // MakerGen.cs:255
-                                                Path= "TestReport.setup.action.assert.result",                                              // MakerGen.cs:256
-                                                Id = "TestReport.setup.action.assert.result",                                               // MakerGen.cs:257
-                                                Min = 1,                                                                                    // MakerGen.cs:258
-                                                Max = 1,                                                                                    // MakerGen.cs:259
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
-                                                {                                                                                           // MakerGen.cs:261
-                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:299
-                                                    {                                                                                       // MakerGen.cs:300
-                                                    }                                                                                       // MakerGen.cs:303
-                                                }                                                                                           // MakerGen.cs:263
-                                            };                                                                                              // MakerGen.cs:264
-                                        }                                                                                                   // MakerGen.cs:366
-                                        {                                                                                                   // MakerGen.cs:251
+                                            this.Result = new ElementDefinitionInfo                                                         // MakerGen.cs:233
+                                            {                                                                                               // MakerGen.cs:234
+                                                Name = "Result",                                                                            // MakerGen.cs:235
+                                                Path= "TestReport.setup.action.assert.result",                                              // MakerGen.cs:236
+                                                Id = "TestReport.setup.action.assert.result",                                               // MakerGen.cs:237
+                                                Min = 1,                                                                                    // MakerGen.cs:238
+                                                Max = 1,                                                                                    // MakerGen.cs:239
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
+                                                {                                                                                           // MakerGen.cs:241
+                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:300
+                                                    {                                                                                       // MakerGen.cs:301
+                                                    }                                                                                       // MakerGen.cs:304
+                                                }                                                                                           // MakerGen.cs:243
+                                            };                                                                                              // MakerGen.cs:244
+                                        }                                                                                                   // MakerGen.cs:245
+                                        {                                                                                                   // MakerGen.cs:231
                                             // 21. TestReport.setup.action.assert.message
-                                            this.Message = new ElementDefinitionInfo                                                        // MakerGen.cs:253
-                                            {                                                                                               // MakerGen.cs:254
-                                                Name = "Message",                                                                           // MakerGen.cs:255
-                                                Path= "TestReport.setup.action.assert.message",                                             // MakerGen.cs:256
-                                                Id = "TestReport.setup.action.assert.message",                                              // MakerGen.cs:257
-                                                Min = 0,                                                                                    // MakerGen.cs:258
-                                                Max = 1,                                                                                    // MakerGen.cs:259
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
-                                                {                                                                                           // MakerGen.cs:261
-                                                    new FhirKhit.Maker.Common.Primitive.Markdown                                            // MakerGen.cs:299
-                                                    {                                                                                       // MakerGen.cs:300
-                                                    }                                                                                       // MakerGen.cs:303
-                                                }                                                                                           // MakerGen.cs:263
-                                            };                                                                                              // MakerGen.cs:264
-                                        }                                                                                                   // MakerGen.cs:366
-                                        {                                                                                                   // MakerGen.cs:251
+                                            this.Message = new ElementDefinitionInfo                                                        // MakerGen.cs:233
+                                            {                                                                                               // MakerGen.cs:234
+                                                Name = "Message",                                                                           // MakerGen.cs:235
+                                                Path= "TestReport.setup.action.assert.message",                                             // MakerGen.cs:236
+                                                Id = "TestReport.setup.action.assert.message",                                              // MakerGen.cs:237
+                                                Min = 0,                                                                                    // MakerGen.cs:238
+                                                Max = 1,                                                                                    // MakerGen.cs:239
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
+                                                {                                                                                           // MakerGen.cs:241
+                                                    new FhirKhit.Maker.Common.Primitive.Markdown                                            // MakerGen.cs:300
+                                                    {                                                                                       // MakerGen.cs:301
+                                                    }                                                                                       // MakerGen.cs:304
+                                                }                                                                                           // MakerGen.cs:243
+                                            };                                                                                              // MakerGen.cs:244
+                                        }                                                                                                   // MakerGen.cs:245
+                                        {                                                                                                   // MakerGen.cs:231
                                             // 22. TestReport.setup.action.assert.detail
-                                            this.Detail = new ElementDefinitionInfo                                                         // MakerGen.cs:253
-                                            {                                                                                               // MakerGen.cs:254
-                                                Name = "Detail",                                                                            // MakerGen.cs:255
-                                                Path= "TestReport.setup.action.assert.detail",                                              // MakerGen.cs:256
-                                                Id = "TestReport.setup.action.assert.detail",                                               // MakerGen.cs:257
-                                                Min = 0,                                                                                    // MakerGen.cs:258
-                                                Max = 1,                                                                                    // MakerGen.cs:259
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
-                                                {                                                                                           // MakerGen.cs:261
-                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:299
-                                                    {                                                                                       // MakerGen.cs:300
-                                                    }                                                                                       // MakerGen.cs:303
-                                                }                                                                                           // MakerGen.cs:263
-                                            };                                                                                              // MakerGen.cs:264
-                                        }                                                                                                   // MakerGen.cs:366
-                                    }                                                                                                       // MakerGen.cs:429
-                                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:414
-                                    {                                                                                                       // MakerGen.cs:415
-                                        base.Write(sDef);                                                                                   // MakerGen.cs:416
-                                        Result.Write(sDef);                                                                                 // MakerGen.cs:240
-                                        Message.Write(sDef);                                                                                // MakerGen.cs:240
-                                        Detail.Write(sDef);                                                                                 // MakerGen.cs:240
-                                    }                                                                                                       // MakerGen.cs:433
-                                }                                                                                                           // MakerGen.cs:393
-                                public Type_Assert_Elements Elements { get; }                                                               // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                                public Type_Assert()                                                                                        // MakerGen.cs:396
-                                {                                                                                                           // MakerGen.cs:397
-                                    this.Elements = new Type_Assert_Elements();                                                             // MakerGen.cs:398
-                                }                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:401
-                                {                                                                                                           // MakerGen.cs:402
-                                    this.Elements.Write(sDef);                                                                              // MakerGen.cs:403
-                                }                                                                                                           // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
-                            public Type_Action_Elements()                                                                                   // MakerGen.cs:409
-                            {                                                                                                               // MakerGen.cs:410
-                            }                                                                                                               // MakerGen.cs:429
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:414
-                            {                                                                                                               // MakerGen.cs:415
-                                base.Write(sDef);                                                                                           // MakerGen.cs:416
-                            }                                                                                                               // MakerGen.cs:433
-                        }                                                                                                                   // MakerGen.cs:393
-                        public Type_Action_Elements Elements { get; }                                                                       // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                        public Type_Action()                                                                                                // MakerGen.cs:396
-                        {                                                                                                                   // MakerGen.cs:397
-                            this.Elements = new Type_Action_Elements();                                                                     // MakerGen.cs:398
-                        }                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:401
-                        {                                                                                                                   // MakerGen.cs:402
-                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:403
-                        }                                                                                                                   // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                    public Type_Setup_Elements()                                                                                            // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Setup_Elements Elements { get; }                                                                                // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Setup()                                                                                                         // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Setup_Elements();                                                                              // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                                            this.Detail = new ElementDefinitionInfo                                                         // MakerGen.cs:233
+                                            {                                                                                               // MakerGen.cs:234
+                                                Name = "Detail",                                                                            // MakerGen.cs:235
+                                                Path= "TestReport.setup.action.assert.detail",                                              // MakerGen.cs:236
+                                                Id = "TestReport.setup.action.assert.detail",                                               // MakerGen.cs:237
+                                                Min = 0,                                                                                    // MakerGen.cs:238
+                                                Max = 1,                                                                                    // MakerGen.cs:239
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:240
+                                                {                                                                                           // MakerGen.cs:241
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:300
+                                                    {                                                                                       // MakerGen.cs:301
+                                                    }                                                                                       // MakerGen.cs:304
+                                                }                                                                                           // MakerGen.cs:243
+                                            };                                                                                              // MakerGen.cs:244
+                                        }                                                                                                   // MakerGen.cs:245
+                                    }                                                                                                       // MakerGen.cs:427
+                                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:412
+                                    {                                                                                                       // MakerGen.cs:413
+                                        base.Write(sDef);                                                                                   // MakerGen.cs:414
+                                        Result.Write(sDef);                                                                                 // MakerGen.cs:220
+                                        Message.Write(sDef);                                                                                // MakerGen.cs:220
+                                        Detail.Write(sDef);                                                                                 // MakerGen.cs:220
+                                    }                                                                                                       // MakerGen.cs:431
+                                }                                                                                                           // MakerGen.cs:391
+                                public Type_Assert_Elements Elements { get; }                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                                public Type_Assert()                                                                                        // MakerGen.cs:394
+                                {                                                                                                           // MakerGen.cs:395
+                                    this.Elements = new Type_Assert_Elements();                                                             // MakerGen.cs:396
+                                }                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:399
+                                {                                                                                                           // MakerGen.cs:400
+                                    this.Elements.Write(sDef);                                                                              // MakerGen.cs:401
+                                }                                                                                                           // MakerGen.cs:402
+                            }                                                                                                               // MakerGen.cs:403
+                            // 15. TestReport.setup.action.operation
+                            public ElementDefinitionInfo Operation;                                                                         // MakerGen.cs:216
+                            // 19. TestReport.setup.action.assert
+                            public ElementDefinitionInfo Assert;                                                                            // MakerGen.cs:216
+                            public Type_Action_Elements()                                                                                   // MakerGen.cs:407
+                            {                                                                                                               // MakerGen.cs:408
+                                {                                                                                                           // MakerGen.cs:231
+                                    // 15. TestReport.setup.action.operation
+                                    this.Operation = new ElementDefinitionInfo                                                              // MakerGen.cs:233
+                                    {                                                                                                       // MakerGen.cs:234
+                                        Name = "Operation",                                                                                 // MakerGen.cs:235
+                                        Path= "TestReport.setup.action.operation",                                                          // MakerGen.cs:236
+                                        Id = "TestReport.setup.action.operation",                                                           // MakerGen.cs:237
+                                        Min = 0,                                                                                            // MakerGen.cs:238
+                                        Max = 1,                                                                                            // MakerGen.cs:239
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
+                                        {                                                                                                   // MakerGen.cs:241
+                                            new Type_Operation                                                                              // MakerGen.cs:259
+                                            {                                                                                               // MakerGen.cs:260
+                                            }                                                                                               // MakerGen.cs:261
+                                        }                                                                                                   // MakerGen.cs:243
+                                    };                                                                                                      // MakerGen.cs:244
+                                }                                                                                                           // MakerGen.cs:245
+                                {                                                                                                           // MakerGen.cs:231
+                                    // 19. TestReport.setup.action.assert
+                                    this.Assert = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
+                                    {                                                                                                       // MakerGen.cs:234
+                                        Name = "Assert",                                                                                    // MakerGen.cs:235
+                                        Path= "TestReport.setup.action.assert",                                                             // MakerGen.cs:236
+                                        Id = "TestReport.setup.action.assert",                                                              // MakerGen.cs:237
+                                        Min = 0,                                                                                            // MakerGen.cs:238
+                                        Max = 1,                                                                                            // MakerGen.cs:239
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
+                                        {                                                                                                   // MakerGen.cs:241
+                                            new Type_Assert                                                                                 // MakerGen.cs:259
+                                            {                                                                                               // MakerGen.cs:260
+                                            }                                                                                               // MakerGen.cs:261
+                                        }                                                                                                   // MakerGen.cs:243
+                                    };                                                                                                      // MakerGen.cs:244
+                                }                                                                                                           // MakerGen.cs:245
+                            }                                                                                                               // MakerGen.cs:427
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:412
+                            {                                                                                                               // MakerGen.cs:413
+                                base.Write(sDef);                                                                                           // MakerGen.cs:414
+                                Operation.Write(sDef);                                                                                      // MakerGen.cs:220
+                                Assert.Write(sDef);                                                                                         // MakerGen.cs:220
+                            }                                                                                                               // MakerGen.cs:431
+                        }                                                                                                                   // MakerGen.cs:391
+                        public Type_Action_Elements Elements { get; }                                                                       // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                        public Type_Action()                                                                                                // MakerGen.cs:394
+                        {                                                                                                                   // MakerGen.cs:395
+                            this.Elements = new Type_Action_Elements();                                                                     // MakerGen.cs:396
+                        }                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:399
+                        {                                                                                                                   // MakerGen.cs:400
+                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:401
+                        }                                                                                                                   // MakerGen.cs:402
+                    }                                                                                                                       // MakerGen.cs:403
+                    // 14. TestReport.setup.action
+                    public ElementDefinitionInfo Action;                                                                                    // MakerGen.cs:216
+                    public Type_Setup_Elements()                                                                                            // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
+                            // 14. TestReport.setup.action
+                            this.Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Action",                                                                                            // MakerGen.cs:235
+                                Path= "TestReport.setup.action",                                                                            // MakerGen.cs:236
+                                Id = "TestReport.setup.action",                                                                             // MakerGen.cs:237
+                                Min = 1,                                                                                                    // MakerGen.cs:238
+                                Max = -1,                                                                                                   // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new Type_Action                                                                                         // MakerGen.cs:259
+                                    {                                                                                                       // MakerGen.cs:260
+                                    }                                                                                                       // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        Action.Write(sDef);                                                                                                 // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Setup_Elements Elements { get; }                                                                                // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Setup()                                                                                                         // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Setup_Elements();                                                                              // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 23. TestReport.test
-            public class Type_Test : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Test_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                               // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Test : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Test_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                               // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 26. TestReport.test.action
-                    public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:385
-                    {                                                                                                                       // MakerGen.cs:386
-                        public class Type_Action_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:387
-                        {                                                                                                                   // MakerGen.cs:388
+                    public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
+                        public class Type_Action_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:385
+                        {                                                                                                                   // MakerGen.cs:386
                             // 27. TestReport.test.action.operation
-                            public ElementDefinitionInfo Operation;                                                                         // MakerGen.cs:236
+                            public ElementDefinitionInfo Operation;                                                                         // MakerGen.cs:216
                             // 28. TestReport.test.action.assert
-                            public ElementDefinitionInfo Assert;                                                                            // MakerGen.cs:236
-                            public Type_Action_Elements()                                                                                   // MakerGen.cs:409
-                            {                                                                                                               // MakerGen.cs:410
-                                {                                                                                                           // MakerGen.cs:251
+                            public ElementDefinitionInfo Assert;                                                                            // MakerGen.cs:216
+                            public Type_Action_Elements()                                                                                   // MakerGen.cs:407
+                            {                                                                                                               // MakerGen.cs:408
+                                {                                                                                                           // MakerGen.cs:231
                                     // 27. TestReport.test.action.operation
-                                    this.Operation = new ElementDefinitionInfo                                                              // MakerGen.cs:253
-                                    {                                                                                                       // MakerGen.cs:254
-                                        Name = "Operation",                                                                                 // MakerGen.cs:255
-                                        Path= "TestReport.test.action.operation",                                                           // MakerGen.cs:256
-                                        Id = "TestReport.test.action.operation",                                                            // MakerGen.cs:257
-                                        Min = 0,                                                                                            // MakerGen.cs:258
-                                        Max = 1,                                                                                            // MakerGen.cs:259
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
-                                        {                                                                                                   // MakerGen.cs:261
-                                        }                                                                                                   // MakerGen.cs:263
-                                    };                                                                                                      // MakerGen.cs:264
-                                }                                                                                                           // MakerGen.cs:366
-                                {                                                                                                           // MakerGen.cs:251
+                                    this.Operation = new ElementDefinitionInfo                                                              // MakerGen.cs:233
+                                    {                                                                                                       // MakerGen.cs:234
+                                        Name = "Operation",                                                                                 // MakerGen.cs:235
+                                        Path= "TestReport.test.action.operation",                                                           // MakerGen.cs:236
+                                        Id = "TestReport.test.action.operation",                                                            // MakerGen.cs:237
+                                        Min = 0,                                                                                            // MakerGen.cs:238
+                                        Max = 1,                                                                                            // MakerGen.cs:239
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
+                                        {                                                                                                   // MakerGen.cs:241
+                                        }                                                                                                   // MakerGen.cs:243
+                                    };                                                                                                      // MakerGen.cs:244
+                                }                                                                                                           // MakerGen.cs:245
+                                {                                                                                                           // MakerGen.cs:231
                                     // 28. TestReport.test.action.assert
-                                    this.Assert = new ElementDefinitionInfo                                                                 // MakerGen.cs:253
-                                    {                                                                                                       // MakerGen.cs:254
-                                        Name = "Assert",                                                                                    // MakerGen.cs:255
-                                        Path= "TestReport.test.action.assert",                                                              // MakerGen.cs:256
-                                        Id = "TestReport.test.action.assert",                                                               // MakerGen.cs:257
-                                        Min = 0,                                                                                            // MakerGen.cs:258
-                                        Max = 1,                                                                                            // MakerGen.cs:259
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
-                                        {                                                                                                   // MakerGen.cs:261
-                                        }                                                                                                   // MakerGen.cs:263
-                                    };                                                                                                      // MakerGen.cs:264
-                                }                                                                                                           // MakerGen.cs:366
-                            }                                                                                                               // MakerGen.cs:429
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:414
-                            {                                                                                                               // MakerGen.cs:415
-                                base.Write(sDef);                                                                                           // MakerGen.cs:416
-                                Operation.Write(sDef);                                                                                      // MakerGen.cs:240
-                                Assert.Write(sDef);                                                                                         // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:433
-                        }                                                                                                                   // MakerGen.cs:393
-                        public Type_Action_Elements Elements { get; }                                                                       // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                        public Type_Action()                                                                                                // MakerGen.cs:396
-                        {                                                                                                                   // MakerGen.cs:397
-                            this.Elements = new Type_Action_Elements();                                                                     // MakerGen.cs:398
-                        }                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:401
-                        {                                                                                                                   // MakerGen.cs:402
-                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:403
-                        }                                                                                                                   // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
+                                    this.Assert = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
+                                    {                                                                                                       // MakerGen.cs:234
+                                        Name = "Assert",                                                                                    // MakerGen.cs:235
+                                        Path= "TestReport.test.action.assert",                                                              // MakerGen.cs:236
+                                        Id = "TestReport.test.action.assert",                                                               // MakerGen.cs:237
+                                        Min = 0,                                                                                            // MakerGen.cs:238
+                                        Max = 1,                                                                                            // MakerGen.cs:239
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
+                                        {                                                                                                   // MakerGen.cs:241
+                                        }                                                                                                   // MakerGen.cs:243
+                                    };                                                                                                      // MakerGen.cs:244
+                                }                                                                                                           // MakerGen.cs:245
+                            }                                                                                                               // MakerGen.cs:427
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:412
+                            {                                                                                                               // MakerGen.cs:413
+                                base.Write(sDef);                                                                                           // MakerGen.cs:414
+                                Operation.Write(sDef);                                                                                      // MakerGen.cs:220
+                                Assert.Write(sDef);                                                                                         // MakerGen.cs:220
+                            }                                                                                                               // MakerGen.cs:431
+                        }                                                                                                                   // MakerGen.cs:391
+                        public Type_Action_Elements Elements { get; }                                                                       // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                        public Type_Action()                                                                                                // MakerGen.cs:394
+                        {                                                                                                                   // MakerGen.cs:395
+                            this.Elements = new Type_Action_Elements();                                                                     // MakerGen.cs:396
+                        }                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:399
+                        {                                                                                                                   // MakerGen.cs:400
+                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:401
+                        }                                                                                                                   // MakerGen.cs:402
+                    }                                                                                                                       // MakerGen.cs:403
                     // 24. TestReport.test.name
-                    public ElementDefinitionInfo Name;                                                                                      // MakerGen.cs:236
+                    public ElementDefinitionInfo Name;                                                                                      // MakerGen.cs:216
                     // 25. TestReport.test.description
-                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:236
-                    public Type_Test_Elements()                                                                                             // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:251
+                    public ElementDefinitionInfo Description;                                                                               // MakerGen.cs:216
+                    // 26. TestReport.test.action
+                    public ElementDefinitionInfo Action;                                                                                    // MakerGen.cs:216
+                    public Type_Test_Elements()                                                                                             // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
                             // 24. TestReport.test.name
-                            this.Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Name",                                                                                              // MakerGen.cs:255
-                                Path= "TestReport.test.name",                                                                               // MakerGen.cs:256
-                                Id = "TestReport.test.name",                                                                                // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Name",                                                                                              // MakerGen.cs:235
+                                Path= "TestReport.test.name",                                                                               // MakerGen.cs:236
+                                Id = "TestReport.test.name",                                                                                // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 25. TestReport.test.description
-                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Description",                                                                                       // MakerGen.cs:255
-                                Path= "TestReport.test.description",                                                                        // MakerGen.cs:256
-                                Id = "TestReport.test.description",                                                                         // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                        Name.Write(sDef);                                                                                                   // MakerGen.cs:240
-                        Description.Write(sDef);                                                                                            // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Test_Elements Elements { get; }                                                                                 // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Test()                                                                                                          // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Test_Elements();                                                                               // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                            this.Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Description",                                                                                       // MakerGen.cs:235
+                                Path= "TestReport.test.description",                                                                        // MakerGen.cs:236
+                                Id = "TestReport.test.description",                                                                         // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
+                            // 26. TestReport.test.action
+                            this.Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Action",                                                                                            // MakerGen.cs:235
+                                Path= "TestReport.test.action",                                                                             // MakerGen.cs:236
+                                Id = "TestReport.test.action",                                                                              // MakerGen.cs:237
+                                Min = 1,                                                                                                    // MakerGen.cs:238
+                                Max = -1,                                                                                                   // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new Type_Action                                                                                         // MakerGen.cs:259
+                                    {                                                                                                       // MakerGen.cs:260
+                                    }                                                                                                       // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        Name.Write(sDef);                                                                                                   // MakerGen.cs:220
+                        Description.Write(sDef);                                                                                            // MakerGen.cs:220
+                        Action.Write(sDef);                                                                                                 // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Test_Elements Elements { get; }                                                                                 // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Test()                                                                                                          // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Test_Elements();                                                                               // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 29. TestReport.teardown
-            public class Type_Teardown : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Teardown_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Teardown : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Teardown_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 30. TestReport.teardown.action
-                    public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:385
-                    {                                                                                                                       // MakerGen.cs:386
-                        public class Type_Action_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:387
-                        {                                                                                                                   // MakerGen.cs:388
+                    public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
+                        public class Type_Action_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:385
+                        {                                                                                                                   // MakerGen.cs:386
                             // 31. TestReport.teardown.action.operation
-                            public ElementDefinitionInfo Operation;                                                                         // MakerGen.cs:236
-                            public Type_Action_Elements()                                                                                   // MakerGen.cs:409
-                            {                                                                                                               // MakerGen.cs:410
-                                {                                                                                                           // MakerGen.cs:251
+                            public ElementDefinitionInfo Operation;                                                                         // MakerGen.cs:216
+                            public Type_Action_Elements()                                                                                   // MakerGen.cs:407
+                            {                                                                                                               // MakerGen.cs:408
+                                {                                                                                                           // MakerGen.cs:231
                                     // 31. TestReport.teardown.action.operation
-                                    this.Operation = new ElementDefinitionInfo                                                              // MakerGen.cs:253
-                                    {                                                                                                       // MakerGen.cs:254
-                                        Name = "Operation",                                                                                 // MakerGen.cs:255
-                                        Path= "TestReport.teardown.action.operation",                                                       // MakerGen.cs:256
-                                        Id = "TestReport.teardown.action.operation",                                                        // MakerGen.cs:257
-                                        Min = 1,                                                                                            // MakerGen.cs:258
-                                        Max = 1,                                                                                            // MakerGen.cs:259
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
-                                        {                                                                                                   // MakerGen.cs:261
-                                        }                                                                                                   // MakerGen.cs:263
-                                    };                                                                                                      // MakerGen.cs:264
-                                }                                                                                                           // MakerGen.cs:366
-                            }                                                                                                               // MakerGen.cs:429
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:414
-                            {                                                                                                               // MakerGen.cs:415
-                                base.Write(sDef);                                                                                           // MakerGen.cs:416
-                                Operation.Write(sDef);                                                                                      // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:433
-                        }                                                                                                                   // MakerGen.cs:393
-                        public Type_Action_Elements Elements { get; }                                                                       // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                        public Type_Action()                                                                                                // MakerGen.cs:396
-                        {                                                                                                                   // MakerGen.cs:397
-                            this.Elements = new Type_Action_Elements();                                                                     // MakerGen.cs:398
-                        }                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:401
-                        {                                                                                                                   // MakerGen.cs:402
-                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:403
-                        }                                                                                                                   // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                    public Type_Teardown_Elements()                                                                                         // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Teardown_Elements Elements { get; }                                                                             // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Teardown()                                                                                                      // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Teardown_Elements();                                                                           // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                                    this.Operation = new ElementDefinitionInfo                                                              // MakerGen.cs:233
+                                    {                                                                                                       // MakerGen.cs:234
+                                        Name = "Operation",                                                                                 // MakerGen.cs:235
+                                        Path= "TestReport.teardown.action.operation",                                                       // MakerGen.cs:236
+                                        Id = "TestReport.teardown.action.operation",                                                        // MakerGen.cs:237
+                                        Min = 1,                                                                                            // MakerGen.cs:238
+                                        Max = 1,                                                                                            // MakerGen.cs:239
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:240
+                                        {                                                                                                   // MakerGen.cs:241
+                                        }                                                                                                   // MakerGen.cs:243
+                                    };                                                                                                      // MakerGen.cs:244
+                                }                                                                                                           // MakerGen.cs:245
+                            }                                                                                                               // MakerGen.cs:427
+                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:412
+                            {                                                                                                               // MakerGen.cs:413
+                                base.Write(sDef);                                                                                           // MakerGen.cs:414
+                                Operation.Write(sDef);                                                                                      // MakerGen.cs:220
+                            }                                                                                                               // MakerGen.cs:431
+                        }                                                                                                                   // MakerGen.cs:391
+                        public Type_Action_Elements Elements { get; }                                                                       // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                        public Type_Action()                                                                                                // MakerGen.cs:394
+                        {                                                                                                                   // MakerGen.cs:395
+                            this.Elements = new Type_Action_Elements();                                                                     // MakerGen.cs:396
+                        }                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:399
+                        {                                                                                                                   // MakerGen.cs:400
+                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:401
+                        }                                                                                                                   // MakerGen.cs:402
+                    }                                                                                                                       // MakerGen.cs:403
+                    // 30. TestReport.teardown.action
+                    public ElementDefinitionInfo Action;                                                                                    // MakerGen.cs:216
+                    public Type_Teardown_Elements()                                                                                         // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
+                            // 30. TestReport.teardown.action
+                            this.Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Action",                                                                                            // MakerGen.cs:235
+                                Path= "TestReport.teardown.action",                                                                         // MakerGen.cs:236
+                                Id = "TestReport.teardown.action",                                                                          // MakerGen.cs:237
+                                Min = 1,                                                                                                    // MakerGen.cs:238
+                                Max = -1,                                                                                                   // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new Type_Action                                                                                         // MakerGen.cs:259
+                                    {                                                                                                       // MakerGen.cs:260
+                                    }                                                                                                       // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        Action.Write(sDef);                                                                                                 // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Teardown_Elements Elements { get; }                                                                             // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Teardown()                                                                                                      // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Teardown_Elements();                                                                           // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 1. TestReport.identifier
-            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:236
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
             // 2. TestReport.name
-            public ElementDefinitionInfo Name;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Name;                                                                                              // MakerGen.cs:216
             // 3. TestReport.status
-            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:216
             // 4. TestReport.testScript
-            public ElementDefinitionInfo TestScript;                                                                                        // MakerGen.cs:236
+            public ElementDefinitionInfo TestScript;                                                                                        // MakerGen.cs:216
             // 5. TestReport.result
-            public ElementDefinitionInfo Result;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Result;                                                                                            // MakerGen.cs:216
             // 6. TestReport.score
-            public ElementDefinitionInfo Score;                                                                                             // MakerGen.cs:236
+            public ElementDefinitionInfo Score;                                                                                             // MakerGen.cs:216
             // 7. TestReport.tester
-            public ElementDefinitionInfo Tester;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Tester;                                                                                            // MakerGen.cs:216
             // 8. TestReport.issued
-            public ElementDefinitionInfo Issued;                                                                                            // MakerGen.cs:236
-            public TestReport_Elements()                                                                                                    // MakerGen.cs:409
-            {                                                                                                                               // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:251
+            public ElementDefinitionInfo Issued;                                                                                            // MakerGen.cs:216
+            // 9. TestReport.participant
+            public ElementDefinitionInfo Participant;                                                                                       // MakerGen.cs:216
+            // 13. TestReport.setup
+            public ElementDefinitionInfo Setup;                                                                                             // MakerGen.cs:216
+            // 23. TestReport.test
+            public ElementDefinitionInfo Test;                                                                                              // MakerGen.cs:216
+            // 29. TestReport.teardown
+            public ElementDefinitionInfo Teardown;                                                                                          // MakerGen.cs:216
+            public TestReport_Elements()                                                                                                    // MakerGen.cs:407
+            {                                                                                                                               // MakerGen.cs:408
+                {                                                                                                                           // MakerGen.cs:231
                     // 1. TestReport.identifier
-                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Identifier",                                                                                                // MakerGen.cs:255
-                        Path= "TestReport.identifier",                                                                                      // MakerGen.cs:256
-                        Id = "TestReport.identifier",                                                                                       // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Identifier",                                                                                                // MakerGen.cs:235
+                        Path= "TestReport.identifier",                                                                                      // MakerGen.cs:236
+                        Id = "TestReport.identifier",                                                                                       // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 2. TestReport.name
-                    this.Name = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Name",                                                                                                      // MakerGen.cs:255
-                        Path= "TestReport.name",                                                                                            // MakerGen.cs:256
-                        Id = "TestReport.name",                                                                                             // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Name = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Name",                                                                                                      // MakerGen.cs:235
+                        Path= "TestReport.name",                                                                                            // MakerGen.cs:236
+                        Id = "TestReport.name",                                                                                             // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 3. TestReport.status
-                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Status",                                                                                                    // MakerGen.cs:255
-                        Path= "TestReport.status",                                                                                          // MakerGen.cs:256
-                        Id = "TestReport.status",                                                                                           // MakerGen.cs:257
-                        Min = 1,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Status",                                                                                                    // MakerGen.cs:235
+                        Path= "TestReport.status",                                                                                          // MakerGen.cs:236
+                        Id = "TestReport.status",                                                                                           // MakerGen.cs:237
+                        Min = 1,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 4. TestReport.testScript
-                    this.TestScript = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "TestScript",                                                                                                // MakerGen.cs:255
-                        Path= "TestReport.testScript",                                                                                      // MakerGen.cs:256
-                        Id = "TestReport.testScript",                                                                                       // MakerGen.cs:257
-                        Min = 1,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
-                            {                                                                                                               // MakerGen.cs:346
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                    this.TestScript = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "TestScript",                                                                                                // MakerGen.cs:235
+                        Path= "TestReport.testScript",                                                                                      // MakerGen.cs:236
+                        Id = "TestReport.testScript",                                                                                       // MakerGen.cs:237
+                        Min = 1,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/TestScript"                                                    // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/TestScript"                                                    // MakerGen.cs:349
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:349
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 5. TestReport.result
-                    this.Result = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Result",                                                                                                    // MakerGen.cs:255
-                        Path= "TestReport.result",                                                                                          // MakerGen.cs:256
-                        Id = "TestReport.result",                                                                                           // MakerGen.cs:257
-                        Min = 1,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Result = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Result",                                                                                                    // MakerGen.cs:235
+                        Path= "TestReport.result",                                                                                          // MakerGen.cs:236
+                        Id = "TestReport.result",                                                                                           // MakerGen.cs:237
+                        Min = 1,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 6. TestReport.score
-                    this.Score = new ElementDefinitionInfo                                                                                  // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Score",                                                                                                     // MakerGen.cs:255
-                        Path= "TestReport.score",                                                                                           // MakerGen.cs:256
-                        Id = "TestReport.score",                                                                                            // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Decimal                                                                     // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Score = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Score",                                                                                                     // MakerGen.cs:235
+                        Path= "TestReport.score",                                                                                           // MakerGen.cs:236
+                        Id = "TestReport.score",                                                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Decimal                                                                     // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 7. TestReport.tester
-                    this.Tester = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Tester",                                                                                                    // MakerGen.cs:255
-                        Path= "TestReport.tester",                                                                                          // MakerGen.cs:256
-                        Id = "TestReport.tester",                                                                                           // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Tester = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Tester",                                                                                                    // MakerGen.cs:235
+                        Path= "TestReport.tester",                                                                                          // MakerGen.cs:236
+                        Id = "TestReport.tester",                                                                                           // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 8. TestReport.issued
-                    this.Issued = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Issued",                                                                                                    // MakerGen.cs:255
-                        Path= "TestReport.issued",                                                                                          // MakerGen.cs:256
-                        Id = "TestReport.issued",                                                                                           // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:429
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
-            {                                                                                                                               // MakerGen.cs:415
-                base.Write(sDef);                                                                                                           // MakerGen.cs:416
-                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:240
-                Name.Write(sDef);                                                                                                           // MakerGen.cs:240
-                Status.Write(sDef);                                                                                                         // MakerGen.cs:240
-                TestScript.Write(sDef);                                                                                                     // MakerGen.cs:240
-                Result.Write(sDef);                                                                                                         // MakerGen.cs:240
-                Score.Write(sDef);                                                                                                          // MakerGen.cs:240
-                Tester.Write(sDef);                                                                                                         // MakerGen.cs:240
-                Issued.Write(sDef);                                                                                                         // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:433
-        }                                                                                                                                   // MakerGen.cs:393
-        public TestReport_Elements Elements { get; }                                                                                        // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-        public TestReport()                                                                                                                 // MakerGen.cs:396
-        {                                                                                                                                   // MakerGen.cs:397
-            this.Elements = new TestReport_Elements();                                                                                      // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
-        {                                                                                                                                   // MakerGen.cs:402
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
-        }                                                                                                                                   // MakerGen.cs:404
-    }                                                                                                                                       // MakerGen.cs:405
-}                                                                                                                                           // MakerGen.cs:468
+                    this.Issued = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Issued",                                                                                                    // MakerGen.cs:235
+                        Path= "TestReport.issued",                                                                                          // MakerGen.cs:236
+                        Id = "TestReport.issued",                                                                                           // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 9. TestReport.participant
+                    this.Participant = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Participant",                                                                                               // MakerGen.cs:235
+                        Path= "TestReport.participant",                                                                                     // MakerGen.cs:236
+                        Id = "TestReport.participant",                                                                                      // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Participant                                                                                            // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 13. TestReport.setup
+                    this.Setup = new ElementDefinitionInfo                                                                                  // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Setup",                                                                                                     // MakerGen.cs:235
+                        Path= "TestReport.setup",                                                                                           // MakerGen.cs:236
+                        Id = "TestReport.setup",                                                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Setup                                                                                                  // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 23. TestReport.test
+                    this.Test = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Test",                                                                                                      // MakerGen.cs:235
+                        Path= "TestReport.test",                                                                                            // MakerGen.cs:236
+                        Id = "TestReport.test",                                                                                             // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Test                                                                                                   // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 29. TestReport.teardown
+                    this.Teardown = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Teardown",                                                                                                  // MakerGen.cs:235
+                        Path= "TestReport.teardown",                                                                                        // MakerGen.cs:236
+                        Id = "TestReport.teardown",                                                                                         // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Teardown                                                                                               // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:427
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
+            {                                                                                                                               // MakerGen.cs:413
+                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
+                Name.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Status.Write(sDef);                                                                                                         // MakerGen.cs:220
+                TestScript.Write(sDef);                                                                                                     // MakerGen.cs:220
+                Result.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Score.Write(sDef);                                                                                                          // MakerGen.cs:220
+                Tester.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Issued.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Participant.Write(sDef);                                                                                                    // MakerGen.cs:220
+                Setup.Write(sDef);                                                                                                          // MakerGen.cs:220
+                Test.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Teardown.Write(sDef);                                                                                                       // MakerGen.cs:220
+            }                                                                                                                               // MakerGen.cs:431
+        }                                                                                                                                   // MakerGen.cs:391
+        public TestReport_Elements Elements { get; }                                                                                        // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+        public TestReport()                                                                                                                 // MakerGen.cs:394
+        {                                                                                                                                   // MakerGen.cs:395
+            this.Elements = new TestReport_Elements();                                                                                      // MakerGen.cs:396
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
+        {                                                                                                                                   // MakerGen.cs:400
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
+        }                                                                                                                                   // MakerGen.cs:402
+    }                                                                                                                                       // MakerGen.cs:403
+}                                                                                                                                           // MakerGen.cs:466

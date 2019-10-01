@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:451
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
-using System.IO;                                                                                                                            // MakerGen.cs:453
-using System.Linq;                                                                                                                          // MakerGen.cs:454
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
-                                                                                                                                            // MakerGen.cs:456
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
-{                                                                                                                                           // MakerGen.cs:458
-    #region Json                                                                                                                            // MakerGen.cs:459
-    #if NEVER                                                                                                                               // MakerGen.cs:460
+using System;                                                                                                                               // MakerGen.cs:449
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
+using System.IO;                                                                                                                            // MakerGen.cs:451
+using System.Linq;                                                                                                                          // MakerGen.cs:452
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
+                                                                                                                                            // MakerGen.cs:454
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
+{                                                                                                                                           // MakerGen.cs:456
+    #region Json                                                                                                                            // MakerGen.cs:457
+    #if NEVER                                                                                                                               // MakerGen.cs:458
     {
       "resourceType": "StructureDefinition",
       "id": "FamilyMemberHistory",
@@ -511,552 +511,572 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:463
+    #endregion                                                                                                                              // MakerGen.cs:461
     /// <summary>
     /// Fhir resource 'FamilyMemberHistory'
     /// </summary>
     // 0. FamilyMemberHistory
-    public class FamilyMemberHistory : FhirKhit.Maker.Common.Resource.ResourceBase                                                          // MakerGen.cs:385
-    {                                                                                                                                       // MakerGen.cs:386
-        public class FamilyMemberHistory_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:387
-        {                                                                                                                                   // MakerGen.cs:388
+    public class FamilyMemberHistory : FhirKhit.Maker.Common.Resource.ResourceBase                                                          // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
+        public class FamilyMemberHistory_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:385
+        {                                                                                                                                   // MakerGen.cs:386
             // 18. FamilyMemberHistory.condition
-            public class Type_Condition : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:385
-            {                                                                                                                               // MakerGen.cs:386
-                public class Type_Condition_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:387
-                {                                                                                                                           // MakerGen.cs:388
+            public class Type_Condition : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                public class Type_Condition_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:385
+                {                                                                                                                           // MakerGen.cs:386
                     // 19. FamilyMemberHistory.condition.code
-                    public ElementDefinitionInfo Code;                                                                                      // MakerGen.cs:236
+                    public ElementDefinitionInfo Code;                                                                                      // MakerGen.cs:216
                     // 20. FamilyMemberHistory.condition.outcome
-                    public ElementDefinitionInfo Outcome;                                                                                   // MakerGen.cs:236
+                    public ElementDefinitionInfo Outcome;                                                                                   // MakerGen.cs:216
                     // 21. FamilyMemberHistory.condition.contributedToDeath
-                    public ElementDefinitionInfo ContributedToDeath;                                                                        // MakerGen.cs:236
+                    public ElementDefinitionInfo ContributedToDeath;                                                                        // MakerGen.cs:216
                     // 22. FamilyMemberHistory.condition.onset[x]
-                    public ElementDefinitionInfo Onset;                                                                                     // MakerGen.cs:236
+                    public ElementDefinitionInfo Onset;                                                                                     // MakerGen.cs:216
                     // 23. FamilyMemberHistory.condition.note
-                    public ElementDefinitionInfo Note;                                                                                      // MakerGen.cs:236
-                    public Type_Condition_Elements()                                                                                        // MakerGen.cs:409
-                    {                                                                                                                       // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:251
+                    public ElementDefinitionInfo Note;                                                                                      // MakerGen.cs:216
+                    public Type_Condition_Elements()                                                                                        // MakerGen.cs:407
+                    {                                                                                                                       // MakerGen.cs:408
+                        {                                                                                                                   // MakerGen.cs:231
                             // 19. FamilyMemberHistory.condition.code
-                            this.Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Code",                                                                                              // MakerGen.cs:255
-                                Path= "FamilyMemberHistory.condition.code",                                                                 // MakerGen.cs:256
-                                Id = "FamilyMemberHistory.condition.code",                                                                  // MakerGen.cs:257
-                                Min = 1,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
-                                    {                                                                                                       // MakerGen.cs:315
-                                    }                                                                                                       // MakerGen.cs:318
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Code",                                                                                              // MakerGen.cs:235
+                                Path= "FamilyMemberHistory.condition.code",                                                                 // MakerGen.cs:236
+                                Id = "FamilyMemberHistory.condition.code",                                                                  // MakerGen.cs:237
+                                Min = 1,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
+                                    {                                                                                                       // MakerGen.cs:316
+                                    }                                                                                                       // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 20. FamilyMemberHistory.condition.outcome
-                            this.Outcome = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Outcome",                                                                                           // MakerGen.cs:255
-                                Path= "FamilyMemberHistory.condition.outcome",                                                              // MakerGen.cs:256
-                                Id = "FamilyMemberHistory.condition.outcome",                                                               // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
-                                    {                                                                                                       // MakerGen.cs:315
-                                    }                                                                                                       // MakerGen.cs:318
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Outcome = new ElementDefinitionInfo                                                                        // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Outcome",                                                                                           // MakerGen.cs:235
+                                Path= "FamilyMemberHistory.condition.outcome",                                                              // MakerGen.cs:236
+                                Id = "FamilyMemberHistory.condition.outcome",                                                               // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:315
+                                    {                                                                                                       // MakerGen.cs:316
+                                    }                                                                                                       // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 21. FamilyMemberHistory.condition.contributedToDeath
-                            this.ContributedToDeath = new ElementDefinitionInfo                                                             // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "ContributedToDeath",                                                                                // MakerGen.cs:255
-                                Path= "FamilyMemberHistory.condition.contributedToDeath",                                                   // MakerGen.cs:256
-                                Id = "FamilyMemberHistory.condition.contributedToDeath",                                                    // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.ContributedToDeath = new ElementDefinitionInfo                                                             // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "ContributedToDeath",                                                                                // MakerGen.cs:235
+                                Path= "FamilyMemberHistory.condition.contributedToDeath",                                                   // MakerGen.cs:236
+                                Id = "FamilyMemberHistory.condition.contributedToDeath",                                                    // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 22. FamilyMemberHistory.condition.onset[x]
-                            this.Onset = new ElementDefinitionInfo                                                                          // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Onset",                                                                                             // MakerGen.cs:255
-                                Path= "FamilyMemberHistory.condition.onset[x]",                                                             // MakerGen.cs:256
-                                Id = "FamilyMemberHistory.condition.onset[x]",                                                              // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = 1,                                                                                                    // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Age                                                                   // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    },                                                                                                      // MakerGen.cs:359
-                                    new FhirKhit.Maker.Common.Complex.Range                                                                 // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    },                                                                                                      // MakerGen.cs:359
-                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    },                                                                                                      // MakerGen.cs:359
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
-                                    {                                                                                                       // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:303
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                        {                                                                                                                   // MakerGen.cs:251
+                            this.Onset = new ElementDefinitionInfo                                                                          // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Onset",                                                                                             // MakerGen.cs:235
+                                Path= "FamilyMemberHistory.condition.onset[x]",                                                             // MakerGen.cs:236
+                                Id = "FamilyMemberHistory.condition.onset[x]",                                                              // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = 1,                                                                                                    // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Age                                                                   // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    },                                                                                                      // MakerGen.cs:360
+                                    new FhirKhit.Maker.Common.Complex.Range                                                                 // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    },                                                                                                      // MakerGen.cs:360
+                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    },                                                                                                      // MakerGen.cs:360
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:300
+                                    {                                                                                                       // MakerGen.cs:301
+                                    }                                                                                                       // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                        {                                                                                                                   // MakerGen.cs:231
                             // 23. FamilyMemberHistory.condition.note
-                            this.Note = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                            {                                                                                                               // MakerGen.cs:254
-                                Name = "Note",                                                                                              // MakerGen.cs:255
-                                Path= "FamilyMemberHistory.condition.note",                                                                 // MakerGen.cs:256
-                                Id = "FamilyMemberHistory.condition.note",                                                                  // MakerGen.cs:257
-                                Min = 0,                                                                                                    // MakerGen.cs:258
-                                Max = -1,                                                                                                   // MakerGen.cs:259
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
-                                {                                                                                                           // MakerGen.cs:261
-                                    new FhirKhit.Maker.Common.Complex.Annotation                                                            // MakerGen.cs:357
-                                    {                                                                                                       // MakerGen.cs:358
-                                    }                                                                                                       // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:263
-                            };                                                                                                              // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:429
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
-                    {                                                                                                                       // MakerGen.cs:415
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
-                        Code.Write(sDef);                                                                                                   // MakerGen.cs:240
-                        Outcome.Write(sDef);                                                                                                // MakerGen.cs:240
-                        ContributedToDeath.Write(sDef);                                                                                     // MakerGen.cs:240
-                        Onset.Write(sDef);                                                                                                  // MakerGen.cs:240
-                        Note.Write(sDef);                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:433
-                }                                                                                                                           // MakerGen.cs:393
-                public Type_Condition_Elements Elements { get; }                                                                            // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-                public Type_Condition()                                                                                                     // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:397
-                    this.Elements = new Type_Condition_Elements();                                                                          // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
-                {                                                                                                                           // MakerGen.cs:402
-                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
-                }                                                                                                                           // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
+                            this.Note = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                            {                                                                                                               // MakerGen.cs:234
+                                Name = "Note",                                                                                              // MakerGen.cs:235
+                                Path= "FamilyMemberHistory.condition.note",                                                                 // MakerGen.cs:236
+                                Id = "FamilyMemberHistory.condition.note",                                                                  // MakerGen.cs:237
+                                Min = 0,                                                                                                    // MakerGen.cs:238
+                                Max = -1,                                                                                                   // MakerGen.cs:239
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:240
+                                {                                                                                                           // MakerGen.cs:241
+                                    new FhirKhit.Maker.Common.Complex.Annotation                                                            // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:243
+                            };                                                                                                              // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:427
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:412
+                    {                                                                                                                       // MakerGen.cs:413
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:414
+                        Code.Write(sDef);                                                                                                   // MakerGen.cs:220
+                        Outcome.Write(sDef);                                                                                                // MakerGen.cs:220
+                        ContributedToDeath.Write(sDef);                                                                                     // MakerGen.cs:220
+                        Onset.Write(sDef);                                                                                                  // MakerGen.cs:220
+                        Note.Write(sDef);                                                                                                   // MakerGen.cs:220
+                    }                                                                                                                       // MakerGen.cs:431
+                }                                                                                                                           // MakerGen.cs:391
+                public Type_Condition_Elements Elements { get; }                                                                            // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+                public Type_Condition()                                                                                                     // MakerGen.cs:394
+                {                                                                                                                           // MakerGen.cs:395
+                    this.Elements = new Type_Condition_Elements();                                                                          // MakerGen.cs:396
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:399
+                {                                                                                                                           // MakerGen.cs:400
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:401
+                }                                                                                                                           // MakerGen.cs:402
+            }                                                                                                                               // MakerGen.cs:403
             // 1. FamilyMemberHistory.identifier
-            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:236
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:216
             // 2. FamilyMemberHistory.instantiatesCanonical
-            public ElementDefinitionInfo InstantiatesCanonical;                                                                             // MakerGen.cs:236
+            public ElementDefinitionInfo InstantiatesCanonical;                                                                             // MakerGen.cs:216
             // 3. FamilyMemberHistory.instantiatesUri
-            public ElementDefinitionInfo InstantiatesUri;                                                                                   // MakerGen.cs:236
+            public ElementDefinitionInfo InstantiatesUri;                                                                                   // MakerGen.cs:216
             // 4. FamilyMemberHistory.status
-            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:216
             // 5. FamilyMemberHistory.dataAbsentReason
-            public ElementDefinitionInfo DataAbsentReason;                                                                                  // MakerGen.cs:236
+            public ElementDefinitionInfo DataAbsentReason;                                                                                  // MakerGen.cs:216
             // 6. FamilyMemberHistory.patient
-            public ElementDefinitionInfo Patient;                                                                                           // MakerGen.cs:236
+            public ElementDefinitionInfo Patient;                                                                                           // MakerGen.cs:216
             // 7. FamilyMemberHistory.date
-            public ElementDefinitionInfo Date;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Date;                                                                                              // MakerGen.cs:216
             // 8. FamilyMemberHistory.name
-            public ElementDefinitionInfo Name;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Name;                                                                                              // MakerGen.cs:216
             // 9. FamilyMemberHistory.relationship
-            public ElementDefinitionInfo Relationship;                                                                                      // MakerGen.cs:236
+            public ElementDefinitionInfo Relationship;                                                                                      // MakerGen.cs:216
             // 10. FamilyMemberHistory.sex
-            public ElementDefinitionInfo Sex;                                                                                               // MakerGen.cs:236
+            public ElementDefinitionInfo Sex;                                                                                               // MakerGen.cs:216
             // 11. FamilyMemberHistory.born[x]
-            public ElementDefinitionInfo Born;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Born;                                                                                              // MakerGen.cs:216
             // 12. FamilyMemberHistory.age[x]
-            public ElementDefinitionInfo Age;                                                                                               // MakerGen.cs:236
+            public ElementDefinitionInfo Age;                                                                                               // MakerGen.cs:216
             // 13. FamilyMemberHistory.estimatedAge
-            public ElementDefinitionInfo EstimatedAge;                                                                                      // MakerGen.cs:236
+            public ElementDefinitionInfo EstimatedAge;                                                                                      // MakerGen.cs:216
             // 14. FamilyMemberHistory.deceased[x]
-            public ElementDefinitionInfo Deceased;                                                                                          // MakerGen.cs:236
+            public ElementDefinitionInfo Deceased;                                                                                          // MakerGen.cs:216
             // 15. FamilyMemberHistory.reasonCode
-            public ElementDefinitionInfo ReasonCode;                                                                                        // MakerGen.cs:236
+            public ElementDefinitionInfo ReasonCode;                                                                                        // MakerGen.cs:216
             // 16. FamilyMemberHistory.reasonReference
-            public ElementDefinitionInfo ReasonReference;                                                                                   // MakerGen.cs:236
+            public ElementDefinitionInfo ReasonReference;                                                                                   // MakerGen.cs:216
             // 17. FamilyMemberHistory.note
-            public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:236
-            public FamilyMemberHistory_Elements()                                                                                           // MakerGen.cs:409
-            {                                                                                                                               // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:251
+            public ElementDefinitionInfo Note;                                                                                              // MakerGen.cs:216
+            // 18. FamilyMemberHistory.condition
+            public ElementDefinitionInfo Condition;                                                                                         // MakerGen.cs:216
+            public FamilyMemberHistory_Elements()                                                                                           // MakerGen.cs:407
+            {                                                                                                                               // MakerGen.cs:408
+                {                                                                                                                           // MakerGen.cs:231
                     // 1. FamilyMemberHistory.identifier
-                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Identifier",                                                                                                // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.identifier",                                                                             // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.identifier",                                                                              // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Identifier",                                                                                                // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.identifier",                                                                             // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.identifier",                                                                              // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 2. FamilyMemberHistory.instantiatesCanonical
-                    this.InstantiatesCanonical = new ElementDefinitionInfo                                                                  // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "InstantiatesCanonical",                                                                                     // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.instantiatesCanonical",                                                                  // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.instantiatesCanonical",                                                                   // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:302
+                    this.InstantiatesCanonical = new ElementDefinitionInfo                                                                  // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "InstantiatesCanonical",                                                                                     // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.instantiatesCanonical",                                                                  // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.instantiatesCanonical",                                                                   // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:303
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/PlanDefinition",                                               // MakerGen.cs:302
-                                    "http://hl7.org/fhir/StructureDefinition/Questionnaire",                                                // MakerGen.cs:302
-                                    "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                           // MakerGen.cs:302
-                                    "http://hl7.org/fhir/StructureDefinition/Measure",                                                      // MakerGen.cs:302
-                                    "http://hl7.org/fhir/StructureDefinition/OperationDefinition"                                           // MakerGen.cs:302
+                                    "http://hl7.org/fhir/StructureDefinition/PlanDefinition",                                               // MakerGen.cs:303
+                                    "http://hl7.org/fhir/StructureDefinition/Questionnaire",                                                // MakerGen.cs:303
+                                    "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                           // MakerGen.cs:303
+                                    "http://hl7.org/fhir/StructureDefinition/Measure",                                                      // MakerGen.cs:303
+                                    "http://hl7.org/fhir/StructureDefinition/OperationDefinition"                                           // MakerGen.cs:303
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 3. FamilyMemberHistory.instantiatesUri
-                    this.InstantiatesUri = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "InstantiatesUri",                                                                                           // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.instantiatesUri",                                                                        // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.instantiatesUri",                                                                         // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.InstantiatesUri = new ElementDefinitionInfo                                                                        // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "InstantiatesUri",                                                                                           // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.instantiatesUri",                                                                        // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.instantiatesUri",                                                                         // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 4. FamilyMemberHistory.status
-                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Status",                                                                                                    // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.status",                                                                                 // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.status",                                                                                  // MakerGen.cs:257
-                        Min = 1,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Status",                                                                                                    // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.status",                                                                                 // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.status",                                                                                  // MakerGen.cs:237
+                        Min = 1,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 5. FamilyMemberHistory.dataAbsentReason
-                    this.DataAbsentReason = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "DataAbsentReason",                                                                                          // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.dataAbsentReason",                                                                       // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.dataAbsentReason",                                                                        // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.DataAbsentReason = new ElementDefinitionInfo                                                                       // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "DataAbsentReason",                                                                                          // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.dataAbsentReason",                                                                       // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.dataAbsentReason",                                                                        // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 6. FamilyMemberHistory.patient
-                    this.Patient = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Patient",                                                                                                   // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.patient",                                                                                // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.patient",                                                                                 // MakerGen.cs:257
-                        Min = 1,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
-                            {                                                                                                               // MakerGen.cs:346
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                    this.Patient = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Patient",                                                                                                   // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.patient",                                                                                // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.patient",                                                                                 // MakerGen.cs:237
+                        Min = 1,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Patient"                                                       // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/Patient"                                                       // MakerGen.cs:349
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:349
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 7. FamilyMemberHistory.date
-                    this.Date = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Date",                                                                                                      // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.date",                                                                                   // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.date",                                                                                    // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Date = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Date",                                                                                                      // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.date",                                                                                   // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.date",                                                                                    // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 8. FamilyMemberHistory.name
-                    this.Name = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Name",                                                                                                      // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.name",                                                                                   // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.name",                                                                                    // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Name = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Name",                                                                                                      // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.name",                                                                                   // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.name",                                                                                    // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 9. FamilyMemberHistory.relationship
-                    this.Relationship = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Relationship",                                                                                              // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.relationship",                                                                           // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.relationship",                                                                            // MakerGen.cs:257
-                        Min = 1,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Relationship = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Relationship",                                                                                              // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.relationship",                                                                           // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.relationship",                                                                            // MakerGen.cs:237
+                        Min = 1,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 10. FamilyMemberHistory.sex
-                    this.Sex = new ElementDefinitionInfo                                                                                    // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Sex",                                                                                                       // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.sex",                                                                                    // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.sex",                                                                                     // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Sex = new ElementDefinitionInfo                                                                                    // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Sex",                                                                                                       // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.sex",                                                                                    // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.sex",                                                                                     // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 11. FamilyMemberHistory.born[x]
-                    this.Born = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Born",                                                                                                      // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.born[x]",                                                                                // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.born[x]",                                                                                 // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            },                                                                                                              // MakerGen.cs:359
-                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            },                                                                                                              // MakerGen.cs:303
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Born = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Born",                                                                                                      // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.born[x]",                                                                                // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.born[x]",                                                                                 // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            },                                                                                                              // MakerGen.cs:360
+                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            },                                                                                                              // MakerGen.cs:304
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 12. FamilyMemberHistory.age[x]
-                    this.Age = new ElementDefinitionInfo                                                                                    // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Age",                                                                                                       // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.age[x]",                                                                                 // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.age[x]",                                                                                  // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Age                                                                           // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            },                                                                                                              // MakerGen.cs:359
-                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            },                                                                                                              // MakerGen.cs:359
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Age = new ElementDefinitionInfo                                                                                    // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Age",                                                                                                       // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.age[x]",                                                                                 // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.age[x]",                                                                                  // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Age                                                                           // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            },                                                                                                              // MakerGen.cs:360
+                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            },                                                                                                              // MakerGen.cs:360
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 13. FamilyMemberHistory.estimatedAge
-                    this.EstimatedAge = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "EstimatedAge",                                                                                              // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.estimatedAge",                                                                           // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.estimatedAge",                                                                            // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.EstimatedAge = new ElementDefinitionInfo                                                                           // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "EstimatedAge",                                                                                              // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.estimatedAge",                                                                           // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.estimatedAge",                                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 14. FamilyMemberHistory.deceased[x]
-                    this.Deceased = new ElementDefinitionInfo                                                                               // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Deceased",                                                                                                  // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.deceased[x]",                                                                            // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.deceased[x]",                                                                             // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            },                                                                                                              // MakerGen.cs:303
-                            new FhirKhit.Maker.Common.Complex.Age                                                                           // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            },                                                                                                              // MakerGen.cs:359
-                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            },                                                                                                              // MakerGen.cs:359
-                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            },                                                                                                              // MakerGen.cs:303
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Deceased = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Deceased",                                                                                                  // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.deceased[x]",                                                                            // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.deceased[x]",                                                                             // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            },                                                                                                              // MakerGen.cs:304
+                            new FhirKhit.Maker.Common.Complex.Age                                                                           // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            },                                                                                                              // MakerGen.cs:360
+                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            },                                                                                                              // MakerGen.cs:360
+                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            },                                                                                                              // MakerGen.cs:304
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 15. FamilyMemberHistory.reasonCode
-                    this.ReasonCode = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "ReasonCode",                                                                                                // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.reasonCode",                                                                             // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.reasonCode",                                                                              // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.ReasonCode = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "ReasonCode",                                                                                                // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.reasonCode",                                                                             // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.reasonCode",                                                                              // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 16. FamilyMemberHistory.reasonReference
-                    this.ReasonReference = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "ReasonReference",                                                                                           // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.reasonReference",                                                                        // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.reasonReference",                                                                         // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
-                            {                                                                                                               // MakerGen.cs:346
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                    this.ReasonReference = new ElementDefinitionInfo                                                                        // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "ReasonReference",                                                                                           // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.reasonReference",                                                                        // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.reasonReference",                                                                         // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Condition",                                                    // MakerGen.cs:348
-                                    "http://hl7.org/fhir/StructureDefinition/Observation",                                                  // MakerGen.cs:348
-                                    "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",                                           // MakerGen.cs:348
-                                    "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",                                        // MakerGen.cs:348
-                                    "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                             // MakerGen.cs:348
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/Condition",                                                    // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Observation",                                                  // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",                                           // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",                                        // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                             // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:349
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:349
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 17. FamilyMemberHistory.note
-                    this.Note = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Note",                                                                                                      // MakerGen.cs:255
-                        Path= "FamilyMemberHistory.note",                                                                                   // MakerGen.cs:256
-                        Id = "FamilyMemberHistory.note",                                                                                    // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:429
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
-            {                                                                                                                               // MakerGen.cs:415
-                base.Write(sDef);                                                                                                           // MakerGen.cs:416
-                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:240
-                InstantiatesCanonical.Write(sDef);                                                                                          // MakerGen.cs:240
-                InstantiatesUri.Write(sDef);                                                                                                // MakerGen.cs:240
-                Status.Write(sDef);                                                                                                         // MakerGen.cs:240
-                DataAbsentReason.Write(sDef);                                                                                               // MakerGen.cs:240
-                Patient.Write(sDef);                                                                                                        // MakerGen.cs:240
-                Date.Write(sDef);                                                                                                           // MakerGen.cs:240
-                Name.Write(sDef);                                                                                                           // MakerGen.cs:240
-                Relationship.Write(sDef);                                                                                                   // MakerGen.cs:240
-                Sex.Write(sDef);                                                                                                            // MakerGen.cs:240
-                Born.Write(sDef);                                                                                                           // MakerGen.cs:240
-                Age.Write(sDef);                                                                                                            // MakerGen.cs:240
-                EstimatedAge.Write(sDef);                                                                                                   // MakerGen.cs:240
-                Deceased.Write(sDef);                                                                                                       // MakerGen.cs:240
-                ReasonCode.Write(sDef);                                                                                                     // MakerGen.cs:240
-                ReasonReference.Write(sDef);                                                                                                // MakerGen.cs:240
-                Note.Write(sDef);                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:433
-        }                                                                                                                                   // MakerGen.cs:393
-        public FamilyMemberHistory_Elements Elements { get; }                                                                               // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-        public FamilyMemberHistory()                                                                                                        // MakerGen.cs:396
-        {                                                                                                                                   // MakerGen.cs:397
-            this.Elements = new FamilyMemberHistory_Elements();                                                                             // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
-        {                                                                                                                                   // MakerGen.cs:402
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
-        }                                                                                                                                   // MakerGen.cs:404
-    }                                                                                                                                       // MakerGen.cs:405
-}                                                                                                                                           // MakerGen.cs:468
+                    this.Note = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Note",                                                                                                      // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.note",                                                                                   // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.note",                                                                                    // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
+                    // 18. FamilyMemberHistory.condition
+                    this.Condition = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Condition",                                                                                                 // MakerGen.cs:235
+                        Path= "FamilyMemberHistory.condition",                                                                              // MakerGen.cs:236
+                        Id = "FamilyMemberHistory.condition",                                                                               // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new Type_Condition                                                                                              // MakerGen.cs:259
+                            {                                                                                                               // MakerGen.cs:260
+                            }                                                                                                               // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:427
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
+            {                                                                                                                               // MakerGen.cs:413
+                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:220
+                InstantiatesCanonical.Write(sDef);                                                                                          // MakerGen.cs:220
+                InstantiatesUri.Write(sDef);                                                                                                // MakerGen.cs:220
+                Status.Write(sDef);                                                                                                         // MakerGen.cs:220
+                DataAbsentReason.Write(sDef);                                                                                               // MakerGen.cs:220
+                Patient.Write(sDef);                                                                                                        // MakerGen.cs:220
+                Date.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Name.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Relationship.Write(sDef);                                                                                                   // MakerGen.cs:220
+                Sex.Write(sDef);                                                                                                            // MakerGen.cs:220
+                Born.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Age.Write(sDef);                                                                                                            // MakerGen.cs:220
+                EstimatedAge.Write(sDef);                                                                                                   // MakerGen.cs:220
+                Deceased.Write(sDef);                                                                                                       // MakerGen.cs:220
+                ReasonCode.Write(sDef);                                                                                                     // MakerGen.cs:220
+                ReasonReference.Write(sDef);                                                                                                // MakerGen.cs:220
+                Note.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Condition.Write(sDef);                                                                                                      // MakerGen.cs:220
+            }                                                                                                                               // MakerGen.cs:431
+        }                                                                                                                                   // MakerGen.cs:391
+        public FamilyMemberHistory_Elements Elements { get; }                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+        public FamilyMemberHistory()                                                                                                        // MakerGen.cs:394
+        {                                                                                                                                   // MakerGen.cs:395
+            this.Elements = new FamilyMemberHistory_Elements();                                                                             // MakerGen.cs:396
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
+        {                                                                                                                                   // MakerGen.cs:400
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
+        }                                                                                                                                   // MakerGen.cs:402
+    }                                                                                                                                       // MakerGen.cs:403
+}                                                                                                                                           // MakerGen.cs:466

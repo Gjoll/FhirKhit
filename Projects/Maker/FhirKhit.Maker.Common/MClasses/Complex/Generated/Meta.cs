@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:499
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:500
-using System.IO;                                                                                                                            // MakerGen.cs:501
-using System.Linq;                                                                                                                          // MakerGen.cs:502
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:503
-                                                                                                                                            // MakerGen.cs:504
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:505
-{                                                                                                                                           // MakerGen.cs:506
-    #region Json                                                                                                                            // MakerGen.cs:507
+using System;                                                                                                                               // MakerGen.cs:497
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:498
+using System.IO;                                                                                                                            // MakerGen.cs:499
+using System.Linq;                                                                                                                          // MakerGen.cs:500
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:501
+                                                                                                                                            // MakerGen.cs:502
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:503
+{                                                                                                                                           // MakerGen.cs:504
+    #region Json                                                                                                                            // MakerGen.cs:505
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -156,157 +156,157 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:511
+    #endregion                                                                                                                              // MakerGen.cs:509
     /// <summary>
     /// Fhir complex 'Meta'
     /// </summary>
     // 0. Meta
-    public class Meta : FhirKhit.Maker.Common.Complex.ComplexBase                                                                           // MakerGen.cs:385
-    {                                                                                                                                       // MakerGen.cs:386
-        public class Meta_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                            // MakerGen.cs:387
-        {                                                                                                                                   // MakerGen.cs:388
+    public class Meta : FhirKhit.Maker.Common.Complex.ComplexBase                                                                           // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
+        public class Meta_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                            // MakerGen.cs:385
+        {                                                                                                                                   // MakerGen.cs:386
             // 1. Meta.versionId
-            public ElementDefinitionInfo VersionId;                                                                                         // MakerGen.cs:236
+            public ElementDefinitionInfo VersionId;                                                                                         // MakerGen.cs:216
             // 2. Meta.lastUpdated
-            public ElementDefinitionInfo LastUpdated;                                                                                       // MakerGen.cs:236
+            public ElementDefinitionInfo LastUpdated;                                                                                       // MakerGen.cs:216
             // 3. Meta.source
-            public ElementDefinitionInfo Source;                                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo Source;                                                                                            // MakerGen.cs:216
             // 4. Meta.profile
-            public ElementDefinitionInfo Profile;                                                                                           // MakerGen.cs:236
+            public ElementDefinitionInfo Profile;                                                                                           // MakerGen.cs:216
             // 5. Meta.security
-            public ElementDefinitionInfo Security;                                                                                          // MakerGen.cs:236
+            public ElementDefinitionInfo Security;                                                                                          // MakerGen.cs:216
             // 6. Meta.tag
-            public ElementDefinitionInfo Tag;                                                                                               // MakerGen.cs:236
-            public Meta_Elements()                                                                                                          // MakerGen.cs:409
-            {                                                                                                                               // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:251
+            public ElementDefinitionInfo Tag;                                                                                               // MakerGen.cs:216
+            public Meta_Elements()                                                                                                          // MakerGen.cs:407
+            {                                                                                                                               // MakerGen.cs:408
+                {                                                                                                                           // MakerGen.cs:231
                     // 1. Meta.versionId
-                    this.VersionId = new ElementDefinitionInfo                                                                              // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "VersionId",                                                                                                 // MakerGen.cs:255
-                        Path= "Meta.versionId",                                                                                             // MakerGen.cs:256
-                        Id = "Meta.versionId",                                                                                              // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Id                                                                          // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.VersionId = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "VersionId",                                                                                                 // MakerGen.cs:235
+                        Path= "Meta.versionId",                                                                                             // MakerGen.cs:236
+                        Id = "Meta.versionId",                                                                                              // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Id                                                                          // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 2. Meta.lastUpdated
-                    this.LastUpdated = new ElementDefinitionInfo                                                                            // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "LastUpdated",                                                                                               // MakerGen.cs:255
-                        Path= "Meta.lastUpdated",                                                                                           // MakerGen.cs:256
-                        Id = "Meta.lastUpdated",                                                                                            // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Instant                                                                     // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.LastUpdated = new ElementDefinitionInfo                                                                            // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "LastUpdated",                                                                                               // MakerGen.cs:235
+                        Path= "Meta.lastUpdated",                                                                                           // MakerGen.cs:236
+                        Id = "Meta.lastUpdated",                                                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Instant                                                                     // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 3. Meta.source
-                    this.Source = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Source",                                                                                                    // MakerGen.cs:255
-                        Path= "Meta.source",                                                                                                // MakerGen.cs:256
-                        Id = "Meta.source",                                                                                                 // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Source = new ElementDefinitionInfo                                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Source",                                                                                                    // MakerGen.cs:235
+                        Path= "Meta.source",                                                                                                // MakerGen.cs:236
+                        Id = "Meta.source",                                                                                                 // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 4. Meta.profile
-                    this.Profile = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Profile",                                                                                                   // MakerGen.cs:255
-                        Path= "Meta.profile",                                                                                               // MakerGen.cs:256
-                        Id = "Meta.profile",                                                                                                // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:299
-                            {                                                                                                               // MakerGen.cs:300
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:302
+                    this.Profile = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Profile",                                                                                                   // MakerGen.cs:235
+                        Path= "Meta.profile",                                                                                               // MakerGen.cs:236
+                        Id = "Meta.profile",                                                                                                // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:300
+                            {                                                                                                               // MakerGen.cs:301
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:303
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                           // MakerGen.cs:302
+                                    "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                           // MakerGen.cs:303
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:303
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                            }                                                                                                               // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 5. Meta.security
-                    this.Security = new ElementDefinitionInfo                                                                               // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Security",                                                                                                  // MakerGen.cs:255
-                        Path= "Meta.security",                                                                                              // MakerGen.cs:256
-                        Id = "Meta.security",                                                                                               // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Coding                                                                        // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Security = new ElementDefinitionInfo                                                                               // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Security",                                                                                                  // MakerGen.cs:235
+                        Path= "Meta.security",                                                                                              // MakerGen.cs:236
+                        Id = "Meta.security",                                                                                               // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Coding                                                                        // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 6. Meta.tag
-                    this.Tag = new ElementDefinitionInfo                                                                                    // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Tag",                                                                                                       // MakerGen.cs:255
-                        Path= "Meta.tag",                                                                                                   // MakerGen.cs:256
-                        Id = "Meta.tag",                                                                                                    // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Coding                                                                        // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:429
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
-            {                                                                                                                               // MakerGen.cs:415
-                base.Write(sDef);                                                                                                           // MakerGen.cs:416
-                VersionId.Write(sDef);                                                                                                      // MakerGen.cs:240
-                LastUpdated.Write(sDef);                                                                                                    // MakerGen.cs:240
-                Source.Write(sDef);                                                                                                         // MakerGen.cs:240
-                Profile.Write(sDef);                                                                                                        // MakerGen.cs:240
-                Security.Write(sDef);                                                                                                       // MakerGen.cs:240
-                Tag.Write(sDef);                                                                                                            // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:433
-        }                                                                                                                                   // MakerGen.cs:393
-        public Meta_Elements Elements { get; }                                                                                              // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-        public Meta()                                                                                                                       // MakerGen.cs:396
-        {                                                                                                                                   // MakerGen.cs:397
-            this.Elements = new Meta_Elements();                                                                                            // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
-        {                                                                                                                                   // MakerGen.cs:402
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
-        }                                                                                                                                   // MakerGen.cs:404
-    }                                                                                                                                       // MakerGen.cs:405
-}                                                                                                                                           // MakerGen.cs:516
+                    this.Tag = new ElementDefinitionInfo                                                                                    // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Tag",                                                                                                       // MakerGen.cs:235
+                        Path= "Meta.tag",                                                                                                   // MakerGen.cs:236
+                        Id = "Meta.tag",                                                                                                    // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Coding                                                                        // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:427
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
+            {                                                                                                                               // MakerGen.cs:413
+                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+                VersionId.Write(sDef);                                                                                                      // MakerGen.cs:220
+                LastUpdated.Write(sDef);                                                                                                    // MakerGen.cs:220
+                Source.Write(sDef);                                                                                                         // MakerGen.cs:220
+                Profile.Write(sDef);                                                                                                        // MakerGen.cs:220
+                Security.Write(sDef);                                                                                                       // MakerGen.cs:220
+                Tag.Write(sDef);                                                                                                            // MakerGen.cs:220
+            }                                                                                                                               // MakerGen.cs:431
+        }                                                                                                                                   // MakerGen.cs:391
+        public Meta_Elements Elements { get; }                                                                                              // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+        public Meta()                                                                                                                       // MakerGen.cs:394
+        {                                                                                                                                   // MakerGen.cs:395
+            this.Elements = new Meta_Elements();                                                                                            // MakerGen.cs:396
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
+        {                                                                                                                                   // MakerGen.cs:400
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
+        }                                                                                                                                   // MakerGen.cs:402
+    }                                                                                                                                       // MakerGen.cs:403
+}                                                                                                                                           // MakerGen.cs:514

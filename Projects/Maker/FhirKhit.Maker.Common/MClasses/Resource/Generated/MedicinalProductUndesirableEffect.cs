@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:451
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
-using System.IO;                                                                                                                            // MakerGen.cs:453
-using System.Linq;                                                                                                                          // MakerGen.cs:454
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
-                                                                                                                                            // MakerGen.cs:456
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
-{                                                                                                                                           // MakerGen.cs:458
-    #region Json                                                                                                                            // MakerGen.cs:459
-    #if NEVER                                                                                                                               // MakerGen.cs:460
+using System;                                                                                                                               // MakerGen.cs:449
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
+using System.IO;                                                                                                                            // MakerGen.cs:451
+using System.Linq;                                                                                                                          // MakerGen.cs:452
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
+                                                                                                                                            // MakerGen.cs:454
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
+{                                                                                                                                           // MakerGen.cs:456
+    #region Json                                                                                                                            // MakerGen.cs:457
+    #if NEVER                                                                                                                               // MakerGen.cs:458
     {
       "resourceType": "StructureDefinition",
       "id": "MedicinalProductUndesirableEffect",
@@ -111,138 +111,138 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:463
+    #endregion                                                                                                                              // MakerGen.cs:461
     /// <summary>
     /// Fhir resource 'MedicinalProductUndesirableEffect'
     /// </summary>
     // 0. MedicinalProductUndesirableEffect
-    public class MedicinalProductUndesirableEffect : FhirKhit.Maker.Common.Resource.ResourceBase                                            // MakerGen.cs:385
-    {                                                                                                                                       // MakerGen.cs:386
-        public class MedicinalProductUndesirableEffect_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                               // MakerGen.cs:387
-        {                                                                                                                                   // MakerGen.cs:388
+    public class MedicinalProductUndesirableEffect : FhirKhit.Maker.Common.Resource.ResourceBase                                            // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
+        public class MedicinalProductUndesirableEffect_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                               // MakerGen.cs:385
+        {                                                                                                                                   // MakerGen.cs:386
             // 1. MedicinalProductUndesirableEffect.subject
-            public ElementDefinitionInfo Subject;                                                                                           // MakerGen.cs:236
+            public ElementDefinitionInfo Subject;                                                                                           // MakerGen.cs:216
             // 2. MedicinalProductUndesirableEffect.symptomConditionEffect
-            public ElementDefinitionInfo SymptomConditionEffect;                                                                            // MakerGen.cs:236
+            public ElementDefinitionInfo SymptomConditionEffect;                                                                            // MakerGen.cs:216
             // 3. MedicinalProductUndesirableEffect.classification
-            public ElementDefinitionInfo Classification;                                                                                    // MakerGen.cs:236
+            public ElementDefinitionInfo Classification;                                                                                    // MakerGen.cs:216
             // 4. MedicinalProductUndesirableEffect.frequencyOfOccurrence
-            public ElementDefinitionInfo FrequencyOfOccurrence;                                                                             // MakerGen.cs:236
+            public ElementDefinitionInfo FrequencyOfOccurrence;                                                                             // MakerGen.cs:216
             // 5. MedicinalProductUndesirableEffect.population
-            public ElementDefinitionInfo Population;                                                                                        // MakerGen.cs:236
-            public MedicinalProductUndesirableEffect_Elements()                                                                             // MakerGen.cs:409
-            {                                                                                                                               // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:251
+            public ElementDefinitionInfo Population;                                                                                        // MakerGen.cs:216
+            public MedicinalProductUndesirableEffect_Elements()                                                                             // MakerGen.cs:407
+            {                                                                                                                               // MakerGen.cs:408
+                {                                                                                                                           // MakerGen.cs:231
                     // 1. MedicinalProductUndesirableEffect.subject
-                    this.Subject = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Subject",                                                                                                   // MakerGen.cs:255
-                        Path= "MedicinalProductUndesirableEffect.subject",                                                                  // MakerGen.cs:256
-                        Id = "MedicinalProductUndesirableEffect.subject",                                                                   // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
-                            {                                                                                                               // MakerGen.cs:346
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                    this.Subject = new ElementDefinitionInfo                                                                                // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Subject",                                                                                                   // MakerGen.cs:235
+                        Path= "MedicinalProductUndesirableEffect.subject",                                                                  // MakerGen.cs:236
+                        Id = "MedicinalProductUndesirableEffect.subject",                                                                   // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
                                 {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/MedicinalProduct",                                             // MakerGen.cs:348
-                                    "http://hl7.org/fhir/StructureDefinition/Medication"                                                    // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/MedicinalProduct",                                             // MakerGen.cs:349
+                                    "http://hl7.org/fhir/StructureDefinition/Medication"                                                    // MakerGen.cs:349
                                 }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:349
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 2. MedicinalProductUndesirableEffect.symptomConditionEffect
-                    this.SymptomConditionEffect = new ElementDefinitionInfo                                                                 // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "SymptomConditionEffect",                                                                                    // MakerGen.cs:255
-                        Path= "MedicinalProductUndesirableEffect.symptomConditionEffect",                                                   // MakerGen.cs:256
-                        Id = "MedicinalProductUndesirableEffect.symptomConditionEffect",                                                    // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.SymptomConditionEffect = new ElementDefinitionInfo                                                                 // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "SymptomConditionEffect",                                                                                    // MakerGen.cs:235
+                        Path= "MedicinalProductUndesirableEffect.symptomConditionEffect",                                                   // MakerGen.cs:236
+                        Id = "MedicinalProductUndesirableEffect.symptomConditionEffect",                                                    // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 3. MedicinalProductUndesirableEffect.classification
-                    this.Classification = new ElementDefinitionInfo                                                                         // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Classification",                                                                                            // MakerGen.cs:255
-                        Path= "MedicinalProductUndesirableEffect.classification",                                                           // MakerGen.cs:256
-                        Id = "MedicinalProductUndesirableEffect.classification",                                                            // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Classification = new ElementDefinitionInfo                                                                         // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Classification",                                                                                            // MakerGen.cs:235
+                        Path= "MedicinalProductUndesirableEffect.classification",                                                           // MakerGen.cs:236
+                        Id = "MedicinalProductUndesirableEffect.classification",                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 4. MedicinalProductUndesirableEffect.frequencyOfOccurrence
-                    this.FrequencyOfOccurrence = new ElementDefinitionInfo                                                                  // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "FrequencyOfOccurrence",                                                                                     // MakerGen.cs:255
-                        Path= "MedicinalProductUndesirableEffect.frequencyOfOccurrence",                                                    // MakerGen.cs:256
-                        Id = "MedicinalProductUndesirableEffect.frequencyOfOccurrence",                                                     // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
-                            {                                                                                                               // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:318
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.FrequencyOfOccurrence = new ElementDefinitionInfo                                                                  // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "FrequencyOfOccurrence",                                                                                     // MakerGen.cs:235
+                        Path= "MedicinalProductUndesirableEffect.frequencyOfOccurrence",                                                    // MakerGen.cs:236
+                        Id = "MedicinalProductUndesirableEffect.frequencyOfOccurrence",                                                     // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:315
+                            {                                                                                                               // MakerGen.cs:316
+                            }                                                                                                               // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 5. MedicinalProductUndesirableEffect.population
-                    this.Population = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Population",                                                                                                // MakerGen.cs:255
-                        Path= "MedicinalProductUndesirableEffect.population",                                                               // MakerGen.cs:256
-                        Id = "MedicinalProductUndesirableEffect.population",                                                                // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Population                                                                    // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:429
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
-            {                                                                                                                               // MakerGen.cs:415
-                base.Write(sDef);                                                                                                           // MakerGen.cs:416
-                Subject.Write(sDef);                                                                                                        // MakerGen.cs:240
-                SymptomConditionEffect.Write(sDef);                                                                                         // MakerGen.cs:240
-                Classification.Write(sDef);                                                                                                 // MakerGen.cs:240
-                FrequencyOfOccurrence.Write(sDef);                                                                                          // MakerGen.cs:240
-                Population.Write(sDef);                                                                                                     // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:433
-        }                                                                                                                                   // MakerGen.cs:393
-        public MedicinalProductUndesirableEffect_Elements Elements { get; }                                                                 // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-        public MedicinalProductUndesirableEffect()                                                                                          // MakerGen.cs:396
-        {                                                                                                                                   // MakerGen.cs:397
-            this.Elements = new MedicinalProductUndesirableEffect_Elements();                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
-        {                                                                                                                                   // MakerGen.cs:402
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
-        }                                                                                                                                   // MakerGen.cs:404
-    }                                                                                                                                       // MakerGen.cs:405
-}                                                                                                                                           // MakerGen.cs:468
+                    this.Population = new ElementDefinitionInfo                                                                             // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Population",                                                                                                // MakerGen.cs:235
+                        Path= "MedicinalProductUndesirableEffect.population",                                                               // MakerGen.cs:236
+                        Id = "MedicinalProductUndesirableEffect.population",                                                                // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Population                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:427
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
+            {                                                                                                                               // MakerGen.cs:413
+                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+                Subject.Write(sDef);                                                                                                        // MakerGen.cs:220
+                SymptomConditionEffect.Write(sDef);                                                                                         // MakerGen.cs:220
+                Classification.Write(sDef);                                                                                                 // MakerGen.cs:220
+                FrequencyOfOccurrence.Write(sDef);                                                                                          // MakerGen.cs:220
+                Population.Write(sDef);                                                                                                     // MakerGen.cs:220
+            }                                                                                                                               // MakerGen.cs:431
+        }                                                                                                                                   // MakerGen.cs:391
+        public MedicinalProductUndesirableEffect_Elements Elements { get; }                                                                 // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+        public MedicinalProductUndesirableEffect()                                                                                          // MakerGen.cs:394
+        {                                                                                                                                   // MakerGen.cs:395
+            this.Elements = new MedicinalProductUndesirableEffect_Elements();                                                               // MakerGen.cs:396
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
+        {                                                                                                                                   // MakerGen.cs:400
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
+        }                                                                                                                                   // MakerGen.cs:402
+    }                                                                                                                                       // MakerGen.cs:403
+}                                                                                                                                           // MakerGen.cs:466

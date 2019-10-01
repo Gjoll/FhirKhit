@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:451
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
-using System.IO;                                                                                                                            // MakerGen.cs:453
-using System.Linq;                                                                                                                          // MakerGen.cs:454
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
-                                                                                                                                            // MakerGen.cs:456
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
-{                                                                                                                                           // MakerGen.cs:458
-    #region Json                                                                                                                            // MakerGen.cs:459
-    #if NEVER                                                                                                                               // MakerGen.cs:460
+using System;                                                                                                                               // MakerGen.cs:449
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:450
+using System.IO;                                                                                                                            // MakerGen.cs:451
+using System.Linq;                                                                                                                          // MakerGen.cs:452
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:453
+                                                                                                                                            // MakerGen.cs:454
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:455
+{                                                                                                                                           // MakerGen.cs:456
+    #region Json                                                                                                                            // MakerGen.cs:457
+    #if NEVER                                                                                                                               // MakerGen.cs:458
     {
       "resourceType": "StructureDefinition",
       "id": "DomainResource",
@@ -135,107 +135,107 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:463
+    #endregion                                                                                                                              // MakerGen.cs:461
     /// <summary>
     /// Fhir resource 'DomainResource'
     /// </summary>
     // 0. DomainResource
-    public class DomainResource : FhirKhit.Maker.Common.Resource.ResourceBase                                                               // MakerGen.cs:385
-    {                                                                                                                                       // MakerGen.cs:386
-        public class DomainResource_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                  // MakerGen.cs:387
-        {                                                                                                                                   // MakerGen.cs:388
+    public class DomainResource : FhirKhit.Maker.Common.Resource.ResourceBase                                                               // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
+        public class DomainResource_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                  // MakerGen.cs:385
+        {                                                                                                                                   // MakerGen.cs:386
             // 1. DomainResource.text
-            public ElementDefinitionInfo Text;                                                                                              // MakerGen.cs:236
+            public ElementDefinitionInfo Text;                                                                                              // MakerGen.cs:216
             // 2. DomainResource.contained
-            public ElementDefinitionInfo Contained;                                                                                         // MakerGen.cs:236
+            public ElementDefinitionInfo Contained;                                                                                         // MakerGen.cs:216
             // 3. DomainResource.extension
-            public ElementDefinitionInfo Extension;                                                                                         // MakerGen.cs:236
+            public ElementDefinitionInfo Extension;                                                                                         // MakerGen.cs:216
             // 4. DomainResource.modifierExtension
-            public ElementDefinitionInfo ModifierExtension;                                                                                 // MakerGen.cs:236
-            public DomainResource_Elements()                                                                                                // MakerGen.cs:409
-            {                                                                                                                               // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:251
+            public ElementDefinitionInfo ModifierExtension;                                                                                 // MakerGen.cs:216
+            public DomainResource_Elements()                                                                                                // MakerGen.cs:407
+            {                                                                                                                               // MakerGen.cs:408
+                {                                                                                                                           // MakerGen.cs:231
                     // 1. DomainResource.text
-                    this.Text = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Text",                                                                                                      // MakerGen.cs:255
-                        Path= "DomainResource.text",                                                                                        // MakerGen.cs:256
-                        Id = "DomainResource.text",                                                                                         // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = 1,                                                                                                            // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Complex.Narrative                                                                     // MakerGen.cs:357
-                            {                                                                                                               // MakerGen.cs:358
-                            }                                                                                                               // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Text = new ElementDefinitionInfo                                                                                   // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Text",                                                                                                      // MakerGen.cs:235
+                        Path= "DomainResource.text",                                                                                        // MakerGen.cs:236
+                        Id = "DomainResource.text",                                                                                         // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = 1,                                                                                                            // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Complex.Narrative                                                                     // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 2. DomainResource.contained
-                    this.Contained = new ElementDefinitionInfo                                                                              // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Contained",                                                                                                 // MakerGen.cs:255
-                        Path= "DomainResource.contained",                                                                                   // MakerGen.cs:256
-                        Id = "DomainResource.contained",                                                                                    // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                            new FhirKhit.Maker.Common.Resource.Resource                                                                     // MakerGen.cs:331
-                            {                                                                                                               // MakerGen.cs:332
-                            }                                                                                                               // MakerGen.cs:335
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Contained = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Contained",                                                                                                 // MakerGen.cs:235
+                        Path= "DomainResource.contained",                                                                                   // MakerGen.cs:236
+                        Id = "DomainResource.contained",                                                                                    // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                            new FhirKhit.Maker.Common.Resource.Resource                                                                     // MakerGen.cs:332
+                            {                                                                                                               // MakerGen.cs:333
+                            }                                                                                                               // MakerGen.cs:336
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 3. DomainResource.extension
-                    this.Extension = new ElementDefinitionInfo                                                                              // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "Extension",                                                                                                 // MakerGen.cs:255
-                        Path= "DomainResource.extension",                                                                                   // MakerGen.cs:256
-                        Id = "DomainResource.extension",                                                                                    // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-                {                                                                                                                           // MakerGen.cs:251
+                    this.Extension = new ElementDefinitionInfo                                                                              // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "Extension",                                                                                                 // MakerGen.cs:235
+                        Path= "DomainResource.extension",                                                                                   // MakerGen.cs:236
+                        Id = "DomainResource.extension",                                                                                    // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+                {                                                                                                                           // MakerGen.cs:231
                     // 4. DomainResource.modifierExtension
-                    this.ModifierExtension = new ElementDefinitionInfo                                                                      // MakerGen.cs:253
-                    {                                                                                                                       // MakerGen.cs:254
-                        Name = "ModifierExtension",                                                                                         // MakerGen.cs:255
-                        Path= "DomainResource.modifierExtension",                                                                           // MakerGen.cs:256
-                        Id = "DomainResource.modifierExtension",                                                                            // MakerGen.cs:257
-                        Min = 0,                                                                                                            // MakerGen.cs:258
-                        Max = -1,                                                                                                           // MakerGen.cs:259
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
-                        {                                                                                                                   // MakerGen.cs:261
-                        }                                                                                                                   // MakerGen.cs:263
-                    };                                                                                                                      // MakerGen.cs:264
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:429
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
-            {                                                                                                                               // MakerGen.cs:415
-                base.Write(sDef);                                                                                                           // MakerGen.cs:416
-                Text.Write(sDef);                                                                                                           // MakerGen.cs:240
-                Contained.Write(sDef);                                                                                                      // MakerGen.cs:240
-                Extension.Write(sDef);                                                                                                      // MakerGen.cs:240
-                ModifierExtension.Write(sDef);                                                                                              // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:433
-        }                                                                                                                                   // MakerGen.cs:393
-        public DomainResource_Elements Elements { get; }                                                                                    // MakerGen.cs:394
-                                                                                                                                            // MakerGen.cs:395
-        public DomainResource()                                                                                                             // MakerGen.cs:396
-        {                                                                                                                                   // MakerGen.cs:397
-            this.Elements = new DomainResource_Elements();                                                                                  // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:400
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
-        {                                                                                                                                   // MakerGen.cs:402
-            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
-        }                                                                                                                                   // MakerGen.cs:404
-    }                                                                                                                                       // MakerGen.cs:405
-}                                                                                                                                           // MakerGen.cs:468
+                    this.ModifierExtension = new ElementDefinitionInfo                                                                      // MakerGen.cs:233
+                    {                                                                                                                       // MakerGen.cs:234
+                        Name = "ModifierExtension",                                                                                         // MakerGen.cs:235
+                        Path= "DomainResource.modifierExtension",                                                                           // MakerGen.cs:236
+                        Id = "DomainResource.modifierExtension",                                                                            // MakerGen.cs:237
+                        Min = 0,                                                                                                            // MakerGen.cs:238
+                        Max = -1,                                                                                                           // MakerGen.cs:239
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:240
+                        {                                                                                                                   // MakerGen.cs:241
+                        }                                                                                                                   // MakerGen.cs:243
+                    };                                                                                                                      // MakerGen.cs:244
+                }                                                                                                                           // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:427
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:412
+            {                                                                                                                               // MakerGen.cs:413
+                base.Write(sDef);                                                                                                           // MakerGen.cs:414
+                Text.Write(sDef);                                                                                                           // MakerGen.cs:220
+                Contained.Write(sDef);                                                                                                      // MakerGen.cs:220
+                Extension.Write(sDef);                                                                                                      // MakerGen.cs:220
+                ModifierExtension.Write(sDef);                                                                                              // MakerGen.cs:220
+            }                                                                                                                               // MakerGen.cs:431
+        }                                                                                                                                   // MakerGen.cs:391
+        public DomainResource_Elements Elements { get; }                                                                                    // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:393
+        public DomainResource()                                                                                                             // MakerGen.cs:394
+        {                                                                                                                                   // MakerGen.cs:395
+            this.Elements = new DomainResource_Elements();                                                                                  // MakerGen.cs:396
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:398
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:399
+        {                                                                                                                                   // MakerGen.cs:400
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:401
+        }                                                                                                                                   // MakerGen.cs:402
+    }                                                                                                                                       // MakerGen.cs:403
+}                                                                                                                                           // MakerGen.cs:466

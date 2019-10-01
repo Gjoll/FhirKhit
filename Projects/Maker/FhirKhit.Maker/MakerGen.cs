@@ -209,6 +209,43 @@ namespace FhirKhit.Maker
 
                 path = path.Substring(basePath.Length);
 
+                String elementName = ElementName(ed.Path.LastPathPart());
+
+                fieldsBlock
+                    .AppendComment($"{index}. {elements[index].Path}")
+                    .AppendCode($"public ElementDefinitionInfo {elementName};")
+                    ;
+
+                writeBlock
+                    .AppendCode($"{elementName}.Write(sDef);")
+                    ;
+
+                Int32 min = 0;
+                Int32 max = -1;
+                if (ed.Min.HasValue)
+                    min = ed.Min.Value;
+                if ((String.IsNullOrEmpty(ed.Max) == false) && (ed.Max != "*"))
+                    max = Int32.Parse(ed.Max);
+
+                constructorBlock
+                    .OpenBrace()
+                    .AppendComment($"{index}. {elements[index].Path}")
+                    .AppendCode($"this.{elementName} = new ElementDefinitionInfo")
+                    .OpenBrace()
+                    .AppendCode($"Name = \"{elementName}\",")
+                    .AppendCode($"Path= \"{ed.Path}\",")
+                    .AppendCode($"Id = \"{ed.ElementId}\",")
+                    .AppendCode($"Min = {min},")
+                    .AppendCode($"Max = {max},")
+                    .AppendCode($"Types = new BaseType[]")
+                    .OpenBrace()
+                    .DefineBlock(out CodeBlockNested typesBlock)
+                    .CloseBrace("")
+                    .CloseBrace(";")
+                    .CloseBrace("")
+                    ;
+
+
                 // If next elements starts with this items path, then this is a
                 // subelement, so start creating sub class.
                 if (
@@ -217,53 +254,17 @@ namespace FhirKhit.Maker
                     )
                 {
                     String subClassName = TypeName(path.LastPathPart());
-                    //writeBlock
-                    //    .AppendCode($"xxyyz")
-                    //    ;
-                    // start defining a sub class.
-                    DefineClass(subClassBlock,
-                        elements,
-                        ref index,
-                        ed.Path,
-                        subClassName,
-                        ComplexBase);
+
+                    typesBlock
+                        .AppendCode($"new {subClassName}")
+                        .OpenBrace()
+                        .CloseBrace()
+                        ;
+
+                    DefineClass(subClassBlock, elements, ref index, ed.Path, subClassName, ComplexBase);
                 }
                 else
                 {
-                    String elementName = ElementName(ed.Path.LastPathPart());
-                    fieldsBlock
-                        .AppendComment($"{index}. {elements[index].Path}")
-                        .AppendCode($"public ElementDefinitionInfo {elementName};")
-                        ;
-
-                    writeBlock
-                        .AppendCode($"{elementName}.Write(sDef);")
-                        ;
-
-                    Int32 min = 0;
-                    Int32 max = -1;
-                    if (ed.Min.HasValue)
-                        min = ed.Min.Value;
-                    if ((String.IsNullOrEmpty(ed.Max) == false) && (ed.Max != "*"))
-                        max = Int32.Parse(ed.Max);
-
-                    constructorBlock
-                        .OpenBrace()
-                        .AppendComment($"{index}. {elements[index].Path}")
-                        .AppendCode($"this.{elementName} = new ElementDefinitionInfo")
-                        .OpenBrace()
-                        .AppendCode($"Name = \"{elementName}\",")
-                        .AppendCode($"Path= \"{ed.Path}\",")
-                        .AppendCode($"Id = \"{ed.ElementId}\",")
-                        .AppendCode($"Min = {min},")
-                        .AppendCode($"Max = {max},")
-                        .AppendCode($"Types = new BaseType[]")
-                        .OpenBrace()
-                        .DefineBlock(out CodeBlockNested typesBlock)
-                        .CloseBrace("")
-                        .CloseBrace(";")
-                        ;
-
                     for (Int32 typeIndex = 0; typeIndex < ed.Type.Count; typeIndex += 1)
                     {
                         String sep = typeIndex == (ed.Type.Count - 1) ? "" : ",";
@@ -362,9 +363,6 @@ namespace FhirKhit.Maker
                                 break;
                         }
                     }
-                    constructorBlock
-                        .CloseBrace()
-                        ;
                     index += 1;
                 }
             }
