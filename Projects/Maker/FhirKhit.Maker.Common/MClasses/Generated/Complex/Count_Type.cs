@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Count'
     /// {
@@ -28,33 +28,22 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Count",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "Count",
     ///         "short": "A measured or measurable amount",
     ///         "definition": "A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.",
     ///         "comment": "The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.",
     ///         "min": 0,
-    ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "cnt-3",
-    ///             "severity": "error",
-    ///             "human": "There SHALL be a code with a value of \"1\" if there is a value. If system is present, it SHALL be UCUM.  If present, the value SHALL be a whole number.",
-    ///             "expression": "(code.exists() or value.empty()) and (system.empty() or system = %ucum) and (code.empty() or code = '1') and (value.empty() or value.hasValue().not() or value.toString().contains('.').not())",
-    ///             "xpath": "(f:code or not(f:value)) and (not(exists(f:system)) or (f:system/@value='http://unitsofmeasure.org' and f:code/@value='1')) and not(contains(f:value/@value, '.'))"
-    ///           }
-    ///         ]
+    ///         "max": "*"
     ///       }
     ///     ]
     ///   }
     /// }
     /// </summary>
-    public class Count_Type : Complex_Type
-    {
-    }
-}
+    // 0. Count
+    public class Count_Type : Complex_Type                                                                                                  // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        public Count_Type()                                                                                                                 // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Signature'
     /// {
@@ -28,12 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Signature",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "Signature",
     ///         "short": "A Signature - XML DigSig, JWS, Graphical image of signature, etc.",
     ///         "definition": "A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.",
@@ -204,7 +198,25 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Signature_Type : Complex_Type
-    {
-    }
-}
+    // 0. Signature
+    public class Signature_Type : Complex_Type                                                                                              // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Signature.type
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        // 2. Signature.when
+        public ElementInstance When;                                                                                                        // MakerGen.cs:203
+        // 3. Signature.who
+        public ElementInstance Who;                                                                                                         // MakerGen.cs:203
+        // 4. Signature.onBehalfOf
+        public ElementInstance OnBehalfOf;                                                                                                  // MakerGen.cs:203
+        // 5. Signature.targetFormat
+        public ElementInstance TargetFormat;                                                                                                // MakerGen.cs:203
+        // 6. Signature.sigFormat
+        public ElementInstance SigFormat;                                                                                                   // MakerGen.cs:203
+        // 7. Signature.data
+        public ElementInstance Data;                                                                                                        // MakerGen.cs:203
+        public Signature_Type()                                                                                                             // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

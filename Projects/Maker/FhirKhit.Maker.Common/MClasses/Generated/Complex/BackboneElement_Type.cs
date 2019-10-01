@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'BackboneElement'
     /// {
@@ -27,16 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "BackboneElement",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "BackboneElement",
     ///         "short": "Base for elements defined inside a resource",
     ///         "definition": "Base definition for all elements that are defined inside a resource - but not those in a data type.",
@@ -70,7 +60,13 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class BackboneElement_Type : Complex_Type
-    {
-    }
-}
+    // 0. BackboneElement
+    public class BackboneElement_Type : Complex_Type                                                                                        // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. BackboneElement.modifierExtension
+        public ElementInstance ModifierExtension;                                                                                           // MakerGen.cs:203
+        public BackboneElement_Type()                                                                                                       // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

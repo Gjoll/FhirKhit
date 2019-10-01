@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'SampledData'
     /// {
@@ -28,12 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "SampledData",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "SampledData",
     ///         "short": "A series of measurements taken by a device",
     ///         "definition": "A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.",
@@ -149,7 +143,25 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class SampledData_Type : Complex_Type
-    {
-    }
-}
+    // 0. SampledData
+    public class SampledData_Type : Complex_Type                                                                                            // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. SampledData.origin
+        public ElementInstance Origin;                                                                                                      // MakerGen.cs:203
+        // 2. SampledData.period
+        public ElementInstance Period;                                                                                                      // MakerGen.cs:203
+        // 3. SampledData.factor
+        public ElementInstance Factor;                                                                                                      // MakerGen.cs:203
+        // 4. SampledData.lowerLimit
+        public ElementInstance LowerLimit;                                                                                                  // MakerGen.cs:203
+        // 5. SampledData.upperLimit
+        public ElementInstance UpperLimit;                                                                                                  // MakerGen.cs:203
+        // 6. SampledData.dimensions
+        public ElementInstance Dimensions;                                                                                                  // MakerGen.cs:203
+        // 7. SampledData.data
+        public ElementInstance Data;                                                                                                        // MakerGen.cs:203
+        public SampledData_Type()                                                                                                           // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

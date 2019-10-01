@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'DataRequirement'
     /// {
@@ -27,12 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "DataRequirement",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "DataRequirement",
     ///         "short": "Describes a required data item",
     ///         "definition": "Describes a required data item for evaluation in terms of the type of data, and optional code or date-based filters of the data.",
@@ -144,15 +138,6 @@ namespace FhirKhit.Maker.Common
     ///             "code": "Element"
     ///           }
     ///         ],
-    ///         "constraint": [
-    ///           {
-    ///             "key": "drq-1",
-    ///             "severity": "error",
-    ///             "human": "Either a path or a searchParam must be provided, but not both",
-    ///             "expression": "path.exists() xor searchParam.exists()",
-    ///             "xpath": "(exists(f:path) and not(exists(f:searchParam))) or (not(exists(f:path)) and exists(f:searchParam))"
-    ///           }
-    ///         ],
     ///         "isSummary": true
     ///       },
     ///       {
@@ -225,15 +210,6 @@ namespace FhirKhit.Maker.Common
     ///         "type": [
     ///           {
     ///             "code": "Element"
-    ///           }
-    ///         ],
-    ///         "constraint": [
-    ///           {
-    ///             "key": "drq-2",
-    ///             "severity": "error",
-    ///             "human": "Either a path or a searchParam must be provided, but not both",
-    ///             "expression": "path.exists() xor searchParam.exists()",
-    ///             "xpath": "(exists(f:path) and not(exists(f:searchParam))) or (not(exists(f:path)) and exists(f:searchParam))"
     ///           }
     ///         ],
     ///         "isSummary": true
@@ -362,7 +338,90 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class DataRequirement_Type : Complex_Type
-    {
-    }
-}
+    // 0. DataRequirement
+    public class DataRequirement_Type : Complex_Type                                                                                        // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 6. DataRequirement.codeFilter.path
+        public class Path_Type : Complex_Type                                                                                               // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Path_Type()                                                                                                              // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 7. DataRequirement.codeFilter.searchParam
+        public class SearchParam_Type : Complex_Type                                                                                        // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public SearchParam_Type()                                                                                                       // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 8. DataRequirement.codeFilter.valueSet
+        public class ValueSet_Type : Complex_Type                                                                                           // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public ValueSet_Type()                                                                                                          // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 9. DataRequirement.codeFilter.code
+        public class Code_Type : Complex_Type                                                                                               // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Code_Type()                                                                                                              // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 11. DataRequirement.dateFilter.path
+        public class Path_Type : Complex_Type                                                                                               // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Path_Type()                                                                                                              // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 12. DataRequirement.dateFilter.searchParam
+        public class SearchParam_Type : Complex_Type                                                                                        // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public SearchParam_Type()                                                                                                       // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 13. DataRequirement.dateFilter.value[x]
+        public class ValueX_Type : Complex_Type                                                                                             // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public ValueX_Type()                                                                                                            // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 16. DataRequirement.sort.path
+        public class Path_Type : Complex_Type                                                                                               // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Path_Type()                                                                                                              // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 17. DataRequirement.sort.direction
+        public class Direction_Type : Complex_Type                                                                                          // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Direction_Type()                                                                                                         // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 1. DataRequirement.type
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        // 2. DataRequirement.profile
+        public ElementInstance Profile;                                                                                                     // MakerGen.cs:203
+        // 3. DataRequirement.subject[x]
+        public ElementInstance SubjectX;                                                                                                    // MakerGen.cs:203
+        // 4. DataRequirement.mustSupport
+        public ElementInstance MustSupport;                                                                                                 // MakerGen.cs:203
+        // 5. DataRequirement.codeFilter
+        public ElementInstance CodeFilter;                                                                                                  // MakerGen.cs:203
+        // 10. DataRequirement.dateFilter
+        public ElementInstance DateFilter;                                                                                                  // MakerGen.cs:203
+        // 14. DataRequirement.limit
+        public ElementInstance Limit;                                                                                                       // MakerGen.cs:203
+        // 15. DataRequirement.sort
+        public ElementInstance Sort;                                                                                                        // MakerGen.cs:203
+        public DataRequirement_Type()                                                                                                       // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

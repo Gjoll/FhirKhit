@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Population'
     /// {
@@ -27,12 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Population",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "draft"
-    ///           }
-    ///         ],
     ///         "path": "Population",
     ///         "short": "A definition of a set of people that apply to some clinically related context, for example people contraindicated for a certain medication",
     ///         "definition": "A populatioof people with some set of grouping criteria.",
@@ -102,7 +96,19 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Population_Type : Complex_Type
-    {
-    }
-}
+    // 0. Population
+    public class Population_Type : Complex_Type                                                                                             // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Population.age[x]
+        public ElementInstance AgeX;                                                                                                        // MakerGen.cs:203
+        // 2. Population.gender
+        public ElementInstance Gender;                                                                                                      // MakerGen.cs:203
+        // 3. Population.race
+        public ElementInstance Race;                                                                                                        // MakerGen.cs:203
+        // 4. Population.physiologicalCondition
+        public ElementInstance PhysiologicalCondition;                                                                                      // MakerGen.cs:203
+        public Population_Type()                                                                                                            // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

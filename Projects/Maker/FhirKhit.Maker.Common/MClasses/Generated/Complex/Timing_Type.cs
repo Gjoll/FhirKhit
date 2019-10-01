@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Timing'
     /// {
@@ -28,16 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Timing",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Timing",
     ///         "short": "A timing schedule that specifies an event that may occur multiple times",
     ///         "definition": "Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.",
@@ -71,71 +61,6 @@ namespace FhirKhit.Maker.Common
     ///         "type": [
     ///           {
     ///             "code": "Element"
-    ///           }
-    ///         ],
-    ///         "constraint": [
-    ///           {
-    ///             "key": "tim-9",
-    ///             "severity": "error",
-    ///             "human": "If there's an offset, there must be a when (and not C, CM, CD, CV)",
-    ///             "expression": "offset.empty() or (when.exists() and ((when in ('C' | 'CM' | 'CD' | 'CV')).not()))",
-    ///             "xpath": "not(exists(f:offset)) or exists(f:when)"
-    ///           },
-    ///           {
-    ///             "key": "tim-5",
-    ///             "severity": "error",
-    ///             "human": "period SHALL be a non-negative value",
-    ///             "expression": "period.exists() implies period >= 0",
-    ///             "xpath": "f:period/@value >= 0 or not(f:period/@value)"
-    ///           },
-    ///           {
-    ///             "key": "tim-6",
-    ///             "severity": "error",
-    ///             "human": "If there's a periodMax, there must be a period",
-    ///             "expression": "periodMax.empty() or period.exists()",
-    ///             "xpath": "not(exists(f:periodMax)) or exists(f:period)"
-    ///           },
-    ///           {
-    ///             "key": "tim-7",
-    ///             "severity": "error",
-    ///             "human": "If there's a durationMax, there must be a duration",
-    ///             "expression": "durationMax.empty() or duration.exists()",
-    ///             "xpath": "not(exists(f:durationMax)) or exists(f:duration)"
-    ///           },
-    ///           {
-    ///             "key": "tim-8",
-    ///             "severity": "error",
-    ///             "human": "If there's a countMax, there must be a count",
-    ///             "expression": "countMax.empty() or count.exists()",
-    ///             "xpath": "not(exists(f:countMax)) or exists(f:count)"
-    ///           },
-    ///           {
-    ///             "key": "tim-1",
-    ///             "severity": "error",
-    ///             "human": "if there's a duration, there needs to be duration units",
-    ///             "expression": "duration.empty() or durationUnit.exists()",
-    ///             "xpath": "not(exists(f:duration)) or exists(f:durationUnit)"
-    ///           },
-    ///           {
-    ///             "key": "tim-10",
-    ///             "severity": "error",
-    ///             "human": "If there's a timeOfDay, there cannot be a when, or vice versa",
-    ///             "expression": "timeOfDay.empty() or when.empty()",
-    ///             "xpath": "not(exists(f:timeOfDay)) or not(exists(f:when))"
-    ///           },
-    ///           {
-    ///             "key": "tim-2",
-    ///             "severity": "error",
-    ///             "human": "if there's a period, there needs to be period units",
-    ///             "expression": "period.empty() or periodUnit.exists()",
-    ///             "xpath": "not(exists(f:period)) or exists(f:periodUnit)"
-    ///           },
-    ///           {
-    ///             "key": "tim-4",
-    ///             "severity": "error",
-    ///             "human": "duration SHALL be a non-negative value",
-    ///             "expression": "duration.exists() implies duration >= 0",
-    ///             "xpath": "f:duration/@value >= 0 or not(f:duration/@value)"
     ///           }
     ///         ],
     ///         "isSummary": true
@@ -440,7 +365,122 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Timing_Type : Complex_Type
-    {
-    }
-}
+    // 0. Timing
+    public class Timing_Type : Complex_Type                                                                                                 // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 3. Timing.repeat.bounds[x]
+        public class BoundsX_Type : Complex_Type                                                                                            // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public BoundsX_Type()                                                                                                           // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 4. Timing.repeat.count
+        public class Count_Type : Complex_Type                                                                                              // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Count_Type()                                                                                                             // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 5. Timing.repeat.countMax
+        public class CountMax_Type : Complex_Type                                                                                           // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public CountMax_Type()                                                                                                          // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 6. Timing.repeat.duration
+        public class Duration_Type : Complex_Type                                                                                           // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Duration_Type()                                                                                                          // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 7. Timing.repeat.durationMax
+        public class DurationMax_Type : Complex_Type                                                                                        // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public DurationMax_Type()                                                                                                       // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 8. Timing.repeat.durationUnit
+        public class DurationUnit_Type : Complex_Type                                                                                       // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public DurationUnit_Type()                                                                                                      // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 9. Timing.repeat.frequency
+        public class Frequency_Type : Complex_Type                                                                                          // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Frequency_Type()                                                                                                         // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 10. Timing.repeat.frequencyMax
+        public class FrequencyMax_Type : Complex_Type                                                                                       // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public FrequencyMax_Type()                                                                                                      // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 11. Timing.repeat.period
+        public class Period_Type : Complex_Type                                                                                             // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Period_Type()                                                                                                            // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 12. Timing.repeat.periodMax
+        public class PeriodMax_Type : Complex_Type                                                                                          // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public PeriodMax_Type()                                                                                                         // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 13. Timing.repeat.periodUnit
+        public class PeriodUnit_Type : Complex_Type                                                                                         // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public PeriodUnit_Type()                                                                                                        // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 14. Timing.repeat.dayOfWeek
+        public class DayOfWeek_Type : Complex_Type                                                                                          // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public DayOfWeek_Type()                                                                                                         // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 15. Timing.repeat.timeOfDay
+        public class TimeOfDay_Type : Complex_Type                                                                                          // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public TimeOfDay_Type()                                                                                                         // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 16. Timing.repeat.when
+        public class When_Type : Complex_Type                                                                                               // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public When_Type()                                                                                                              // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 17. Timing.repeat.offset
+        public class Offset_Type : Complex_Type                                                                                             // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Offset_Type()                                                                                                            // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 1. Timing.event
+        public ElementInstance Event;                                                                                                       // MakerGen.cs:203
+        // 2. Timing.repeat
+        public ElementInstance Repeat;                                                                                                      // MakerGen.cs:203
+        // 18. Timing.code
+        public ElementInstance Code;                                                                                                        // MakerGen.cs:203
+        public Timing_Type()                                                                                                                // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

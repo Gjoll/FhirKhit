@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Expression'
     /// {
@@ -27,26 +27,11 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Expression",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "Expression",
     ///         "short": "An expression that can be used to generate a value",
     ///         "definition": "A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.",
     ///         "min": 0,
-    ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "exp-1",
-    ///             "severity": "error",
-    ///             "human": "An expression or a reference must be provided",
-    ///             "expression": "expression.exists() or reference.exists()",
-    ///             "xpath": "exists(f:expression) or exists(f:reference)"
-    ///           }
-    ///         ]
+    ///         "max": "*"
     ///       },
     ///       {
     ///         "id": "Expression.description",
@@ -138,7 +123,21 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Expression_Type : Complex_Type
-    {
-    }
-}
+    // 0. Expression
+    public class Expression_Type : Complex_Type                                                                                             // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Expression.description
+        public ElementInstance Description;                                                                                                 // MakerGen.cs:203
+        // 2. Expression.name
+        public ElementInstance Name;                                                                                                        // MakerGen.cs:203
+        // 3. Expression.language
+        public ElementInstance Language;                                                                                                    // MakerGen.cs:203
+        // 4. Expression.expression
+        public ElementInstance Expression;                                                                                                  // MakerGen.cs:203
+        // 5. Expression.reference
+        public ElementInstance Reference;                                                                                                   // MakerGen.cs:203
+        public Expression_Type()                                                                                                            // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

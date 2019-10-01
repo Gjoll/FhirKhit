@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Element'
     /// {
@@ -25,16 +25,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Element",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Element",
     ///         "short": "Base for all elements",
     ///         "definition": "Base definition for all elements in a resource.",
@@ -42,15 +32,6 @@ namespace FhirKhit.Maker.Common
     ///         "max": "*",
     ///         "condition": [
     ///           "ele-1"
-    ///         ],
-    ///         "constraint": [
-    ///           {
-    ///             "key": "ele-1",
-    ///             "severity": "error",
-    ///             "human": "All FHIR elements must have a @value or children",
-    ///             "expression": "hasValue() or (children().count() > id.count())",
-    ///             "xpath": "@value|f:*|h:div"
-    ///           }
     ///         ]
     ///       },
     ///       {
@@ -116,7 +97,15 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Element_Type : Complex_Type
-    {
-    }
-}
+    // 0. Element
+    public class Element_Type : Complex_Type                                                                                                // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Element.id
+        public ElementInstance Id;                                                                                                          // MakerGen.cs:203
+        // 2. Element.extension
+        public ElementInstance Extension;                                                                                                   // MakerGen.cs:203
+        public Element_Type()                                                                                                               // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Address'
     /// {
@@ -28,16 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Address",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Address",
     ///         "short": "An address expressed using postal conventions (as opposed to GPS or other location definition formats)",
     ///         "definition": "An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.",
@@ -286,7 +276,31 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Address_Type : Complex_Type
-    {
-    }
-}
+    // 0. Address
+    public class Address_Type : Complex_Type                                                                                                // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Address.use
+        public ElementInstance Use;                                                                                                         // MakerGen.cs:203
+        // 2. Address.type
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        // 3. Address.text
+        public ElementInstance Text;                                                                                                        // MakerGen.cs:203
+        // 4. Address.line
+        public ElementInstance Line;                                                                                                        // MakerGen.cs:203
+        // 5. Address.city
+        public ElementInstance City;                                                                                                        // MakerGen.cs:203
+        // 6. Address.district
+        public ElementInstance District;                                                                                                    // MakerGen.cs:203
+        // 7. Address.state
+        public ElementInstance State;                                                                                                       // MakerGen.cs:203
+        // 8. Address.postalCode
+        public ElementInstance PostalCode;                                                                                                  // MakerGen.cs:203
+        // 9. Address.country
+        public ElementInstance Country;                                                                                                     // MakerGen.cs:203
+        // 10. Address.period
+        public ElementInstance Period;                                                                                                      // MakerGen.cs:203
+        public Address_Type()                                                                                                               // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

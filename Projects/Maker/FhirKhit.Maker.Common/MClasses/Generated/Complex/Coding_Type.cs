@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Coding'
     /// {
@@ -28,16 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Coding",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Coding",
     ///         "short": "A reference to a code defined by a terminology system",
     ///         "definition": "A reference to a code defined by a terminology system.",
@@ -93,12 +83,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "Coding.display",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "Coding.display",
     ///         "short": "Representation defined by the system",
     ///         "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
@@ -132,7 +116,21 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Coding_Type : Complex_Type
-    {
-    }
-}
+    // 0. Coding
+    public class Coding_Type : Complex_Type                                                                                                 // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Coding.system
+        public ElementInstance System;                                                                                                      // MakerGen.cs:203
+        // 2. Coding.version
+        public ElementInstance Version;                                                                                                     // MakerGen.cs:203
+        // 3. Coding.code
+        public ElementInstance Code;                                                                                                        // MakerGen.cs:203
+        // 4. Coding.display
+        public ElementInstance Display;                                                                                                     // MakerGen.cs:203
+        // 5. Coding.userSelected
+        public ElementInstance UserSelected;                                                                                                // MakerGen.cs:203
+        public Coding_Type()                                                                                                                // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

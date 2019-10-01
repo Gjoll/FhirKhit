@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'ProdCharacteristic'
     /// {
@@ -27,12 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "ProdCharacteristic",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "draft"
-    ///           }
-    ///         ],
     ///         "path": "ProdCharacteristic",
     ///         "short": "The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available",
     ///         "definition": "The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.",
@@ -197,7 +191,33 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class ProdCharacteristic_Type : Complex_Type
-    {
-    }
-}
+    // 0. ProdCharacteristic
+    public class ProdCharacteristic_Type : Complex_Type                                                                                     // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. ProdCharacteristic.height
+        public ElementInstance Height;                                                                                                      // MakerGen.cs:203
+        // 2. ProdCharacteristic.width
+        public ElementInstance Width;                                                                                                       // MakerGen.cs:203
+        // 3. ProdCharacteristic.depth
+        public ElementInstance Depth;                                                                                                       // MakerGen.cs:203
+        // 4. ProdCharacteristic.weight
+        public ElementInstance Weight;                                                                                                      // MakerGen.cs:203
+        // 5. ProdCharacteristic.nominalVolume
+        public ElementInstance NominalVolume;                                                                                               // MakerGen.cs:203
+        // 6. ProdCharacteristic.externalDiameter
+        public ElementInstance ExternalDiameter;                                                                                            // MakerGen.cs:203
+        // 7. ProdCharacteristic.shape
+        public ElementInstance Shape;                                                                                                       // MakerGen.cs:203
+        // 8. ProdCharacteristic.color
+        public ElementInstance Color;                                                                                                       // MakerGen.cs:203
+        // 9. ProdCharacteristic.imprint
+        public ElementInstance Imprint;                                                                                                     // MakerGen.cs:203
+        // 10. ProdCharacteristic.image
+        public ElementInstance Image;                                                                                                       // MakerGen.cs:203
+        // 11. ProdCharacteristic.scoring
+        public ElementInstance Scoring;                                                                                                     // MakerGen.cs:203
+        public ProdCharacteristic_Type()                                                                                                    // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

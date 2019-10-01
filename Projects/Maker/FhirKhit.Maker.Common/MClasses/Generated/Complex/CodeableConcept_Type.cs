@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'CodeableConcept'
     /// {
@@ -28,16 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "CodeableConcept",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "CodeableConcept",
     ///         "short": "Concept - reference to a terminology or just  text",
     ///         "definition": "A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.",
@@ -63,12 +53,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "CodeableConcept.text",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "CodeableConcept.text",
     ///         "short": "Plain text representation of the concept",
     ///         "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
@@ -87,7 +71,15 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class CodeableConcept_Type : Complex_Type
-    {
-    }
-}
+    // 0. CodeableConcept
+    public class CodeableConcept_Type : Complex_Type                                                                                        // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. CodeableConcept.coding
+        public ElementInstance Coding;                                                                                                      // MakerGen.cs:203
+        // 2. CodeableConcept.text
+        public ElementInstance Text;                                                                                                        // MakerGen.cs:203
+        public CodeableConcept_Type()                                                                                                       // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

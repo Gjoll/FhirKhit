@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Period'
     /// {
@@ -27,31 +27,12 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Period",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Period",
     ///         "short": "Time range defined by start and end date/time",
     ///         "definition": "A time period defined by a start and end date and optionally time.",
     ///         "comment": "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).",
     ///         "min": 0,
-    ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "per-1",
-    ///             "severity": "error",
-    ///             "human": "If present, start SHALL have a lower value than end",
-    ///             "expression": "start.hasValue().not() or end.hasValue().not() or (start <= end)",
-    ///             "xpath": "not(exists(f:start/@value)) or not(exists(f:end/@value)) or (xs:dateTime(f:start/@value) <= xs:dateTime(f:end/@value))"
-    ///           }
-    ///         ]
+    ///         "max": "*"
     ///       },
     ///       {
     ///         "id": "Period.start",
@@ -94,7 +75,15 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Period_Type : Complex_Type
-    {
-    }
-}
+    // 0. Period
+    public class Period_Type : Complex_Type                                                                                                 // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Period.start
+        public ElementInstance Start;                                                                                                       // MakerGen.cs:203
+        // 2. Period.end
+        public ElementInstance End;                                                                                                         // MakerGen.cs:203
+        public Period_Type()                                                                                                                // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

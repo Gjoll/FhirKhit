@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Duration'
     /// {
@@ -27,30 +27,11 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Duration",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Duration",
     ///         "short": "A length of time",
     ///         "definition": "A length of time.",
     ///         "min": 0,
     ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "drt-1",
-    ///             "severity": "error",
-    ///             "human": "There SHALL be a code if there is a value and it SHALL be an expression of time.  If system is present, it SHALL be UCUM.",
-    ///             "expression": "code.exists() implies ((system = %ucum) and value.exists())",
-    ///             "xpath": "(f:code or not(f:value)) and (not(exists(f:system)) or f:system/@value='http://unitsofmeasure.org')"
-    ///           }
-    ///         ],
     ///         "binding": {
     ///           "extension": [
     ///             {
@@ -71,7 +52,11 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Duration_Type : Complex_Type
-    {
-    }
-}
+    // 0. Duration
+    public class Duration_Type : Complex_Type                                                                                               // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        public Duration_Type()                                                                                                              // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

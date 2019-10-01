@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'ParameterDefinition'
     /// {
@@ -27,12 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "ParameterDefinition",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "ParameterDefinition",
     ///         "short": "Definition of a parameter to a module",
     ///         "definition": "The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.",
@@ -170,7 +164,25 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class ParameterDefinition_Type : Complex_Type
-    {
-    }
-}
+    // 0. ParameterDefinition
+    public class ParameterDefinition_Type : Complex_Type                                                                                    // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. ParameterDefinition.name
+        public ElementInstance Name;                                                                                                        // MakerGen.cs:203
+        // 2. ParameterDefinition.use
+        public ElementInstance Use;                                                                                                         // MakerGen.cs:203
+        // 3. ParameterDefinition.min
+        public ElementInstance Min;                                                                                                         // MakerGen.cs:203
+        // 4. ParameterDefinition.max
+        public ElementInstance Max;                                                                                                         // MakerGen.cs:203
+        // 5. ParameterDefinition.documentation
+        public ElementInstance Documentation;                                                                                               // MakerGen.cs:203
+        // 6. ParameterDefinition.type
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        // 7. ParameterDefinition.profile
+        public ElementInstance Profile;                                                                                                     // MakerGen.cs:203
+        public ParameterDefinition_Type()                                                                                                   // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

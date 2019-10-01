@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'MarketingStatus'
     /// {
@@ -27,12 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "MarketingStatus",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "draft"
-    ///           }
-    ///         ],
     ///         "path": "MarketingStatus",
     ///         "short": "The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available",
     ///         "definition": "The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.",
@@ -113,7 +107,21 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class MarketingStatus_Type : Complex_Type
-    {
-    }
-}
+    // 0. MarketingStatus
+    public class MarketingStatus_Type : Complex_Type                                                                                        // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. MarketingStatus.country
+        public ElementInstance Country;                                                                                                     // MakerGen.cs:203
+        // 2. MarketingStatus.jurisdiction
+        public ElementInstance Jurisdiction;                                                                                                // MakerGen.cs:203
+        // 3. MarketingStatus.status
+        public ElementInstance Status;                                                                                                      // MakerGen.cs:203
+        // 4. MarketingStatus.dateRange
+        public ElementInstance DateRange;                                                                                                   // MakerGen.cs:203
+        // 5. MarketingStatus.restoreDate
+        public ElementInstance RestoreDate;                                                                                                 // MakerGen.cs:203
+        public MarketingStatus_Type()                                                                                                       // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

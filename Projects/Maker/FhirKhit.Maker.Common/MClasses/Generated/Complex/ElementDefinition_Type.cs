@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'ElementDefinition'
     /// {
@@ -27,121 +27,11 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "ElementDefinition",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition",
     ///         "short": "Definition of an element in a resource or extension",
     ///         "definition": "Captures constraints on each element within the resource, profile, or extension.",
     ///         "min": 0,
-    ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "eld-19",
-    ///             "severity": "error",
-    ///             "human": "Element names cannot include some special characters",
-    ///             "expression": "path.matches('[^\\\\s\\\\.,:;\\\\\\'\"\\\\/|?!@#$%&*()\\\\[\\\\]{}]{1,64}(\\\\.[^\\\\s\\\\.,:;\\\\\\'\"\\\\/|?!@#$%&*()\\\\[\\\\]{}]{1,64}(\\\\[x\\\\])?(\\\\:[^\\\\s\\\\.]+)?)*')",
-    ///             "xpath": "matches(path/@value, '[^\\s\\.,:;\\'&quot;\\/|?!@#$%&amp;*()\\[\\]{}]{1,64}(\\.[^\\s\\.,:;\\'&quot;\\/|?!@#$%&amp;*()\\[\\]{}]{1,64}(\\[x\\])?(\\:[^\\s\\.]+)?)*')"
-    ///           },
-    ///           {
-    ///             "key": "eld-2",
-    ///             "severity": "error",
-    ///             "human": "Min <= Max",
-    ///             "expression": "min.empty() or max.empty() or (max = '*') or iif(max != '*', min <= max.toInteger())",
-    ///             "xpath": "not(exists(f:min)) or not(exists(f:max)) or (not(f:max/@value) and not(f:min/@value)) or (f:max/@value = '*') or (number(f:max/@value) >= f:min/@value)"
-    ///           },
-    ///           {
-    ///             "key": "eld-5",
-    ///             "severity": "error",
-    ///             "human": "if the element definition has a contentReference, it cannot have type, defaultValue, fixed, pattern, example, minValue, maxValue, maxLength, or binding",
-    ///             "expression": "contentReference.empty() or (type.empty() and defaultValue.empty() and fixed.empty() and pattern.empty() and example.empty() and minValue.empty() and maxValue.empty() and maxLength.empty() and binding.empty())",
-    ///             "xpath": "not(exists(f:contentReference) and (exists(f:type) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:*[starts-with(local-name(.), 'defaultValue')])  or exists(f:*[starts-with(local-name(.), 'fixed')]) or exists(f:*[starts-with(local-name(.), 'pattern')]) or exists(f:*[starts-with(local-name(.), 'example')]) or exists(f:*[starts-with(local-name(.), 'f:minValue')]) or exists(f:*[starts-with(local-name(.), 'f:maxValue')]) or exists(f:maxLength) or exists(f:binding)))"
-    ///           },
-    ///           {
-    ///             "key": "eld-7",
-    ///             "severity": "error",
-    ///             "human": "Pattern may only be specified if there is one type",
-    ///             "expression": "pattern.empty() or (type.count() <= 1)",
-    ///             "xpath": "not(exists(f:*[starts-with(local-name(.), 'pattern')])) or (count(f:type)<=1)"
-    ///           },
-    ///           {
-    ///             "key": "eld-6",
-    ///             "severity": "error",
-    ///             "human": "Fixed value may only be specified if there is one type",
-    ///             "expression": "fixed.empty() or (type.count()  <= 1)",
-    ///             "xpath": "not(exists(f:*[starts-with(local-name(.), 'fixed')])) or (count(f:type)<=1)"
-    ///           },
-    ///           {
-    ///             "key": "eld-11",
-    ///             "severity": "error",
-    ///             "human": "Binding can only be present for coded elements, string, and uri",
-    ///             "expression": "binding.empty() or type.code.empty() or type.select((code = 'code') or (code = 'Coding') or (code='CodeableConcept') or (code = 'Quantity') or (code = 'string') or (code = 'uri')).exists()",
-    ///             "xpath": "not(exists(f:binding)) or (count(f:type/f:code) = 0) or  f:type/f:code/@value=('code','Coding','CodeableConcept','Quantity','string', 'uri')"
-    ///           },
-    ///           {
-    ///             "key": "eld-22",
-    ///             "severity": "error",
-    ///             "human": "sliceIsConstraining can only appear if slicename is present",
-    ///             "expression": "sliceIsConstraining.exists() implies sliceName.exists()",
-    ///             "xpath": "exists(f:sliceName) or not(exists(f:sliceIsConstraining))"
-    ///           },
-    ///           {
-    ///             "key": "eld-8",
-    ///             "severity": "error",
-    ///             "human": "Pattern and value are mutually exclusive",
-    ///             "expression": "pattern.empty() or fixed.empty()",
-    ///             "xpath": "not(exists(f:*[starts-with(local-name(.), 'pattern')])) or not(exists(f:*[starts-with(local-name(.), 'fixed')]))"
-    ///           },
-    ///           {
-    ///             "key": "eld-14",
-    ///             "severity": "error",
-    ///             "human": "Constraints must be unique by key",
-    ///             "expression": "constraint.select(key).isDistinct()",
-    ///             "xpath": "count(f:constraint) = count(distinct-values(f:constraint/f:key/@value))"
-    ///           },
-    ///           {
-    ///             "key": "eld-13",
-    ///             "severity": "error",
-    ///             "human": "Types must be unique by code",
-    ///             "expression": "type.select(code).isDistinct()",
-    ///             "xpath": "not(exists(for $type in f:type return $type/preceding-sibling::f:type[f:code/@value=$type/f:code/@value]))"
-    ///           },
-    ///           {
-    ///             "key": "eld-16",
-    ///             "severity": "error",
-    ///             "human": "sliceName must be composed of proper tokens separated by \"/\"",
-    ///             "expression": "sliceName.empty() or sliceName.matches('^[a-zA-Z0-9\\\\/\\\\-_\\\\[\\\\]\\\\@]+$')",
-    ///             "xpath": "not(exists(f:sliceName/@value)) or matches(f:sliceName/@value, '^[a-zA-Z0-9\\/\\-_\\[\\]\\@]+$')"
-    ///           },
-    ///           {
-    ///             "key": "eld-15",
-    ///             "severity": "error",
-    ///             "human": "default value and meaningWhenMissing are mutually exclusive",
-    ///             "expression": "defaultValue.empty() or meaningWhenMissing.empty()",
-    ///             "xpath": "not(exists(f:*[starts-with(local-name(.), 'fixed')])) or not(exists(f:meaningWhenMissing))"
-    ///           },
-    ///           {
-    ///             "key": "eld-18",
-    ///             "severity": "error",
-    ///             "human": "Must have a modifier reason if isModifier = true",
-    ///             "expression": "isModifier implies isModifierReason.exists()",
-    ///             "xpath": "not(f:isModifier/@value = 'true') or exists(f:isModifierReason)"
-    ///           },
-    ///           {
-    ///             "key": "eld-20",
-    ///             "severity": "warning",
-    ///             "human": "Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken",
-    ///             "expression": "path.matches('[A-Za-z][A-Za-z0-9]*(\\\\.[a-z][A-Za-z0-9]*(\\\\[x])?)*')",
-    ///             "xpath": "matches(path/@value, '[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*')"
-    ///           }
-    ///         ]
+    ///         "max": "*"
     ///       },
     ///       {
     ///         "id": "ElementDefinition.path",
@@ -201,12 +91,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.sliceIsConstraining",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.sliceIsConstraining",
     ///         "short": "If this slice definition constrains an inherited slice definition (or not)",
     ///         "definition": "If true, indicates that this slice definition is constraining a slice definition with the same name in an inherited profile. If false, the slice is not overriding any slice in an inherited profile. If missing, the slice might or might not be overriding a slice in an inherited profile, depending on the sliceName.",
@@ -223,12 +107,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.label",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.label",
     ///         "short": "Name for element to display with or prompt for element",
     ///         "definition": "A single preferred label which is the text to display beside the element indicating its meaning or to use to prompt for the element in a user display or form.",
@@ -280,15 +158,6 @@ namespace FhirKhit.Maker.Common
     ///         "type": [
     ///           {
     ///             "code": "Element"
-    ///           }
-    ///         ],
-    ///         "constraint": [
-    ///           {
-    ///             "key": "eld-1",
-    ///             "severity": "error",
-    ///             "human": "If there are no discriminators, there must be a definition",
-    ///             "expression": "discriminator.exists() or description.exists()",
-    ///             "xpath": "(f:discriminator) or (f:description)"
     ///           }
     ///         ],
     ///         "isSummary": true
@@ -350,12 +219,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.slicing.description",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.slicing.description",
     ///         "short": "Text description of how slicing works (or not)",
     ///         "definition": "A human-readable text description of how the slicing works. If there is no discriminator, this is required to be present to provide whatever information is possible about how the slices can be differentiated.",
@@ -416,12 +279,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.short",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.short",
     ///         "short": "Concise definition for space-constrained presentation",
     ///         "definition": "A concise description of what this element means (e.g. for use in autogenerated summaries).",
@@ -437,12 +294,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.definition",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.definition",
     ///         "short": "Full formal definition as narrative text",
     ///         "definition": "Provides a complete explanation of the meaning of the data element for human readability.  For the case of elements derived from existing elements (e.g. constraints), the definition SHALL be consistent with the base definition, but convey the meaning of the element in the particular context of use of the resource. (Note: The text you are reading is specified in ElementDefinition.definition).",
@@ -462,12 +313,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.comment",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.comment",
     ///         "short": "Comments about the use of this element",
     ///         "definition": "Explanatory notes and implementation guidance about the data element, including notes about how to use the data properly, exceptions to proper use, etc. (Note: The text you are reading is specified in ElementDefinition.comment).",
@@ -483,12 +328,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.requirements",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.requirements",
     ///         "short": "Why this resource has been created",
     ///         "definition": "This element is for traceability of why the element was created and why the constraints exist as they do. This may be used to point to source materials or specifications that drove the structure of this element.",
@@ -504,12 +343,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.alias",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.alias",
     ///         "short": "Other names",
     ///         "definition": "Identifies additional names by which this element might also be known.",
@@ -559,15 +392,6 @@ namespace FhirKhit.Maker.Common
     ///         "condition": [
     ///           "eld-3",
     ///           "eld-2"
-    ///         ],
-    ///         "constraint": [
-    ///           {
-    ///             "key": "eld-3",
-    ///             "severity": "error",
-    ///             "human": "Max SHALL be a number or \"*\"",
-    ///             "expression": "empty() or ($this = '*') or (toInteger() >= 0)",
-    ///             "xpath": "@value='*' or (normalize-space(@value)!='' and normalize-space(translate(@value, '0123456789',''))='')"
-    ///           }
     ///         ],
     ///         "isSummary": true
     ///       },
@@ -650,12 +474,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.type",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-    ///             "valueString": "TypeRef"
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.type",
     ///         "short": "Data type and Profile for this element",
     ///         "definition": "The data type or resource that the value of this element is permitted to be.",
@@ -669,22 +487,6 @@ namespace FhirKhit.Maker.Common
     ///         ],
     ///         "condition": [
     ///           "eld-13"
-    ///         ],
-    ///         "constraint": [
-    ///           {
-    ///             "key": "eld-4",
-    ///             "severity": "error",
-    ///             "human": "Aggregation may only be specified if one of the allowed types for the element is a reference",
-    ///             "expression": "aggregation.empty() or (code = 'Reference')",
-    ///             "xpath": "not(exists(f:aggregation)) or exists(f:code[@value = 'Reference'])"
-    ///           },
-    ///           {
-    ///             "key": "eld-17",
-    ///             "severity": "error",
-    ///             "human": "targetProfile is only allowed if the type is Reference or canonical",
-    ///             "expression": "(code='Reference' or code = 'canonical') or targetProfile.empty()",
-    ///             "xpath": "not(exists(f:targetProfile)) or (f:code/@value = 'Reference')"
-    ///           }
     ///         ],
     ///         "isSummary": true
     ///       },
@@ -970,12 +772,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.meaningWhenMissing",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.meaningWhenMissing",
     ///         "short": "Implicit meaning when this element is missing",
     ///         "definition": "The Implicit meaning that is to be understood when this element is missing (e.g. 'when this element is missing, the period is ongoing').",
@@ -1352,12 +1148,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.example.label",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.example.label",
     ///         "short": "Describes the purpose of this example",
     ///         "definition": "Describes the purpose of this example amoung the set of examples.",
@@ -1648,15 +1438,6 @@ namespace FhirKhit.Maker.Common
     ///             "code": "Element"
     ///           }
     ///         ],
-    ///         "constraint": [
-    ///           {
-    ///             "key": "eld-21",
-    ///             "severity": "warning",
-    ///             "human": "Constraints should have an expression or else validators will not be able to enforce them",
-    ///             "expression": "expression.exists()",
-    ///             "xpath": "exists(f:expression/@value)"
-    ///           }
-    ///         ],
     ///         "isSummary": true
     ///       },
     ///       {
@@ -1719,12 +1500,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.constraint.human",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.constraint.human",
     ///         "short": "Human description of constraint",
     ///         "definition": "Text that can be used to describe the constraint in messages identifying that the constraint has been violated.",
@@ -1756,12 +1531,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.constraint.xpath",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.constraint.xpath",
     ///         "short": "XPath expression of constraint",
     ///         "definition": "An XPath expression of constraint that can be executed to see if this constraint is met.",
@@ -1861,12 +1630,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.binding",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-    ///             "valueString": "ElementDefinitionBinding"
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.binding",
     ///         "short": "ValueSet details if this is coded",
     ///         "definition": "Binds to a value set if this element is coded (code, Coding, CodeableConcept, Quantity), or the data types (string, uri).",
@@ -1880,15 +1643,6 @@ namespace FhirKhit.Maker.Common
     ///         ],
     ///         "condition": [
     ///           "eld-11"
-    ///         ],
-    ///         "constraint": [
-    ///           {
-    ///             "key": "eld-12",
-    ///             "severity": "error",
-    ///             "human": "ValueSet SHALL start with http:// or https:// or urn:",
-    ///             "expression": "valueSet.exists() implies (valueSet.startsWith('http:') or valueSet.startsWith('https') or valueSet.startsWith('urn:'))",
-    ///             "xpath": "(starts-with(string(f:valueSet/@value), 'http:') or starts-with(string(f:valueSet/@value), 'https:') or starts-with(string(f:valueSet/@value), 'urn:'))"
-    ///           }
     ///         ],
     ///         "isSummary": true
     ///       },
@@ -1928,12 +1682,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "ElementDefinition.binding.description",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "ElementDefinition.binding.description",
     ///         "short": "Human explanation of the value set",
     ///         "definition": "Describes the intended use of this particular set of codes.",
@@ -2060,7 +1808,279 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class ElementDefinition_Type : Complex_Type
-    {
-    }
-}
+    // 0. ElementDefinition
+    public class ElementDefinition_Type : Complex_Type                                                                                      // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 8. ElementDefinition.slicing.discriminator
+        public class Discriminator_Type : Complex_Type                                                                                      // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            // 9. ElementDefinition.slicing.discriminator.type
+            public ElementInstance Type;                                                                                                    // MakerGen.cs:203
+            // 10. ElementDefinition.slicing.discriminator.path
+            public ElementInstance Path;                                                                                                    // MakerGen.cs:203
+            public Discriminator_Type()                                                                                                     // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 11. ElementDefinition.slicing.description
+        public class Description_Type : Complex_Type                                                                                        // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Description_Type()                                                                                                       // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 12. ElementDefinition.slicing.ordered
+        public class Ordered_Type : Complex_Type                                                                                            // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Ordered_Type()                                                                                                           // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 13. ElementDefinition.slicing.rules
+        public class Rules_Type : Complex_Type                                                                                              // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Rules_Type()                                                                                                             // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 22. ElementDefinition.base.path
+        public class Path_Type : Complex_Type                                                                                               // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Path_Type()                                                                                                              // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 23. ElementDefinition.base.min
+        public class Min_Type : Complex_Type                                                                                                // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Min_Type()                                                                                                               // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 24. ElementDefinition.base.max
+        public class Max_Type : Complex_Type                                                                                                // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Max_Type()                                                                                                               // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 27. ElementDefinition.type.code
+        public class Code_Type : Complex_Type                                                                                               // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Code_Type()                                                                                                              // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 28. ElementDefinition.type.profile
+        public class Profile_Type : Complex_Type                                                                                            // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Profile_Type()                                                                                                           // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 29. ElementDefinition.type.targetProfile
+        public class TargetProfile_Type : Complex_Type                                                                                      // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public TargetProfile_Type()                                                                                                     // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 30. ElementDefinition.type.aggregation
+        public class Aggregation_Type : Complex_Type                                                                                        // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Aggregation_Type()                                                                                                       // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 31. ElementDefinition.type.versioning
+        public class Versioning_Type : Complex_Type                                                                                         // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Versioning_Type()                                                                                                        // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 38. ElementDefinition.example.label
+        public class Label_Type : Complex_Type                                                                                              // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Label_Type()                                                                                                             // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 39. ElementDefinition.example.value[x]
+        public class ValueX_Type : Complex_Type                                                                                             // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public ValueX_Type()                                                                                                            // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 45. ElementDefinition.constraint.key
+        public class Key_Type : Complex_Type                                                                                                // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Key_Type()                                                                                                               // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 46. ElementDefinition.constraint.requirements
+        public class Requirements_Type : Complex_Type                                                                                       // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Requirements_Type()                                                                                                      // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 47. ElementDefinition.constraint.severity
+        public class Severity_Type : Complex_Type                                                                                           // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Severity_Type()                                                                                                          // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 48. ElementDefinition.constraint.human
+        public class Human_Type : Complex_Type                                                                                              // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Human_Type()                                                                                                             // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 49. ElementDefinition.constraint.expression
+        public class Expression_Type : Complex_Type                                                                                         // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Expression_Type()                                                                                                        // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 50. ElementDefinition.constraint.xpath
+        public class Xpath_Type : Complex_Type                                                                                              // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Xpath_Type()                                                                                                             // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 51. ElementDefinition.constraint.source
+        public class Source_Type : Complex_Type                                                                                             // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Source_Type()                                                                                                            // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 57. ElementDefinition.binding.strength
+        public class Strength_Type : Complex_Type                                                                                           // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Strength_Type()                                                                                                          // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 58. ElementDefinition.binding.description
+        public class Description_Type : Complex_Type                                                                                        // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Description_Type()                                                                                                       // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 59. ElementDefinition.binding.valueSet
+        public class ValueSet_Type : Complex_Type                                                                                           // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public ValueSet_Type()                                                                                                          // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 61. ElementDefinition.mapping.identity
+        public class Identity_Type : Complex_Type                                                                                           // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Identity_Type()                                                                                                          // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 62. ElementDefinition.mapping.language
+        public class Language_Type : Complex_Type                                                                                           // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Language_Type()                                                                                                          // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 63. ElementDefinition.mapping.map
+        public class Map_Type : Complex_Type                                                                                                // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Map_Type()                                                                                                               // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 64. ElementDefinition.mapping.comment
+        public class Comment_Type : Complex_Type                                                                                            // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Comment_Type()                                                                                                           // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 1. ElementDefinition.path
+        public ElementInstance Path;                                                                                                        // MakerGen.cs:203
+        // 2. ElementDefinition.representation
+        public ElementInstance Representation;                                                                                              // MakerGen.cs:203
+        // 3. ElementDefinition.sliceName
+        public ElementInstance SliceName;                                                                                                   // MakerGen.cs:203
+        // 4. ElementDefinition.sliceIsConstraining
+        public ElementInstance SliceIsConstraining;                                                                                         // MakerGen.cs:203
+        // 5. ElementDefinition.label
+        public ElementInstance Label;                                                                                                       // MakerGen.cs:203
+        // 6. ElementDefinition.code
+        public ElementInstance Code;                                                                                                        // MakerGen.cs:203
+        // 7. ElementDefinition.slicing
+        public ElementInstance Slicing;                                                                                                     // MakerGen.cs:203
+        // 14. ElementDefinition.short
+        public ElementInstance Short;                                                                                                       // MakerGen.cs:203
+        // 15. ElementDefinition.definition
+        public ElementInstance Definition;                                                                                                  // MakerGen.cs:203
+        // 16. ElementDefinition.comment
+        public ElementInstance Comment;                                                                                                     // MakerGen.cs:203
+        // 17. ElementDefinition.requirements
+        public ElementInstance Requirements;                                                                                                // MakerGen.cs:203
+        // 18. ElementDefinition.alias
+        public ElementInstance Alias;                                                                                                       // MakerGen.cs:203
+        // 19. ElementDefinition.min
+        public ElementInstance Min;                                                                                                         // MakerGen.cs:203
+        // 20. ElementDefinition.max
+        public ElementInstance Max;                                                                                                         // MakerGen.cs:203
+        // 21. ElementDefinition.base
+        public ElementInstance Base;                                                                                                        // MakerGen.cs:203
+        // 25. ElementDefinition.contentReference
+        public ElementInstance ContentReference;                                                                                            // MakerGen.cs:203
+        // 26. ElementDefinition.type
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        // 32. ElementDefinition.defaultValue[x]
+        public ElementInstance DefaultValueX;                                                                                               // MakerGen.cs:203
+        // 33. ElementDefinition.meaningWhenMissing
+        public ElementInstance MeaningWhenMissing;                                                                                          // MakerGen.cs:203
+        // 34. ElementDefinition.orderMeaning
+        public ElementInstance OrderMeaning;                                                                                                // MakerGen.cs:203
+        // 35. ElementDefinition.fixed[x]
+        public ElementInstance FixedX;                                                                                                      // MakerGen.cs:203
+        // 36. ElementDefinition.pattern[x]
+        public ElementInstance PatternX;                                                                                                    // MakerGen.cs:203
+        // 37. ElementDefinition.example
+        public ElementInstance Example;                                                                                                     // MakerGen.cs:203
+        // 40. ElementDefinition.minValue[x]
+        public ElementInstance MinValueX;                                                                                                   // MakerGen.cs:203
+        // 41. ElementDefinition.maxValue[x]
+        public ElementInstance MaxValueX;                                                                                                   // MakerGen.cs:203
+        // 42. ElementDefinition.maxLength
+        public ElementInstance MaxLength;                                                                                                   // MakerGen.cs:203
+        // 43. ElementDefinition.condition
+        public ElementInstance Condition;                                                                                                   // MakerGen.cs:203
+        // 44. ElementDefinition.constraint
+        public ElementInstance Constraint;                                                                                                  // MakerGen.cs:203
+        // 52. ElementDefinition.mustSupport
+        public ElementInstance MustSupport;                                                                                                 // MakerGen.cs:203
+        // 53. ElementDefinition.isModifier
+        public ElementInstance IsModifier;                                                                                                  // MakerGen.cs:203
+        // 54. ElementDefinition.isModifierReason
+        public ElementInstance IsModifierReason;                                                                                            // MakerGen.cs:203
+        // 55. ElementDefinition.isSummary
+        public ElementInstance IsSummary;                                                                                                   // MakerGen.cs:203
+        // 56. ElementDefinition.binding
+        public ElementInstance Binding;                                                                                                     // MakerGen.cs:203
+        // 60. ElementDefinition.mapping
+        public ElementInstance Mapping;                                                                                                     // MakerGen.cs:203
+        public ElementDefinition_Type()                                                                                                     // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

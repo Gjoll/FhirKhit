@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'SubstanceAmount'
     /// {
@@ -27,12 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "SubstanceAmount",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "draft"
-    ///           }
-    ///         ],
     ///         "path": "SubstanceAmount",
     ///         "short": "Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID",
     ///         "definition": "Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.",
@@ -133,7 +127,33 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class SubstanceAmount_Type : Complex_Type
-    {
-    }
-}
+    // 0. SubstanceAmount
+    public class SubstanceAmount_Type : Complex_Type                                                                                        // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 5. SubstanceAmount.referenceRange.lowLimit
+        public class LowLimit_Type : Complex_Type                                                                                           // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public LowLimit_Type()                                                                                                          // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 6. SubstanceAmount.referenceRange.highLimit
+        public class HighLimit_Type : Complex_Type                                                                                          // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public HighLimit_Type()                                                                                                         // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 1. SubstanceAmount.amount[x]
+        public ElementInstance AmountX;                                                                                                     // MakerGen.cs:203
+        // 2. SubstanceAmount.amountType
+        public ElementInstance AmountType;                                                                                                  // MakerGen.cs:203
+        // 3. SubstanceAmount.amountText
+        public ElementInstance AmountText;                                                                                                  // MakerGen.cs:203
+        // 4. SubstanceAmount.referenceRange
+        public ElementInstance ReferenceRange;                                                                                              // MakerGen.cs:203
+        public SubstanceAmount_Type()                                                                                                       // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

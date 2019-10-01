@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'UsageContext'
     /// {
@@ -28,12 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "UsageContext",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "UsageContext",
     ///         "short": "Describes the context of use for a conformance or knowledge resource",
     ///         "definition": "Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).",
@@ -112,7 +106,15 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class UsageContext_Type : Complex_Type
-    {
-    }
-}
+    // 0. UsageContext
+    public class UsageContext_Type : Complex_Type                                                                                           // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. UsageContext.code
+        public ElementInstance Code;                                                                                                        // MakerGen.cs:203
+        // 2. UsageContext.value[x]
+        public ElementInstance ValueX;                                                                                                      // MakerGen.cs:203
+        public UsageContext_Type()                                                                                                          // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

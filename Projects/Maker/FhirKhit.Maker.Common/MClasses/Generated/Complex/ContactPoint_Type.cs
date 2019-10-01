@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'ContactPoint'
     /// {
@@ -28,30 +28,11 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "ContactPoint",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "ContactPoint",
     ///         "short": "Details of a Technology mediated contact point (phone, fax, email, etc.)",
     ///         "definition": "Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.",
     ///         "min": 0,
-    ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "cpt-2",
-    ///             "severity": "error",
-    ///             "human": "A system is required if a value is provided.",
-    ///             "expression": "value.empty() or system.exists()",
-    ///             "xpath": "not(exists(f:value)) or exists(f:system)"
-    ///           }
-    ///         ]
+    ///         "max": "*"
     ///       },
     ///       {
     ///         "id": "ContactPoint.system",
@@ -159,7 +140,21 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class ContactPoint_Type : Complex_Type
-    {
-    }
-}
+    // 0. ContactPoint
+    public class ContactPoint_Type : Complex_Type                                                                                           // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. ContactPoint.system
+        public ElementInstance System;                                                                                                      // MakerGen.cs:203
+        // 2. ContactPoint.value
+        public ElementInstance Value;                                                                                                       // MakerGen.cs:203
+        // 3. ContactPoint.use
+        public ElementInstance Use;                                                                                                         // MakerGen.cs:203
+        // 4. ContactPoint.rank
+        public ElementInstance Rank;                                                                                                        // MakerGen.cs:203
+        // 5. ContactPoint.period
+        public ElementInstance Period;                                                                                                      // MakerGen.cs:203
+        public ContactPoint_Type()                                                                                                          // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

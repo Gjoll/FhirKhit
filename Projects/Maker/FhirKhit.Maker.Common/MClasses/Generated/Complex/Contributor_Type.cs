@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Contributor'
     /// {
@@ -28,12 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Contributor",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "Contributor",
     ///         "short": "Contributor information",
     ///         "definition": "A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.",
@@ -97,7 +91,17 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Contributor_Type : Complex_Type
-    {
-    }
-}
+    // 0. Contributor
+    public class Contributor_Type : Complex_Type                                                                                            // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Contributor.type
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        // 2. Contributor.name
+        public ElementInstance Name;                                                                                                        // MakerGen.cs:203
+        // 3. Contributor.contact
+        public ElementInstance Contact;                                                                                                     // MakerGen.cs:203
+        public Contributor_Type()                                                                                                           // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

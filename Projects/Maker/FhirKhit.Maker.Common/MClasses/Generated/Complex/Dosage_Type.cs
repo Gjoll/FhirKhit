@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Dosage'
     /// {
@@ -27,12 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Dosage",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "Dosage",
     ///         "short": "How the medication is/was taken or should be taken",
     ///         "definition": "Indicates how the medication is/was taken or should be taken by the patient.",
@@ -379,7 +373,58 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Dosage_Type : Complex_Type
-    {
-    }
-}
+    // 0. Dosage
+    public class Dosage_Type : Complex_Type                                                                                                 // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 11. Dosage.doseAndRate.type
+        public class Type_Type : Complex_Type                                                                                               // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public Type_Type()                                                                                                              // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 12. Dosage.doseAndRate.dose[x]
+        public class DoseX_Type : Complex_Type                                                                                              // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public DoseX_Type()                                                                                                             // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 13. Dosage.doseAndRate.rate[x]
+        public class RateX_Type : Complex_Type                                                                                              // MakerGen.cs:220
+        {                                                                                                                                   // MakerGen.cs:221
+            public RateX_Type()                                                                                                             // MakerGen.cs:229
+            {                                                                                                                               // MakerGen.cs:230
+            }                                                                                                                               // MakerGen.cs:244
+        }                                                                                                                                   // MakerGen.cs:225
+        // 1. Dosage.sequence
+        public ElementInstance Sequence;                                                                                                    // MakerGen.cs:203
+        // 2. Dosage.text
+        public ElementInstance Text;                                                                                                        // MakerGen.cs:203
+        // 3. Dosage.additionalInstruction
+        public ElementInstance AdditionalInstruction;                                                                                       // MakerGen.cs:203
+        // 4. Dosage.patientInstruction
+        public ElementInstance PatientInstruction;                                                                                          // MakerGen.cs:203
+        // 5. Dosage.timing
+        public ElementInstance Timing;                                                                                                      // MakerGen.cs:203
+        // 6. Dosage.asNeeded[x]
+        public ElementInstance AsNeededX;                                                                                                   // MakerGen.cs:203
+        // 7. Dosage.site
+        public ElementInstance Site;                                                                                                        // MakerGen.cs:203
+        // 8. Dosage.route
+        public ElementInstance Route;                                                                                                       // MakerGen.cs:203
+        // 9. Dosage.method
+        public ElementInstance Method;                                                                                                      // MakerGen.cs:203
+        // 10. Dosage.doseAndRate
+        public ElementInstance DoseAndRate;                                                                                                 // MakerGen.cs:203
+        // 14. Dosage.maxDosePerPeriod
+        public ElementInstance MaxDosePerPeriod;                                                                                            // MakerGen.cs:203
+        // 15. Dosage.maxDosePerAdministration
+        public ElementInstance MaxDosePerAdministration;                                                                                    // MakerGen.cs:203
+        // 16. Dosage.maxDosePerLifetime
+        public ElementInstance MaxDosePerLifetime;                                                                                          // MakerGen.cs:203
+        public Dosage_Type()                                                                                                                // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

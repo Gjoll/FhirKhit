@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Annotation'
     /// {
@@ -27,16 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Annotation",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Annotation",
     ///         "short": "Text node with attribution",
     ///         "definition": "A  text note which also  contains information about who made the statement and when.",
@@ -100,7 +90,17 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Annotation_Type : Complex_Type
-    {
-    }
-}
+    // 0. Annotation
+    public class Annotation_Type : Complex_Type                                                                                             // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Annotation.author[x]
+        public ElementInstance AuthorX;                                                                                                     // MakerGen.cs:203
+        // 2. Annotation.time
+        public ElementInstance Time;                                                                                                        // MakerGen.cs:203
+        // 3. Annotation.text
+        public ElementInstance Text;                                                                                                        // MakerGen.cs:203
+        public Annotation_Type()                                                                                                            // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

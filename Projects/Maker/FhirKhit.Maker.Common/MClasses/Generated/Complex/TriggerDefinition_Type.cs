@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'TriggerDefinition'
     /// {
@@ -27,41 +27,12 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "TriggerDefinition",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "TriggerDefinition",
     ///         "short": "Defines an expected trigger for a module",
     ///         "definition": "A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.",
     ///         "comment": "If an event is a named-event, it means the event is completely pre-coordinated, and no other information can be specified for the event. If the event is one of the data- events, the data and condition elements specify the triggering criteria. The data element specifies the structured component, and the condition element provides additional optional refinement of that structured component. If the event is periodic, the timing element defines when the event is triggered. For both data- and periodic events, a name can be provided as a shorthand for the formal semantics provided by the other elements.",
     ///         "min": 0,
-    ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "trd-3",
-    ///             "severity": "error",
-    ///             "human": "A named event requires a name, a periodic event requires timing, and a data event requires data",
-    ///             "expression": "(type = 'named-event' implies name.exists()) and (type = 'periodic' implies timing.exists()) and (type.startsWith('data-') implies data.exists())",
-    ///             "xpath": "((not(f:type/@value = 'named-event')) or name.exists()) and (not(f:type/@value = 'periodic') or timing.exists()) and (not(starts-with(f:type/@value, 'data-')) or data.exists())"
-    ///           },
-    ///           {
-    ///             "key": "trd-2",
-    ///             "severity": "error",
-    ///             "human": "A condition only if there is a data requirement",
-    ///             "expression": "condition.exists() implies data.exists()",
-    ///             "xpath": "not(exists(f:condition)) or exists(f:data)"
-    ///           },
-    ///           {
-    ///             "key": "trd-1",
-    ///             "severity": "error",
-    ///             "human": "Either timing, or a data requirement, but not both",
-    ///             "expression": "data.empty() or timing.empty()",
-    ///             "xpath": "not(exists(f:data)) or not(exists(*[starts-with(local-name(.), 'timing')]))"
-    ///           }
-    ///         ]
+    ///         "max": "*"
     ///       },
     ///       {
     ///         "id": "TriggerDefinition.type",
@@ -164,7 +135,21 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class TriggerDefinition_Type : Complex_Type
-    {
-    }
-}
+    // 0. TriggerDefinition
+    public class TriggerDefinition_Type : Complex_Type                                                                                      // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. TriggerDefinition.type
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        // 2. TriggerDefinition.name
+        public ElementInstance Name;                                                                                                        // MakerGen.cs:203
+        // 3. TriggerDefinition.timing[x]
+        public ElementInstance TimingX;                                                                                                     // MakerGen.cs:203
+        // 4. TriggerDefinition.data
+        public ElementInstance Data;                                                                                                        // MakerGen.cs:203
+        // 5. TriggerDefinition.condition
+        public ElementInstance Condition;                                                                                                   // MakerGen.cs:203
+        public TriggerDefinition_Type()                                                                                                     // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

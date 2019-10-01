@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Attachment'
     /// {
@@ -28,31 +28,12 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Attachment",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Attachment",
     ///         "short": "Content in a format defined elsewhere",
     ///         "definition": "For referring to data content defined in other formats.",
     ///         "comment": "When providing a summary view (for example with Observation.value[x]) Attachment should be represented with a brief display text such as \"Signed Procedure Consent\".",
     ///         "min": 0,
-    ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "att-1",
-    ///             "severity": "error",
-    ///             "human": "If the Attachment has data, it SHALL have a contentType",
-    ///             "expression": "data.empty() or contentType.exists()",
-    ///             "xpath": "not(exists(f:data)) or exists(f:contentType)"
-    ///           }
-    ///         ]
+    ///         "max": "*"
     ///       },
     ///       {
     ///         "id": "Attachment.contentType",
@@ -201,12 +182,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "Attachment.title",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "Attachment.title",
     ///         "short": "Label to display in place of the data",
     ///         "definition": "A label or set of text to display in place of the data.",
@@ -245,7 +220,27 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Attachment_Type : Complex_Type
-    {
-    }
-}
+    // 0. Attachment
+    public class Attachment_Type : Complex_Type                                                                                             // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Attachment.contentType
+        public ElementInstance ContentType;                                                                                                 // MakerGen.cs:203
+        // 2. Attachment.language
+        public ElementInstance Language;                                                                                                    // MakerGen.cs:203
+        // 3. Attachment.data
+        public ElementInstance Data;                                                                                                        // MakerGen.cs:203
+        // 4. Attachment.url
+        public ElementInstance Url;                                                                                                         // MakerGen.cs:203
+        // 5. Attachment.size
+        public ElementInstance Size;                                                                                                        // MakerGen.cs:203
+        // 6. Attachment.hash
+        public ElementInstance Hash;                                                                                                        // MakerGen.cs:203
+        // 7. Attachment.title
+        public ElementInstance Title;                                                                                                       // MakerGen.cs:203
+        // 8. Attachment.creation
+        public ElementInstance Creation;                                                                                                    // MakerGen.cs:203
+        public Attachment_Type()                                                                                                            // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

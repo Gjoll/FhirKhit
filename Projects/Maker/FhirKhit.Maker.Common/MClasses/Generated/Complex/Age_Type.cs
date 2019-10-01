@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Age'
     /// {
@@ -27,26 +27,11 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Age",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "Age",
     ///         "short": "A duration of time during which an organism (or a process) has existed",
     ///         "definition": "A duration of time during which an organism (or a process) has existed.",
     ///         "min": 0,
     ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "age-1",
-    ///             "severity": "error",
-    ///             "human": "There SHALL be a code if there is a value and it SHALL be an expression of time.  If system is present, it SHALL be UCUM.  If value is present, it SHALL be positive.",
-    ///             "expression": "(code.exists() or value.empty()) and (system.empty() or system = %ucum) and (value.empty() or value.hasValue().not() or value > 0)",
-    ///             "xpath": "(f:code or not(f:value)) and (not(exists(f:system)) or f:system/@value='http://unitsofmeasure.org') and (not(f:value/@value) or f:value/@value >=0)"
-    ///           }
-    ///         ],
     ///         "binding": {
     ///           "extension": [
     ///             {
@@ -67,7 +52,11 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Age_Type : Complex_Type
-    {
-    }
-}
+    // 0. Age
+    public class Age_Type : Complex_Type                                                                                                    // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        public Age_Type()                                                                                                                   // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

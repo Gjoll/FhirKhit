@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'RelatedArtifact'
     /// {
@@ -28,12 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "RelatedArtifact",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "RelatedArtifact",
     ///         "short": "Related artifacts for a knowledge resource",
     ///         "definition": "Related artifacts such as additional documentation, justification, or bibliographic references.",
@@ -160,7 +154,25 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class RelatedArtifact_Type : Complex_Type
-    {
-    }
-}
+    // 0. RelatedArtifact
+    public class RelatedArtifact_Type : Complex_Type                                                                                        // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. RelatedArtifact.type
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        // 2. RelatedArtifact.label
+        public ElementInstance Label;                                                                                                       // MakerGen.cs:203
+        // 3. RelatedArtifact.display
+        public ElementInstance Display;                                                                                                     // MakerGen.cs:203
+        // 4. RelatedArtifact.citation
+        public ElementInstance Citation;                                                                                                    // MakerGen.cs:203
+        // 5. RelatedArtifact.url
+        public ElementInstance Url;                                                                                                         // MakerGen.cs:203
+        // 6. RelatedArtifact.document
+        public ElementInstance Document;                                                                                                    // MakerGen.cs:203
+        // 7. RelatedArtifact.resource
+        public ElementInstance Resource;                                                                                                    // MakerGen.cs:203
+        public RelatedArtifact_Type()                                                                                                       // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

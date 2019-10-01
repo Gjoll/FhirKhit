@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Identifier'
     /// {
@@ -28,16 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Identifier",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Identifier",
     ///         "short": "An identifier intended for computation",
     ///         "definition": "An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.",
@@ -183,7 +173,23 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Identifier_Type : Complex_Type
-    {
-    }
-}
+    // 0. Identifier
+    public class Identifier_Type : Complex_Type                                                                                             // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Identifier.use
+        public ElementInstance Use;                                                                                                         // MakerGen.cs:203
+        // 2. Identifier.type
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        // 3. Identifier.system
+        public ElementInstance System;                                                                                                      // MakerGen.cs:203
+        // 4. Identifier.value
+        public ElementInstance Value;                                                                                                       // MakerGen.cs:203
+        // 5. Identifier.period
+        public ElementInstance Period;                                                                                                      // MakerGen.cs:203
+        // 6. Identifier.assigner
+        public ElementInstance Assigner;                                                                                                    // MakerGen.cs:203
+        public Identifier_Type()                                                                                                            // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Ratio'
     /// {
@@ -28,31 +28,12 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Ratio",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Ratio",
     ///         "short": "A ratio of two Quantity values - a numerator and a denominator",
     ///         "definition": "A relationship of two Quantity values - expressed as a numerator and a denominator.",
     ///         "comment": "The Ratio datatype should only be used to express a relationship of two numbers if the relationship cannot be suitably expressed using a Quantity and a common unit.  Where the denominator value is known to be fixed to \"1\", Quantity should be used instead of Ratio.",
     ///         "min": 0,
-    ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "rat-1",
-    ///             "severity": "error",
-    ///             "human": "Numerator and denominator SHALL both be present, or both are absent. If both are absent, there SHALL be some extension present",
-    ///             "expression": "(numerator.empty() xor denominator.exists()) and (numerator.exists() or extension.exists())",
-    ///             "xpath": "(count(f:numerator) = count(f:denominator)) and ((count(f:numerator) > 0) or (count(f:extension) > 0))"
-    ///           }
-    ///         ]
+    ///         "max": "*"
     ///       },
     ///       {
     ///         "id": "Ratio.numerator",
@@ -86,7 +67,15 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Ratio_Type : Complex_Type
-    {
-    }
-}
+    // 0. Ratio
+    public class Ratio_Type : Complex_Type                                                                                                  // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Ratio.numerator
+        public ElementInstance Numerator;                                                                                                   // MakerGen.cs:203
+        // 2. Ratio.denominator
+        public ElementInstance Denominator;                                                                                                 // MakerGen.cs:203
+        public Ratio_Type()                                                                                                                 // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'ContactDetail'
     /// {
@@ -28,16 +28,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "ContactDetail",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "ContactDetail",
     ///         "short": "Contact information",
     ///         "definition": "Specifies contact information for a person or organization.",
@@ -77,7 +67,15 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class ContactDetail_Type : Complex_Type
-    {
-    }
-}
+    // 0. ContactDetail
+    public class ContactDetail_Type : Complex_Type                                                                                          // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. ContactDetail.name
+        public ElementInstance Name;                                                                                                        // MakerGen.cs:203
+        // 2. ContactDetail.telecom
+        public ElementInstance Telecom;                                                                                                     // MakerGen.cs:203
+        public ContactDetail_Type()                                                                                                         // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Distance'
     /// {
@@ -27,26 +27,11 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Distance",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "trial-use"
-    ///           }
-    ///         ],
     ///         "path": "Distance",
     ///         "short": "A length - a value with a unit that is a physical distance",
     ///         "definition": "A length - a value with a unit that is a physical distance.",
     ///         "min": 0,
     ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "dis-1",
-    ///             "severity": "error",
-    ///             "human": "There SHALL be a code if there is a value and it SHALL be an expression of length.  If system is present, it SHALL be UCUM.",
-    ///             "expression": "(code.exists() or value.empty()) and (system.empty() or system = %ucum)",
-    ///             "xpath": "(f:code or not(f:value)) and (not(exists(f:system)) or f:system/@value='http://unitsofmeasure.org')"
-    ///           }
-    ///         ],
     ///         "binding": {
     ///           "extension": [
     ///             {
@@ -67,7 +52,11 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Distance_Type : Complex_Type
-    {
-    }
-}
+    // 0. Distance
+    public class Distance_Type : Complex_Type                                                                                               // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        public Distance_Type()                                                                                                              // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

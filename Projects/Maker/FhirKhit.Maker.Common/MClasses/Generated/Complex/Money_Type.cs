@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Money'
     /// {
@@ -27,16 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Money",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Money",
     ///         "short": "An amount of economic utility in some recognized currency",
     ///         "definition": "An amount of economic utility in some recognized currency.",
@@ -93,7 +83,15 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Money_Type : Complex_Type
-    {
-    }
-}
+    // 0. Money
+    public class Money_Type : Complex_Type                                                                                                  // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Money.value
+        public ElementInstance Value;                                                                                                       // MakerGen.cs:203
+        // 2. Money.currency
+        public ElementInstance Currency;                                                                                                    // MakerGen.cs:203
+        public Money_Type()                                                                                                                 // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

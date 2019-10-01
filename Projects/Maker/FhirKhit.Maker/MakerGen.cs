@@ -30,15 +30,14 @@ namespace FhirKhit.Maker
             public StructureDefinition SDef;
         };
         Dictionary<String, SDefInfo> items = new Dictionary<string, SDefInfo>();
-
         String PrimitiveGenPath => Path.Combine(this.outputDir, "Generated", "Primitive");
         String ComplexGenPath => Path.Combine(this.outputDir, "Generated", "Complex");
         String ResourceGenPath => Path.Combine(this.outputDir, "Generated", "Resource");
-
         String outputDir;
 
         FhirStructureDefinitions sDefs;
 
+        String TypeName(String s) => $"{s.ToMachineName()}_Type";
         public MakerGen(String outputDir)
         {
             this.outputDir = outputDir;
@@ -124,6 +123,8 @@ namespace FhirKhit.Maker
             foreach (ElementDefinition ed in sDef.Differential.Element)
             {
                 ed.Mapping = null;
+                ed.Constraint = null;
+                ed.Extension = null;
             }
         }
 
@@ -139,7 +140,7 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = $"{sDef.Name.ToMachineName()}_Type";
+            String instanceName = TypeName(sDef.Differential.Element[0].Path.LastPathPart());
 
             instanceBlock
                 .AppendLine("using System;")
@@ -163,6 +164,87 @@ namespace FhirKhit.Maker
             instanceEditor.Save(Path.Combine(PrimitiveGenPath, $"{instanceName}.cs"));
         }
 
+        void DefineClassFields(
+            CodeBlockNested subClassBlock,
+            CodeBlockNested fieldsBlock,
+            CodeBlockNested constructorBlock,
+            ElementDefinition[] elements,
+            String basePath,
+            String className,
+            ref Int32 index)
+        {
+            while (index < elements.Length)
+            {
+                ElementDefinition ed = elements[index];
+
+                // We know when we are at the end of a sub class, when the 
+                // path does no longer start with subPath.
+                String path = ed.Path;
+                if (ed.Path.StartsWith(basePath) == false)
+                    return;
+
+                path = path.Substring(basePath.Length);
+
+                if (path.Split('.').Length > 1)
+                {
+                    String subClassName = TypeName(path.LastPathPart());
+                    // start defining a sub class.
+                    DefineClass(subClassBlock,
+                        elements,
+                        ref index,
+                        ed.Path,
+                        subClassName);
+                }
+                else
+                {
+                    String elementName = ed.Path.LastPathPart().ToMachineName();
+                    fieldsBlock
+                        .AppendComment($"{index}. {elements[index].Path}")
+                        .AppendCode($"public ElementInstance {elementName};")
+                        ;
+                    index += 1;
+                }
+            }
+        }
+
+        void DefineClass(CodeBlockNested block,
+            ElementDefinition[] elements,
+            ref Int32 index,
+            String basePath,
+            String className)
+        {
+            basePath += '.';
+
+            block
+                .AppendComment($"{index}. {elements[index].Path}")
+                .AppendCode($"public class {className} : Complex_Type")
+                .OpenBrace()
+                .DefineBlock(out CodeBlockNested subClassBlock)
+                .DefineBlock(out CodeBlockNested fieldsBlock)
+                .DefineBlock(out CodeBlockNested constructorBlock)
+                .CloseBrace()
+                ;
+
+            constructorBlock
+                .AppendCode($"public {className}()")
+                .OpenBrace()
+                ;
+
+            index += 1;
+
+            DefineClassFields(subClassBlock,
+                fieldsBlock,
+                constructorBlock,
+                elements,
+                basePath,
+                className,
+                ref index);
+
+            constructorBlock
+                .CloseBrace()
+                ;
+        }
+
         void ProcessFhirComplex(SDefInfo sDefInfo)
         {
             const String fcn = "ProcessFhirPrimitive";
@@ -175,8 +257,7 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = $"{sDef.Name.ToMachineName()}_Type";
-
+            String instanceName = TypeName(sDef.Differential.Element[0].Path.LastPathPart());
             instanceBlock
                 .AppendLine("using System;")
                 .AppendLine("using System.Diagnostics;")
@@ -190,11 +271,18 @@ namespace FhirKhit.Maker
                 .Summary($"Fhir primitive '{sDef.Name}'")
                 .SummaryLines(sDef.ToFormatedJson())
                 .SummaryClose()
-                .AppendCode($"public class {instanceName} : Complex_Type")
-                .OpenBrace()
-                .CloseBrace()
+                .DefineBlock(out CodeBlockNested classBlock)
                 .CloseBrace()
                 ;
+
+            Int32 i = 0;
+            DefineClass(classBlock,
+                sDef.Differential.Element.ToArray(),
+                ref i,
+                sDef.Differential.Element[0].Path,
+                TypeName(sDef.Name));
+            if (i != sDef.Differential.Element.Count)
+                throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Invalid element index");
 
             instanceEditor.Save(Path.Combine(this.ComplexGenPath, $"{instanceName}.cs"));
         }

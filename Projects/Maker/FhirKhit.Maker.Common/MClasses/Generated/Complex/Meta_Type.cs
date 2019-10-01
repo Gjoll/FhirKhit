@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Meta'
     /// {
@@ -27,16 +27,6 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Meta",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Meta",
     ///         "short": "Metadata about a resource",
     ///         "definition": "The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -166,7 +156,23 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Meta_Type : Complex_Type
-    {
-    }
-}
+    // 0. Meta
+    public class Meta_Type : Complex_Type                                                                                                   // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Meta.versionId
+        public ElementInstance VersionId;                                                                                                   // MakerGen.cs:203
+        // 2. Meta.lastUpdated
+        public ElementInstance LastUpdated;                                                                                                 // MakerGen.cs:203
+        // 3. Meta.source
+        public ElementInstance Source;                                                                                                      // MakerGen.cs:203
+        // 4. Meta.profile
+        public ElementInstance Profile;                                                                                                     // MakerGen.cs:203
+        // 5. Meta.security
+        public ElementInstance Security;                                                                                                    // MakerGen.cs:203
+        // 6. Meta.tag
+        public ElementInstance Tag;                                                                                                         // MakerGen.cs:203
+        public Meta_Type()                                                                                                                  // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

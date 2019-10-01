@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Reference'
     /// {
@@ -27,31 +27,12 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Reference",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Reference",
     ///         "short": "A reference from one resource to another",
     ///         "definition": "A reference from one resource to another.",
     ///         "comment": "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.",
     ///         "min": 0,
-    ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "ref-1",
-    ///             "severity": "error",
-    ///             "human": "SHALL have a contained resource if a local reference is provided",
-    ///             "expression": "reference.startsWith('#').not() or (reference.substring(1).trace('url') in %resource.contained.id.trace('ids'))",
-    ///             "xpath": "not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])"
-    ///           }
-    ///         ]
+    ///         "max": "*"
     ///       },
     ///       {
     ///         "id": "Reference.reference",
@@ -114,12 +95,6 @@ namespace FhirKhit.Maker.Common
     ///       },
     ///       {
     ///         "id": "Reference.display",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-    ///             "valueBoolean": true
-    ///           }
-    ///         ],
     ///         "path": "Reference.display",
     ///         "short": "Text alternative for the resource",
     ///         "definition": "Plain text narrative that identifies the resource in addition to the resource reference.",
@@ -137,7 +112,19 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Reference_Type : Complex_Type
-    {
-    }
-}
+    // 0. Reference
+    public class Reference_Type : Complex_Type                                                                                              // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Reference.reference
+        public ElementInstance Reference;                                                                                                   // MakerGen.cs:203
+        // 2. Reference.type
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        // 3. Reference.identifier
+        public ElementInstance Identifier;                                                                                                  // MakerGen.cs:203
+        // 4. Reference.display
+        public ElementInstance Display;                                                                                                     // MakerGen.cs:203
+        public Reference_Type()                                                                                                             // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275

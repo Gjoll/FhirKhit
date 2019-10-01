@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:151
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:152
+{                                                                                                                                           // MakerGen.cs:153
     /// <summary>
     /// Fhir primitive 'time'
     /// {
@@ -74,7 +74,7 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Time_Type : Primitive_Type
-    {
-    }
-}
+    public class Time_Type : Primitive_Type                                                                                                 // MakerGen.cs:158
+    {                                                                                                                                       // MakerGen.cs:159
+    }                                                                                                                                       // MakerGen.cs:160
+}                                                                                                                                           // MakerGen.cs:161

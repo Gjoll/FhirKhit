@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common
-{
+                                                                                                                                            // MakerGen.cs:267
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
+{                                                                                                                                           // MakerGen.cs:269
     /// <summary>
     /// Fhir primitive 'Range'
     /// {
@@ -28,31 +28,12 @@ namespace FhirKhit.Maker.Common
     ///     "element": [
     ///       {
     ///         "id": "Range",
-    ///         "extension": [
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-    ///             "valueCode": "normative"
-    ///           },
-    ///           {
-    ///             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-    ///             "valueCode": "4.0.0"
-    ///           }
-    ///         ],
     ///         "path": "Range",
     ///         "short": "Set of values bounded by low and high",
     ///         "definition": "A set of ordered Quantities defined by a low and high limit.",
     ///         "comment": "The stated low and high value are assumed to have arbitrarily high precision when it comes to determining which values are in the range. I.e. 1.99 is not in the range 2 -> 3.",
     ///         "min": 0,
-    ///         "max": "*",
-    ///         "constraint": [
-    ///           {
-    ///             "key": "rng-2",
-    ///             "severity": "error",
-    ///             "human": "If present, low SHALL have a lower value than high",
-    ///             "expression": "low.empty() or high.empty() or (low <= high)",
-    ///             "xpath": "not(exists(f:low/f:value/@value)) or not(exists(f:high/f:value/@value)) or (number(f:low/f:value/@value) <= number(f:high/f:value/@value))"
-    ///           }
-    ///         ]
+    ///         "max": "*"
     ///       },
     ///       {
     ///         "id": "Range.low",
@@ -94,7 +75,15 @@ namespace FhirKhit.Maker.Common
     ///   }
     /// }
     /// </summary>
-    public class Range_Type : Complex_Type
-    {
-    }
-}
+    // 0. Range
+    public class Range_Type : Complex_Type                                                                                                  // MakerGen.cs:220
+    {                                                                                                                                       // MakerGen.cs:221
+        // 1. Range.low
+        public ElementInstance Low;                                                                                                         // MakerGen.cs:203
+        // 2. Range.high
+        public ElementInstance High;                                                                                                        // MakerGen.cs:203
+        public Range_Type()                                                                                                                 // MakerGen.cs:229
+        {                                                                                                                                   // MakerGen.cs:230
+        }                                                                                                                                   // MakerGen.cs:244
+    }                                                                                                                                       // MakerGen.cs:225
+}                                                                                                                                           // MakerGen.cs:275
