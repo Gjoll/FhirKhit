@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:413
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:414
-using System.IO;                                                                                                                            // MakerGen.cs:415
-using System.Linq;                                                                                                                          // MakerGen.cs:416
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:417
-                                                                                                                                            // MakerGen.cs:418
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:419
-{                                                                                                                                           // MakerGen.cs:420
-    #region Json                                                                                                                            // MakerGen.cs:421
-    #if NEVER                                                                                                                               // MakerGen.cs:422
+using System;                                                                                                                               // MakerGen.cs:451
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
+using System.IO;                                                                                                                            // MakerGen.cs:453
+using System.Linq;                                                                                                                          // MakerGen.cs:454
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
+                                                                                                                                            // MakerGen.cs:456
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
+{                                                                                                                                           // MakerGen.cs:458
+    #region Json                                                                                                                            // MakerGen.cs:459
+    #if NEVER                                                                                                                               // MakerGen.cs:460
     {
       "resourceType": "StructureDefinition",
       "id": "Schedule",
@@ -196,161 +196,203 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:425
+    #endregion                                                                                                                              // MakerGen.cs:463
     /// <summary>
     /// Fhir resource 'Schedule'
     /// </summary>
     // 0. Schedule
-    public class Schedule : FhirKhit.Maker.Common.Resource.ResourceBase                                                                     // MakerGen.cs:374
-    {                                                                                                                                       // MakerGen.cs:375
-        // 1. Schedule.identifier
-        public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
-        // 2. Schedule.active
-        public MakerElementInstance Element_Active;                                                                                         // MakerGen.cs:232
-        // 3. Schedule.serviceCategory
-        public MakerElementInstance Element_ServiceCategory;                                                                                // MakerGen.cs:232
-        // 4. Schedule.serviceType
-        public MakerElementInstance Element_ServiceType;                                                                                    // MakerGen.cs:232
-        // 5. Schedule.specialty
-        public MakerElementInstance Element_Specialty;                                                                                      // MakerGen.cs:232
-        // 6. Schedule.actor
-        public MakerElementInstance Element_Actor;                                                                                          // MakerGen.cs:232
-        // 7. Schedule.planningHorizon
-        public MakerElementInstance Element_PlanningHorizon;                                                                                // MakerGen.cs:232
-        // 8. Schedule.comment
-        public MakerElementInstance Element_Comment;                                                                                        // MakerGen.cs:232
-        public Schedule()                                                                                                                   // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:243
-                // 1. Schedule.identifier
-                this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:347
-                        {                                                                                                                   // MakerGen.cs:348
-                        }                                                                                                                   // MakerGen.cs:349
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 2. Schedule.active
-                this.Element_Active = new MakerElementInstance                                                                              // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Active",                                                                                                // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Boolean                                                                         // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 3. Schedule.serviceCategory
-                this.Element_ServiceCategory = new MakerElementInstance                                                                     // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_ServiceCategory",                                                                                       // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
-                        {                                                                                                                   // MakerGen.cs:305
-                        }                                                                                                                   // MakerGen.cs:308
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 4. Schedule.serviceType
-                this.Element_ServiceType = new MakerElementInstance                                                                         // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_ServiceType",                                                                                           // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
-                        {                                                                                                                   // MakerGen.cs:305
-                        }                                                                                                                   // MakerGen.cs:308
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 5. Schedule.specialty
-                this.Element_Specialty = new MakerElementInstance                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Specialty",                                                                                             // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
-                        {                                                                                                                   // MakerGen.cs:305
-                        }                                                                                                                   // MakerGen.cs:308
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 6. Schedule.actor
-                this.Element_Actor = new MakerElementInstance                                                                               // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Actor",                                                                                                 // MakerGen.cs:247
-                    Min = 1,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
-                        {                                                                                                                   // MakerGen.cs:336
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:338
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:338
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:338
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:338
-                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:338
-                                "http://hl7.org/fhir/StructureDefinition/HealthcareService",                                                // MakerGen.cs:338
-                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:338
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:339
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 7. Schedule.planningHorizon
-                this.Element_PlanningHorizon = new MakerElementInstance                                                                     // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_PlanningHorizon",                                                                                       // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Period                                                                            // MakerGen.cs:347
-                        {                                                                                                                   // MakerGen.cs:348
-                        }                                                                                                                   // MakerGen.cs:349
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 8. Schedule.comment
-                this.Element_Comment = new MakerElementInstance                                                                             // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Comment",                                                                                               // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-        }                                                                                                                                   // MakerGen.cs:395
-    }                                                                                                                                       // MakerGen.cs:379
-}                                                                                                                                           // MakerGen.cs:430
+    public class Schedule : FhirKhit.Maker.Common.Resource.ResourceBase                                                                     // MakerGen.cs:385
+    {                                                                                                                                       // MakerGen.cs:386
+        public class Schedule_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                        // MakerGen.cs:387
+        {                                                                                                                                   // MakerGen.cs:388
+            // 1. Schedule.identifier
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:236
+            // 2. Schedule.active
+            public ElementDefinitionInfo Active;                                                                                            // MakerGen.cs:236
+            // 3. Schedule.serviceCategory
+            public ElementDefinitionInfo ServiceCategory;                                                                                   // MakerGen.cs:236
+            // 4. Schedule.serviceType
+            public ElementDefinitionInfo ServiceType;                                                                                       // MakerGen.cs:236
+            // 5. Schedule.specialty
+            public ElementDefinitionInfo Specialty;                                                                                         // MakerGen.cs:236
+            // 6. Schedule.actor
+            public ElementDefinitionInfo Actor;                                                                                             // MakerGen.cs:236
+            // 7. Schedule.planningHorizon
+            public ElementDefinitionInfo PlanningHorizon;                                                                                   // MakerGen.cs:236
+            // 8. Schedule.comment
+            public ElementDefinitionInfo Comment;                                                                                           // MakerGen.cs:236
+            public Schedule_Elements()                                                                                                      // MakerGen.cs:409
+            {                                                                                                                               // MakerGen.cs:410
+                {                                                                                                                           // MakerGen.cs:251
+                    // 1. Schedule.identifier
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Identifier",                                                                                                // MakerGen.cs:255
+                        Path= "Schedule.identifier",                                                                                        // MakerGen.cs:256
+                        Id = "Schedule.identifier",                                                                                         // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
+                            {                                                                                                               // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 2. Schedule.active
+                    this.Active = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Active",                                                                                                    // MakerGen.cs:255
+                        Path= "Schedule.active",                                                                                            // MakerGen.cs:256
+                        Id = "Schedule.active",                                                                                             // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 3. Schedule.serviceCategory
+                    this.ServiceCategory = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "ServiceCategory",                                                                                           // MakerGen.cs:255
+                        Path= "Schedule.serviceCategory",                                                                                   // MakerGen.cs:256
+                        Id = "Schedule.serviceCategory",                                                                                    // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
+                            {                                                                                                               // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:318
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 4. Schedule.serviceType
+                    this.ServiceType = new ElementDefinitionInfo                                                                            // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "ServiceType",                                                                                               // MakerGen.cs:255
+                        Path= "Schedule.serviceType",                                                                                       // MakerGen.cs:256
+                        Id = "Schedule.serviceType",                                                                                        // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
+                            {                                                                                                               // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:318
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 5. Schedule.specialty
+                    this.Specialty = new ElementDefinitionInfo                                                                              // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Specialty",                                                                                                 // MakerGen.cs:255
+                        Path= "Schedule.specialty",                                                                                         // MakerGen.cs:256
+                        Id = "Schedule.specialty",                                                                                          // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
+                            {                                                                                                               // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:318
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 6. Schedule.actor
+                    this.Actor = new ElementDefinitionInfo                                                                                  // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Actor",                                                                                                     // MakerGen.cs:255
+                        Path= "Schedule.actor",                                                                                             // MakerGen.cs:256
+                        Id = "Schedule.actor",                                                                                              // MakerGen.cs:257
+                        Min = 1,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
+                            {                                                                                                               // MakerGen.cs:346
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/Device",                                                       // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/HealthcareService",                                            // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:348
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:349
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 7. Schedule.planningHorizon
+                    this.PlanningHorizon = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "PlanningHorizon",                                                                                           // MakerGen.cs:255
+                        Path= "Schedule.planningHorizon",                                                                                   // MakerGen.cs:256
+                        Id = "Schedule.planningHorizon",                                                                                    // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:357
+                            {                                                                                                               // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 8. Schedule.comment
+                    this.Comment = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Comment",                                                                                                   // MakerGen.cs:255
+                        Path= "Schedule.comment",                                                                                           // MakerGen.cs:256
+                        Id = "Schedule.comment",                                                                                            // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:429
+            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
+            {                                                                                                                               // MakerGen.cs:415
+                base.Write(sDef);                                                                                                           // MakerGen.cs:416
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:240
+                Active.Write(sDef);                                                                                                         // MakerGen.cs:240
+                ServiceCategory.Write(sDef);                                                                                                // MakerGen.cs:240
+                ServiceType.Write(sDef);                                                                                                    // MakerGen.cs:240
+                Specialty.Write(sDef);                                                                                                      // MakerGen.cs:240
+                Actor.Write(sDef);                                                                                                          // MakerGen.cs:240
+                PlanningHorizon.Write(sDef);                                                                                                // MakerGen.cs:240
+                Comment.Write(sDef);                                                                                                        // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:433
+        }                                                                                                                                   // MakerGen.cs:393
+        public Schedule_Elements Elements { get; }                                                                                          // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+        public Schedule()                                                                                                                   // MakerGen.cs:396
+        {                                                                                                                                   // MakerGen.cs:397
+            this.Elements = new Schedule_Elements();                                                                                        // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:404
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:468

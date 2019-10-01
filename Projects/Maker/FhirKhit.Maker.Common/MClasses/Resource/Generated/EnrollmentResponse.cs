@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:413
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:414
-using System.IO;                                                                                                                            // MakerGen.cs:415
-using System.Linq;                                                                                                                          // MakerGen.cs:416
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:417
-                                                                                                                                            // MakerGen.cs:418
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:419
-{                                                                                                                                           // MakerGen.cs:420
-    #region Json                                                                                                                            // MakerGen.cs:421
-    #if NEVER                                                                                                                               // MakerGen.cs:422
+using System;                                                                                                                               // MakerGen.cs:451
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
+using System.IO;                                                                                                                            // MakerGen.cs:453
+using System.Linq;                                                                                                                          // MakerGen.cs:454
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
+                                                                                                                                            // MakerGen.cs:456
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
+{                                                                                                                                           // MakerGen.cs:458
+    #region Json                                                                                                                            // MakerGen.cs:459
+    #if NEVER                                                                                                                               // MakerGen.cs:460
     {
       "resourceType": "StructureDefinition",
       "id": "EnrollmentResponse",
@@ -182,165 +182,207 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:425
+    #endregion                                                                                                                              // MakerGen.cs:463
     /// <summary>
     /// Fhir resource 'EnrollmentResponse'
     /// </summary>
     // 0. EnrollmentResponse
-    public class EnrollmentResponse : FhirKhit.Maker.Common.Resource.ResourceBase                                                           // MakerGen.cs:374
-    {                                                                                                                                       // MakerGen.cs:375
-        // 1. EnrollmentResponse.identifier
-        public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
-        // 2. EnrollmentResponse.status
-        public MakerElementInstance Element_Status;                                                                                         // MakerGen.cs:232
-        // 3. EnrollmentResponse.request
-        public MakerElementInstance Element_Request;                                                                                        // MakerGen.cs:232
-        // 4. EnrollmentResponse.outcome
-        public MakerElementInstance Element_Outcome;                                                                                        // MakerGen.cs:232
-        // 5. EnrollmentResponse.disposition
-        public MakerElementInstance Element_Disposition;                                                                                    // MakerGen.cs:232
-        // 6. EnrollmentResponse.created
-        public MakerElementInstance Element_Created;                                                                                        // MakerGen.cs:232
-        // 7. EnrollmentResponse.organization
-        public MakerElementInstance Element_Organization;                                                                                   // MakerGen.cs:232
-        // 8. EnrollmentResponse.requestProvider
-        public MakerElementInstance Element_RequestProvider;                                                                                // MakerGen.cs:232
-        public EnrollmentResponse()                                                                                                         // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:243
-                // 1. EnrollmentResponse.identifier
-                this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:347
-                        {                                                                                                                   // MakerGen.cs:348
-                        }                                                                                                                   // MakerGen.cs:349
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 2. EnrollmentResponse.status
-                this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 3. EnrollmentResponse.request
-                this.Element_Request = new MakerElementInstance                                                                             // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Request",                                                                                               // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
-                        {                                                                                                                   // MakerGen.cs:336
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/EnrollmentRequest"                                                 // MakerGen.cs:338
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:339
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 4. EnrollmentResponse.outcome
-                this.Element_Outcome = new MakerElementInstance                                                                             // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Outcome",                                                                                               // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 5. EnrollmentResponse.disposition
-                this.Element_Disposition = new MakerElementInstance                                                                         // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Disposition",                                                                                           // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 6. EnrollmentResponse.created
-                this.Element_Created = new MakerElementInstance                                                                             // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Created",                                                                                               // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 7. EnrollmentResponse.organization
-                this.Element_Organization = new MakerElementInstance                                                                        // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Organization",                                                                                          // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
-                        {                                                                                                                   // MakerGen.cs:336
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:338
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:339
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 8. EnrollmentResponse.requestProvider
-                this.Element_RequestProvider = new MakerElementInstance                                                                     // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_RequestProvider",                                                                                       // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
-                        {                                                                                                                   // MakerGen.cs:336
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:338
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:338
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:338
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:339
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-        }                                                                                                                                   // MakerGen.cs:395
-    }                                                                                                                                       // MakerGen.cs:379
-}                                                                                                                                           // MakerGen.cs:430
+    public class EnrollmentResponse : FhirKhit.Maker.Common.Resource.ResourceBase                                                           // MakerGen.cs:385
+    {                                                                                                                                       // MakerGen.cs:386
+        public class EnrollmentResponse_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:387
+        {                                                                                                                                   // MakerGen.cs:388
+            // 1. EnrollmentResponse.identifier
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:236
+            // 2. EnrollmentResponse.status
+            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:236
+            // 3. EnrollmentResponse.request
+            public ElementDefinitionInfo Request;                                                                                           // MakerGen.cs:236
+            // 4. EnrollmentResponse.outcome
+            public ElementDefinitionInfo Outcome;                                                                                           // MakerGen.cs:236
+            // 5. EnrollmentResponse.disposition
+            public ElementDefinitionInfo Disposition;                                                                                       // MakerGen.cs:236
+            // 6. EnrollmentResponse.created
+            public ElementDefinitionInfo Created;                                                                                           // MakerGen.cs:236
+            // 7. EnrollmentResponse.organization
+            public ElementDefinitionInfo Organization;                                                                                      // MakerGen.cs:236
+            // 8. EnrollmentResponse.requestProvider
+            public ElementDefinitionInfo RequestProvider;                                                                                   // MakerGen.cs:236
+            public EnrollmentResponse_Elements()                                                                                            // MakerGen.cs:409
+            {                                                                                                                               // MakerGen.cs:410
+                {                                                                                                                           // MakerGen.cs:251
+                    // 1. EnrollmentResponse.identifier
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Identifier",                                                                                                // MakerGen.cs:255
+                        Path= "EnrollmentResponse.identifier",                                                                              // MakerGen.cs:256
+                        Id = "EnrollmentResponse.identifier",                                                                               // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
+                            {                                                                                                               // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 2. EnrollmentResponse.status
+                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Status",                                                                                                    // MakerGen.cs:255
+                        Path= "EnrollmentResponse.status",                                                                                  // MakerGen.cs:256
+                        Id = "EnrollmentResponse.status",                                                                                   // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 3. EnrollmentResponse.request
+                    this.Request = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Request",                                                                                                   // MakerGen.cs:255
+                        Path= "EnrollmentResponse.request",                                                                                 // MakerGen.cs:256
+                        Id = "EnrollmentResponse.request",                                                                                  // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
+                            {                                                                                                               // MakerGen.cs:346
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/EnrollmentRequest"                                             // MakerGen.cs:348
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:349
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 4. EnrollmentResponse.outcome
+                    this.Outcome = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Outcome",                                                                                                   // MakerGen.cs:255
+                        Path= "EnrollmentResponse.outcome",                                                                                 // MakerGen.cs:256
+                        Id = "EnrollmentResponse.outcome",                                                                                  // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 5. EnrollmentResponse.disposition
+                    this.Disposition = new ElementDefinitionInfo                                                                            // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Disposition",                                                                                               // MakerGen.cs:255
+                        Path= "EnrollmentResponse.disposition",                                                                             // MakerGen.cs:256
+                        Id = "EnrollmentResponse.disposition",                                                                              // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 6. EnrollmentResponse.created
+                    this.Created = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Created",                                                                                                   // MakerGen.cs:255
+                        Path= "EnrollmentResponse.created",                                                                                 // MakerGen.cs:256
+                        Id = "EnrollmentResponse.created",                                                                                  // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 7. EnrollmentResponse.organization
+                    this.Organization = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Organization",                                                                                              // MakerGen.cs:255
+                        Path= "EnrollmentResponse.organization",                                                                            // MakerGen.cs:256
+                        Id = "EnrollmentResponse.organization",                                                                             // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
+                            {                                                                                                               // MakerGen.cs:346
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:348
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:349
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 8. EnrollmentResponse.requestProvider
+                    this.RequestProvider = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "RequestProvider",                                                                                           // MakerGen.cs:255
+                        Path= "EnrollmentResponse.requestProvider",                                                                         // MakerGen.cs:256
+                        Id = "EnrollmentResponse.requestProvider",                                                                          // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:345
+                            {                                                                                                               // MakerGen.cs:346
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:348
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:348
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:348
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:349
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:429
+            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
+            {                                                                                                                               // MakerGen.cs:415
+                base.Write(sDef);                                                                                                           // MakerGen.cs:416
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:240
+                Status.Write(sDef);                                                                                                         // MakerGen.cs:240
+                Request.Write(sDef);                                                                                                        // MakerGen.cs:240
+                Outcome.Write(sDef);                                                                                                        // MakerGen.cs:240
+                Disposition.Write(sDef);                                                                                                    // MakerGen.cs:240
+                Created.Write(sDef);                                                                                                        // MakerGen.cs:240
+                Organization.Write(sDef);                                                                                                   // MakerGen.cs:240
+                RequestProvider.Write(sDef);                                                                                                // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:433
+        }                                                                                                                                   // MakerGen.cs:393
+        public EnrollmentResponse_Elements Elements { get; }                                                                                // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+        public EnrollmentResponse()                                                                                                         // MakerGen.cs:396
+        {                                                                                                                                   // MakerGen.cs:397
+            this.Elements = new EnrollmentResponse_Elements();                                                                              // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:404
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:468

@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:413
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:414
-using System.IO;                                                                                                                            // MakerGen.cs:415
-using System.Linq;                                                                                                                          // MakerGen.cs:416
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:417
-                                                                                                                                            // MakerGen.cs:418
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:419
-{                                                                                                                                           // MakerGen.cs:420
-    #region Json                                                                                                                            // MakerGen.cs:421
-    #if NEVER                                                                                                                               // MakerGen.cs:422
+using System;                                                                                                                               // MakerGen.cs:451
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
+using System.IO;                                                                                                                            // MakerGen.cs:453
+using System.Linq;                                                                                                                          // MakerGen.cs:454
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
+                                                                                                                                            // MakerGen.cs:456
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
+{                                                                                                                                           // MakerGen.cs:458
+    #region Json                                                                                                                            // MakerGen.cs:459
+    #if NEVER                                                                                                                               // MakerGen.cs:460
     {
       "resourceType": "StructureDefinition",
       "id": "SubstanceSourceMaterial",
@@ -541,567 +541,783 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:425
+    #endregion                                                                                                                              // MakerGen.cs:463
     /// <summary>
     /// Fhir resource 'SubstanceSourceMaterial'
     /// </summary>
     // 0. SubstanceSourceMaterial
-    public class SubstanceSourceMaterial : FhirKhit.Maker.Common.Resource.ResourceBase                                                      // MakerGen.cs:374
-    {                                                                                                                                       // MakerGen.cs:375
-        // 11. SubstanceSourceMaterial.fractionDescription
-        public class Type_FractionDescription : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:374
-        {                                                                                                                                   // MakerGen.cs:375
-            // 12. SubstanceSourceMaterial.fractionDescription.fraction
-            public MakerElementInstance Element_Fraction;                                                                                   // MakerGen.cs:232
-            // 13. SubstanceSourceMaterial.fractionDescription.materialType
-            public MakerElementInstance Element_MaterialType;                                                                               // MakerGen.cs:232
-            public Type_FractionDescription()                                                                                               // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                {                                                                                                                           // MakerGen.cs:243
+    public class SubstanceSourceMaterial : FhirKhit.Maker.Common.Resource.ResourceBase                                                      // MakerGen.cs:385
+    {                                                                                                                                       // MakerGen.cs:386
+        public class SubstanceSourceMaterial_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:387
+        {                                                                                                                                   // MakerGen.cs:388
+            // 11. SubstanceSourceMaterial.fractionDescription
+            public class Type_FractionDescription : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:385
+            {                                                                                                                               // MakerGen.cs:386
+                public class Type_FractionDescription_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                // MakerGen.cs:387
+                {                                                                                                                           // MakerGen.cs:388
                     // 12. SubstanceSourceMaterial.fractionDescription.fraction
-                    this.Element_Fraction = new MakerElementInstance                                                                        // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Fraction",                                                                                          // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
-                            {                                                                                                               // MakerGen.cs:290
-                            }                                                                                                               // MakerGen.cs:293
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo Fraction;                                                                                  // MakerGen.cs:236
                     // 13. SubstanceSourceMaterial.fractionDescription.materialType
-                    this.Element_MaterialType = new MakerElementInstance                                                                    // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_MaterialType",                                                                                      // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
+                    public ElementDefinitionInfo MaterialType;                                                                              // MakerGen.cs:236
+                    public Type_FractionDescription_Elements()                                                                              // MakerGen.cs:409
+                    {                                                                                                                       // MakerGen.cs:410
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
-                            {                                                                                                               // MakerGen.cs:305
-                            }                                                                                                               // MakerGen.cs:308
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-            }                                                                                                                               // MakerGen.cs:395
-        }                                                                                                                                   // MakerGen.cs:379
-        // 14. SubstanceSourceMaterial.organism
-        public class Type_Organism : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:374
-        {                                                                                                                                   // MakerGen.cs:375
-            // 20. SubstanceSourceMaterial.organism.author
-            public class Type_Author : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:374
-            {                                                                                                                               // MakerGen.cs:375
-                // 21. SubstanceSourceMaterial.organism.author.authorType
-                public MakerElementInstance Element_AuthorType;                                                                             // MakerGen.cs:232
-                // 22. SubstanceSourceMaterial.organism.author.authorDescription
-                public MakerElementInstance Element_AuthorDescription;                                                                      // MakerGen.cs:232
-                public Type_Author()                                                                                                        // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 21. SubstanceSourceMaterial.organism.author.authorType
-                        this.Element_AuthorType = new MakerElementInstance                                                                  // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_AuthorType",                                                                                    // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:304
-                                {                                                                                                           // MakerGen.cs:305
-                                }                                                                                                           // MakerGen.cs:308
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 22. SubstanceSourceMaterial.organism.author.authorDescription
-                        this.Element_AuthorDescription = new MakerElementInstance                                                           // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_AuthorDescription",                                                                             // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                }                                                                                                                           // MakerGen.cs:395
-            }                                                                                                                               // MakerGen.cs:379
-            // 23. SubstanceSourceMaterial.organism.hybrid
-            public class Type_Hybrid : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:374
-            {                                                                                                                               // MakerGen.cs:375
-                // 24. SubstanceSourceMaterial.organism.hybrid.maternalOrganismId
-                public MakerElementInstance Element_MaternalOrganismId;                                                                     // MakerGen.cs:232
-                // 25. SubstanceSourceMaterial.organism.hybrid.maternalOrganismName
-                public MakerElementInstance Element_MaternalOrganismName;                                                                   // MakerGen.cs:232
-                // 26. SubstanceSourceMaterial.organism.hybrid.paternalOrganismId
-                public MakerElementInstance Element_PaternalOrganismId;                                                                     // MakerGen.cs:232
-                // 27. SubstanceSourceMaterial.organism.hybrid.paternalOrganismName
-                public MakerElementInstance Element_PaternalOrganismName;                                                                   // MakerGen.cs:232
-                // 28. SubstanceSourceMaterial.organism.hybrid.hybridType
-                public MakerElementInstance Element_HybridType;                                                                             // MakerGen.cs:232
-                public Type_Hybrid()                                                                                                        // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 24. SubstanceSourceMaterial.organism.hybrid.maternalOrganismId
-                        this.Element_MaternalOrganismId = new MakerElementInstance                                                          // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_MaternalOrganismId",                                                                            // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 25. SubstanceSourceMaterial.organism.hybrid.maternalOrganismName
-                        this.Element_MaternalOrganismName = new MakerElementInstance                                                        // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_MaternalOrganismName",                                                                          // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 26. SubstanceSourceMaterial.organism.hybrid.paternalOrganismId
-                        this.Element_PaternalOrganismId = new MakerElementInstance                                                          // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_PaternalOrganismId",                                                                            // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 27. SubstanceSourceMaterial.organism.hybrid.paternalOrganismName
-                        this.Element_PaternalOrganismName = new MakerElementInstance                                                        // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_PaternalOrganismName",                                                                          // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 28. SubstanceSourceMaterial.organism.hybrid.hybridType
-                        this.Element_HybridType = new MakerElementInstance                                                                  // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_HybridType",                                                                                    // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:304
-                                {                                                                                                           // MakerGen.cs:305
-                                }                                                                                                           // MakerGen.cs:308
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                }                                                                                                                           // MakerGen.cs:395
-            }                                                                                                                               // MakerGen.cs:379
-            // 29. SubstanceSourceMaterial.organism.organismGeneral
-            public class Type_OrganismGeneral : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:374
-            {                                                                                                                               // MakerGen.cs:375
-                // 30. SubstanceSourceMaterial.organism.organismGeneral.kingdom
-                public MakerElementInstance Element_Kingdom;                                                                                // MakerGen.cs:232
-                // 31. SubstanceSourceMaterial.organism.organismGeneral.phylum
-                public MakerElementInstance Element_Phylum;                                                                                 // MakerGen.cs:232
-                // 32. SubstanceSourceMaterial.organism.organismGeneral.class
-                public MakerElementInstance Element_Class;                                                                                  // MakerGen.cs:232
-                // 33. SubstanceSourceMaterial.organism.organismGeneral.order
-                public MakerElementInstance Element_Order;                                                                                  // MakerGen.cs:232
-                public Type_OrganismGeneral()                                                                                               // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 30. SubstanceSourceMaterial.organism.organismGeneral.kingdom
-                        this.Element_Kingdom = new MakerElementInstance                                                                     // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Kingdom",                                                                                       // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:304
-                                {                                                                                                           // MakerGen.cs:305
-                                }                                                                                                           // MakerGen.cs:308
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 31. SubstanceSourceMaterial.organism.organismGeneral.phylum
-                        this.Element_Phylum = new MakerElementInstance                                                                      // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Phylum",                                                                                        // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:304
-                                {                                                                                                           // MakerGen.cs:305
-                                }                                                                                                           // MakerGen.cs:308
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 32. SubstanceSourceMaterial.organism.organismGeneral.class
-                        this.Element_Class = new MakerElementInstance                                                                       // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Class",                                                                                         // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:304
-                                {                                                                                                           // MakerGen.cs:305
-                                }                                                                                                           // MakerGen.cs:308
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 33. SubstanceSourceMaterial.organism.organismGeneral.order
-                        this.Element_Order = new MakerElementInstance                                                                       // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Order",                                                                                         // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:304
-                                {                                                                                                           // MakerGen.cs:305
-                                }                                                                                                           // MakerGen.cs:308
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                }                                                                                                                           // MakerGen.cs:395
-            }                                                                                                                               // MakerGen.cs:379
-            // 15. SubstanceSourceMaterial.organism.family
-            public MakerElementInstance Element_Family;                                                                                     // MakerGen.cs:232
-            // 16. SubstanceSourceMaterial.organism.genus
-            public MakerElementInstance Element_Genus;                                                                                      // MakerGen.cs:232
-            // 17. SubstanceSourceMaterial.organism.species
-            public MakerElementInstance Element_Species;                                                                                    // MakerGen.cs:232
-            // 18. SubstanceSourceMaterial.organism.intraspecificType
-            public MakerElementInstance Element_IntraspecificType;                                                                          // MakerGen.cs:232
-            // 19. SubstanceSourceMaterial.organism.intraspecificDescription
-            public MakerElementInstance Element_IntraspecificDescription;                                                                   // MakerGen.cs:232
-            public Type_Organism()                                                                                                          // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                {                                                                                                                           // MakerGen.cs:243
+                            // 12. SubstanceSourceMaterial.fractionDescription.fraction
+                            this.Fraction = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Fraction",                                                                                          // MakerGen.cs:255
+                                Path= "SubstanceSourceMaterial.fractionDescription.fraction",                                               // MakerGen.cs:256
+                                Id = "SubstanceSourceMaterial.fractionDescription.fraction",                                                // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
+                                    {                                                                                                       // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:303
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 13. SubstanceSourceMaterial.fractionDescription.materialType
+                            this.MaterialType = new ElementDefinitionInfo                                                                   // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "MaterialType",                                                                                      // MakerGen.cs:255
+                                Path= "SubstanceSourceMaterial.fractionDescription.materialType",                                           // MakerGen.cs:256
+                                Id = "SubstanceSourceMaterial.fractionDescription.materialType",                                            // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
+                                    {                                                                                                       // MakerGen.cs:315
+                                    }                                                                                                       // MakerGen.cs:318
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:429
+                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
+                    {                                                                                                                       // MakerGen.cs:415
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
+                        Fraction.Write(sDef);                                                                                               // MakerGen.cs:240
+                        MaterialType.Write(sDef);                                                                                           // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:433
+                }                                                                                                                           // MakerGen.cs:393
+                public Type_FractionDescription_Elements Elements { get; }                                                                  // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                public Type_FractionDescription()                                                                                           // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:397
+                    this.Elements = new Type_FractionDescription_Elements();                                                                // MakerGen.cs:398
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:404
+            }                                                                                                                               // MakerGen.cs:405
+            // 14. SubstanceSourceMaterial.organism
+            public class Type_Organism : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:385
+            {                                                                                                                               // MakerGen.cs:386
+                public class Type_Organism_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:387
+                {                                                                                                                           // MakerGen.cs:388
+                    // 20. SubstanceSourceMaterial.organism.author
+                    public class Type_Author : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:385
+                    {                                                                                                                       // MakerGen.cs:386
+                        public class Type_Author_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:387
+                        {                                                                                                                   // MakerGen.cs:388
+                            // 21. SubstanceSourceMaterial.organism.author.authorType
+                            public ElementDefinitionInfo AuthorType;                                                                        // MakerGen.cs:236
+                            // 22. SubstanceSourceMaterial.organism.author.authorDescription
+                            public ElementDefinitionInfo AuthorDescription;                                                                 // MakerGen.cs:236
+                            public Type_Author_Elements()                                                                                   // MakerGen.cs:409
+                            {                                                                                                               // MakerGen.cs:410
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 21. SubstanceSourceMaterial.organism.author.authorType
+                                    this.AuthorType = new ElementDefinitionInfo                                                             // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "AuthorType",                                                                                // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.author.authorType",                                         // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.author.authorType",                                          // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:314
+                                            {                                                                                               // MakerGen.cs:315
+                                            }                                                                                               // MakerGen.cs:318
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 22. SubstanceSourceMaterial.organism.author.authorDescription
+                                    this.AuthorDescription = new ElementDefinitionInfo                                                      // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "AuthorDescription",                                                                         // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.author.authorDescription",                                  // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.author.authorDescription",                                   // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                            }                                                                                                               // MakerGen.cs:429
+                            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:414
+                            {                                                                                                               // MakerGen.cs:415
+                                base.Write(sDef);                                                                                           // MakerGen.cs:416
+                                AuthorType.Write(sDef);                                                                                     // MakerGen.cs:240
+                                AuthorDescription.Write(sDef);                                                                              // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:433
+                        }                                                                                                                   // MakerGen.cs:393
+                        public Type_Author_Elements Elements { get; }                                                                       // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                        public Type_Author()                                                                                                // MakerGen.cs:396
+                        {                                                                                                                   // MakerGen.cs:397
+                            this.Elements = new Type_Author_Elements();                                                                     // MakerGen.cs:398
+                        }                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:402
+                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:403
+                        }                                                                                                                   // MakerGen.cs:404
+                    }                                                                                                                       // MakerGen.cs:405
+                    // 23. SubstanceSourceMaterial.organism.hybrid
+                    public class Type_Hybrid : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:385
+                    {                                                                                                                       // MakerGen.cs:386
+                        public class Type_Hybrid_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:387
+                        {                                                                                                                   // MakerGen.cs:388
+                            // 24. SubstanceSourceMaterial.organism.hybrid.maternalOrganismId
+                            public ElementDefinitionInfo MaternalOrganismId;                                                                // MakerGen.cs:236
+                            // 25. SubstanceSourceMaterial.organism.hybrid.maternalOrganismName
+                            public ElementDefinitionInfo MaternalOrganismName;                                                              // MakerGen.cs:236
+                            // 26. SubstanceSourceMaterial.organism.hybrid.paternalOrganismId
+                            public ElementDefinitionInfo PaternalOrganismId;                                                                // MakerGen.cs:236
+                            // 27. SubstanceSourceMaterial.organism.hybrid.paternalOrganismName
+                            public ElementDefinitionInfo PaternalOrganismName;                                                              // MakerGen.cs:236
+                            // 28. SubstanceSourceMaterial.organism.hybrid.hybridType
+                            public ElementDefinitionInfo HybridType;                                                                        // MakerGen.cs:236
+                            public Type_Hybrid_Elements()                                                                                   // MakerGen.cs:409
+                            {                                                                                                               // MakerGen.cs:410
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 24. SubstanceSourceMaterial.organism.hybrid.maternalOrganismId
+                                    this.MaternalOrganismId = new ElementDefinitionInfo                                                     // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "MaternalOrganismId",                                                                        // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.hybrid.maternalOrganismId",                                 // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.hybrid.maternalOrganismId",                                  // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 25. SubstanceSourceMaterial.organism.hybrid.maternalOrganismName
+                                    this.MaternalOrganismName = new ElementDefinitionInfo                                                   // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "MaternalOrganismName",                                                                      // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.hybrid.maternalOrganismName",                               // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.hybrid.maternalOrganismName",                                // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 26. SubstanceSourceMaterial.organism.hybrid.paternalOrganismId
+                                    this.PaternalOrganismId = new ElementDefinitionInfo                                                     // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "PaternalOrganismId",                                                                        // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.hybrid.paternalOrganismId",                                 // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.hybrid.paternalOrganismId",                                  // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 27. SubstanceSourceMaterial.organism.hybrid.paternalOrganismName
+                                    this.PaternalOrganismName = new ElementDefinitionInfo                                                   // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "PaternalOrganismName",                                                                      // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.hybrid.paternalOrganismName",                               // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.hybrid.paternalOrganismName",                                // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 28. SubstanceSourceMaterial.organism.hybrid.hybridType
+                                    this.HybridType = new ElementDefinitionInfo                                                             // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "HybridType",                                                                                // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.hybrid.hybridType",                                         // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.hybrid.hybridType",                                          // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:314
+                                            {                                                                                               // MakerGen.cs:315
+                                            }                                                                                               // MakerGen.cs:318
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                            }                                                                                                               // MakerGen.cs:429
+                            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:414
+                            {                                                                                                               // MakerGen.cs:415
+                                base.Write(sDef);                                                                                           // MakerGen.cs:416
+                                MaternalOrganismId.Write(sDef);                                                                             // MakerGen.cs:240
+                                MaternalOrganismName.Write(sDef);                                                                           // MakerGen.cs:240
+                                PaternalOrganismId.Write(sDef);                                                                             // MakerGen.cs:240
+                                PaternalOrganismName.Write(sDef);                                                                           // MakerGen.cs:240
+                                HybridType.Write(sDef);                                                                                     // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:433
+                        }                                                                                                                   // MakerGen.cs:393
+                        public Type_Hybrid_Elements Elements { get; }                                                                       // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                        public Type_Hybrid()                                                                                                // MakerGen.cs:396
+                        {                                                                                                                   // MakerGen.cs:397
+                            this.Elements = new Type_Hybrid_Elements();                                                                     // MakerGen.cs:398
+                        }                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:402
+                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:403
+                        }                                                                                                                   // MakerGen.cs:404
+                    }                                                                                                                       // MakerGen.cs:405
+                    // 29. SubstanceSourceMaterial.organism.organismGeneral
+                    public class Type_OrganismGeneral : FhirKhit.Maker.Common.Complex.ComplexBase                                           // MakerGen.cs:385
+                    {                                                                                                                       // MakerGen.cs:386
+                        public class Type_OrganismGeneral_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                            // MakerGen.cs:387
+                        {                                                                                                                   // MakerGen.cs:388
+                            // 30. SubstanceSourceMaterial.organism.organismGeneral.kingdom
+                            public ElementDefinitionInfo Kingdom;                                                                           // MakerGen.cs:236
+                            // 31. SubstanceSourceMaterial.organism.organismGeneral.phylum
+                            public ElementDefinitionInfo Phylum;                                                                            // MakerGen.cs:236
+                            // 32. SubstanceSourceMaterial.organism.organismGeneral.class
+                            public ElementDefinitionInfo Class;                                                                             // MakerGen.cs:236
+                            // 33. SubstanceSourceMaterial.organism.organismGeneral.order
+                            public ElementDefinitionInfo Order;                                                                             // MakerGen.cs:236
+                            public Type_OrganismGeneral_Elements()                                                                          // MakerGen.cs:409
+                            {                                                                                                               // MakerGen.cs:410
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 30. SubstanceSourceMaterial.organism.organismGeneral.kingdom
+                                    this.Kingdom = new ElementDefinitionInfo                                                                // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Kingdom",                                                                                   // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.organismGeneral.kingdom",                                   // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.organismGeneral.kingdom",                                    // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:314
+                                            {                                                                                               // MakerGen.cs:315
+                                            }                                                                                               // MakerGen.cs:318
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 31. SubstanceSourceMaterial.organism.organismGeneral.phylum
+                                    this.Phylum = new ElementDefinitionInfo                                                                 // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Phylum",                                                                                    // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.organismGeneral.phylum",                                    // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.organismGeneral.phylum",                                     // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:314
+                                            {                                                                                               // MakerGen.cs:315
+                                            }                                                                                               // MakerGen.cs:318
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 32. SubstanceSourceMaterial.organism.organismGeneral.class
+                                    this.Class = new ElementDefinitionInfo                                                                  // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Class",                                                                                     // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.organismGeneral.class",                                     // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.organismGeneral.class",                                      // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:314
+                                            {                                                                                               // MakerGen.cs:315
+                                            }                                                                                               // MakerGen.cs:318
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                                {                                                                                                           // MakerGen.cs:251
+                                    // 33. SubstanceSourceMaterial.organism.organismGeneral.order
+                                    this.Order = new ElementDefinitionInfo                                                                  // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Order",                                                                                     // MakerGen.cs:255
+                                        Path= "SubstanceSourceMaterial.organism.organismGeneral.order",                                     // MakerGen.cs:256
+                                        Id = "SubstanceSourceMaterial.organism.organismGeneral.order",                                      // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                               // MakerGen.cs:314
+                                            {                                                                                               // MakerGen.cs:315
+                                            }                                                                                               // MakerGen.cs:318
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                            }                                                                                                               // MakerGen.cs:429
+                            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:414
+                            {                                                                                                               // MakerGen.cs:415
+                                base.Write(sDef);                                                                                           // MakerGen.cs:416
+                                Kingdom.Write(sDef);                                                                                        // MakerGen.cs:240
+                                Phylum.Write(sDef);                                                                                         // MakerGen.cs:240
+                                Class.Write(sDef);                                                                                          // MakerGen.cs:240
+                                Order.Write(sDef);                                                                                          // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:433
+                        }                                                                                                                   // MakerGen.cs:393
+                        public Type_OrganismGeneral_Elements Elements { get; }                                                              // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                        public Type_OrganismGeneral()                                                                                       // MakerGen.cs:396
+                        {                                                                                                                   // MakerGen.cs:397
+                            this.Elements = new Type_OrganismGeneral_Elements();                                                            // MakerGen.cs:398
+                        }                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:402
+                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:403
+                        }                                                                                                                   // MakerGen.cs:404
+                    }                                                                                                                       // MakerGen.cs:405
                     // 15. SubstanceSourceMaterial.organism.family
-                    this.Element_Family = new MakerElementInstance                                                                          // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Family",                                                                                            // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
-                            {                                                                                                               // MakerGen.cs:305
-                            }                                                                                                               // MakerGen.cs:308
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo Family;                                                                                    // MakerGen.cs:236
                     // 16. SubstanceSourceMaterial.organism.genus
-                    this.Element_Genus = new MakerElementInstance                                                                           // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Genus",                                                                                             // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
-                            {                                                                                                               // MakerGen.cs:305
-                            }                                                                                                               // MakerGen.cs:308
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo Genus;                                                                                     // MakerGen.cs:236
                     // 17. SubstanceSourceMaterial.organism.species
-                    this.Element_Species = new MakerElementInstance                                                                         // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Species",                                                                                           // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
-                            {                                                                                                               // MakerGen.cs:305
-                            }                                                                                                               // MakerGen.cs:308
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo Species;                                                                                   // MakerGen.cs:236
                     // 18. SubstanceSourceMaterial.organism.intraspecificType
-                    this.Element_IntraspecificType = new MakerElementInstance                                                               // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_IntraspecificType",                                                                                 // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
-                            {                                                                                                               // MakerGen.cs:305
-                            }                                                                                                               // MakerGen.cs:308
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo IntraspecificType;                                                                         // MakerGen.cs:236
                     // 19. SubstanceSourceMaterial.organism.intraspecificDescription
-                    this.Element_IntraspecificDescription = new MakerElementInstance                                                        // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_IntraspecificDescription",                                                                          // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
+                    public ElementDefinitionInfo IntraspecificDescription;                                                                  // MakerGen.cs:236
+                    public Type_Organism_Elements()                                                                                         // MakerGen.cs:409
+                    {                                                                                                                       // MakerGen.cs:410
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
-                            {                                                                                                               // MakerGen.cs:290
-                            }                                                                                                               // MakerGen.cs:293
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-            }                                                                                                                               // MakerGen.cs:395
-        }                                                                                                                                   // MakerGen.cs:379
-        // 34. SubstanceSourceMaterial.partDescription
-        public class Type_PartDescription : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:374
-        {                                                                                                                                   // MakerGen.cs:375
-            // 35. SubstanceSourceMaterial.partDescription.part
-            public MakerElementInstance Element_Part;                                                                                       // MakerGen.cs:232
-            // 36. SubstanceSourceMaterial.partDescription.partLocation
-            public MakerElementInstance Element_PartLocation;                                                                               // MakerGen.cs:232
-            public Type_PartDescription()                                                                                                   // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                {                                                                                                                           // MakerGen.cs:243
+                            // 15. SubstanceSourceMaterial.organism.family
+                            this.Family = new ElementDefinitionInfo                                                                         // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Family",                                                                                            // MakerGen.cs:255
+                                Path= "SubstanceSourceMaterial.organism.family",                                                            // MakerGen.cs:256
+                                Id = "SubstanceSourceMaterial.organism.family",                                                             // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
+                                    {                                                                                                       // MakerGen.cs:315
+                                    }                                                                                                       // MakerGen.cs:318
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 16. SubstanceSourceMaterial.organism.genus
+                            this.Genus = new ElementDefinitionInfo                                                                          // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Genus",                                                                                             // MakerGen.cs:255
+                                Path= "SubstanceSourceMaterial.organism.genus",                                                             // MakerGen.cs:256
+                                Id = "SubstanceSourceMaterial.organism.genus",                                                              // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
+                                    {                                                                                                       // MakerGen.cs:315
+                                    }                                                                                                       // MakerGen.cs:318
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 17. SubstanceSourceMaterial.organism.species
+                            this.Species = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Species",                                                                                           // MakerGen.cs:255
+                                Path= "SubstanceSourceMaterial.organism.species",                                                           // MakerGen.cs:256
+                                Id = "SubstanceSourceMaterial.organism.species",                                                            // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
+                                    {                                                                                                       // MakerGen.cs:315
+                                    }                                                                                                       // MakerGen.cs:318
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 18. SubstanceSourceMaterial.organism.intraspecificType
+                            this.IntraspecificType = new ElementDefinitionInfo                                                              // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "IntraspecificType",                                                                                 // MakerGen.cs:255
+                                Path= "SubstanceSourceMaterial.organism.intraspecificType",                                                 // MakerGen.cs:256
+                                Id = "SubstanceSourceMaterial.organism.intraspecificType",                                                  // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
+                                    {                                                                                                       // MakerGen.cs:315
+                                    }                                                                                                       // MakerGen.cs:318
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 19. SubstanceSourceMaterial.organism.intraspecificDescription
+                            this.IntraspecificDescription = new ElementDefinitionInfo                                                       // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "IntraspecificDescription",                                                                          // MakerGen.cs:255
+                                Path= "SubstanceSourceMaterial.organism.intraspecificDescription",                                          // MakerGen.cs:256
+                                Id = "SubstanceSourceMaterial.organism.intraspecificDescription",                                           // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
+                                    {                                                                                                       // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:303
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:429
+                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
+                    {                                                                                                                       // MakerGen.cs:415
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
+                        Family.Write(sDef);                                                                                                 // MakerGen.cs:240
+                        Genus.Write(sDef);                                                                                                  // MakerGen.cs:240
+                        Species.Write(sDef);                                                                                                // MakerGen.cs:240
+                        IntraspecificType.Write(sDef);                                                                                      // MakerGen.cs:240
+                        IntraspecificDescription.Write(sDef);                                                                               // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:433
+                }                                                                                                                           // MakerGen.cs:393
+                public Type_Organism_Elements Elements { get; }                                                                             // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                public Type_Organism()                                                                                                      // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:397
+                    this.Elements = new Type_Organism_Elements();                                                                           // MakerGen.cs:398
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:404
+            }                                                                                                                               // MakerGen.cs:405
+            // 34. SubstanceSourceMaterial.partDescription
+            public class Type_PartDescription : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:385
+            {                                                                                                                               // MakerGen.cs:386
+                public class Type_PartDescription_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                    // MakerGen.cs:387
+                {                                                                                                                           // MakerGen.cs:388
                     // 35. SubstanceSourceMaterial.partDescription.part
-                    this.Element_Part = new MakerElementInstance                                                                            // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Part",                                                                                              // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
-                            {                                                                                                               // MakerGen.cs:305
-                            }                                                                                                               // MakerGen.cs:308
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo Part;                                                                                      // MakerGen.cs:236
                     // 36. SubstanceSourceMaterial.partDescription.partLocation
-                    this.Element_PartLocation = new MakerElementInstance                                                                    // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_PartLocation",                                                                                      // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
+                    public ElementDefinitionInfo PartLocation;                                                                              // MakerGen.cs:236
+                    public Type_PartDescription_Elements()                                                                                  // MakerGen.cs:409
+                    {                                                                                                                       // MakerGen.cs:410
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
-                            {                                                                                                               // MakerGen.cs:305
-                            }                                                                                                               // MakerGen.cs:308
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-            }                                                                                                                               // MakerGen.cs:395
-        }                                                                                                                                   // MakerGen.cs:379
-        // 1. SubstanceSourceMaterial.sourceMaterialClass
-        public MakerElementInstance Element_SourceMaterialClass;                                                                            // MakerGen.cs:232
-        // 2. SubstanceSourceMaterial.sourceMaterialType
-        public MakerElementInstance Element_SourceMaterialType;                                                                             // MakerGen.cs:232
-        // 3. SubstanceSourceMaterial.sourceMaterialState
-        public MakerElementInstance Element_SourceMaterialState;                                                                            // MakerGen.cs:232
-        // 4. SubstanceSourceMaterial.organismId
-        public MakerElementInstance Element_OrganismId;                                                                                     // MakerGen.cs:232
-        // 5. SubstanceSourceMaterial.organismName
-        public MakerElementInstance Element_OrganismName;                                                                                   // MakerGen.cs:232
-        // 6. SubstanceSourceMaterial.parentSubstanceId
-        public MakerElementInstance Element_ParentSubstanceId;                                                                              // MakerGen.cs:232
-        // 7. SubstanceSourceMaterial.parentSubstanceName
-        public MakerElementInstance Element_ParentSubstanceName;                                                                            // MakerGen.cs:232
-        // 8. SubstanceSourceMaterial.countryOfOrigin
-        public MakerElementInstance Element_CountryOfOrigin;                                                                                // MakerGen.cs:232
-        // 9. SubstanceSourceMaterial.geographicalLocation
-        public MakerElementInstance Element_GeographicalLocation;                                                                           // MakerGen.cs:232
-        // 10. SubstanceSourceMaterial.developmentStage
-        public MakerElementInstance Element_DevelopmentStage;                                                                               // MakerGen.cs:232
-        public SubstanceSourceMaterial()                                                                                                    // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:243
-                // 1. SubstanceSourceMaterial.sourceMaterialClass
-                this.Element_SourceMaterialClass = new MakerElementInstance                                                                 // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_SourceMaterialClass",                                                                                   // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
-                        {                                                                                                                   // MakerGen.cs:305
-                        }                                                                                                                   // MakerGen.cs:308
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 2. SubstanceSourceMaterial.sourceMaterialType
-                this.Element_SourceMaterialType = new MakerElementInstance                                                                  // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_SourceMaterialType",                                                                                    // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
-                        {                                                                                                                   // MakerGen.cs:305
-                        }                                                                                                                   // MakerGen.cs:308
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 3. SubstanceSourceMaterial.sourceMaterialState
-                this.Element_SourceMaterialState = new MakerElementInstance                                                                 // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_SourceMaterialState",                                                                                   // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
-                        {                                                                                                                   // MakerGen.cs:305
-                        }                                                                                                                   // MakerGen.cs:308
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 4. SubstanceSourceMaterial.organismId
-                this.Element_OrganismId = new MakerElementInstance                                                                          // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_OrganismId",                                                                                            // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:347
-                        {                                                                                                                   // MakerGen.cs:348
-                        }                                                                                                                   // MakerGen.cs:349
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 5. SubstanceSourceMaterial.organismName
-                this.Element_OrganismName = new MakerElementInstance                                                                        // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_OrganismName",                                                                                          // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 6. SubstanceSourceMaterial.parentSubstanceId
-                this.Element_ParentSubstanceId = new MakerElementInstance                                                                   // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_ParentSubstanceId",                                                                                     // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:347
-                        {                                                                                                                   // MakerGen.cs:348
-                        }                                                                                                                   // MakerGen.cs:349
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 7. SubstanceSourceMaterial.parentSubstanceName
-                this.Element_ParentSubstanceName = new MakerElementInstance                                                                 // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_ParentSubstanceName",                                                                                   // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 8. SubstanceSourceMaterial.countryOfOrigin
-                this.Element_CountryOfOrigin = new MakerElementInstance                                                                     // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_CountryOfOrigin",                                                                                       // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
-                        {                                                                                                                   // MakerGen.cs:305
-                        }                                                                                                                   // MakerGen.cs:308
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 9. SubstanceSourceMaterial.geographicalLocation
-                this.Element_GeographicalLocation = new MakerElementInstance                                                                // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_GeographicalLocation",                                                                                  // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 10. SubstanceSourceMaterial.developmentStage
-                this.Element_DevelopmentStage = new MakerElementInstance                                                                    // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_DevelopmentStage",                                                                                      // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
-                        {                                                                                                                   // MakerGen.cs:305
-                        }                                                                                                                   // MakerGen.cs:308
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-        }                                                                                                                                   // MakerGen.cs:395
-    }                                                                                                                                       // MakerGen.cs:379
-}                                                                                                                                           // MakerGen.cs:430
+                            // 35. SubstanceSourceMaterial.partDescription.part
+                            this.Part = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Part",                                                                                              // MakerGen.cs:255
+                                Path= "SubstanceSourceMaterial.partDescription.part",                                                       // MakerGen.cs:256
+                                Id = "SubstanceSourceMaterial.partDescription.part",                                                        // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
+                                    {                                                                                                       // MakerGen.cs:315
+                                    }                                                                                                       // MakerGen.cs:318
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 36. SubstanceSourceMaterial.partDescription.partLocation
+                            this.PartLocation = new ElementDefinitionInfo                                                                   // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "PartLocation",                                                                                      // MakerGen.cs:255
+                                Path= "SubstanceSourceMaterial.partDescription.partLocation",                                               // MakerGen.cs:256
+                                Id = "SubstanceSourceMaterial.partDescription.partLocation",                                                // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:314
+                                    {                                                                                                       // MakerGen.cs:315
+                                    }                                                                                                       // MakerGen.cs:318
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:429
+                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
+                    {                                                                                                                       // MakerGen.cs:415
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
+                        Part.Write(sDef);                                                                                                   // MakerGen.cs:240
+                        PartLocation.Write(sDef);                                                                                           // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:433
+                }                                                                                                                           // MakerGen.cs:393
+                public Type_PartDescription_Elements Elements { get; }                                                                      // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                public Type_PartDescription()                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:397
+                    this.Elements = new Type_PartDescription_Elements();                                                                    // MakerGen.cs:398
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:404
+            }                                                                                                                               // MakerGen.cs:405
+            // 1. SubstanceSourceMaterial.sourceMaterialClass
+            public ElementDefinitionInfo SourceMaterialClass;                                                                               // MakerGen.cs:236
+            // 2. SubstanceSourceMaterial.sourceMaterialType
+            public ElementDefinitionInfo SourceMaterialType;                                                                                // MakerGen.cs:236
+            // 3. SubstanceSourceMaterial.sourceMaterialState
+            public ElementDefinitionInfo SourceMaterialState;                                                                               // MakerGen.cs:236
+            // 4. SubstanceSourceMaterial.organismId
+            public ElementDefinitionInfo OrganismId;                                                                                        // MakerGen.cs:236
+            // 5. SubstanceSourceMaterial.organismName
+            public ElementDefinitionInfo OrganismName;                                                                                      // MakerGen.cs:236
+            // 6. SubstanceSourceMaterial.parentSubstanceId
+            public ElementDefinitionInfo ParentSubstanceId;                                                                                 // MakerGen.cs:236
+            // 7. SubstanceSourceMaterial.parentSubstanceName
+            public ElementDefinitionInfo ParentSubstanceName;                                                                               // MakerGen.cs:236
+            // 8. SubstanceSourceMaterial.countryOfOrigin
+            public ElementDefinitionInfo CountryOfOrigin;                                                                                   // MakerGen.cs:236
+            // 9. SubstanceSourceMaterial.geographicalLocation
+            public ElementDefinitionInfo GeographicalLocation;                                                                              // MakerGen.cs:236
+            // 10. SubstanceSourceMaterial.developmentStage
+            public ElementDefinitionInfo DevelopmentStage;                                                                                  // MakerGen.cs:236
+            public SubstanceSourceMaterial_Elements()                                                                                       // MakerGen.cs:409
+            {                                                                                                                               // MakerGen.cs:410
+                {                                                                                                                           // MakerGen.cs:251
+                    // 1. SubstanceSourceMaterial.sourceMaterialClass
+                    this.SourceMaterialClass = new ElementDefinitionInfo                                                                    // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "SourceMaterialClass",                                                                                       // MakerGen.cs:255
+                        Path= "SubstanceSourceMaterial.sourceMaterialClass",                                                                // MakerGen.cs:256
+                        Id = "SubstanceSourceMaterial.sourceMaterialClass",                                                                 // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
+                            {                                                                                                               // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:318
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 2. SubstanceSourceMaterial.sourceMaterialType
+                    this.SourceMaterialType = new ElementDefinitionInfo                                                                     // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "SourceMaterialType",                                                                                        // MakerGen.cs:255
+                        Path= "SubstanceSourceMaterial.sourceMaterialType",                                                                 // MakerGen.cs:256
+                        Id = "SubstanceSourceMaterial.sourceMaterialType",                                                                  // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
+                            {                                                                                                               // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:318
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 3. SubstanceSourceMaterial.sourceMaterialState
+                    this.SourceMaterialState = new ElementDefinitionInfo                                                                    // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "SourceMaterialState",                                                                                       // MakerGen.cs:255
+                        Path= "SubstanceSourceMaterial.sourceMaterialState",                                                                // MakerGen.cs:256
+                        Id = "SubstanceSourceMaterial.sourceMaterialState",                                                                 // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
+                            {                                                                                                               // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:318
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 4. SubstanceSourceMaterial.organismId
+                    this.OrganismId = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "OrganismId",                                                                                                // MakerGen.cs:255
+                        Path= "SubstanceSourceMaterial.organismId",                                                                         // MakerGen.cs:256
+                        Id = "SubstanceSourceMaterial.organismId",                                                                          // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
+                            {                                                                                                               // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 5. SubstanceSourceMaterial.organismName
+                    this.OrganismName = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "OrganismName",                                                                                              // MakerGen.cs:255
+                        Path= "SubstanceSourceMaterial.organismName",                                                                       // MakerGen.cs:256
+                        Id = "SubstanceSourceMaterial.organismName",                                                                        // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 6. SubstanceSourceMaterial.parentSubstanceId
+                    this.ParentSubstanceId = new ElementDefinitionInfo                                                                      // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "ParentSubstanceId",                                                                                         // MakerGen.cs:255
+                        Path= "SubstanceSourceMaterial.parentSubstanceId",                                                                  // MakerGen.cs:256
+                        Id = "SubstanceSourceMaterial.parentSubstanceId",                                                                   // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
+                            {                                                                                                               // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 7. SubstanceSourceMaterial.parentSubstanceName
+                    this.ParentSubstanceName = new ElementDefinitionInfo                                                                    // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "ParentSubstanceName",                                                                                       // MakerGen.cs:255
+                        Path= "SubstanceSourceMaterial.parentSubstanceName",                                                                // MakerGen.cs:256
+                        Id = "SubstanceSourceMaterial.parentSubstanceName",                                                                 // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 8. SubstanceSourceMaterial.countryOfOrigin
+                    this.CountryOfOrigin = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "CountryOfOrigin",                                                                                           // MakerGen.cs:255
+                        Path= "SubstanceSourceMaterial.countryOfOrigin",                                                                    // MakerGen.cs:256
+                        Id = "SubstanceSourceMaterial.countryOfOrigin",                                                                     // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
+                            {                                                                                                               // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:318
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 9. SubstanceSourceMaterial.geographicalLocation
+                    this.GeographicalLocation = new ElementDefinitionInfo                                                                   // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "GeographicalLocation",                                                                                      // MakerGen.cs:255
+                        Path= "SubstanceSourceMaterial.geographicalLocation",                                                               // MakerGen.cs:256
+                        Id = "SubstanceSourceMaterial.geographicalLocation",                                                                // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 10. SubstanceSourceMaterial.developmentStage
+                    this.DevelopmentStage = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "DevelopmentStage",                                                                                          // MakerGen.cs:255
+                        Path= "SubstanceSourceMaterial.developmentStage",                                                                   // MakerGen.cs:256
+                        Id = "SubstanceSourceMaterial.developmentStage",                                                                    // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
+                            {                                                                                                               // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:318
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:429
+            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
+            {                                                                                                                               // MakerGen.cs:415
+                base.Write(sDef);                                                                                                           // MakerGen.cs:416
+                SourceMaterialClass.Write(sDef);                                                                                            // MakerGen.cs:240
+                SourceMaterialType.Write(sDef);                                                                                             // MakerGen.cs:240
+                SourceMaterialState.Write(sDef);                                                                                            // MakerGen.cs:240
+                OrganismId.Write(sDef);                                                                                                     // MakerGen.cs:240
+                OrganismName.Write(sDef);                                                                                                   // MakerGen.cs:240
+                ParentSubstanceId.Write(sDef);                                                                                              // MakerGen.cs:240
+                ParentSubstanceName.Write(sDef);                                                                                            // MakerGen.cs:240
+                CountryOfOrigin.Write(sDef);                                                                                                // MakerGen.cs:240
+                GeographicalLocation.Write(sDef);                                                                                           // MakerGen.cs:240
+                DevelopmentStage.Write(sDef);                                                                                               // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:433
+        }                                                                                                                                   // MakerGen.cs:393
+        public SubstanceSourceMaterial_Elements Elements { get; }                                                                           // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+        public SubstanceSourceMaterial()                                                                                                    // MakerGen.cs:396
+        {                                                                                                                                   // MakerGen.cs:397
+            this.Elements = new SubstanceSourceMaterial_Elements();                                                                         // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:404
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:468

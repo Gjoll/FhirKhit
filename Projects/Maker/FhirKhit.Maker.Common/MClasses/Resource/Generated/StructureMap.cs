@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:413
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:414
-using System.IO;                                                                                                                            // MakerGen.cs:415
-using System.Linq;                                                                                                                          // MakerGen.cs:416
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:417
-                                                                                                                                            // MakerGen.cs:418
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:419
-{                                                                                                                                           // MakerGen.cs:420
-    #region Json                                                                                                                            // MakerGen.cs:421
-    #if NEVER                                                                                                                               // MakerGen.cs:422
+using System;                                                                                                                               // MakerGen.cs:451
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:452
+using System.IO;                                                                                                                            // MakerGen.cs:453
+using System.Linq;                                                                                                                          // MakerGen.cs:454
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:455
+                                                                                                                                            // MakerGen.cs:456
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:457
+{                                                                                                                                           // MakerGen.cs:458
+    #region Json                                                                                                                            // MakerGen.cs:459
+    #if NEVER                                                                                                                               // MakerGen.cs:460
     {
       "resourceType": "StructureDefinition",
       "id": "StructureMap",
@@ -1193,1116 +1193,1434 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:425
+    #endregion                                                                                                                              // MakerGen.cs:463
     /// <summary>
     /// Fhir resource 'StructureMap'
     /// </summary>
     // 0. StructureMap
-    public class StructureMap : FhirKhit.Maker.Common.Resource.ResourceBase                                                                 // MakerGen.cs:374
-    {                                                                                                                                       // MakerGen.cs:375
-        // 16. StructureMap.structure
-        public class Type_Structure : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:374
-        {                                                                                                                                   // MakerGen.cs:375
-            // 17. StructureMap.structure.url
-            public MakerElementInstance Element_Url;                                                                                        // MakerGen.cs:232
-            // 18. StructureMap.structure.mode
-            public MakerElementInstance Element_Mode;                                                                                       // MakerGen.cs:232
-            // 19. StructureMap.structure.alias
-            public MakerElementInstance Element_Alias;                                                                                      // MakerGen.cs:232
-            // 20. StructureMap.structure.documentation
-            public MakerElementInstance Element_Documentation;                                                                              // MakerGen.cs:232
-            public Type_Structure()                                                                                                         // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                {                                                                                                                           // MakerGen.cs:243
+    public class StructureMap : FhirKhit.Maker.Common.Resource.ResourceBase                                                                 // MakerGen.cs:385
+    {                                                                                                                                       // MakerGen.cs:386
+        public class StructureMap_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                                    // MakerGen.cs:387
+        {                                                                                                                                   // MakerGen.cs:388
+            // 16. StructureMap.structure
+            public class Type_Structure : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:385
+            {                                                                                                                               // MakerGen.cs:386
+                public class Type_Structure_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:387
+                {                                                                                                                           // MakerGen.cs:388
                     // 17. StructureMap.structure.url
-                    this.Element_Url = new MakerElementInstance                                                                             // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Url",                                                                                               // MakerGen.cs:247
-                        Min = 1,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:289
-                            {                                                                                                               // MakerGen.cs:290
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:292
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                           // MakerGen.cs:292
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:293
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo Url;                                                                                       // MakerGen.cs:236
                     // 18. StructureMap.structure.mode
-                    this.Element_Mode = new MakerElementInstance                                                                            // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Mode",                                                                                              // MakerGen.cs:247
-                        Min = 1,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:289
-                            {                                                                                                               // MakerGen.cs:290
-                            }                                                                                                               // MakerGen.cs:293
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo Mode;                                                                                      // MakerGen.cs:236
                     // 19. StructureMap.structure.alias
-                    this.Element_Alias = new MakerElementInstance                                                                           // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Alias",                                                                                             // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
-                            {                                                                                                               // MakerGen.cs:290
-                            }                                                                                                               // MakerGen.cs:293
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo Alias;                                                                                     // MakerGen.cs:236
                     // 20. StructureMap.structure.documentation
-                    this.Element_Documentation = new MakerElementInstance                                                                   // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Documentation",                                                                                     // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
+                    public ElementDefinitionInfo Documentation;                                                                             // MakerGen.cs:236
+                    public Type_Structure_Elements()                                                                                        // MakerGen.cs:409
+                    {                                                                                                                       // MakerGen.cs:410
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
-                            {                                                                                                               // MakerGen.cs:290
-                            }                                                                                                               // MakerGen.cs:293
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-            }                                                                                                                               // MakerGen.cs:395
-        }                                                                                                                                   // MakerGen.cs:379
-        // 22. StructureMap.group
-        public class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:374
-        {                                                                                                                                   // MakerGen.cs:375
-            // 27. StructureMap.group.input
-            public class Type_Input : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:374
-            {                                                                                                                               // MakerGen.cs:375
-                // 28. StructureMap.group.input.name
-                public MakerElementInstance Element_Name;                                                                                   // MakerGen.cs:232
-                // 29. StructureMap.group.input.type
-                public MakerElementInstance Element_Type;                                                                                   // MakerGen.cs:232
-                // 30. StructureMap.group.input.mode
-                public MakerElementInstance Element_Mode;                                                                                   // MakerGen.cs:232
-                // 31. StructureMap.group.input.documentation
-                public MakerElementInstance Element_Documentation;                                                                          // MakerGen.cs:232
-                public Type_Input()                                                                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 28. StructureMap.group.input.name
-                        this.Element_Name = new MakerElementInstance                                                                        // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Name",                                                                                          // MakerGen.cs:247
-                            Min = 1,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Id                                                                      // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 29. StructureMap.group.input.type
-                        this.Element_Type = new MakerElementInstance                                                                        // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Type",                                                                                          // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 30. StructureMap.group.input.mode
-                        this.Element_Mode = new MakerElementInstance                                                                        // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Mode",                                                                                          // MakerGen.cs:247
-                            Min = 1,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Code                                                                    // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 31. StructureMap.group.input.documentation
-                        this.Element_Documentation = new MakerElementInstance                                                               // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Documentation",                                                                                 // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                }                                                                                                                           // MakerGen.cs:395
-            }                                                                                                                               // MakerGen.cs:379
-            // 32. StructureMap.group.rule
-            public class Type_Rule : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:374
-            {                                                                                                                               // MakerGen.cs:375
-                // 34. StructureMap.group.rule.source
-                public class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:374
-                {                                                                                                                           // MakerGen.cs:375
-                    // 35. StructureMap.group.rule.source.context
-                    public MakerElementInstance Element_Context;                                                                            // MakerGen.cs:232
-                    // 36. StructureMap.group.rule.source.min
-                    public MakerElementInstance Element_Min;                                                                                // MakerGen.cs:232
-                    // 37. StructureMap.group.rule.source.max
-                    public MakerElementInstance Element_Max;                                                                                // MakerGen.cs:232
-                    // 38. StructureMap.group.rule.source.type
-                    public MakerElementInstance Element_Type;                                                                               // MakerGen.cs:232
-                    // 39. StructureMap.group.rule.source.defaultValue[x]
-                    public MakerElementInstance Element_DefaultValue;                                                                       // MakerGen.cs:232
-                    // 40. StructureMap.group.rule.source.element
-                    public MakerElementInstance Element_Element;                                                                            // MakerGen.cs:232
-                    // 41. StructureMap.group.rule.source.listMode
-                    public MakerElementInstance Element_ListMode;                                                                           // MakerGen.cs:232
-                    // 42. StructureMap.group.rule.source.variable
-                    public MakerElementInstance Element_Variable;                                                                           // MakerGen.cs:232
-                    // 43. StructureMap.group.rule.source.condition
-                    public MakerElementInstance Element_Condition;                                                                          // MakerGen.cs:232
-                    // 44. StructureMap.group.rule.source.check
-                    public MakerElementInstance Element_Check;                                                                              // MakerGen.cs:232
-                    // 45. StructureMap.group.rule.source.logMessage
-                    public MakerElementInstance Element_LogMessage;                                                                         // MakerGen.cs:232
-                    public Type_Source()                                                                                                    // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 35. StructureMap.group.rule.source.context
-                            this.Element_Context = new MakerElementInstance                                                                 // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Context",                                                                                   // MakerGen.cs:247
-                                Min = 1,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
+                            // 17. StructureMap.structure.url
+                            this.Url = new ElementDefinitionInfo                                                                            // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Url",                                                                                               // MakerGen.cs:255
+                                Path= "StructureMap.structure.url",                                                                         // MakerGen.cs:256
+                                Id = "StructureMap.structure.url",                                                                          // MakerGen.cs:257
+                                Min = 1,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Primitive.Canonical                                                           // MakerGen.cs:299
+                                    {                                                                                                       // MakerGen.cs:300
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:302
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                   // MakerGen.cs:302
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:303
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 18. StructureMap.structure.mode
+                            this.Mode = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Mode",                                                                                              // MakerGen.cs:255
+                                Path= "StructureMap.structure.mode",                                                                        // MakerGen.cs:256
+                                Id = "StructureMap.structure.mode",                                                                         // MakerGen.cs:257
+                                Min = 1,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:299
+                                    {                                                                                                       // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:303
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 19. StructureMap.structure.alias
+                            this.Alias = new ElementDefinitionInfo                                                                          // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Alias",                                                                                             // MakerGen.cs:255
+                                Path= "StructureMap.structure.alias",                                                                       // MakerGen.cs:256
+                                Id = "StructureMap.structure.alias",                                                                        // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
+                                    {                                                                                                       // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:303
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 20. StructureMap.structure.documentation
+                            this.Documentation = new ElementDefinitionInfo                                                                  // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Documentation",                                                                                     // MakerGen.cs:255
+                                Path= "StructureMap.structure.documentation",                                                               // MakerGen.cs:256
+                                Id = "StructureMap.structure.documentation",                                                                // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
+                                    {                                                                                                       // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:303
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:429
+                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
+                    {                                                                                                                       // MakerGen.cs:415
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
+                        Url.Write(sDef);                                                                                                    // MakerGen.cs:240
+                        Mode.Write(sDef);                                                                                                   // MakerGen.cs:240
+                        Alias.Write(sDef);                                                                                                  // MakerGen.cs:240
+                        Documentation.Write(sDef);                                                                                          // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:433
+                }                                                                                                                           // MakerGen.cs:393
+                public Type_Structure_Elements Elements { get; }                                                                            // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                public Type_Structure()                                                                                                     // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:397
+                    this.Elements = new Type_Structure_Elements();                                                                          // MakerGen.cs:398
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:404
+            }                                                                                                                               // MakerGen.cs:405
+            // 22. StructureMap.group
+            public class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:385
+            {                                                                                                                               // MakerGen.cs:386
+                public class Type_Group_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:387
+                {                                                                                                                           // MakerGen.cs:388
+                    // 27. StructureMap.group.input
+                    public class Type_Input : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:385
+                    {                                                                                                                       // MakerGen.cs:386
+                        public class Type_Input_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                      // MakerGen.cs:387
+                        {                                                                                                                   // MakerGen.cs:388
+                            // 28. StructureMap.group.input.name
+                            public ElementDefinitionInfo Name;                                                                              // MakerGen.cs:236
+                            // 29. StructureMap.group.input.type
+                            public ElementDefinitionInfo Type;                                                                              // MakerGen.cs:236
+                            // 30. StructureMap.group.input.mode
+                            public ElementDefinitionInfo Mode;                                                                              // MakerGen.cs:236
+                            // 31. StructureMap.group.input.documentation
+                            public ElementDefinitionInfo Documentation;                                                                     // MakerGen.cs:236
+                            public Type_Input_Elements()                                                                                    // MakerGen.cs:409
+                            {                                                                                                               // MakerGen.cs:410
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 36. StructureMap.group.rule.source.min
-                            this.Element_Min = new MakerElementInstance                                                                     // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Min",                                                                                       // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
+                                    // 28. StructureMap.group.input.name
+                                    this.Name = new ElementDefinitionInfo                                                                   // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Name",                                                                                      // MakerGen.cs:255
+                                        Path= "StructureMap.group.input.name",                                                              // MakerGen.cs:256
+                                        Id = "StructureMap.group.input.name",                                                               // MakerGen.cs:257
+                                        Min = 1,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.Id                                                          // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Integer                                                             // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 37. StructureMap.group.rule.source.max
-                            this.Element_Max = new MakerElementInstance                                                                     // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Max",                                                                                       // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
+                                    // 29. StructureMap.group.input.type
+                                    this.Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Type",                                                                                      // MakerGen.cs:255
+                                        Path= "StructureMap.group.input.type",                                                              // MakerGen.cs:256
+                                        Id = "StructureMap.group.input.type",                                                               // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 38. StructureMap.group.rule.source.type
-                            this.Element_Type = new MakerElementInstance                                                                    // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Type",                                                                                      // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
+                                    // 30. StructureMap.group.input.mode
+                                    this.Mode = new ElementDefinitionInfo                                                                   // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Mode",                                                                                      // MakerGen.cs:255
+                                        Path= "StructureMap.group.input.mode",                                                              // MakerGen.cs:256
+                                        Id = "StructureMap.group.input.mode",                                                               // MakerGen.cs:257
+                                        Min = 1,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.Code                                                        // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 39. StructureMap.group.rule.source.defaultValue[x]
-                            this.Element_DefaultValue = new MakerElementInstance                                                            // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_DefaultValue",                                                                              // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
+                                    // 31. StructureMap.group.input.documentation
+                                    this.Documentation = new ElementDefinitionInfo                                                          // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Documentation",                                                                             // MakerGen.cs:255
+                                        Path= "StructureMap.group.input.documentation",                                                     // MakerGen.cs:256
+                                        Id = "StructureMap.group.input.documentation",                                                      // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                            }                                                                                                               // MakerGen.cs:429
+                            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:414
+                            {                                                                                                               // MakerGen.cs:415
+                                base.Write(sDef);                                                                                           // MakerGen.cs:416
+                                Name.Write(sDef);                                                                                           // MakerGen.cs:240
+                                Type.Write(sDef);                                                                                           // MakerGen.cs:240
+                                Mode.Write(sDef);                                                                                           // MakerGen.cs:240
+                                Documentation.Write(sDef);                                                                                  // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:433
+                        }                                                                                                                   // MakerGen.cs:393
+                        public Type_Input_Elements Elements { get; }                                                                        // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                        public Type_Input()                                                                                                 // MakerGen.cs:396
+                        {                                                                                                                   // MakerGen.cs:397
+                            this.Elements = new Type_Input_Elements();                                                                      // MakerGen.cs:398
+                        }                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:402
+                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:403
+                        }                                                                                                                   // MakerGen.cs:404
+                    }                                                                                                                       // MakerGen.cs:405
+                    // 32. StructureMap.group.rule
+                    public class Type_Rule : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:385
+                    {                                                                                                                       // MakerGen.cs:386
+                        public class Type_Rule_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                       // MakerGen.cs:387
+                        {                                                                                                                   // MakerGen.cs:388
+                            // 34. StructureMap.group.rule.source
+                            public class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase                                            // MakerGen.cs:385
+                            {                                                                                                               // MakerGen.cs:386
+                                public class Type_Source_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                             // MakerGen.cs:387
+                                {                                                                                                           // MakerGen.cs:388
+                                    // 35. StructureMap.group.rule.source.context
+                                    public ElementDefinitionInfo Context;                                                                   // MakerGen.cs:236
+                                    // 36. StructureMap.group.rule.source.min
+                                    public ElementDefinitionInfo Min;                                                                       // MakerGen.cs:236
+                                    // 37. StructureMap.group.rule.source.max
+                                    public ElementDefinitionInfo Max;                                                                       // MakerGen.cs:236
+                                    // 38. StructureMap.group.rule.source.type
+                                    public ElementDefinitionInfo Type;                                                                      // MakerGen.cs:236
+                                    // 39. StructureMap.group.rule.source.defaultValue[x]
+                                    public ElementDefinitionInfo DefaultValue;                                                              // MakerGen.cs:236
+                                    // 40. StructureMap.group.rule.source.element
+                                    public ElementDefinitionInfo Element;                                                                   // MakerGen.cs:236
+                                    // 41. StructureMap.group.rule.source.listMode
+                                    public ElementDefinitionInfo ListMode;                                                                  // MakerGen.cs:236
+                                    // 42. StructureMap.group.rule.source.variable
+                                    public ElementDefinitionInfo Variable;                                                                  // MakerGen.cs:236
+                                    // 43. StructureMap.group.rule.source.condition
+                                    public ElementDefinitionInfo Condition;                                                                 // MakerGen.cs:236
+                                    // 44. StructureMap.group.rule.source.check
+                                    public ElementDefinitionInfo Check;                                                                     // MakerGen.cs:236
+                                    // 45. StructureMap.group.rule.source.logMessage
+                                    public ElementDefinitionInfo LogMessage;                                                                // MakerGen.cs:236
+                                    public Type_Source_Elements()                                                                           // MakerGen.cs:409
+                                    {                                                                                                       // MakerGen.cs:410
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 35. StructureMap.group.rule.source.context
+                                            this.Context = new ElementDefinitionInfo                                                        // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Context",                                                                           // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.context",                                             // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.context",                                              // MakerGen.cs:257
+                                                Min = 1,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Id                                                  // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 36. StructureMap.group.rule.source.min
+                                            this.Min = new ElementDefinitionInfo                                                            // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Min",                                                                               // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.min",                                                 // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.min",                                                  // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Integer                                             // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 37. StructureMap.group.rule.source.max
+                                            this.Max = new ElementDefinitionInfo                                                            // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Max",                                                                               // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.max",                                                 // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.max",                                                  // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 38. StructureMap.group.rule.source.type
+                                            this.Type = new ElementDefinitionInfo                                                           // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Type",                                                                              // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.type",                                                // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.type",                                                 // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 39. StructureMap.group.rule.source.defaultValue[x]
+                                            this.DefaultValue = new ElementDefinitionInfo                                                   // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "DefaultValue",                                                                      // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.defaultValue[x]",                                     // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.defaultValue[x]",                                      // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Base64Binary                                        // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Boolean                                             // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Canonical                                           // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Date                                                // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.DateTime                                            // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Decimal                                             // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Id                                                  // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Instant                                             // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Integer                                             // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Markdown                                            // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Oid                                                 // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                         // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Time                                                // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.UnsignedInt                                         // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Uri                                                 // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Url                                                 // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Primitive.Uuid                                                // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    },                                                                                      // MakerGen.cs:303
+                                                    new FhirKhit.Maker.Common.Complex.Address                                               // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Age                                                   // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Annotation                                            // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Attachment                                            // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                       // MakerGen.cs:314
+                                                    {                                                                                       // MakerGen.cs:315
+                                                    },                                                                                      // MakerGen.cs:318
+                                                    new FhirKhit.Maker.Common.Complex.Coding                                                // MakerGen.cs:314
+                                                    {                                                                                       // MakerGen.cs:315
+                                                    },                                                                                      // MakerGen.cs:318
+                                                    new FhirKhit.Maker.Common.Complex.ContactPoint                                          // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Count                                                 // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Distance                                              // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Duration                                              // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.HumanName                                             // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Identifier                                            // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Money                                                 // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Period                                                // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Quantity                                              // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Range                                                 // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Ratio                                                 // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Reference                                             // MakerGen.cs:345
+                                                    {                                                                                       // MakerGen.cs:346
+                                                    },                                                                                      // MakerGen.cs:349
+                                                    new FhirKhit.Maker.Common.Complex.SampledData                                           // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Signature                                             // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Timing                                                // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.ContactDetail                                         // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Contributor                                           // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.DataRequirement                                       // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Expression                                            // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.ParameterDefinition                                   // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.RelatedArtifact                                       // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.TriggerDefinition                                     // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.UsageContext                                          // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    },                                                                                      // MakerGen.cs:359
+                                                    new FhirKhit.Maker.Common.Complex.Dosage                                                // MakerGen.cs:357
+                                                    {                                                                                       // MakerGen.cs:358
+                                                    }                                                                                       // MakerGen.cs:359
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 40. StructureMap.group.rule.source.element
+                                            this.Element = new ElementDefinitionInfo                                                        // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Element",                                                                           // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.element",                                             // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.element",                                              // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 41. StructureMap.group.rule.source.listMode
+                                            this.ListMode = new ElementDefinitionInfo                                                       // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "ListMode",                                                                          // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.listMode",                                            // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.listMode",                                             // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 42. StructureMap.group.rule.source.variable
+                                            this.Variable = new ElementDefinitionInfo                                                       // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Variable",                                                                          // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.variable",                                            // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.variable",                                             // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Id                                                  // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 43. StructureMap.group.rule.source.condition
+                                            this.Condition = new ElementDefinitionInfo                                                      // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Condition",                                                                         // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.condition",                                           // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.condition",                                            // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 44. StructureMap.group.rule.source.check
+                                            this.Check = new ElementDefinitionInfo                                                          // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Check",                                                                             // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.check",                                               // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.check",                                                // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 45. StructureMap.group.rule.source.logMessage
+                                            this.LogMessage = new ElementDefinitionInfo                                                     // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "LogMessage",                                                                        // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.source.logMessage",                                          // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.source.logMessage",                                           // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                    }                                                                                                       // MakerGen.cs:429
+                                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:414
+                                    {                                                                                                       // MakerGen.cs:415
+                                        base.Write(sDef);                                                                                   // MakerGen.cs:416
+                                        Context.Write(sDef);                                                                                // MakerGen.cs:240
+                                        Min.Write(sDef);                                                                                    // MakerGen.cs:240
+                                        Max.Write(sDef);                                                                                    // MakerGen.cs:240
+                                        Type.Write(sDef);                                                                                   // MakerGen.cs:240
+                                        DefaultValue.Write(sDef);                                                                           // MakerGen.cs:240
+                                        Element.Write(sDef);                                                                                // MakerGen.cs:240
+                                        ListMode.Write(sDef);                                                                               // MakerGen.cs:240
+                                        Variable.Write(sDef);                                                                               // MakerGen.cs:240
+                                        Condition.Write(sDef);                                                                              // MakerGen.cs:240
+                                        Check.Write(sDef);                                                                                  // MakerGen.cs:240
+                                        LogMessage.Write(sDef);                                                                             // MakerGen.cs:240
+                                    }                                                                                                       // MakerGen.cs:433
+                                }                                                                                                           // MakerGen.cs:393
+                                public Type_Source_Elements Elements { get; }                                                               // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                                public Type_Source()                                                                                        // MakerGen.cs:396
+                                {                                                                                                           // MakerGen.cs:397
+                                    this.Elements = new Type_Source_Elements();                                                             // MakerGen.cs:398
+                                }                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:401
+                                {                                                                                                           // MakerGen.cs:402
+                                    this.Elements.Write(sDef);                                                                              // MakerGen.cs:403
+                                }                                                                                                           // MakerGen.cs:404
+                            }                                                                                                               // MakerGen.cs:405
+                            // 46. StructureMap.group.rule.target
+                            public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase                                            // MakerGen.cs:385
+                            {                                                                                                               // MakerGen.cs:386
+                                public class Type_Target_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                             // MakerGen.cs:387
+                                {                                                                                                           // MakerGen.cs:388
+                                    // 54. StructureMap.group.rule.target.parameter
+                                    public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase                                 // MakerGen.cs:385
+                                    {                                                                                                       // MakerGen.cs:386
+                                        public class Type_Parameter_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                  // MakerGen.cs:387
+                                        {                                                                                                   // MakerGen.cs:388
+                                            // 55. StructureMap.group.rule.target.parameter.value[x]
+                                            public ElementDefinitionInfo Value;                                                             // MakerGen.cs:236
+                                            public Type_Parameter_Elements()                                                                // MakerGen.cs:409
+                                            {                                                                                               // MakerGen.cs:410
+                                                {                                                                                           // MakerGen.cs:251
+                                                    // 55. StructureMap.group.rule.target.parameter.value[x]
+                                                    this.Value = new ElementDefinitionInfo                                                  // MakerGen.cs:253
+                                                    {                                                                                       // MakerGen.cs:254
+                                                        Name = "Value",                                                                     // MakerGen.cs:255
+                                                        Path= "StructureMap.group.rule.target.parameter.value[x]",                          // MakerGen.cs:256
+                                                        Id = "StructureMap.group.rule.target.parameter.value[x]",                           // MakerGen.cs:257
+                                                        Min = 1,                                                                            // MakerGen.cs:258
+                                                        Max = 1,                                                                            // MakerGen.cs:259
+                                                        Types = new BaseType[]                                                              // MakerGen.cs:260
+                                                        {                                                                                   // MakerGen.cs:261
+                                                            new FhirKhit.Maker.Common.Primitive.Id                                          // MakerGen.cs:299
+                                                            {                                                                               // MakerGen.cs:300
+                                                            },                                                                              // MakerGen.cs:303
+                                                            new FhirKhit.Maker.Common.Primitive.String                                      // MakerGen.cs:299
+                                                            {                                                                               // MakerGen.cs:300
+                                                            },                                                                              // MakerGen.cs:303
+                                                            new FhirKhit.Maker.Common.Primitive.Boolean                                     // MakerGen.cs:299
+                                                            {                                                                               // MakerGen.cs:300
+                                                            },                                                                              // MakerGen.cs:303
+                                                            new FhirKhit.Maker.Common.Primitive.Integer                                     // MakerGen.cs:299
+                                                            {                                                                               // MakerGen.cs:300
+                                                            },                                                                              // MakerGen.cs:303
+                                                            new FhirKhit.Maker.Common.Primitive.Decimal                                     // MakerGen.cs:299
+                                                            {                                                                               // MakerGen.cs:300
+                                                            }                                                                               // MakerGen.cs:303
+                                                        }                                                                                   // MakerGen.cs:263
+                                                    };                                                                                      // MakerGen.cs:264
+                                                }                                                                                           // MakerGen.cs:366
+                                            }                                                                                               // MakerGen.cs:429
+                                            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                             // MakerGen.cs:414
+                                            {                                                                                               // MakerGen.cs:415
+                                                base.Write(sDef);                                                                           // MakerGen.cs:416
+                                                Value.Write(sDef);                                                                          // MakerGen.cs:240
+                                            }                                                                                               // MakerGen.cs:433
+                                        }                                                                                                   // MakerGen.cs:393
+                                        public Type_Parameter_Elements Elements { get; }                                                    // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                                        public Type_Parameter()                                                                             // MakerGen.cs:396
+                                        {                                                                                                   // MakerGen.cs:397
+                                            this.Elements = new Type_Parameter_Elements();                                                  // MakerGen.cs:398
+                                        }                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                 // MakerGen.cs:401
+                                        {                                                                                                   // MakerGen.cs:402
+                                            this.Elements.Write(sDef);                                                                      // MakerGen.cs:403
+                                        }                                                                                                   // MakerGen.cs:404
+                                    }                                                                                                       // MakerGen.cs:405
+                                    // 47. StructureMap.group.rule.target.context
+                                    public ElementDefinitionInfo Context;                                                                   // MakerGen.cs:236
+                                    // 48. StructureMap.group.rule.target.contextType
+                                    public ElementDefinitionInfo ContextType;                                                               // MakerGen.cs:236
+                                    // 49. StructureMap.group.rule.target.element
+                                    public ElementDefinitionInfo Element;                                                                   // MakerGen.cs:236
+                                    // 50. StructureMap.group.rule.target.variable
+                                    public ElementDefinitionInfo Variable;                                                                  // MakerGen.cs:236
+                                    // 51. StructureMap.group.rule.target.listMode
+                                    public ElementDefinitionInfo ListMode;                                                                  // MakerGen.cs:236
+                                    // 52. StructureMap.group.rule.target.listRuleId
+                                    public ElementDefinitionInfo ListRuleId;                                                                // MakerGen.cs:236
+                                    // 53. StructureMap.group.rule.target.transform
+                                    public ElementDefinitionInfo Transform;                                                                 // MakerGen.cs:236
+                                    public Type_Target_Elements()                                                                           // MakerGen.cs:409
+                                    {                                                                                                       // MakerGen.cs:410
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 47. StructureMap.group.rule.target.context
+                                            this.Context = new ElementDefinitionInfo                                                        // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Context",                                                                           // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.target.context",                                             // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.target.context",                                              // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Id                                                  // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 48. StructureMap.group.rule.target.contextType
+                                            this.ContextType = new ElementDefinitionInfo                                                    // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "ContextType",                                                                       // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.target.contextType",                                         // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.target.contextType",                                          // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 49. StructureMap.group.rule.target.element
+                                            this.Element = new ElementDefinitionInfo                                                        // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Element",                                                                           // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.target.element",                                             // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.target.element",                                              // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 50. StructureMap.group.rule.target.variable
+                                            this.Variable = new ElementDefinitionInfo                                                       // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Variable",                                                                          // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.target.variable",                                            // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.target.variable",                                             // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Id                                                  // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 51. StructureMap.group.rule.target.listMode
+                                            this.ListMode = new ElementDefinitionInfo                                                       // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "ListMode",                                                                          // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.target.listMode",                                            // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.target.listMode",                                             // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = -1,                                                                                   // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 52. StructureMap.group.rule.target.listRuleId
+                                            this.ListRuleId = new ElementDefinitionInfo                                                     // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "ListRuleId",                                                                        // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.target.listRuleId",                                          // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.target.listRuleId",                                           // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Id                                                  // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 53. StructureMap.group.rule.target.transform
+                                            this.Transform = new ElementDefinitionInfo                                                      // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Transform",                                                                         // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.target.transform",                                           // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.target.transform",                                            // MakerGen.cs:257
+                                                Min = 0,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                    }                                                                                                       // MakerGen.cs:429
+                                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:414
+                                    {                                                                                                       // MakerGen.cs:415
+                                        base.Write(sDef);                                                                                   // MakerGen.cs:416
+                                        Context.Write(sDef);                                                                                // MakerGen.cs:240
+                                        ContextType.Write(sDef);                                                                            // MakerGen.cs:240
+                                        Element.Write(sDef);                                                                                // MakerGen.cs:240
+                                        Variable.Write(sDef);                                                                               // MakerGen.cs:240
+                                        ListMode.Write(sDef);                                                                               // MakerGen.cs:240
+                                        ListRuleId.Write(sDef);                                                                             // MakerGen.cs:240
+                                        Transform.Write(sDef);                                                                              // MakerGen.cs:240
+                                    }                                                                                                       // MakerGen.cs:433
+                                }                                                                                                           // MakerGen.cs:393
+                                public Type_Target_Elements Elements { get; }                                                               // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                                public Type_Target()                                                                                        // MakerGen.cs:396
+                                {                                                                                                           // MakerGen.cs:397
+                                    this.Elements = new Type_Target_Elements();                                                             // MakerGen.cs:398
+                                }                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:401
+                                {                                                                                                           // MakerGen.cs:402
+                                    this.Elements.Write(sDef);                                                                              // MakerGen.cs:403
+                                }                                                                                                           // MakerGen.cs:404
+                            }                                                                                                               // MakerGen.cs:405
+                            // 57. StructureMap.group.rule.dependent
+                            public class Type_Dependent : FhirKhit.Maker.Common.Complex.ComplexBase                                         // MakerGen.cs:385
+                            {                                                                                                               // MakerGen.cs:386
+                                public class Type_Dependent_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                          // MakerGen.cs:387
+                                {                                                                                                           // MakerGen.cs:388
+                                    // 58. StructureMap.group.rule.dependent.name
+                                    public ElementDefinitionInfo Name;                                                                      // MakerGen.cs:236
+                                    // 59. StructureMap.group.rule.dependent.variable
+                                    public ElementDefinitionInfo Variable;                                                                  // MakerGen.cs:236
+                                    public Type_Dependent_Elements()                                                                        // MakerGen.cs:409
+                                    {                                                                                                       // MakerGen.cs:410
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 58. StructureMap.group.rule.dependent.name
+                                            this.Name = new ElementDefinitionInfo                                                           // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Name",                                                                              // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.dependent.name",                                             // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.dependent.name",                                              // MakerGen.cs:257
+                                                Min = 1,                                                                                    // MakerGen.cs:258
+                                                Max = 1,                                                                                    // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.Id                                                  // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                        {                                                                                                   // MakerGen.cs:251
+                                            // 59. StructureMap.group.rule.dependent.variable
+                                            this.Variable = new ElementDefinitionInfo                                                       // MakerGen.cs:253
+                                            {                                                                                               // MakerGen.cs:254
+                                                Name = "Variable",                                                                          // MakerGen.cs:255
+                                                Path= "StructureMap.group.rule.dependent.variable",                                         // MakerGen.cs:256
+                                                Id = "StructureMap.group.rule.dependent.variable",                                          // MakerGen.cs:257
+                                                Min = 1,                                                                                    // MakerGen.cs:258
+                                                Max = -1,                                                                                   // MakerGen.cs:259
+                                                Types = new BaseType[]                                                                      // MakerGen.cs:260
+                                                {                                                                                           // MakerGen.cs:261
+                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:299
+                                                    {                                                                                       // MakerGen.cs:300
+                                                    }                                                                                       // MakerGen.cs:303
+                                                }                                                                                           // MakerGen.cs:263
+                                            };                                                                                              // MakerGen.cs:264
+                                        }                                                                                                   // MakerGen.cs:366
+                                    }                                                                                                       // MakerGen.cs:429
+                                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:414
+                                    {                                                                                                       // MakerGen.cs:415
+                                        base.Write(sDef);                                                                                   // MakerGen.cs:416
+                                        Name.Write(sDef);                                                                                   // MakerGen.cs:240
+                                        Variable.Write(sDef);                                                                               // MakerGen.cs:240
+                                    }                                                                                                       // MakerGen.cs:433
+                                }                                                                                                           // MakerGen.cs:393
+                                public Type_Dependent_Elements Elements { get; }                                                            // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                                public Type_Dependent()                                                                                     // MakerGen.cs:396
+                                {                                                                                                           // MakerGen.cs:397
+                                    this.Elements = new Type_Dependent_Elements();                                                          // MakerGen.cs:398
+                                }                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:401
+                                {                                                                                                           // MakerGen.cs:402
+                                    this.Elements.Write(sDef);                                                                              // MakerGen.cs:403
+                                }                                                                                                           // MakerGen.cs:404
+                            }                                                                                                               // MakerGen.cs:405
+                            // 33. StructureMap.group.rule.name
+                            public ElementDefinitionInfo Name;                                                                              // MakerGen.cs:236
+                            // 56. StructureMap.group.rule.rule
+                            public ElementDefinitionInfo Rule;                                                                              // MakerGen.cs:236
+                            // 60. StructureMap.group.rule.documentation
+                            public ElementDefinitionInfo Documentation;                                                                     // MakerGen.cs:236
+                            public Type_Rule_Elements()                                                                                     // MakerGen.cs:409
+                            {                                                                                                               // MakerGen.cs:410
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Base64Binary                                                        // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Canonical                                                           // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Date                                                                // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Instant                                                             // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Integer                                                             // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Markdown                                                            // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Oid                                                                 // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Time                                                                // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.UnsignedInt                                                         // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Url                                                                 // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Primitive.Uuid                                                                // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    },                                                                                                      // MakerGen.cs:293
-                                    new FhirKhit.Maker.Common.Complex.Address                                                               // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Age                                                                   // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Annotation                                                            // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Attachment                                                            // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:304
-                                    {                                                                                                       // MakerGen.cs:305
-                                    },                                                                                                      // MakerGen.cs:308
-                                    new FhirKhit.Maker.Common.Complex.Coding                                                                // MakerGen.cs:304
-                                    {                                                                                                       // MakerGen.cs:305
-                                    },                                                                                                      // MakerGen.cs:308
-                                    new FhirKhit.Maker.Common.Complex.ContactPoint                                                          // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Count                                                                 // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Distance                                                              // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Duration                                                              // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.HumanName                                                             // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Identifier                                                            // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Money                                                                 // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Period                                                                // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Range                                                                 // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Ratio                                                                 // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:335
-                                    {                                                                                                       // MakerGen.cs:336
-                                    },                                                                                                      // MakerGen.cs:339
-                                    new FhirKhit.Maker.Common.Complex.SampledData                                                           // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Signature                                                             // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Timing                                                                // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.ContactDetail                                                         // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Contributor                                                           // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.DataRequirement                                                       // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Expression                                                            // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.ParameterDefinition                                                   // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.RelatedArtifact                                                       // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.TriggerDefinition                                                     // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.UsageContext                                                          // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    },                                                                                                      // MakerGen.cs:349
-                                    new FhirKhit.Maker.Common.Complex.Dosage                                                                // MakerGen.cs:347
-                                    {                                                                                                       // MakerGen.cs:348
-                                    }                                                                                                       // MakerGen.cs:349
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 40. StructureMap.group.rule.source.element
-                            this.Element_Element = new MakerElementInstance                                                                 // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Element",                                                                                   // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
+                                    // 33. StructureMap.group.rule.name
+                                    this.Name = new ElementDefinitionInfo                                                                   // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Name",                                                                                      // MakerGen.cs:255
+                                        Path= "StructureMap.group.rule.name",                                                               // MakerGen.cs:256
+                                        Id = "StructureMap.group.rule.name",                                                                // MakerGen.cs:257
+                                        Min = 1,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.Id                                                          // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 41. StructureMap.group.rule.source.listMode
-                            this.Element_ListMode = new MakerElementInstance                                                                // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_ListMode",                                                                                  // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
+                                    // 56. StructureMap.group.rule.rule
+                                    this.Rule = new ElementDefinitionInfo                                                                   // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Rule",                                                                                      // MakerGen.cs:255
+                                        Path= "StructureMap.group.rule.rule",                                                               // MakerGen.cs:256
+                                        Id = "StructureMap.group.rule.rule",                                                                // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = -1,                                                                                           // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 42. StructureMap.group.rule.source.variable
-                            this.Element_Variable = new MakerElementInstance                                                                // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Variable",                                                                                  // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 43. StructureMap.group.rule.source.condition
-                            this.Element_Condition = new MakerElementInstance                                                               // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Condition",                                                                                 // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 44. StructureMap.group.rule.source.check
-                            this.Element_Check = new MakerElementInstance                                                                   // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Check",                                                                                     // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 45. StructureMap.group.rule.source.logMessage
-                            this.Element_LogMessage = new MakerElementInstance                                                              // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_LogMessage",                                                                                // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                    }                                                                                                                       // MakerGen.cs:395
-                }                                                                                                                           // MakerGen.cs:379
-                // 46. StructureMap.group.rule.target
-                public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:374
-                {                                                                                                                           // MakerGen.cs:375
-                    // 54. StructureMap.group.rule.target.parameter
-                    public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:374
-                    {                                                                                                                       // MakerGen.cs:375
-                        // 55. StructureMap.group.rule.target.parameter.value[x]
-                        public MakerElementInstance Element_Value;                                                                          // MakerGen.cs:232
-                        public Type_Parameter()                                                                                             // MakerGen.cs:383
-                        {                                                                                                                   // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:243
-                                // 55. StructureMap.group.rule.target.parameter.value[x]
-                                this.Element_Value = new MakerElementInstance                                                               // MakerGen.cs:245
-                                {                                                                                                           // MakerGen.cs:246
-                                    Name = "Element_Value",                                                                                 // MakerGen.cs:247
-                                    Min = 1,                                                                                                // MakerGen.cs:248
-                                    Max = 1,                                                                                                // MakerGen.cs:249
-                                    Types = new MakerBaseType[]                                                                             // MakerGen.cs:250
-                                    {                                                                                                       // MakerGen.cs:251
-                                        new FhirKhit.Maker.Common.Primitive.Id                                                              // MakerGen.cs:289
-                                        {                                                                                                   // MakerGen.cs:290
-                                        },                                                                                                  // MakerGen.cs:293
-                                        new FhirKhit.Maker.Common.Primitive.String                                                          // MakerGen.cs:289
-                                        {                                                                                                   // MakerGen.cs:290
-                                        },                                                                                                  // MakerGen.cs:293
-                                        new FhirKhit.Maker.Common.Primitive.Boolean                                                         // MakerGen.cs:289
-                                        {                                                                                                   // MakerGen.cs:290
-                                        },                                                                                                  // MakerGen.cs:293
-                                        new FhirKhit.Maker.Common.Primitive.Integer                                                         // MakerGen.cs:289
-                                        {                                                                                                   // MakerGen.cs:290
-                                        },                                                                                                  // MakerGen.cs:293
-                                        new FhirKhit.Maker.Common.Primitive.Decimal                                                         // MakerGen.cs:289
-                                        {                                                                                                   // MakerGen.cs:290
-                                        }                                                                                                   // MakerGen.cs:293
-                                    }                                                                                                       // MakerGen.cs:253
-                                };                                                                                                          // MakerGen.cs:254
-                            }                                                                                                               // MakerGen.cs:356
-                        }                                                                                                                   // MakerGen.cs:395
-                    }                                                                                                                       // MakerGen.cs:379
-                    // 47. StructureMap.group.rule.target.context
-                    public MakerElementInstance Element_Context;                                                                            // MakerGen.cs:232
-                    // 48. StructureMap.group.rule.target.contextType
-                    public MakerElementInstance Element_ContextType;                                                                        // MakerGen.cs:232
-                    // 49. StructureMap.group.rule.target.element
-                    public MakerElementInstance Element_Element;                                                                            // MakerGen.cs:232
-                    // 50. StructureMap.group.rule.target.variable
-                    public MakerElementInstance Element_Variable;                                                                           // MakerGen.cs:232
-                    // 51. StructureMap.group.rule.target.listMode
-                    public MakerElementInstance Element_ListMode;                                                                           // MakerGen.cs:232
-                    // 52. StructureMap.group.rule.target.listRuleId
-                    public MakerElementInstance Element_ListRuleId;                                                                         // MakerGen.cs:232
-                    // 53. StructureMap.group.rule.target.transform
-                    public MakerElementInstance Element_Transform;                                                                          // MakerGen.cs:232
-                    public Type_Target()                                                                                                    // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 47. StructureMap.group.rule.target.context
-                            this.Element_Context = new MakerElementInstance                                                                 // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Context",                                                                                   // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 48. StructureMap.group.rule.target.contextType
-                            this.Element_ContextType = new MakerElementInstance                                                             // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_ContextType",                                                                               // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 49. StructureMap.group.rule.target.element
-                            this.Element_Element = new MakerElementInstance                                                                 // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Element",                                                                                   // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 50. StructureMap.group.rule.target.variable
-                            this.Element_Variable = new MakerElementInstance                                                                // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Variable",                                                                                  // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 51. StructureMap.group.rule.target.listMode
-                            this.Element_ListMode = new MakerElementInstance                                                                // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_ListMode",                                                                                  // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = -1,                                                                                                   // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 52. StructureMap.group.rule.target.listRuleId
-                            this.Element_ListRuleId = new MakerElementInstance                                                              // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_ListRuleId",                                                                                // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 53. StructureMap.group.rule.target.transform
-                            this.Element_Transform = new MakerElementInstance                                                               // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Transform",                                                                                 // MakerGen.cs:247
-                                Min = 0,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                    }                                                                                                                       // MakerGen.cs:395
-                }                                                                                                                           // MakerGen.cs:379
-                // 57. StructureMap.group.rule.dependent
-                public class Type_Dependent : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:374
-                {                                                                                                                           // MakerGen.cs:375
-                    // 58. StructureMap.group.rule.dependent.name
-                    public MakerElementInstance Element_Name;                                                                               // MakerGen.cs:232
-                    // 59. StructureMap.group.rule.dependent.variable
-                    public MakerElementInstance Element_Variable;                                                                           // MakerGen.cs:232
-                    public Type_Dependent()                                                                                                 // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 58. StructureMap.group.rule.dependent.name
-                            this.Element_Name = new MakerElementInstance                                                                    // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Name",                                                                                      // MakerGen.cs:247
-                                Min = 1,                                                                                                    // MakerGen.cs:248
-                                Max = 1,                                                                                                    // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                        {                                                                                                                   // MakerGen.cs:243
-                            // 59. StructureMap.group.rule.dependent.variable
-                            this.Element_Variable = new MakerElementInstance                                                                // MakerGen.cs:245
-                            {                                                                                                               // MakerGen.cs:246
-                                Name = "Element_Variable",                                                                                  // MakerGen.cs:247
-                                Min = 1,                                                                                                    // MakerGen.cs:248
-                                Max = -1,                                                                                                   // MakerGen.cs:249
-                                Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
-                                {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
-                                    {                                                                                                       // MakerGen.cs:290
-                                    }                                                                                                       // MakerGen.cs:293
-                                }                                                                                                           // MakerGen.cs:253
-                            };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:356
-                    }                                                                                                                       // MakerGen.cs:395
-                }                                                                                                                           // MakerGen.cs:379
-                // 33. StructureMap.group.rule.name
-                public MakerElementInstance Element_Name;                                                                                   // MakerGen.cs:232
-                // 56. StructureMap.group.rule.rule
-                public MakerElementInstance Element_Rule;                                                                                   // MakerGen.cs:232
-                // 60. StructureMap.group.rule.documentation
-                public MakerElementInstance Element_Documentation;                                                                          // MakerGen.cs:232
-                public Type_Rule()                                                                                                          // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 33. StructureMap.group.rule.name
-                        this.Element_Name = new MakerElementInstance                                                                        // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Name",                                                                                          // MakerGen.cs:247
-                            Min = 1,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Id                                                                      // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 56. StructureMap.group.rule.rule
-                        this.Element_Rule = new MakerElementInstance                                                                        // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Rule",                                                                                          // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = -1,                                                                                                       // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                    {                                                                                                                       // MakerGen.cs:243
-                        // 60. StructureMap.group.rule.documentation
-                        this.Element_Documentation = new MakerElementInstance                                                               // MakerGen.cs:245
-                        {                                                                                                                   // MakerGen.cs:246
-                            Name = "Element_Documentation",                                                                                 // MakerGen.cs:247
-                            Min = 0,                                                                                                        // MakerGen.cs:248
-                            Max = 1,                                                                                                        // MakerGen.cs:249
-                            Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
-                            {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:289
-                                {                                                                                                           // MakerGen.cs:290
-                                }                                                                                                           // MakerGen.cs:293
-                            }                                                                                                               // MakerGen.cs:253
-                        };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:356
-                }                                                                                                                           // MakerGen.cs:395
-            }                                                                                                                               // MakerGen.cs:379
-            // 23. StructureMap.group.name
-            public MakerElementInstance Element_Name;                                                                                       // MakerGen.cs:232
-            // 24. StructureMap.group.extends
-            public MakerElementInstance Element_Extends;                                                                                    // MakerGen.cs:232
-            // 25. StructureMap.group.typeMode
-            public MakerElementInstance Element_TypeMode;                                                                                   // MakerGen.cs:232
-            // 26. StructureMap.group.documentation
-            public MakerElementInstance Element_Documentation;                                                                              // MakerGen.cs:232
-            public Type_Group()                                                                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                {                                                                                                                           // MakerGen.cs:243
+                                    // 60. StructureMap.group.rule.documentation
+                                    this.Documentation = new ElementDefinitionInfo                                                          // MakerGen.cs:253
+                                    {                                                                                                       // MakerGen.cs:254
+                                        Name = "Documentation",                                                                             // MakerGen.cs:255
+                                        Path= "StructureMap.group.rule.documentation",                                                      // MakerGen.cs:256
+                                        Id = "StructureMap.group.rule.documentation",                                                       // MakerGen.cs:257
+                                        Min = 0,                                                                                            // MakerGen.cs:258
+                                        Max = 1,                                                                                            // MakerGen.cs:259
+                                        Types = new BaseType[]                                                                              // MakerGen.cs:260
+                                        {                                                                                                   // MakerGen.cs:261
+                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:299
+                                            {                                                                                               // MakerGen.cs:300
+                                            }                                                                                               // MakerGen.cs:303
+                                        }                                                                                                   // MakerGen.cs:263
+                                    };                                                                                                      // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:366
+                            }                                                                                                               // MakerGen.cs:429
+                            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:414
+                            {                                                                                                               // MakerGen.cs:415
+                                base.Write(sDef);                                                                                           // MakerGen.cs:416
+                                Name.Write(sDef);                                                                                           // MakerGen.cs:240
+                                Rule.Write(sDef);                                                                                           // MakerGen.cs:240
+                                Documentation.Write(sDef);                                                                                  // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:433
+                        }                                                                                                                   // MakerGen.cs:393
+                        public Type_Rule_Elements Elements { get; }                                                                         // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                        public Type_Rule()                                                                                                  // MakerGen.cs:396
+                        {                                                                                                                   // MakerGen.cs:397
+                            this.Elements = new Type_Rule_Elements();                                                                       // MakerGen.cs:398
+                        }                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:402
+                            this.Elements.Write(sDef);                                                                                      // MakerGen.cs:403
+                        }                                                                                                                   // MakerGen.cs:404
+                    }                                                                                                                       // MakerGen.cs:405
                     // 23. StructureMap.group.name
-                    this.Element_Name = new MakerElementInstance                                                                            // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:247
-                        Min = 1,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Id                                                                          // MakerGen.cs:289
-                            {                                                                                                               // MakerGen.cs:290
-                            }                                                                                                               // MakerGen.cs:293
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo Name;                                                                                      // MakerGen.cs:236
                     // 24. StructureMap.group.extends
-                    this.Element_Extends = new MakerElementInstance                                                                         // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Extends",                                                                                           // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Id                                                                          // MakerGen.cs:289
-                            {                                                                                                               // MakerGen.cs:290
-                            }                                                                                                               // MakerGen.cs:293
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo Extends;                                                                                   // MakerGen.cs:236
                     // 25. StructureMap.group.typeMode
-                    this.Element_TypeMode = new MakerElementInstance                                                                        // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_TypeMode",                                                                                          // MakerGen.cs:247
-                        Min = 1,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
-                        {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:289
-                            {                                                                                                               // MakerGen.cs:290
-                            }                                                                                                               // MakerGen.cs:293
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-                {                                                                                                                           // MakerGen.cs:243
+                    public ElementDefinitionInfo TypeMode;                                                                                  // MakerGen.cs:236
                     // 26. StructureMap.group.documentation
-                    this.Element_Documentation = new MakerElementInstance                                                                   // MakerGen.cs:245
-                    {                                                                                                                       // MakerGen.cs:246
-                        Name = "Element_Documentation",                                                                                     // MakerGen.cs:247
-                        Min = 0,                                                                                                            // MakerGen.cs:248
-                        Max = 1,                                                                                                            // MakerGen.cs:249
-                        Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
+                    public ElementDefinitionInfo Documentation;                                                                             // MakerGen.cs:236
+                    public Type_Group_Elements()                                                                                            // MakerGen.cs:409
+                    {                                                                                                                       // MakerGen.cs:410
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
-                            {                                                                                                               // MakerGen.cs:290
-                            }                                                                                                               // MakerGen.cs:293
-                        }                                                                                                                   // MakerGen.cs:253
-                    };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:356
-            }                                                                                                                               // MakerGen.cs:395
-        }                                                                                                                                   // MakerGen.cs:379
-        // 1. StructureMap.url
-        public MakerElementInstance Element_Url;                                                                                            // MakerGen.cs:232
-        // 2. StructureMap.identifier
-        public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
-        // 3. StructureMap.version
-        public MakerElementInstance Element_Version;                                                                                        // MakerGen.cs:232
-        // 4. StructureMap.name
-        public MakerElementInstance Element_Name;                                                                                           // MakerGen.cs:232
-        // 5. StructureMap.title
-        public MakerElementInstance Element_Title;                                                                                          // MakerGen.cs:232
-        // 6. StructureMap.status
-        public MakerElementInstance Element_Status;                                                                                         // MakerGen.cs:232
-        // 7. StructureMap.experimental
-        public MakerElementInstance Element_Experimental;                                                                                   // MakerGen.cs:232
-        // 8. StructureMap.date
-        public MakerElementInstance Element_Date;                                                                                           // MakerGen.cs:232
-        // 9. StructureMap.publisher
-        public MakerElementInstance Element_Publisher;                                                                                      // MakerGen.cs:232
-        // 10. StructureMap.contact
-        public MakerElementInstance Element_Contact;                                                                                        // MakerGen.cs:232
-        // 11. StructureMap.description
-        public MakerElementInstance Element_Description;                                                                                    // MakerGen.cs:232
-        // 12. StructureMap.useContext
-        public MakerElementInstance Element_UseContext;                                                                                     // MakerGen.cs:232
-        // 13. StructureMap.jurisdiction
-        public MakerElementInstance Element_Jurisdiction;                                                                                   // MakerGen.cs:232
-        // 14. StructureMap.purpose
-        public MakerElementInstance Element_Purpose;                                                                                        // MakerGen.cs:232
-        // 15. StructureMap.copyright
-        public MakerElementInstance Element_Copyright;                                                                                      // MakerGen.cs:232
-        // 21. StructureMap.import
-        public MakerElementInstance Element_Import;                                                                                         // MakerGen.cs:232
-        public StructureMap()                                                                                                               // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:243
-                // 1. StructureMap.url
-                this.Element_Url = new MakerElementInstance                                                                                 // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Url",                                                                                                   // MakerGen.cs:247
-                    Min = 1,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Uri                                                                             // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 2. StructureMap.identifier
-                this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:347
-                        {                                                                                                                   // MakerGen.cs:348
-                        }                                                                                                                   // MakerGen.cs:349
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 3. StructureMap.version
-                this.Element_Version = new MakerElementInstance                                                                             // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Version",                                                                                               // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 4. StructureMap.name
-                this.Element_Name = new MakerElementInstance                                                                                // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Name",                                                                                                  // MakerGen.cs:247
-                    Min = 1,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 5. StructureMap.title
-                this.Element_Title = new MakerElementInstance                                                                               // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Title",                                                                                                 // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 6. StructureMap.status
-                this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:247
-                    Min = 1,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 7. StructureMap.experimental
-                this.Element_Experimental = new MakerElementInstance                                                                        // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Boolean                                                                         // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 8. StructureMap.date
-                this.Element_Date = new MakerElementInstance                                                                                // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Date",                                                                                                  // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 9. StructureMap.publisher
-                this.Element_Publisher = new MakerElementInstance                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 10. StructureMap.contact
-                this.Element_Contact = new MakerElementInstance                                                                             // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Contact",                                                                                               // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.ContactDetail                                                                     // MakerGen.cs:347
-                        {                                                                                                                   // MakerGen.cs:348
-                        }                                                                                                                   // MakerGen.cs:349
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 11. StructureMap.description
-                this.Element_Description = new MakerElementInstance                                                                         // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Description",                                                                                           // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Markdown                                                                        // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 12. StructureMap.useContext
-                this.Element_UseContext = new MakerElementInstance                                                                          // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.UsageContext                                                                      // MakerGen.cs:347
-                        {                                                                                                                   // MakerGen.cs:348
-                        }                                                                                                                   // MakerGen.cs:349
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 13. StructureMap.jurisdiction
-                this.Element_Jurisdiction = new MakerElementInstance                                                                        // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
-                        {                                                                                                                   // MakerGen.cs:305
-                        }                                                                                                                   // MakerGen.cs:308
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 14. StructureMap.purpose
-                this.Element_Purpose = new MakerElementInstance                                                                             // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Markdown                                                                        // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 15. StructureMap.copyright
-                this.Element_Copyright = new MakerElementInstance                                                                           // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = 1,                                                                                                                // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Markdown                                                                        // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-            {                                                                                                                               // MakerGen.cs:243
-                // 21. StructureMap.import
-                this.Element_Import = new MakerElementInstance                                                                              // MakerGen.cs:245
-                {                                                                                                                           // MakerGen.cs:246
-                    Name = "Element_Import",                                                                                                // MakerGen.cs:247
-                    Min = 0,                                                                                                                // MakerGen.cs:248
-                    Max = -1,                                                                                                               // MakerGen.cs:249
-                    Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
-                    {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Canonical                                                                       // MakerGen.cs:289
-                        {                                                                                                                   // MakerGen.cs:290
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:292
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/StructureMap"                                                      // MakerGen.cs:292
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:293
-                    }                                                                                                                       // MakerGen.cs:253
-                };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:356
-        }                                                                                                                                   // MakerGen.cs:395
-    }                                                                                                                                       // MakerGen.cs:379
-}                                                                                                                                           // MakerGen.cs:430
+                            // 23. StructureMap.group.name
+                            this.Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Name",                                                                                              // MakerGen.cs:255
+                                Path= "StructureMap.group.name",                                                                            // MakerGen.cs:256
+                                Id = "StructureMap.group.name",                                                                             // MakerGen.cs:257
+                                Min = 1,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:299
+                                    {                                                                                                       // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:303
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 24. StructureMap.group.extends
+                            this.Extends = new ElementDefinitionInfo                                                                        // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Extends",                                                                                           // MakerGen.cs:255
+                                Path= "StructureMap.group.extends",                                                                         // MakerGen.cs:256
+                                Id = "StructureMap.group.extends",                                                                          // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:299
+                                    {                                                                                                       // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:303
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 25. StructureMap.group.typeMode
+                            this.TypeMode = new ElementDefinitionInfo                                                                       // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "TypeMode",                                                                                          // MakerGen.cs:255
+                                Path= "StructureMap.group.typeMode",                                                                        // MakerGen.cs:256
+                                Id = "StructureMap.group.typeMode",                                                                         // MakerGen.cs:257
+                                Min = 1,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:299
+                                    {                                                                                                       // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:303
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                        {                                                                                                                   // MakerGen.cs:251
+                            // 26. StructureMap.group.documentation
+                            this.Documentation = new ElementDefinitionInfo                                                                  // MakerGen.cs:253
+                            {                                                                                                               // MakerGen.cs:254
+                                Name = "Documentation",                                                                                     // MakerGen.cs:255
+                                Path= "StructureMap.group.documentation",                                                                   // MakerGen.cs:256
+                                Id = "StructureMap.group.documentation",                                                                    // MakerGen.cs:257
+                                Min = 0,                                                                                                    // MakerGen.cs:258
+                                Max = 1,                                                                                                    // MakerGen.cs:259
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:299
+                                    {                                                                                                       // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:303
+                                }                                                                                                           // MakerGen.cs:263
+                            };                                                                                                              // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:429
+                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
+                    {                                                                                                                       // MakerGen.cs:415
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:416
+                        Name.Write(sDef);                                                                                                   // MakerGen.cs:240
+                        Extends.Write(sDef);                                                                                                // MakerGen.cs:240
+                        TypeMode.Write(sDef);                                                                                               // MakerGen.cs:240
+                        Documentation.Write(sDef);                                                                                          // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:433
+                }                                                                                                                           // MakerGen.cs:393
+                public Type_Group_Elements Elements { get; }                                                                                // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+                public Type_Group()                                                                                                         // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:397
+                    this.Elements = new Type_Group_Elements();                                                                              // MakerGen.cs:398
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:402
+                    this.Elements.Write(sDef);                                                                                              // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:404
+            }                                                                                                                               // MakerGen.cs:405
+            // 1. StructureMap.url
+            public ElementDefinitionInfo Url;                                                                                               // MakerGen.cs:236
+            // 2. StructureMap.identifier
+            public ElementDefinitionInfo Identifier;                                                                                        // MakerGen.cs:236
+            // 3. StructureMap.version
+            public ElementDefinitionInfo Version;                                                                                           // MakerGen.cs:236
+            // 4. StructureMap.name
+            public ElementDefinitionInfo Name;                                                                                              // MakerGen.cs:236
+            // 5. StructureMap.title
+            public ElementDefinitionInfo Title;                                                                                             // MakerGen.cs:236
+            // 6. StructureMap.status
+            public ElementDefinitionInfo Status;                                                                                            // MakerGen.cs:236
+            // 7. StructureMap.experimental
+            public ElementDefinitionInfo Experimental;                                                                                      // MakerGen.cs:236
+            // 8. StructureMap.date
+            public ElementDefinitionInfo Date;                                                                                              // MakerGen.cs:236
+            // 9. StructureMap.publisher
+            public ElementDefinitionInfo Publisher;                                                                                         // MakerGen.cs:236
+            // 10. StructureMap.contact
+            public ElementDefinitionInfo Contact;                                                                                           // MakerGen.cs:236
+            // 11. StructureMap.description
+            public ElementDefinitionInfo Description;                                                                                       // MakerGen.cs:236
+            // 12. StructureMap.useContext
+            public ElementDefinitionInfo UseContext;                                                                                        // MakerGen.cs:236
+            // 13. StructureMap.jurisdiction
+            public ElementDefinitionInfo Jurisdiction;                                                                                      // MakerGen.cs:236
+            // 14. StructureMap.purpose
+            public ElementDefinitionInfo Purpose;                                                                                           // MakerGen.cs:236
+            // 15. StructureMap.copyright
+            public ElementDefinitionInfo Copyright;                                                                                         // MakerGen.cs:236
+            // 21. StructureMap.import
+            public ElementDefinitionInfo Import;                                                                                            // MakerGen.cs:236
+            public StructureMap_Elements()                                                                                                  // MakerGen.cs:409
+            {                                                                                                                               // MakerGen.cs:410
+                {                                                                                                                           // MakerGen.cs:251
+                    // 1. StructureMap.url
+                    this.Url = new ElementDefinitionInfo                                                                                    // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Url",                                                                                                       // MakerGen.cs:255
+                        Path= "StructureMap.url",                                                                                           // MakerGen.cs:256
+                        Id = "StructureMap.url",                                                                                            // MakerGen.cs:257
+                        Min = 1,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 2. StructureMap.identifier
+                    this.Identifier = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Identifier",                                                                                                // MakerGen.cs:255
+                        Path= "StructureMap.identifier",                                                                                    // MakerGen.cs:256
+                        Id = "StructureMap.identifier",                                                                                     // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:357
+                            {                                                                                                               // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 3. StructureMap.version
+                    this.Version = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Version",                                                                                                   // MakerGen.cs:255
+                        Path= "StructureMap.version",                                                                                       // MakerGen.cs:256
+                        Id = "StructureMap.version",                                                                                        // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 4. StructureMap.name
+                    this.Name = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Name",                                                                                                      // MakerGen.cs:255
+                        Path= "StructureMap.name",                                                                                          // MakerGen.cs:256
+                        Id = "StructureMap.name",                                                                                           // MakerGen.cs:257
+                        Min = 1,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 5. StructureMap.title
+                    this.Title = new ElementDefinitionInfo                                                                                  // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Title",                                                                                                     // MakerGen.cs:255
+                        Path= "StructureMap.title",                                                                                         // MakerGen.cs:256
+                        Id = "StructureMap.title",                                                                                          // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 6. StructureMap.status
+                    this.Status = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Status",                                                                                                    // MakerGen.cs:255
+                        Path= "StructureMap.status",                                                                                        // MakerGen.cs:256
+                        Id = "StructureMap.status",                                                                                         // MakerGen.cs:257
+                        Min = 1,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 7. StructureMap.experimental
+                    this.Experimental = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Experimental",                                                                                              // MakerGen.cs:255
+                        Path= "StructureMap.experimental",                                                                                  // MakerGen.cs:256
+                        Id = "StructureMap.experimental",                                                                                   // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 8. StructureMap.date
+                    this.Date = new ElementDefinitionInfo                                                                                   // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Date",                                                                                                      // MakerGen.cs:255
+                        Path= "StructureMap.date",                                                                                          // MakerGen.cs:256
+                        Id = "StructureMap.date",                                                                                           // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 9. StructureMap.publisher
+                    this.Publisher = new ElementDefinitionInfo                                                                              // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Publisher",                                                                                                 // MakerGen.cs:255
+                        Path= "StructureMap.publisher",                                                                                     // MakerGen.cs:256
+                        Id = "StructureMap.publisher",                                                                                      // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 10. StructureMap.contact
+                    this.Contact = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Contact",                                                                                                   // MakerGen.cs:255
+                        Path= "StructureMap.contact",                                                                                       // MakerGen.cs:256
+                        Id = "StructureMap.contact",                                                                                        // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.ContactDetail                                                                 // MakerGen.cs:357
+                            {                                                                                                               // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 11. StructureMap.description
+                    this.Description = new ElementDefinitionInfo                                                                            // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Description",                                                                                               // MakerGen.cs:255
+                        Path= "StructureMap.description",                                                                                   // MakerGen.cs:256
+                        Id = "StructureMap.description",                                                                                    // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 12. StructureMap.useContext
+                    this.UseContext = new ElementDefinitionInfo                                                                             // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "UseContext",                                                                                                // MakerGen.cs:255
+                        Path= "StructureMap.useContext",                                                                                    // MakerGen.cs:256
+                        Id = "StructureMap.useContext",                                                                                     // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.UsageContext                                                                  // MakerGen.cs:357
+                            {                                                                                                               // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 13. StructureMap.jurisdiction
+                    this.Jurisdiction = new ElementDefinitionInfo                                                                           // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Jurisdiction",                                                                                              // MakerGen.cs:255
+                        Path= "StructureMap.jurisdiction",                                                                                  // MakerGen.cs:256
+                        Id = "StructureMap.jurisdiction",                                                                                   // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:314
+                            {                                                                                                               // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:318
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 14. StructureMap.purpose
+                    this.Purpose = new ElementDefinitionInfo                                                                                // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Purpose",                                                                                                   // MakerGen.cs:255
+                        Path= "StructureMap.purpose",                                                                                       // MakerGen.cs:256
+                        Id = "StructureMap.purpose",                                                                                        // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 15. StructureMap.copyright
+                    this.Copyright = new ElementDefinitionInfo                                                                              // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Copyright",                                                                                                 // MakerGen.cs:255
+                        Path= "StructureMap.copyright",                                                                                     // MakerGen.cs:256
+                        Id = "StructureMap.copyright",                                                                                      // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = 1,                                                                                                            // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+                {                                                                                                                           // MakerGen.cs:251
+                    // 21. StructureMap.import
+                    this.Import = new ElementDefinitionInfo                                                                                 // MakerGen.cs:253
+                    {                                                                                                                       // MakerGen.cs:254
+                        Name = "Import",                                                                                                    // MakerGen.cs:255
+                        Path= "StructureMap.import",                                                                                        // MakerGen.cs:256
+                        Id = "StructureMap.import",                                                                                         // MakerGen.cs:257
+                        Min = 0,                                                                                                            // MakerGen.cs:258
+                        Max = -1,                                                                                                           // MakerGen.cs:259
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:299
+                            {                                                                                                               // MakerGen.cs:300
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:302
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/StructureMap"                                                  // MakerGen.cs:302
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:303
+                        }                                                                                                                   // MakerGen.cs:263
+                    };                                                                                                                      // MakerGen.cs:264
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:429
+            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
+            {                                                                                                                               // MakerGen.cs:415
+                base.Write(sDef);                                                                                                           // MakerGen.cs:416
+                Url.Write(sDef);                                                                                                            // MakerGen.cs:240
+                Identifier.Write(sDef);                                                                                                     // MakerGen.cs:240
+                Version.Write(sDef);                                                                                                        // MakerGen.cs:240
+                Name.Write(sDef);                                                                                                           // MakerGen.cs:240
+                Title.Write(sDef);                                                                                                          // MakerGen.cs:240
+                Status.Write(sDef);                                                                                                         // MakerGen.cs:240
+                Experimental.Write(sDef);                                                                                                   // MakerGen.cs:240
+                Date.Write(sDef);                                                                                                           // MakerGen.cs:240
+                Publisher.Write(sDef);                                                                                                      // MakerGen.cs:240
+                Contact.Write(sDef);                                                                                                        // MakerGen.cs:240
+                Description.Write(sDef);                                                                                                    // MakerGen.cs:240
+                UseContext.Write(sDef);                                                                                                     // MakerGen.cs:240
+                Jurisdiction.Write(sDef);                                                                                                   // MakerGen.cs:240
+                Purpose.Write(sDef);                                                                                                        // MakerGen.cs:240
+                Copyright.Write(sDef);                                                                                                      // MakerGen.cs:240
+                Import.Write(sDef);                                                                                                         // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:433
+        }                                                                                                                                   // MakerGen.cs:393
+        public StructureMap_Elements Elements { get; }                                                                                      // MakerGen.cs:394
+                                                                                                                                            // MakerGen.cs:395
+        public StructureMap()                                                                                                               // MakerGen.cs:396
+        {                                                                                                                                   // MakerGen.cs:397
+            this.Elements = new StructureMap_Elements();                                                                                    // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:400
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:401
+        {                                                                                                                                   // MakerGen.cs:402
+            this.Elements.Write(sDef);                                                                                                      // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:404
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:468

@@ -55,6 +55,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Maker.Common", "Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Maker", "Projects\Maker\FhirKhit.Maker\FhirKhit.Maker.csproj", "{467789AD-0ACE-416D-AC28-AE7AA5B4C395}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Maker.BreastRadiology", "Projects\Maker\FhirKhit.Maker.BreastRadiology\FhirKhit.Maker.BreastRadiology.csproj", "{EFDAD21B-0488-45DD-85C5-BF286965F688}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Projects\SliceGen\Share\FhirKhit.SliceGen.SharedLib\FhirKhit.SliceGen.SharedLib.projitems*{3d046d87-3bc6-42a7-86c7-381d3b8fa711}*SharedItemsImports = 13
@@ -197,6 +199,14 @@ Global
 		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Release|Any CPU.Build.0 = Release|Any CPU
 		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Release|x64.ActiveCfg = Release|Any CPU
 		{467789AD-0ACE-416D-AC28-AE7AA5B4C395}.Release|x64.Build.0 = Release|Any CPU
+		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Debug|x64.Build.0 = Debug|Any CPU
+		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Release|x64.ActiveCfg = Release|Any CPU
+		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -223,6 +233,7 @@ Global
 		{18FDCEF2-9948-4647-95F1-F71BD2F0C075} = {9C2E9018-605A-4D21-A850-4147EA532A38}
 		{B4701E66-9CF2-4ADF-BFB2-C900043F6BF9} = {9C2E9018-605A-4D21-A850-4147EA532A38}
 		{467789AD-0ACE-416D-AC28-AE7AA5B4C395} = {9C2E9018-605A-4D21-A850-4147EA532A38}
+		{EFDAD21B-0488-45DD-85C5-BF286965F688} = {9C2E9018-605A-4D21-A850-4147EA532A38}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90499BD7-964F-4CE5-A761-BDF9EC6DCE28}

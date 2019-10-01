@@ -55,7 +55,7 @@ namespace FhirKhit.Maker
 
         String ResourceName(String s) => $"Resource_{CleanName(s)}";
         String TypeName(String s) => $"Type_{CleanName(s)}";
-        String ElementName(String s) => $"Element_{CleanName(s)}";
+        String ElementName(String s) => $"{CleanName(s)}";
 
         public MakerGen(String outputDir)
         {
@@ -191,6 +191,7 @@ namespace FhirKhit.Maker
             CodeBlockNested subClassBlock,
             CodeBlockNested fieldsBlock,
             CodeBlockNested constructorBlock,
+            CodeBlockNested writeBlock,
             ElementDefinition[] elements,
             String basePath,
             String className,
@@ -216,6 +217,9 @@ namespace FhirKhit.Maker
                     )
                 {
                     String subClassName = TypeName(path.LastPathPart());
+                    //writeBlock
+                    //    .AppendCode($"xxyyz")
+                    //    ;
                     // start defining a sub class.
                     DefineClass(subClassBlock,
                         elements,
@@ -229,7 +233,11 @@ namespace FhirKhit.Maker
                     String elementName = ElementName(ed.Path.LastPathPart());
                     fieldsBlock
                         .AppendComment($"{index}. {elements[index].Path}")
-                        .AppendCode($"public MakerElementInstance {elementName};")
+                        .AppendCode($"public ElementDefinitionInfo {elementName};")
+                        ;
+
+                    writeBlock
+                        .AppendCode($"{elementName}.Write(sDef);")
                         ;
 
                     Int32 min = 0;
@@ -242,12 +250,14 @@ namespace FhirKhit.Maker
                     constructorBlock
                         .OpenBrace()
                         .AppendComment($"{index}. {elements[index].Path}")
-                        .AppendCode($"this.{elementName} = new MakerElementInstance")
+                        .AppendCode($"this.{elementName} = new ElementDefinitionInfo")
                         .OpenBrace()
                         .AppendCode($"Name = \"{elementName}\",")
+                        .AppendCode($"Path= \"{ed.Path}\",")
+                        .AppendCode($"Id = \"{ed.ElementId}\",")
                         .AppendCode($"Min = {min},")
                         .AppendCode($"Max = {max},")
-                        .AppendCode($"Types = new MakerBaseType[]")
+                        .AppendCode($"Types = new BaseType[]")
                         .OpenBrace()
                         .DefineBlock(out CodeBlockNested typesBlock)
                         .CloseBrace("")
@@ -369,29 +379,57 @@ namespace FhirKhit.Maker
         {
             basePath += '.';
 
+            String elementClassName = $"{className}_Elements";
             block
                 .AppendComment($"{index}. {elements[index].Path}")
                 .AppendCode($"public class {className} : {parentMakerClassName}")
                 .OpenBrace()
+                .AppendCode($"public class {elementClassName} : {ResourceNameSpace}.ElementsBase")
+                .OpenBrace()
                 .DefineBlock(out CodeBlockNested subClassBlock)
                 .DefineBlock(out CodeBlockNested fieldsBlock)
                 .DefineBlock(out CodeBlockNested constructorBlock)
+                .DefineBlock(out CodeBlockNested writeBlock)
+                .CloseBrace()
+                .AppendCode($"public {elementClassName} Elements {{ get; }}")
+                .BlankLine()
+                .AppendCode($"public {className}()")
+                .OpenBrace()
+                .AppendCode($"this.Elements = new {elementClassName}();")
+                .CloseBrace()
+                .BlankLine()
+                .AppendCode($"public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)")
+                .OpenBrace()
+                .AppendCode($"this.Elements.Write(sDef);")
+                .CloseBrace()
                 .CloseBrace()
                 ;
 
             constructorBlock
-                .AppendCode($"public {className}()")
+                .AppendCode($"public {elementClassName}()")
                 .OpenBrace()
+                ;
+
+            writeBlock
+                .AppendCode($"public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)")
+                .OpenBrace()
+                .AppendCode($"base.Write(sDef);")
                 ;
             index += 1;
             DefineClassFields(subClassBlock,
                 fieldsBlock,
                 constructorBlock,
+                writeBlock,
                 elements,
                 basePath,
                 className,
                 ref index);
+
             constructorBlock
+                .CloseBrace()
+                ;
+
+            writeBlock
                 .CloseBrace()
                 ;
         }

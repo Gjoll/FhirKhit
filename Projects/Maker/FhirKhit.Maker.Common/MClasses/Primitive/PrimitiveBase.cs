@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FhirKhit.Maker.Common.Primitive
 {
-    public class PrimitiveBase : MakerBaseType
+    public class PrimitiveBase : BaseType
     {
     }
 }
