@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:267
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
-{                                                                                                                                           // MakerGen.cs:269
+                                                                                                                                            // MakerGen.cs:269
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
+{                                                                                                                                           // MakerGen.cs:271
     /// <summary>
     /// Fhir primitive 'SampledData'
     /// {
@@ -144,24 +144,24 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. SampledData
-    public class SampledData_Type : Complex_Type                                                                                            // MakerGen.cs:220
-    {                                                                                                                                       // MakerGen.cs:221
+    public class SampledData_Type : Complex_Type                                                                                            // MakerGen.cs:225
+    {                                                                                                                                       // MakerGen.cs:226
         // 1. SampledData.origin
-        public ElementInstance Origin;                                                                                                      // MakerGen.cs:203
+        public ElementInstance Origin;                                                                                                      // MakerGen.cs:208
         // 2. SampledData.period
-        public ElementInstance Period;                                                                                                      // MakerGen.cs:203
+        public ElementInstance Period;                                                                                                      // MakerGen.cs:208
         // 3. SampledData.factor
-        public ElementInstance Factor;                                                                                                      // MakerGen.cs:203
+        public ElementInstance Factor;                                                                                                      // MakerGen.cs:208
         // 4. SampledData.lowerLimit
-        public ElementInstance LowerLimit;                                                                                                  // MakerGen.cs:203
+        public ElementInstance LowerLimit;                                                                                                  // MakerGen.cs:208
         // 5. SampledData.upperLimit
-        public ElementInstance UpperLimit;                                                                                                  // MakerGen.cs:203
+        public ElementInstance UpperLimit;                                                                                                  // MakerGen.cs:208
         // 6. SampledData.dimensions
-        public ElementInstance Dimensions;                                                                                                  // MakerGen.cs:203
+        public ElementInstance Dimensions;                                                                                                  // MakerGen.cs:208
         // 7. SampledData.data
-        public ElementInstance Data;                                                                                                        // MakerGen.cs:203
-        public SampledData_Type()                                                                                                           // MakerGen.cs:229
-        {                                                                                                                                   // MakerGen.cs:230
-        }                                                                                                                                   // MakerGen.cs:244
-    }                                                                                                                                       // MakerGen.cs:225
-}                                                                                                                                           // MakerGen.cs:275
+        public ElementInstance Data;                                                                                                        // MakerGen.cs:208
+        public SampledData_Type()                                                                                                           // MakerGen.cs:234
+        {                                                                                                                                   // MakerGen.cs:235
+        }                                                                                                                                   // MakerGen.cs:246
+    }                                                                                                                                       // MakerGen.cs:230
+}                                                                                                                                           // MakerGen.cs:277

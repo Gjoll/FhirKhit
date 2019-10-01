@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:267
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
-{                                                                                                                                           // MakerGen.cs:269
+                                                                                                                                            // MakerGen.cs:269
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
+{                                                                                                                                           // MakerGen.cs:271
     /// <summary>
     /// Fhir primitive 'HumanName'
     /// {
@@ -168,24 +168,24 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. HumanName
-    public class HumanName_Type : Complex_Type                                                                                              // MakerGen.cs:220
-    {                                                                                                                                       // MakerGen.cs:221
+    public class HumanName_Type : Complex_Type                                                                                              // MakerGen.cs:225
+    {                                                                                                                                       // MakerGen.cs:226
         // 1. HumanName.use
-        public ElementInstance Use;                                                                                                         // MakerGen.cs:203
+        public ElementInstance Use;                                                                                                         // MakerGen.cs:208
         // 2. HumanName.text
-        public ElementInstance Text;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Text;                                                                                                        // MakerGen.cs:208
         // 3. HumanName.family
-        public ElementInstance Family;                                                                                                      // MakerGen.cs:203
+        public ElementInstance Family;                                                                                                      // MakerGen.cs:208
         // 4. HumanName.given
-        public ElementInstance Given;                                                                                                       // MakerGen.cs:203
+        public ElementInstance Given;                                                                                                       // MakerGen.cs:208
         // 5. HumanName.prefix
-        public ElementInstance Prefix;                                                                                                      // MakerGen.cs:203
+        public ElementInstance Prefix;                                                                                                      // MakerGen.cs:208
         // 6. HumanName.suffix
-        public ElementInstance Suffix;                                                                                                      // MakerGen.cs:203
+        public ElementInstance Suffix;                                                                                                      // MakerGen.cs:208
         // 7. HumanName.period
-        public ElementInstance Period;                                                                                                      // MakerGen.cs:203
-        public HumanName_Type()                                                                                                             // MakerGen.cs:229
-        {                                                                                                                                   // MakerGen.cs:230
-        }                                                                                                                                   // MakerGen.cs:244
-    }                                                                                                                                       // MakerGen.cs:225
-}                                                                                                                                           // MakerGen.cs:275
+        public ElementInstance Period;                                                                                                      // MakerGen.cs:208
+        public HumanName_Type()                                                                                                             // MakerGen.cs:234
+        {                                                                                                                                   // MakerGen.cs:235
+        }                                                                                                                                   // MakerGen.cs:246
+    }                                                                                                                                       // MakerGen.cs:230
+}                                                                                                                                           // MakerGen.cs:277

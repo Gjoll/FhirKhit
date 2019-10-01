@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:267
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
-{                                                                                                                                           // MakerGen.cs:269
+                                                                                                                                            // MakerGen.cs:269
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
+{                                                                                                                                           // MakerGen.cs:271
     /// <summary>
     /// Fhir primitive 'ElementDefinition'
     /// {
@@ -1809,278 +1809,178 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. ElementDefinition
-    public class ElementDefinition_Type : Complex_Type                                                                                      // MakerGen.cs:220
-    {                                                                                                                                       // MakerGen.cs:221
-        // 8. ElementDefinition.slicing.discriminator
-        public class Discriminator_Type : Complex_Type                                                                                      // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            // 9. ElementDefinition.slicing.discriminator.type
-            public ElementInstance Type;                                                                                                    // MakerGen.cs:203
-            // 10. ElementDefinition.slicing.discriminator.path
-            public ElementInstance Path;                                                                                                    // MakerGen.cs:203
-            public Discriminator_Type()                                                                                                     // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 11. ElementDefinition.slicing.description
-        public class Description_Type : Complex_Type                                                                                        // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Description_Type()                                                                                                       // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 12. ElementDefinition.slicing.ordered
-        public class Ordered_Type : Complex_Type                                                                                            // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Ordered_Type()                                                                                                           // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 13. ElementDefinition.slicing.rules
-        public class Rules_Type : Complex_Type                                                                                              // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Rules_Type()                                                                                                             // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 22. ElementDefinition.base.path
-        public class Path_Type : Complex_Type                                                                                               // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Path_Type()                                                                                                              // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 23. ElementDefinition.base.min
-        public class Min_Type : Complex_Type                                                                                                // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Min_Type()                                                                                                               // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 24. ElementDefinition.base.max
-        public class Max_Type : Complex_Type                                                                                                // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Max_Type()                                                                                                               // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 27. ElementDefinition.type.code
-        public class Code_Type : Complex_Type                                                                                               // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Code_Type()                                                                                                              // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 28. ElementDefinition.type.profile
-        public class Profile_Type : Complex_Type                                                                                            // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Profile_Type()                                                                                                           // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 29. ElementDefinition.type.targetProfile
-        public class TargetProfile_Type : Complex_Type                                                                                      // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public TargetProfile_Type()                                                                                                     // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 30. ElementDefinition.type.aggregation
-        public class Aggregation_Type : Complex_Type                                                                                        // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Aggregation_Type()                                                                                                       // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 31. ElementDefinition.type.versioning
-        public class Versioning_Type : Complex_Type                                                                                         // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Versioning_Type()                                                                                                        // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 38. ElementDefinition.example.label
-        public class Label_Type : Complex_Type                                                                                              // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Label_Type()                                                                                                             // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 39. ElementDefinition.example.value[x]
-        public class ValueX_Type : Complex_Type                                                                                             // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public ValueX_Type()                                                                                                            // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 45. ElementDefinition.constraint.key
-        public class Key_Type : Complex_Type                                                                                                // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Key_Type()                                                                                                               // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 46. ElementDefinition.constraint.requirements
-        public class Requirements_Type : Complex_Type                                                                                       // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Requirements_Type()                                                                                                      // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 47. ElementDefinition.constraint.severity
-        public class Severity_Type : Complex_Type                                                                                           // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Severity_Type()                                                                                                          // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 48. ElementDefinition.constraint.human
-        public class Human_Type : Complex_Type                                                                                              // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Human_Type()                                                                                                             // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 49. ElementDefinition.constraint.expression
-        public class Expression_Type : Complex_Type                                                                                         // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Expression_Type()                                                                                                        // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 50. ElementDefinition.constraint.xpath
-        public class Xpath_Type : Complex_Type                                                                                              // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Xpath_Type()                                                                                                             // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 51. ElementDefinition.constraint.source
-        public class Source_Type : Complex_Type                                                                                             // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Source_Type()                                                                                                            // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 57. ElementDefinition.binding.strength
-        public class Strength_Type : Complex_Type                                                                                           // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Strength_Type()                                                                                                          // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 58. ElementDefinition.binding.description
-        public class Description_Type : Complex_Type                                                                                        // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Description_Type()                                                                                                       // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 59. ElementDefinition.binding.valueSet
-        public class ValueSet_Type : Complex_Type                                                                                           // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public ValueSet_Type()                                                                                                          // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 61. ElementDefinition.mapping.identity
-        public class Identity_Type : Complex_Type                                                                                           // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Identity_Type()                                                                                                          // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 62. ElementDefinition.mapping.language
-        public class Language_Type : Complex_Type                                                                                           // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Language_Type()                                                                                                          // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 63. ElementDefinition.mapping.map
-        public class Map_Type : Complex_Type                                                                                                // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Map_Type()                                                                                                               // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 64. ElementDefinition.mapping.comment
-        public class Comment_Type : Complex_Type                                                                                            // MakerGen.cs:220
-        {                                                                                                                                   // MakerGen.cs:221
-            public Comment_Type()                                                                                                           // MakerGen.cs:229
-            {                                                                                                                               // MakerGen.cs:230
-            }                                                                                                                               // MakerGen.cs:244
-        }                                                                                                                                   // MakerGen.cs:225
-        // 1. ElementDefinition.path
-        public ElementInstance Path;                                                                                                        // MakerGen.cs:203
-        // 2. ElementDefinition.representation
-        public ElementInstance Representation;                                                                                              // MakerGen.cs:203
-        // 3. ElementDefinition.sliceName
-        public ElementInstance SliceName;                                                                                                   // MakerGen.cs:203
-        // 4. ElementDefinition.sliceIsConstraining
-        public ElementInstance SliceIsConstraining;                                                                                         // MakerGen.cs:203
-        // 5. ElementDefinition.label
-        public ElementInstance Label;                                                                                                       // MakerGen.cs:203
-        // 6. ElementDefinition.code
-        public ElementInstance Code;                                                                                                        // MakerGen.cs:203
+    public class ElementDefinition_Type : Complex_Type                                                                                      // MakerGen.cs:225
+    {                                                                                                                                       // MakerGen.cs:226
         // 7. ElementDefinition.slicing
-        public ElementInstance Slicing;                                                                                                     // MakerGen.cs:203
-        // 14. ElementDefinition.short
-        public ElementInstance Short;                                                                                                       // MakerGen.cs:203
-        // 15. ElementDefinition.definition
-        public ElementInstance Definition;                                                                                                  // MakerGen.cs:203
-        // 16. ElementDefinition.comment
-        public ElementInstance Comment;                                                                                                     // MakerGen.cs:203
-        // 17. ElementDefinition.requirements
-        public ElementInstance Requirements;                                                                                                // MakerGen.cs:203
-        // 18. ElementDefinition.alias
-        public ElementInstance Alias;                                                                                                       // MakerGen.cs:203
-        // 19. ElementDefinition.min
-        public ElementInstance Min;                                                                                                         // MakerGen.cs:203
-        // 20. ElementDefinition.max
-        public ElementInstance Max;                                                                                                         // MakerGen.cs:203
+        public class Slicing_Type : Complex_Type                                                                                            // MakerGen.cs:225
+        {                                                                                                                                   // MakerGen.cs:226
+            // 8. ElementDefinition.slicing.discriminator
+            public class Discriminator_Type : Complex_Type                                                                                  // MakerGen.cs:225
+            {                                                                                                                               // MakerGen.cs:226
+                // 9. ElementDefinition.slicing.discriminator.type
+                public ElementInstance Type;                                                                                                // MakerGen.cs:208
+                // 10. ElementDefinition.slicing.discriminator.path
+                public ElementInstance Path;                                                                                                // MakerGen.cs:208
+                public Discriminator_Type()                                                                                                 // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:230
+            // 11. ElementDefinition.slicing.description
+            public ElementInstance Description;                                                                                             // MakerGen.cs:208
+            // 12. ElementDefinition.slicing.ordered
+            public ElementInstance Ordered;                                                                                                 // MakerGen.cs:208
+            // 13. ElementDefinition.slicing.rules
+            public ElementInstance Rules;                                                                                                   // MakerGen.cs:208
+            public Slicing_Type()                                                                                                           // MakerGen.cs:234
+            {                                                                                                                               // MakerGen.cs:235
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:230
         // 21. ElementDefinition.base
-        public ElementInstance Base;                                                                                                        // MakerGen.cs:203
-        // 25. ElementDefinition.contentReference
-        public ElementInstance ContentReference;                                                                                            // MakerGen.cs:203
+        public class Base_Type : Complex_Type                                                                                               // MakerGen.cs:225
+        {                                                                                                                                   // MakerGen.cs:226
+            // 22. ElementDefinition.base.path
+            public ElementInstance Path;                                                                                                    // MakerGen.cs:208
+            // 23. ElementDefinition.base.min
+            public ElementInstance Min;                                                                                                     // MakerGen.cs:208
+            // 24. ElementDefinition.base.max
+            public ElementInstance Max;                                                                                                     // MakerGen.cs:208
+            public Base_Type()                                                                                                              // MakerGen.cs:234
+            {                                                                                                                               // MakerGen.cs:235
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:230
         // 26. ElementDefinition.type
-        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
-        // 32. ElementDefinition.defaultValue[x]
-        public ElementInstance DefaultValueX;                                                                                               // MakerGen.cs:203
-        // 33. ElementDefinition.meaningWhenMissing
-        public ElementInstance MeaningWhenMissing;                                                                                          // MakerGen.cs:203
-        // 34. ElementDefinition.orderMeaning
-        public ElementInstance OrderMeaning;                                                                                                // MakerGen.cs:203
-        // 35. ElementDefinition.fixed[x]
-        public ElementInstance FixedX;                                                                                                      // MakerGen.cs:203
-        // 36. ElementDefinition.pattern[x]
-        public ElementInstance PatternX;                                                                                                    // MakerGen.cs:203
+        public class Type_Type : Complex_Type                                                                                               // MakerGen.cs:225
+        {                                                                                                                                   // MakerGen.cs:226
+            // 27. ElementDefinition.type.code
+            public ElementInstance Code;                                                                                                    // MakerGen.cs:208
+            // 28. ElementDefinition.type.profile
+            public ElementInstance Profile;                                                                                                 // MakerGen.cs:208
+            // 29. ElementDefinition.type.targetProfile
+            public ElementInstance TargetProfile;                                                                                           // MakerGen.cs:208
+            // 30. ElementDefinition.type.aggregation
+            public ElementInstance Aggregation;                                                                                             // MakerGen.cs:208
+            // 31. ElementDefinition.type.versioning
+            public ElementInstance Versioning;                                                                                              // MakerGen.cs:208
+            public Type_Type()                                                                                                              // MakerGen.cs:234
+            {                                                                                                                               // MakerGen.cs:235
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:230
         // 37. ElementDefinition.example
-        public ElementInstance Example;                                                                                                     // MakerGen.cs:203
-        // 40. ElementDefinition.minValue[x]
-        public ElementInstance MinValueX;                                                                                                   // MakerGen.cs:203
-        // 41. ElementDefinition.maxValue[x]
-        public ElementInstance MaxValueX;                                                                                                   // MakerGen.cs:203
-        // 42. ElementDefinition.maxLength
-        public ElementInstance MaxLength;                                                                                                   // MakerGen.cs:203
-        // 43. ElementDefinition.condition
-        public ElementInstance Condition;                                                                                                   // MakerGen.cs:203
+        public class Example_Type : Complex_Type                                                                                            // MakerGen.cs:225
+        {                                                                                                                                   // MakerGen.cs:226
+            // 38. ElementDefinition.example.label
+            public ElementInstance Label;                                                                                                   // MakerGen.cs:208
+            // 39. ElementDefinition.example.value[x]
+            public ElementInstance ValueX;                                                                                                  // MakerGen.cs:208
+            public Example_Type()                                                                                                           // MakerGen.cs:234
+            {                                                                                                                               // MakerGen.cs:235
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:230
         // 44. ElementDefinition.constraint
-        public ElementInstance Constraint;                                                                                                  // MakerGen.cs:203
-        // 52. ElementDefinition.mustSupport
-        public ElementInstance MustSupport;                                                                                                 // MakerGen.cs:203
-        // 53. ElementDefinition.isModifier
-        public ElementInstance IsModifier;                                                                                                  // MakerGen.cs:203
-        // 54. ElementDefinition.isModifierReason
-        public ElementInstance IsModifierReason;                                                                                            // MakerGen.cs:203
-        // 55. ElementDefinition.isSummary
-        public ElementInstance IsSummary;                                                                                                   // MakerGen.cs:203
+        public class Constraint_Type : Complex_Type                                                                                         // MakerGen.cs:225
+        {                                                                                                                                   // MakerGen.cs:226
+            // 45. ElementDefinition.constraint.key
+            public ElementInstance Key;                                                                                                     // MakerGen.cs:208
+            // 46. ElementDefinition.constraint.requirements
+            public ElementInstance Requirements;                                                                                            // MakerGen.cs:208
+            // 47. ElementDefinition.constraint.severity
+            public ElementInstance Severity;                                                                                                // MakerGen.cs:208
+            // 48. ElementDefinition.constraint.human
+            public ElementInstance Human;                                                                                                   // MakerGen.cs:208
+            // 49. ElementDefinition.constraint.expression
+            public ElementInstance Expression;                                                                                              // MakerGen.cs:208
+            // 50. ElementDefinition.constraint.xpath
+            public ElementInstance Xpath;                                                                                                   // MakerGen.cs:208
+            // 51. ElementDefinition.constraint.source
+            public ElementInstance Source;                                                                                                  // MakerGen.cs:208
+            public Constraint_Type()                                                                                                        // MakerGen.cs:234
+            {                                                                                                                               // MakerGen.cs:235
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:230
         // 56. ElementDefinition.binding
-        public ElementInstance Binding;                                                                                                     // MakerGen.cs:203
+        public class Binding_Type : Complex_Type                                                                                            // MakerGen.cs:225
+        {                                                                                                                                   // MakerGen.cs:226
+            // 57. ElementDefinition.binding.strength
+            public ElementInstance Strength;                                                                                                // MakerGen.cs:208
+            // 58. ElementDefinition.binding.description
+            public ElementInstance Description;                                                                                             // MakerGen.cs:208
+            // 59. ElementDefinition.binding.valueSet
+            public ElementInstance ValueSet;                                                                                                // MakerGen.cs:208
+            public Binding_Type()                                                                                                           // MakerGen.cs:234
+            {                                                                                                                               // MakerGen.cs:235
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:230
         // 60. ElementDefinition.mapping
-        public ElementInstance Mapping;                                                                                                     // MakerGen.cs:203
-        public ElementDefinition_Type()                                                                                                     // MakerGen.cs:229
-        {                                                                                                                                   // MakerGen.cs:230
-        }                                                                                                                                   // MakerGen.cs:244
-    }                                                                                                                                       // MakerGen.cs:225
-}                                                                                                                                           // MakerGen.cs:275
+        public class Mapping_Type : Complex_Type                                                                                            // MakerGen.cs:225
+        {                                                                                                                                   // MakerGen.cs:226
+            // 61. ElementDefinition.mapping.identity
+            public ElementInstance Identity;                                                                                                // MakerGen.cs:208
+            // 62. ElementDefinition.mapping.language
+            public ElementInstance Language;                                                                                                // MakerGen.cs:208
+            // 63. ElementDefinition.mapping.map
+            public ElementInstance Map;                                                                                                     // MakerGen.cs:208
+            // 64. ElementDefinition.mapping.comment
+            public ElementInstance Comment;                                                                                                 // MakerGen.cs:208
+            public Mapping_Type()                                                                                                           // MakerGen.cs:234
+            {                                                                                                                               // MakerGen.cs:235
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:230
+        // 1. ElementDefinition.path
+        public ElementInstance Path;                                                                                                        // MakerGen.cs:208
+        // 2. ElementDefinition.representation
+        public ElementInstance Representation;                                                                                              // MakerGen.cs:208
+        // 3. ElementDefinition.sliceName
+        public ElementInstance SliceName;                                                                                                   // MakerGen.cs:208
+        // 4. ElementDefinition.sliceIsConstraining
+        public ElementInstance SliceIsConstraining;                                                                                         // MakerGen.cs:208
+        // 5. ElementDefinition.label
+        public ElementInstance Label;                                                                                                       // MakerGen.cs:208
+        // 6. ElementDefinition.code
+        public ElementInstance Code;                                                                                                        // MakerGen.cs:208
+        // 14. ElementDefinition.short
+        public ElementInstance Short;                                                                                                       // MakerGen.cs:208
+        // 15. ElementDefinition.definition
+        public ElementInstance Definition;                                                                                                  // MakerGen.cs:208
+        // 16. ElementDefinition.comment
+        public ElementInstance Comment;                                                                                                     // MakerGen.cs:208
+        // 17. ElementDefinition.requirements
+        public ElementInstance Requirements;                                                                                                // MakerGen.cs:208
+        // 18. ElementDefinition.alias
+        public ElementInstance Alias;                                                                                                       // MakerGen.cs:208
+        // 19. ElementDefinition.min
+        public ElementInstance Min;                                                                                                         // MakerGen.cs:208
+        // 20. ElementDefinition.max
+        public ElementInstance Max;                                                                                                         // MakerGen.cs:208
+        // 25. ElementDefinition.contentReference
+        public ElementInstance ContentReference;                                                                                            // MakerGen.cs:208
+        // 32. ElementDefinition.defaultValue[x]
+        public ElementInstance DefaultValueX;                                                                                               // MakerGen.cs:208
+        // 33. ElementDefinition.meaningWhenMissing
+        public ElementInstance MeaningWhenMissing;                                                                                          // MakerGen.cs:208
+        // 34. ElementDefinition.orderMeaning
+        public ElementInstance OrderMeaning;                                                                                                // MakerGen.cs:208
+        // 35. ElementDefinition.fixed[x]
+        public ElementInstance FixedX;                                                                                                      // MakerGen.cs:208
+        // 36. ElementDefinition.pattern[x]
+        public ElementInstance PatternX;                                                                                                    // MakerGen.cs:208
+        // 40. ElementDefinition.minValue[x]
+        public ElementInstance MinValueX;                                                                                                   // MakerGen.cs:208
+        // 41. ElementDefinition.maxValue[x]
+        public ElementInstance MaxValueX;                                                                                                   // MakerGen.cs:208
+        // 42. ElementDefinition.maxLength
+        public ElementInstance MaxLength;                                                                                                   // MakerGen.cs:208
+        // 43. ElementDefinition.condition
+        public ElementInstance Condition;                                                                                                   // MakerGen.cs:208
+        // 52. ElementDefinition.mustSupport
+        public ElementInstance MustSupport;                                                                                                 // MakerGen.cs:208
+        // 53. ElementDefinition.isModifier
+        public ElementInstance IsModifier;                                                                                                  // MakerGen.cs:208
+        // 54. ElementDefinition.isModifierReason
+        public ElementInstance IsModifierReason;                                                                                            // MakerGen.cs:208
+        // 55. ElementDefinition.isSummary
+        public ElementInstance IsSummary;                                                                                                   // MakerGen.cs:208
+        public ElementDefinition_Type()                                                                                                     // MakerGen.cs:234
+        {                                                                                                                                   // MakerGen.cs:235
+        }                                                                                                                                   // MakerGen.cs:246
+    }                                                                                                                                       // MakerGen.cs:230
+}                                                                                                                                           // MakerGen.cs:277

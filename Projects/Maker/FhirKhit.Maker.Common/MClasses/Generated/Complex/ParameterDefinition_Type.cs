@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:267
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
-{                                                                                                                                           // MakerGen.cs:269
+                                                                                                                                            // MakerGen.cs:269
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
+{                                                                                                                                           // MakerGen.cs:271
     /// <summary>
     /// Fhir primitive 'ParameterDefinition'
     /// {
@@ -165,24 +165,24 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. ParameterDefinition
-    public class ParameterDefinition_Type : Complex_Type                                                                                    // MakerGen.cs:220
-    {                                                                                                                                       // MakerGen.cs:221
+    public class ParameterDefinition_Type : Complex_Type                                                                                    // MakerGen.cs:225
+    {                                                                                                                                       // MakerGen.cs:226
         // 1. ParameterDefinition.name
-        public ElementInstance Name;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Name;                                                                                                        // MakerGen.cs:208
         // 2. ParameterDefinition.use
-        public ElementInstance Use;                                                                                                         // MakerGen.cs:203
+        public ElementInstance Use;                                                                                                         // MakerGen.cs:208
         // 3. ParameterDefinition.min
-        public ElementInstance Min;                                                                                                         // MakerGen.cs:203
+        public ElementInstance Min;                                                                                                         // MakerGen.cs:208
         // 4. ParameterDefinition.max
-        public ElementInstance Max;                                                                                                         // MakerGen.cs:203
+        public ElementInstance Max;                                                                                                         // MakerGen.cs:208
         // 5. ParameterDefinition.documentation
-        public ElementInstance Documentation;                                                                                               // MakerGen.cs:203
+        public ElementInstance Documentation;                                                                                               // MakerGen.cs:208
         // 6. ParameterDefinition.type
-        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:208
         // 7. ParameterDefinition.profile
-        public ElementInstance Profile;                                                                                                     // MakerGen.cs:203
-        public ParameterDefinition_Type()                                                                                                   // MakerGen.cs:229
-        {                                                                                                                                   // MakerGen.cs:230
-        }                                                                                                                                   // MakerGen.cs:244
-    }                                                                                                                                       // MakerGen.cs:225
-}                                                                                                                                           // MakerGen.cs:275
+        public ElementInstance Profile;                                                                                                     // MakerGen.cs:208
+        public ParameterDefinition_Type()                                                                                                   // MakerGen.cs:234
+        {                                                                                                                                   // MakerGen.cs:235
+        }                                                                                                                                   // MakerGen.cs:246
+    }                                                                                                                                       // MakerGen.cs:230
+}                                                                                                                                           // MakerGen.cs:277

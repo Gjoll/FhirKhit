@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:267
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
-{                                                                                                                                           // MakerGen.cs:269
+                                                                                                                                            // MakerGen.cs:269
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
+{                                                                                                                                           // MakerGen.cs:271
     /// <summary>
     /// Fhir primitive 'Attachment'
     /// {
@@ -221,26 +221,26 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. Attachment
-    public class Attachment_Type : Complex_Type                                                                                             // MakerGen.cs:220
-    {                                                                                                                                       // MakerGen.cs:221
+    public class Attachment_Type : Complex_Type                                                                                             // MakerGen.cs:225
+    {                                                                                                                                       // MakerGen.cs:226
         // 1. Attachment.contentType
-        public ElementInstance ContentType;                                                                                                 // MakerGen.cs:203
+        public ElementInstance ContentType;                                                                                                 // MakerGen.cs:208
         // 2. Attachment.language
-        public ElementInstance Language;                                                                                                    // MakerGen.cs:203
+        public ElementInstance Language;                                                                                                    // MakerGen.cs:208
         // 3. Attachment.data
-        public ElementInstance Data;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Data;                                                                                                        // MakerGen.cs:208
         // 4. Attachment.url
-        public ElementInstance Url;                                                                                                         // MakerGen.cs:203
+        public ElementInstance Url;                                                                                                         // MakerGen.cs:208
         // 5. Attachment.size
-        public ElementInstance Size;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Size;                                                                                                        // MakerGen.cs:208
         // 6. Attachment.hash
-        public ElementInstance Hash;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Hash;                                                                                                        // MakerGen.cs:208
         // 7. Attachment.title
-        public ElementInstance Title;                                                                                                       // MakerGen.cs:203
+        public ElementInstance Title;                                                                                                       // MakerGen.cs:208
         // 8. Attachment.creation
-        public ElementInstance Creation;                                                                                                    // MakerGen.cs:203
-        public Attachment_Type()                                                                                                            // MakerGen.cs:229
-        {                                                                                                                                   // MakerGen.cs:230
-        }                                                                                                                                   // MakerGen.cs:244
-    }                                                                                                                                       // MakerGen.cs:225
-}                                                                                                                                           // MakerGen.cs:275
+        public ElementInstance Creation;                                                                                                    // MakerGen.cs:208
+        public Attachment_Type()                                                                                                            // MakerGen.cs:234
+        {                                                                                                                                   // MakerGen.cs:235
+        }                                                                                                                                   // MakerGen.cs:246
+    }                                                                                                                                       // MakerGen.cs:230
+}                                                                                                                                           // MakerGen.cs:277

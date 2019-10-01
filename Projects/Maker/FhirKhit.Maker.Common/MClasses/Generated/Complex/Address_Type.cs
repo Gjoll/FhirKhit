@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:267
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
-{                                                                                                                                           // MakerGen.cs:269
+                                                                                                                                            // MakerGen.cs:269
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
+{                                                                                                                                           // MakerGen.cs:271
     /// <summary>
     /// Fhir primitive 'Address'
     /// {
@@ -277,30 +277,30 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. Address
-    public class Address_Type : Complex_Type                                                                                                // MakerGen.cs:220
-    {                                                                                                                                       // MakerGen.cs:221
+    public class Address_Type : Complex_Type                                                                                                // MakerGen.cs:225
+    {                                                                                                                                       // MakerGen.cs:226
         // 1. Address.use
-        public ElementInstance Use;                                                                                                         // MakerGen.cs:203
+        public ElementInstance Use;                                                                                                         // MakerGen.cs:208
         // 2. Address.type
-        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:208
         // 3. Address.text
-        public ElementInstance Text;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Text;                                                                                                        // MakerGen.cs:208
         // 4. Address.line
-        public ElementInstance Line;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Line;                                                                                                        // MakerGen.cs:208
         // 5. Address.city
-        public ElementInstance City;                                                                                                        // MakerGen.cs:203
+        public ElementInstance City;                                                                                                        // MakerGen.cs:208
         // 6. Address.district
-        public ElementInstance District;                                                                                                    // MakerGen.cs:203
+        public ElementInstance District;                                                                                                    // MakerGen.cs:208
         // 7. Address.state
-        public ElementInstance State;                                                                                                       // MakerGen.cs:203
+        public ElementInstance State;                                                                                                       // MakerGen.cs:208
         // 8. Address.postalCode
-        public ElementInstance PostalCode;                                                                                                  // MakerGen.cs:203
+        public ElementInstance PostalCode;                                                                                                  // MakerGen.cs:208
         // 9. Address.country
-        public ElementInstance Country;                                                                                                     // MakerGen.cs:203
+        public ElementInstance Country;                                                                                                     // MakerGen.cs:208
         // 10. Address.period
-        public ElementInstance Period;                                                                                                      // MakerGen.cs:203
-        public Address_Type()                                                                                                               // MakerGen.cs:229
-        {                                                                                                                                   // MakerGen.cs:230
-        }                                                                                                                                   // MakerGen.cs:244
-    }                                                                                                                                       // MakerGen.cs:225
-}                                                                                                                                           // MakerGen.cs:275
+        public ElementInstance Period;                                                                                                      // MakerGen.cs:208
+        public Address_Type()                                                                                                               // MakerGen.cs:234
+        {                                                                                                                                   // MakerGen.cs:235
+        }                                                                                                                                   // MakerGen.cs:246
+    }                                                                                                                                       // MakerGen.cs:230
+}                                                                                                                                           // MakerGen.cs:277

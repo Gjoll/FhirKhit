@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:267
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
-{                                                                                                                                           // MakerGen.cs:269
+                                                                                                                                            // MakerGen.cs:269
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
+{                                                                                                                                           // MakerGen.cs:271
     /// <summary>
     /// Fhir primitive 'Narrative'
     /// {
@@ -76,14 +76,14 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. Narrative
-    public class Narrative_Type : Complex_Type                                                                                              // MakerGen.cs:220
-    {                                                                                                                                       // MakerGen.cs:221
+    public class Narrative_Type : Complex_Type                                                                                              // MakerGen.cs:225
+    {                                                                                                                                       // MakerGen.cs:226
         // 1. Narrative.status
-        public ElementInstance Status;                                                                                                      // MakerGen.cs:203
+        public ElementInstance Status;                                                                                                      // MakerGen.cs:208
         // 2. Narrative.div
-        public ElementInstance Div;                                                                                                         // MakerGen.cs:203
-        public Narrative_Type()                                                                                                             // MakerGen.cs:229
-        {                                                                                                                                   // MakerGen.cs:230
-        }                                                                                                                                   // MakerGen.cs:244
-    }                                                                                                                                       // MakerGen.cs:225
-}                                                                                                                                           // MakerGen.cs:275
+        public ElementInstance Div;                                                                                                         // MakerGen.cs:208
+        public Narrative_Type()                                                                                                             // MakerGen.cs:234
+        {                                                                                                                                   // MakerGen.cs:235
+        }                                                                                                                                   // MakerGen.cs:246
+    }                                                                                                                                       // MakerGen.cs:230
+}                                                                                                                                           // MakerGen.cs:277

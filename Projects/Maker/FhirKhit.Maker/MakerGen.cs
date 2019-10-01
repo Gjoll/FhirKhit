@@ -185,7 +185,12 @@ namespace FhirKhit.Maker
 
                 path = path.Substring(basePath.Length);
 
-                if (path.Split('.').Length > 1)
+                // If next elements starts with this items path, then this is a
+                // subelement, so start creating sub class.
+                if (
+                    (index < elements.Length - 1) &&
+                    (elements[index+1].Path.StartsWith($"{ed.Path}."))
+                    )
                 {
                     String subClassName = TypeName(path.LastPathPart());
                     // start defining a sub class.
@@ -229,9 +234,7 @@ namespace FhirKhit.Maker
                 .AppendCode($"public {className}()")
                 .OpenBrace()
                 ;
-
             index += 1;
-
             DefineClassFields(subClassBlock,
                 fieldsBlock,
                 constructorBlock,
@@ -239,7 +242,6 @@ namespace FhirKhit.Maker
                 basePath,
                 className,
                 ref index);
-
             constructorBlock
                 .CloseBrace()
                 ;

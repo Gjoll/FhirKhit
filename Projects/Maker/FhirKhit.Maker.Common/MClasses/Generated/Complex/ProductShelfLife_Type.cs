@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:267
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
-{                                                                                                                                           // MakerGen.cs:269
+                                                                                                                                            // MakerGen.cs:269
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
+{                                                                                                                                           // MakerGen.cs:271
     /// <summary>
     /// Fhir primitive 'ProductShelfLife'
     /// {
@@ -94,18 +94,18 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. ProductShelfLife
-    public class ProductShelfLife_Type : Complex_Type                                                                                       // MakerGen.cs:220
-    {                                                                                                                                       // MakerGen.cs:221
+    public class ProductShelfLife_Type : Complex_Type                                                                                       // MakerGen.cs:225
+    {                                                                                                                                       // MakerGen.cs:226
         // 1. ProductShelfLife.identifier
-        public ElementInstance Identifier;                                                                                                  // MakerGen.cs:203
+        public ElementInstance Identifier;                                                                                                  // MakerGen.cs:208
         // 2. ProductShelfLife.type
-        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:208
         // 3. ProductShelfLife.period
-        public ElementInstance Period;                                                                                                      // MakerGen.cs:203
+        public ElementInstance Period;                                                                                                      // MakerGen.cs:208
         // 4. ProductShelfLife.specialPrecautionsForStorage
-        public ElementInstance SpecialPrecautionsForStorage;                                                                                // MakerGen.cs:203
-        public ProductShelfLife_Type()                                                                                                      // MakerGen.cs:229
-        {                                                                                                                                   // MakerGen.cs:230
-        }                                                                                                                                   // MakerGen.cs:244
-    }                                                                                                                                       // MakerGen.cs:225
-}                                                                                                                                           // MakerGen.cs:275
+        public ElementInstance SpecialPrecautionsForStorage;                                                                                // MakerGen.cs:208
+        public ProductShelfLife_Type()                                                                                                      // MakerGen.cs:234
+        {                                                                                                                                   // MakerGen.cs:235
+        }                                                                                                                                   // MakerGen.cs:246
+    }                                                                                                                                       // MakerGen.cs:230
+}                                                                                                                                           // MakerGen.cs:277

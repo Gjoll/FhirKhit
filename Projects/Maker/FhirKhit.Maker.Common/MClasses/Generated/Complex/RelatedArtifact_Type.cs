@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:267
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:268
-{                                                                                                                                           // MakerGen.cs:269
+                                                                                                                                            // MakerGen.cs:269
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
+{                                                                                                                                           // MakerGen.cs:271
     /// <summary>
     /// Fhir primitive 'RelatedArtifact'
     /// {
@@ -155,24 +155,24 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. RelatedArtifact
-    public class RelatedArtifact_Type : Complex_Type                                                                                        // MakerGen.cs:220
-    {                                                                                                                                       // MakerGen.cs:221
+    public class RelatedArtifact_Type : Complex_Type                                                                                        // MakerGen.cs:225
+    {                                                                                                                                       // MakerGen.cs:226
         // 1. RelatedArtifact.type
-        public ElementInstance Type;                                                                                                        // MakerGen.cs:203
+        public ElementInstance Type;                                                                                                        // MakerGen.cs:208
         // 2. RelatedArtifact.label
-        public ElementInstance Label;                                                                                                       // MakerGen.cs:203
+        public ElementInstance Label;                                                                                                       // MakerGen.cs:208
         // 3. RelatedArtifact.display
-        public ElementInstance Display;                                                                                                     // MakerGen.cs:203
+        public ElementInstance Display;                                                                                                     // MakerGen.cs:208
         // 4. RelatedArtifact.citation
-        public ElementInstance Citation;                                                                                                    // MakerGen.cs:203
+        public ElementInstance Citation;                                                                                                    // MakerGen.cs:208
         // 5. RelatedArtifact.url
-        public ElementInstance Url;                                                                                                         // MakerGen.cs:203
+        public ElementInstance Url;                                                                                                         // MakerGen.cs:208
         // 6. RelatedArtifact.document
-        public ElementInstance Document;                                                                                                    // MakerGen.cs:203
+        public ElementInstance Document;                                                                                                    // MakerGen.cs:208
         // 7. RelatedArtifact.resource
-        public ElementInstance Resource;                                                                                                    // MakerGen.cs:203
-        public RelatedArtifact_Type()                                                                                                       // MakerGen.cs:229
-        {                                                                                                                                   // MakerGen.cs:230
-        }                                                                                                                                   // MakerGen.cs:244
-    }                                                                                                                                       // MakerGen.cs:225
-}                                                                                                                                           // MakerGen.cs:275
+        public ElementInstance Resource;                                                                                                    // MakerGen.cs:208
+        public RelatedArtifact_Type()                                                                                                       // MakerGen.cs:234
+        {                                                                                                                                   // MakerGen.cs:235
+        }                                                                                                                                   // MakerGen.cs:246
+    }                                                                                                                                       // MakerGen.cs:230
+}                                                                                                                                           // MakerGen.cs:277
