@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:423
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
-using System.IO;                                                                                                                            // MakerGen.cs:425
-using System.Linq;                                                                                                                          // MakerGen.cs:426
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
-                                                                                                                                            // MakerGen.cs:428
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
-{                                                                                                                                           // MakerGen.cs:430
-    #region Json                                                                                                                            // MakerGen.cs:431
-    #if NEVER                                                                                                                               // MakerGen.cs:432
+using System;                                                                                                                               // MakerGen.cs:413
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:414
+using System.IO;                                                                                                                            // MakerGen.cs:415
+using System.Linq;                                                                                                                          // MakerGen.cs:416
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:417
+                                                                                                                                            // MakerGen.cs:418
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:419
+{                                                                                                                                           // MakerGen.cs:420
+    #region Json                                                                                                                            // MakerGen.cs:421
+    #if NEVER                                                                                                                               // MakerGen.cs:422
     {
       "resourceType": "StructureDefinition",
       "id": "ClaimResponse",
@@ -1788,19 +1788,19 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:435
+    #endregion                                                                                                                              // MakerGen.cs:425
     /// <summary>
     /// Fhir resource 'ClaimResponse'
     /// </summary>
     // 0. ClaimResponse
-    public class ClaimResponse : FhirKhit.Maker.Common.Resource.ResourceBase                                                                // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
+    public class ClaimResponse : FhirKhit.Maker.Common.Resource.ResourceBase                                                                // MakerGen.cs:374
+    {                                                                                                                                       // MakerGen.cs:375
         // 16. ClaimResponse.item
-        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 19. ClaimResponse.item.adjudication
-            public class Type_Adjudication : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
+            public class Type_Adjudication : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:374
+            {                                                                                                                               // MakerGen.cs:375
                 // 20. ClaimResponse.item.adjudication.category
                 public MakerElementInstance Element_Category;                                                                               // MakerGen.cs:232
                 // 21. ClaimResponse.item.adjudication.reason
@@ -1809,8 +1809,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_Amount;                                                                                 // MakerGen.cs:232
                 // 23. ClaimResponse.item.adjudication.value
                 public MakerElementInstance Element_Value;                                                                                  // MakerGen.cs:232
-                public Type_Adjudication()                                                                                                  // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
+                public Type_Adjudication()                                                                                                  // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
                     {                                                                                                                       // MakerGen.cs:243
                         // 20. ClaimResponse.item.adjudication.category
                         this.Element_Category = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1820,12 +1820,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:297
-                                {                                                                                                           // MakerGen.cs:298
-                                }                                                                                                           // MakerGen.cs:299
+                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:304
+                                {                                                                                                           // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:308
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 21. ClaimResponse.item.adjudication.reason
                         this.Element_Reason = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1835,12 +1835,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:297
-                                {                                                                                                           // MakerGen.cs:298
-                                }                                                                                                           // MakerGen.cs:299
+                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:304
+                                {                                                                                                           // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:308
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 22. ClaimResponse.item.adjudication.amount
                         this.Element_Amount = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1850,12 +1850,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.Money                                                                     // MakerGen.cs:343
-                                {                                                                                                           // MakerGen.cs:344
-                                }                                                                                                           // MakerGen.cs:345
+                                new FhirKhit.Maker.Common.Complex.Money                                                                     // MakerGen.cs:347
+                                {                                                                                                           // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:349
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 23. ClaimResponse.item.adjudication.value
                         this.Element_Value = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1865,28 +1865,28 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Decimal                                                                 // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.Decimal                                                                 // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:389
+                    }                                                                                                                       // MakerGen.cs:356
+                }                                                                                                                           // MakerGen.cs:395
+            }                                                                                                                               // MakerGen.cs:379
             // 24. ClaimResponse.item.detail
-            public class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
+            public class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:374
+            {                                                                                                                               // MakerGen.cs:375
                 // 28. ClaimResponse.item.detail.subDetail
-                public class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
-                {                                                                                                                           // MakerGen.cs:385
+                public class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:374
+                {                                                                                                                           // MakerGen.cs:375
                     // 29. ClaimResponse.item.detail.subDetail.subDetailSequence
                     public MakerElementInstance Element_SubDetailSequence;                                                                  // MakerGen.cs:232
                     // 30. ClaimResponse.item.detail.subDetail.noteNumber
                     public MakerElementInstance Element_NoteNumber;                                                                         // MakerGen.cs:232
                     // 31. ClaimResponse.item.detail.subDetail.adjudication
                     public MakerElementInstance Element_Adjudication;                                                                       // MakerGen.cs:232
-                    public Type_SubDetail()                                                                                                 // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
+                    public Type_SubDetail()                                                                                                 // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
                         {                                                                                                                   // MakerGen.cs:243
                             // 29. ClaimResponse.item.detail.subDetail.subDetailSequence
                             this.Element_SubDetailSequence = new MakerElementInstance                                                       // MakerGen.cs:245
@@ -1896,12 +1896,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 30. ClaimResponse.item.detail.subDetail.noteNumber
                             this.Element_NoteNumber = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -1911,12 +1911,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = -1,                                                                                                   // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 31. ClaimResponse.item.detail.subDetail.adjudication
                             this.Element_Adjudication = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -1928,17 +1928,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 {                                                                                                           // MakerGen.cs:251
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:389
+                        }                                                                                                                   // MakerGen.cs:356
+                    }                                                                                                                       // MakerGen.cs:395
+                }                                                                                                                           // MakerGen.cs:379
                 // 25. ClaimResponse.item.detail.detailSequence
                 public MakerElementInstance Element_DetailSequence;                                                                         // MakerGen.cs:232
                 // 26. ClaimResponse.item.detail.noteNumber
                 public MakerElementInstance Element_NoteNumber;                                                                             // MakerGen.cs:232
                 // 27. ClaimResponse.item.detail.adjudication
                 public MakerElementInstance Element_Adjudication;                                                                           // MakerGen.cs:232
-                public Type_Detail()                                                                                                        // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
+                public Type_Detail()                                                                                                        // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
                     {                                                                                                                       // MakerGen.cs:243
                         // 25. ClaimResponse.item.detail.detailSequence
                         this.Element_DetailSequence = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -1948,12 +1948,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.PositiveInt                                                             // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.PositiveInt                                                             // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 26. ClaimResponse.item.detail.noteNumber
                         this.Element_NoteNumber = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -1963,12 +1963,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.PositiveInt                                                             // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.PositiveInt                                                             // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 27. ClaimResponse.item.detail.adjudication
                         this.Element_Adjudication = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -1980,15 +1980,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:389
+                    }                                                                                                                       // MakerGen.cs:356
+                }                                                                                                                           // MakerGen.cs:395
+            }                                                                                                                               // MakerGen.cs:379
             // 17. ClaimResponse.item.itemSequence
             public MakerElementInstance Element_ItemSequence;                                                                               // MakerGen.cs:232
             // 18. ClaimResponse.item.noteNumber
             public MakerElementInstance Element_NoteNumber;                                                                                 // MakerGen.cs:232
-            public Type_Item()                                                                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Item()                                                                                                              // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 17. ClaimResponse.item.itemSequence
                     this.Element_ItemSequence = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1998,12 +1998,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 18. ClaimResponse.item.noteNumber
                     this.Element_NoteNumber = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -2013,23 +2013,23 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 32. ClaimResponse.addItem
-        public class Type_AddItem : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_AddItem : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 50. ClaimResponse.addItem.detail
-            public class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
+            public class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:374
+            {                                                                                                                               // MakerGen.cs:375
                 // 59. ClaimResponse.addItem.detail.subDetail
-                public class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
-                {                                                                                                                           // MakerGen.cs:385
+                public class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:374
+                {                                                                                                                           // MakerGen.cs:375
                     // 60. ClaimResponse.addItem.detail.subDetail.productOrService
                     public MakerElementInstance Element_ProductOrService;                                                                   // MakerGen.cs:232
                     // 61. ClaimResponse.addItem.detail.subDetail.modifier
@@ -2046,8 +2046,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public MakerElementInstance Element_NoteNumber;                                                                         // MakerGen.cs:232
                     // 67. ClaimResponse.addItem.detail.subDetail.adjudication
                     public MakerElementInstance Element_Adjudication;                                                                       // MakerGen.cs:232
-                    public Type_SubDetail()                                                                                                 // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
+                    public Type_SubDetail()                                                                                                 // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
                         {                                                                                                                   // MakerGen.cs:243
                             // 60. ClaimResponse.addItem.detail.subDetail.productOrService
                             this.Element_ProductOrService = new MakerElementInstance                                                        // MakerGen.cs:245
@@ -2057,12 +2057,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:297
-                                    {                                                                                                       // MakerGen.cs:298
-                                    }                                                                                                       // MakerGen.cs:299
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:304
+                                    {                                                                                                       // MakerGen.cs:305
+                                    }                                                                                                       // MakerGen.cs:308
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 61. ClaimResponse.addItem.detail.subDetail.modifier
                             this.Element_Modifier = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2072,12 +2072,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = -1,                                                                                                   // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:297
-                                    {                                                                                                       // MakerGen.cs:298
-                                    }                                                                                                       // MakerGen.cs:299
+                                    new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:304
+                                    {                                                                                                       // MakerGen.cs:305
+                                    }                                                                                                       // MakerGen.cs:308
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 62. ClaimResponse.addItem.detail.subDetail.quantity
                             this.Element_Quantity = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2087,12 +2087,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:343
-                                    {                                                                                                       // MakerGen.cs:344
-                                    }                                                                                                       // MakerGen.cs:345
+                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:347
+                                    {                                                                                                       // MakerGen.cs:348
+                                    }                                                                                                       // MakerGen.cs:349
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 63. ClaimResponse.addItem.detail.subDetail.unitPrice
                             this.Element_UnitPrice = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2102,12 +2102,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Complex.Money                                                                 // MakerGen.cs:343
-                                    {                                                                                                       // MakerGen.cs:344
-                                    }                                                                                                       // MakerGen.cs:345
+                                    new FhirKhit.Maker.Common.Complex.Money                                                                 // MakerGen.cs:347
+                                    {                                                                                                       // MakerGen.cs:348
+                                    }                                                                                                       // MakerGen.cs:349
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 64. ClaimResponse.addItem.detail.subDetail.factor
                             this.Element_Factor = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2117,12 +2117,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Decimal                                                             // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 65. ClaimResponse.addItem.detail.subDetail.net
                             this.Element_Net = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2132,12 +2132,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Complex.Money                                                                 // MakerGen.cs:343
-                                    {                                                                                                       // MakerGen.cs:344
-                                    }                                                                                                       // MakerGen.cs:345
+                                    new FhirKhit.Maker.Common.Complex.Money                                                                 // MakerGen.cs:347
+                                    {                                                                                                       // MakerGen.cs:348
+                                    }                                                                                                       // MakerGen.cs:349
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 66. ClaimResponse.addItem.detail.subDetail.noteNumber
                             this.Element_NoteNumber = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -2147,12 +2147,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = -1,                                                                                                   // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 67. ClaimResponse.addItem.detail.subDetail.adjudication
                             this.Element_Adjudication = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -2164,9 +2164,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 {                                                                                                           // MakerGen.cs:251
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:389
+                        }                                                                                                                   // MakerGen.cs:356
+                    }                                                                                                                       // MakerGen.cs:395
+                }                                                                                                                           // MakerGen.cs:379
                 // 51. ClaimResponse.addItem.detail.productOrService
                 public MakerElementInstance Element_ProductOrService;                                                                       // MakerGen.cs:232
                 // 52. ClaimResponse.addItem.detail.modifier
@@ -2183,8 +2183,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_NoteNumber;                                                                             // MakerGen.cs:232
                 // 58. ClaimResponse.addItem.detail.adjudication
                 public MakerElementInstance Element_Adjudication;                                                                           // MakerGen.cs:232
-                public Type_Detail()                                                                                                        // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
+                public Type_Detail()                                                                                                        // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
                     {                                                                                                                       // MakerGen.cs:243
                         // 51. ClaimResponse.addItem.detail.productOrService
                         this.Element_ProductOrService = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -2194,12 +2194,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:297
-                                {                                                                                                           // MakerGen.cs:298
-                                }                                                                                                           // MakerGen.cs:299
+                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:304
+                                {                                                                                                           // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:308
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 52. ClaimResponse.addItem.detail.modifier
                         this.Element_Modifier = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2209,12 +2209,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:297
-                                {                                                                                                           // MakerGen.cs:298
-                                }                                                                                                           // MakerGen.cs:299
+                                new FhirKhit.Maker.Common.Complex.CodeableConcept                                                           // MakerGen.cs:304
+                                {                                                                                                           // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:308
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 53. ClaimResponse.addItem.detail.quantity
                         this.Element_Quantity = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2224,12 +2224,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.Quantity                                                                  // MakerGen.cs:343
-                                {                                                                                                           // MakerGen.cs:344
-                                }                                                                                                           // MakerGen.cs:345
+                                new FhirKhit.Maker.Common.Complex.Quantity                                                                  // MakerGen.cs:347
+                                {                                                                                                           // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:349
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 54. ClaimResponse.addItem.detail.unitPrice
                         this.Element_UnitPrice = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2239,12 +2239,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.Money                                                                     // MakerGen.cs:343
-                                {                                                                                                           // MakerGen.cs:344
-                                }                                                                                                           // MakerGen.cs:345
+                                new FhirKhit.Maker.Common.Complex.Money                                                                     // MakerGen.cs:347
+                                {                                                                                                           // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:349
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 55. ClaimResponse.addItem.detail.factor
                         this.Element_Factor = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -2254,12 +2254,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Decimal                                                                 // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.Decimal                                                                 // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 56. ClaimResponse.addItem.detail.net
                         this.Element_Net = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -2269,12 +2269,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Complex.Money                                                                     // MakerGen.cs:343
-                                {                                                                                                           // MakerGen.cs:344
-                                }                                                                                                           // MakerGen.cs:345
+                                new FhirKhit.Maker.Common.Complex.Money                                                                     // MakerGen.cs:347
+                                {                                                                                                           // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:349
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 57. ClaimResponse.addItem.detail.noteNumber
                         this.Element_NoteNumber = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2284,12 +2284,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.PositiveInt                                                             // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.PositiveInt                                                             // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 58. ClaimResponse.addItem.detail.adjudication
                         this.Element_Adjudication = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2301,9 +2301,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:389
+                    }                                                                                                                       // MakerGen.cs:356
+                }                                                                                                                           // MakerGen.cs:395
+            }                                                                                                                               // MakerGen.cs:379
             // 33. ClaimResponse.addItem.itemSequence
             public MakerElementInstance Element_ItemSequence;                                                                               // MakerGen.cs:232
             // 34. ClaimResponse.addItem.detailSequence
@@ -2338,8 +2338,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_NoteNumber;                                                                                 // MakerGen.cs:232
             // 49. ClaimResponse.addItem.adjudication
             public MakerElementInstance Element_Adjudication;                                                                               // MakerGen.cs:232
-            public Type_AddItem()                                                                                                           // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_AddItem()                                                                                                           // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 33. ClaimResponse.addItem.itemSequence
                     this.Element_ItemSequence = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2349,12 +2349,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 34. ClaimResponse.addItem.detailSequence
                     this.Element_DetailSequence = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2364,12 +2364,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 35. ClaimResponse.addItem.subdetailSequence
                     this.Element_SubdetailSequence = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2379,12 +2379,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 36. ClaimResponse.addItem.provider
                     this.Element_Provider = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2394,12 +2394,18 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:335
+                            {                                                                                                               // MakerGen.cs:336
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:338
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:338
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:338
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:338
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:339
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 37. ClaimResponse.addItem.productOrService
                     this.Element_ProductOrService = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2409,12 +2415,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 38. ClaimResponse.addItem.modifier
                     this.Element_Modifier = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2424,12 +2430,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 39. ClaimResponse.addItem.programCode
                     this.Element_ProgramCode = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2439,12 +2445,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 40. ClaimResponse.addItem.serviced[x]
                     this.Element_Serviced = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2454,15 +2460,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            },                                                                                                              // MakerGen.cs:289
-                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
-                            {                                                                                                               // MakerGen.cs:344
-                            }                                                                                                               // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            },                                                                                                              // MakerGen.cs:293
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:347
+                            {                                                                                                               // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:349
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 41. ClaimResponse.addItem.location[x]
                     this.Element_Location = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2472,18 +2478,22 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            },                                                                                                              // MakerGen.cs:299
-                            new FhirKhit.Maker.Common.Complex.Address                                                                       // MakerGen.cs:343
-                            {                                                                                                               // MakerGen.cs:344
-                            },                                                                                                              // MakerGen.cs:345
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            },                                                                                                              // MakerGen.cs:308
+                            new FhirKhit.Maker.Common.Complex.Address                                                                       // MakerGen.cs:347
+                            {                                                                                                               // MakerGen.cs:348
+                            },                                                                                                              // MakerGen.cs:349
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:335
+                            {                                                                                                               // MakerGen.cs:336
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:338
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:338
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:339
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 42. ClaimResponse.addItem.quantity
                     this.Element_Quantity = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2493,12 +2503,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Quantity                                                                      // MakerGen.cs:343
-                            {                                                                                                               // MakerGen.cs:344
-                            }                                                                                                               // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Quantity                                                                      // MakerGen.cs:347
+                            {                                                                                                               // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:349
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 43. ClaimResponse.addItem.unitPrice
                     this.Element_UnitPrice = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -2508,12 +2518,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Money                                                                         // MakerGen.cs:343
-                            {                                                                                                               // MakerGen.cs:344
-                            }                                                                                                               // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Money                                                                         // MakerGen.cs:347
+                            {                                                                                                               // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:349
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 44. ClaimResponse.addItem.factor
                     this.Element_Factor = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -2523,12 +2533,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Decimal                                                                     // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Decimal                                                                     // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 45. ClaimResponse.addItem.net
                     this.Element_Net = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -2538,12 +2548,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Money                                                                         // MakerGen.cs:343
-                            {                                                                                                               // MakerGen.cs:344
-                            }                                                                                                               // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Money                                                                         // MakerGen.cs:347
+                            {                                                                                                               // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:349
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 46. ClaimResponse.addItem.bodySite
                     this.Element_BodySite = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2553,12 +2563,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 47. ClaimResponse.addItem.subSite
                     this.Element_SubSite = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -2568,12 +2578,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 48. ClaimResponse.addItem.noteNumber
                     this.Element_NoteNumber = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -2583,12 +2593,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 49. ClaimResponse.addItem.adjudication
                     this.Element_Adjudication = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2600,18 +2610,18 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 69. ClaimResponse.total
-        public class Type_Total : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Total : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 70. ClaimResponse.total.category
             public MakerElementInstance Element_Category;                                                                                   // MakerGen.cs:232
             // 71. ClaimResponse.total.amount
             public MakerElementInstance Element_Amount;                                                                                     // MakerGen.cs:232
-            public Type_Total()                                                                                                             // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Total()                                                                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 70. ClaimResponse.total.category
                     this.Element_Category = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2621,12 +2631,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 71. ClaimResponse.total.amount
                     this.Element_Amount = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -2636,17 +2646,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Money                                                                         // MakerGen.cs:343
-                            {                                                                                                               // MakerGen.cs:344
-                            }                                                                                                               // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Money                                                                         // MakerGen.cs:347
+                            {                                                                                                               // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:349
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 72. ClaimResponse.payment
-        public class Type_Payment : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Payment : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 73. ClaimResponse.payment.type
             public MakerElementInstance Element_Type;                                                                                       // MakerGen.cs:232
             // 74. ClaimResponse.payment.adjustment
@@ -2659,8 +2669,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Amount;                                                                                     // MakerGen.cs:232
             // 78. ClaimResponse.payment.identifier
             public MakerElementInstance Element_Identifier;                                                                                 // MakerGen.cs:232
-            public Type_Payment()                                                                                                           // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Payment()                                                                                                           // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 73. ClaimResponse.payment.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2670,12 +2680,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 74. ClaimResponse.payment.adjustment
                     this.Element_Adjustment = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -2685,12 +2695,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Money                                                                         // MakerGen.cs:343
-                            {                                                                                                               // MakerGen.cs:344
-                            }                                                                                                               // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Money                                                                         // MakerGen.cs:347
+                            {                                                                                                               // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:349
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 75. ClaimResponse.payment.adjustmentReason
                     this.Element_AdjustmentReason = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2700,12 +2710,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 76. ClaimResponse.payment.date
                     this.Element_Date = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2715,12 +2725,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 77. ClaimResponse.payment.amount
                     this.Element_Amount = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -2730,12 +2740,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Money                                                                         // MakerGen.cs:343
-                            {                                                                                                               // MakerGen.cs:344
-                            }                                                                                                               // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Money                                                                         // MakerGen.cs:347
+                            {                                                                                                               // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:349
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 78. ClaimResponse.payment.identifier
                     this.Element_Identifier = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -2745,17 +2755,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:343
-                            {                                                                                                               // MakerGen.cs:344
-                            }                                                                                                               // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:347
+                            {                                                                                                               // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:349
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 82. ClaimResponse.processNote
-        public class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 83. ClaimResponse.processNote.number
             public MakerElementInstance Element_Number;                                                                                     // MakerGen.cs:232
             // 84. ClaimResponse.processNote.type
@@ -2764,8 +2774,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Text;                                                                                       // MakerGen.cs:232
             // 86. ClaimResponse.processNote.language
             public MakerElementInstance Element_Language;                                                                                   // MakerGen.cs:232
-            public Type_ProcessNote()                                                                                                       // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_ProcessNote()                                                                                                       // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 83. ClaimResponse.processNote.number
                     this.Element_Number = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -2775,12 +2785,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 84. ClaimResponse.processNote.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2790,12 +2800,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 85. ClaimResponse.processNote.text
                     this.Element_Text = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2805,12 +2815,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 86. ClaimResponse.processNote.language
                     this.Element_Language = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2820,17 +2830,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 88. ClaimResponse.insurance
-        public class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 89. ClaimResponse.insurance.sequence
             public MakerElementInstance Element_Sequence;                                                                                   // MakerGen.cs:232
             // 90. ClaimResponse.insurance.focal
@@ -2841,8 +2851,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_BusinessArrangement;                                                                        // MakerGen.cs:232
             // 93. ClaimResponse.insurance.claimResponse
             public MakerElementInstance Element_ClaimResponse;                                                                              // MakerGen.cs:232
-            public Type_Insurance()                                                                                                         // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Insurance()                                                                                                         // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 89. ClaimResponse.insurance.sequence
                     this.Element_Sequence = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2852,12 +2862,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 90. ClaimResponse.insurance.focal
                     this.Element_Focal = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -2867,12 +2877,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 91. ClaimResponse.insurance.coverage
                     this.Element_Coverage = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2882,12 +2892,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:335
+                            {                                                                                                               // MakerGen.cs:336
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:338
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Coverage"                                                      // MakerGen.cs:338
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:339
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 92. ClaimResponse.insurance.businessArrangement
                     this.Element_BusinessArrangement = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2897,12 +2911,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 93. ClaimResponse.insurance.claimResponse
                     this.Element_ClaimResponse = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2912,17 +2926,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:335
+                            {                                                                                                               // MakerGen.cs:336
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:338
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/ClaimResponse"                                                 // MakerGen.cs:338
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:339
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 94. ClaimResponse.error
-        public class Type_Error : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Error : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 95. ClaimResponse.error.itemSequence
             public MakerElementInstance Element_ItemSequence;                                                                               // MakerGen.cs:232
             // 96. ClaimResponse.error.detailSequence
@@ -2931,8 +2949,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_SubDetailSequence;                                                                          // MakerGen.cs:232
             // 98. ClaimResponse.error.code
             public MakerElementInstance Element_Code;                                                                                       // MakerGen.cs:232
-            public Type_Error()                                                                                                             // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Error()                                                                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 95. ClaimResponse.error.itemSequence
                     this.Element_ItemSequence = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2942,12 +2960,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 96. ClaimResponse.error.detailSequence
                     this.Element_DetailSequence = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2957,12 +2975,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 97. ClaimResponse.error.subDetailSequence
                     this.Element_SubDetailSequence = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2972,12 +2990,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 98. ClaimResponse.error.code
                     this.Element_Code = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2987,14 +3005,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 1. ClaimResponse.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. ClaimResponse.status
@@ -3035,8 +3053,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Form;                                                                                           // MakerGen.cs:232
         // 87. ClaimResponse.communicationRequest
         public MakerElementInstance Element_CommunicationRequest;                                                                           // MakerGen.cs:232
-        public ClaimResponse()                                                                                                              // MakerGen.cs:393
-        {                                                                                                                                   // MakerGen.cs:394
+        public ClaimResponse()                                                                                                              // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
             {                                                                                                                               // MakerGen.cs:243
                 // 1. ClaimResponse.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -3046,12 +3064,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 2. ClaimResponse.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -3061,12 +3079,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 3. ClaimResponse.type
                 this.Element_Type = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -3076,12 +3094,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 4. ClaimResponse.subType
                 this.Element_SubType = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3091,12 +3109,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 5. ClaimResponse.use
                 this.Element_Use = new MakerElementInstance                                                                                 // MakerGen.cs:245
@@ -3106,12 +3124,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 6. ClaimResponse.patient
                 this.Element_Patient = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3121,12 +3139,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 7. ClaimResponse.created
                 this.Element_Created = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3136,12 +3158,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 8. ClaimResponse.insurer
                 this.Element_Insurer = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3151,12 +3173,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 9. ClaimResponse.requestor
                 this.Element_Requestor = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -3166,12 +3192,18 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:338
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:338
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 10. ClaimResponse.request
                 this.Element_Request = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3181,12 +3213,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Claim"                                                             // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 11. ClaimResponse.outcome
                 this.Element_Outcome = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3196,12 +3232,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 12. ClaimResponse.disposition
                 this.Element_Disposition = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -3211,12 +3247,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 13. ClaimResponse.preAuthRef
                 this.Element_PreAuthRef = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -3226,12 +3262,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 14. ClaimResponse.preAuthPeriod
                 this.Element_PreAuthPeriod = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -3241,12 +3277,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Period                                                                            // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Period                                                                            // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 15. ClaimResponse.payeeType
                 this.Element_PayeeType = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -3256,12 +3292,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 68. ClaimResponse.adjudication
                 this.Element_Adjudication = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -3273,7 +3309,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 79. ClaimResponse.fundsReserve
                 this.Element_FundsReserve = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -3283,12 +3319,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 80. ClaimResponse.formCode
                 this.Element_FormCode = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -3298,12 +3334,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 81. ClaimResponse.form
                 this.Element_Form = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -3313,12 +3349,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Attachment                                                                        // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Attachment                                                                        // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 87. ClaimResponse.communicationRequest
                 this.Element_CommunicationRequest = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -3328,12 +3364,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CommunicationRequest"                                              // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:389
-}                                                                                                                                           // MakerGen.cs:440
+            }                                                                                                                               // MakerGen.cs:356
+        }                                                                                                                                   // MakerGen.cs:395
+    }                                                                                                                                       // MakerGen.cs:379
+}                                                                                                                                           // MakerGen.cs:430

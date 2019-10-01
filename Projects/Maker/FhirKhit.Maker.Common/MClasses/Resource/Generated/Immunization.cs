@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:423
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
-using System.IO;                                                                                                                            // MakerGen.cs:425
-using System.Linq;                                                                                                                          // MakerGen.cs:426
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
-                                                                                                                                            // MakerGen.cs:428
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
-{                                                                                                                                           // MakerGen.cs:430
-    #region Json                                                                                                                            // MakerGen.cs:431
-    #if NEVER                                                                                                                               // MakerGen.cs:432
+using System;                                                                                                                               // MakerGen.cs:413
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:414
+using System.IO;                                                                                                                            // MakerGen.cs:415
+using System.Linq;                                                                                                                          // MakerGen.cs:416
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:417
+                                                                                                                                            // MakerGen.cs:418
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:419
+{                                                                                                                                           // MakerGen.cs:420
+    #region Json                                                                                                                            // MakerGen.cs:421
+    #if NEVER                                                                                                                               // MakerGen.cs:422
     {
       "resourceType": "StructureDefinition",
       "id": "Immunization",
@@ -781,22 +781,22 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:435
+    #endregion                                                                                                                              // MakerGen.cs:425
     /// <summary>
     /// Fhir resource 'Immunization'
     /// </summary>
     // 0. Immunization
-    public class Immunization : FhirKhit.Maker.Common.Resource.ResourceBase                                                                 // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
+    public class Immunization : FhirKhit.Maker.Common.Resource.ResourceBase                                                                 // MakerGen.cs:374
+    {                                                                                                                                       // MakerGen.cs:375
         // 18. Immunization.performer
-        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 19. Immunization.performer.function
             public MakerElementInstance Element_Function;                                                                                   // MakerGen.cs:232
             // 20. Immunization.performer.actor
             public MakerElementInstance Element_Actor;                                                                                      // MakerGen.cs:232
-            public Type_Performer()                                                                                                         // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Performer()                                                                                                         // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 19. Immunization.performer.function
                     this.Element_Function = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -806,12 +806,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 20. Immunization.performer.actor
                     this.Element_Actor = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -821,17 +821,23 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:335
+                            {                                                                                                               // MakerGen.cs:336
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:338
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:338
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:338
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:338
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:339
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 26. Immunization.education
-        public class Type_Education : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Education : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 27. Immunization.education.documentType
             public MakerElementInstance Element_DocumentType;                                                                               // MakerGen.cs:232
             // 28. Immunization.education.reference
@@ -840,8 +846,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_PublicationDate;                                                                            // MakerGen.cs:232
             // 30. Immunization.education.presentationDate
             public MakerElementInstance Element_PresentationDate;                                                                           // MakerGen.cs:232
-            public Type_Education()                                                                                                         // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Education()                                                                                                         // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 27. Immunization.education.documentType
                     this.Element_DocumentType = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -851,12 +857,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 28. Immunization.education.reference
                     this.Element_Reference = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -866,12 +872,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 29. Immunization.education.publicationDate
                     this.Element_PublicationDate = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -881,12 +887,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 30. Immunization.education.presentationDate
                     this.Element_PresentationDate = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -896,25 +902,25 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 33. Immunization.reaction
-        public class Type_Reaction : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Reaction : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 34. Immunization.reaction.date
             public MakerElementInstance Element_Date;                                                                                       // MakerGen.cs:232
             // 35. Immunization.reaction.detail
             public MakerElementInstance Element_Detail;                                                                                     // MakerGen.cs:232
             // 36. Immunization.reaction.reported
             public MakerElementInstance Element_Reported;                                                                                   // MakerGen.cs:232
-            public Type_Reaction()                                                                                                          // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Reaction()                                                                                                          // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 34. Immunization.reaction.date
                     this.Element_Date = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -924,12 +930,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 35. Immunization.reaction.detail
                     this.Element_Detail = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -939,12 +945,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:335
+                            {                                                                                                               // MakerGen.cs:336
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:338
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Observation"                                                   // MakerGen.cs:338
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:339
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 36. Immunization.reaction.reported
                     this.Element_Reported = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -954,17 +964,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 37. Immunization.protocolApplied
-        public class Type_ProtocolApplied : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_ProtocolApplied : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 38. Immunization.protocolApplied.series
             public MakerElementInstance Element_Series;                                                                                     // MakerGen.cs:232
             // 39. Immunization.protocolApplied.authority
@@ -975,8 +985,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_DoseNumber;                                                                                 // MakerGen.cs:232
             // 42. Immunization.protocolApplied.seriesDoses[x]
             public MakerElementInstance Element_SeriesDoses;                                                                                // MakerGen.cs:232
-            public Type_ProtocolApplied()                                                                                                   // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_ProtocolApplied()                                                                                                   // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 38. Immunization.protocolApplied.series
                     this.Element_Series = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -986,12 +996,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 39. Immunization.protocolApplied.authority
                     this.Element_Authority = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1001,12 +1011,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:335
+                            {                                                                                                               // MakerGen.cs:336
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:338
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:338
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:339
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 40. Immunization.protocolApplied.targetDisease
                     this.Element_TargetDisease = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -1016,12 +1030,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 41. Immunization.protocolApplied.doseNumber[x]
                     this.Element_DoseNumber = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1031,15 +1045,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            },                                                                                                              // MakerGen.cs:289
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            },                                                                                                              // MakerGen.cs:293
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 42. Immunization.protocolApplied.seriesDoses[x]
                     this.Element_SeriesDoses = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1049,17 +1063,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            },                                                                                                              // MakerGen.cs:289
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            },                                                                                                              // MakerGen.cs:293
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 1. Immunization.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. Immunization.status
@@ -1108,8 +1122,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_ProgramEligibility;                                                                             // MakerGen.cs:232
         // 32. Immunization.fundingSource
         public MakerElementInstance Element_FundingSource;                                                                                  // MakerGen.cs:232
-        public Immunization()                                                                                                               // MakerGen.cs:393
-        {                                                                                                                                   // MakerGen.cs:394
+        public Immunization()                                                                                                               // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Immunization.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1119,12 +1133,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 2. Immunization.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1134,12 +1148,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 3. Immunization.statusReason
                 this.Element_StatusReason = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1149,12 +1163,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 4. Immunization.vaccineCode
                 this.Element_VaccineCode = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1164,12 +1178,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 5. Immunization.patient
                 this.Element_Patient = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1179,12 +1193,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 6. Immunization.encounter
                 this.Element_Encounter = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1194,12 +1212,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 7. Immunization.occurrence[x]
                 this.Element_Occurrence = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1209,15 +1231,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        },                                                                                                                  // MakerGen.cs:289
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        },                                                                                                                  // MakerGen.cs:293
+                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 8. Immunization.recorded
                 this.Element_Recorded = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1227,12 +1249,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 9. Immunization.primarySource
                 this.Element_PrimarySource = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1242,12 +1264,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Boolean                                                                         // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Boolean                                                                         // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 10. Immunization.reportOrigin
                 this.Element_ReportOrigin = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1257,12 +1279,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 11. Immunization.location
                 this.Element_Location = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1272,12 +1294,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 12. Immunization.manufacturer
                 this.Element_Manufacturer = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1287,12 +1313,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 13. Immunization.lotNumber
                 this.Element_LotNumber = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1302,12 +1332,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 14. Immunization.expirationDate
                 this.Element_ExpirationDate = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1317,12 +1347,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Date                                                                            // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Date                                                                            // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 15. Immunization.site
                 this.Element_Site = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1332,12 +1362,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 16. Immunization.route
                 this.Element_Route = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -1347,12 +1377,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 17. Immunization.doseQuantity
                 this.Element_DoseQuantity = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1362,12 +1392,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Quantity                                                                          // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Quantity                                                                          // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 21. Immunization.note
                 this.Element_Note = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1377,12 +1407,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Annotation                                                                        // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Annotation                                                                        // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 22. Immunization.reasonCode
                 this.Element_ReasonCode = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1392,12 +1422,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 23. Immunization.reasonReference
                 this.Element_ReasonReference = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1407,12 +1437,18 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:338
+                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:338
+                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"                                                  // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 24. Immunization.isSubpotent
                 this.Element_IsSubpotent = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1422,12 +1458,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Boolean                                                                         // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Boolean                                                                         // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 25. Immunization.subpotentReason
                 this.Element_SubpotentReason = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1437,12 +1473,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 31. Immunization.programEligibility
                 this.Element_ProgramEligibility = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -1452,12 +1488,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 32. Immunization.fundingSource
                 this.Element_FundingSource = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1467,12 +1503,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:389
-}                                                                                                                                           // MakerGen.cs:440
+            }                                                                                                                               // MakerGen.cs:356
+        }                                                                                                                                   // MakerGen.cs:395
+    }                                                                                                                                       // MakerGen.cs:379
+}                                                                                                                                           // MakerGen.cs:430

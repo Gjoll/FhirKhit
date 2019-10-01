@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:423
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
-using System.IO;                                                                                                                            // MakerGen.cs:425
-using System.Linq;                                                                                                                          // MakerGen.cs:426
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
-                                                                                                                                            // MakerGen.cs:428
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
-{                                                                                                                                           // MakerGen.cs:430
-    #region Json                                                                                                                            // MakerGen.cs:431
-    #if NEVER                                                                                                                               // MakerGen.cs:432
+using System;                                                                                                                               // MakerGen.cs:413
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:414
+using System.IO;                                                                                                                            // MakerGen.cs:415
+using System.Linq;                                                                                                                          // MakerGen.cs:416
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:417
+                                                                                                                                            // MakerGen.cs:418
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:419
+{                                                                                                                                           // MakerGen.cs:420
+    #region Json                                                                                                                            // MakerGen.cs:421
+    #if NEVER                                                                                                                               // MakerGen.cs:422
     {
       "resourceType": "StructureDefinition",
       "id": "TestScript",
@@ -1679,22 +1679,22 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:435
+    #endregion                                                                                                                              // MakerGen.cs:425
     /// <summary>
     /// Fhir resource 'TestScript'
     /// </summary>
     // 0. TestScript
-    public class TestScript : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
+    public class TestScript : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:374
+    {                                                                                                                                       // MakerGen.cs:375
         // 16. TestScript.origin
-        public class Type_Origin : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Origin : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 17. TestScript.origin.index
             public MakerElementInstance Element_Index;                                                                                      // MakerGen.cs:232
             // 18. TestScript.origin.profile
             public MakerElementInstance Element_Profile;                                                                                    // MakerGen.cs:232
-            public Type_Origin()                                                                                                            // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Origin()                                                                                                            // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 17. TestScript.origin.index
                     this.Element_Index = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1704,12 +1704,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Integer                                                                     // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Integer                                                                     // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 18. TestScript.origin.profile
                     this.Element_Profile = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1719,23 +1719,23 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Coding                                                                        // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.Coding                                                                        // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 19. TestScript.destination
-        public class Type_Destination : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Destination : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 20. TestScript.destination.index
             public MakerElementInstance Element_Index;                                                                                      // MakerGen.cs:232
             // 21. TestScript.destination.profile
             public MakerElementInstance Element_Profile;                                                                                    // MakerGen.cs:232
-            public Type_Destination()                                                                                                       // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Destination()                                                                                                       // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 20. TestScript.destination.index
                     this.Element_Index = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1745,12 +1745,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Integer                                                                     // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Integer                                                                     // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 21. TestScript.destination.profile
                     this.Element_Profile = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1760,26 +1760,26 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Coding                                                                        // MakerGen.cs:297
-                            {                                                                                                               // MakerGen.cs:298
-                            }                                                                                                               // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.Coding                                                                        // MakerGen.cs:304
+                            {                                                                                                               // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:308
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 22. TestScript.metadata
-        public class Type_Metadata : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Metadata : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 23. TestScript.metadata.link
-            public class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
+            public class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:374
+            {                                                                                                                               // MakerGen.cs:375
                 // 24. TestScript.metadata.link.url
                 public MakerElementInstance Element_Url;                                                                                    // MakerGen.cs:232
                 // 25. TestScript.metadata.link.description
                 public MakerElementInstance Element_Description;                                                                            // MakerGen.cs:232
-                public Type_Link()                                                                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
+                public Type_Link()                                                                                                          // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
                     {                                                                                                                       // MakerGen.cs:243
                         // 24. TestScript.metadata.link.url
                         this.Element_Url = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1789,12 +1789,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Uri                                                                     // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.Uri                                                                     // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 25. TestScript.metadata.link.description
                         this.Element_Description = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -1804,17 +1804,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:389
+                    }                                                                                                                       // MakerGen.cs:356
+                }                                                                                                                           // MakerGen.cs:395
+            }                                                                                                                               // MakerGen.cs:379
             // 26. TestScript.metadata.capability
-            public class Type_Capability : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
+            public class Type_Capability : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:374
+            {                                                                                                                               // MakerGen.cs:375
                 // 27. TestScript.metadata.capability.required
                 public MakerElementInstance Element_Required;                                                                               // MakerGen.cs:232
                 // 28. TestScript.metadata.capability.validated
@@ -1829,8 +1829,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_Link;                                                                                   // MakerGen.cs:232
                 // 33. TestScript.metadata.capability.capabilities
                 public MakerElementInstance Element_Capabilities;                                                                           // MakerGen.cs:232
-                public Type_Capability()                                                                                                    // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
+                public Type_Capability()                                                                                                    // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
                     {                                                                                                                       // MakerGen.cs:243
                         // 27. TestScript.metadata.capability.required
                         this.Element_Required = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1840,12 +1840,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Boolean                                                                 // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.Boolean                                                                 // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 28. TestScript.metadata.capability.validated
                         this.Element_Validated = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -1855,12 +1855,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Boolean                                                                 // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.Boolean                                                                 // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 29. TestScript.metadata.capability.description
                         this.Element_Description = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -1870,12 +1870,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.String                                                                  // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 30. TestScript.metadata.capability.origin
                         this.Element_Origin = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1885,12 +1885,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Integer                                                                 // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.Integer                                                                 // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 31. TestScript.metadata.capability.destination
                         this.Element_Destination = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -1900,12 +1900,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Integer                                                                 // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.Integer                                                                 // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 32. TestScript.metadata.capability.link
                         this.Element_Link = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1915,12 +1915,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Uri                                                                     // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.Uri                                                                     // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 33. TestScript.metadata.capability.capabilities
                         this.Element_Capabilities = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -1930,29 +1930,33 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
-                                new FhirKhit.Maker.Common.Primitive.Canonical                                                               // MakerGen.cs:287
-                                {                                                                                                           // MakerGen.cs:288
-                                }                                                                                                           // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Primitive.Canonical                                                               // MakerGen.cs:289
+                                {                                                                                                           // MakerGen.cs:290
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:292
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"                                       // MakerGen.cs:292
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:293
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:389
-            public Type_Metadata()                                                                                                          // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                    }                                                                                                                       // MakerGen.cs:356
+                }                                                                                                                           // MakerGen.cs:395
+            }                                                                                                                               // MakerGen.cs:379
+            public Type_Metadata()                                                                                                          // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 34. TestScript.fixture
-        public class Type_Fixture : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Fixture : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 35. TestScript.fixture.autocreate
             public MakerElementInstance Element_Autocreate;                                                                                 // MakerGen.cs:232
             // 36. TestScript.fixture.autodelete
             public MakerElementInstance Element_Autodelete;                                                                                 // MakerGen.cs:232
             // 37. TestScript.fixture.resource
             public MakerElementInstance Element_Resource;                                                                                   // MakerGen.cs:232
-            public Type_Fixture()                                                                                                           // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Fixture()                                                                                                           // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 35. TestScript.fixture.autocreate
                     this.Element_Autocreate = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1962,12 +1966,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 36. TestScript.fixture.autodelete
                     this.Element_Autodelete = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1977,12 +1981,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 37. TestScript.fixture.resource
                     this.Element_Resource = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1992,17 +1996,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:335
+                            {                                                                                                               // MakerGen.cs:336
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:338
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:338
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:339
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 39. TestScript.variable
-        public class Type_Variable : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Variable : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 40. TestScript.variable.name
             public MakerElementInstance Element_Name;                                                                                       // MakerGen.cs:232
             // 41. TestScript.variable.defaultValue
@@ -2019,8 +2027,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Path;                                                                                       // MakerGen.cs:232
             // 47. TestScript.variable.sourceId
             public MakerElementInstance Element_SourceId;                                                                                   // MakerGen.cs:232
-            public Type_Variable()                                                                                                          // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Variable()                                                                                                          // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 40. TestScript.variable.name
                     this.Element_Name = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2030,12 +2038,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 41. TestScript.variable.defaultValue
                     this.Element_DefaultValue = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2045,12 +2053,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 42. TestScript.variable.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2060,12 +2068,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 43. TestScript.variable.expression
                     this.Element_Expression = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -2075,12 +2083,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 44. TestScript.variable.headerField
                     this.Element_HeaderField = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2090,12 +2098,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 45. TestScript.variable.hint
                     this.Element_Hint = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2105,12 +2113,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 46. TestScript.variable.path
                     this.Element_Path = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2120,12 +2128,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 47. TestScript.variable.sourceId
                     this.Element_SourceId = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2135,32 +2143,32 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.Id                                                                          // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.Id                                                                          // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 48. TestScript.setup
-        public class Type_Setup : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Setup : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 49. TestScript.setup.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
+            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:374
+            {                                                                                                                               // MakerGen.cs:375
                 // 50. TestScript.setup.action.operation
-                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
-                {                                                                                                                           // MakerGen.cs:385
+                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:374
+                {                                                                                                                           // MakerGen.cs:375
                     // 62. TestScript.setup.action.operation.requestHeader
-                    public class Type_RequestHeader : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
+                    public class Type_RequestHeader : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:374
+                    {                                                                                                                       // MakerGen.cs:375
                         // 63. TestScript.setup.action.operation.requestHeader.field
                         public MakerElementInstance Element_Field;                                                                          // MakerGen.cs:232
                         // 64. TestScript.setup.action.operation.requestHeader.value
                         public MakerElementInstance Element_Value;                                                                          // MakerGen.cs:232
-                        public Type_RequestHeader()                                                                                         // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:394
+                        public Type_RequestHeader()                                                                                         // MakerGen.cs:383
+                        {                                                                                                                   // MakerGen.cs:384
                             {                                                                                                               // MakerGen.cs:243
                                 // 63. TestScript.setup.action.operation.requestHeader.field
                                 this.Element_Field = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2170,12 +2178,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     Max = 1,                                                                                                // MakerGen.cs:249
                                     Types = new MakerBaseType[]                                                                             // MakerGen.cs:250
                                     {                                                                                                       // MakerGen.cs:251
-                                        new FhirKhit.Maker.Common.Primitive.String                                                          // MakerGen.cs:287
-                                        {                                                                                                   // MakerGen.cs:288
-                                        }                                                                                                   // MakerGen.cs:289
+                                        new FhirKhit.Maker.Common.Primitive.String                                                          // MakerGen.cs:289
+                                        {                                                                                                   // MakerGen.cs:290
+                                        }                                                                                                   // MakerGen.cs:293
                                     }                                                                                                       // MakerGen.cs:253
                                 };                                                                                                          // MakerGen.cs:254
-                            }                                                                                                               // MakerGen.cs:366
+                            }                                                                                                               // MakerGen.cs:356
                             {                                                                                                               // MakerGen.cs:243
                                 // 64. TestScript.setup.action.operation.requestHeader.value
                                 this.Element_Value = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2185,14 +2193,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     Max = 1,                                                                                                // MakerGen.cs:249
                                     Types = new MakerBaseType[]                                                                             // MakerGen.cs:250
                                     {                                                                                                       // MakerGen.cs:251
-                                        new FhirKhit.Maker.Common.Primitive.String                                                          // MakerGen.cs:287
-                                        {                                                                                                   // MakerGen.cs:288
-                                        }                                                                                                   // MakerGen.cs:289
+                                        new FhirKhit.Maker.Common.Primitive.String                                                          // MakerGen.cs:289
+                                        {                                                                                                   // MakerGen.cs:290
+                                        }                                                                                                   // MakerGen.cs:293
                                     }                                                                                                       // MakerGen.cs:253
                                 };                                                                                                          // MakerGen.cs:254
-                            }                                                                                                               // MakerGen.cs:366
-                        }                                                                                                                   // MakerGen.cs:405
-                    }                                                                                                                       // MakerGen.cs:389
+                            }                                                                                                               // MakerGen.cs:356
+                        }                                                                                                                   // MakerGen.cs:395
+                    }                                                                                                                       // MakerGen.cs:379
                     // 51. TestScript.setup.action.operation.type
                     public MakerElementInstance Element_Type;                                                                               // MakerGen.cs:232
                     // 52. TestScript.setup.action.operation.resource
@@ -2225,8 +2233,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public MakerElementInstance Element_TargetId;                                                                           // MakerGen.cs:232
                     // 69. TestScript.setup.action.operation.url
                     public MakerElementInstance Element_Url;                                                                                // MakerGen.cs:232
-                    public Type_Operation()                                                                                                 // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
+                    public Type_Operation()                                                                                                 // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
                         {                                                                                                                   // MakerGen.cs:243
                             // 51. TestScript.setup.action.operation.type
                             this.Element_Type = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2236,12 +2244,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Complex.Coding                                                                // MakerGen.cs:297
-                                    {                                                                                                       // MakerGen.cs:298
-                                    }                                                                                                       // MakerGen.cs:299
+                                    new FhirKhit.Maker.Common.Complex.Coding                                                                // MakerGen.cs:304
+                                    {                                                                                                       // MakerGen.cs:305
+                                    }                                                                                                       // MakerGen.cs:308
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 52. TestScript.setup.action.operation.resource
                             this.Element_Resource = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2251,12 +2259,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 53. TestScript.setup.action.operation.label
                             this.Element_Label = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2266,12 +2274,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 54. TestScript.setup.action.operation.description
                             this.Element_Description = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2281,12 +2289,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 55. TestScript.setup.action.operation.accept
                             this.Element_Accept = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2296,12 +2304,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 56. TestScript.setup.action.operation.contentType
                             this.Element_ContentType = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2311,12 +2319,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 57. TestScript.setup.action.operation.destination
                             this.Element_Destination = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2326,12 +2334,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Integer                                                             // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Integer                                                             // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 58. TestScript.setup.action.operation.encodeRequestUrl
                             this.Element_EncodeRequestUrl = new MakerElementInstance                                                        // MakerGen.cs:245
@@ -2341,12 +2349,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 59. TestScript.setup.action.operation.method
                             this.Element_Method = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2356,12 +2364,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 60. TestScript.setup.action.operation.origin
                             this.Element_Origin = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2371,12 +2379,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Integer                                                             // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Integer                                                             // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 61. TestScript.setup.action.operation.params
                             this.Element_Params = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2386,12 +2394,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 65. TestScript.setup.action.operation.requestId
                             this.Element_RequestId = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2401,12 +2409,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 66. TestScript.setup.action.operation.responseId
                             this.Element_ResponseId = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -2416,12 +2424,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 67. TestScript.setup.action.operation.sourceId
                             this.Element_SourceId = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2431,12 +2439,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 68. TestScript.setup.action.operation.targetId
                             this.Element_TargetId = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2446,12 +2454,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 69. TestScript.setup.action.operation.url
                             this.Element_Url = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2461,17 +2469,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:389
+                        }                                                                                                                   // MakerGen.cs:356
+                    }                                                                                                                       // MakerGen.cs:395
+                }                                                                                                                           // MakerGen.cs:379
                 // 70. TestScript.setup.action.assert
-                public class Type_Assert : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
-                {                                                                                                                           // MakerGen.cs:385
+                public class Type_Assert : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:374
+                {                                                                                                                           // MakerGen.cs:375
                     // 71. TestScript.setup.action.assert.label
                     public MakerElementInstance Element_Label;                                                                              // MakerGen.cs:232
                     // 72. TestScript.setup.action.assert.description
@@ -2516,8 +2524,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public MakerElementInstance Element_Value;                                                                              // MakerGen.cs:232
                     // 92. TestScript.setup.action.assert.warningOnly
                     public MakerElementInstance Element_WarningOnly;                                                                        // MakerGen.cs:232
-                    public Type_Assert()                                                                                                    // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
+                    public Type_Assert()                                                                                                    // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
                         {                                                                                                                   // MakerGen.cs:243
                             // 71. TestScript.setup.action.assert.label
                             this.Element_Label = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2527,12 +2535,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 72. TestScript.setup.action.assert.description
                             this.Element_Description = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2542,12 +2550,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 73. TestScript.setup.action.assert.direction
                             this.Element_Direction = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2557,12 +2565,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 74. TestScript.setup.action.assert.compareToSourceId
                             this.Element_CompareToSourceId = new MakerElementInstance                                                       // MakerGen.cs:245
@@ -2572,12 +2580,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 75. TestScript.setup.action.assert.compareToSourceExpression
                             this.Element_CompareToSourceExpression = new MakerElementInstance                                               // MakerGen.cs:245
@@ -2587,12 +2595,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 76. TestScript.setup.action.assert.compareToSourcePath
                             this.Element_CompareToSourcePath = new MakerElementInstance                                                     // MakerGen.cs:245
@@ -2602,12 +2610,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 77. TestScript.setup.action.assert.contentType
                             this.Element_ContentType = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2617,12 +2625,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 78. TestScript.setup.action.assert.expression
                             this.Element_Expression = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -2632,12 +2640,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 79. TestScript.setup.action.assert.headerField
                             this.Element_HeaderField = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2647,12 +2655,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 80. TestScript.setup.action.assert.minimumId
                             this.Element_MinimumId = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2662,12 +2670,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 81. TestScript.setup.action.assert.navigationLinks
                             this.Element_NavigationLinks = new MakerElementInstance                                                         // MakerGen.cs:245
@@ -2677,12 +2685,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 82. TestScript.setup.action.assert.operator
                             this.Element_Operator = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2692,12 +2700,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 83. TestScript.setup.action.assert.path
                             this.Element_Path = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2707,12 +2715,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 84. TestScript.setup.action.assert.requestMethod
                             this.Element_RequestMethod = new MakerElementInstance                                                           // MakerGen.cs:245
@@ -2722,12 +2730,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 85. TestScript.setup.action.assert.requestURL
                             this.Element_RequestURL = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -2737,12 +2745,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 86. TestScript.setup.action.assert.resource
                             this.Element_Resource = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2752,12 +2760,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 87. TestScript.setup.action.assert.response
                             this.Element_Response = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2767,12 +2775,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 88. TestScript.setup.action.assert.responseCode
                             this.Element_ResponseCode = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -2782,12 +2790,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 89. TestScript.setup.action.assert.sourceId
                             this.Element_SourceId = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2797,12 +2805,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 90. TestScript.setup.action.assert.validateProfileId
                             this.Element_ValidateProfileId = new MakerElementInstance                                                       // MakerGen.cs:245
@@ -2812,12 +2820,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 91. TestScript.setup.action.assert.value
                             this.Element_Value = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2827,12 +2835,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:356
                         {                                                                                                                   // MakerGen.cs:243
                             // 92. TestScript.setup.action.assert.warningOnly
                             this.Element_WarningOnly = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2842,34 +2850,34 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:287
-                                    {                                                                                                       // MakerGen.cs:288
-                                    }                                                                                                       // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:289
+                                    {                                                                                                       // MakerGen.cs:290
+                                    }                                                                                                       // MakerGen.cs:293
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:366
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:389
-                public Type_Action()                                                                                                        // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:389
-            public Type_Setup()                                                                                                             // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                        }                                                                                                                   // MakerGen.cs:356
+                    }                                                                                                                       // MakerGen.cs:395
+                }                                                                                                                           // MakerGen.cs:379
+                public Type_Action()                                                                                                        // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                }                                                                                                                           // MakerGen.cs:395
+            }                                                                                                                               // MakerGen.cs:379
+            public Type_Setup()                                                                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 93. TestScript.test
-        public class Type_Test : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Test : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 96. TestScript.test.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
+            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:374
+            {                                                                                                                               // MakerGen.cs:375
                 // 97. TestScript.test.action.operation
                 public MakerElementInstance Element_Operation;                                                                              // MakerGen.cs:232
                 // 98. TestScript.test.action.assert
                 public MakerElementInstance Element_Assert;                                                                                 // MakerGen.cs:232
-                public Type_Action()                                                                                                        // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
+                public Type_Action()                                                                                                        // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
                     {                                                                                                                       // MakerGen.cs:243
                         // 97. TestScript.test.action.operation
                         this.Element_Operation = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2881,7 +2889,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:356
                     {                                                                                                                       // MakerGen.cs:243
                         // 98. TestScript.test.action.assert
                         this.Element_Assert = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -2893,15 +2901,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:389
+                    }                                                                                                                       // MakerGen.cs:356
+                }                                                                                                                           // MakerGen.cs:395
+            }                                                                                                                               // MakerGen.cs:379
             // 94. TestScript.test.name
             public MakerElementInstance Element_Name;                                                                                       // MakerGen.cs:232
             // 95. TestScript.test.description
             public MakerElementInstance Element_Description;                                                                                // MakerGen.cs:232
-            public Type_Test()                                                                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
+            public Type_Test()                                                                                                              // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
                 {                                                                                                                           // MakerGen.cs:243
                     // 94. TestScript.test.name
                     this.Element_Name = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2911,12 +2919,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:356
                 {                                                                                                                           // MakerGen.cs:243
                     // 95. TestScript.test.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2926,24 +2934,24 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:287
-                            {                                                                                                               // MakerGen.cs:288
-                            }                                                                                                               // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:289
+                            {                                                                                                               // MakerGen.cs:290
+                            }                                                                                                               // MakerGen.cs:293
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:366
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                }                                                                                                                           // MakerGen.cs:356
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 99. TestScript.teardown
-        public class Type_Teardown : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
-        {                                                                                                                                   // MakerGen.cs:385
+        public class Type_Teardown : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:374
+        {                                                                                                                                   // MakerGen.cs:375
             // 100. TestScript.teardown.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
+            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:374
+            {                                                                                                                               // MakerGen.cs:375
                 // 101. TestScript.teardown.action.operation
                 public MakerElementInstance Element_Operation;                                                                              // MakerGen.cs:232
-                public Type_Action()                                                                                                        // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
+                public Type_Action()                                                                                                        // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
                     {                                                                                                                       // MakerGen.cs:243
                         // 101. TestScript.teardown.action.operation
                         this.Element_Operation = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2955,13 +2963,13 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:366
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:389
-            public Type_Teardown()                                                                                                          // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:389
+                    }                                                                                                                       // MakerGen.cs:356
+                }                                                                                                                           // MakerGen.cs:395
+            }                                                                                                                               // MakerGen.cs:379
+            public Type_Teardown()                                                                                                          // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+            }                                                                                                                               // MakerGen.cs:395
+        }                                                                                                                                   // MakerGen.cs:379
         // 1. TestScript.url
         public MakerElementInstance Element_Url;                                                                                            // MakerGen.cs:232
         // 2. TestScript.identifier
@@ -2994,8 +3002,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Copyright;                                                                                      // MakerGen.cs:232
         // 38. TestScript.profile
         public MakerElementInstance Element_Profile;                                                                                        // MakerGen.cs:232
-        public TestScript()                                                                                                                 // MakerGen.cs:393
-        {                                                                                                                                   // MakerGen.cs:394
+        public TestScript()                                                                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
             {                                                                                                                               // MakerGen.cs:243
                 // 1. TestScript.url
                 this.Element_Url = new MakerElementInstance                                                                                 // MakerGen.cs:245
@@ -3005,12 +3013,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Uri                                                                             // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Uri                                                                             // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 2. TestScript.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -3020,12 +3028,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 3. TestScript.version
                 this.Element_Version = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3035,12 +3043,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 4. TestScript.name
                 this.Element_Name = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -3050,12 +3058,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 5. TestScript.title
                 this.Element_Title = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -3065,12 +3073,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 6. TestScript.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -3080,12 +3088,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Code                                                                            // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 7. TestScript.experimental
                 this.Element_Experimental = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -3095,12 +3103,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Boolean                                                                         // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Boolean                                                                         // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 8. TestScript.date
                 this.Element_Date = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -3110,12 +3118,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 9. TestScript.publisher
                 this.Element_Publisher = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -3125,12 +3133,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 10. TestScript.contact
                 this.Element_Contact = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3140,12 +3148,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.ContactDetail                                                                     // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.ContactDetail                                                                     // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 11. TestScript.description
                 this.Element_Description = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -3155,12 +3163,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Markdown                                                                        // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Markdown                                                                        // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 12. TestScript.useContext
                 this.Element_UseContext = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -3170,12 +3178,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.UsageContext                                                                      // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.UsageContext                                                                      // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 13. TestScript.jurisdiction
                 this.Element_Jurisdiction = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -3185,12 +3193,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 14. TestScript.purpose
                 this.Element_Purpose = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3200,12 +3208,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Markdown                                                                        // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Markdown                                                                        // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 15. TestScript.copyright
                 this.Element_Copyright = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -3215,12 +3223,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Primitive.Markdown                                                                        // MakerGen.cs:287
-                        {                                                                                                                   // MakerGen.cs:288
-                        }                                                                                                                   // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Primitive.Markdown                                                                        // MakerGen.cs:289
+                        {                                                                                                                   // MakerGen.cs:290
+                        }                                                                                                                   // MakerGen.cs:293
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 38. TestScript.profile
                 this.Element_Profile = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3230,12 +3238,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:335
+                        {                                                                                                                   // MakerGen.cs:336
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:338
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:338
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:339
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:389
-}                                                                                                                                           // MakerGen.cs:440
+            }                                                                                                                               // MakerGen.cs:356
+        }                                                                                                                                   // MakerGen.cs:395
+    }                                                                                                                                       // MakerGen.cs:379
+}                                                                                                                                           // MakerGen.cs:430

@@ -6,5 +6,7 @@ namespace FhirKhit.Maker.Common
 {
     public class MakerBaseType
     {
+        public String[] TargetProfile {get; set; }
+        public String[] Profile {get; set; }
     }
 }

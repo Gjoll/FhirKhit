@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:471
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:472
-using System.IO;                                                                                                                            // MakerGen.cs:473
-using System.Linq;                                                                                                                          // MakerGen.cs:474
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:475
-                                                                                                                                            // MakerGen.cs:476
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:477
-{                                                                                                                                           // MakerGen.cs:478
-    #region Json                                                                                                                            // MakerGen.cs:479
+using System;                                                                                                                               // MakerGen.cs:461
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:462
+using System.IO;                                                                                                                            // MakerGen.cs:463
+using System.Linq;                                                                                                                          // MakerGen.cs:464
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:465
+                                                                                                                                            // MakerGen.cs:466
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:467
+{                                                                                                                                           // MakerGen.cs:468
+    #region Json                                                                                                                            // MakerGen.cs:469
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -93,13 +93,13 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:483
+    #endregion                                                                                                                              // MakerGen.cs:473
     /// <summary>
     /// Fhir complex 'ProductShelfLife'
     /// </summary>
     // 0. ProductShelfLife
-    public class ProductShelfLife : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
+    public class ProductShelfLife : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:374
+    {                                                                                                                                       // MakerGen.cs:375
         // 1. ProductShelfLife.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. ProductShelfLife.type
@@ -108,8 +108,8 @@ namespace FhirKhit.Maker.Common.Complex                                         
         public MakerElementInstance Element_Period;                                                                                         // MakerGen.cs:232
         // 4. ProductShelfLife.specialPrecautionsForStorage
         public MakerElementInstance Element_SpecialPrecautionsForStorage;                                                                   // MakerGen.cs:232
-        public ProductShelfLife()                                                                                                           // MakerGen.cs:393
-        {                                                                                                                                   // MakerGen.cs:394
+        public ProductShelfLife()                                                                                                           // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
             {                                                                                                                               // MakerGen.cs:243
                 // 1. ProductShelfLife.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -119,12 +119,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 2. ProductShelfLife.type
                 this.Element_Type = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -134,12 +134,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 3. ProductShelfLife.period
                 this.Element_Period = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -149,12 +149,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Quantity                                                                          // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Quantity                                                                          // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 4. ProductShelfLife.specialPrecautionsForStorage
                 this.Element_SpecialPrecautionsForStorage = new MakerElementInstance                                                        // MakerGen.cs:245
@@ -164,12 +164,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
-                        {                                                                                                                   // MakerGen.cs:298
-                        }                                                                                                                   // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:304
+                        {                                                                                                                   // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:308
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:389
-}                                                                                                                                           // MakerGen.cs:488
+            }                                                                                                                               // MakerGen.cs:356
+        }                                                                                                                                   // MakerGen.cs:395
+    }                                                                                                                                       // MakerGen.cs:379
+}                                                                                                                                           // MakerGen.cs:478

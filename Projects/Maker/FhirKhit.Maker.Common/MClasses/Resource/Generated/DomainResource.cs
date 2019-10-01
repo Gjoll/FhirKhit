@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:423
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
-using System.IO;                                                                                                                            // MakerGen.cs:425
-using System.Linq;                                                                                                                          // MakerGen.cs:426
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
-                                                                                                                                            // MakerGen.cs:428
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
-{                                                                                                                                           // MakerGen.cs:430
-    #region Json                                                                                                                            // MakerGen.cs:431
-    #if NEVER                                                                                                                               // MakerGen.cs:432
+using System;                                                                                                                               // MakerGen.cs:413
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:414
+using System.IO;                                                                                                                            // MakerGen.cs:415
+using System.Linq;                                                                                                                          // MakerGen.cs:416
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:417
+                                                                                                                                            // MakerGen.cs:418
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:419
+{                                                                                                                                           // MakerGen.cs:420
+    #region Json                                                                                                                            // MakerGen.cs:421
+    #if NEVER                                                                                                                               // MakerGen.cs:422
     {
       "resourceType": "StructureDefinition",
       "id": "DomainResource",
@@ -135,13 +135,13 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:435
+    #endregion                                                                                                                              // MakerGen.cs:425
     /// <summary>
     /// Fhir resource 'DomainResource'
     /// </summary>
     // 0. DomainResource
-    public class DomainResource : FhirKhit.Maker.Common.Resource.ResourceBase                                                               // MakerGen.cs:384
-    {                                                                                                                                       // MakerGen.cs:385
+    public class DomainResource : FhirKhit.Maker.Common.Resource.ResourceBase                                                               // MakerGen.cs:374
+    {                                                                                                                                       // MakerGen.cs:375
         // 1. DomainResource.text
         public MakerElementInstance Element_Text;                                                                                           // MakerGen.cs:232
         // 2. DomainResource.contained
@@ -150,8 +150,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Extension;                                                                                      // MakerGen.cs:232
         // 4. DomainResource.modifierExtension
         public MakerElementInstance Element_ModifierExtension;                                                                              // MakerGen.cs:232
-        public DomainResource()                                                                                                             // MakerGen.cs:393
-        {                                                                                                                                   // MakerGen.cs:394
+        public DomainResource()                                                                                                             // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
             {                                                                                                                               // MakerGen.cs:243
                 // 1. DomainResource.text
                 this.Element_Text = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -161,12 +161,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Complex.Narrative                                                                         // MakerGen.cs:343
-                        {                                                                                                                   // MakerGen.cs:344
-                        }                                                                                                                   // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Narrative                                                                         // MakerGen.cs:347
+                        {                                                                                                                   // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:349
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 2. DomainResource.contained
                 this.Element_Contained = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -176,12 +176,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
-                        new FhirKhit.Maker.Common.Resource.Resource                                                                         // MakerGen.cs:309
-                        {                                                                                                                   // MakerGen.cs:310
-                        }                                                                                                                   // MakerGen.cs:311
+                        new FhirKhit.Maker.Common.Resource.Resource                                                                         // MakerGen.cs:321
+                        {                                                                                                                   // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:325
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 3. DomainResource.extension
                 this.Element_Extension = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -193,7 +193,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:356
             {                                                                                                                               // MakerGen.cs:243
                 // 4. DomainResource.modifierExtension
                 this.Element_ModifierExtension = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -205,7 +205,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:366
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:389
-}                                                                                                                                           // MakerGen.cs:440
+            }                                                                                                                               // MakerGen.cs:356
+        }                                                                                                                                   // MakerGen.cs:395
+    }                                                                                                                                       // MakerGen.cs:379
+}                                                                                                                                           // MakerGen.cs:430

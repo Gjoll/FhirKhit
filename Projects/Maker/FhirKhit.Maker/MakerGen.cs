@@ -283,21 +283,31 @@ namespace FhirKhit.Maker
                             case "uuid":
                             case "url":
                             case "canonical":
-                                typesBlock
-                                    .AppendCode($"new {PrimitiveNameSpace}.{CleanName(type.Code)}")
-                                    .OpenBrace()
-                                    .CloseBrace(sep)
-                                    ;
+                                {
+                                    String sep1 = "";
+                                    typesBlock
+                                        .AppendCode($"new {PrimitiveNameSpace}.{CleanName(type.Code)}")
+                                        .OpenBrace()
+                                        .AppendProfiles(type.Profile, ref sep1)
+                                        .AppendTargetProfiles(type.TargetProfile, ref sep1)
+                                        .CloseBrace(sep)
+                                        ;
+                                }
                                 sep = ", ";
                                 break;
 
                             case "CodeableConcept":
                             case "Coding":
-                                typesBlock
-                                    .AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}")
-                                    .OpenBrace()
-                                    .CloseBrace(sep)
-                                    ;
+                                {
+                                    String sep1 = "";
+                                    typesBlock
+                                        .AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}")
+                                        .OpenBrace()
+                                        .AppendProfiles(type.Profile, ref sep1)
+                                        .AppendTargetProfiles(type.TargetProfile, ref sep1)
+                                        .CloseBrace(sep)
+                                        ;
+                                }
                                 sep = ", ";
                                 break;
 
@@ -305,37 +315,31 @@ namespace FhirKhit.Maker
                                 break;
 
                             case "Resource":
-                                typesBlock
-                                    .AppendCode($"new {ResourceNameSpace}.{CleanName(type.Code)}")
-                                    .OpenBrace()
-                                    .CloseBrace(sep)
-                                    ;
+                                {
+                                    String sep1 = "";
+                                    typesBlock
+                                        .AppendCode($"new {ResourceNameSpace}.{CleanName(type.Code)}")
+                                        .OpenBrace()
+                                        .AppendProfiles(type.Profile, ref sep1)
+                                        .AppendTargetProfiles(type.TargetProfile, ref sep1)
+                                        .CloseBrace(sep)
+                                        ;
+                                }
                                 sep = ", ";
                                 break;
 
                             case "Reference":
-                                typesBlock
-                                    .AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}")
-                                    .OpenBrace()
-                                    .CloseBrace(sep)
-                                    ;
+                                {
+                                    String sep1 = "";
+                                    typesBlock
+                                        .AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}")
+                                        .OpenBrace()
+                                        .AppendProfiles(type.Profile, ref sep1)
+                                        .AppendTargetProfiles(type.TargetProfile, ref sep1)
+                                        .CloseBrace(sep)
+                                        ;
+                                }
                                 sep = ", ";
-                                //if (type.Profile.Any())
-                                //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
-                                //if (type.TargetProfile.Count() == 0)
-                                //{
-                                //    this.gen.AddAbbreviatedResource(ResourceStr);
-                                //    OutputType($"Resource");
-                                //}
-                                //else
-                                //{
-                                //    foreach (string target in type.TargetProfile)
-                                //    {
-                                //        this.gen.AddAbbreviatedResource(target);
-                                //        String targetEntryName = target.LastUriPart().ToMachineName();
-                                //        OutputType($"{targetEntryName}");
-                                //    }
-                                //}
                                 break;
 
                             default:
@@ -345,20 +349,6 @@ namespace FhirKhit.Maker
                                     .CloseBrace(sep)
                                     ;
                                 sep = ", ";
-                                //if (type.Profile.Count() == 0)
-                                //{
-                                //    this.gen.AddAbbreviatedResource(type.Code);
-                                //    OutputType($"{type.Code.ToMachineName()}");
-                                //}
-                                //else
-                                //{
-                                //    foreach (string profile in type.Profile)
-                                //    {
-                                //        this.gen.AddAbbreviatedResource(profile);
-                                //        String profileName = profile.LastUriPart().ToMachineName();
-                                //        OutputType($"{profileName}");
-                                //    }
-                                //}
                                 break;
                         }
                     }
@@ -405,7 +395,7 @@ namespace FhirKhit.Maker
                 .CloseBrace()
                 ;
         }
-        
+
         void ProcessFhirResource(SDefInfo sDefInfo)
         {
             const String fcn = "ProcessFhirResource";
