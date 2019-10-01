@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "MedicationDispense",
@@ -599,22 +599,22 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'MedicationDispense'
     /// </summary>
     // 0. MedicationDispense
-    public class MedicationDispense : FhirKhit.Maker.Common.Resource.ResourceBase                                                           // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class MedicationDispense : FhirKhit.Maker.Common.Resource.ResourceBase                                                           // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 10. MedicationDispense.performer
-        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 11. MedicationDispense.performer.function
             public MakerElementInstance Element_Function;                                                                                   // MakerGen.cs:232
             // 12. MedicationDispense.performer.actor
             public MakerElementInstance Element_Actor;                                                                                      // MakerGen.cs:232
-            public Type_Performer()                                                                                                         // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Performer()                                                                                                         // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. MedicationDispense.performer.function
                     this.Element_Function = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -629,7 +629,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. MedicationDispense.performer.actor
                     this.Element_Actor = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -639,14 +639,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 24. MedicationDispense.substitution
-        public class Type_Substitution : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Substitution : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 25. MedicationDispense.substitution.wasSubstituted
             public MakerElementInstance Element_WasSubstituted;                                                                             // MakerGen.cs:232
             // 26. MedicationDispense.substitution.type
@@ -655,8 +658,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Reason;                                                                                     // MakerGen.cs:232
             // 28. MedicationDispense.substitution.responsibleParty
             public MakerElementInstance Element_ResponsibleParty;                                                                           // MakerGen.cs:232
-            public Type_Substitution()                                                                                                      // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Substitution()                                                                                                      // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 25. MedicationDispense.substitution.wasSubstituted
                     this.Element_WasSubstituted = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -671,7 +674,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 26. MedicationDispense.substitution.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -686,7 +689,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 27. MedicationDispense.substitution.reason
                     this.Element_Reason = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -701,7 +704,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 28. MedicationDispense.substitution.responsibleParty
                     this.Element_ResponsibleParty = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -711,11 +714,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. MedicationDispense.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. MedicationDispense.partOf
@@ -760,8 +766,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_DetectedIssue;                                                                                  // MakerGen.cs:232
         // 30. MedicationDispense.eventHistory
         public MakerElementInstance Element_EventHistory;                                                                                   // MakerGen.cs:232
-        public MedicationDispense()                                                                                                         // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public MedicationDispense()                                                                                                         // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. MedicationDispense.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -771,9 +777,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. MedicationDispense.partOf
                 this.Element_PartOf = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -783,9 +792,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. MedicationDispense.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -800,7 +812,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. MedicationDispense.statusReason[x]
                 this.Element_StatusReason = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -813,9 +825,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
                         {                                                                                                                   // MakerGen.cs:298
                         },                                                                                                                  // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. MedicationDispense.category
                 this.Element_Category = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -830,7 +845,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. MedicationDispense.medication[x]
                 this.Element_Medication = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -843,9 +858,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
                         {                                                                                                                   // MakerGen.cs:298
                         },                                                                                                                  // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. MedicationDispense.subject
                 this.Element_Subject = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -855,9 +873,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. MedicationDispense.context
                 this.Element_Context = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -867,9 +888,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 9. MedicationDispense.supportingInformation
                 this.Element_SupportingInformation = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -879,9 +903,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 13. MedicationDispense.location
                 this.Element_Location = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -891,9 +918,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 14. MedicationDispense.authorizingPrescription
                 this.Element_AuthorizingPrescription = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -903,9 +933,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 15. MedicationDispense.type
                 this.Element_Type = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -920,7 +953,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 16. MedicationDispense.quantity
                 this.Element_Quantity = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -930,9 +963,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Quantity                                                                          // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 17. MedicationDispense.daysSupply
                 this.Element_DaysSupply = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -942,9 +978,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Quantity                                                                          // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 18. MedicationDispense.whenPrepared
                 this.Element_WhenPrepared = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -959,7 +998,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 19. MedicationDispense.whenHandedOver
                 this.Element_WhenHandedOver = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -974,7 +1013,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 20. MedicationDispense.destination
                 this.Element_Destination = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -984,9 +1023,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 21. MedicationDispense.receiver
                 this.Element_Receiver = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -996,9 +1038,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 22. MedicationDispense.note
                 this.Element_Note = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1008,9 +1053,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Annotation                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 23. MedicationDispense.dosageInstruction
                 this.Element_DosageInstruction = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -1020,9 +1068,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Dosage                                                                            // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 29. MedicationDispense.detectedIssue
                 this.Element_DetectedIssue = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1032,9 +1083,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 30. MedicationDispense.eventHistory
                 this.Element_EventHistory = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1044,9 +1098,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

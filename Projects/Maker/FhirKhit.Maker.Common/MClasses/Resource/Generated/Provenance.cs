@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "Provenance",
@@ -361,16 +361,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'Provenance'
     /// </summary>
     // 0. Provenance
-    public class Provenance : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class Provenance : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 8. Provenance.agent
-        public class Type_Agent : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Agent : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 9. Provenance.agent.type
             public MakerElementInstance Element_Type;                                                                                       // MakerGen.cs:232
             // 10. Provenance.agent.role
@@ -379,8 +379,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Who;                                                                                        // MakerGen.cs:232
             // 12. Provenance.agent.onBehalfOf
             public MakerElementInstance Element_OnBehalfOf;                                                                                 // MakerGen.cs:232
-            public Type_Agent()                                                                                                             // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Agent()                                                                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 9. Provenance.agent.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -395,7 +395,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 10. Provenance.agent.role
                     this.Element_Role = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -410,7 +410,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. Provenance.agent.who
                     this.Element_Who = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -420,9 +420,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. Provenance.agent.onBehalfOf
                     this.Element_OnBehalfOf = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -432,22 +435,25 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 13. Provenance.entity
-        public class Type_Entity : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Entity : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 14. Provenance.entity.role
             public MakerElementInstance Element_Role;                                                                                       // MakerGen.cs:232
             // 15. Provenance.entity.what
             public MakerElementInstance Element_What;                                                                                       // MakerGen.cs:232
             // 16. Provenance.entity.agent
             public MakerElementInstance Element_Agent;                                                                                      // MakerGen.cs:232
-            public Type_Entity()                                                                                                            // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Entity()                                                                                                            // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 14. Provenance.entity.role
                     this.Element_Role = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -462,7 +468,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 15. Provenance.entity.what
                     this.Element_What = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -472,9 +478,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 16. Provenance.entity.agent
                     this.Element_Agent = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -486,9 +495,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. Provenance.target
         public MakerElementInstance Element_Target;                                                                                         // MakerGen.cs:232
         // 2. Provenance.occurred[x]
@@ -505,8 +514,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Activity;                                                                                       // MakerGen.cs:232
         // 17. Provenance.signature
         public MakerElementInstance Element_Signature;                                                                                      // MakerGen.cs:232
-        public Provenance()                                                                                                                 // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public Provenance()                                                                                                                 // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Provenance.target
                 this.Element_Target = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -516,9 +525,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. Provenance.occurred[x]
                 this.Element_Occurred = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -528,12 +540,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Period                                                                            // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        },                                                                                                                  // MakerGen.cs:345
                         new FhirKhit.Maker.Common.Primitive.DateTime                                                                        // MakerGen.cs:287
                         {                                                                                                                   // MakerGen.cs:288
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. Provenance.recorded
                 this.Element_Recorded = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -548,7 +563,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. Provenance.policy
                 this.Element_Policy = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -563,7 +578,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. Provenance.location
                 this.Element_Location = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -573,9 +588,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. Provenance.reason
                 this.Element_Reason = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -590,7 +608,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. Provenance.activity
                 this.Element_Activity = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -605,7 +623,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 17. Provenance.signature
                 this.Element_Signature = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -615,9 +633,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Signature                                                                         // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

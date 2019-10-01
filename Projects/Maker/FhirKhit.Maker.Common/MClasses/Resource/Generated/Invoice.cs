@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "Invoice",
@@ -453,22 +453,22 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'Invoice'
     /// </summary>
     // 0. Invoice
-    public class Invoice : FhirKhit.Maker.Common.Resource.ResourceBase                                                                      // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class Invoice : FhirKhit.Maker.Common.Resource.ResourceBase                                                                      // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 8. Invoice.participant
-        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 9. Invoice.participant.role
             public MakerElementInstance Element_Role;                                                                                       // MakerGen.cs:232
             // 10. Invoice.participant.actor
             public MakerElementInstance Element_Actor;                                                                                      // MakerGen.cs:232
-            public Type_Participant()                                                                                                       // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Participant()                                                                                                       // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 9. Invoice.participant.role
                     this.Element_Role = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -483,7 +483,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 10. Invoice.participant.actor
                     this.Element_Actor = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -493,17 +493,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 13. Invoice.lineItem
-        public class Type_LineItem : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_LineItem : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 16. Invoice.lineItem.priceComponent
-            public class Type_PriceComponent : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_PriceComponent : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 17. Invoice.lineItem.priceComponent.type
                 public MakerElementInstance Element_Type;                                                                                   // MakerGen.cs:232
                 // 18. Invoice.lineItem.priceComponent.code
@@ -512,8 +515,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_Factor;                                                                                 // MakerGen.cs:232
                 // 20. Invoice.lineItem.priceComponent.amount
                 public MakerElementInstance Element_Amount;                                                                                 // MakerGen.cs:232
-                public Type_PriceComponent()                                                                                                // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_PriceComponent()                                                                                                // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 17. Invoice.lineItem.priceComponent.type
                         this.Element_Type = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -528,7 +531,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 18. Invoice.lineItem.priceComponent.code
                         this.Element_Code = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -543,7 +546,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 19. Invoice.lineItem.priceComponent.factor
                         this.Element_Factor = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -558,7 +561,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 20. Invoice.lineItem.priceComponent.amount
                         this.Element_Amount = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -568,17 +571,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Money                                                                     // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                }                                                                                                           // MakerGen.cs:345
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 14. Invoice.lineItem.sequence
             public MakerElementInstance Element_Sequence;                                                                                   // MakerGen.cs:232
             // 15. Invoice.lineItem.chargeItem[x]
             public MakerElementInstance Element_ChargeItem;                                                                                 // MakerGen.cs:232
-            public Type_LineItem()                                                                                                          // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_LineItem()                                                                                                          // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 14. Invoice.lineItem.sequence
                     this.Element_Sequence = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -593,7 +599,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 15. Invoice.lineItem.chargeItem[x]
                     this.Element_ChargeItem = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -603,14 +609,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            },                                                                                                              // MakerGen.cs:320
                             new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
                             {                                                                                                               // MakerGen.cs:298
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. Invoice.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. Invoice.status
@@ -639,8 +648,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_PaymentTerms;                                                                                   // MakerGen.cs:232
         // 25. Invoice.note
         public MakerElementInstance Element_Note;                                                                                           // MakerGen.cs:232
-        public Invoice()                                                                                                                    // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public Invoice()                                                                                                                    // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Invoice.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -650,9 +659,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. Invoice.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -667,7 +679,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. Invoice.cancelledReason
                 this.Element_CancelledReason = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -682,7 +694,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. Invoice.type
                 this.Element_Type = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -697,7 +709,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. Invoice.subject
                 this.Element_Subject = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -707,9 +719,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. Invoice.recipient
                 this.Element_Recipient = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -719,9 +734,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. Invoice.date
                 this.Element_Date = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -736,7 +754,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 11. Invoice.issuer
                 this.Element_Issuer = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -746,9 +764,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 12. Invoice.account
                 this.Element_Account = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -758,9 +779,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 21. Invoice.totalPriceComponent
                 this.Element_TotalPriceComponent = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -772,7 +796,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     {                                                                                                                       // MakerGen.cs:251
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 22. Invoice.totalNet
                 this.Element_TotalNet = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -782,9 +806,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Money                                                                             // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 23. Invoice.totalGross
                 this.Element_TotalGross = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -794,9 +821,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Money                                                                             // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 24. Invoice.paymentTerms
                 this.Element_PaymentTerms = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -811,7 +841,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 25. Invoice.note
                 this.Element_Note = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -821,9 +851,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Annotation                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "CoverageEligibilityResponse",
@@ -769,30 +769,30 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'CoverageEligibilityResponse'
     /// </summary>
     // 0. CoverageEligibilityResponse
-    public class CoverageEligibilityResponse : FhirKhit.Maker.Common.Resource.ResourceBase                                                  // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class CoverageEligibilityResponse : FhirKhit.Maker.Common.Resource.ResourceBase                                                  // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 12. CoverageEligibilityResponse.insurance
-        public class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 16. CoverageEligibilityResponse.insurance.item
-            public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 27. CoverageEligibilityResponse.insurance.item.benefit
-                public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 28. CoverageEligibilityResponse.insurance.item.benefit.type
                     public MakerElementInstance Element_Type;                                                                               // MakerGen.cs:232
                     // 29. CoverageEligibilityResponse.insurance.item.benefit.allowed[x]
                     public MakerElementInstance Element_Allowed;                                                                            // MakerGen.cs:232
                     // 30. CoverageEligibilityResponse.insurance.item.benefit.used[x]
                     public MakerElementInstance Element_Used;                                                                               // MakerGen.cs:232
-                    public Type_Benefit()                                                                                                   // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Benefit()                                                                                                   // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 28. CoverageEligibilityResponse.insurance.item.benefit.type
                             this.Element_Type = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -807,7 +807,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:299
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 29. CoverageEligibilityResponse.insurance.item.benefit.allowed[x]
                             this.Element_Allowed = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -823,9 +823,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
                                     {                                                                                                       // MakerGen.cs:288
                                     },                                                                                                      // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Complex.Money                                                                 // MakerGen.cs:343
+                                    {                                                                                                       // MakerGen.cs:344
+                                    }                                                                                                       // MakerGen.cs:345
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 30. CoverageEligibilityResponse.insurance.item.benefit.used[x]
                             this.Element_Used = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -841,11 +844,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:287
                                     {                                                                                                       // MakerGen.cs:288
                                     },                                                                                                      // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Complex.Money                                                                 // MakerGen.cs:343
+                                    {                                                                                                       // MakerGen.cs:344
+                                    }                                                                                                       // MakerGen.cs:345
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 17. CoverageEligibilityResponse.insurance.item.category
                 public MakerElementInstance Element_Category;                                                                               // MakerGen.cs:232
                 // 18. CoverageEligibilityResponse.insurance.item.productOrService
@@ -872,8 +878,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_AuthorizationSupporting;                                                                // MakerGen.cs:232
                 // 33. CoverageEligibilityResponse.insurance.item.authorizationUrl
                 public MakerElementInstance Element_AuthorizationUrl;                                                                       // MakerGen.cs:232
-                public Type_Item()                                                                                                          // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Item()                                                                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 17. CoverageEligibilityResponse.insurance.item.category
                         this.Element_Category = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -888,7 +894,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 18. CoverageEligibilityResponse.insurance.item.productOrService
                         this.Element_ProductOrService = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -903,7 +909,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 19. CoverageEligibilityResponse.insurance.item.modifier
                         this.Element_Modifier = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -918,7 +924,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 20. CoverageEligibilityResponse.insurance.item.provider
                         this.Element_Provider = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -928,9 +934,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Reference                                                                 // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:320
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 21. CoverageEligibilityResponse.insurance.item.excluded
                         this.Element_Excluded = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -945,7 +954,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 22. CoverageEligibilityResponse.insurance.item.name
                         this.Element_Name = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -960,7 +969,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 23. CoverageEligibilityResponse.insurance.item.description
                         this.Element_Description = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -975,7 +984,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 24. CoverageEligibilityResponse.insurance.item.network
                         this.Element_Network = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -990,7 +999,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 25. CoverageEligibilityResponse.insurance.item.unit
                         this.Element_Unit = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1005,7 +1014,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 26. CoverageEligibilityResponse.insurance.item.term
                         this.Element_Term = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1020,7 +1029,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 31. CoverageEligibilityResponse.insurance.item.authorizationRequired
                         this.Element_AuthorizationRequired = new MakerElementInstance                                                       // MakerGen.cs:245
@@ -1035,7 +1044,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 32. CoverageEligibilityResponse.insurance.item.authorizationSupporting
                         this.Element_AuthorizationSupporting = new MakerElementInstance                                                     // MakerGen.cs:245
@@ -1050,7 +1059,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 33. CoverageEligibilityResponse.insurance.item.authorizationUrl
                         this.Element_AuthorizationUrl = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -1065,17 +1074,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 13. CoverageEligibilityResponse.insurance.coverage
             public MakerElementInstance Element_Coverage;                                                                                   // MakerGen.cs:232
             // 14. CoverageEligibilityResponse.insurance.inforce
             public MakerElementInstance Element_Inforce;                                                                                    // MakerGen.cs:232
             // 15. CoverageEligibilityResponse.insurance.benefitPeriod
             public MakerElementInstance Element_BenefitPeriod;                                                                              // MakerGen.cs:232
-            public Type_Insurance()                                                                                                         // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Insurance()                                                                                                         // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 13. CoverageEligibilityResponse.insurance.coverage
                     this.Element_Coverage = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1085,9 +1094,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 14. CoverageEligibilityResponse.insurance.inforce
                     this.Element_Inforce = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1102,7 +1114,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 15. CoverageEligibilityResponse.insurance.benefitPeriod
                     this.Element_BenefitPeriod = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -1112,18 +1124,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 36. CoverageEligibilityResponse.error
-        public class Type_Error : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Error : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 37. CoverageEligibilityResponse.error.code
             public MakerElementInstance Element_Code;                                                                                       // MakerGen.cs:232
-            public Type_Error()                                                                                                             // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Error()                                                                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 37. CoverageEligibilityResponse.error.code
                     this.Element_Code = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1138,9 +1153,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. CoverageEligibilityResponse.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. CoverageEligibilityResponse.status
@@ -1167,8 +1182,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_PreAuthRef;                                                                                     // MakerGen.cs:232
         // 35. CoverageEligibilityResponse.form
         public MakerElementInstance Element_Form;                                                                                           // MakerGen.cs:232
-        public CoverageEligibilityResponse()                                                                                                // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public CoverageEligibilityResponse()                                                                                                // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. CoverageEligibilityResponse.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1178,9 +1193,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. CoverageEligibilityResponse.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1195,7 +1213,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. CoverageEligibilityResponse.purpose
                 this.Element_Purpose = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1210,7 +1228,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. CoverageEligibilityResponse.patient
                 this.Element_Patient = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1220,9 +1238,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. CoverageEligibilityResponse.serviced[x]
                 this.Element_Serviced = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1235,9 +1256,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         new FhirKhit.Maker.Common.Primitive.Date                                                                            // MakerGen.cs:287
                         {                                                                                                                   // MakerGen.cs:288
                         },                                                                                                                  // MakerGen.cs:289
+                        new FhirKhit.Maker.Common.Complex.Period                                                                            // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. CoverageEligibilityResponse.created
                 this.Element_Created = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1252,7 +1276,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. CoverageEligibilityResponse.requestor
                 this.Element_Requestor = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1262,9 +1286,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. CoverageEligibilityResponse.request
                 this.Element_Request = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1274,9 +1301,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 9. CoverageEligibilityResponse.outcome
                 this.Element_Outcome = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1291,7 +1321,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 10. CoverageEligibilityResponse.disposition
                 this.Element_Disposition = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1306,7 +1336,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 11. CoverageEligibilityResponse.insurer
                 this.Element_Insurer = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1316,9 +1346,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 34. CoverageEligibilityResponse.preAuthRef
                 this.Element_PreAuthRef = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1333,7 +1366,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 35. CoverageEligibilityResponse.form
                 this.Element_Form = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1348,7 +1381,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

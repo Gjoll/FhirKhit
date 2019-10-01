@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "InsurancePlan",
@@ -718,16 +718,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'InsurancePlan'
     /// </summary>
     // 0. InsurancePlan
-    public class InsurancePlan : FhirKhit.Maker.Common.Resource.ResourceBase                                                                // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class InsurancePlan : FhirKhit.Maker.Common.Resource.ResourceBase                                                                // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 10. InsurancePlan.contact
-        public class Type_Contact : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Contact : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 11. InsurancePlan.contact.purpose
             public MakerElementInstance Element_Purpose;                                                                                    // MakerGen.cs:232
             // 12. InsurancePlan.contact.name
@@ -736,8 +736,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Telecom;                                                                                    // MakerGen.cs:232
             // 14. InsurancePlan.contact.address
             public MakerElementInstance Element_Address;                                                                                    // MakerGen.cs:232
-            public Type_Contact()                                                                                                           // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Contact()                                                                                                           // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. InsurancePlan.contact.purpose
                     this.Element_Purpose = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -752,7 +752,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. InsurancePlan.contact.name
                     this.Element_Name = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -762,9 +762,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.HumanName                                                                     // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 13. InsurancePlan.contact.telecom
                     this.Element_Telecom = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -774,9 +777,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.ContactPoint                                                                  // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 14. InsurancePlan.contact.address
                     this.Element_Address = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -786,26 +792,29 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Address                                                                       // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 17. InsurancePlan.coverage
-        public class Type_Coverage : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Coverage : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 20. InsurancePlan.coverage.benefit
-            public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 23. InsurancePlan.coverage.benefit.limit
-                public class Type_Limit : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Limit : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 24. InsurancePlan.coverage.benefit.limit.value
                     public MakerElementInstance Element_Value;                                                                              // MakerGen.cs:232
                     // 25. InsurancePlan.coverage.benefit.limit.code
                     public MakerElementInstance Element_Code;                                                                               // MakerGen.cs:232
-                    public Type_Limit()                                                                                                     // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Limit()                                                                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 24. InsurancePlan.coverage.benefit.limit.value
                             this.Element_Value = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -815,9 +824,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
+                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:343
+                                    {                                                                                                       // MakerGen.cs:344
+                                    }                                                                                                       // MakerGen.cs:345
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 25. InsurancePlan.coverage.benefit.limit.code
                             this.Element_Code = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -832,15 +844,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:299
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 21. InsurancePlan.coverage.benefit.type
                 public MakerElementInstance Element_Type;                                                                                   // MakerGen.cs:232
                 // 22. InsurancePlan.coverage.benefit.requirement
                 public MakerElementInstance Element_Requirement;                                                                            // MakerGen.cs:232
-                public Type_Benefit()                                                                                                       // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Benefit()                                                                                                       // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 21. InsurancePlan.coverage.benefit.type
                         this.Element_Type = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -855,7 +867,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 22. InsurancePlan.coverage.benefit.requirement
                         this.Element_Requirement = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -870,15 +882,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 18. InsurancePlan.coverage.type
             public MakerElementInstance Element_Type;                                                                                       // MakerGen.cs:232
             // 19. InsurancePlan.coverage.network
             public MakerElementInstance Element_Network;                                                                                    // MakerGen.cs:232
-            public Type_Coverage()                                                                                                          // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Coverage()                                                                                                          // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 18. InsurancePlan.coverage.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -893,7 +905,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 19. InsurancePlan.coverage.network
                     this.Element_Network = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -903,17 +915,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 26. InsurancePlan.plan
-        public class Type_Plan : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Plan : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 31. InsurancePlan.plan.generalCost
-            public class Type_GeneralCost : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_GeneralCost : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 32. InsurancePlan.plan.generalCost.type
                 public MakerElementInstance Element_Type;                                                                                   // MakerGen.cs:232
                 // 33. InsurancePlan.plan.generalCost.groupSize
@@ -922,8 +937,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_Cost;                                                                                   // MakerGen.cs:232
                 // 35. InsurancePlan.plan.generalCost.comment
                 public MakerElementInstance Element_Comment;                                                                                // MakerGen.cs:232
-                public Type_GeneralCost()                                                                                                   // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_GeneralCost()                                                                                                   // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 32. InsurancePlan.plan.generalCost.type
                         this.Element_Type = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -938,7 +953,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 33. InsurancePlan.plan.generalCost.groupSize
                         this.Element_GroupSize = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -953,7 +968,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 34. InsurancePlan.plan.generalCost.cost
                         this.Element_Cost = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -963,9 +978,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Money                                                                     // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                }                                                                                                           // MakerGen.cs:345
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 35. InsurancePlan.plan.generalCost.comment
                         this.Element_Comment = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -980,18 +998,18 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 36. InsurancePlan.plan.specificCost
-            public class Type_SpecificCost : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_SpecificCost : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 38. InsurancePlan.plan.specificCost.benefit
-                public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 40. InsurancePlan.plan.specificCost.benefit.cost
-                    public class Type_Cost : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:360
-                    {                                                                                                                       // MakerGen.cs:361
+                    public class Type_Cost : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:384
+                    {                                                                                                                       // MakerGen.cs:385
                         // 41. InsurancePlan.plan.specificCost.benefit.cost.type
                         public MakerElementInstance Element_Type;                                                                           // MakerGen.cs:232
                         // 42. InsurancePlan.plan.specificCost.benefit.cost.applicability
@@ -1000,8 +1018,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         public MakerElementInstance Element_Qualifiers;                                                                     // MakerGen.cs:232
                         // 44. InsurancePlan.plan.specificCost.benefit.cost.value
                         public MakerElementInstance Element_Value;                                                                          // MakerGen.cs:232
-                        public Type_Cost()                                                                                                  // MakerGen.cs:369
-                        {                                                                                                                   // MakerGen.cs:370
+                        public Type_Cost()                                                                                                  // MakerGen.cs:393
+                        {                                                                                                                   // MakerGen.cs:394
                             {                                                                                                               // MakerGen.cs:243
                                 // 41. InsurancePlan.plan.specificCost.benefit.cost.type
                                 this.Element_Type = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -1016,7 +1034,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                         }                                                                                                   // MakerGen.cs:299
                                     }                                                                                                       // MakerGen.cs:253
                                 };                                                                                                          // MakerGen.cs:254
-                            }                                                                                                               // MakerGen.cs:342
+                            }                                                                                                               // MakerGen.cs:366
                             {                                                                                                               // MakerGen.cs:243
                                 // 42. InsurancePlan.plan.specificCost.benefit.cost.applicability
                                 this.Element_Applicability = new MakerElementInstance                                                       // MakerGen.cs:245
@@ -1031,7 +1049,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                         }                                                                                                   // MakerGen.cs:299
                                     }                                                                                                       // MakerGen.cs:253
                                 };                                                                                                          // MakerGen.cs:254
-                            }                                                                                                               // MakerGen.cs:342
+                            }                                                                                                               // MakerGen.cs:366
                             {                                                                                                               // MakerGen.cs:243
                                 // 43. InsurancePlan.plan.specificCost.benefit.cost.qualifiers
                                 this.Element_Qualifiers = new MakerElementInstance                                                          // MakerGen.cs:245
@@ -1046,7 +1064,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                         }                                                                                                   // MakerGen.cs:299
                                     }                                                                                                       // MakerGen.cs:253
                                 };                                                                                                          // MakerGen.cs:254
-                            }                                                                                                               // MakerGen.cs:342
+                            }                                                                                                               // MakerGen.cs:366
                             {                                                                                                               // MakerGen.cs:243
                                 // 44. InsurancePlan.plan.specificCost.benefit.cost.value
                                 this.Element_Value = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -1056,15 +1074,18 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     Max = 1,                                                                                                // MakerGen.cs:249
                                     Types = new MakerBaseType[]                                                                             // MakerGen.cs:250
                                     {                                                                                                       // MakerGen.cs:251
+                                        new FhirKhit.Maker.Common.Complex.Quantity                                                          // MakerGen.cs:343
+                                        {                                                                                                   // MakerGen.cs:344
+                                        }                                                                                                   // MakerGen.cs:345
                                     }                                                                                                       // MakerGen.cs:253
                                 };                                                                                                          // MakerGen.cs:254
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:381
-                    }                                                                                                                       // MakerGen.cs:365
+                            }                                                                                                               // MakerGen.cs:366
+                        }                                                                                                                   // MakerGen.cs:405
+                    }                                                                                                                       // MakerGen.cs:389
                     // 39. InsurancePlan.plan.specificCost.benefit.type
                     public MakerElementInstance Element_Type;                                                                               // MakerGen.cs:232
-                    public Type_Benefit()                                                                                                   // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Benefit()                                                                                                   // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 39. InsurancePlan.plan.specificCost.benefit.type
                             this.Element_Type = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1079,13 +1100,13 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:299
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 37. InsurancePlan.plan.specificCost.category
                 public MakerElementInstance Element_Category;                                                                               // MakerGen.cs:232
-                public Type_SpecificCost()                                                                                                  // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_SpecificCost()                                                                                                  // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 37. InsurancePlan.plan.specificCost.category
                         this.Element_Category = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1100,9 +1121,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 27. InsurancePlan.plan.identifier
             public MakerElementInstance Element_Identifier;                                                                                 // MakerGen.cs:232
             // 28. InsurancePlan.plan.type
@@ -1111,8 +1132,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_CoverageArea;                                                                               // MakerGen.cs:232
             // 30. InsurancePlan.plan.network
             public MakerElementInstance Element_Network;                                                                                    // MakerGen.cs:232
-            public Type_Plan()                                                                                                              // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Plan()                                                                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 27. InsurancePlan.plan.identifier
                     this.Element_Identifier = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1122,9 +1143,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 28. InsurancePlan.plan.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1139,7 +1163,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 29. InsurancePlan.plan.coverageArea
                     this.Element_CoverageArea = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1149,9 +1173,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 30. InsurancePlan.plan.network
                     this.Element_Network = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1161,11 +1188,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. InsurancePlan.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. InsurancePlan.status
@@ -1188,8 +1218,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Endpoint;                                                                                       // MakerGen.cs:232
         // 16. InsurancePlan.network
         public MakerElementInstance Element_Network;                                                                                        // MakerGen.cs:232
-        public InsurancePlan()                                                                                                              // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public InsurancePlan()                                                                                                              // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. InsurancePlan.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1199,9 +1229,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. InsurancePlan.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1216,7 +1249,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. InsurancePlan.type
                 this.Element_Type = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1231,7 +1264,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. InsurancePlan.name
                 this.Element_Name = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1246,7 +1279,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. InsurancePlan.alias
                 this.Element_Alias = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -1261,7 +1294,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. InsurancePlan.period
                 this.Element_Period = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1271,9 +1304,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Period                                                                            // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. InsurancePlan.ownedBy
                 this.Element_OwnedBy = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1283,9 +1319,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. InsurancePlan.administeredBy
                 this.Element_AdministeredBy = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1295,9 +1334,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 9. InsurancePlan.coverageArea
                 this.Element_CoverageArea = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1307,9 +1349,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 15. InsurancePlan.endpoint
                 this.Element_Endpoint = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1319,9 +1364,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 16. InsurancePlan.network
                 this.Element_Network = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1331,9 +1379,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

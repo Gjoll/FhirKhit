@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "Encounter",
@@ -948,22 +948,22 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'Encounter'
     /// </summary>
     // 0. Encounter
-    public class Encounter : FhirKhit.Maker.Common.Resource.ResourceBase                                                                    // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class Encounter : FhirKhit.Maker.Common.Resource.ResourceBase                                                                    // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 3. Encounter.statusHistory
-        public class Type_StatusHistory : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_StatusHistory : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 4. Encounter.statusHistory.status
             public MakerElementInstance Element_Status;                                                                                     // MakerGen.cs:232
             // 5. Encounter.statusHistory.period
             public MakerElementInstance Element_Period;                                                                                     // MakerGen.cs:232
-            public Type_StatusHistory()                                                                                                     // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_StatusHistory()                                                                                                     // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 4. Encounter.statusHistory.status
                     this.Element_Status = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -978,7 +978,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 5. Encounter.statusHistory.period
                     this.Element_Period = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -988,20 +988,23 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 7. Encounter.classHistory
-        public class Type_ClassHistory : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_ClassHistory : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 8. Encounter.classHistory.class
             public MakerElementInstance Element_Class;                                                                                      // MakerGen.cs:232
             // 9. Encounter.classHistory.period
             public MakerElementInstance Element_Period;                                                                                     // MakerGen.cs:232
-            public Type_ClassHistory()                                                                                                      // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_ClassHistory()                                                                                                      // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 8. Encounter.classHistory.class
                     this.Element_Class = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1016,7 +1019,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 9. Encounter.classHistory.period
                     this.Element_Period = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1026,22 +1029,25 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 16. Encounter.participant
-        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 17. Encounter.participant.type
             public MakerElementInstance Element_Type;                                                                                       // MakerGen.cs:232
             // 18. Encounter.participant.period
             public MakerElementInstance Element_Period;                                                                                     // MakerGen.cs:232
             // 19. Encounter.participant.individual
             public MakerElementInstance Element_Individual;                                                                                 // MakerGen.cs:232
-            public Type_Participant()                                                                                                       // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Participant()                                                                                                       // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 17. Encounter.participant.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1056,7 +1062,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 18. Encounter.participant.period
                     this.Element_Period = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1066,9 +1072,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 19. Encounter.participant.individual
                     this.Element_Individual = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1078,22 +1087,25 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 25. Encounter.diagnosis
-        public class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 26. Encounter.diagnosis.condition
             public MakerElementInstance Element_Condition;                                                                                  // MakerGen.cs:232
             // 27. Encounter.diagnosis.use
             public MakerElementInstance Element_Use;                                                                                        // MakerGen.cs:232
             // 28. Encounter.diagnosis.rank
             public MakerElementInstance Element_Rank;                                                                                       // MakerGen.cs:232
-            public Type_Diagnosis()                                                                                                         // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Diagnosis()                                                                                                         // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 26. Encounter.diagnosis.condition
                     this.Element_Condition = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1103,9 +1115,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 27. Encounter.diagnosis.use
                     this.Element_Use = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1120,7 +1135,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 28. Encounter.diagnosis.rank
                     this.Element_Rank = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1135,12 +1150,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 30. Encounter.hospitalization
-        public class Type_Hospitalization : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Hospitalization : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 31. Encounter.hospitalization.preAdmissionIdentifier
             public MakerElementInstance Element_PreAdmissionIdentifier;                                                                     // MakerGen.cs:232
             // 32. Encounter.hospitalization.origin
@@ -1159,8 +1174,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Destination;                                                                                // MakerGen.cs:232
             // 39. Encounter.hospitalization.dischargeDisposition
             public MakerElementInstance Element_DischargeDisposition;                                                                       // MakerGen.cs:232
-            public Type_Hospitalization()                                                                                                   // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Hospitalization()                                                                                                   // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 31. Encounter.hospitalization.preAdmissionIdentifier
                     this.Element_PreAdmissionIdentifier = new MakerElementInstance                                                          // MakerGen.cs:245
@@ -1170,9 +1185,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 32. Encounter.hospitalization.origin
                     this.Element_Origin = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1182,9 +1200,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 33. Encounter.hospitalization.admitSource
                     this.Element_AdmitSource = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1199,7 +1220,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 34. Encounter.hospitalization.reAdmission
                     this.Element_ReAdmission = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1214,7 +1235,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 35. Encounter.hospitalization.dietPreference
                     this.Element_DietPreference = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -1229,7 +1250,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 36. Encounter.hospitalization.specialCourtesy
                     this.Element_SpecialCourtesy = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -1244,7 +1265,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 37. Encounter.hospitalization.specialArrangement
                     this.Element_SpecialArrangement = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -1259,7 +1280,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 38. Encounter.hospitalization.destination
                     this.Element_Destination = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1269,9 +1290,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 39. Encounter.hospitalization.dischargeDisposition
                     this.Element_DischargeDisposition = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -1286,12 +1310,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 40. Encounter.location
-        public class Type_Location : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Location : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 41. Encounter.location.location
             public MakerElementInstance Element_Location;                                                                                   // MakerGen.cs:232
             // 42. Encounter.location.status
@@ -1300,8 +1324,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_PhysicalType;                                                                               // MakerGen.cs:232
             // 44. Encounter.location.period
             public MakerElementInstance Element_Period;                                                                                     // MakerGen.cs:232
-            public Type_Location()                                                                                                          // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Location()                                                                                                          // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 41. Encounter.location.location
                     this.Element_Location = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1311,9 +1335,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 42. Encounter.location.status
                     this.Element_Status = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1328,7 +1355,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 43. Encounter.location.physicalType
                     this.Element_PhysicalType = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1343,7 +1370,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 44. Encounter.location.period
                     this.Element_Period = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1353,11 +1380,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. Encounter.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. Encounter.status
@@ -1392,8 +1422,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_ServiceProvider;                                                                                // MakerGen.cs:232
         // 46. Encounter.partOf
         public MakerElementInstance Element_PartOf;                                                                                         // MakerGen.cs:232
-        public Encounter()                                                                                                                  // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public Encounter()                                                                                                                  // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Encounter.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1403,9 +1433,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. Encounter.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1420,7 +1453,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. Encounter.class
                 this.Element_Class = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -1435,7 +1468,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 10. Encounter.type
                 this.Element_Type = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1450,7 +1483,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 11. Encounter.serviceType
                 this.Element_ServiceType = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1465,7 +1498,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 12. Encounter.priority
                 this.Element_Priority = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1480,7 +1513,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 13. Encounter.subject
                 this.Element_Subject = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1490,9 +1523,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 14. Encounter.episodeOfCare
                 this.Element_EpisodeOfCare = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1502,9 +1538,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 15. Encounter.basedOn
                 this.Element_BasedOn = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1514,9 +1553,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 20. Encounter.appointment
                 this.Element_Appointment = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1526,9 +1568,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 21. Encounter.period
                 this.Element_Period = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1538,9 +1583,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Period                                                                            // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 22. Encounter.length
                 this.Element_Length = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1550,9 +1598,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Duration                                                                          // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 23. Encounter.reasonCode
                 this.Element_ReasonCode = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1567,7 +1618,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 24. Encounter.reasonReference
                 this.Element_ReasonReference = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1577,9 +1628,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 29. Encounter.account
                 this.Element_Account = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1589,9 +1643,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 45. Encounter.serviceProvider
                 this.Element_ServiceProvider = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1601,9 +1658,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 46. Encounter.partOf
                 this.Element_PartOf = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1613,9 +1673,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

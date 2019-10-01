@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "Consent",
@@ -709,22 +709,22 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'Consent'
     /// </summary>
     // 0. Consent
-    public class Consent : FhirKhit.Maker.Common.Resource.ResourceBase                                                                      // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class Consent : FhirKhit.Maker.Common.Resource.ResourceBase                                                                      // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 10. Consent.policy
-        public class Type_Policy : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Policy : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 11. Consent.policy.authority
             public MakerElementInstance Element_Authority;                                                                                  // MakerGen.cs:232
             // 12. Consent.policy.uri
             public MakerElementInstance Element_Uri;                                                                                        // MakerGen.cs:232
-            public Type_Policy()                                                                                                            // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Policy()                                                                                                            // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. Consent.policy.authority
                     this.Element_Authority = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -739,7 +739,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. Consent.policy.uri
                     this.Element_Uri = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -754,20 +754,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 14. Consent.verification
-        public class Type_Verification : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Verification : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 15. Consent.verification.verified
             public MakerElementInstance Element_Verified;                                                                                   // MakerGen.cs:232
             // 16. Consent.verification.verifiedWith
             public MakerElementInstance Element_VerifiedWith;                                                                               // MakerGen.cs:232
             // 17. Consent.verification.verificationDate
             public MakerElementInstance Element_VerificationDate;                                                                           // MakerGen.cs:232
-            public Type_Verification()                                                                                                      // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Verification()                                                                                                      // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 15. Consent.verification.verified
                     this.Element_Verified = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -782,7 +782,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 16. Consent.verification.verifiedWith
                     this.Element_VerifiedWith = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -792,9 +792,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 17. Consent.verification.verificationDate
                     this.Element_VerificationDate = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -809,21 +812,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 18. Consent.provision
-        public class Type_Provision : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Provision : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 21. Consent.provision.actor
-            public class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 22. Consent.provision.actor.role
                 public MakerElementInstance Element_Role;                                                                                   // MakerGen.cs:232
                 // 23. Consent.provision.actor.reference
                 public MakerElementInstance Element_Reference;                                                                              // MakerGen.cs:232
-                public Type_Actor()                                                                                                         // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Actor()                                                                                                         // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 22. Consent.provision.actor.role
                         this.Element_Role = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -838,7 +841,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 23. Consent.provision.actor.reference
                         this.Element_Reference = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -848,20 +851,23 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Reference                                                                 // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:320
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 30. Consent.provision.data
-            public class Type_Data : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Data : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 31. Consent.provision.data.meaning
                 public MakerElementInstance Element_Meaning;                                                                                // MakerGen.cs:232
                 // 32. Consent.provision.data.reference
                 public MakerElementInstance Element_Reference;                                                                              // MakerGen.cs:232
-                public Type_Data()                                                                                                          // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Data()                                                                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 31. Consent.provision.data.meaning
                         this.Element_Meaning = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -876,7 +882,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 32. Consent.provision.data.reference
                         this.Element_Reference = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -886,11 +892,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Reference                                                                 // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:320
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 19. Consent.provision.type
             public MakerElementInstance Element_Type;                                                                                       // MakerGen.cs:232
             // 20. Consent.provision.period
@@ -909,8 +918,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_DataPeriod;                                                                                 // MakerGen.cs:232
             // 33. Consent.provision.provision
             public MakerElementInstance Element_Provision;                                                                                  // MakerGen.cs:232
-            public Type_Provision()                                                                                                         // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Provision()                                                                                                         // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 19. Consent.provision.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -925,7 +934,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 20. Consent.provision.period
                     this.Element_Period = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -935,9 +944,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 24. Consent.provision.action
                     this.Element_Action = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -952,7 +964,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 25. Consent.provision.securityLabel
                     this.Element_SecurityLabel = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -967,7 +979,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 26. Consent.provision.purpose
                     this.Element_Purpose = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -982,7 +994,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 27. Consent.provision.class
                     this.Element_Class = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -997,7 +1009,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 28. Consent.provision.code
                     this.Element_Code = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1012,7 +1024,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 29. Consent.provision.dataPeriod
                     this.Element_DataPeriod = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1022,9 +1034,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 33. Consent.provision.provision
                     this.Element_Provision = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1036,9 +1051,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. Consent.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. Consent.status
@@ -1059,8 +1074,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Source;                                                                                         // MakerGen.cs:232
         // 13. Consent.policyRule
         public MakerElementInstance Element_PolicyRule;                                                                                     // MakerGen.cs:232
-        public Consent()                                                                                                                    // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public Consent()                                                                                                                    // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Consent.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1070,9 +1085,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. Consent.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1087,7 +1105,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. Consent.scope
                 this.Element_Scope = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -1102,7 +1120,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. Consent.category
                 this.Element_Category = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1117,7 +1135,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. Consent.patient
                 this.Element_Patient = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1127,9 +1145,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. Consent.dateTime
                 this.Element_DateTime = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1144,7 +1165,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. Consent.performer
                 this.Element_Performer = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1154,9 +1175,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. Consent.organization
                 this.Element_Organization = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1166,9 +1190,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 9. Consent.source[x]
                 this.Element_Source = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1178,9 +1205,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Attachment                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        },                                                                                                                  // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 13. Consent.policyRule
                 this.Element_PolicyRule = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1195,7 +1228,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

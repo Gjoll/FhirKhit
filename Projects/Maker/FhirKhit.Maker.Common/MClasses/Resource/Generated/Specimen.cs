@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "Specimen",
@@ -594,16 +594,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'Specimen'
     /// </summary>
     // 0. Specimen
-    public class Specimen : FhirKhit.Maker.Common.Resource.ResourceBase                                                                     // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class Specimen : FhirKhit.Maker.Common.Resource.ResourceBase                                                                     // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 9. Specimen.collection
-        public class Type_Collection : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Collection : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 10. Specimen.collection.collector
             public MakerElementInstance Element_Collector;                                                                                  // MakerGen.cs:232
             // 11. Specimen.collection.collected[x]
@@ -618,8 +618,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_BodySite;                                                                                   // MakerGen.cs:232
             // 16. Specimen.collection.fastingStatus[x]
             public MakerElementInstance Element_FastingStatus;                                                                              // MakerGen.cs:232
-            public Type_Collection()                                                                                                        // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Collection()                                                                                                        // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 10. Specimen.collection.collector
                     this.Element_Collector = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -629,9 +629,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. Specimen.collection.collected[x]
                     this.Element_Collected = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -644,9 +647,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:287
                             {                                                                                                               // MakerGen.cs:288
                             },                                                                                                              // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. Specimen.collection.duration
                     this.Element_Duration = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -656,9 +662,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Duration                                                                      // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 13. Specimen.collection.quantity
                     this.Element_Quantity = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -668,9 +677,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Quantity                                                                      // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 14. Specimen.collection.method
                     this.Element_Method = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -685,7 +697,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 15. Specimen.collection.bodySite
                     this.Element_BodySite = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -700,7 +712,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 16. Specimen.collection.fastingStatus[x]
                     this.Element_FastingStatus = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -713,14 +725,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
                             {                                                                                                               // MakerGen.cs:298
                             },                                                                                                              // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.Duration                                                                      // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 17. Specimen.processing
-        public class Type_Processing : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Processing : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 18. Specimen.processing.description
             public MakerElementInstance Element_Description;                                                                                // MakerGen.cs:232
             // 19. Specimen.processing.procedure
@@ -729,8 +744,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Additive;                                                                                   // MakerGen.cs:232
             // 21. Specimen.processing.time[x]
             public MakerElementInstance Element_Time;                                                                                       // MakerGen.cs:232
-            public Type_Processing()                                                                                                        // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Processing()                                                                                                        // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 18. Specimen.processing.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -745,7 +760,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 19. Specimen.processing.procedure
                     this.Element_Procedure = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -760,7 +775,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 20. Specimen.processing.additive
                     this.Element_Additive = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -770,9 +785,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 21. Specimen.processing.time[x]
                     this.Element_Time = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -785,14 +803,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:287
                             {                                                                                                               // MakerGen.cs:288
                             },                                                                                                              // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 22. Specimen.container
-        public class Type_Container : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Container : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 23. Specimen.container.identifier
             public MakerElementInstance Element_Identifier;                                                                                 // MakerGen.cs:232
             // 24. Specimen.container.description
@@ -805,8 +826,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_SpecimenQuantity;                                                                           // MakerGen.cs:232
             // 28. Specimen.container.additive[x]
             public MakerElementInstance Element_Additive;                                                                                   // MakerGen.cs:232
-            public Type_Container()                                                                                                         // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Container()                                                                                                         // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 23. Specimen.container.identifier
                     this.Element_Identifier = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -816,9 +837,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 24. Specimen.container.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -833,7 +857,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 25. Specimen.container.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -848,7 +872,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 26. Specimen.container.capacity
                     this.Element_Capacity = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -858,9 +882,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Quantity                                                                      // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 27. Specimen.container.specimenQuantity
                     this.Element_SpecimenQuantity = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -870,9 +897,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Quantity                                                                      // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 28. Specimen.container.additive[x]
                     this.Element_Additive = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -885,11 +915,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
                             {                                                                                                               // MakerGen.cs:298
                             },                                                                                                              // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. Specimen.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. Specimen.accessionIdentifier
@@ -910,8 +943,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Condition;                                                                                      // MakerGen.cs:232
         // 30. Specimen.note
         public MakerElementInstance Element_Note;                                                                                           // MakerGen.cs:232
-        public Specimen()                                                                                                                   // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public Specimen()                                                                                                                   // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Specimen.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -921,9 +954,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. Specimen.accessionIdentifier
                 this.Element_AccessionIdentifier = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -933,9 +969,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. Specimen.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -950,7 +989,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. Specimen.type
                 this.Element_Type = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -965,7 +1004,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. Specimen.subject
                 this.Element_Subject = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -975,9 +1014,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. Specimen.receivedTime
                 this.Element_ReceivedTime = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -992,7 +1034,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. Specimen.parent
                 this.Element_Parent = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1002,9 +1044,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. Specimen.request
                 this.Element_Request = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1014,9 +1059,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 29. Specimen.condition
                 this.Element_Condition = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1031,7 +1079,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 30. Specimen.note
                 this.Element_Note = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1041,9 +1089,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Annotation                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

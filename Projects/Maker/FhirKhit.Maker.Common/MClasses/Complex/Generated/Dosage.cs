@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:447
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:448
-using System.IO;                                                                                                                            // MakerGen.cs:449
-using System.Linq;                                                                                                                          // MakerGen.cs:450
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:451
-                                                                                                                                            // MakerGen.cs:452
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:453
-{                                                                                                                                           // MakerGen.cs:454
-    #region Json                                                                                                                            // MakerGen.cs:455
+using System;                                                                                                                               // MakerGen.cs:471
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:472
+using System.IO;                                                                                                                            // MakerGen.cs:473
+using System.Linq;                                                                                                                          // MakerGen.cs:474
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:475
+                                                                                                                                            // MakerGen.cs:476
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:477
+{                                                                                                                                           // MakerGen.cs:478
+    #region Json                                                                                                                            // MakerGen.cs:479
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -373,24 +373,24 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:459
+    #endregion                                                                                                                              // MakerGen.cs:483
     /// <summary>
     /// Fhir complex 'Dosage'
     /// </summary>
     // 0. Dosage
-    public class Dosage : FhirKhit.Maker.Common.Complex.ComplexBase                                                                         // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class Dosage : FhirKhit.Maker.Common.Complex.ComplexBase                                                                         // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 10. Dosage.doseAndRate
-        public class Type_DoseAndRate : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_DoseAndRate : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 11. Dosage.doseAndRate.type
             public MakerElementInstance Element_Type;                                                                                       // MakerGen.cs:232
             // 12. Dosage.doseAndRate.dose[x]
             public MakerElementInstance Element_Dose;                                                                                       // MakerGen.cs:232
             // 13. Dosage.doseAndRate.rate[x]
             public MakerElementInstance Element_Rate;                                                                                       // MakerGen.cs:232
-            public Type_DoseAndRate()                                                                                                       // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_DoseAndRate()                                                                                                       // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. Dosage.doseAndRate.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -405,7 +405,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. Dosage.doseAndRate.dose[x]
                     this.Element_Dose = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -415,9 +415,15 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            },                                                                                                              // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Quantity                                                                      // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 13. Dosage.doseAndRate.rate[x]
                     this.Element_Rate = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -427,11 +433,20 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Ratio                                                                         // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            },                                                                                                              // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            },                                                                                                              // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Quantity                                                                      // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. Dosage.sequence
         public MakerElementInstance Element_Sequence;                                                                                       // MakerGen.cs:232
         // 2. Dosage.text
@@ -456,8 +471,8 @@ namespace FhirKhit.Maker.Common.Complex                                         
         public MakerElementInstance Element_MaxDosePerAdministration;                                                                       // MakerGen.cs:232
         // 16. Dosage.maxDosePerLifetime
         public MakerElementInstance Element_MaxDosePerLifetime;                                                                             // MakerGen.cs:232
-        public Dosage()                                                                                                                     // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public Dosage()                                                                                                                     // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Dosage.sequence
                 this.Element_Sequence = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -472,7 +487,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. Dosage.text
                 this.Element_Text = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -487,7 +502,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. Dosage.additionalInstruction
                 this.Element_AdditionalInstruction = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -502,7 +517,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. Dosage.patientInstruction
                 this.Element_PatientInstruction = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -517,7 +532,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. Dosage.timing
                 this.Element_Timing = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -527,9 +542,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Timing                                                                            // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. Dosage.asNeeded[x]
                 this.Element_AsNeeded = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -547,7 +565,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. Dosage.site
                 this.Element_Site = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -562,7 +580,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. Dosage.route
                 this.Element_Route = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -577,7 +595,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 9. Dosage.method
                 this.Element_Method = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -592,7 +610,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 14. Dosage.maxDosePerPeriod
                 this.Element_MaxDosePerPeriod = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -602,9 +620,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Ratio                                                                             // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 15. Dosage.maxDosePerAdministration
                 this.Element_MaxDosePerAdministration = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -614,9 +635,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Quantity                                                                          // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 16. Dosage.maxDosePerLifetime
                 this.Element_MaxDosePerLifetime = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -626,9 +650,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Quantity                                                                          // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:464
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:488

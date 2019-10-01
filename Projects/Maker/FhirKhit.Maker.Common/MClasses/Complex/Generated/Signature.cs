@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:447
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:448
-using System.IO;                                                                                                                            // MakerGen.cs:449
-using System.Linq;                                                                                                                          // MakerGen.cs:450
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:451
-                                                                                                                                            // MakerGen.cs:452
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:453
-{                                                                                                                                           // MakerGen.cs:454
-    #region Json                                                                                                                            // MakerGen.cs:455
+using System;                                                                                                                               // MakerGen.cs:471
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:472
+using System.IO;                                                                                                                            // MakerGen.cs:473
+using System.Linq;                                                                                                                          // MakerGen.cs:474
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:475
+                                                                                                                                            // MakerGen.cs:476
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:477
+{                                                                                                                                           // MakerGen.cs:478
+    #region Json                                                                                                                            // MakerGen.cs:479
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -198,13 +198,13 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:459
+    #endregion                                                                                                                              // MakerGen.cs:483
     /// <summary>
     /// Fhir complex 'Signature'
     /// </summary>
     // 0. Signature
-    public class Signature : FhirKhit.Maker.Common.Complex.ComplexBase                                                                      // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class Signature : FhirKhit.Maker.Common.Complex.ComplexBase                                                                      // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 1. Signature.type
         public MakerElementInstance Element_Type;                                                                                           // MakerGen.cs:232
         // 2. Signature.when
@@ -219,8 +219,8 @@ namespace FhirKhit.Maker.Common.Complex                                         
         public MakerElementInstance Element_SigFormat;                                                                                      // MakerGen.cs:232
         // 7. Signature.data
         public MakerElementInstance Element_Data;                                                                                           // MakerGen.cs:232
-        public Signature()                                                                                                                  // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public Signature()                                                                                                                  // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Signature.type
                 this.Element_Type = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -235,7 +235,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. Signature.when
                 this.Element_When = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -250,7 +250,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. Signature.who
                 this.Element_Who = new MakerElementInstance                                                                                 // MakerGen.cs:245
@@ -260,9 +260,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. Signature.onBehalfOf
                 this.Element_OnBehalfOf = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -272,9 +275,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. Signature.targetFormat
                 this.Element_TargetFormat = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -289,7 +295,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. Signature.sigFormat
                 this.Element_SigFormat = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -304,7 +310,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. Signature.data
                 this.Element_Data = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -319,7 +325,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:464
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:488

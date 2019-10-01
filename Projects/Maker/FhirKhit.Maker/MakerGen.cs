@@ -301,7 +301,25 @@ namespace FhirKhit.Maker
                                 sep = ", ";
                                 break;
 
+                            case "Extension":
+                                break;
+
+                            case "Resource":
+                                typesBlock
+                                    .AppendCode($"new {ResourceNameSpace}.{CleanName(type.Code)}")
+                                    .OpenBrace()
+                                    .CloseBrace(sep)
+                                    ;
+                                sep = ", ";
+                                break;
+
                             case "Reference":
+                                typesBlock
+                                    .AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}")
+                                    .OpenBrace()
+                                    .CloseBrace(sep)
+                                    ;
+                                sep = ", ";
                                 //if (type.Profile.Any())
                                 //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
                                 //if (type.TargetProfile.Count() == 0)
@@ -321,6 +339,12 @@ namespace FhirKhit.Maker
                                 break;
 
                             default:
+                                typesBlock
+                                    .AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}")
+                                    .OpenBrace()
+                                    .CloseBrace(sep)
+                                    ;
+                                sep = ", ";
                                 //if (type.Profile.Count() == 0)
                                 //{
                                 //    this.gen.AddAbbreviatedResource(type.Code);

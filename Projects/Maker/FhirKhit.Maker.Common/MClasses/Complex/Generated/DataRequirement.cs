@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:447
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:448
-using System.IO;                                                                                                                            // MakerGen.cs:449
-using System.Linq;                                                                                                                          // MakerGen.cs:450
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:451
-                                                                                                                                            // MakerGen.cs:452
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:453
-{                                                                                                                                           // MakerGen.cs:454
-    #region Json                                                                                                                            // MakerGen.cs:455
+using System;                                                                                                                               // MakerGen.cs:471
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:472
+using System.IO;                                                                                                                            // MakerGen.cs:473
+using System.Linq;                                                                                                                          // MakerGen.cs:474
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:475
+                                                                                                                                            // MakerGen.cs:476
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:477
+{                                                                                                                                           // MakerGen.cs:478
+    #region Json                                                                                                                            // MakerGen.cs:479
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -338,16 +338,16 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:459
+    #endregion                                                                                                                              // MakerGen.cs:483
     /// <summary>
     /// Fhir complex 'DataRequirement'
     /// </summary>
     // 0. DataRequirement
-    public class DataRequirement : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class DataRequirement : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 5. DataRequirement.codeFilter
-        public class Type_CodeFilter : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_CodeFilter : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 6. DataRequirement.codeFilter.path
             public MakerElementInstance Element_Path;                                                                                       // MakerGen.cs:232
             // 7. DataRequirement.codeFilter.searchParam
@@ -356,8 +356,8 @@ namespace FhirKhit.Maker.Common.Complex                                         
             public MakerElementInstance Element_ValueSet;                                                                                   // MakerGen.cs:232
             // 9. DataRequirement.codeFilter.code
             public MakerElementInstance Element_Code;                                                                                       // MakerGen.cs:232
-            public Type_CodeFilter()                                                                                                        // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_CodeFilter()                                                                                                        // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 6. DataRequirement.codeFilter.path
                     this.Element_Path = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -372,7 +372,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 7. DataRequirement.codeFilter.searchParam
                     this.Element_SearchParam = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -387,7 +387,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 8. DataRequirement.codeFilter.valueSet
                     this.Element_ValueSet = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -402,7 +402,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 9. DataRequirement.codeFilter.code
                     this.Element_Code = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -417,20 +417,20 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 10. DataRequirement.dateFilter
-        public class Type_DateFilter : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_DateFilter : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 11. DataRequirement.dateFilter.path
             public MakerElementInstance Element_Path;                                                                                       // MakerGen.cs:232
             // 12. DataRequirement.dateFilter.searchParam
             public MakerElementInstance Element_SearchParam;                                                                                // MakerGen.cs:232
             // 13. DataRequirement.dateFilter.value[x]
             public MakerElementInstance Element_Value;                                                                                      // MakerGen.cs:232
-            public Type_DateFilter()                                                                                                        // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_DateFilter()                                                                                                        // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. DataRequirement.dateFilter.path
                     this.Element_Path = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -445,7 +445,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. DataRequirement.dateFilter.searchParam
                     this.Element_SearchParam = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -460,7 +460,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 13. DataRequirement.dateFilter.value[x]
                     this.Element_Value = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -473,20 +473,26 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:287
                             {                                                                                                               // MakerGen.cs:288
                             },                                                                                                              // MakerGen.cs:289
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            },                                                                                                              // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Duration                                                                      // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 15. DataRequirement.sort
-        public class Type_Sort : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Sort : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 16. DataRequirement.sort.path
             public MakerElementInstance Element_Path;                                                                                       // MakerGen.cs:232
             // 17. DataRequirement.sort.direction
             public MakerElementInstance Element_Direction;                                                                                  // MakerGen.cs:232
-            public Type_Sort()                                                                                                              // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Sort()                                                                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 16. DataRequirement.sort.path
                     this.Element_Path = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -501,7 +507,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 17. DataRequirement.sort.direction
                     this.Element_Direction = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -516,9 +522,9 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. DataRequirement.type
         public MakerElementInstance Element_Type;                                                                                           // MakerGen.cs:232
         // 2. DataRequirement.profile
@@ -529,8 +535,8 @@ namespace FhirKhit.Maker.Common.Complex                                         
         public MakerElementInstance Element_MustSupport;                                                                                    // MakerGen.cs:232
         // 14. DataRequirement.limit
         public MakerElementInstance Element_Limit;                                                                                          // MakerGen.cs:232
-        public DataRequirement()                                                                                                            // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public DataRequirement()                                                                                                            // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. DataRequirement.type
                 this.Element_Type = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -545,7 +551,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. DataRequirement.profile
                 this.Element_Profile = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -560,7 +566,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. DataRequirement.subject[x]
                 this.Element_Subject = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -573,9 +579,12 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
                         {                                                                                                                   // MakerGen.cs:298
                         },                                                                                                                  // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. DataRequirement.mustSupport
                 this.Element_MustSupport = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -590,7 +599,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 14. DataRequirement.limit
                 this.Element_Limit = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -605,7 +614,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:464
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:488

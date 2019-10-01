@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "Contract",
@@ -2326,16 +2326,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'Contract'
     /// </summary>
     // 0. Contract
-    public class Contract : FhirKhit.Maker.Common.Resource.ResourceBase                                                                     // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class Contract : FhirKhit.Maker.Common.Resource.ResourceBase                                                                     // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 25. Contract.contentDefinition
-        public class Type_ContentDefinition : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_ContentDefinition : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 26. Contract.contentDefinition.type
             public MakerElementInstance Element_Type;                                                                                       // MakerGen.cs:232
             // 27. Contract.contentDefinition.subType
@@ -2348,8 +2348,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_PublicationStatus;                                                                          // MakerGen.cs:232
             // 31. Contract.contentDefinition.copyright
             public MakerElementInstance Element_Copyright;                                                                                  // MakerGen.cs:232
-            public Type_ContentDefinition()                                                                                                 // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_ContentDefinition()                                                                                                 // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 26. Contract.contentDefinition.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2364,7 +2364,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 27. Contract.contentDefinition.subType
                     this.Element_SubType = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -2379,7 +2379,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 28. Contract.contentDefinition.publisher
                     this.Element_Publisher = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -2389,9 +2389,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 29. Contract.contentDefinition.publicationDate
                     this.Element_PublicationDate = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -2406,7 +2409,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 30. Contract.contentDefinition.publicationStatus
                     this.Element_PublicationStatus = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2421,7 +2424,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 31. Contract.contentDefinition.copyright
                     this.Element_Copyright = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -2436,15 +2439,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 32. Contract.term
-        public class Type_Term : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Term : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 40. Contract.term.securityLabel
-            public class Type_SecurityLabel : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_SecurityLabel : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 41. Contract.term.securityLabel.number
                 public MakerElementInstance Element_Number;                                                                                 // MakerGen.cs:232
                 // 42. Contract.term.securityLabel.classification
@@ -2453,8 +2456,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_Category;                                                                               // MakerGen.cs:232
                 // 44. Contract.term.securityLabel.control
                 public MakerElementInstance Element_Control;                                                                                // MakerGen.cs:232
-                public Type_SecurityLabel()                                                                                                 // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_SecurityLabel()                                                                                                 // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 41. Contract.term.securityLabel.number
                         this.Element_Number = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -2469,7 +2472,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 42. Contract.term.securityLabel.classification
                         this.Element_Classification = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -2484,7 +2487,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 43. Contract.term.securityLabel.category
                         this.Element_Category = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2499,7 +2502,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 44. Contract.term.securityLabel.control
                         this.Element_Control = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2514,21 +2517,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 45. Contract.term.offer
-            public class Type_Offer : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Offer : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 47. Contract.term.offer.party
-                public class Type_Party : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Party : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 48. Contract.term.offer.party.reference
                     public MakerElementInstance Element_Reference;                                                                          // MakerGen.cs:232
                     // 49. Contract.term.offer.party.role
                     public MakerElementInstance Element_Role;                                                                               // MakerGen.cs:232
-                    public Type_Party()                                                                                                     // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Party()                                                                                                     // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 48. Contract.term.offer.party.reference
                             this.Element_Reference = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2538,9 +2541,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = -1,                                                                                                   // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:318
+                                    {                                                                                                       // MakerGen.cs:319
+                                    }                                                                                                       // MakerGen.cs:320
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 49. Contract.term.offer.party.role
                             this.Element_Role = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2555,16 +2561,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:299
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 54. Contract.term.offer.answer
-                public class Type_Answer : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Answer : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 55. Contract.term.offer.answer.value[x]
                     public MakerElementInstance Element_Value;                                                                              // MakerGen.cs:232
-                    public Type_Answer()                                                                                                    // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Answer()                                                                                                    // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 55. Contract.term.offer.answer.value[x]
                             this.Element_Value = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2598,14 +2604,23 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:287
                                     {                                                                                                       // MakerGen.cs:288
                                     },                                                                                                      // MakerGen.cs:289
+                                    new FhirKhit.Maker.Common.Complex.Attachment                                                            // MakerGen.cs:343
+                                    {                                                                                                       // MakerGen.cs:344
+                                    },                                                                                                      // MakerGen.cs:345
                                     new FhirKhit.Maker.Common.Complex.Coding                                                                // MakerGen.cs:297
                                     {                                                                                                       // MakerGen.cs:298
                                     },                                                                                                      // MakerGen.cs:299
+                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:343
+                                    {                                                                                                       // MakerGen.cs:344
+                                    },                                                                                                      // MakerGen.cs:345
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:318
+                                    {                                                                                                       // MakerGen.cs:319
+                                    }                                                                                                       // MakerGen.cs:320
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 46. Contract.term.offer.identifier
                 public MakerElementInstance Element_Identifier;                                                                             // MakerGen.cs:232
                 // 50. Contract.term.offer.topic
@@ -2622,8 +2637,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_LinkId;                                                                                 // MakerGen.cs:232
                 // 58. Contract.term.offer.securityLabelNumber
                 public MakerElementInstance Element_SecurityLabelNumber;                                                                    // MakerGen.cs:232
-                public Type_Offer()                                                                                                         // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Offer()                                                                                                         // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 46. Contract.term.offer.identifier
                         this.Element_Identifier = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2633,9 +2648,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Identifier                                                                // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                }                                                                                                           // MakerGen.cs:345
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 50. Contract.term.offer.topic
                         this.Element_Topic = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -2645,9 +2663,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Reference                                                                 // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:320
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 51. Contract.term.offer.type
                         this.Element_Type = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2662,7 +2683,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 52. Contract.term.offer.decision
                         this.Element_Decision = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2677,7 +2698,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 53. Contract.term.offer.decisionMode
                         this.Element_DecisionMode = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2692,7 +2713,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 56. Contract.term.offer.text
                         this.Element_Text = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2707,7 +2728,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 57. Contract.term.offer.linkId
                         this.Element_LinkId = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -2722,7 +2743,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 58. Contract.term.offer.securityLabelNumber
                         this.Element_SecurityLabelNumber = new MakerElementInstance                                                         // MakerGen.cs:245
@@ -2737,23 +2758,23 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 59. Contract.term.asset
-            public class Type_Asset : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Asset : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 65. Contract.term.asset.context
-                public class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 66. Contract.term.asset.context.reference
                     public MakerElementInstance Element_Reference;                                                                          // MakerGen.cs:232
                     // 67. Contract.term.asset.context.code
                     public MakerElementInstance Element_Code;                                                                               // MakerGen.cs:232
                     // 68. Contract.term.asset.context.text
                     public MakerElementInstance Element_Text;                                                                               // MakerGen.cs:232
-                    public Type_Context()                                                                                                   // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Context()                                                                                                   // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 66. Contract.term.asset.context.reference
                             this.Element_Reference = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2763,9 +2784,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:318
+                                    {                                                                                                       // MakerGen.cs:319
+                                    }                                                                                                       // MakerGen.cs:320
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 67. Contract.term.asset.context.code
                             this.Element_Code = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2780,7 +2804,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:299
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 68. Contract.term.asset.context.text
                             this.Element_Text = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2795,12 +2819,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 77. Contract.term.asset.valuedItem
-                public class Type_ValuedItem : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_ValuedItem : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 78. Contract.term.asset.valuedItem.entity[x]
                     public MakerElementInstance Element_Entity;                                                                             // MakerGen.cs:232
                     // 79. Contract.term.asset.valuedItem.identifier
@@ -2829,8 +2853,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public MakerElementInstance Element_LinkId;                                                                             // MakerGen.cs:232
                     // 91. Contract.term.asset.valuedItem.securityLabelNumber
                     public MakerElementInstance Element_SecurityLabelNumber;                                                                // MakerGen.cs:232
-                    public Type_ValuedItem()                                                                                                // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_ValuedItem()                                                                                                // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 78. Contract.term.asset.valuedItem.entity[x]
                             this.Element_Entity = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2843,9 +2867,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     new FhirKhit.Maker.Common.Complex.CodeableConcept                                                       // MakerGen.cs:297
                                     {                                                                                                       // MakerGen.cs:298
                                     },                                                                                                      // MakerGen.cs:299
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:318
+                                    {                                                                                                       // MakerGen.cs:319
+                                    }                                                                                                       // MakerGen.cs:320
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 79. Contract.term.asset.valuedItem.identifier
                             this.Element_Identifier = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -2855,9 +2882,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
+                                    new FhirKhit.Maker.Common.Complex.Identifier                                                            // MakerGen.cs:343
+                                    {                                                                                                       // MakerGen.cs:344
+                                    }                                                                                                       // MakerGen.cs:345
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 80. Contract.term.asset.valuedItem.effectiveTime
                             this.Element_EffectiveTime = new MakerElementInstance                                                           // MakerGen.cs:245
@@ -2872,7 +2902,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 81. Contract.term.asset.valuedItem.quantity
                             this.Element_Quantity = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2882,9 +2912,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
+                                    new FhirKhit.Maker.Common.Complex.Quantity                                                              // MakerGen.cs:343
+                                    {                                                                                                       // MakerGen.cs:344
+                                    }                                                                                                       // MakerGen.cs:345
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 82. Contract.term.asset.valuedItem.unitPrice
                             this.Element_UnitPrice = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2894,9 +2927,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
+                                    new FhirKhit.Maker.Common.Complex.Money                                                                 // MakerGen.cs:343
+                                    {                                                                                                       // MakerGen.cs:344
+                                    }                                                                                                       // MakerGen.cs:345
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 83. Contract.term.asset.valuedItem.factor
                             this.Element_Factor = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2911,7 +2947,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 84. Contract.term.asset.valuedItem.points
                             this.Element_Points = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2926,7 +2962,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 85. Contract.term.asset.valuedItem.net
                             this.Element_Net = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2936,9 +2972,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
+                                    new FhirKhit.Maker.Common.Complex.Money                                                                 // MakerGen.cs:343
+                                    {                                                                                                       // MakerGen.cs:344
+                                    }                                                                                                       // MakerGen.cs:345
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 86. Contract.term.asset.valuedItem.payment
                             this.Element_Payment = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -2953,7 +2992,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 87. Contract.term.asset.valuedItem.paymentDate
                             this.Element_PaymentDate = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2968,7 +3007,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 88. Contract.term.asset.valuedItem.responsible
                             this.Element_Responsible = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2978,9 +3017,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:318
+                                    {                                                                                                       // MakerGen.cs:319
+                                    }                                                                                                       // MakerGen.cs:320
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 89. Contract.term.asset.valuedItem.recipient
                             this.Element_Recipient = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2990,9 +3032,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = 1,                                                                                                    // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:318
+                                    {                                                                                                       // MakerGen.cs:319
+                                    }                                                                                                       // MakerGen.cs:320
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 90. Contract.term.asset.valuedItem.linkId
                             this.Element_LinkId = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -3007,7 +3052,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 91. Contract.term.asset.valuedItem.securityLabelNumber
                             this.Element_SecurityLabelNumber = new MakerElementInstance                                                     // MakerGen.cs:245
@@ -3022,9 +3067,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 60. Contract.term.asset.scope
                 public MakerElementInstance Element_Scope;                                                                                  // MakerGen.cs:232
                 // 61. Contract.term.asset.type
@@ -3051,8 +3096,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_Answer;                                                                                 // MakerGen.cs:232
                 // 76. Contract.term.asset.securityLabelNumber
                 public MakerElementInstance Element_SecurityLabelNumber;                                                                    // MakerGen.cs:232
-                public Type_Asset()                                                                                                         // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Asset()                                                                                                         // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 60. Contract.term.asset.scope
                         this.Element_Scope = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -3067,7 +3112,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 61. Contract.term.asset.type
                         this.Element_Type = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -3082,7 +3127,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 62. Contract.term.asset.typeReference
                         this.Element_TypeReference = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -3092,9 +3137,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Reference                                                                 // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:320
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 63. Contract.term.asset.subtype
                         this.Element_Subtype = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -3109,7 +3157,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 64. Contract.term.asset.relationship
                         this.Element_Relationship = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -3124,7 +3172,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 69. Contract.term.asset.condition
                         this.Element_Condition = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -3139,7 +3187,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 70. Contract.term.asset.periodType
                         this.Element_PeriodType = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -3154,7 +3202,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 71. Contract.term.asset.period
                         this.Element_Period = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -3164,9 +3212,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Period                                                                    // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                }                                                                                                           // MakerGen.cs:345
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 72. Contract.term.asset.usePeriod
                         this.Element_UsePeriod = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -3176,9 +3227,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Period                                                                    // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                }                                                                                                           // MakerGen.cs:345
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 73. Contract.term.asset.text
                         this.Element_Text = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -3193,7 +3247,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 74. Contract.term.asset.linkId
                         this.Element_LinkId = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -3208,7 +3262,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 75. Contract.term.asset.answer
                         this.Element_Answer = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -3220,7 +3274,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 76. Contract.term.asset.securityLabelNumber
                         this.Element_SecurityLabelNumber = new MakerElementInstance                                                         // MakerGen.cs:245
@@ -3235,21 +3289,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 92. Contract.term.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 95. Contract.term.action.subject
-                public class Type_Subject : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Subject : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 96. Contract.term.action.subject.reference
                     public MakerElementInstance Element_Reference;                                                                          // MakerGen.cs:232
                     // 97. Contract.term.action.subject.role
                     public MakerElementInstance Element_Role;                                                                               // MakerGen.cs:232
-                    public Type_Subject()                                                                                                   // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Subject()                                                                                                   // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 96. Contract.term.action.subject.reference
                             this.Element_Reference = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -3259,9 +3313,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 Max = -1,                                                                                                   // MakerGen.cs:249
                                 Types = new MakerBaseType[]                                                                                 // MakerGen.cs:250
                                 {                                                                                                           // MakerGen.cs:251
+                                    new FhirKhit.Maker.Common.Complex.Reference                                                             // MakerGen.cs:318
+                                    {                                                                                                       // MakerGen.cs:319
+                                    }                                                                                                       // MakerGen.cs:320
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 97. Contract.term.action.subject.role
                             this.Element_Role = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -3276,9 +3333,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:299
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 93. Contract.term.action.doNotPerform
                 public MakerElementInstance Element_DoNotPerform;                                                                           // MakerGen.cs:232
                 // 94. Contract.term.action.type
@@ -3319,8 +3376,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_Note;                                                                                   // MakerGen.cs:232
                 // 115. Contract.term.action.securityLabelNumber
                 public MakerElementInstance Element_SecurityLabelNumber;                                                                    // MakerGen.cs:232
-                public Type_Action()                                                                                                        // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Action()                                                                                                        // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 93. Contract.term.action.doNotPerform
                         this.Element_DoNotPerform = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -3335,7 +3392,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 94. Contract.term.action.type
                         this.Element_Type = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -3350,7 +3407,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 98. Contract.term.action.intent
                         this.Element_Intent = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -3365,7 +3422,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 99. Contract.term.action.linkId
                         this.Element_LinkId = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -3380,7 +3437,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 100. Contract.term.action.status
                         this.Element_Status = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -3395,7 +3452,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 101. Contract.term.action.context
                         this.Element_Context = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -3405,9 +3462,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Reference                                                                 // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:320
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 102. Contract.term.action.contextLinkId
                         this.Element_ContextLinkId = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -3422,7 +3482,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 103. Contract.term.action.occurrence[x]
                         this.Element_Occurrence = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -3435,9 +3495,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 new FhirKhit.Maker.Common.Primitive.DateTime                                                                // MakerGen.cs:287
                                 {                                                                                                           // MakerGen.cs:288
                                 },                                                                                                          // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Complex.Period                                                                    // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                },                                                                                                          // MakerGen.cs:345
+                                new FhirKhit.Maker.Common.Complex.Timing                                                                    // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                }                                                                                                           // MakerGen.cs:345
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 104. Contract.term.action.requester
                         this.Element_Requester = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -3447,9 +3513,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Reference                                                                 // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:320
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 105. Contract.term.action.requesterLinkId
                         this.Element_RequesterLinkId = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -3464,7 +3533,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 106. Contract.term.action.performerType
                         this.Element_PerformerType = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -3479,7 +3548,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 107. Contract.term.action.performerRole
                         this.Element_PerformerRole = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -3494,7 +3563,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 108. Contract.term.action.performer
                         this.Element_Performer = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -3504,9 +3573,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = 1,                                                                                                        // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Reference                                                                 // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:320
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 109. Contract.term.action.performerLinkId
                         this.Element_PerformerLinkId = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -3521,7 +3593,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 110. Contract.term.action.reasonCode
                         this.Element_ReasonCode = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -3536,7 +3608,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 111. Contract.term.action.reasonReference
                         this.Element_ReasonReference = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -3546,9 +3618,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Reference                                                                 // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:320
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 112. Contract.term.action.reason
                         this.Element_Reason = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -3563,7 +3638,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 113. Contract.term.action.reasonLinkId
                         this.Element_ReasonLinkId = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -3578,7 +3653,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 114. Contract.term.action.note
                         this.Element_Note = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -3588,9 +3663,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Annotation                                                                // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                }                                                                                                           // MakerGen.cs:345
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 115. Contract.term.action.securityLabelNumber
                         this.Element_SecurityLabelNumber = new MakerElementInstance                                                         // MakerGen.cs:245
@@ -3605,9 +3683,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 33. Contract.term.identifier
             public MakerElementInstance Element_Identifier;                                                                                 // MakerGen.cs:232
             // 34. Contract.term.issued
@@ -3624,8 +3702,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Text;                                                                                       // MakerGen.cs:232
             // 116. Contract.term.group
             public MakerElementInstance Element_Group;                                                                                      // MakerGen.cs:232
-            public Type_Term()                                                                                                              // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Term()                                                                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 33. Contract.term.identifier
                     this.Element_Identifier = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -3635,9 +3713,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Identifier                                                                    // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 34. Contract.term.issued
                     this.Element_Issued = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -3652,7 +3733,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 35. Contract.term.applies
                     this.Element_Applies = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -3662,9 +3743,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 36. Contract.term.topic[x]
                     this.Element_Topic = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -3677,9 +3761,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             new FhirKhit.Maker.Common.Complex.CodeableConcept                                                               // MakerGen.cs:297
                             {                                                                                                               // MakerGen.cs:298
                             },                                                                                                              // MakerGen.cs:299
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 37. Contract.term.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -3694,7 +3781,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 38. Contract.term.subType
                     this.Element_SubType = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -3709,7 +3796,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 39. Contract.term.text
                     this.Element_Text = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -3724,7 +3811,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 116. Contract.term.group
                     this.Element_Group = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -3736,20 +3823,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 119. Contract.signer
-        public class Type_Signer : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Signer : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 120. Contract.signer.type
             public MakerElementInstance Element_Type;                                                                                       // MakerGen.cs:232
             // 121. Contract.signer.party
             public MakerElementInstance Element_Party;                                                                                      // MakerGen.cs:232
             // 122. Contract.signer.signature
             public MakerElementInstance Element_Signature;                                                                                  // MakerGen.cs:232
-            public Type_Signer()                                                                                                            // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Signer()                                                                                                            // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 120. Contract.signer.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -3764,7 +3851,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 121. Contract.signer.party
                     this.Element_Party = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -3774,9 +3861,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 122. Contract.signer.signature
                     this.Element_Signature = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -3786,18 +3876,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Signature                                                                     // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 123. Contract.friendly
-        public class Type_Friendly : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Friendly : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 124. Contract.friendly.content[x]
             public MakerElementInstance Element_Content;                                                                                    // MakerGen.cs:232
-            public Type_Friendly()                                                                                                          // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Friendly()                                                                                                          // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 124. Contract.friendly.content[x]
                     this.Element_Content = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -3807,18 +3900,24 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Attachment                                                                    // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            },                                                                                                              // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 125. Contract.legal
-        public class Type_Legal : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Legal : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 126. Contract.legal.content[x]
             public MakerElementInstance Element_Content;                                                                                    // MakerGen.cs:232
-            public Type_Legal()                                                                                                             // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Legal()                                                                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 126. Contract.legal.content[x]
                     this.Element_Content = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -3828,18 +3927,24 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Attachment                                                                    // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            },                                                                                                              // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 127. Contract.rule
-        public class Type_Rule : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Rule : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 128. Contract.rule.content[x]
             public MakerElementInstance Element_Content;                                                                                    // MakerGen.cs:232
-            public Type_Rule()                                                                                                              // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Rule()                                                                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 128. Contract.rule.content[x]
                     this.Element_Content = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -3849,11 +3954,17 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Attachment                                                                    // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            },                                                                                                              // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. Contract.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. Contract.url
@@ -3908,8 +4019,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_RelevantHistory;                                                                                // MakerGen.cs:232
         // 129. Contract.legallyBinding[x]
         public MakerElementInstance Element_LegallyBinding;                                                                                 // MakerGen.cs:232
-        public Contract()                                                                                                                   // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public Contract()                                                                                                                   // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Contract.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -3919,9 +4030,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. Contract.url
                 this.Element_Url = new MakerElementInstance                                                                                 // MakerGen.cs:245
@@ -3936,7 +4050,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. Contract.version
                 this.Element_Version = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -3951,7 +4065,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. Contract.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -3966,7 +4080,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. Contract.legalState
                 this.Element_LegalState = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -3981,7 +4095,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. Contract.instantiatesCanonical
                 this.Element_InstantiatesCanonical = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -3991,9 +4105,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. Contract.instantiatesUri
                 this.Element_InstantiatesUri = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -4008,7 +4125,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. Contract.contentDerivative
                 this.Element_ContentDerivative = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -4023,7 +4140,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 9. Contract.issued
                 this.Element_Issued = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -4038,7 +4155,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 10. Contract.applies
                 this.Element_Applies = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -4048,9 +4165,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Period                                                                            // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 11. Contract.expirationType
                 this.Element_ExpirationType = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -4065,7 +4185,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 12. Contract.subject
                 this.Element_Subject = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -4075,9 +4195,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 13. Contract.authority
                 this.Element_Authority = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -4087,9 +4210,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 14. Contract.domain
                 this.Element_Domain = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -4099,9 +4225,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 15. Contract.site
                 this.Element_Site = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -4111,9 +4240,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 16. Contract.name
                 this.Element_Name = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -4128,7 +4260,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 17. Contract.title
                 this.Element_Title = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -4143,7 +4275,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 18. Contract.subtitle
                 this.Element_Subtitle = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -4158,7 +4290,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 19. Contract.alias
                 this.Element_Alias = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -4173,7 +4305,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 20. Contract.author
                 this.Element_Author = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -4183,9 +4315,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 21. Contract.scope
                 this.Element_Scope = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -4200,7 +4335,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 22. Contract.topic[x]
                 this.Element_Topic = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -4213,9 +4348,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         new FhirKhit.Maker.Common.Complex.CodeableConcept                                                                   // MakerGen.cs:297
                         {                                                                                                                   // MakerGen.cs:298
                         },                                                                                                                  // MakerGen.cs:299
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 23. Contract.type
                 this.Element_Type = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -4230,7 +4368,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 24. Contract.subType
                 this.Element_SubType = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -4245,7 +4383,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 117. Contract.supportingInfo
                 this.Element_SupportingInfo = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -4255,9 +4393,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 118. Contract.relevantHistory
                 this.Element_RelevantHistory = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -4267,9 +4408,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 129. Contract.legallyBinding[x]
                 this.Element_LegallyBinding = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -4279,9 +4423,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Attachment                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        },                                                                                                                  // MakerGen.cs:345
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

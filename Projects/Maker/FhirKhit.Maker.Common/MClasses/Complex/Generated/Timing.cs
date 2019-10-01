@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:447
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:448
-using System.IO;                                                                                                                            // MakerGen.cs:449
-using System.Linq;                                                                                                                          // MakerGen.cs:450
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:451
-                                                                                                                                            // MakerGen.cs:452
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:453
-{                                                                                                                                           // MakerGen.cs:454
-    #region Json                                                                                                                            // MakerGen.cs:455
+using System;                                                                                                                               // MakerGen.cs:471
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:472
+using System.IO;                                                                                                                            // MakerGen.cs:473
+using System.Linq;                                                                                                                          // MakerGen.cs:474
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:475
+                                                                                                                                            // MakerGen.cs:476
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:477
+{                                                                                                                                           // MakerGen.cs:478
+    #region Json                                                                                                                            // MakerGen.cs:479
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -365,16 +365,16 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:459
+    #endregion                                                                                                                              // MakerGen.cs:483
     /// <summary>
     /// Fhir complex 'Timing'
     /// </summary>
     // 0. Timing
-    public class Timing : FhirKhit.Maker.Common.Complex.ComplexBase                                                                         // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class Timing : FhirKhit.Maker.Common.Complex.ComplexBase                                                                         // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 2. Timing.repeat
-        public class Type_Repeat : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Repeat : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 3. Timing.repeat.bounds[x]
             public MakerElementInstance Element_Bounds;                                                                                     // MakerGen.cs:232
             // 4. Timing.repeat.count
@@ -405,8 +405,8 @@ namespace FhirKhit.Maker.Common.Complex                                         
             public MakerElementInstance Element_When;                                                                                       // MakerGen.cs:232
             // 17. Timing.repeat.offset
             public MakerElementInstance Element_Offset;                                                                                     // MakerGen.cs:232
-            public Type_Repeat()                                                                                                            // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Repeat()                                                                                                            // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 3. Timing.repeat.bounds[x]
                     this.Element_Bounds = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -416,9 +416,18 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Duration                                                                      // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            },                                                                                                              // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            },                                                                                                              // MakerGen.cs:345
+                            new FhirKhit.Maker.Common.Complex.Period                                                                        // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 4. Timing.repeat.count
                     this.Element_Count = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -433,7 +442,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 5. Timing.repeat.countMax
                     this.Element_CountMax = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -448,7 +457,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 6. Timing.repeat.duration
                     this.Element_Duration = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -463,7 +472,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 7. Timing.repeat.durationMax
                     this.Element_DurationMax = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -478,7 +487,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 8. Timing.repeat.durationUnit
                     this.Element_DurationUnit = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -493,7 +502,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 9. Timing.repeat.frequency
                     this.Element_Frequency = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -508,7 +517,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 10. Timing.repeat.frequencyMax
                     this.Element_FrequencyMax = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -523,7 +532,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. Timing.repeat.period
                     this.Element_Period = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -538,7 +547,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. Timing.repeat.periodMax
                     this.Element_PeriodMax = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -553,7 +562,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 13. Timing.repeat.periodUnit
                     this.Element_PeriodUnit = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -568,7 +577,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 14. Timing.repeat.dayOfWeek
                     this.Element_DayOfWeek = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -583,7 +592,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 15. Timing.repeat.timeOfDay
                     this.Element_TimeOfDay = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -598,7 +607,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 16. Timing.repeat.when
                     this.Element_When = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -613,7 +622,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 17. Timing.repeat.offset
                     this.Element_Offset = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -628,15 +637,15 @@ namespace FhirKhit.Maker.Common.Complex                                         
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. Timing.event
         public MakerElementInstance Element_Event;                                                                                          // MakerGen.cs:232
         // 18. Timing.code
         public MakerElementInstance Element_Code;                                                                                           // MakerGen.cs:232
-        public Timing()                                                                                                                     // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public Timing()                                                                                                                     // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Timing.event
                 this.Element_Event = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -651,7 +660,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 18. Timing.code
                 this.Element_Code = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -666,7 +675,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:464
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:488

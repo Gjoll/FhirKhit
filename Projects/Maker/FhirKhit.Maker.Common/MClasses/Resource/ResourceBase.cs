@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FhirKhit.Maker.Common.Resource
 {
-    public class ResourceBase
+    public class ResourceBase : MakerBaseType
     {
         public String Name {get; set; }
         public ResourceBase Parent {get; set; }

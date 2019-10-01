@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "QuestionnaireResponse",
@@ -421,25 +421,25 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'QuestionnaireResponse'
     /// </summary>
     // 0. QuestionnaireResponse
-    public class QuestionnaireResponse : FhirKhit.Maker.Common.Resource.ResourceBase                                                        // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class QuestionnaireResponse : FhirKhit.Maker.Common.Resource.ResourceBase                                                        // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 11. QuestionnaireResponse.item
-        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 15. QuestionnaireResponse.item.answer
-            public class Type_Answer : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Answer : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 16. QuestionnaireResponse.item.answer.value[x]
                 public MakerElementInstance Element_Value;                                                                                  // MakerGen.cs:232
                 // 17. QuestionnaireResponse.item.answer.item
                 public MakerElementInstance Element_Item;                                                                                   // MakerGen.cs:232
-                public Type_Answer()                                                                                                        // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Answer()                                                                                                        // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 16. QuestionnaireResponse.item.answer.value[x]
                         this.Element_Value = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -473,12 +473,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 new FhirKhit.Maker.Common.Primitive.Uri                                                                     // MakerGen.cs:287
                                 {                                                                                                           // MakerGen.cs:288
                                 },                                                                                                          // MakerGen.cs:289
+                                new FhirKhit.Maker.Common.Complex.Attachment                                                                // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                },                                                                                                          // MakerGen.cs:345
                                 new FhirKhit.Maker.Common.Complex.Coding                                                                    // MakerGen.cs:297
                                 {                                                                                                           // MakerGen.cs:298
                                 },                                                                                                          // MakerGen.cs:299
+                                new FhirKhit.Maker.Common.Complex.Quantity                                                                  // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                },                                                                                                          // MakerGen.cs:345
+                                new FhirKhit.Maker.Common.Complex.Reference                                                                 // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:320
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 17. QuestionnaireResponse.item.answer.item
                         this.Element_Item = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -490,9 +499,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 12. QuestionnaireResponse.item.linkId
             public MakerElementInstance Element_LinkId;                                                                                     // MakerGen.cs:232
             // 13. QuestionnaireResponse.item.definition
@@ -501,8 +510,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Text;                                                                                       // MakerGen.cs:232
             // 18. QuestionnaireResponse.item.item
             public MakerElementInstance Element_Item;                                                                                       // MakerGen.cs:232
-            public Type_Item()                                                                                                              // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Item()                                                                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. QuestionnaireResponse.item.linkId
                     this.Element_LinkId = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -517,7 +526,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 13. QuestionnaireResponse.item.definition
                     this.Element_Definition = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -532,7 +541,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 14. QuestionnaireResponse.item.text
                     this.Element_Text = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -547,7 +556,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 18. QuestionnaireResponse.item.item
                     this.Element_Item = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -559,9 +568,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. QuestionnaireResponse.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. QuestionnaireResponse.basedOn
@@ -582,8 +591,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Author;                                                                                         // MakerGen.cs:232
         // 10. QuestionnaireResponse.source
         public MakerElementInstance Element_Source;                                                                                         // MakerGen.cs:232
-        public QuestionnaireResponse()                                                                                                      // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public QuestionnaireResponse()                                                                                                      // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. QuestionnaireResponse.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -593,9 +602,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. QuestionnaireResponse.basedOn
                 this.Element_BasedOn = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -605,9 +617,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. QuestionnaireResponse.partOf
                 this.Element_PartOf = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -617,9 +632,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. QuestionnaireResponse.questionnaire
                 this.Element_Questionnaire = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -634,7 +652,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. QuestionnaireResponse.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -649,7 +667,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. QuestionnaireResponse.subject
                 this.Element_Subject = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -659,9 +677,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. QuestionnaireResponse.encounter
                 this.Element_Encounter = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -671,9 +692,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. QuestionnaireResponse.authored
                 this.Element_Authored = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -688,7 +712,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 9. QuestionnaireResponse.author
                 this.Element_Author = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -698,9 +722,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 10. QuestionnaireResponse.source
                 this.Element_Source = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -710,9 +737,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

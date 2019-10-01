@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "ObservationDefinition",
@@ -532,16 +532,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'ObservationDefinition'
     /// </summary>
     // 0. ObservationDefinition
-    public class ObservationDefinition : FhirKhit.Maker.Common.Resource.ResourceBase                                                        // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class ObservationDefinition : FhirKhit.Maker.Common.Resource.ResourceBase                                                        // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 8. ObservationDefinition.quantitativeDetails
-        public class Type_QuantitativeDetails : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_QuantitativeDetails : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 9. ObservationDefinition.quantitativeDetails.customaryUnit
             public MakerElementInstance Element_CustomaryUnit;                                                                              // MakerGen.cs:232
             // 10. ObservationDefinition.quantitativeDetails.unit
@@ -550,8 +550,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_ConversionFactor;                                                                           // MakerGen.cs:232
             // 12. ObservationDefinition.quantitativeDetails.decimalPrecision
             public MakerElementInstance Element_DecimalPrecision;                                                                           // MakerGen.cs:232
-            public Type_QuantitativeDetails()                                                                                               // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_QuantitativeDetails()                                                                                               // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 9. ObservationDefinition.quantitativeDetails.customaryUnit
                     this.Element_CustomaryUnit = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -566,7 +566,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 10. ObservationDefinition.quantitativeDetails.unit
                     this.Element_Unit = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -581,7 +581,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. ObservationDefinition.quantitativeDetails.conversionFactor
                     this.Element_ConversionFactor = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -596,7 +596,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. ObservationDefinition.quantitativeDetails.decimalPrecision
                     this.Element_DecimalPrecision = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -611,12 +611,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 13. ObservationDefinition.qualifiedInterval
-        public class Type_QualifiedInterval : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_QualifiedInterval : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 14. ObservationDefinition.qualifiedInterval.category
             public MakerElementInstance Element_Category;                                                                                   // MakerGen.cs:232
             // 15. ObservationDefinition.qualifiedInterval.range
@@ -633,8 +633,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_GestationalAge;                                                                             // MakerGen.cs:232
             // 21. ObservationDefinition.qualifiedInterval.condition
             public MakerElementInstance Element_Condition;                                                                                  // MakerGen.cs:232
-            public Type_QualifiedInterval()                                                                                                 // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_QualifiedInterval()                                                                                                 // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 14. ObservationDefinition.qualifiedInterval.category
                     this.Element_Category = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -649,7 +649,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 15. ObservationDefinition.qualifiedInterval.range
                     this.Element_Range = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -659,9 +659,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 16. ObservationDefinition.qualifiedInterval.context
                     this.Element_Context = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -676,7 +679,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 17. ObservationDefinition.qualifiedInterval.appliesTo
                     this.Element_AppliesTo = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -691,7 +694,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 18. ObservationDefinition.qualifiedInterval.gender
                     this.Element_Gender = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -706,7 +709,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 19. ObservationDefinition.qualifiedInterval.age
                     this.Element_Age = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -716,9 +719,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 20. ObservationDefinition.qualifiedInterval.gestationalAge
                     this.Element_GestationalAge = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -728,9 +734,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Range                                                                         // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 21. ObservationDefinition.qualifiedInterval.condition
                     this.Element_Condition = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -745,9 +754,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. ObservationDefinition.category
         public MakerElementInstance Element_Category;                                                                                       // MakerGen.cs:232
         // 2. ObservationDefinition.code
@@ -770,8 +779,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_AbnormalCodedValueSet;                                                                          // MakerGen.cs:232
         // 25. ObservationDefinition.criticalCodedValueSet
         public MakerElementInstance Element_CriticalCodedValueSet;                                                                          // MakerGen.cs:232
-        public ObservationDefinition()                                                                                                      // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public ObservationDefinition()                                                                                                      // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. ObservationDefinition.category
                 this.Element_Category = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -786,7 +795,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. ObservationDefinition.code
                 this.Element_Code = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -801,7 +810,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. ObservationDefinition.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -811,9 +820,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. ObservationDefinition.permittedDataType
                 this.Element_PermittedDataType = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -828,7 +840,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. ObservationDefinition.multipleResultsAllowed
                 this.Element_MultipleResultsAllowed = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -843,7 +855,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. ObservationDefinition.method
                 this.Element_Method = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -858,7 +870,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. ObservationDefinition.preferredReportName
                 this.Element_PreferredReportName = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -873,7 +885,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 22. ObservationDefinition.validCodedValueSet
                 this.Element_ValidCodedValueSet = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -883,9 +895,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 23. ObservationDefinition.normalCodedValueSet
                 this.Element_NormalCodedValueSet = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -895,9 +910,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 24. ObservationDefinition.abnormalCodedValueSet
                 this.Element_AbnormalCodedValueSet = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -907,9 +925,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 25. ObservationDefinition.criticalCodedValueSet
                 this.Element_CriticalCodedValueSet = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -919,9 +940,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "TestReport",
@@ -505,24 +505,24 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'TestReport'
     /// </summary>
     // 0. TestReport
-    public class TestReport : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class TestReport : FhirKhit.Maker.Common.Resource.ResourceBase                                                                   // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 9. TestReport.participant
-        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 10. TestReport.participant.type
             public MakerElementInstance Element_Type;                                                                                       // MakerGen.cs:232
             // 11. TestReport.participant.uri
             public MakerElementInstance Element_Uri;                                                                                        // MakerGen.cs:232
             // 12. TestReport.participant.display
             public MakerElementInstance Element_Display;                                                                                    // MakerGen.cs:232
-            public Type_Participant()                                                                                                       // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Participant()                                                                                                       // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 10. TestReport.participant.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -537,7 +537,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 11. TestReport.participant.uri
                     this.Element_Uri = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -552,7 +552,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 12. TestReport.participant.display
                     this.Element_Display = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -567,26 +567,26 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 13. TestReport.setup
-        public class Type_Setup : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Setup : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 14. TestReport.setup.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 15. TestReport.setup.action.operation
-                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 16. TestReport.setup.action.operation.result
                     public MakerElementInstance Element_Result;                                                                             // MakerGen.cs:232
                     // 17. TestReport.setup.action.operation.message
                     public MakerElementInstance Element_Message;                                                                            // MakerGen.cs:232
                     // 18. TestReport.setup.action.operation.detail
                     public MakerElementInstance Element_Detail;                                                                             // MakerGen.cs:232
-                    public Type_Operation()                                                                                                 // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Operation()                                                                                                 // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 16. TestReport.setup.action.operation.result
                             this.Element_Result = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -601,7 +601,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 17. TestReport.setup.action.operation.message
                             this.Element_Message = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -616,7 +616,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 18. TestReport.setup.action.operation.detail
                             this.Element_Detail = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -631,20 +631,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 19. TestReport.setup.action.assert
-                public class Type_Assert : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Assert : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 20. TestReport.setup.action.assert.result
                     public MakerElementInstance Element_Result;                                                                             // MakerGen.cs:232
                     // 21. TestReport.setup.action.assert.message
                     public MakerElementInstance Element_Message;                                                                            // MakerGen.cs:232
                     // 22. TestReport.setup.action.assert.detail
                     public MakerElementInstance Element_Detail;                                                                             // MakerGen.cs:232
-                    public Type_Assert()                                                                                                    // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Assert()                                                                                                    // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 20. TestReport.setup.action.assert.result
                             this.Element_Result = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -659,7 +659,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 21. TestReport.setup.action.assert.message
                             this.Element_Message = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -674,7 +674,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 22. TestReport.setup.action.assert.detail
                             this.Element_Detail = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -689,29 +689,29 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
-                public Type_Action()                                                                                                        // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
-            public Type_Setup()                                                                                                             // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
+                public Type_Action()                                                                                                        // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
+            public Type_Setup()                                                                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 23. TestReport.test
-        public class Type_Test : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Test : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 26. TestReport.test.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 27. TestReport.test.action.operation
                 public MakerElementInstance Element_Operation;                                                                              // MakerGen.cs:232
                 // 28. TestReport.test.action.assert
                 public MakerElementInstance Element_Assert;                                                                                 // MakerGen.cs:232
-                public Type_Action()                                                                                                        // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Action()                                                                                                        // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 27. TestReport.test.action.operation
                         this.Element_Operation = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -723,7 +723,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 28. TestReport.test.action.assert
                         this.Element_Assert = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -735,15 +735,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 24. TestReport.test.name
             public MakerElementInstance Element_Name;                                                                                       // MakerGen.cs:232
             // 25. TestReport.test.description
             public MakerElementInstance Element_Description;                                                                                // MakerGen.cs:232
-            public Type_Test()                                                                                                              // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Test()                                                                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 24. TestReport.test.name
                     this.Element_Name = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -758,7 +758,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 25. TestReport.test.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -773,19 +773,19 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 29. TestReport.teardown
-        public class Type_Teardown : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Teardown : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 30. TestReport.teardown.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 31. TestReport.teardown.action.operation
                 public MakerElementInstance Element_Operation;                                                                              // MakerGen.cs:232
-                public Type_Action()                                                                                                        // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Action()                                                                                                        // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 31. TestReport.teardown.action.operation
                         this.Element_Operation = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -797,13 +797,13 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
-            public Type_Teardown()                                                                                                          // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
+            public Type_Teardown()                                                                                                          // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. TestReport.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. TestReport.name
@@ -820,8 +820,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Tester;                                                                                         // MakerGen.cs:232
         // 8. TestReport.issued
         public MakerElementInstance Element_Issued;                                                                                         // MakerGen.cs:232
-        public TestReport()                                                                                                                 // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public TestReport()                                                                                                                 // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. TestReport.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -831,9 +831,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. TestReport.name
                 this.Element_Name = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -848,7 +851,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. TestReport.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -863,7 +866,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. TestReport.testScript
                 this.Element_TestScript = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -873,9 +876,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. TestReport.result
                 this.Element_Result = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -890,7 +896,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. TestReport.score
                 this.Element_Score = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -905,7 +911,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. TestReport.tester
                 this.Element_Tester = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -920,7 +926,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. TestReport.issued
                 this.Element_Issued = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -935,7 +941,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

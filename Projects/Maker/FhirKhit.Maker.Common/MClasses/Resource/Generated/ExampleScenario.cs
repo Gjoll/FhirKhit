@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "ExampleScenario",
@@ -820,16 +820,16 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'ExampleScenario'
     /// </summary>
     // 0. ExampleScenario
-    public class ExampleScenario : FhirKhit.Maker.Common.Resource.ResourceBase                                                              // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class ExampleScenario : FhirKhit.Maker.Common.Resource.ResourceBase                                                              // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 14. ExampleScenario.actor
-        public class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 15. ExampleScenario.actor.actorId
             public MakerElementInstance Element_ActorId;                                                                                    // MakerGen.cs:232
             // 16. ExampleScenario.actor.type
@@ -838,8 +838,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Name;                                                                                       // MakerGen.cs:232
             // 18. ExampleScenario.actor.description
             public MakerElementInstance Element_Description;                                                                                // MakerGen.cs:232
-            public Type_Actor()                                                                                                             // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Actor()                                                                                                             // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 15. ExampleScenario.actor.actorId
                     this.Element_ActorId = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -854,7 +854,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 16. ExampleScenario.actor.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -869,7 +869,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 17. ExampleScenario.actor.name
                     this.Element_Name = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -884,7 +884,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 18. ExampleScenario.actor.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -899,21 +899,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 19. ExampleScenario.instance
-        public class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 24. ExampleScenario.instance.version
-            public class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 25. ExampleScenario.instance.version.versionId
                 public MakerElementInstance Element_VersionId;                                                                              // MakerGen.cs:232
                 // 26. ExampleScenario.instance.version.description
                 public MakerElementInstance Element_Description;                                                                            // MakerGen.cs:232
-                public Type_Version()                                                                                                       // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Version()                                                                                                       // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 25. ExampleScenario.instance.version.versionId
                         this.Element_VersionId = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -928,7 +928,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 26. ExampleScenario.instance.version.description
                         this.Element_Description = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -943,18 +943,18 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 27. ExampleScenario.instance.containedInstance
-            public class Type_ContainedInstance : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_ContainedInstance : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 28. ExampleScenario.instance.containedInstance.resourceId
                 public MakerElementInstance Element_ResourceId;                                                                             // MakerGen.cs:232
                 // 29. ExampleScenario.instance.containedInstance.versionId
                 public MakerElementInstance Element_VersionId;                                                                              // MakerGen.cs:232
-                public Type_ContainedInstance()                                                                                             // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_ContainedInstance()                                                                                             // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 28. ExampleScenario.instance.containedInstance.resourceId
                         this.Element_ResourceId = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -969,7 +969,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 29. ExampleScenario.instance.containedInstance.versionId
                         this.Element_VersionId = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -984,9 +984,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 20. ExampleScenario.instance.resourceId
             public MakerElementInstance Element_ResourceId;                                                                                 // MakerGen.cs:232
             // 21. ExampleScenario.instance.resourceType
@@ -995,8 +995,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Name;                                                                                       // MakerGen.cs:232
             // 23. ExampleScenario.instance.description
             public MakerElementInstance Element_Description;                                                                                // MakerGen.cs:232
-            public Type_Instance()                                                                                                          // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Instance()                                                                                                          // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 20. ExampleScenario.instance.resourceId
                     this.Element_ResourceId = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1011,7 +1011,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 21. ExampleScenario.instance.resourceType
                     this.Element_ResourceType = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1026,7 +1026,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 22. ExampleScenario.instance.name
                     this.Element_Name = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1041,7 +1041,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 23. ExampleScenario.instance.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1056,18 +1056,18 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 30. ExampleScenario.process
-        public class Type_Process : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Process : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 35. ExampleScenario.process.step
-            public class Type_Step : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Step : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 38. ExampleScenario.process.step.operation
-                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 39. ExampleScenario.process.step.operation.number
                     public MakerElementInstance Element_Number;                                                                             // MakerGen.cs:232
                     // 40. ExampleScenario.process.step.operation.type
@@ -1088,8 +1088,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public MakerElementInstance Element_Request;                                                                            // MakerGen.cs:232
                     // 48. ExampleScenario.process.step.operation.response
                     public MakerElementInstance Element_Response;                                                                           // MakerGen.cs:232
-                    public Type_Operation()                                                                                                 // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Operation()                                                                                                 // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 39. ExampleScenario.process.step.operation.number
                             this.Element_Number = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -1104,7 +1104,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 40. ExampleScenario.process.step.operation.type
                             this.Element_Type = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1119,7 +1119,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 41. ExampleScenario.process.step.operation.name
                             this.Element_Name = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1134,7 +1134,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 42. ExampleScenario.process.step.operation.initiator
                             this.Element_Initiator = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -1149,7 +1149,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 43. ExampleScenario.process.step.operation.receiver
                             this.Element_Receiver = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -1164,7 +1164,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 44. ExampleScenario.process.step.operation.description
                             this.Element_Description = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -1179,7 +1179,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 45. ExampleScenario.process.step.operation.initiatorActive
                             this.Element_InitiatorActive = new MakerElementInstance                                                         // MakerGen.cs:245
@@ -1194,7 +1194,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 46. ExampleScenario.process.step.operation.receiverActive
                             this.Element_ReceiverActive = new MakerElementInstance                                                          // MakerGen.cs:245
@@ -1209,7 +1209,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 47. ExampleScenario.process.step.operation.request
                             this.Element_Request = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -1221,7 +1221,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 {                                                                                                           // MakerGen.cs:251
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 48. ExampleScenario.process.step.operation.response
                             this.Element_Response = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -1233,20 +1233,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 {                                                                                                           // MakerGen.cs:251
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 49. ExampleScenario.process.step.alternative
-                public class Type_Alternative : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Alternative : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 50. ExampleScenario.process.step.alternative.title
                     public MakerElementInstance Element_Title;                                                                              // MakerGen.cs:232
                     // 51. ExampleScenario.process.step.alternative.description
                     public MakerElementInstance Element_Description;                                                                        // MakerGen.cs:232
                     // 52. ExampleScenario.process.step.alternative.step
                     public MakerElementInstance Element_Step;                                                                               // MakerGen.cs:232
-                    public Type_Alternative()                                                                                               // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Alternative()                                                                                               // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 50. ExampleScenario.process.step.alternative.title
                             this.Element_Title = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -1261,7 +1261,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 51. ExampleScenario.process.step.alternative.description
                             this.Element_Description = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -1276,7 +1276,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 52. ExampleScenario.process.step.alternative.step
                             this.Element_Step = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1288,15 +1288,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 {                                                                                                           // MakerGen.cs:251
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 36. ExampleScenario.process.step.process
                 public MakerElementInstance Element_Process;                                                                                // MakerGen.cs:232
                 // 37. ExampleScenario.process.step.pause
                 public MakerElementInstance Element_Pause;                                                                                  // MakerGen.cs:232
-                public Type_Step()                                                                                                          // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Step()                                                                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 36. ExampleScenario.process.step.process
                         this.Element_Process = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1308,7 +1308,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             {                                                                                                               // MakerGen.cs:251
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 37. ExampleScenario.process.step.pause
                         this.Element_Pause = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1323,9 +1323,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 31. ExampleScenario.process.title
             public MakerElementInstance Element_Title;                                                                                      // MakerGen.cs:232
             // 32. ExampleScenario.process.description
@@ -1334,8 +1334,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_PreConditions;                                                                              // MakerGen.cs:232
             // 34. ExampleScenario.process.postConditions
             public MakerElementInstance Element_PostConditions;                                                                             // MakerGen.cs:232
-            public Type_Process()                                                                                                           // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Process()                                                                                                           // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 31. ExampleScenario.process.title
                     this.Element_Title = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1350,7 +1350,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 32. ExampleScenario.process.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1365,7 +1365,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 33. ExampleScenario.process.preConditions
                     this.Element_PreConditions = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -1380,7 +1380,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 34. ExampleScenario.process.postConditions
                     this.Element_PostConditions = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -1395,9 +1395,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. ExampleScenario.url
         public MakerElementInstance Element_Url;                                                                                            // MakerGen.cs:232
         // 2. ExampleScenario.identifier
@@ -1426,8 +1426,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Purpose;                                                                                        // MakerGen.cs:232
         // 53. ExampleScenario.workflow
         public MakerElementInstance Element_Workflow;                                                                                       // MakerGen.cs:232
-        public ExampleScenario()                                                                                                            // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public ExampleScenario()                                                                                                            // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. ExampleScenario.url
                 this.Element_Url = new MakerElementInstance                                                                                 // MakerGen.cs:245
@@ -1442,7 +1442,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. ExampleScenario.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1452,9 +1452,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. ExampleScenario.version
                 this.Element_Version = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1469,7 +1472,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. ExampleScenario.name
                 this.Element_Name = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1484,7 +1487,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. ExampleScenario.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1499,7 +1502,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. ExampleScenario.experimental
                 this.Element_Experimental = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1514,7 +1517,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. ExampleScenario.date
                 this.Element_Date = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1529,7 +1532,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. ExampleScenario.publisher
                 this.Element_Publisher = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1544,7 +1547,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 9. ExampleScenario.contact
                 this.Element_Contact = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1554,9 +1557,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.ContactDetail                                                                     // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 10. ExampleScenario.useContext
                 this.Element_UseContext = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1566,9 +1572,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.UsageContext                                                                      // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 11. ExampleScenario.jurisdiction
                 this.Element_Jurisdiction = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1583,7 +1592,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 12. ExampleScenario.copyright
                 this.Element_Copyright = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1598,7 +1607,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 13. ExampleScenario.purpose
                 this.Element_Purpose = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1613,7 +1622,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 53. ExampleScenario.workflow
                 this.Element_Workflow = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1628,7 +1637,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:447
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:448
-using System.IO;                                                                                                                            // MakerGen.cs:449
-using System.Linq;                                                                                                                          // MakerGen.cs:450
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:451
-                                                                                                                                            // MakerGen.cs:452
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:453
-{                                                                                                                                           // MakerGen.cs:454
-    #region Json                                                                                                                            // MakerGen.cs:455
+using System;                                                                                                                               // MakerGen.cs:471
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:472
+using System.IO;                                                                                                                            // MakerGen.cs:473
+using System.Linq;                                                                                                                          // MakerGen.cs:474
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:475
+                                                                                                                                            // MakerGen.cs:476
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:477
+{                                                                                                                                           // MakerGen.cs:478
+    #region Json                                                                                                                            // MakerGen.cs:479
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -90,21 +90,21 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:459
+    #endregion                                                                                                                              // MakerGen.cs:483
     /// <summary>
     /// Fhir complex 'Annotation'
     /// </summary>
     // 0. Annotation
-    public class Annotation : FhirKhit.Maker.Common.Complex.ComplexBase                                                                     // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class Annotation : FhirKhit.Maker.Common.Complex.ComplexBase                                                                     // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 1. Annotation.author[x]
         public MakerElementInstance Element_Author;                                                                                         // MakerGen.cs:232
         // 2. Annotation.time
         public MakerElementInstance Element_Time;                                                                                           // MakerGen.cs:232
         // 3. Annotation.text
         public MakerElementInstance Element_Text;                                                                                           // MakerGen.cs:232
-        public Annotation()                                                                                                                 // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public Annotation()                                                                                                                 // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. Annotation.author[x]
                 this.Element_Author = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -114,12 +114,15 @@ namespace FhirKhit.Maker.Common.Complex                                         
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        },                                                                                                                  // MakerGen.cs:320
                         new FhirKhit.Maker.Common.Primitive.String                                                                          // MakerGen.cs:287
                         {                                                                                                                   // MakerGen.cs:288
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. Annotation.time
                 this.Element_Time = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -134,7 +137,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. Annotation.text
                 this.Element_Text = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -149,7 +152,7 @@ namespace FhirKhit.Maker.Common.Complex                                         
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:464
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:488

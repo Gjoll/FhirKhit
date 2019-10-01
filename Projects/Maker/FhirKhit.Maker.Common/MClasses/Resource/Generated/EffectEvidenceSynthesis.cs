@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "EffectEvidenceSynthesis",
@@ -1006,24 +1006,24 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'EffectEvidenceSynthesis'
     /// </summary>
     // 0. EffectEvidenceSynthesis
-    public class EffectEvidenceSynthesis : FhirKhit.Maker.Common.Resource.ResourceBase                                                      // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class EffectEvidenceSynthesis : FhirKhit.Maker.Common.Resource.ResourceBase                                                      // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 30. EffectEvidenceSynthesis.sampleSize
-        public class Type_SampleSize : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_SampleSize : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 31. EffectEvidenceSynthesis.sampleSize.description
             public MakerElementInstance Element_Description;                                                                                // MakerGen.cs:232
             // 32. EffectEvidenceSynthesis.sampleSize.numberOfStudies
             public MakerElementInstance Element_NumberOfStudies;                                                                            // MakerGen.cs:232
             // 33. EffectEvidenceSynthesis.sampleSize.numberOfParticipants
             public MakerElementInstance Element_NumberOfParticipants;                                                                       // MakerGen.cs:232
-            public Type_SampleSize()                                                                                                        // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_SampleSize()                                                                                                        // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 31. EffectEvidenceSynthesis.sampleSize.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1038,7 +1038,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 32. EffectEvidenceSynthesis.sampleSize.numberOfStudies
                     this.Element_NumberOfStudies = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -1053,7 +1053,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 33. EffectEvidenceSynthesis.sampleSize.numberOfParticipants
                     this.Element_NumberOfParticipants = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -1068,12 +1068,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 34. EffectEvidenceSynthesis.resultsByExposure
-        public class Type_ResultsByExposure : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_ResultsByExposure : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 35. EffectEvidenceSynthesis.resultsByExposure.description
             public MakerElementInstance Element_Description;                                                                                // MakerGen.cs:232
             // 36. EffectEvidenceSynthesis.resultsByExposure.exposureState
@@ -1082,8 +1082,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_VariantState;                                                                               // MakerGen.cs:232
             // 38. EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis
             public MakerElementInstance Element_RiskEvidenceSynthesis;                                                                      // MakerGen.cs:232
-            public Type_ResultsByExposure()                                                                                                 // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_ResultsByExposure()                                                                                                 // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 35. EffectEvidenceSynthesis.resultsByExposure.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1098,7 +1098,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 36. EffectEvidenceSynthesis.resultsByExposure.exposureState
                     this.Element_ExposureState = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -1113,7 +1113,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 37. EffectEvidenceSynthesis.resultsByExposure.variantState
                     this.Element_VariantState = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1128,7 +1128,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 38. EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis
                     this.Element_RiskEvidenceSynthesis = new MakerElementInstance                                                           // MakerGen.cs:245
@@ -1138,17 +1138,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 39. EffectEvidenceSynthesis.effectEstimate
-        public class Type_EffectEstimate : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_EffectEstimate : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 45. EffectEvidenceSynthesis.effectEstimate.precisionEstimate
-            public class Type_PrecisionEstimate : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_PrecisionEstimate : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 46. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.type
                 public MakerElementInstance Element_Type;                                                                                   // MakerGen.cs:232
                 // 47. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.level
@@ -1157,8 +1160,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_From;                                                                                   // MakerGen.cs:232
                 // 49. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.to
                 public MakerElementInstance Element_To;                                                                                     // MakerGen.cs:232
-                public Type_PrecisionEstimate()                                                                                             // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_PrecisionEstimate()                                                                                             // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 46. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.type
                         this.Element_Type = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1173,7 +1176,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 47. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.level
                         this.Element_Level = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1188,7 +1191,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 48. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.from
                         this.Element_From = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1203,7 +1206,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 49. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.to
                         this.Element_To = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1218,9 +1221,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 40. EffectEvidenceSynthesis.effectEstimate.description
             public MakerElementInstance Element_Description;                                                                                // MakerGen.cs:232
             // 41. EffectEvidenceSynthesis.effectEstimate.type
@@ -1231,8 +1234,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Value;                                                                                      // MakerGen.cs:232
             // 44. EffectEvidenceSynthesis.effectEstimate.unitOfMeasure
             public MakerElementInstance Element_UnitOfMeasure;                                                                              // MakerGen.cs:232
-            public Type_EffectEstimate()                                                                                                    // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_EffectEstimate()                                                                                                    // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 40. EffectEvidenceSynthesis.effectEstimate.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1247,7 +1250,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 41. EffectEvidenceSynthesis.effectEstimate.type
                     this.Element_Type = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1262,7 +1265,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 42. EffectEvidenceSynthesis.effectEstimate.variantState
                     this.Element_VariantState = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1277,7 +1280,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 43. EffectEvidenceSynthesis.effectEstimate.value
                     this.Element_Value = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1292,7 +1295,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 44. EffectEvidenceSynthesis.effectEstimate.unitOfMeasure
                     this.Element_UnitOfMeasure = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -1307,23 +1310,23 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 50. EffectEvidenceSynthesis.certainty
-        public class Type_Certainty : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Certainty : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 53. EffectEvidenceSynthesis.certainty.certaintySubcomponent
-            public class Type_CertaintySubcomponent : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_CertaintySubcomponent : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 54. EffectEvidenceSynthesis.certainty.certaintySubcomponent.type
                 public MakerElementInstance Element_Type;                                                                                   // MakerGen.cs:232
                 // 55. EffectEvidenceSynthesis.certainty.certaintySubcomponent.rating
                 public MakerElementInstance Element_Rating;                                                                                 // MakerGen.cs:232
                 // 56. EffectEvidenceSynthesis.certainty.certaintySubcomponent.note
                 public MakerElementInstance Element_Note;                                                                                   // MakerGen.cs:232
-                public Type_CertaintySubcomponent()                                                                                         // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_CertaintySubcomponent()                                                                                         // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 54. EffectEvidenceSynthesis.certainty.certaintySubcomponent.type
                         this.Element_Type = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1338,7 +1341,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 55. EffectEvidenceSynthesis.certainty.certaintySubcomponent.rating
                         this.Element_Rating = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1353,7 +1356,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 56. EffectEvidenceSynthesis.certainty.certaintySubcomponent.note
                         this.Element_Note = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1363,17 +1366,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             Max = -1,                                                                                                       // MakerGen.cs:249
                             Types = new MakerBaseType[]                                                                                     // MakerGen.cs:250
                             {                                                                                                               // MakerGen.cs:251
+                                new FhirKhit.Maker.Common.Complex.Annotation                                                                // MakerGen.cs:343
+                                {                                                                                                           // MakerGen.cs:344
+                                }                                                                                                           // MakerGen.cs:345
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 51. EffectEvidenceSynthesis.certainty.rating
             public MakerElementInstance Element_Rating;                                                                                     // MakerGen.cs:232
             // 52. EffectEvidenceSynthesis.certainty.note
             public MakerElementInstance Element_Note;                                                                                       // MakerGen.cs:232
-            public Type_Certainty()                                                                                                         // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Certainty()                                                                                                         // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 51. EffectEvidenceSynthesis.certainty.rating
                     this.Element_Rating = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1388,7 +1394,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 52. EffectEvidenceSynthesis.certainty.note
                     this.Element_Note = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1398,11 +1404,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Annotation                                                                    // MakerGen.cs:343
+                            {                                                                                                               // MakerGen.cs:344
+                            }                                                                                                               // MakerGen.cs:345
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. EffectEvidenceSynthesis.url
         public MakerElementInstance Element_Url;                                                                                            // MakerGen.cs:232
         // 2. EffectEvidenceSynthesis.identifier
@@ -1461,8 +1470,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_ExposureAlternative;                                                                            // MakerGen.cs:232
         // 29. EffectEvidenceSynthesis.outcome
         public MakerElementInstance Element_Outcome;                                                                                        // MakerGen.cs:232
-        public EffectEvidenceSynthesis()                                                                                                    // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public EffectEvidenceSynthesis()                                                                                                    // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. EffectEvidenceSynthesis.url
                 this.Element_Url = new MakerElementInstance                                                                                 // MakerGen.cs:245
@@ -1477,7 +1486,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. EffectEvidenceSynthesis.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1487,9 +1496,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. EffectEvidenceSynthesis.version
                 this.Element_Version = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1504,7 +1516,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. EffectEvidenceSynthesis.name
                 this.Element_Name = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1519,7 +1531,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. EffectEvidenceSynthesis.title
                 this.Element_Title = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -1534,7 +1546,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. EffectEvidenceSynthesis.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1549,7 +1561,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. EffectEvidenceSynthesis.date
                 this.Element_Date = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1564,7 +1576,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. EffectEvidenceSynthesis.publisher
                 this.Element_Publisher = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1579,7 +1591,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 9. EffectEvidenceSynthesis.contact
                 this.Element_Contact = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1589,9 +1601,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.ContactDetail                                                                     // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 10. EffectEvidenceSynthesis.description
                 this.Element_Description = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1606,7 +1621,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 11. EffectEvidenceSynthesis.note
                 this.Element_Note = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -1616,9 +1631,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Annotation                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 12. EffectEvidenceSynthesis.useContext
                 this.Element_UseContext = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1628,9 +1646,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.UsageContext                                                                      // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 13. EffectEvidenceSynthesis.jurisdiction
                 this.Element_Jurisdiction = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1645,7 +1666,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 14. EffectEvidenceSynthesis.copyright
                 this.Element_Copyright = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1660,7 +1681,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 15. EffectEvidenceSynthesis.approvalDate
                 this.Element_ApprovalDate = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1675,7 +1696,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 16. EffectEvidenceSynthesis.lastReviewDate
                 this.Element_LastReviewDate = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -1690,7 +1711,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 17. EffectEvidenceSynthesis.effectivePeriod
                 this.Element_EffectivePeriod = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1700,9 +1721,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Period                                                                            // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 18. EffectEvidenceSynthesis.topic
                 this.Element_Topic = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -1717,7 +1741,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 19. EffectEvidenceSynthesis.author
                 this.Element_Author = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1727,9 +1751,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.ContactDetail                                                                     // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 20. EffectEvidenceSynthesis.editor
                 this.Element_Editor = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -1739,9 +1766,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.ContactDetail                                                                     // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 21. EffectEvidenceSynthesis.reviewer
                 this.Element_Reviewer = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1751,9 +1781,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.ContactDetail                                                                     // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 22. EffectEvidenceSynthesis.endorser
                 this.Element_Endorser = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1763,9 +1796,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.ContactDetail                                                                     // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 23. EffectEvidenceSynthesis.relatedArtifact
                 this.Element_RelatedArtifact = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1775,9 +1811,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.RelatedArtifact                                                                   // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 24. EffectEvidenceSynthesis.synthesisType
                 this.Element_SynthesisType = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1792,7 +1831,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 25. EffectEvidenceSynthesis.studyType
                 this.Element_StudyType = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -1807,7 +1846,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 26. EffectEvidenceSynthesis.population
                 this.Element_Population = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -1817,9 +1856,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 27. EffectEvidenceSynthesis.exposure
                 this.Element_Exposure = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1829,9 +1871,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 28. EffectEvidenceSynthesis.exposureAlternative
                 this.Element_ExposureAlternative = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -1841,9 +1886,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 29. EffectEvidenceSynthesis.outcome
                 this.Element_Outcome = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1853,9 +1901,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

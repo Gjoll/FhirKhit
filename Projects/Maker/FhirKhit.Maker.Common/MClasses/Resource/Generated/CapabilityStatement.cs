@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "CapabilityStatement",
@@ -1513,24 +1513,24 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'CapabilityStatement'
     /// </summary>
     // 0. CapabilityStatement
-    public class CapabilityStatement : FhirKhit.Maker.Common.Resource.ResourceBase                                                          // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class CapabilityStatement : FhirKhit.Maker.Common.Resource.ResourceBase                                                          // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 18. CapabilityStatement.software
-        public class Type_Software : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Software : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 19. CapabilityStatement.software.name
             public MakerElementInstance Element_Name;                                                                                       // MakerGen.cs:232
             // 20. CapabilityStatement.software.version
             public MakerElementInstance Element_Version;                                                                                    // MakerGen.cs:232
             // 21. CapabilityStatement.software.releaseDate
             public MakerElementInstance Element_ReleaseDate;                                                                                // MakerGen.cs:232
-            public Type_Software()                                                                                                          // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Software()                                                                                                          // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 19. CapabilityStatement.software.name
                     this.Element_Name = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -1545,7 +1545,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 20. CapabilityStatement.software.version
                     this.Element_Version = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -1560,7 +1560,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 21. CapabilityStatement.software.releaseDate
                     this.Element_ReleaseDate = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1575,20 +1575,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 22. CapabilityStatement.implementation
-        public class Type_Implementation : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Implementation : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 23. CapabilityStatement.implementation.description
             public MakerElementInstance Element_Description;                                                                                // MakerGen.cs:232
             // 24. CapabilityStatement.implementation.url
             public MakerElementInstance Element_Url;                                                                                        // MakerGen.cs:232
             // 25. CapabilityStatement.implementation.custodian
             public MakerElementInstance Element_Custodian;                                                                                  // MakerGen.cs:232
-            public Type_Implementation()                                                                                                    // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Implementation()                                                                                                    // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 23. CapabilityStatement.implementation.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1603,7 +1603,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 24. CapabilityStatement.implementation.url
                     this.Element_Url = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -1618,7 +1618,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 25. CapabilityStatement.implementation.custodian
                     this.Element_Custodian = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -1628,25 +1628,28 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = 1,                                                                                                            // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 30. CapabilityStatement.rest
-        public class Type_Rest : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Rest : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 33. CapabilityStatement.rest.security
-            public class Type_Security : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Security : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 34. CapabilityStatement.rest.security.cors
                 public MakerElementInstance Element_Cors;                                                                                   // MakerGen.cs:232
                 // 35. CapabilityStatement.rest.security.service
                 public MakerElementInstance Element_Service;                                                                                // MakerGen.cs:232
                 // 36. CapabilityStatement.rest.security.description
                 public MakerElementInstance Element_Description;                                                                            // MakerGen.cs:232
-                public Type_Security()                                                                                                      // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Security()                                                                                                      // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 34. CapabilityStatement.rest.security.cors
                         this.Element_Cors = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1661,7 +1664,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 35. CapabilityStatement.rest.security.service
                         this.Element_Service = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1676,7 +1679,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 36. CapabilityStatement.rest.security.description
                         this.Element_Description = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -1691,21 +1694,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 37. CapabilityStatement.rest.resource
-            public class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 42. CapabilityStatement.rest.resource.interaction
-                public class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 43. CapabilityStatement.rest.resource.interaction.code
                     public MakerElementInstance Element_Code;                                                                               // MakerGen.cs:232
                     // 44. CapabilityStatement.rest.resource.interaction.documentation
                     public MakerElementInstance Element_Documentation;                                                                      // MakerGen.cs:232
-                    public Type_Interaction()                                                                                               // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Interaction()                                                                                               // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 43. CapabilityStatement.rest.resource.interaction.code
                             this.Element_Code = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1720,7 +1723,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 44. CapabilityStatement.rest.resource.interaction.documentation
                             this.Element_Documentation = new MakerElementInstance                                                           // MakerGen.cs:245
@@ -1735,12 +1738,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 55. CapabilityStatement.rest.resource.searchParam
-                public class Type_SearchParam : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_SearchParam : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 56. CapabilityStatement.rest.resource.searchParam.name
                     public MakerElementInstance Element_Name;                                                                               // MakerGen.cs:232
                     // 57. CapabilityStatement.rest.resource.searchParam.definition
@@ -1749,8 +1752,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     public MakerElementInstance Element_Type;                                                                               // MakerGen.cs:232
                     // 59. CapabilityStatement.rest.resource.searchParam.documentation
                     public MakerElementInstance Element_Documentation;                                                                      // MakerGen.cs:232
-                    public Type_SearchParam()                                                                                               // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_SearchParam()                                                                                               // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 56. CapabilityStatement.rest.resource.searchParam.name
                             this.Element_Name = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1765,7 +1768,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 57. CapabilityStatement.rest.resource.searchParam.definition
                             this.Element_Definition = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -1780,7 +1783,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 58. CapabilityStatement.rest.resource.searchParam.type
                             this.Element_Type = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1795,7 +1798,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 59. CapabilityStatement.rest.resource.searchParam.documentation
                             this.Element_Documentation = new MakerElementInstance                                                           // MakerGen.cs:245
@@ -1810,20 +1813,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 60. CapabilityStatement.rest.resource.operation
-                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:360
-                {                                                                                                                           // MakerGen.cs:361
+                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
+                {                                                                                                                           // MakerGen.cs:385
                     // 61. CapabilityStatement.rest.resource.operation.name
                     public MakerElementInstance Element_Name;                                                                               // MakerGen.cs:232
                     // 62. CapabilityStatement.rest.resource.operation.definition
                     public MakerElementInstance Element_Definition;                                                                         // MakerGen.cs:232
                     // 63. CapabilityStatement.rest.resource.operation.documentation
                     public MakerElementInstance Element_Documentation;                                                                      // MakerGen.cs:232
-                    public Type_Operation()                                                                                                 // MakerGen.cs:369
-                    {                                                                                                                       // MakerGen.cs:370
+                    public Type_Operation()                                                                                                 // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
                         {                                                                                                                   // MakerGen.cs:243
                             // 61. CapabilityStatement.rest.resource.operation.name
                             this.Element_Name = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -1838,7 +1841,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 62. CapabilityStatement.rest.resource.operation.definition
                             this.Element_Definition = new MakerElementInstance                                                              // MakerGen.cs:245
@@ -1853,7 +1856,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
+                        }                                                                                                                   // MakerGen.cs:366
                         {                                                                                                                   // MakerGen.cs:243
                             // 63. CapabilityStatement.rest.resource.operation.documentation
                             this.Element_Documentation = new MakerElementInstance                                                           // MakerGen.cs:245
@@ -1868,9 +1871,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                     }                                                                                                       // MakerGen.cs:289
                                 }                                                                                                           // MakerGen.cs:253
                             };                                                                                                              // MakerGen.cs:254
-                        }                                                                                                                   // MakerGen.cs:342
-                    }                                                                                                                       // MakerGen.cs:381
-                }                                                                                                                           // MakerGen.cs:365
+                        }                                                                                                                   // MakerGen.cs:366
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:389
                 // 38. CapabilityStatement.rest.resource.type
                 public MakerElementInstance Element_Type;                                                                                   // MakerGen.cs:232
                 // 39. CapabilityStatement.rest.resource.profile
@@ -1899,8 +1902,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
                 public MakerElementInstance Element_SearchInclude;                                                                          // MakerGen.cs:232
                 // 54. CapabilityStatement.rest.resource.searchRevInclude
                 public MakerElementInstance Element_SearchRevInclude;                                                                       // MakerGen.cs:232
-                public Type_Resource()                                                                                                      // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Resource()                                                                                                      // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 38. CapabilityStatement.rest.resource.type
                         this.Element_Type = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -1915,7 +1918,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 39. CapabilityStatement.rest.resource.profile
                         this.Element_Profile = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -1930,7 +1933,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 40. CapabilityStatement.rest.resource.supportedProfile
                         this.Element_SupportedProfile = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -1945,7 +1948,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 41. CapabilityStatement.rest.resource.documentation
                         this.Element_Documentation = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -1960,7 +1963,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 45. CapabilityStatement.rest.resource.versioning
                         this.Element_Versioning = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -1975,7 +1978,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 46. CapabilityStatement.rest.resource.readHistory
                         this.Element_ReadHistory = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -1990,7 +1993,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 47. CapabilityStatement.rest.resource.updateCreate
                         this.Element_UpdateCreate = new MakerElementInstance                                                                // MakerGen.cs:245
@@ -2005,7 +2008,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 48. CapabilityStatement.rest.resource.conditionalCreate
                         this.Element_ConditionalCreate = new MakerElementInstance                                                           // MakerGen.cs:245
@@ -2020,7 +2023,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 49. CapabilityStatement.rest.resource.conditionalRead
                         this.Element_ConditionalRead = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2035,7 +2038,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 50. CapabilityStatement.rest.resource.conditionalUpdate
                         this.Element_ConditionalUpdate = new MakerElementInstance                                                           // MakerGen.cs:245
@@ -2050,7 +2053,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 51. CapabilityStatement.rest.resource.conditionalDelete
                         this.Element_ConditionalDelete = new MakerElementInstance                                                           // MakerGen.cs:245
@@ -2065,7 +2068,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 52. CapabilityStatement.rest.resource.referencePolicy
                         this.Element_ReferencePolicy = new MakerElementInstance                                                             // MakerGen.cs:245
@@ -2080,7 +2083,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 53. CapabilityStatement.rest.resource.searchInclude
                         this.Element_SearchInclude = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2095,7 +2098,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 54. CapabilityStatement.rest.resource.searchRevInclude
                         this.Element_SearchRevInclude = new MakerElementInstance                                                            // MakerGen.cs:245
@@ -2110,18 +2113,18 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 64. CapabilityStatement.rest.interaction
-            public class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 65. CapabilityStatement.rest.interaction.code
                 public MakerElementInstance Element_Code;                                                                                   // MakerGen.cs:232
                 // 66. CapabilityStatement.rest.interaction.documentation
                 public MakerElementInstance Element_Documentation;                                                                          // MakerGen.cs:232
-                public Type_Interaction()                                                                                                   // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Interaction()                                                                                                   // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 65. CapabilityStatement.rest.interaction.code
                         this.Element_Code = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2136,7 +2139,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 66. CapabilityStatement.rest.interaction.documentation
                         this.Element_Documentation = new MakerElementInstance                                                               // MakerGen.cs:245
@@ -2151,9 +2154,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 31. CapabilityStatement.rest.mode
             public MakerElementInstance Element_Mode;                                                                                       // MakerGen.cs:232
             // 32. CapabilityStatement.rest.documentation
@@ -2164,8 +2167,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_Operation;                                                                                  // MakerGen.cs:232
             // 69. CapabilityStatement.rest.compartment
             public MakerElementInstance Element_Compartment;                                                                                // MakerGen.cs:232
-            public Type_Rest()                                                                                                              // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Rest()                                                                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 31. CapabilityStatement.rest.mode
                     this.Element_Mode = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2180,7 +2183,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 32. CapabilityStatement.rest.documentation
                     this.Element_Documentation = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2195,7 +2198,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 67. CapabilityStatement.rest.searchParam
                     this.Element_SearchParam = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2207,7 +2210,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 68. CapabilityStatement.rest.operation
                     this.Element_Operation = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -2219,7 +2222,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         {                                                                                                                   // MakerGen.cs:251
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 69. CapabilityStatement.rest.compartment
                     this.Element_Compartment = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2234,21 +2237,21 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 70. CapabilityStatement.messaging
-        public class Type_Messaging : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Messaging : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 71. CapabilityStatement.messaging.endpoint
-            public class Type_Endpoint : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_Endpoint : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 72. CapabilityStatement.messaging.endpoint.protocol
                 public MakerElementInstance Element_Protocol;                                                                               // MakerGen.cs:232
                 // 73. CapabilityStatement.messaging.endpoint.address
                 public MakerElementInstance Element_Address;                                                                                // MakerGen.cs:232
-                public Type_Endpoint()                                                                                                      // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_Endpoint()                                                                                                      // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 72. CapabilityStatement.messaging.endpoint.protocol
                         this.Element_Protocol = new MakerElementInstance                                                                    // MakerGen.cs:245
@@ -2263,7 +2266,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 73. CapabilityStatement.messaging.endpoint.address
                         this.Element_Address = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -2278,18 +2281,18 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 76. CapabilityStatement.messaging.supportedMessage
-            public class Type_SupportedMessage : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_SupportedMessage : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 77. CapabilityStatement.messaging.supportedMessage.mode
                 public MakerElementInstance Element_Mode;                                                                                   // MakerGen.cs:232
                 // 78. CapabilityStatement.messaging.supportedMessage.definition
                 public MakerElementInstance Element_Definition;                                                                             // MakerGen.cs:232
-                public Type_SupportedMessage()                                                                                              // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_SupportedMessage()                                                                                              // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 77. CapabilityStatement.messaging.supportedMessage.mode
                         this.Element_Mode = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2304,7 +2307,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 78. CapabilityStatement.messaging.supportedMessage.definition
                         this.Element_Definition = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -2319,15 +2322,15 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 74. CapabilityStatement.messaging.reliableCache
             public MakerElementInstance Element_ReliableCache;                                                                              // MakerGen.cs:232
             // 75. CapabilityStatement.messaging.documentation
             public MakerElementInstance Element_Documentation;                                                                              // MakerGen.cs:232
-            public Type_Messaging()                                                                                                         // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Messaging()                                                                                                         // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 74. CapabilityStatement.messaging.reliableCache
                     this.Element_ReliableCache = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2342,7 +2345,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 75. CapabilityStatement.messaging.documentation
                     this.Element_Documentation = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2357,20 +2360,20 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 79. CapabilityStatement.document
-        public class Type_Document : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Document : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 80. CapabilityStatement.document.mode
             public MakerElementInstance Element_Mode;                                                                                       // MakerGen.cs:232
             // 81. CapabilityStatement.document.documentation
             public MakerElementInstance Element_Documentation;                                                                              // MakerGen.cs:232
             // 82. CapabilityStatement.document.profile
             public MakerElementInstance Element_Profile;                                                                                    // MakerGen.cs:232
-            public Type_Document()                                                                                                          // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Document()                                                                                                          // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 80. CapabilityStatement.document.mode
                     this.Element_Mode = new MakerElementInstance                                                                            // MakerGen.cs:245
@@ -2385,7 +2388,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 81. CapabilityStatement.document.documentation
                     this.Element_Documentation = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -2400,7 +2403,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 82. CapabilityStatement.document.profile
                     this.Element_Profile = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -2415,9 +2418,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. CapabilityStatement.url
         public MakerElementInstance Element_Url;                                                                                            // MakerGen.cs:232
         // 2. CapabilityStatement.version
@@ -2460,8 +2463,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_PatchFormat;                                                                                    // MakerGen.cs:232
         // 29. CapabilityStatement.implementationGuide
         public MakerElementInstance Element_ImplementationGuide;                                                                            // MakerGen.cs:232
-        public CapabilityStatement()                                                                                                        // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public CapabilityStatement()                                                                                                        // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. CapabilityStatement.url
                 this.Element_Url = new MakerElementInstance                                                                                 // MakerGen.cs:245
@@ -2476,7 +2479,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. CapabilityStatement.version
                 this.Element_Version = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -2491,7 +2494,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. CapabilityStatement.name
                 this.Element_Name = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -2506,7 +2509,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. CapabilityStatement.title
                 this.Element_Title = new MakerElementInstance                                                                               // MakerGen.cs:245
@@ -2521,7 +2524,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 5. CapabilityStatement.status
                 this.Element_Status = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -2536,7 +2539,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 6. CapabilityStatement.experimental
                 this.Element_Experimental = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2551,7 +2554,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 7. CapabilityStatement.date
                 this.Element_Date = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -2566,7 +2569,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 8. CapabilityStatement.publisher
                 this.Element_Publisher = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -2581,7 +2584,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 9. CapabilityStatement.contact
                 this.Element_Contact = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -2591,9 +2594,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.ContactDetail                                                                     // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 10. CapabilityStatement.description
                 this.Element_Description = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -2608,7 +2614,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 11. CapabilityStatement.useContext
                 this.Element_UseContext = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -2618,9 +2624,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.UsageContext                                                                      // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 12. CapabilityStatement.jurisdiction
                 this.Element_Jurisdiction = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2635,7 +2644,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:299
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 13. CapabilityStatement.purpose
                 this.Element_Purpose = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -2650,7 +2659,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 14. CapabilityStatement.copyright
                 this.Element_Copyright = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -2665,7 +2674,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 15. CapabilityStatement.kind
                 this.Element_Kind = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -2680,7 +2689,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 16. CapabilityStatement.instantiates
                 this.Element_Instantiates = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -2695,7 +2704,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 17. CapabilityStatement.imports
                 this.Element_Imports = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -2710,7 +2719,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 26. CapabilityStatement.fhirVersion
                 this.Element_FhirVersion = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -2725,7 +2734,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 27. CapabilityStatement.format
                 this.Element_Format = new MakerElementInstance                                                                              // MakerGen.cs:245
@@ -2740,7 +2749,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 28. CapabilityStatement.patchFormat
                 this.Element_PatchFormat = new MakerElementInstance                                                                         // MakerGen.cs:245
@@ -2755,7 +2764,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 29. CapabilityStatement.implementationGuide
                 this.Element_ImplementationGuide = new MakerElementInstance                                                                 // MakerGen.cs:245
@@ -2770,7 +2779,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440

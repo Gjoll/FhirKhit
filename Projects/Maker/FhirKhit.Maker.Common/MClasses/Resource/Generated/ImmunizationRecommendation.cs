@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:399
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:400
-using System.IO;                                                                                                                            // MakerGen.cs:401
-using System.Linq;                                                                                                                          // MakerGen.cs:402
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:403
-                                                                                                                                            // MakerGen.cs:404
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:405
-{                                                                                                                                           // MakerGen.cs:406
-    #region Json                                                                                                                            // MakerGen.cs:407
-    #if NEVER                                                                                                                               // MakerGen.cs:408
+using System;                                                                                                                               // MakerGen.cs:423
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:424
+using System.IO;                                                                                                                            // MakerGen.cs:425
+using System.Linq;                                                                                                                          // MakerGen.cs:426
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:427
+                                                                                                                                            // MakerGen.cs:428
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:429
+{                                                                                                                                           // MakerGen.cs:430
+    #region Json                                                                                                                            // MakerGen.cs:431
+    #if NEVER                                                                                                                               // MakerGen.cs:432
     {
       "resourceType": "StructureDefinition",
       "id": "ImmunizationRecommendation",
@@ -383,25 +383,25 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:411
+    #endregion                                                                                                                              // MakerGen.cs:435
     /// <summary>
     /// Fhir resource 'ImmunizationRecommendation'
     /// </summary>
     // 0. ImmunizationRecommendation
-    public class ImmunizationRecommendation : FhirKhit.Maker.Common.Resource.ResourceBase                                                   // MakerGen.cs:360
-    {                                                                                                                                       // MakerGen.cs:361
+    public class ImmunizationRecommendation : FhirKhit.Maker.Common.Resource.ResourceBase                                                   // MakerGen.cs:384
+    {                                                                                                                                       // MakerGen.cs:385
         // 5. ImmunizationRecommendation.recommendation
-        public class Type_Recommendation : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:360
-        {                                                                                                                                   // MakerGen.cs:361
+        public class Type_Recommendation : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:384
+        {                                                                                                                                   // MakerGen.cs:385
             // 11. ImmunizationRecommendation.recommendation.dateCriterion
-            public class Type_DateCriterion : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:360
-            {                                                                                                                               // MakerGen.cs:361
+            public class Type_DateCriterion : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:384
+            {                                                                                                                               // MakerGen.cs:385
                 // 12. ImmunizationRecommendation.recommendation.dateCriterion.code
                 public MakerElementInstance Element_Code;                                                                                   // MakerGen.cs:232
                 // 13. ImmunizationRecommendation.recommendation.dateCriterion.value
                 public MakerElementInstance Element_Value;                                                                                  // MakerGen.cs:232
-                public Type_DateCriterion()                                                                                                 // MakerGen.cs:369
-                {                                                                                                                           // MakerGen.cs:370
+                public Type_DateCriterion()                                                                                                 // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
                     {                                                                                                                       // MakerGen.cs:243
                         // 12. ImmunizationRecommendation.recommendation.dateCriterion.code
                         this.Element_Code = new MakerElementInstance                                                                        // MakerGen.cs:245
@@ -416,7 +416,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:299
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
+                    }                                                                                                                       // MakerGen.cs:366
                     {                                                                                                                       // MakerGen.cs:243
                         // 13. ImmunizationRecommendation.recommendation.dateCriterion.value
                         this.Element_Value = new MakerElementInstance                                                                       // MakerGen.cs:245
@@ -431,9 +431,9 @@ namespace FhirKhit.Maker.Common.Resource                                        
                                 }                                                                                                           // MakerGen.cs:289
                             }                                                                                                               // MakerGen.cs:253
                         };                                                                                                                  // MakerGen.cs:254
-                    }                                                                                                                       // MakerGen.cs:342
-                }                                                                                                                           // MakerGen.cs:381
-            }                                                                                                                               // MakerGen.cs:365
+                    }                                                                                                                       // MakerGen.cs:366
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:389
             // 6. ImmunizationRecommendation.recommendation.vaccineCode
             public MakerElementInstance Element_VaccineCode;                                                                                // MakerGen.cs:232
             // 7. ImmunizationRecommendation.recommendation.targetDisease
@@ -456,8 +456,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
             public MakerElementInstance Element_SupportingImmunization;                                                                     // MakerGen.cs:232
             // 19. ImmunizationRecommendation.recommendation.supportingPatientInformation
             public MakerElementInstance Element_SupportingPatientInformation;                                                               // MakerGen.cs:232
-            public Type_Recommendation()                                                                                                    // MakerGen.cs:369
-            {                                                                                                                               // MakerGen.cs:370
+            public Type_Recommendation()                                                                                                    // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
                 {                                                                                                                           // MakerGen.cs:243
                     // 6. ImmunizationRecommendation.recommendation.vaccineCode
                     this.Element_VaccineCode = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -472,7 +472,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 7. ImmunizationRecommendation.recommendation.targetDisease
                     this.Element_TargetDisease = new MakerElementInstance                                                                   // MakerGen.cs:245
@@ -487,7 +487,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 8. ImmunizationRecommendation.recommendation.contraindicatedVaccineCode
                     this.Element_ContraindicatedVaccineCode = new MakerElementInstance                                                      // MakerGen.cs:245
@@ -502,7 +502,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 9. ImmunizationRecommendation.recommendation.forecastStatus
                     this.Element_ForecastStatus = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -517,7 +517,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 10. ImmunizationRecommendation.recommendation.forecastReason
                     this.Element_ForecastReason = new MakerElementInstance                                                                  // MakerGen.cs:245
@@ -532,7 +532,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:299
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 14. ImmunizationRecommendation.recommendation.description
                     this.Element_Description = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -547,7 +547,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 15. ImmunizationRecommendation.recommendation.series
                     this.Element_Series = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -562,7 +562,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 16. ImmunizationRecommendation.recommendation.doseNumber[x]
                     this.Element_DoseNumber = new MakerElementInstance                                                                      // MakerGen.cs:245
@@ -580,7 +580,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 17. ImmunizationRecommendation.recommendation.seriesDoses[x]
                     this.Element_SeriesDoses = new MakerElementInstance                                                                     // MakerGen.cs:245
@@ -598,7 +598,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             }                                                                                                               // MakerGen.cs:289
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 18. ImmunizationRecommendation.recommendation.supportingImmunization
                     this.Element_SupportingImmunization = new MakerElementInstance                                                          // MakerGen.cs:245
@@ -608,9 +608,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
+                }                                                                                                                           // MakerGen.cs:366
                 {                                                                                                                           // MakerGen.cs:243
                     // 19. ImmunizationRecommendation.recommendation.supportingPatientInformation
                     this.Element_SupportingPatientInformation = new MakerElementInstance                                                    // MakerGen.cs:245
@@ -620,11 +623,14 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         Max = -1,                                                                                                           // MakerGen.cs:249
                         Types = new MakerBaseType[]                                                                                         // MakerGen.cs:250
                         {                                                                                                                   // MakerGen.cs:251
+                            new FhirKhit.Maker.Common.Complex.Reference                                                                     // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:320
                         }                                                                                                                   // MakerGen.cs:253
                     };                                                                                                                      // MakerGen.cs:254
-                }                                                                                                                           // MakerGen.cs:342
-            }                                                                                                                               // MakerGen.cs:381
-        }                                                                                                                                   // MakerGen.cs:365
+                }                                                                                                                           // MakerGen.cs:366
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:389
         // 1. ImmunizationRecommendation.identifier
         public MakerElementInstance Element_Identifier;                                                                                     // MakerGen.cs:232
         // 2. ImmunizationRecommendation.patient
@@ -633,8 +639,8 @@ namespace FhirKhit.Maker.Common.Resource                                        
         public MakerElementInstance Element_Date;                                                                                           // MakerGen.cs:232
         // 4. ImmunizationRecommendation.authority
         public MakerElementInstance Element_Authority;                                                                                      // MakerGen.cs:232
-        public ImmunizationRecommendation()                                                                                                 // MakerGen.cs:369
-        {                                                                                                                                   // MakerGen.cs:370
+        public ImmunizationRecommendation()                                                                                                 // MakerGen.cs:393
+        {                                                                                                                                   // MakerGen.cs:394
             {                                                                                                                               // MakerGen.cs:243
                 // 1. ImmunizationRecommendation.identifier
                 this.Element_Identifier = new MakerElementInstance                                                                          // MakerGen.cs:245
@@ -644,9 +650,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = -1,                                                                                                               // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Identifier                                                                        // MakerGen.cs:343
+                        {                                                                                                                   // MakerGen.cs:344
+                        }                                                                                                                   // MakerGen.cs:345
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 2. ImmunizationRecommendation.patient
                 this.Element_Patient = new MakerElementInstance                                                                             // MakerGen.cs:245
@@ -656,9 +665,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 3. ImmunizationRecommendation.date
                 this.Element_Date = new MakerElementInstance                                                                                // MakerGen.cs:245
@@ -673,7 +685,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                         }                                                                                                                   // MakerGen.cs:289
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
+            }                                                                                                                               // MakerGen.cs:366
             {                                                                                                                               // MakerGen.cs:243
                 // 4. ImmunizationRecommendation.authority
                 this.Element_Authority = new MakerElementInstance                                                                           // MakerGen.cs:245
@@ -683,9 +695,12 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     Max = 1,                                                                                                                // MakerGen.cs:249
                     Types = new MakerBaseType[]                                                                                             // MakerGen.cs:250
                     {                                                                                                                       // MakerGen.cs:251
+                        new FhirKhit.Maker.Common.Complex.Reference                                                                         // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:320
                     }                                                                                                                       // MakerGen.cs:253
                 };                                                                                                                          // MakerGen.cs:254
-            }                                                                                                                               // MakerGen.cs:342
-        }                                                                                                                                   // MakerGen.cs:381
-    }                                                                                                                                       // MakerGen.cs:365
-}                                                                                                                                           // MakerGen.cs:416
+            }                                                                                                                               // MakerGen.cs:366
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:389
+}                                                                                                                                           // MakerGen.cs:440
